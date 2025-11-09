@@ -1,0 +1,156 @@
+[
+  {
+    "id": "basic-list-comprehensions",
+    "title": "Basic List Comprehensions",
+    "description": "Learn the fundamentals of list comprehensions in Python.",
+    "difficulty": "intermediate",
+    "questions": [
+      {
+        "id": "1",
+        "type": "multiple-choice",
+        "question": "What is a list comprehension in Python?",
+        "options": ["A way to create lists using loops", "A type of loop", "A list method", "A string operation"],
+        "correctAnswer": "A way to create lists using loops",
+        "explanation": "List comprehensions provide a concise way to create lists using a single line of code."
+      },
+      {
+        "id": "2",
+        "type": "code-input",
+        "question": "Write a list comprehension to create a list of squares from 1 to 5.",
+        "correctAnswer": "[x**2 for x in range(1, 6)]",
+        "explanation": "List comprehensions use the syntax: [expression for item in iterable]"
+      },
+      {
+        "id": "3",
+        "type": "code-input",
+        "question": "Convert this loop to a list comprehension: result = [] for x in [1,2,3,4,5]: result.append(x*2)",
+        "correctAnswer": "[x*2 for x in [1,2,3,4,5]]",
+        "explanation": "List comprehensions replace append operations in loops."
+      },
+      {
+        "id": "4",
+        "type": "multiple-choice",
+        "question": "What is the output of [x for x in range(3)]?",
+        "options": ["[0, 1, 2]", "[1, 2, 3]", "[0, 1, 2, 3]", "Error"],
+        "correctAnswer": "[0, 1, 2]",
+        "explanation": "range(3) produces 0, 1, 2, and x takes each value."
+      },
+      {
+        "id": "5",
+        "type": "code-input",
+        "question": "Write a list comprehension to get even numbers from 0 to 10.",
+        "correctAnswer": "[x for x in range(11) if x % 2 == 0]",
+        "explanation": "Use 'if' conditions to filter elements in list comprehensions."
+      },
+      {
+        "id": "6",
+        "type": "text-input",
+        "question": "What keyword is used to add conditions in list comprehensions?",
+        "correctAnswer": "if",
+        "explanation": "The 'if' keyword filters elements based on conditions."
+      },
+      {
+        "id": "7",
+        "type": "code-input",
+        "question": "Write a list comprehension to create ['A', 'B', 'C'] from ['a', 'b', 'c'].",
+        "correctAnswer": "[x.upper() for x in ['a', 'b', 'c']]",
+        "explanation": "Apply any expression to each element, including method calls."
+      },
+      {
+        "id": "8",
+        "type": "multiple-choice",
+        "question": "Which is more efficient: list comprehensions or for loops?",
+        "options": ["For loops", "List comprehensions", "They are equally efficient", "Depends on the use case"],
+        "correctAnswer": "List comprehensions",
+        "explanation": "List comprehensions are generally faster and more memory efficient than equivalent for loops."
+      },
+      {
+        "id": "9",
+        "type": "code-input",
+        "question": "Write a list comprehension with nested loops to get all combinations of [1,2] and ['a','b'].",
+        "correctAnswer": "[(x, y) for x in [1,2] for y in ['a','b']]",
+        "explanation": "Multiple for clauses create nested iterations."
+      },
+      {
+        "id": "10",
+        "type": "text-input",
+        "question": "What is the syntax structure of a list comprehension?",
+        "correctAnswer": "[expression for item in iterable if condition]",
+        "explanation": "The basic structure includes expression, iteration, and optional condition."
+      },
+      {
+        "id": "11",
+        "type": "code-input",
+        "question": "Write a list comprehension to flatten [[1,2], [3,4]] into [1,2,3,4].",
+        "correctAnswer": "[item for sublist in [[1,2], [3,4]] for item in sublist]",
+        "explanation": "Nested comprehensions can flatten nested structures."
+      },
+      {
+        "id": "12",
+        "type": "multiple-choice",
+        "question": "Can list comprehensions contain multiple if conditions?",
+        "options": ["No", "Yes, using 'and'", "Yes, using multiple 'if'", "Only one condition allowed"],
+        "correctAnswer": "Yes, using 'and'",
+        "explanation": "Multiple conditions can be combined using 'and' in the if clause."
+      },
+      {
+        "id": "13",
+        "type": "code-input",
+        "question": "Write a list comprehension with multiple conditions.",
+        "correctAnswer": "[x for x in range(20) if x % 2 == 0 and x > 10]",
+        "explanation": "Combine conditions with 'and' or 'or' operators."
+      },
+      {
+        "id": "14",
+        "type": "text-input",
+        "question": "What is a set comprehension?",
+        "correctAnswer": "similar to list comprehension but creates sets",
+        "explanation": "Set comprehensions use curly braces and create sets instead of lists."
+      },
+      {
+        "id": "15",
+        "type": "code-input",
+        "question": "Write a set comprehension to get unique squares from 1 to 5.",
+        "correctAnswer": "{x**2 for x in range(1, 6)}",
+        "explanation": "Set comprehensions use curly braces and automatically remove duplicates."
+      },
+      {
+        "id": "16",
+        "type": "text-input",
+        "question": "What is a dictionary comprehension?",
+        "correctAnswer": "creates dictionaries using comprehension syntax",
+        "explanation": "Dict comprehensions create dictionaries with key-value pairs."
+      },
+      {
+        "id": "17",
+        "type": "code-input",
+        "question": "Write a dict comprehension to create {1:1, 2:4, 3:9}.",
+        "correctAnswer": "{x: x**2 for x in range(1, 4)}",
+        "explanation": "Dict comprehensions use {key: value for ...} syntax."
+      },
+      {
+        "id": "18",
+        "type": "multiple-choice",
+        "question": "When should you avoid list comprehensions?",
+        "options": ["Always use them", "When the logic is complex", "Never avoid them", "Only for simple cases"],
+        "correctAnswer": "When the logic is complex",
+        "explanation": "Complex comprehensions can be hard to read - use regular loops instead."
+      },
+      {
+        "id": "19",
+        "type": "code-input",
+        "question": "Write a list comprehension with an else clause.",
+        "correctAnswer": "[x if x % 2 == 0 else 'odd' for x in range(5)]",
+        "explanation": "Conditional expressions can be used: value_if_true if condition else value_if_false"
+      },
+      {
+        "id": "20",
+        "type": "multiple-choice",
+        "question": "What is the output of [x**2 for x in range(3)]?",
+        "options": ["[0, 1, 4]", "[1, 4, 9]", "[0, 1, 2]", "Error"],
+        "correctAnswer": "[0, 1, 4]",
+        "explanation": "range(3) gives 0, 1, 2; squared: 0, 1, 4"
+      }
+    ]
+  }
+]

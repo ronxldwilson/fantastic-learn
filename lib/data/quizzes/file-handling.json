@@ -1,24 +1,121 @@
 [
   {
-    "id": "reading-writing-files",
-    "title": "Reading and Writing Files",
-    "description": "Practice file operations.",
-    "difficulty": "intermediate",
+    "id": "reading-files",
+    "title": "Reading Files",
+    "description": "Learn how to read data from files in Python.",
+    "difficulty": "beginner",
     "questions": [
       {
         "id": "1",
         "type": "multiple-choice",
-        "question": "Which mode opens a file for reading?",
-        "options": ["w", "r", "a", "x"],
-        "correctAnswer": "r",
-        "explanation": "\"r\" mode opens a file for reading."
+        "question": "Which function is used to open a file in Python?",
+        "options": ["open()", "read()", "write()", "close()"],
+        "correctAnswer": "open()",
+        "explanation": "The open() function is used to open a file and returns a file object."
+      },
+      {
+        "id": "2",
+        "type": "code-input",
+        "question": "Write code to open a file named 'data.txt' for reading.",
+        "correctAnswer": "file = open('data.txt', 'r')",
+        "explanation": "Use open() with the filename and 'r' mode for reading."
+      },
+      {
+        "id": "3",
+        "type": "text-input",
+        "question": "What method reads the entire file content as a string?",
+        "correctAnswer": "read",
+        "explanation": "The read() method reads the entire file content and returns it as a string."
+      },
+      {
+        "id": "4",
+        "type": "multiple-choice",
+        "question": "What happens if you try to read from a file that doesn't exist?",
+        "options": ["It creates a new file", "It raises a FileNotFoundError", "It returns an empty string", "It opens the file in write mode"],
+        "correctAnswer": "It raises a FileNotFoundError",
+        "explanation": "Python raises a FileNotFoundError when trying to open a file that doesn't exist."
+      },
+      {
+        "id": "5",
+        "type": "code-input",
+        "question": "Write code to read all lines from a file into a list.",
+        "correctAnswer": "lines = file.readlines()",
+        "explanation": "The readlines() method reads all lines and returns them as a list of strings."
+      }
+    ]
+  },
+  {
+    "id": "writing-files",
+    "title": "Writing Files",
+    "description": "Learn how to write data to files in Python.",
+    "difficulty": "beginner",
+    "questions": [
+      {
+        "id": "1",
+        "type": "multiple-choice",
+        "question": "What mode should you use to write to a file?",
+        "options": ["'r'", "'w'", "'a'", "'x'"],
+        "correctAnswer": "'w'",
+        "explanation": "'w' mode opens the file for writing, creating it if it doesn't exist."
       },
       {
         "id": "2",
         "type": "text-input",
         "question": "What method is used to write a string to a file?",
         "correctAnswer": "write",
-        "explanation": "The write() method writes a string to a file."
+        "explanation": "The write() method writes a string to the file."
+      },
+      {
+        "id": "3",
+        "type": "code-input",
+        "question": "Write code to open a file for writing and write 'Hello World' to it.",
+        "correctAnswer": "file = open('output.txt', 'w')\nfile.write('Hello World')",
+        "explanation": "Open with 'w' mode and use write() to write the string."
+      },
+      {
+        "id": "4",
+        "type": "multiple-choice",
+        "question": "What is the difference between 'w' and 'a' modes?",
+        "options": ["'w' overwrites, 'a' appends", "'a' overwrites, 'w' appends", "They are the same", "'w' is for reading, 'a' for writing"],
+        "correctAnswer": "'w' overwrites, 'a' appends",
+        "explanation": "'w' mode overwrites the file, 'a' mode appends to the existing content."
+      }
+    ]
+  },
+  {
+    "id": "file-management",
+    "title": "File Management",
+    "description": "Learn about file operations and best practices.",
+    "difficulty": "intermediate",
+    "questions": [
+      {
+        "id": "1",
+        "type": "text-input",
+        "question": "What should you always do after working with a file?",
+        "correctAnswer": "close it",
+        "explanation": "Always close files after use to free up system resources."
+      },
+      {
+        "id": "2",
+        "type": "code-input",
+        "question": "Write code using 'with' statement to safely open and read a file.",
+        "correctAnswer": "with open('file.txt', 'r') as file:\n    content = file.read()",
+        "explanation": "The 'with' statement automatically closes the file when done."
+      },
+      {
+        "id": "3",
+        "type": "multiple-choice",
+        "question": "What is the benefit of using the 'with' statement for file operations?",
+        "options": ["It's faster", "It automatically closes the file", "It creates backup files", "It compresses the file"],
+        "correctAnswer": "It automatically closes the file",
+        "explanation": "The 'with' statement ensures files are properly closed even if an error occurs."
+      },
+      {
+        "id": "4",
+        "type": "text-input",
+        "question": "What module provides functions for working with file paths?",
+        "correctAnswer": "os",
+        "explanation": "The os module provides functions like os.path.exists() for file path operations."
       }
     ]
   }

@@ -21,12 +21,139 @@
         "explanation": "In Python, variables are declared by simply assigning a value using the = operator."
       },
       {
-        "id": "3",
+      "id": "3",
+      "type": "multiple-choice",
+      "question": "Which of these is a correct way to create a string in Python?",
+      "options": ["\"Hello\"", "'Hello'", "Both A and B", "Neither"],
+      "correctAnswer": "Both A and B",
+      "explanation": "Python supports both single and double quotes for strings."
+      },
+      {
+        "id": "4",
+        "type": "code-input",
+        "question": "Write code to print 'Hello, World!' to the console.",
+        "correctAnswer": "print('Hello, World!')",
+        "explanation": "The print() function outputs text to the console."
+      },
+      {
+        "id": "5",
         "type": "multiple-choice",
-        "question": "Which of these is a correct way to create a string in Python?",
-        "options": ["\"Hello\"", "'Hello'", "Both A and B", "Neither"],
-        "correctAnswer": "Both A and B",
-        "explanation": "Python supports both single and double quotes for strings."
+        "question": "What is the result of 5 + 3 * 2 in Python?",
+        "options": ["16", "11", "13", "26"],
+        "correctAnswer": "11",
+        "explanation": "Multiplication has higher precedence than addition, so 3 * 2 = 6, then 5 + 6 = 11."
+      },
+      {
+        "id": "6",
+        "type": "text-input",
+        "question": "What symbol is used for single-line comments in Python?",
+        "correctAnswer": "#",
+        "explanation": "The # symbol starts a comment that continues to the end of the line."
+      },
+      {
+        "id": "7",
+        "type": "code-input",
+        "question": "Write code to create a variable called 'age' with the value 25.",
+        "correctAnswer": "age = 25",
+        "explanation": "Variables are created by assigning values using the = operator."
+      },
+      {
+        "id": "8",
+        "type": "multiple-choice",
+        "question": "Which of these is NOT a valid variable name in Python?",
+        "options": ["my_variable", "myVariable", "my-variable", "my_var123"],
+        "correctAnswer": "my-variable",
+        "explanation": "Variable names cannot contain hyphens. Use underscores instead."
+      },
+      {
+        "id": "9",
+        "type": "text-input",
+        "question": "What function is used to get input from the user?",
+        "correctAnswer": "input",
+        "explanation": "The input() function reads a line of text from the user."
+      },
+      {
+        "id": "10",
+        "type": "code-input",
+        "question": "Write code to get the user's name and print a greeting.",
+        "correctAnswer": "name = input('Enter your name: ')
+print('Hello, ' + name)",
+        "explanation": "Use input() to get user input and print() to display output."
+      },
+      {
+        "id": "11",
+        "type": "multiple-choice",
+        "question": "What is the difference between '==' and '=' in Python?",
+        "options": ["They are the same", "'==' compares values, '=' assigns values", "'=' compares values, '==' assigns values", "Neither is used for comparison"],
+        "correctAnswer": "'==' compares values, '=' assigns values",
+        "explanation": "'=' is the assignment operator, '==' is the equality comparison operator."
+      },
+      {
+        "id": "12",
+        "type": "code-input",
+        "question": "Write code to check if a number is even.",
+        "correctAnswer": "if number % 2 == 0:
+    print('Even')",
+        "explanation": "Use modulo operator % to check if divisible by 2."
+      },
+      {
+        "id": "13",
+        "type": "multiple-choice",
+        "question": "What is the result of 'Hello' + ' ' + 'World'?",
+        "options": ["HelloWorld", "Hello World", "Error", "Hello+World"],
+        "correctAnswer": "Hello World",
+        "explanation": "The + operator concatenates strings."
+      },
+      {
+        "id": "14",
+        "type": "text-input",
+        "question": "What type of value does input() return?",
+        "correctAnswer": "string",
+        "explanation": "input() always returns a string, even for numeric input."
+      },
+      {
+        "id": "15",
+        "type": "code-input",
+        "question": "Write code to convert a string '25' to an integer.",
+        "correctAnswer": "int('25')",
+        "explanation": "Use int() to convert strings to integers."
+      },
+      {
+        "id": "16",
+        "type": "multiple-choice",
+        "question": "Which of these creates a floating-point number?",
+        "options": ["25", "25.0", "int(25)", "str(25)"],
+        "correctAnswer": "25.0",
+        "explanation": "Numbers with decimal points are floats."
+      },
+      {
+        "id": "17",
+        "type": "text-input",
+        "question": "What is the operator for floor division?",
+        "correctAnswer": "//",
+        "explanation": "// performs floor division, returning an integer result."
+      },
+      {
+        "id": "18",
+        "type": "code-input",
+        "question": "Write code to calculate 7 raised to the power of 3.",
+        "correctAnswer": "7 ** 3",
+        "explanation": "The ** operator is used for exponentiation."
+      },
+      {
+        "id": "19",
+        "type": "multiple-choice",
+        "question": "What does the 'len()' function return?",
+        "options": ["The last element", "The number of elements", "The first element", "The middle element"],
+        "correctAnswer": "The number of elements",
+        "explanation": "len() returns the number of items in a sequence."
+      },
+      {
+        "id": "20",
+        "type": "code-input",
+        "question": "Write code to find the length of the string 'Python'.",
+        "correctAnswer": "len('Python')",
+        "explanation": "len() works on strings, lists, and other sequences."
       }
     ]
   },

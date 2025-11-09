@@ -40,5 +40,29 @@
     "title": "Error Handling",
     "description": "Master try-except blocks and exception handling.",
     "icon": "🛡️"
+  },
+  {
+    "id": "string-methods",
+    "title": "String Methods",
+    "description": "Learn powerful string manipulation techniques and formatting.",
+    "icon": "📝"
+  },
+  {
+    "id": "modules-packages",
+    "title": "Modules & Packages",
+    "description": "Master modular programming and Python's standard library.",
+    "icon": "📦"
+  },
+  {
+    "id": "list-comprehensions",
+    "title": "List Comprehensions",
+    "description": "Learn powerful list creation techniques and comprehensions.",
+    "icon": "🔧"
+  },
+  {
+    "id": "regular-expressions",
+    "title": "Regular Expressions",
+    "description": "Master pattern matching and text processing with regex.",
+    "icon": "🔍"
   }
 ]

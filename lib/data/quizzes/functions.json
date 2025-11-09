@@ -14,11 +14,153 @@
         "explanation": "The \"def\" keyword is used to define a function in Python."
       },
       {
-        "id": "2",
+      "id": "2",
+      "type": "text-input",
+      "question": "What is the syntax to define a function that takes no parameters?",
+      "correctAnswer": "def function_name():",
+      "explanation": "Functions are defined with \"def\" followed by the name and parentheses."
+      },
+      {
+        "id": "3",
+        "type": "code-input",
+        "question": "Write a function that takes two numbers and returns their sum.",
+        "correctAnswer": "def add_numbers(a, b):
+    return a + b",
+        "explanation": "Functions use 'def', parameters in parentheses, and 'return' to send back values."
+      },
+      {
+        "id": "4",
+        "type": "multiple-choice",
+        "question": "What happens if a function doesn't have a return statement?",
+        "options": ["It returns None", "It returns 0", "It returns an empty string", "It causes an error"],
+        "correctAnswer": "It returns None",
+        "explanation": "Functions without return statements implicitly return None."
+      },
+      {
+        "id": "5",
+        "type": "code-input",
+        "question": "Write code to call a function named 'greet' with the argument 'Alice'.",
+        "correctAnswer": "greet('Alice')",
+        "explanation": "Function calls use the function name followed by parentheses containing arguments."
+      },
+      {
+        "id": "6",
         "type": "text-input",
-        "question": "What is the syntax to define a function that takes no parameters?",
-        "correctAnswer": "def function_name():",
-        "explanation": "Functions are defined with \"def\" followed by the name and parentheses."
+        "question": "What is a default parameter in a function?",
+        "correctAnswer": "a parameter with a default value",
+        "explanation": "Default parameters have values assigned in the function definition and are optional when calling."
+      },
+      {
+        "id": "7",
+        "type": "code-input",
+        "question": "Write a function with a default parameter that greets someone.",
+        "correctAnswer": "def greet(name='World'):
+    return f'Hello, {name}!'",
+        "explanation": "Default parameters are specified with = in the function definition."
+      },
+      {
+        "id": "8",
+        "type": "multiple-choice",
+        "question": "What is function scope?",
+        "options": ["Where functions are defined", "The accessibility of variables in a function", "The number of parameters", "The return type"],
+        "correctAnswer": "The accessibility of variables in a function",
+        "explanation": "Scope determines where variables can be accessed - local vs global."
+      },
+      {
+        "id": "9",
+        "type": "code-input",
+        "question": "Write code that demonstrates a local variable in a function.",
+        "correctAnswer": "def my_function():
+    local_var = 10
+    return local_var",
+        "explanation": "Variables defined inside functions are local to that function."
+      },
+      {
+        "id": "10",
+        "type": "text-input",
+        "question": "How do you access a global variable inside a function?",
+        "correctAnswer": "use the global keyword",
+        "explanation": "The global keyword allows functions to modify global variables."
+      },
+      {
+        "id": "11",
+        "type": "code-input",
+        "question": "Write a function that uses *args to accept multiple arguments.",
+        "correctAnswer": "def sum_all(*args):
+    return sum(args)",
+        "explanation": "*args allows functions to accept a variable number of positional arguments."
+      },
+      {
+        "id": "12",
+        "type": "code-input",
+        "question": "Write a function that uses **kwargs for keyword arguments.",
+        "correctAnswer": "def print_info(**kwargs):
+    for key, value in kwargs.items():
+        print(f'{key}: {value}')",
+        "explanation": "**kwargs allows functions to accept a variable number of keyword arguments."
+      },
+      {
+        "id": "13",
+        "type": "multiple-choice",
+        "question": "What is a lambda function?",
+        "options": ["An anonymous function", "A named function", "A recursive function", "A built-in function"],
+        "correctAnswer": "An anonymous function",
+        "explanation": "Lambda functions are small anonymous functions defined with the lambda keyword."
+      },
+      {
+        "id": "14",
+        "type": "code-input",
+        "question": "Write a lambda function that squares a number.",
+        "correctAnswer": "lambda x: x ** 2",
+        "explanation": "Lambda syntax: lambda parameters: expression"
+      },
+      {
+        "id": "15",
+        "type": "text-input",
+        "question": "What is a docstring in Python?",
+        "correctAnswer": "a string literal documenting a function",
+        "explanation": "Docstrings are triple-quoted strings that document functions, classes, and modules."
+      },
+      {
+        "id": "16",
+        "type": "code-input",
+        "question": "Write a function with a docstring.",
+        "correctAnswer": "def add(a, b):
+    """Add two numbers and return the result."""
+    return a + b",
+        "explanation": "Docstrings are placed immediately after the function definition."
+      },
+      {
+        "id": "17",
+        "type": "multiple-choice",
+        "question": "What is function recursion?",
+        "options": ["A function calling itself", "A function calling other functions", "Multiple functions with the same name", "Functions defined inside other functions"],
+        "correctAnswer": "A function calling itself",
+        "explanation": "Recursion occurs when a function calls itself to solve a problem."
+      },
+      {
+        "id": "18",
+        "type": "code-input",
+        "question": "Write a recursive function to calculate factorial.",
+        "correctAnswer": "def factorial(n):
+    if n <= 1:
+        return 1
+    return n * factorial(n - 1)",
+        "explanation": "Recursive functions have a base case and call themselves with modified parameters."
+      },
+      {
+        "id": "19",
+        "type": "text-input",
+        "question": "What is a higher-order function?",
+        "correctAnswer": "a function that takes other functions as arguments",
+        "explanation": "Higher-order functions can accept functions as parameters or return functions."
+      },
+      {
+        "id": "20",
+        "type": "code-input",
+        "question": "Write code using map() function with a lambda.",
+        "correctAnswer": "list(map(lambda x: x * 2, [1, 2, 3]))",
+        "explanation": "map() applies a function to each item in an iterable."
       }
     ]
   }

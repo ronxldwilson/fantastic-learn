@@ -1,0 +1,68 @@
+[
+  {
+    "id": "module-imports",
+    "title": "Module Imports",
+    "description": "Different ways to import modules and functions.",
+    "difficulty": "beginner",
+    "cards": [
+      {
+        "id": "1",
+        "front": "How do you import an entire module?",
+        "back": "Use 'import module_name': import math - then access with math.function()"
+      },
+      {
+        "id": "2",
+        "front": "How do you import specific functions from a module?",
+        "back": "Use 'from module import function': from math import sqrt - then use sqrt() directly"
+      },
+      {
+        "id": "3",
+        "front": "What is 'from module import *'?",
+        "back": "This imports all functions from a module into the current namespace. It's generally discouraged due to potential naming conflicts."
+      },
+      {
+        "id": "4",
+        "front": "How do you give a module an alias?",
+        "back": "Use 'import module as alias': import numpy as np - then use np.function()"
+      },
+      {
+        "id": "5",
+        "front": "Where does Python look for modules?",
+        "back": "Python searches in the current directory, then in directories listed in sys.path, including the standard library."
+      }
+    ]
+  },
+  {
+    "id": "python-standard-library",
+    "title": "Python Standard Library",
+    "description": "Essential modules that come with Python.",
+    "difficulty": "intermediate",
+    "cards": [
+      {
+        "id": "1",
+        "front": "What does the 'os' module provide?",
+        "back": "Operating system interface: file operations, directory handling, environment variables."
+      },
+      {
+        "id": "2",
+        "front": "What does the 'sys' module contain?",
+        "back": "System-specific parameters and functions: command line arguments, Python path, exit functions."
+      },
+      {
+        "id": "3",
+        "front": "What is the 'math' module used for?",
+        "back": "Mathematical functions: sqrt(), sin(), cos(), pi, e constants, logarithms, etc."
+      },
+      {
+        "id": "4",
+        "front": "What does 'random' module provide?",
+        "back": "Random number generation: randint(), choice(), shuffle(), random() for floats between 0 and 1."
+      },
+      {
+        "id": "5",
+        "front": "What is 'datetime' module for?",
+        "back": "Date and time manipulation: creating dates, calculating differences, formatting timestamps."
+      }
+    ]
+  }
+]

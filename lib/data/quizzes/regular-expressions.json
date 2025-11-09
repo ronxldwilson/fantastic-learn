@@ -1,0 +1,156 @@
+[
+  {
+    "id": "regex-basics",
+    "title": "Regular Expressions Basics",
+    "description": "Learn the fundamentals of regular expressions in Python.",
+    "difficulty": "advanced",
+    "questions": [
+      {
+        "id": "1",
+        "type": "text-input",
+        "question": "What module is used for regular expressions in Python?",
+        "correctAnswer": "re",
+        "explanation": "The 're' module provides regular expression functionality."
+      },
+      {
+        "id": "2",
+        "type": "code-input",
+        "question": "Write code to import the re module.",
+        "correctAnswer": "import re",
+        "explanation": "Import the re module to use regular expressions."
+      },
+      {
+        "id": "3",
+        "type": "multiple-choice",
+        "question": "What does the pattern 'a.b' match?",
+        "options": ["'a' followed by any character followed by 'b'", "'a.b' literally", "'ab' with a dot", "'a' or 'b'"],
+        "correctAnswer": "'a' followed by any character followed by 'b'",
+        "explanation": "The dot (.) matches any single character except newline."
+      },
+      {
+        "id": "4",
+        "type": "text-input",
+        "question": "What does the ^ symbol match in regex?",
+        "correctAnswer": "beginning of string",
+        "explanation": "^ matches the beginning of a string or line."
+      },
+      {
+        "id": "5",
+        "type": "text-input",
+        "question": "What does the $ symbol match in regex?",
+        "correctAnswer": "end of string",
+        "explanation": "$ matches the end of a string or line."
+      },
+      {
+        "id": "6",
+        "type": "multiple-choice",
+        "question": "What does [abc] match?",
+        "options": ["'abc' literally", "Any of a, b, or c", "'a' followed by 'b' followed by 'c'", "Nothing"],
+        "correctAnswer": "Any of a, b, or c",
+        "explanation": "Character classes [abc] match any single character within the brackets."
+      },
+      {
+        "id": "7",
+        "type": "text-input",
+        "question": "What does the * quantifier mean?",
+        "correctAnswer": "zero or more",
+        "explanation": "* matches zero or more occurrences of the preceding element."
+      },
+      {
+        "id": "8",
+        "type": "text-input",
+        "question": "What does the + quantifier mean?",
+        "correctAnswer": "one or more",
+        "explanation": "+ matches one or more occurrences of the preceding element."
+      },
+      {
+        "id": "9",
+        "type": "text-input",
+        "question": "What does the ? quantifier mean?",
+        "correctAnswer": "zero or one",
+        "explanation": "? matches zero or one occurrence of the preceding element."
+      },
+      {
+        "id": "10",
+        "type": "code-input",
+        "question": "Write code to find all email addresses in a string using regex.",
+        "correctAnswer": "import re\nemails = re.findall(r'[\\w\\.-]+@[\\w\\.-]+\\.[\\w]+', text)",
+        "explanation": "Use findall() with a regex pattern for email addresses."
+      },
+      {
+        "id": "11",
+        "type": "multiple-choice",
+        "question": "What does re.match() do?",
+        "options": ["Finds all matches", "Matches from the beginning", "Replaces matches", "Splits on matches"],
+        "correctAnswer": "Matches from the beginning",
+        "explanation": "re.match() only matches from the beginning of the string."
+      },
+      {
+        "id": "12",
+        "type": "multiple-choice",
+        "question": "What does re.search() do?",
+        "options": ["Finds all matches", "Matches from the beginning only", "Finds the first match anywhere", "Replaces matches"],
+        "correctAnswer": "Finds the first match anywhere",
+        "explanation": "re.search() finds the first match anywhere in the string."
+      },
+      {
+        "id": "13",
+        "type": "multiple-choice",
+        "question": "What does re.findall() return?",
+        "options": ["A match object", "A list of all matches", "The first match", "Boolean"],
+        "correctAnswer": "A list of all matches",
+        "explanation": "re.findall() returns a list of all non-overlapping matches."
+      },
+      {
+        "id": "14",
+        "type": "code-input",
+        "question": "Write code to replace all digits in a string with 'X'.",
+        "correctAnswer": "import re\nresult = re.sub(r'\\d', 'X', text)",
+        "explanation": "Use re.sub() to replace matches with a replacement string."
+      },
+      {
+        "id": "15",
+        "type": "text-input",
+        "question": "What does \\d match in regex?",
+        "correctAnswer": "any digit",
+        "explanation": "\\d matches any decimal digit (0-9)."
+      },
+      {
+        "id": "16",
+        "type": "text-input",
+        "question": "What does \\w match in regex?",
+        "correctAnswer": "word characters",
+        "explanation": "\\w matches any word character (letters, digits, underscore)."
+      },
+      {
+        "id": "17",
+        "type": "text-input",
+        "question": "What does \\s match in regex?",
+        "correctAnswer": "whitespace",
+        "explanation": "\\s matches any whitespace character (space, tab, newline)."
+      },
+      {
+        "id": "18",
+        "type": "code-input",
+        "question": "Write code to split a string on whitespace using regex.",
+        "correctAnswer": "import re\nparts = re.split(r'\\s+', text)",
+        "explanation": "re.split() can use regex patterns as delimiters."
+      },
+      {
+        "id": "19",
+        "type": "multiple-choice",
+        "question": "What is the difference between greedy and non-greedy matching?",
+        "options": ["Greedy matches as much as possible, non-greedy as little as possible", "Non-greedy is faster", "They are the same", "Greedy uses more memory"],
+        "correctAnswer": "Greedy matches as much as possible, non-greedy as little as possible",
+        "explanation": "Greedy quantifiers (*, +, {}) match as much as possible, non-greedy versions (*?, +?, {}?) match as little as possible."
+      },
+      {
+        "id": "20",
+        "type": "code-input",
+        "question": "Write a regex pattern to match phone numbers like (123) 456-7890.",
+        "correctAnswer": "r'\\(\\d{3}\\) \\d{3}-\\d{4}'",
+        "explanation": "Use \\d{3} for exactly 3 digits, escape parentheses and other special characters."
+      }
+    ]
+  }
+]

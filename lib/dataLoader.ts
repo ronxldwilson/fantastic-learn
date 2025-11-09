@@ -55,9 +55,12 @@ export async function loadCardSetsForTopic(topicId: string): Promise<CardSet[]> 
   }
 
   try {
-    // Dynamic import of card JSON files
-    const cardModule = await import(`./data/cards/${topicId}.json`);
-    const cardSets = cardModule.default as CardSet[];
+    // Dynamic import of card JSON files - wrapped in promise to ensure it resolves
+    const cardSets = await new Promise<CardSet[]>((resolve) => {
+      import(`./data/cards/${topicId}.json`)
+        .then((cardModule) => resolve(cardModule.default as CardSet[]))
+        .catch(() => resolve([]));
+    });
     cardSetsCache[topicId] = cardSets;
     return cardSets;
   } catch (error) {
@@ -84,6 +87,58 @@ export async function loadCardSet(topicId: string, cardSetId: string): Promise<C
     console.error(`Error loading card set ${cardSetId} for topic ${topicId}:`, error);
     return null;
   }
+}
+
+// Load all questions from all topics for random quiz
+export async function loadAllQuestions(): Promise<Question[]> {
+  const topics = await loadTopics();
+  const allQuestions: Question[] = [];
+
+  for (const topic of topics) {
+    for (const quiz of topic.quizzes) {
+      allQuestions.push(...quiz.questions.map(q => ({
+        ...q,
+        // Add topic info for context
+        topicId: topic.id,
+        topicTitle: topic.title,
+        quizTitle: quiz.title
+      })));
+    }
+  }
+
+  // Shuffle the questions
+  return shuffleArray(allQuestions);
+}
+
+// Load all cards from all topics for random learning
+export async function loadAllCards(): Promise<Card[]> {
+  const topics = await loadTopics();
+  const allCards: Card[] = [];
+
+  for (const topic of topics) {
+    for (const cardSet of topic.cards) {
+      allCards.push(...cardSet.cards.map(c => ({
+        ...c,
+        // Add topic info for context
+        topicId: topic.id,
+        topicTitle: topic.title,
+        cardSetTitle: cardSet.title
+      })));
+    }
+  }
+
+  // Shuffle the cards
+  return shuffleArray(allCards);
+}
+
+// Utility function to shuffle array
+function shuffleArray<T>(array: T[]): T[] {
+  const shuffled = [...array];
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+  return shuffled;
 }
 
 // Preload all topics and quizzes for better performance

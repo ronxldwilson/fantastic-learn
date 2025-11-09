@@ -1,0 +1,93 @@
+[
+  {
+    "id": "list-comp-basics",
+    "title": "List Comprehension Basics",
+    "description": "Fundamental concepts of list comprehensions.",
+    "difficulty": "intermediate",
+    "cards": [
+      {
+        "id": "1",
+        "front": "What is the basic syntax of a list comprehension?",
+        "back": "[expression for item in iterable]"
+      },
+      {
+        "id": "2",
+        "front": "How do you add a condition to a list comprehension?",
+        "back": "[expression for item in iterable if condition]"
+      },
+      {
+        "id": "3",
+        "front": "What does [x**2 for x in range(5)] produce?",
+        "back": "[0, 1, 4, 9, 16] - squares of numbers 0 through 4"
+      },
+      {
+        "id": "4",
+        "front": "How do list comprehensions compare to for loops in terms of performance?",
+        "back": "List comprehensions are generally faster and more memory efficient than equivalent for loops"
+      },
+      {
+        "id": "5",
+        "front": "Can you nest list comprehensions?",
+        "back": "Yes, but nested comprehensions can be hard to read - use multiple for clauses instead"
+      },
+      {
+        "id": "6",
+        "front": "What is a set comprehension?",
+        "back": "Similar to list comprehensions but creates sets: {expression for item in iterable}"
+      },
+      {
+        "id": "7",
+        "front": "What is a dictionary comprehension?",
+        "back": "Creates dictionaries: {key: value for item in iterable}"
+      },
+      {
+        "id": "8",
+        "front": "When should you avoid list comprehensions?",
+        "back": "When the logic is complex and hard to read - use regular loops instead"
+      },
+      {
+        "id": "9",
+        "front": "Can you use multiple if conditions in list comprehensions?",
+        "back": "Yes, combine them with 'and': [x for x in range(10) if x > 3 and x < 8]"
+      },
+      {
+        "id": "10",
+        "front": "What is the output of [x for x in range(5) if x % 2 == 0]?",
+        "back": "[0, 2, 4] - even numbers from 0 to 4"
+      }
+    ]
+  },
+  {
+    "id": "advanced-comprehensions",
+    "title": "Advanced Comprehensions",
+    "description": "Complex comprehension techniques and use cases.",
+    "difficulty": "advanced",
+    "cards": [
+      {
+        "id": "1",
+        "front": "How do you create nested comprehensions?",
+        "back": "[item for sublist in nested_list for item in sublist] - flattens nested structures"
+      },
+      {
+        "id": "2",
+        "front": "What is a conditional expression in comprehensions?",
+        "back": "[x if condition else y for item in iterable] - ternary operator in comprehensions"
+      },
+      {
+        "id": "3",
+        "front": "How do you use zip() in list comprehensions?",
+        "back": "[x + y for x, y in zip(list1, list2)] - combines multiple iterables"
+      },
+      {
+        "id": "4",
+        "front": "Can comprehensions have side effects?",
+        "back": "Yes, but it's considered bad practice - comprehensions should be pure expressions"
+      },
+      {
+        "id": "5",
+        "front": "What is a generator expression?",
+        "back": "Similar to list comprehensions but uses () and creates generators: (x**2 for x in range(5))"
+      }
+    ]
+  }
+]

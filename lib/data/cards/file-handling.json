@@ -1,0 +1,63 @@
+[
+  {
+    "id": "file-operations-basics",
+    "title": "File Operations Basics",
+    "description": "Fundamental concepts of file handling in Python.",
+    "difficulty": "beginner",
+    "cards": [
+      {
+        "id": "1",
+        "front": "What function do you use to open a file in Python?",
+        "back": "The open() function. It takes a filename and mode as arguments and returns a file object."
+      },
+      {
+        "id": "2",
+        "front": "What are the common file modes in Python?",
+        "back": "'r' for reading, 'w' for writing (overwrites), 'a' for appending, 'r+' for reading and writing."
+      },
+      {
+        "id": "3",
+        "front": "Why should you close files after using them?",
+        "back": "Closing files frees up system resources and ensures data is properly written to disk."
+      },
+      {
+        "id": "4",
+        "front": "What is the benefit of using 'with' statement for file operations?",
+        "back": "The 'with' statement automatically closes the file when you're done, even if an error occurs."
+      },
+      {
+        "id": "5",
+        "front": "What does the read() method return?",
+        "back": "The read() method returns the entire file content as a single string."
+      }
+    ]
+  },
+  {
+    "id": "file-reading-methods",
+    "title": "File Reading Methods",
+    "description": "Different ways to read file content.",
+    "difficulty": "beginner",
+    "cards": [
+      {
+        "id": "1",
+        "front": "What does readline() do?",
+        "back": "readline() reads one line from the file and returns it as a string, including the newline character."
+      },
+      {
+        "id": "2",
+        "front": "What does readlines() return?",
+        "back": "readlines() reads all lines from the file and returns them as a list of strings."
+      },
+      {
+        "id": "3",
+        "front": "How do you read a file line by line efficiently?",
+        "back": "Use a for loop: for line in file: - this reads one line at a time without loading the entire file into memory."
+      },
+      {
+        "id": "4",
+        "front": "What is the difference between read() and readlines()?",
+        "back": "read() returns the entire file as one string, readlines() returns a list where each element is a line."
+      }
+    ]
+  }
+]

@@ -1,0 +1,129 @@
+[
+  {
+    "id": "importing-modules",
+    "title": "Importing Modules",
+    "description": "Learn how to import and use modules in Python.",
+    "difficulty": "beginner",
+    "questions": [
+      {
+        "id": "1",
+        "type": "multiple-choice",
+        "question": "Which statement is used to import a module?",
+        "options": ["include", "require", "import", "using"],
+        "correctAnswer": "import",
+        "explanation": "The import statement is used to bring modules into your Python program."
+      },
+      {
+        "id": "2",
+        "type": "code-input",
+        "question": "Write code to import the math module.",
+        "correctAnswer": "import math",
+        "explanation": "Use 'import' followed by the module name to import the entire module."
+      },
+      {
+        "id": "3",
+        "type": "code-input",
+        "question": "Write code to import only the sqrt function from math module.",
+        "correctAnswer": "from math import sqrt",
+        "explanation": "Use 'from module import function' to import specific functions."
+      },
+      {
+        "id": "4",
+        "type": "text-input",
+        "question": "What is the difference between 'import math' and 'from math import *'?",
+        "correctAnswer": "from math import * imports everything into global namespace",
+        "explanation": "'from math import *' imports all functions into the current namespace, which can cause naming conflicts."
+      },
+      {
+        "id": "5",
+        "type": "multiple-choice",
+        "question": "Which is generally preferred for importing?",
+        "options": ["import math", "from math import *", "from math import sqrt, sin, cos", "It depends on usage"],
+        "correctAnswer": "It depends on usage",
+        "explanation": "Use 'import module' for clarity, 'from module import specific' when you need specific functions frequently."
+      }
+    ]
+  },
+  {
+    "id": "standard-library",
+    "title": "Standard Library",
+    "description": "Explore Python's built-in modules.",
+    "difficulty": "intermediate",
+    "questions": [
+      {
+        "id": "1",
+        "type": "multiple-choice",
+        "question": "Which module provides mathematical functions?",
+        "options": ["os", "sys", "math", "random"],
+        "correctAnswer": "math",
+        "explanation": "The math module provides mathematical functions like sqrt, sin, cos, etc."
+      },
+      {
+        "id": "2",
+        "type": "text-input",
+        "question": "What module is used for working with operating system?",
+        "correctAnswer": "os",
+        "explanation": "The os module provides functions for interacting with the operating system."
+      },
+      {
+        "id": "3",
+        "type": "text-input",
+        "question": "Which module generates random numbers?",
+        "correctAnswer": "random",
+        "explanation": "The random module provides functions for generating random numbers."
+      },
+      {
+        "id": "4",
+        "type": "code-input",
+        "question": "Write code to get a random integer between 1 and 10.",
+        "correctAnswer": "import random\nrandom.randint(1, 10)",
+        "explanation": "Use random.randint(a, b) to get a random integer between a and b inclusive."
+      },
+      {
+        "id": "5",
+        "type": "multiple-choice",
+        "question": "Which module is used for date and time operations?",
+        "options": ["calendar", "time", "datetime", "All of the above"],
+        "correctAnswer": "All of the above",
+        "explanation": "Python has time, datetime, and calendar modules for date/time operations."
+      }
+    ]
+  },
+  {
+    "id": "creating-modules",
+    "title": "Creating Modules",
+    "description": "Learn how to create your own Python modules.",
+    "difficulty": "intermediate",
+    "questions": [
+      {
+        "id": "1",
+        "type": "text-input",
+        "question": "What file extension should Python modules have?",
+        "correctAnswer": ".py",
+        "explanation": "Python modules are saved with .py extension."
+      },
+      {
+        "id": "2",
+        "type": "multiple-choice",
+        "question": "What happens when you import a module?",
+        "options": ["The module code is executed", "Only function definitions are loaded", "Only variables are loaded", "Nothing happens"],
+        "correctAnswer": "The module code is executed",
+        "explanation": "When you import a module, Python executes all the code in that module file."
+      },
+      {
+        "id": "3",
+        "type": "text-input",
+        "question": "What is the __name__ variable used for in modules?",
+        "correctAnswer": "to check if module is run directly",
+        "explanation": "The __name__ variable is '__main__' when the module is run directly, allowing conditional execution."
+      },
+      {
+        "id": "4",
+        "type": "code-input",
+        "question": "Write the standard pattern for making a module runnable.",
+        "correctAnswer": "if __name__ == '__main__':\n    # code here",
+        "explanation": "This pattern ensures code only runs when the module is executed directly, not when imported."
+      }
+    ]
+  }
+]

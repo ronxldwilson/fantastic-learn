@@ -5,7 +5,7 @@ export default async function Home() {
   const topics = await loadTopics();
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800 pt-8">
+    <div className="min-h-screen bg-linear-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800 pt-8">
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold text-gray-900 dark:text-white mb-4">
@@ -22,6 +22,14 @@ export default async function Home() {
         <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">
         📚 Learn with Flashcards
         </h2>
+        <div className="text-center mb-8">
+        <Link
+        href="/random-cards"
+        className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-600 to-teal-600 hover:from-green-700 hover:to-teal-700 text-white font-semibold rounded-lg transition-all duration-200 text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+        >
+        🎲 Randomize All Cards
+        </Link>
+        </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
         {topics.filter(topic => topic.cards.length > 0).map((topic) => (
         <Link
@@ -53,9 +61,17 @@ export default async function Home() {
 
         {/* Quiz Mode */}
         <div>
-          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">
-            🧠 Take Quizzes
-          </h2>
+        <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">
+        🧠 Take Quizzes
+        </h2>
+          <div className="text-center mb-8">
+          <Link
+          href="/random-quiz"
+          className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold rounded-lg transition-all duration-200 text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+          >
+          🎲 Randomize All Questions
+          </Link>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {topics.filter(topic => topic.quizzes.length > 0).map((topic) => (
               <Link

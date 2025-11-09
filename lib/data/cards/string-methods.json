@@ -1,0 +1,68 @@
+[
+  {
+    "id": "essential-string-methods",
+    "title": "Essential String Methods",
+    "description": "Most commonly used string manipulation methods.",
+    "difficulty": "beginner",
+    "cards": [
+      {
+        "id": "1",
+        "front": "How do you convert a string to uppercase?",
+        "back": "Use the upper() method: 'hello'.upper() returns 'HELLO'"
+      },
+      {
+        "id": "2",
+        "front": "How do you remove whitespace from both ends of a string?",
+        "back": "Use the strip() method: '  hello  '.strip() returns 'hello'"
+      },
+      {
+        "id": "3",
+        "front": "How do you split a string into a list?",
+        "back": "Use the split() method: 'hello world'.split() returns ['hello', 'world']"
+      },
+      {
+        "id": "4",
+        "front": "How do you replace text in a string?",
+        "back": "Use the replace() method: 'hello world'.replace('world', 'Python') returns 'hello Python'"
+      },
+      {
+        "id": "5",
+        "front": "How do you check if a string starts with specific text?",
+        "back": "Use the startswith() method: 'Python'.startswith('Py') returns True"
+      }
+    ]
+  },
+  {
+    "id": "advanced-string-operations",
+    "title": "Advanced String Operations",
+    "description": "More complex string manipulation techniques.",
+    "difficulty": "intermediate",
+    "cards": [
+      {
+        "id": "1",
+        "front": "How do you find the position of a substring?",
+        "back": "Use the find() method: 'hello world'.find('world') returns 6 (the starting index)"
+      },
+      {
+        "id": "2",
+        "front": "How do you join a list of strings?",
+        "back": "Use the join() method: ' '.join(['Hello', 'World']) returns 'Hello World'"
+      },
+      {
+        "id": "3",
+        "front": "How do you count occurrences of a substring?",
+        "back": "Use the count() method: 'hello hello'.count('hello') returns 2"
+      },
+      {
+        "id": "4",
+        "front": "What does the isdigit() method check?",
+        "back": "isdigit() returns True if all characters in the string are digits: '123'.isdigit() returns True"
+      },
+      {
+        "id": "5",
+        "front": "What is string slicing?",
+        "back": "String slicing extracts a portion of a string using indices: 'Python'[0:3] returns 'Pyt'"
+      }
+    ]
+  }
+]

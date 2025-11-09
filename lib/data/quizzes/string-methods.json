@@ -1,0 +1,129 @@
+[
+  {
+    "id": "basic-string-methods",
+    "title": "Basic String Methods",
+    "description": "Learn essential string manipulation methods.",
+    "difficulty": "beginner",
+    "questions": [
+      {
+        "id": "1",
+        "type": "multiple-choice",
+        "question": "Which method converts a string to uppercase?",
+        "options": ["lower()", "upper()", "capitalize()", "title()"],
+        "correctAnswer": "upper()",
+        "explanation": "The upper() method converts all characters in a string to uppercase."
+      },
+      {
+        "id": "2",
+        "type": "text-input",
+        "question": "What method removes whitespace from both ends of a string?",
+        "correctAnswer": "strip",
+        "explanation": "The strip() method removes leading and trailing whitespace."
+      },
+      {
+        "id": "3",
+        "type": "code-input",
+        "question": "Write code to split the string 'hello world' into a list.",
+        "correctAnswer": "['hello', 'world'] = 'hello world'.split()",
+        "explanation": "The split() method splits a string into a list using whitespace as separator."
+      },
+      {
+        "id": "4",
+        "type": "multiple-choice",
+        "question": "Which method replaces all occurrences of a substring?",
+        "options": ["find()", "replace()", "split()", "join()"],
+        "correctAnswer": "replace()",
+        "explanation": "The replace() method replaces all occurrences of a substring with another string."
+      },
+      {
+        "id": "5",
+        "type": "code-input",
+        "question": "Write code to check if 'Python' starts with 'Py'.",
+        "correctAnswer": "'Python'.startswith('Py')",
+        "explanation": "The startswith() method returns True if the string starts with the specified prefix."
+      }
+    ]
+  },
+  {
+    "id": "advanced-string-methods",
+    "title": "Advanced String Methods",
+    "description": "Explore more complex string operations.",
+    "difficulty": "intermediate",
+    "questions": [
+      {
+        "id": "1",
+        "type": "text-input",
+        "question": "What method finds the index of a substring?",
+        "correctAnswer": "find",
+        "explanation": "The find() method returns the lowest index where the substring is found."
+      },
+      {
+        "id": "2",
+        "type": "multiple-choice",
+        "question": "Which method joins a list of strings with a separator?",
+        "options": ["split()", "join()", "concat()", "merge()"],
+        "correctAnswer": "join()",
+        "explanation": "The join() method joins elements of an iterable with a string separator."
+      },
+      {
+        "id": "3",
+        "type": "code-input",
+        "question": "Write code to join ['Hello', 'World'] with a space separator.",
+        "correctAnswer": "' '.join(['Hello', 'World'])",
+        "explanation": "Use join() on the separator string with the list as argument."
+      },
+      {
+        "id": "4",
+        "type": "text-input",
+        "question": "What method counts occurrences of a substring?",
+        "correctAnswer": "count",
+        "explanation": "The count() method returns the number of non-overlapping occurrences of a substring."
+      },
+      {
+        "id": "5",
+        "type": "multiple-choice",
+        "question": "Which method checks if all characters are digits?",
+        "options": ["isdigit()", "isnumeric()", "isalpha()", "isalnum()"],
+        "correctAnswer": "isdigit()",
+        "explanation": "The isdigit() method returns True if all characters are digits."
+      }
+    ]
+  },
+  {
+    "id": "string-formatting",
+    "title": "String Formatting",
+    "description": "Learn different ways to format strings in Python.",
+    "difficulty": "intermediate",
+    "questions": [
+      {
+        "id": "1",
+        "type": "multiple-choice",
+        "question": "Which is the oldest string formatting method?",
+        "options": ["% formatting", ".format()", "f-strings", "template strings"],
+        "correctAnswer": "% formatting",
+        "explanation": "% formatting is the oldest method, similar to C's printf."
+      },
+      {
+        "id": "2",
+        "type": "code-input",
+        "question": "Write code using f-string to format 'Hello {name}' with name='Alice'.",
+        "correctAnswer": "f'Hello {name}'",
+        "explanation": "f-strings allow embedding expressions inside string literals with curly braces."
+      },
+      {
+        "id": "3",
+        "type": "code-input",
+        "question": "Write code using .format() to insert 'Python' into 'I love {}'.",
+        "correctAnswer": "'I love {}'.format('Python')",
+        "explanation": "The format() method replaces {} placeholders with provided arguments."
+      },
+      {
+        "id": "4",
+        "type": "text-input",
+        "question": "What is the most modern and recommended string formatting method?",
+        "correctAnswer": "f-strings",
+        "explanation": "f-strings (formatted string literals) are the most modern, readable, and performant formatting method."
+      }
+    ]
+  }
+]

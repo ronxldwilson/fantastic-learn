@@ -1,0 +1,143 @@
+[
+  {
+    "id": "regex-patterns",
+    "title": "Regex Patterns",
+    "description": "Common regex patterns and metacharacters.",
+    "difficulty": "advanced",
+    "cards": [
+      {
+        "id": "1",
+        "front": "What does '.' match in regex?",
+        "back": "Any single character except newline"
+      },
+      {
+        "id": "2",
+        "front": "What does '^' match?",
+        "back": "Beginning of string or line"
+      },
+      {
+        "id": "3",
+        "front": "What does '$' match?",
+        "back": "End of string or line"
+      },
+      {
+        "id": "4",
+        "front": "What does '*' mean?",
+        "back": "Zero or more occurrences of the preceding element"
+      },
+      {
+        "id": "5",
+        "front": "What does '+' mean?",
+        "back": "One or more occurrences of the preceding element"
+      },
+      {
+        "id": "6",
+        "front": "What does '?' mean?",
+        "back": "Zero or one occurrence of the preceding element"
+      },
+      {
+        "id": "7",
+        "front": "What does [abc] match?",
+        "back": "Any single character: a, b, or c"
+      },
+      {
+        "id": "8",
+        "front": "What does [^abc] match?",
+        "back": "Any character except a, b, or c"
+      },
+      {
+        "id": "9",
+        "front": "What does \\d match?",
+        "back": "Any digit (equivalent to [0-9])"
+      },
+      {
+        "id": "10",
+        "front": "What does \\w match?",
+        "back": "Any word character (letters, digits, underscore)"
+      },
+      {
+        "id": "11",
+        "front": "What does \\s match?",
+        "back": "Any whitespace character"
+      },
+      {
+        "id": "12",
+        "front": "What is a greedy match?",
+        "back": "Matches as much as possible (default behavior)"
+      },
+      {
+        "id": "13",
+        "front": "How to make quantifiers non-greedy?",
+        "back": "Add ? after quantifier: *?, +?, {}?"
+      },
+      {
+        "id": "14",
+        "front": "What does (abc) do?",
+        "back": "Creates a capturing group for backreferences"
+      },
+      {
+        "id": "15",
+        "front": "What does (?:abc) do?",
+        "back": "Creates a non-capturing group"
+      }
+    ]
+  },
+  {
+    "id": "regex-functions",
+    "title": "Regex Functions",
+    "description": "Python re module functions and usage.",
+    "difficulty": "advanced",
+    "cards": [
+      {
+        "id": "1",
+        "front": "What does re.match() do?",
+        "back": "Matches pattern only at the beginning of string"
+      },
+      {
+        "id": "2",
+        "front": "What does re.search() do?",
+        "back": "Finds the first match anywhere in the string"
+      },
+      {
+        "id": "3",
+        "front": "What does re.findall() return?",
+        "back": "List of all non-overlapping matches"
+      },
+      {
+        "id": "4",
+        "front": "What does re.finditer() return?",
+        "back": "Iterator of match objects for all matches"
+      },
+      {
+        "id": "5",
+        "front": "What does re.sub() do?",
+        "back": "Replaces matches with a replacement string"
+      },
+      {
+        "id": "6",
+        "front": "What does re.split() do?",
+        "back": "Splits string by regex pattern"
+      },
+      {
+        "id": "7",
+        "front": "How to use compiled regex patterns?",
+        "back": "Use re.compile(pattern) to create a pattern object for reuse"
+      },
+      {
+        "id": "8",
+        "front": "What are regex flags?",
+        "back": "Options like re.IGNORECASE, re.MULTILINE, re.DOTALL that modify matching behavior"
+      },
+      {
+        "id": "9",
+        "front": "What does re.IGNORECASE do?",
+        "back": "Makes matching case-insensitive"
+      },
+      {
+        "id": "10",
+        "front": "What does re.MULTILINE do?",
+        "back": "Makes ^ and $ match line beginnings/endings"
+      }
+    ]
+  }
+]

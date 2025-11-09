@@ -1,4 +1,4 @@
-import { Topic, Quiz, CardSet } from './types';
+import { Topic, Quiz, CardSet, Question, Card } from './types';
 
 // Import topics metadata
 import topicsJson from './data/topics.json';

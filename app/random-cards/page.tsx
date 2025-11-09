@@ -296,12 +296,12 @@ export default function RandomCardsPage() {
             </button>
 
             <div className="flex gap-2">
-            <button
+            {/* <button
               onClick={handleFlip}
                 className="px-4 py-3 bg-yellow-600 hover:bg-yellow-700 text-white font-semibold rounded-lg transition-colors duration-200"
             >
                  {isFlipped ? 'Show Question' : 'Show Answer'}
-            </button>
+            </button> */}
 
             <button
               onClick={handleWebSearch}
@@ -311,7 +311,7 @@ export default function RandomCardsPage() {
               <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
               </svg>
-                <span className="hidden sm:inline">Web Search</span>
+                <span>Web Search</span>
                 </button>
               </div>
 

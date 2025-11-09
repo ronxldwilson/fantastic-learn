@@ -3,24 +3,22 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { loadTopics } from '../../lib/dataLoader';
-import { Quiz } from '../../lib/types';
-
-interface QuizProgress {
-  completed: boolean;
-  score: number;
-  total: number;
-  timestamp: string;
-}
+import { Quiz, CardSet, QuizProgress, CardSetProgress, RandomCardsProgress } from '../../lib/types';
 
 export default function ProgressPage() {
-  const [progress, setProgress] = useState<Record<string, QuizProgress>>({});
+  const [quizProgress, setQuizProgress] = useState<Record<string, QuizProgress>>({});
+  const [cardProgress, setCardProgress] = useState<Record<string, CardSetProgress>>({});
+  const [randomCardsSessions, setRandomCardsSessions] = useState<RandomCardsProgress[]>([]);
   const [topics, setTopics] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const storedProgress = localStorage.getItem('python-learning-progress');
     if (storedProgress) {
-      setProgress(JSON.parse(storedProgress));
+      const progress = JSON.parse(storedProgress);
+      setQuizProgress(progress);
+      setCardProgress(progress);
+      setRandomCardsSessions(progress.randomCardsSessions || []);
     }
 
     loadTopics().then((topicsData) => {
@@ -29,11 +27,19 @@ export default function ProgressPage() {
     });
   }, []);
 
-  const completedQuizzes = Object.keys(progress).filter(quizId => progress[quizId].completed);
+  // Quiz progress
+  const completedQuizzes = Object.keys(quizProgress).filter(quizId => quizProgress[quizId].completed && quizId !== 'randomCards');
   const totalQuizzes = topics.reduce((sum, topic) => sum + topic.quizzes.length, 0);
-  const totalScore = completedQuizzes.reduce((sum, quizId) => sum + progress[quizId].score, 0);
-  const maxPossibleScore = completedQuizzes.reduce((sum, quizId) => sum + progress[quizId].total, 0);
-  const overallScore = maxPossibleScore > 0 ? Math.round((totalScore / maxPossibleScore) * 100) : 0;
+  const totalScore = completedQuizzes.reduce((sum, quizId) => sum + quizProgress[quizId].score, 0);
+  const maxPossibleScore = completedQuizzes.reduce((sum, quizId) => sum + quizProgress[quizId].total, 0);
+  const overallQuizScore = maxPossibleScore > 0 ? Math.round((totalScore / maxPossibleScore) * 100) : 0;
+
+  // Card progress
+  const completedCardSets = Object.keys(cardProgress).filter(cardSetId => cardProgress[cardSetId].completed && cardSetId !== 'randomCards');
+  const totalCardSets = topics.reduce((sum, topic) => sum + topic.cards.length, 0);
+  const totalCardsStudied = completedCardSets.reduce((sum, cardSetId) => sum + cardProgress[cardSetId].cardsStudied, 0);
+  const totalCardsAvailable = completedCardSets.reduce((sum, cardSetId) => sum + cardProgress[cardSetId].totalCards, 0);
+  const overallCardsProgress = totalCardsAvailable > 0 ? Math.round((totalCardsStudied / totalCardsAvailable) * 100) : 0;
 
   const getQuizInfo = (quizId: string) => {
     for (const topic of topics) {
@@ -70,24 +76,30 @@ export default function ProgressPage() {
           </div>
 
           {/* Overall Stats */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+          <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 border border-gray-200 dark:border-gray-700 text-center">
+          <div className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-2">
+          {completedQuizzes.length}
+          </div>
+          <div className="text-gray-600 dark:text-gray-300">Quizzes Completed</div>
+          </div>
+          <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 border border-gray-200 dark:border-gray-700 text-center">
+          <div className="text-3xl font-bold text-green-600 dark:text-green-400 mb-2">
+          {overallQuizScore}%
+          </div>
+          <div className="text-gray-600 dark:text-gray-300">Quiz Average</div>
+          </div>
+          <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 border border-gray-200 dark:border-gray-700 text-center">
+          <div className="text-3xl font-bold text-purple-600 dark:text-purple-400 mb-2">
+          {completedCardSets.length}
+          </div>
+          <div className="text-gray-600 dark:text-gray-300">Card Sets Completed</div>
+          </div>
             <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 border border-gray-200 dark:border-gray-700 text-center">
-              <div className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-2">
-                {completedQuizzes.length}
+              <div className="text-3xl font-bold text-orange-600 dark:text-orange-400 mb-2">
+                {randomCardsSessions.length}
               </div>
-              <div className="text-gray-600 dark:text-gray-300">Quizzes Completed</div>
-            </div>
-            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 border border-gray-200 dark:border-gray-700 text-center">
-              <div className="text-3xl font-bold text-green-600 dark:text-green-400 mb-2">
-                {overallScore}%
-              </div>
-              <div className="text-gray-600 dark:text-gray-300">Average Score</div>
-            </div>
-            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 border border-gray-200 dark:border-gray-700 text-center">
-              <div className="text-3xl font-bold text-purple-600 dark:text-purple-400 mb-2">
-                {totalQuizzes - completedQuizzes.length}
-              </div>
-              <div className="text-gray-600 dark:text-gray-300">Quizzes Remaining</div>
+              <div className="text-gray-600 dark:text-gray-300">Random Sessions</div>
             </div>
           </div>
 
@@ -97,45 +109,63 @@ export default function ProgressPage() {
               Progress by Topic
             </h2>
             <div className="space-y-4">
-              {topics.map((topic: { id: string; title: string; icon?: string; quizzes: Quiz[] }) => {
-                const topicQuizzes: Quiz[] = topic.quizzes;
-                const completedTopicQuizzes: Quiz[] = topicQuizzes.filter((quiz: Quiz) =>
-                  progress[quiz.id]?.completed
-                );
-                const topicScore = completedTopicQuizzes.reduce((sum: number, quiz: Quiz) =>
-                  sum + (progress[quiz.id].score / progress[quiz.id].total), 0
-                );
-                const avgTopicScore = completedTopicQuizzes.length > 0
-                  ? Math.round((topicScore / completedTopicQuizzes.length) * 100)
-                  : 0;
+            {topics.map((topic: { id: string; title: string; icon?: string; quizzes: Quiz[]; cards: CardSet[] }) => {
+            const topicQuizzes: Quiz[] = topic.quizzes;
+            const topicCards: CardSet[] = topic.cards;
 
-                return (
-                  <div key={topic.id} className="flex items-center justify-between p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
-                    <div className="flex items-center space-x-4">
-                      <div className="text-2xl">{topic.icon}</div>
-                      <div>
-                        <h3 className="font-semibold text-gray-900 dark:text-white">
-                          {topic.title}
-                        </h3>
-                        <p className="text-sm text-gray-600 dark:text-gray-300">
-                          {completedTopicQuizzes.length} of {topicQuizzes.length} quizzes completed
-                        </p>
-                      </div>
-                    </div>
-                    <div className="text-right">
-                      <div className={`text-lg font-bold ${
-                        avgTopicScore >= 80 ? 'text-green-600 dark:text-green-400' :
-                        avgTopicScore >= 60 ? 'text-yellow-600 dark:text-yellow-400' :
+            // Quiz progress
+            const completedTopicQuizzes: Quiz[] = topicQuizzes.filter((quiz: Quiz) =>
+            quizProgress[quiz.id]?.completed
+            );
+            const topicScore = completedTopicQuizzes.reduce((sum: number, quiz: Quiz) =>
+            sum + (quizProgress[quiz.id].score / quizProgress[quiz.id].total), 0
+            );
+                const avgTopicScore = completedTopicQuizzes.length > 0
+              ? Math.round((topicScore / completedTopicQuizzes.length) * 100)
+            : 0;
+
+            // Card progress
+            const completedTopicCards: CardSet[] = topicCards.filter((cardSet: CardSet) =>
+            cardProgress[cardSet.id]?.completed
+            );
+
+            return (
+            <div key={topic.id} className="p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
+            <div className="flex items-center justify-between mb-2">
+            <div className="flex items-center space-x-4">
+                <div className="text-2xl">{topic.icon}</div>
+                <h3 className="font-semibold text-gray-900 dark:text-white">
+                {topic.title}
+            </h3>
+            </div>
+            <Link
+              href={`/topics/${topic.id}`}
+            className="text-sm text-blue-600 dark:text-blue-400 hover:underline"
+            >
+              Continue →
+            </Link>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-3">
+            <div className="text-sm">
+              <span className="text-gray-600 dark:text-gray-300">Quizzes: </span>
+                <span className={`font-medium ${
+                    avgTopicScore >= 80 ? 'text-green-600 dark:text-green-400' :
+                      avgTopicScore >= 60 ? 'text-yellow-600 dark:text-yellow-400' :
                         'text-red-600 dark:text-red-400'
-                      }`}>
-                        {avgTopicScore}%
+                        }`}>
+                          {completedTopicQuizzes.length}/{topicQuizzes.length} ({avgTopicScore}%)
+                        </span>
                       </div>
-                      <Link
-                        href={`/topics/${topic.id}`}
-                        className="text-sm text-blue-600 dark:text-blue-400 hover:underline"
-                      >
-                        Continue →
-                      </Link>
+                      <div className="text-sm">
+                        <span className="text-gray-600 dark:text-gray-300">Cards: </span>
+                        <span className={`font-medium ${
+                          completedTopicCards.length === topicCards.length ? 'text-green-600 dark:text-green-400' :
+                          completedTopicCards.length > 0 ? 'text-yellow-600 dark:text-yellow-400' :
+                          'text-gray-500 dark:text-gray-400'
+                        }`}>
+                          {completedTopicCards.length}/{topicCards.length}
+                        </span>
+                      </div>
                     </div>
                   </div>
                 );
@@ -145,42 +175,94 @@ export default function ProgressPage() {
 
           {/* Recent Quiz Results */}
           {completedQuizzes.length > 0 && (
+          <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 border border-gray-200 dark:border-gray-700 mb-6">
+          <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6">
+          Recent Quiz Results
+          </h2>
+          <div className="space-y-4">
+          {completedQuizzes
+          .sort((a, b) => new Date(quizProgress[b].timestamp).getTime() - new Date(quizProgress[a].timestamp).getTime())
+          .slice(0, 5)
+          .map((quizId) => {
+          const quizInfo = getQuizInfo(quizId);
+          if (!quizInfo) return null;
+
+          const { topic, quiz } = quizInfo;
+          const quizProgressData = quizProgress[quizId];
+          const quizScore = Math.round((quizProgressData.score / quizProgressData.total) * 100);
+
+          return (
+          <div key={quizId} className="flex items-center justify-between p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
+          <div>
+          <h3 className="font-semibold text-gray-900 dark:text-white">
+          {quiz.title}
+          </h3>
+          <p className="text-sm text-gray-600 dark:text-gray-300">
+          {topic.title} • {new Date(quizProgressData.timestamp).toLocaleDateString()}
+          </p>
+          </div>
+          <div className="text-right">
+          <div className={`text-lg font-bold ${
+          quizScore >= 80 ? 'text-green-600 dark:text-green-400' :
+          quizScore >= 60 ? 'text-yellow-600 dark:text-yellow-400' :
+          'text-red-600 dark:text-red-400'
+          }`}>
+          {quizScore}%
+          </div>
+          <p className="text-sm text-gray-600 dark:text-gray-300">
+          {quizProgressData.score}/{quizProgressData.total}
+          </p>
+          </div>
+          </div>
+          );
+          })}
+          </div>
+          </div>
+          )}
+
+          {/* Recent Card Set Completions */}
+          {completedCardSets.length > 0 && (
             <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 border border-gray-200 dark:border-gray-700">
               <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-6">
-                Recent Quiz Results
+                Recent Card Set Completions
               </h2>
               <div className="space-y-4">
-                {completedQuizzes
-                  .sort((a, b) => new Date(progress[b].timestamp).getTime() - new Date(progress[a].timestamp).getTime())
-                  .slice(0, 10)
-                  .map((quizId) => {
-                    const quizInfo = getQuizInfo(quizId);
-                    if (!quizInfo) return null;
+                {completedCardSets
+                  .sort((a, b) => new Date(cardProgress[b].timestamp).getTime() - new Date(cardProgress[a].timestamp).getTime())
+                  .slice(0, 5)
+                  .map((cardSetId) => {
+                    // Find the topic and card set info
+                    let topicInfo = null;
+                    let cardSetInfo = null;
+                    for (const topic of topics) {
+                      const cardSet = topic.cards.find((c: CardSet) => c.id === cardSetId);
+                      if (cardSet) {
+                        topicInfo = topic;
+                        cardSetInfo = cardSet;
+                        break;
+                      }
+                    }
 
-                    const { topic, quiz } = quizInfo;
-                    const quizProgress = progress[quizId];
-                    const quizScore = Math.round((quizProgress.score / quizProgress.total) * 100);
+                    if (!topicInfo || !cardSetInfo) return null;
+
+                    const cardProgressData = cardProgress[cardSetId];
 
                     return (
-                      <div key={quizId} className="flex items-center justify-between p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                      <div key={cardSetId} className="flex items-center justify-between p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
                         <div>
                           <h3 className="font-semibold text-gray-900 dark:text-white">
-                            {quiz.title}
+                            {cardSetInfo.title}
                           </h3>
                           <p className="text-sm text-gray-600 dark:text-gray-300">
-                            {topic.title} • {new Date(quizProgress.timestamp).toLocaleDateString()}
+                            {topicInfo.title} • {new Date(cardProgressData.timestamp).toLocaleDateString()}
                           </p>
                         </div>
                         <div className="text-right">
-                          <div className={`text-lg font-bold ${
-                            quizScore >= 80 ? 'text-green-600 dark:text-green-400' :
-                            quizScore >= 60 ? 'text-yellow-600 dark:text-yellow-400' :
-                            'text-red-600 dark:text-red-400'
-                          }`}>
-                            {quizScore}%
+                          <div className="text-lg font-bold text-green-600 dark:text-green-400">
+                            ✓ Completed
                           </div>
                           <p className="text-sm text-gray-600 dark:text-gray-300">
-                            {quizProgress.score}/{quizProgress.total}
+                            {cardProgressData.cardsStudied}/{cardProgressData.totalCards} cards
                           </p>
                         </div>
                       </div>

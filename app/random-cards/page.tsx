@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { loadAllCards } from '../../lib/dataLoader';
 
@@ -19,6 +19,9 @@ export default function RandomCardsPage() {
   const [isFlipped, setIsFlipped] = useState(false);
   const [loading, setLoading] = useState(true);
   const [sessionCompleted, setSessionCompleted] = useState(false);
+  const [isAnimating, setIsAnimating] = useState(false);
+  const touchStartX = useRef<number | null>(null);
+  const touchStartY = useRef<number | null>(null);
 
   useEffect(() => {
     loadAllCards().then((allCards) => {
@@ -54,20 +57,61 @@ export default function RandomCardsPage() {
   const currentCard = cards[currentIndex];
   const totalCards = cards.length;
 
+  const navigateToCard = (newIndex: number) => {
+    if (isAnimating || newIndex < 0 || newIndex >= totalCards) return;
+
+    setIsAnimating(true);
+    setCurrentIndex(newIndex);
+    setIsFlipped(false);
+
+    // Reset animation state after transition
+    setTimeout(() => setIsAnimating(false), 300);
+  };
+
+  // Touch event handlers for swipe functionality
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX;
+    touchStartY.current = e.touches[0].clientY;
+  };
+
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    if (!touchStartX.current || !touchStartY.current) return;
+
+    const touchEndX = e.changedTouches[0].clientX;
+    const touchEndY = e.changedTouches[0].clientY;
+    const deltaX = touchEndX - touchStartX.current;
+    const deltaY = touchEndY - touchStartY.current;
+
+    // Only consider horizontal swipes (ignore vertical scrolling)
+    if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > 50) {
+      if (deltaX > 0) {
+        // Swipe right - go to previous card
+        navigateToCard(currentIndex - 1);
+      } else {
+        // Swipe left - go to next card
+        navigateToCard(currentIndex + 1);
+      }
+    }
+
+    touchStartX.current = null;
+    touchStartY.current = null;
+  };
+
   const handleFlip = () => {
     setIsFlipped(!isFlipped);
   };
 
   const handleNext = () => {
     if (currentIndex < totalCards - 1) {
-      setCurrentIndex(currentIndex + 1);
-      setIsFlipped(false);
+      navigateToCard(currentIndex + 1);
     } else {
       // Save completion
       const progress = JSON.parse(localStorage.getItem('python-learning-progress') || '{}');
-      if (!progress.randomCards) progress.randomCards = {};
-      progress.randomCards.completedAt = new Date().toISOString();
-      progress.randomCards.totalCards = totalCards;
+      if (!progress.randomCardsSessions) progress.randomCardsSessions = [];
+      progress.randomCardsSessions.push({
+        completedAt: new Date().toISOString(),
+        totalCards: totalCards
+      });
       localStorage.setItem('python-learning-progress', JSON.stringify(progress));
 
       setSessionCompleted(true);
@@ -76,8 +120,7 @@ export default function RandomCardsPage() {
 
   const handlePrev = () => {
     if (currentIndex > 0) {
-      setCurrentIndex(currentIndex - 1);
-      setIsFlipped(false);
+      navigateToCard(currentIndex - 1);
     }
   };
 
@@ -144,21 +187,29 @@ export default function RandomCardsPage() {
           </div>
 
           {/* Card */}
-          <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 border border-gray-200 dark:border-gray-700 mb-6 min-h-64 flex items-center justify-center text-center">
+          <div
+            className={`bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 border border-gray-200 dark:border-gray-700 mb-6 min-h-64 flex items-center justify-center text-center transition-all duration-300 cursor-pointer ${
+              isAnimating ? 'transform scale-95 opacity-50' : 'transform scale-100 opacity-100'
+            }`}
+            onTouchStart={handleTouchStart}
+            onTouchEnd={handleTouchEnd}
+            onClick={handleFlip}
+            style={{ touchAction: 'pan-y' }}
+          >
             {isFlipped ? (
-              <div>
+              <div className="animate-fade-in">
                 <div className="text-2xl mb-4">💡</div>
                 <p className="text-lg text-gray-900 dark:text-white mb-4">
                   {currentCard.back}
                 </p>
               </div>
             ) : (
-              <div>
+              <div className="animate-fade-in">
                 <div className="text-2xl mb-4">💭</div>
                 <p className="text-xl font-medium text-gray-900 dark:text-white mb-4">
                   {currentCard.front}
                 </p>
-                <p className="text-sm text-gray-500 dark:text-gray-400">Click the button below to reveal answer</p>
+                <p className="text-sm text-gray-500 dark:text-gray-400 mb-4">Tap to reveal answer or swipe to navigate</p>
               </div>
             )}
           </div>

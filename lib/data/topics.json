@@ -64,5 +64,35 @@
     "title": "Regular Expressions",
     "description": "Master pattern matching and text processing with regex.",
     "icon": "🔍"
+  },
+  {
+    "id": "ai-ml",
+    "title": "AI & Machine Learning",
+    "description": "Learn artificial intelligence, machine learning algorithms, and deep learning concepts.",
+    "icon": "🤖"
+  },
+  {
+    "id": "fastapi",
+    "title": "FastAPI",
+    "description": "Build modern, fast web APIs with Python using FastAPI framework.",
+    "icon": "⚡"
+  },
+  {
+    "id": "flask",
+    "title": "Flask",
+    "description": "Create web applications with Flask, the lightweight Python web framework.",
+    "icon": "🌶️"
+  },
+  {
+    "id": "docker",
+    "title": "Docker",
+    "description": "Containerize applications with Docker and understand container orchestration.",
+    "icon": "🐳"
+  },
+  {
+    "id": "data-science",
+    "title": "Data Science",
+    "description": "Learn data analysis, visualization, and statistical methods with Python.",
+    "icon": "📈"
   }
 ]

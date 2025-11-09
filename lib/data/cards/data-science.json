@@ -1,0 +1,194 @@
+[
+  {
+    "id": "9-1-statistics-basics",
+    "title": "Statistics Fundamentals",
+    "description": "Core statistical concepts and measures.",
+    "difficulty": "beginner",
+    "cards": [
+      {
+        "id": "9-1-1-mean-calculation",
+        "front": "How do you calculate the mean (average)?",
+        "back": "Sum of all values divided by number of values: (x₁ + x₂ + ... + xn) / n"
+      },
+      {
+        "id": "9-1-2-median-calculation",
+        "front": "How do you find the median?",
+        "back": "Sort the data, median is the middle value. For even count, average of two middle values."
+      },
+      {
+        "id": "9-1-3-mode-definition",
+        "front": "What is the mode?",
+        "back": "The value that appears most frequently in a dataset."
+      },
+      {
+        "id": "9-1-4-variance-formula",
+        "front": "How do you calculate variance?",
+        "back": "Average of squared differences from the mean: Σ(xi - μ)² / n"
+      },
+      {
+        "id": "9-1-5-standard-deviation",
+        "front": "What is standard deviation?",
+        "back": "Square root of variance, measures spread of data around the mean."
+      },
+      {
+        "id": "9-1-6-correlation-coefficient",
+        "front": "What does a correlation coefficient of -1 mean?",
+        "back": "Perfect negative correlation - as one variable increases, the other decreases."
+      },
+      {
+        "id": "9-1-7-p-value",
+        "front": "What does a p-value less than 0.05 indicate?",
+        "back": "Statistically significant result - the observed effect is unlikely due to chance."
+      },
+      {
+        "id": "9-1-8-confidence-interval",
+        "front": "What is a 95% confidence interval?",
+        "back": "Range where we are 95% confident the true population parameter lies."
+      }
+    ]
+  },
+  {
+    "id": "9-2-pandas-operations",
+    "title": "Pandas Data Manipulation",
+    "description": "Common pandas operations for data analysis.",
+    "difficulty": "intermediate",
+    "cards": [
+      {
+        "id": "9-2-1-pandas-read-csv",
+        "front": "How do you read a CSV file in pandas?",
+        "back": "import pandas as pd\ndf = pd.read_csv('file.csv')"
+      },
+      {
+        "id": "9-2-2-pandas-head",
+        "front": "How do you view the first 5 rows of a DataFrame?",
+        "back": "df.head()"
+      },
+      {
+        "id": "9-2-3-pandas-info",
+        "front": "How do you get DataFrame information?",
+        "back": "df.info() - shows columns, dtypes, non-null counts"
+      },
+      {
+        "id": "9-2-4-pandas-describe",
+        "front": "How do you get summary statistics?",
+        "back": "df.describe() - shows count, mean, std, min, quartiles, max"
+      },
+      {
+        "id": "9-2-5-pandas-filter",
+        "front": "How do you filter rows in pandas?",
+        "back": "df[df['column'] > value]\ndf.query('column > value')"
+      },
+      {
+        "id": "9-2-6-pandas-groupby",
+        "front": "How do you group data and aggregate?",
+        "back": "df.groupby('category')['value'].mean()"
+      },
+      {
+        "id": "9-2-7-pandas-merge",
+        "front": "How do you join two DataFrames?",
+        "back": "pd.merge(df1, df2, on='key', how='inner')"
+      },
+      {
+        "id": "9-2-8-pandas-fillna",
+        "front": "How do you handle missing values?",
+        "back": "df.fillna(value) - fill with specific value\ndf.dropna() - remove rows with NaN"
+      }
+    ]
+  },
+  {
+    "id": "9-3-machine-learning",
+    "title": "Machine Learning Concepts",
+    "description": "Key ML algorithms and evaluation metrics.",
+    "difficulty": "intermediate",
+    "cards": [
+      {
+        "id": "9-3-1-supervised-unsupervised",
+        "front": "Difference between supervised and unsupervised learning?",
+        "back": "Supervised: labeled training data, predict outputs\nUnsupervised: unlabeled data, find patterns/structures"
+      },
+      {
+        "id": "9-3-2-linear-regression",
+        "front": "When to use linear regression?",
+        "back": "Predict continuous numerical values with linear relationship between variables."
+      },
+      {
+        "id": "9-3-3-logistic-regression",
+        "front": "When to use logistic regression?",
+        "back": "Binary classification problems, outputs probability between 0 and 1."
+      },
+      {
+        "id": "9-3-4-decision-trees",
+        "front": "Advantages of decision trees?",
+        "back": "Easy to interpret, handle both numerical and categorical data, no need for scaling."
+      },
+      {
+        "id": "9-3-5-random-forest",
+        "front": "What is Random Forest?",
+        "back": "Ensemble method combining multiple decision trees to reduce overfitting and improve accuracy."
+      },
+      {
+        "id": "9-3-6-k-means",
+        "front": "How does K-Means clustering work?",
+        "back": "Iteratively assigns points to K clusters based on distance to centroids, then updates centroids."
+      },
+      {
+        "id": "9-3-7-cross-validation",
+        "front": "Why use cross-validation?",
+        "back": "Provides more reliable performance estimates, helps detect overfitting, makes better use of limited data."
+      },
+      {
+        "id": "9-3-8-feature-importance",
+        "front": "How to determine feature importance?",
+        "back": "Random Forest feature_importances_, correlation analysis, recursive feature elimination, permutation importance."
+      }
+    ]
+  },
+  {
+    "id": "9-4-data-visualization",
+    "title": "Data Visualization",
+    "description": "Creating effective visualizations with Python libraries.",
+    "difficulty": "intermediate",
+    "cards": [
+      {
+        "id": "9-4-1-matplotlib-plot",
+        "front": "Basic matplotlib line plot?",
+        "back": "import matplotlib.pyplot as plt\nplt.plot(x, y)\nplt.xlabel('X Label')\nplt.ylabel('Y Label')\nplt.title('Title')\nplt.show()"
+      },
+      {
+        "id": "9-4-2-seaborn-scatter",
+        "front": "Seaborn scatter plot with hue?",
+        "back": "import seaborn as sns\nsns.scatterplot(data=df, x='x_col', y='y_col', hue='category')"
+      },
+      {
+        "id": "9-4-3-histogram",
+        "front": "When to use a histogram?",
+        "back": "Show distribution of a single continuous variable, visualize data spread and central tendency."
+      },
+      {
+        "id": "9-4-4-box-plot",
+        "front": "What does a box plot show?",
+        "back": "Median, quartiles, outliers, and spread of data distribution."
+      },
+      {
+        "id": "9-4-5-heatmap-correlation",
+        "front": "How to create a correlation heatmap?",
+        "back": "import seaborn as sns\ncorr_matrix = df.corr()\nsns.heatmap(corr_matrix, annot=True, cmap='coolwarm')"
+      },
+      {
+        "id": "9-4-6-subplots",
+        "front": "How to create multiple plots in one figure?",
+        "back": "fig, axes = plt.subplots(2, 2)\naxes[0,0].plot(x1, y1)\naxes[0,1].scatter(x2, y2)"
+      },
+      {
+        "id": "9-4-7-plotly-interactive",
+        "front": "Why use Plotly for visualization?",
+        "back": "Creates interactive plots, supports web deployment, better for exploratory data analysis."
+      },
+      {
+        "id": "9-4-8-visualization-best-practices",
+        "front": "Data visualization best practices?",
+        "back": "Choose appropriate chart types, use clear labels, avoid chart junk, ensure color accessibility, tell a story with data."
+      }
+    ]
+  }
+]

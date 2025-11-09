@@ -1,0 +1,226 @@
+[
+  {
+    "id": "7-1-docker-basics",
+    "title": "Docker Fundamentals",
+    "description": "Test your knowledge of Docker basics, containers, and images.",
+    "difficulty": "beginner",
+    "questions": [
+      {
+        "id": "7-1-1-docker-definition",
+        "type": "multiple-choice",
+        "question": "What is Docker?",
+        "options": [
+          "A programming language",
+          "A containerization platform",
+          "A cloud storage service",
+          "A code editor"
+        ],
+        "correctAnswer": "A containerization platform",
+        "explanation": "Docker is an open-source platform for developing, shipping, and running applications in containers."
+      },
+      {
+        "id": "7-1-2-container-vs-vm",
+        "type": "multiple-choice",
+        "question": "How are Docker containers different from virtual machines?",
+        "options": [
+          "Containers are heavier than VMs",
+          "Containers share the host OS kernel, VMs have their own OS",
+          "VMs are faster than containers",
+          "Containers require more resources"
+        ],
+        "correctAnswer": "Containers share the host OS kernel, VMs have their own OS",
+        "explanation": "Containers share the host system's kernel, making them lightweight compared to VMs which include a full operating system."
+      },
+      {
+        "id": "7-1-3-docker-image",
+        "type": "multiple-choice",
+        "question": "What is a Docker image?",
+        "options": [
+          "A running container instance",
+          "A blueprint/template for containers",
+          "A storage volume",
+          "A network configuration"
+        ],
+        "correctAnswer": "A blueprint/template for containers",
+        "explanation": "A Docker image is a lightweight, standalone, executable package that includes everything needed to run an application."
+      },
+      {
+        "id": "7-1-4-dockerfile-purpose",
+        "type": "multiple-choice",
+        "question": "What is the purpose of a Dockerfile?",
+        "options": [
+          "To run containers",
+          "To define how to build a Docker image",
+          "To manage container networks",
+          "To store container data"
+        ],
+        "correctAnswer": "To define how to build a Docker image",
+        "explanation": "A Dockerfile is a text file with instructions for building a Docker image."
+      },
+      {
+        "id": "7-1-5-docker-run",
+        "type": "multiple-choice",
+        "question": "Which command runs a container from an image?",
+        "options": [
+          "docker start",
+          "docker create",
+          "docker run",
+          "docker build"
+        ],
+        "correctAnswer": "docker run",
+        "explanation": "docker run creates and starts a container from a specified image."
+      },
+      {
+        "id": "7-1-6-docker-ps",
+        "type": "multiple-choice",
+        "question": "What does 'docker ps' show?",
+        "options": [
+          "All Docker images",
+          "Running containers",
+          "Container logs",
+          "Docker networks"
+        ],
+        "correctAnswer": "Running containers",
+        "explanation": "docker ps lists all running containers. Use docker ps -a to see all containers."
+      },
+      {
+        "id": "7-1-7-docker-build",
+        "type": "multiple-choice",
+        "question": "Which command builds a Docker image from a Dockerfile?",
+        "options": [
+          "docker create",
+          "docker build",
+          "docker run",
+          "docker pull"
+        ],
+        "correctAnswer": "docker build",
+        "explanation": "docker build builds an image from a Dockerfile in the current directory."
+      },
+      {
+        "id": "7-1-8-port-mapping",
+        "type": "multiple-choice",
+        "question": "How do you map a container port to a host port?",
+        "options": [
+          "-p host_port:container_port",
+          "-port host_port container_port",
+          "--map host_port container_port",
+          "-m host_port:container_port"
+        ],
+        "correctAnswer": "-p host_port:container_port",
+        "explanation": "The -p flag maps container ports to host ports in the format host_port:container_port."
+      }
+    ]
+  },
+  {
+    "id": "7-2-docker-advanced",
+    "title": "Advanced Docker Concepts",
+    "description": "Explore Docker Compose, volumes, networking, and orchestration.",
+    "difficulty": "intermediate",
+    "questions": [
+      {
+        "id": "7-2-1-docker-compose",
+        "type": "multiple-choice",
+        "question": "What is Docker Compose used for?",
+        "options": [
+          "Building single containers",
+          "Defining and running multi-container applications",
+          "Managing Docker images",
+          "Container security"
+        ],
+        "correctAnswer": "Defining and running multi-container applications",
+        "explanation": "Docker Compose allows you to define and run multi-container Docker applications using a YAML file."
+      },
+      {
+        "id": "7-2-2-docker-volumes",
+        "type": "multiple-choice",
+        "question": "What is the purpose of Docker volumes?",
+        "options": [
+          "To increase container memory",
+          "To persist data beyond container lifecycle",
+          "To share data between containers",
+          "All of the above"
+        ],
+        "correctAnswer": "All of the above",
+        "explanation": "Docker volumes provide persistent storage, allowing data to persist beyond container lifecycle and be shared between containers."
+      },
+      {
+        "id": "7-2-3-docker-networking",
+        "type": "multiple-choice",
+        "question": "What is the default Docker network driver?",
+        "options": [
+          "host",
+          "bridge",
+          "overlay",
+          "macvlan"
+        ],
+        "correctAnswer": "bridge",
+        "explanation": "The bridge network driver is the default and creates an internal network for containers to communicate."
+      },
+      {
+        "id": "7-2-4-dockerfile-from",
+        "type": "multiple-choice",
+        "question": "What does the FROM instruction do in a Dockerfile?",
+        "options": [
+          "Specifies the base image to build upon",
+          "Copies files into the image",
+          "Runs commands during build",
+          "Sets environment variables"
+        ],
+        "correctAnswer": "Specifies the base image to build upon",
+        "explanation": "FROM specifies the base image that subsequent instructions will build upon."
+      },
+      {
+        "id": "7-2-5-multi-stage-builds",
+        "type": "multiple-choice",
+        "question": "What is the benefit of multi-stage Docker builds?",
+        "options": [
+          "Faster build times",
+          "Smaller final image sizes",
+          "Better security",
+          "All of the above"
+        ],
+        "correctAnswer": "All of the above",
+        "explanation": "Multi-stage builds allow you to use different base images for building and running, resulting in smaller, more secure final images."
+      },
+      {
+        "id": "7-2-6-docker-registry",
+        "type": "multiple-choice",
+        "question": "What is Docker Hub?",
+        "options": [
+          "A container orchestration tool",
+          "A public registry for Docker images",
+          "A Docker networking plugin",
+          "A container monitoring tool"
+        ],
+        "correctAnswer": "A public registry for Docker images",
+        "explanation": "Docker Hub is a cloud-based registry service for sharing and managing Docker images."
+      },
+      {
+        "id": "7-2-7-docker-swarm",
+        "type": "multiple-choice",
+        "question": "What is Docker Swarm?",
+        "options": [
+          "A container monitoring tool",
+          "Docker's native clustering and orchestration solution",
+          "A Docker networking plugin",
+          "A container security scanner"
+        ],
+        "correctAnswer": "Docker's native clustering and orchestration solution",
+        "explanation": "Docker Swarm is Docker's native tool for clustering and orchestrating Docker containers across multiple hosts."
+      },
+      {
+        "id": "7-2-8-docker-security",
+        "type": "multiple-choice",
+        "question": "What is a Docker security best practice?",
+        "options": [
+          "Run containers as root",
+          "Use the latest base images",
+          "Run only one process per container",
+          "Ignore security updates"
+        ],
+        "correctAnswer": "Run only one process per container",
+        "explanation": "Running only one process per container follows the single responsibility principle and improves security and maintainability."
+      }
+    ]
+  }
+]

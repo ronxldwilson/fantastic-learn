@@ -40,8 +40,29 @@ export interface Topic {
   icon: string;
 }
 
+export interface QuizProgress {
+  completed: boolean;
+  score: number;
+  total: number;
+  timestamp: string;
+}
+
+export interface CardSetProgress {
+  completed: boolean;
+  cardsStudied: number;
+  totalCards: number;
+  timestamp: string;
+}
+
+export interface RandomCardsProgress {
+  completedAt: string;
+  totalCards: number;
+}
+
 export interface UserProgress {
   completedQuizzes: string[]; // Quiz IDs
   scores: Record<string, number>; // Quiz ID -> score
   currentStreak: number;
+  completedCardSets?: string[]; // Card set IDs
+  randomCardsSessions?: RandomCardsProgress[];
 }

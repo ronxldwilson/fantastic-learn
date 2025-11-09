@@ -1,0 +1,200 @@
+[
+  {
+    "id": "3-1-flask-basics",
+    "title": "Flask Fundamentals",
+    "description": "Test your knowledge of Flask basics, routing, and core concepts.",
+    "difficulty": "beginner",
+    "questions": [
+      {
+        "id": "3-1-1-flask-definition",
+        "type": "multiple-choice",
+        "question": "What is Flask?",
+        "options": [
+          "A full-stack web framework",
+          "A lightweight WSGI web application framework",
+          "A database ORM",
+          "A front-end JavaScript library"
+        ],
+        "correctAnswer": "A lightweight WSGI web application framework",
+        "explanation": "Flask is a micro web framework for Python that provides the basics for building web applications."
+      },
+      {
+        "id": "3-1-2-flask-routing",
+        "type": "multiple-choice",
+        "question": "How do you define a route in Flask?",
+        "options": [
+          "@app.route('/hello')",
+          "@app.get('/hello')",
+          "app.add_url_rule('/hello')",
+          "All of the above"
+        ],
+        "correctAnswer": "All of the above",
+        "explanation": "Flask supports multiple ways to define routes: using @app.route decorator, @app.get/@app.post decorators, or add_url_rule method."
+      },
+      {
+        "id": "3-1-3-flask-app-creation",
+        "type": "multiple-choice",
+        "question": "How do you create a Flask application?",
+        "options": [
+          "app = Flask(__name__)",
+          "app = Flask()",
+          "flask_app = Flask(__name__)",
+          "Both A and C"
+        ],
+        "correctAnswer": "Both A and C",
+        "explanation": "A Flask application is created by instantiating the Flask class, typically with __name__ as the import name."
+      },
+      {
+        "id": "3-1-4-url-variables",
+        "type": "multiple-choice",
+        "question": "How do you capture URL variables in Flask?",
+        "options": [
+          "@app.route('/user/<username>')",
+          "@app.route('/user/{username}')",
+          "@app.route('/user/<int:user_id>')",
+          "Both A and C"
+        ],
+        "correctAnswer": "Both A and C",
+        "explanation": "Flask uses angle brackets <> for URL variables, and supports converters like int, float, string, etc."
+      },
+      {
+        "id": "3-1-5-jinja2-templates",
+        "type": "multiple-choice",
+        "question": "What templating engine does Flask use by default?",
+        "options": [
+          "Django templates",
+          "Handlebars",
+          "Jinja2",
+          "Mustache"
+        ],
+        "correctAnswer": "Jinja2",
+        "explanation": "Flask uses Jinja2 as its default templating engine for rendering HTML templates."
+      },
+      {
+        "id": "3-1-6-flask-request-object",
+        "type": "multiple-choice",
+        "question": "How do you access form data in Flask?",
+        "options": [
+          "request.form['field_name']",
+          "request.POST['field_name']",
+          "request.data['field_name']",
+          "request.input['field_name']"
+        ],
+        "correctAnswer": "request.form['field_name']",
+        "explanation": "Form data is accessed through the request.form dictionary in Flask."
+      },
+      {
+        "id": "3-1-7-flask-session",
+        "type": "multiple-choice",
+        "question": "How do you store data in Flask sessions?",
+        "options": [
+          "session['key'] = 'value'",
+          "request.session['key'] = 'value'",
+          "flask_session.set('key', 'value')",
+          "app.session['key'] = 'value'"
+        ],
+        "correctAnswer": "session['key'] = 'value'",
+        "explanation": "Flask sessions work like dictionaries and store data on the server side with a session ID in cookies."
+      },
+      {
+        "id": "3-1-8-flask-extensions",
+        "type": "multiple-choice",
+        "question": "What is the naming convention for Flask extensions?",
+        "options": [
+          "Flask-Something",
+          "flask_something",
+          "Something-Flask",
+          "flask-something"
+        ],
+        "correctAnswer": "Flask-Something",
+        "explanation": "Flask extensions typically follow the naming convention Flask-Something, like Flask-SQLAlchemy or Flask-WTF."
+      }
+    ]
+  },
+  {
+    "id": "3-2-flask-advanced",
+    "title": "Advanced Flask Concepts",
+    "description": "Explore advanced Flask features including blueprints, extensions, and security.",
+    "difficulty": "intermediate",
+    "questions": [
+      {
+        "id": "3-2-1-flask-blueprints",
+        "type": "multiple-choice",
+        "question": "What is the purpose of Flask Blueprints?",
+        "options": [
+          "To create database models",
+          "To organize applications into modules and components",
+          "To handle authentication",
+          "To manage static files"
+        ],
+        "correctAnswer": "To organize applications into modules and components",
+        "explanation": "Blueprints in Flask allow you to organize your application into reusable components and modules."
+      },
+      {
+        "id": "3-2-2-flask-sqlalchemy",
+        "type": "multiple-choice",
+        "question": "What does Flask-SQLAlchemy provide?",
+        "options": [
+          "A template engine",
+          "Database ORM functionality for Flask applications",
+          "Form validation",
+          "User authentication"
+        ],
+        "correctAnswer": "Database ORM functionality for Flask applications",
+        "explanation": "Flask-SQLAlchemy is an extension that adds SQLAlchemy ORM support to Flask applications."
+      },
+      {
+        "id": "3-2-3-flask-wtf",
+        "type": "multiple-choice",
+        "question": "What is Flask-WTF used for?",
+        "options": [
+          "Web template formatting",
+          "Web form handling and validation",
+          "Web testing framework",
+          "Web socket connections"
+        ],
+        "correctAnswer": "Web form handling and validation",
+        "explanation": "Flask-WTF integrates WTForms with Flask, providing form handling, validation, and CSRF protection."
+      },
+      {
+        "id": "3-2-4-flask-security",
+        "type": "multiple-choice",
+        "question": "How do you protect against CSRF attacks in Flask?",
+        "options": [
+          "Using Flask-WTF forms",
+          "Manually checking tokens",
+          "Using Flask-Security extension",
+          "All of the above"
+        ],
+        "correctAnswer": "All of the above",
+        "explanation": "Flask-WTF provides CSRF protection, Flask-Security offers comprehensive security features, or you can implement manual token checking."
+      },
+      {
+        "id": "3-2-5-flask-testing",
+        "type": "multiple-choice",
+        "question": "How do you write tests for Flask applications?",
+        "options": [
+          "Using unittest with Flask's test client",
+          "Using pytest with app.test_client()",
+          "Using Selenium for end-to-end testing",
+          "All of the above"
+        ],
+        "correctAnswer": "All of the above",
+        "explanation": "Flask supports various testing approaches: unit tests with test client, pytest, and end-to-end testing with Selenium."
+      },
+      {
+        "id": "3-2-6-flask-deployment",
+        "type": "multiple-choice",
+        "question": "What WSGI server is commonly used for Flask deployment?",
+        "options": [
+          "Apache HTTP Server",
+          "Gunicorn",
+          "Nginx",
+          "Tomcat"
+        ],
+        "correctAnswer": "Gunicorn",
+        "explanation": "Gunicorn is a popular WSGI HTTP Server commonly used for deploying Flask applications in production."
+      }
+    ]
+  }
+]

@@ -1,0 +1,141 @@
+[
+  {
+    "id": "1-supervised-learning",
+    "title": "Supervised Learning",
+    "description": "Core concepts in supervised machine learning algorithms and techniques.",
+    "difficulty": "beginner",
+    "cards": [
+      {
+        "id": "1-1-supervised-definition",
+        "front": "What is supervised learning?",
+        "back": "A type of machine learning where the algorithm learns from labeled training data to make predictions on new, unseen data."
+      },
+      {
+        "id": "1-2-regression-vs-classification",
+        "front": "What is the difference between regression and classification?",
+        "back": "Regression predicts continuous numerical values (e.g., house prices), while classification predicts discrete categories (e.g., spam/not spam)."
+      },
+      {
+        "id": "1-3-linear-regression",
+        "front": "What is linear regression?",
+        "back": "A supervised learning algorithm that models the relationship between a dependent variable and one or more independent variables using a linear equation."
+      },
+      {
+        "id": "1-4-logistic-regression",
+        "front": "What is logistic regression used for?",
+        "back": "Binary classification problems. It estimates the probability of a binary outcome using a logistic function."
+      },
+      {
+        "id": "1-5-decision-trees",
+        "front": "How do decision trees work?",
+        "back": "They split data based on feature values, creating a tree-like structure where each internal node represents a decision based on a feature."
+      },
+      {
+        "id": "1-6-random-forest",
+        "front": "What is a Random Forest?",
+        "back": "An ensemble method that combines multiple decision trees to improve accuracy and reduce overfitting."
+      },
+      {
+        "id": "1-7-svm-definition",
+        "front": "What is Support Vector Machine (SVM)?",
+        "back": "A supervised learning algorithm that finds the optimal hyperplane that best separates classes in the feature space."
+      },
+      {
+        "id": "1-8-knn-algorithm",
+        "front": "How does K-Nearest Neighbors (KNN) work?",
+        "back": "A lazy learning algorithm that classifies new instances based on the majority vote of their k nearest neighbors in the training data."
+      }
+    ]
+  },
+  {
+    "id": "2-unsupervised-learning",
+    "title": "Unsupervised Learning",
+    "description": "Key concepts in unsupervised machine learning and clustering algorithms.",
+    "difficulty": "intermediate",
+    "cards": [
+      {
+        "id": "2-1-unsupervised-definition",
+        "front": "What is unsupervised learning?",
+        "back": "Machine learning where the algorithm learns patterns from unlabeled data without explicit supervision."
+      },
+      {
+        "id": "2-2-clustering-definition",
+        "front": "What is clustering?",
+        "back": "The task of grouping similar data points together based on their features, without predefined categories."
+      },
+      {
+        "id": "2-3-k-means",
+        "front": "How does K-Means clustering work?",
+        "back": "An iterative algorithm that partitions data into k clusters by minimizing the sum of squared distances between points and their cluster centroids."
+      },
+      {
+        "id": "2-4-hierarchical-clustering",
+        "front": "What is hierarchical clustering?",
+        "back": "A clustering method that builds a hierarchy of clusters either through agglomerative (bottom-up) or divisive (top-down) approaches."
+      },
+      {
+        "id": "2-5-pca-definition",
+        "front": "What is Principal Component Analysis (PCA)?",
+        "back": "A dimensionality reduction technique that transforms data into a new coordinate system where the greatest variances lie on the first coordinates."
+      },
+      {
+        "id": "2-6-dimensionality-reduction",
+        "front": "Why is dimensionality reduction important?",
+        "back": "It reduces the number of features while preserving important information, helping with visualization, noise reduction, and computational efficiency."
+      },
+      {
+        "id": "2-7-anomaly-detection",
+        "front": "What is anomaly detection?",
+        "back": "The identification of data points that deviate significantly from the normal behavior or expected patterns in the dataset."
+      }
+    ]
+  },
+  {
+    "id": "3-neural-networks",
+    "title": "Neural Networks & Deep Learning",
+    "description": "Fundamental concepts in neural networks and deep learning architectures.",
+    "difficulty": "advanced",
+    "cards": [
+      {
+        "id": "3-1-artificial-neuron",
+        "front": "What is an artificial neuron (perceptron)?",
+        "back": "A mathematical function that takes multiple inputs, applies weights and bias, and produces an output through an activation function."
+      },
+      {
+        "id": "3-2-activation-functions",
+        "front": "What are common activation functions?",
+        "back": "Sigmoid, Tanh, ReLU, Leaky ReLU, Softmax. They introduce non-linearity into neural networks."
+      },
+      {
+        "id": "3-3-backpropagation",
+        "front": "What is backpropagation?",
+        "back": "The algorithm used to train neural networks by computing gradients of the loss function and updating weights through the chain rule."
+      },
+      {
+        "id": "3-4-gradient-descent",
+        "front": "What is gradient descent?",
+        "back": "An optimization algorithm that minimizes the loss function by iteratively moving in the direction of steepest descent."
+      },
+      {
+        "id": "3-5-cnn-explanation",
+        "front": "What makes Convolutional Neural Networks (CNNs) special?",
+        "back": "They use convolutional layers to automatically learn spatial hierarchies of features, making them excellent for image processing tasks."
+      },
+      {
+        "id": "3-6-rnn-purpose",
+        "front": "When are Recurrent Neural Networks (RNNs) used?",
+        "back": "For sequential data processing like time series, natural language, where the order and context of inputs matter."
+      },
+      {
+        "id": "3-7-overfitting-prevention",
+        "front": "What techniques prevent overfitting in neural networks?",
+        "back": "Dropout, regularization (L1/L2), early stopping, data augmentation, batch normalization."
+      },
+      {
+        "id": "3-8-transfer-learning",
+        "front": "What is transfer learning?",
+        "back": "Using a pre-trained model on a new but related task, leveraging knowledge learned from a large dataset."
+      }
+    ]
+  }
+]

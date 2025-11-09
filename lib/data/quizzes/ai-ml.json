@@ -1,0 +1,213 @@
+[
+  {
+    "id": "1-ml-fundamentals",
+    "title": "Machine Learning Fundamentals",
+    "description": "Test your knowledge of core machine learning concepts, algorithms, and terminology.",
+    "difficulty": "intermediate",
+    "questions": [
+      {
+        "id": "1-1-ml-definition",
+        "type": "multiple-choice",
+        "question": "What is the primary goal of machine learning?",
+        "options": [
+          "To create programs that can think like humans",
+          "To enable computers to learn from data without being explicitly programmed",
+          "To simulate human intelligence exactly",
+          "To replace all human jobs with automation"
+        ],
+        "correctAnswer": "To enable computers to learn from data without being explicitly programmed",
+        "explanation": "Machine learning focuses on algorithms that can learn patterns from data and make predictions or decisions without being explicitly programmed for each specific task."
+      },
+      {
+        "id": "1-2-supervised-vs-unsupervised",
+        "type": "multiple-choice",
+        "question": "In supervised learning, the training data includes:",
+        "options": [
+          "Only input features without labels",
+          "Both input features and corresponding output labels",
+          "Only output labels without input features",
+          "Neither inputs nor outputs"
+        ],
+        "correctAnswer": "Both input features and corresponding output labels",
+        "explanation": "Supervised learning algorithms learn from labeled training data where each example has both input features and the correct output (label)."
+      },
+      {
+        "id": "1-3-linear-regression",
+        "type": "multiple-choice",
+        "question": "Linear regression is primarily used for:",
+        "options": [
+          "Classification problems with discrete outputs",
+          "Predicting continuous numerical values",
+          "Grouping similar data points together",
+          "Finding anomalies in data"
+        ],
+        "correctAnswer": "Predicting continuous numerical values",
+        "explanation": "Linear regression predicts continuous output values by finding the best linear relationship between input features and the target variable."
+      },
+      {
+        "id": "1-4-overfitting-definition",
+        "type": "multiple-choice",
+        "question": "What is overfitting in machine learning?",
+        "options": [
+          "When the model performs well on training data but poorly on new data",
+          "When the model is too simple to capture the underlying patterns",
+          "When the training takes too long to complete",
+          "When the model has too many features"
+        ],
+        "correctAnswer": "When the model performs well on training data but poorly on new data",
+        "explanation": "Overfitting occurs when a model learns the training data too well, including noise and outliers, making it perform poorly on unseen data."
+      },
+      {
+        "id": "1-5-neural-networks",
+        "type": "multiple-choice",
+        "question": "What makes neural networks different from traditional machine learning algorithms?",
+        "options": [
+          "They don't require training data",
+          "They can automatically learn hierarchical features from raw data",
+          "They only work with categorical data",
+          "They are much slower than traditional algorithms"
+        ],
+        "correctAnswer": "They can automatically learn hierarchical features from raw data",
+        "explanation": "Neural networks can learn complex hierarchical representations directly from raw input data through multiple layers of processing."
+      },
+      {
+        "id": "1-6-gradient-descent",
+        "type": "multiple-choice",
+        "question": "What is the main purpose of gradient descent in machine learning?",
+        "options": [
+          "To visualize the data distribution",
+          "To minimize the loss function by iteratively adjusting model parameters",
+          "To split the dataset into training and testing sets",
+          "To normalize the input features"
+        ],
+        "correctAnswer": "To minimize the loss function by iteratively adjusting model parameters",
+        "explanation": "Gradient descent is an optimization algorithm that finds the minimum of a loss function by taking steps proportional to the negative gradient."
+      },
+      {
+        "id": "1-7-confusion-matrix",
+        "type": "multiple-choice",
+        "question": "In a confusion matrix for binary classification, what does the term 'recall' represent?",
+        "options": [
+          "The proportion of true positives among all positive predictions",
+          "The proportion of true positives among all actual positive cases",
+          "The proportion of correct predictions among all predictions",
+          "The proportion of negative predictions that are correct"
+        ],
+        "correctAnswer": "The proportion of true positives among all actual positive cases",
+        "explanation": "Recall (also called sensitivity or true positive rate) measures the ability of a model to find all the relevant cases within a dataset."
+      },
+      {
+        "id": "1-8-feature-scaling",
+        "type": "multiple-choice",
+        "question": "Why is feature scaling important in many machine learning algorithms?",
+        "options": [
+          "To reduce the number of features",
+          "To ensure all features contribute equally to the distance calculations",
+          "To convert categorical features to numerical",
+          "To handle missing values in the dataset"
+        ],
+        "correctAnswer": "To ensure all features contribute equally to the distance calculations",
+        "explanation": "Feature scaling ensures that features with different scales (e.g., age in years vs. income in dollars) don't dominate the learning process."
+      },
+      {
+        "id": "1-9-cross-validation",
+        "type": "multiple-choice",
+        "question": "What is the main benefit of k-fold cross-validation?",
+        "options": [
+          "It reduces training time significantly",
+          "It provides a more reliable estimate of model performance on unseen data",
+          "It automatically selects the best hyperparameters",
+          "It eliminates the need for a separate test set"
+        ],
+        "correctAnswer": "It provides a more reliable estimate of model performance on unseen data",
+        "explanation": "Cross-validation helps assess how well a model will generalize to new data by testing it on multiple subsets of the available data."
+      },
+      {
+        "id": "1-10-regularization-l2",
+        "type": "multiple-choice",
+        "question": "What type of regularization adds a penalty equal to the square of the magnitude of coefficients?",
+        "options": [
+          "L1 regularization (Lasso)",
+          "L2 regularization (Ridge)",
+          "Elastic Net",
+          "Dropout"
+        ],
+        "correctAnswer": "L2 regularization (Ridge)",
+        "explanation": "L2 regularization adds a penalty term proportional to the square of the coefficients, which helps prevent overfitting by shrinking coefficients towards zero."
+      }
+    ]
+  },
+  {
+    "id": "2-deep-learning-basics",
+    "title": "Deep Learning Fundamentals",
+    "description": "Explore neural networks, activation functions, and deep learning architectures.",
+    "difficulty": "advanced",
+    "questions": [
+      {
+        "id": "2-1-activation-functions",
+        "type": "multiple-choice",
+        "question": "Which activation function is commonly used in the output layer for binary classification?",
+        "options": [
+          "ReLU",
+          "Sigmoid",
+          "Tanh",
+          "Softmax"
+        ],
+        "correctAnswer": "Sigmoid",
+        "explanation": "Sigmoid activation function outputs values between 0 and 1, making it suitable for binary classification probabilities."
+      },
+      {
+        "id": "2-2-cnn-purpose",
+        "type": "multiple-choice",
+        "question": "What is the primary advantage of Convolutional Neural Networks (CNNs) over regular neural networks for image processing?",
+        "options": [
+          "They require less training data",
+          "They automatically learn spatial hierarchies of features",
+          "They are much faster to train",
+          "They don't require activation functions"
+        ],
+        "correctAnswer": "They automatically learn spatial hierarchies of features",
+        "explanation": "CNNs use convolutional layers that learn spatial patterns and hierarchies, making them highly effective for image recognition tasks."
+      },
+      {
+        "id": "2-3-backpropagation",
+        "type": "multiple-choice",
+        "question": "What is the purpose of backpropagation in neural networks?",
+        "options": [
+          "To initialize the network weights",
+          "To compute the forward pass through the network",
+          "To calculate gradients and update weights during training",
+          "To normalize the input data"
+        ],
+        "correctAnswer": "To calculate gradients and update weights during training",
+        "explanation": "Backpropagation computes the gradient of the loss function with respect to each weight by propagating errors backward through the network."
+      },
+      {
+        "id": "2-4-vanishing-gradient",
+        "type": "multiple-choice",
+        "question": "What problem occurs when training very deep neural networks with sigmoid activation functions?",
+        "options": [
+          "Gradient explosion",
+          "Vanishing gradients",
+          "Overfitting",
+          "Underfitting"
+        ],
+        "correctAnswer": "Vanishing gradients",
+        "explanation": "The vanishing gradient problem occurs when gradients become extremely small during backpropagation, preventing the network from learning effectively."
+      },
+      {
+        "id": "2-5-batch-normalization",
+        "type": "multiple-choice",
+        "question": "What is the main benefit of batch normalization in neural networks?",
+        "options": [
+          "It reduces the number of parameters",
+          "It stabilizes and accelerates training by normalizing layer inputs",
+          "It prevents overfitting",
+          "It reduces memory usage"
+        ],
+        "correctAnswer": "It stabilizes and accelerates training by normalizing layer inputs",
+        "explanation": "Batch normalization normalizes the inputs to each layer, reducing internal covariate shift and allowing for higher learning rates."
+      }
+    ]
+  }
+]

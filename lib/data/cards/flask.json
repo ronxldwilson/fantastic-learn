@@ -1,0 +1,98 @@
+[
+  {
+    "id": "3-1-flask-basics",
+    "title": "Flask Fundamentals",
+    "description": "Core concepts and basic usage of Flask web framework.",
+    "difficulty": "beginner",
+    "cards": [
+      {
+        "id": "3-1-1-flask-import",
+        "front": "How do you import Flask?",
+        "back": "from flask import Flask"
+      },
+      {
+        "id": "3-1-2-app-creation",
+        "front": "How do you create a Flask app?",
+        "back": "app = Flask(__name__)"
+      },
+      {
+        "id": "3-1-3-basic-route",
+        "front": "How do you define a basic route?",
+        "back": "@app.route('/')\ndef hello():\n    return 'Hello World'"
+      },
+      {
+        "id": "3-1-4-route-methods",
+        "front": "How do you specify HTTP methods for a route?",
+        "back": "@app.route('/submit', methods=['GET', 'POST'])\ndef submit():\n    if request.method == 'POST':\n        # handle POST\n        pass\n    return 'Response'"
+      },
+      {
+        "id": "3-1-5-url-variables",
+        "front": "How do you capture URL variables?",
+        "back": "@app.route('/user/<username>')\ndef show_user(username):\n    return f'User: {username}'"
+      },
+      {
+        "id": "3-1-6-url-converters",
+        "front": "What URL converters does Flask support?",
+        "back": "string (default), int, float, path, uuid"
+      },
+      {
+        "id": "3-1-7-render-template",
+        "front": "How do you render a template?",
+        "back": "from flask import render_template\n\nreturn render_template('index.html', name='John')"
+      },
+      {
+        "id": "3-1-8-request-object",
+        "front": "How do you access request data?",
+        "back": "from flask import request\n\n# Query params: request.args.get('key')\n# Form data: request.form['field']\n# JSON: request.get_json()"
+      }
+    ]
+  },
+  {
+    "id": "3-2-flask-advanced",
+    "title": "Advanced Flask Features",
+    "description": "Advanced concepts including blueprints, extensions, and best practices.",
+    "difficulty": "intermediate",
+    "cards": [
+      {
+        "id": "3-2-1-blueprint-creation",
+        "front": "How do you create a Flask Blueprint?",
+        "back": "from flask import Blueprint\n\nbp = Blueprint('auth', __name__, url_prefix='/auth')\n\n@bp.route('/login')\ndef login():\n    return 'Login page'"
+      },
+      {
+        "id": "3-2-2-blueprint-registration",
+        "front": "How do you register a Blueprint?",
+        "back": "app.register_blueprint(auth_bp)"
+      },
+      {
+        "id": "3-2-3-flask-sqlalchemy-setup",
+        "front": "How do you set up Flask-SQLAlchemy?",
+        "back": "from flask_sqlalchemy import SQLAlchemy\n\ndb = SQLAlchemy(app)\n\nclass User(db.Model):\n    id = db.Column(db.Integer, primary_key=True)\n    username = db.Column(db.String(80), unique=True)"
+      },
+      {
+        "id": "3-2-4-flask-wtf-form",
+        "front": "How do you create a WTForms form in Flask?",
+        "back": "from flask_wtf import FlaskForm\nfrom wtforms import StringField, SubmitField\nfrom wtforms.validators import DataRequired\n\nclass ContactForm(FlaskForm):\n    name = StringField('Name', validators=[DataRequired()])\n    submit = SubmitField('Submit')"
+      },
+      {
+        "id": "3-2-5-flask-session",
+        "front": "How do you use Flask sessions?",
+        "back": "from flask import session\n\n# Set session data\nsession['username'] = 'john'\n\n# Get session data\nusername = session.get('username')\n\n# Don't forget to set secret key!\napp.secret_key = 'your-secret-key'"
+      },
+      {
+        "id": "3-2-6-error-handling",
+        "front": "How do you handle errors in Flask?",
+        "back": "@app.errorhandler(404)\ndef page_not_found(e):\n    return render_template('404.html'), 404"
+      },
+      {
+        "id": "3-2-7-before-request",
+        "front": "How do you run code before each request?",
+        "back": "@app.before_request\ndef before_request():\n    # Code to run before each request\n    pass"
+      },
+      {
+        "id": "3-2-8-flask-testing",
+        "front": "How do you test a Flask application?",
+        "back": "import unittest\nfrom app import app\n\nclass FlaskTestCase(unittest.TestCase):\n    def setUp(self):\n        self.app = app.test_client()\n    \n    def test_home(self):\n        response = self.app.get('/')\n        self.assertEqual(response.status_code, 200)"
+      }
+    ]
+  }
+]

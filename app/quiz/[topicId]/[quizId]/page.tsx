@@ -1,7 +1,7 @@
 'use client';
 
 import { notFound, useRouter } from 'next/navigation';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { loadQuiz } from '../../../../lib/dataLoader';
 import QuizQuestion from '../../../../components/QuizQuestion';
 import Link from 'next/link';
@@ -18,6 +18,9 @@ export default function QuizPage({ params }: PageProps) {
   const [quizCompleted, setQuizCompleted] = useState(false);
   const [quiz, setQuiz] = useState<any>(null);
   const [loading, setLoading] = useState(true);
+  const [isAnimating, setIsAnimating] = useState(false);
+  const touchStartX = useRef<number | null>(null);
+  const touchStartY = useRef<number | null>(null);
 
   useEffect(() => {
     params.then(setResolvedParams);
@@ -51,6 +54,45 @@ export default function QuizPage({ params }: PageProps) {
 
   const currentQuestion = quiz.questions[currentQuestionIndex];
   const totalQuestions = quiz.questions.length;
+
+  const navigateToQuestion = (newIndex: number) => {
+    if (isAnimating || newIndex < 0 || newIndex >= totalQuestions) return;
+
+    setIsAnimating(true);
+    setCurrentQuestionIndex(newIndex);
+
+    // Reset animation state after transition
+    setTimeout(() => setIsAnimating(false), 300);
+  };
+
+  // Touch event handlers for swipe functionality
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX;
+    touchStartY.current = e.touches[0].clientY;
+  };
+
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    if (!touchStartX.current || !touchStartY.current) return;
+
+    const touchEndX = e.changedTouches[0].clientX;
+    const touchEndY = e.changedTouches[0].clientY;
+    const deltaX = touchEndX - touchStartX.current;
+    const deltaY = touchEndY - touchStartY.current;
+
+    // Only consider horizontal swipes (ignore vertical scrolling)
+    if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > 50) {
+      if (deltaX > 0) {
+        // Swipe right - go to previous question
+        navigateToQuestion(currentQuestionIndex - 1);
+      } else {
+        // Swipe left - go to next question
+        navigateToQuestion(currentQuestionIndex + 1);
+      }
+    }
+
+    touchStartX.current = null;
+    touchStartY.current = null;
+  };
 
   const handleAnswer = (isCorrect: boolean, answer: string) => {
     const newAnswers = {
@@ -164,11 +206,20 @@ export default function QuizPage({ params }: PageProps) {
           </div>
 
           {/* Question */}
-          <QuizQuestion
-            question={currentQuestion}
-            onAnswer={handleAnswer}
-            showResult={false}
-          />
+          <div
+            className={`transition-all duration-300 ${
+              isAnimating ? 'transform scale-95 opacity-50' : 'transform scale-100 opacity-100'
+            }`}
+            onTouchStart={handleTouchStart}
+            onTouchEnd={handleTouchEnd}
+            style={{ touchAction: 'pan-y' }}
+          >
+            <QuizQuestion
+              question={currentQuestion}
+              onAnswer={handleAnswer}
+              showResult={false}
+            />
+          </div>
 
           {/* Navigation */}
           <div className="mt-6 flex justify-between">

@@ -1,0 +1,118 @@
+[
+  {
+    "id": "2-1-fastapi-basics",
+    "title": "FastAPI Fundamentals",
+    "description": "Core concepts and basic usage of FastAPI framework.",
+    "difficulty": "beginner",
+    "cards": [
+      {
+        "id": "2-1-1-fastapi-import",
+        "front": "How do you import FastAPI?",
+        "back": "from fastapi import FastAPI"
+      },
+      {
+        "id": "2-1-2-app-instance",
+        "front": "How do you create a FastAPI application instance?",
+        "back": "app = FastAPI()"
+      },
+      {
+        "id": "2-1-3-basic-route",
+        "front": "How do you create a basic GET route?",
+        "back": "@app.get('/')\ndef read_root():\n    return {'message': 'Hello World'}"
+      },
+      {
+        "id": "2-1-4-path-parameters",
+        "front": "How do you define path parameters?",
+        "back": "@app.get('/users/{user_id}')\ndef get_user(user_id: int):\n    return {'user_id': user_id}\n\n# FastAPI automatically converts the path parameter to the specified type\n# Supports: str, int, float, bool, and more"
+      },
+      {
+        "id": "2-1-5-query-parameters",
+        "front": "How do you handle query parameters?",
+        "back": "@app.get('/items/')\ndef read_items(skip: int = 0, limit: int = 10):\n    return {'skip': skip, 'limit': limit}"
+      },
+      {
+        "id": "2-1-6-request-body",
+        "front": "How do you handle request bodies with Pydantic?",
+        "back": "from pydantic import BaseModel\n\nclass Item(BaseModel):\n    name: str\n    price: float\n\n@app.post('/items/')\ndef create_item(item: Item):\n    return item\n\n# FastAPI automatically validates the JSON request body against the Pydantic model\n# Returns 422 validation error if data doesn't match the schema"
+      },
+      {
+        "id": "2-1-7-response-model",
+        "front": "How do you specify a response model?",
+        "back": "@app.get('/items/{item_id}', response_model=Item)\ndef get_item(item_id: int):\n    return {'name': 'Item', 'price': 10.0}"
+      },
+      {
+        "id": "2-1-8-automatic-docs",
+        "front": "Where can you access automatic API documentation?",
+        "back": "/docs (Swagger UI) and /redoc (ReDoc)\n\n# FastAPI automatically generates interactive documentation\n# You can test API endpoints directly from the browser\n# Available at: http://localhost:8000/docs"
+      },
+      {
+        "id": "2-1-9-http-status-codes",
+        "front": "What HTTP status codes does FastAPI use automatically?",
+        "back": "200 OK - Successful request\n201 Created - Resource created\n204 No Content - Successful request, no content returned\n400 Bad Request - Invalid request data\n404 Not Found - Resource not found\n422 Unprocessable Entity - Validation error\n500 Internal Server Error - Server error"
+      },
+      {
+        "id": "2-1-10-error-responses",
+        "front": "How do you create custom error responses?",
+        "back": "from fastapi import HTTPException\n\n@app.get('/items/{item_id}')\ndef get_item(item_id: int):\n    if item_id not in items:\n        raise HTTPException(status_code=404, detail='Item not found')\n    return items[item_id]\n\n# FastAPI automatically converts HTTPException to proper JSON error response"
+      }
+    ]
+  },
+  {
+    "id": "2-2-fastapi-advanced",
+    "title": "Advanced FastAPI Features",
+    "description": "Advanced concepts including dependencies, security, and async operations.",
+    "difficulty": "intermediate",
+    "cards": [
+      {
+        "id": "2-2-1-dependency-injection",
+        "front": "How do you create a dependency function?",
+        "back": "from fastapi import Depends\n\ndef get_current_user():\n    return {'username': 'user'}\n\n@app.get('/users/me')\ndef get_current_user_info(current_user = Depends(get_current_user)):\n    return current_user"
+      },
+      {
+        "id": "2-2-2-async-endpoints",
+        "front": "How do you create an async endpoint?",
+        "back": "@app.get('/async-endpoint')\nasync def async_function():\n    # async operations here\n    return {'message': 'Async response'}"
+      },
+      {
+        "id": "2-2-3-oauth2-security",
+        "front": "How do you add OAuth2 authentication?",
+        "back": "from fastapi.security import OAuth2PasswordBearer\n\noauth2_scheme = OAuth2PasswordBearer(tokenUrl='token')\n\n@app.get('/secure')\ndef secure_endpoint(token: str = Depends(oauth2_scheme)):\n    return {'token': token}"
+      },
+      {
+        "id": "2-2-4-cors-middleware",
+        "front": "How do you enable CORS?",
+        "back": "from fastapi.middleware.cors import CORSMiddleware\n\napp.add_middleware(\n    CORSMiddleware,\n    allow_origins=['http://localhost:3000'],\n    allow_credentials=True,\n    allow_methods=['*'],\n    allow_headers=['*'],\n)"
+      },
+      {
+        "id": "2-2-5-background-tasks",
+        "front": "How do you run background tasks?",
+        "back": "from fastapi import BackgroundTasks\n\n@app.post('/send-email')\ndef send_email(background_tasks: BackgroundTasks):\n    background_tasks.add_task(send_email_task, 'email@example.com')\n    return {'message': 'Email will be sent'}"
+      },
+      {
+        "id": "2-2-6-file-upload",
+        "front": "How do you handle file uploads?",
+        "back": "from fastapi import UploadFile, File\n\n@app.post('/upload')\ndef upload_file(file: UploadFile = File(...)):\n    return {'filename': file.filename}"
+      },
+      {
+        "id": "2-2-7-websocket-basic",
+        "front": "How do you create a WebSocket endpoint?",
+        "back": "from fastapi import WebSocket\n\n@app.websocket('/ws')\nasync def websocket_endpoint(websocket: WebSocket):\n    await websocket.accept()\n    while True:\n        data = await websocket.receive_text()\n        await websocket.send_text(f'Message: {data}')"
+      },
+      {
+        "id": "2-2-8-custom-middleware",
+        "front": "How do you create custom middleware?",
+        "back": "from fastapi import Request\n\n@app.middleware('http')\nasync def custom_middleware(request: Request, call_next):\n    # Process request\n    response = await call_next(request)\n    # Process response\n    return response\n\n# Middleware runs on every request, useful for logging, authentication, etc."
+      },
+      {
+        "id": "2-2-9-testing-fastapi",
+        "front": "How do you test FastAPI applications?",
+        "back": "from fastapi.testclient import TestClient\n\nclient = TestClient(app)\n\ndef test_get_items():\n    response = client.get('/items/')\n    assert response.status_code == 200\n    assert response.json() == {'items': []}\n\n# Use pytest with TestClient for comprehensive API testing"
+      },
+      {
+        "id": "2-2-10-running-fastapi",
+        "front": "How do you run a FastAPI application?",
+        "back": "# Development\nuvicorn main:app --reload\n\n# Production\nuvicorn main:app --host 0.0.0.0 --port 8000\n\n# With Gunicorn (production)\ngunicorn main:app -w 4 -k uvicorn.workers.UvicornWorker\n\n# Default: http://localhost:8000"
+      }
+    ]
+  }
+]

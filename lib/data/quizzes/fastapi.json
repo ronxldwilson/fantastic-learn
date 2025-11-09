@@ -1,0 +1,200 @@
+[
+  {
+    "id": "2-1-fastapi-basics",
+    "title": "FastAPI Fundamentals",
+    "description": "Test your knowledge of FastAPI basics, routing, and core concepts.",
+    "difficulty": "beginner",
+    "questions": [
+      {
+        "id": "2-1-1-fastapi-definition",
+        "type": "multiple-choice",
+        "question": "What is FastAPI primarily used for?",
+        "options": [
+          "Building desktop applications",
+          "Creating modern, fast web APIs with automatic documentation",
+          "Developing mobile applications",
+          "Data analysis and visualization"
+        ],
+        "correctAnswer": "Creating modern, fast web APIs with automatic documentation",
+        "explanation": "FastAPI is a modern, fast web framework for building APIs with Python 3.7+ based on standard Python type hints."
+      },
+      {
+        "id": "2-1-2-async-support",
+        "type": "multiple-choice",
+        "question": "What makes FastAPI particularly fast compared to other Python web frameworks?",
+        "options": [
+          "It uses C extensions",
+          "It has built-in async support and automatic request validation",
+          "It pre-compiles all routes",
+          "It uses a different Python interpreter"
+        ],
+        "correctAnswer": "It has built-in async support and automatic request validation",
+        "explanation": "FastAPI leverages Python's async/await syntax and provides automatic request validation using Pydantic models."
+      },
+      {
+        "id": "2-1-3-path-parameters",
+        "type": "multiple-choice",
+        "question": "How do you define a path parameter in FastAPI?",
+        "options": [
+          "@app.get('/users/{user_id}')",
+          "@app.get('/users/<user_id>')",
+          "@app.get('/users/[user_id]')",
+          "@app.get('/users/(user_id)')"
+        ],
+        "correctAnswer": "@app.get('/users/{user_id}')",
+        "explanation": "Path parameters in FastAPI are defined using curly braces {} in the route decorator."
+      },
+      {
+        "id": "2-1-4-query-parameters",
+        "type": "multiple-choice",
+        "question": "How are query parameters handled in FastAPI?",
+        "options": [
+          "They must be explicitly defined in the route decorator",
+          "They are automatically parsed and can be function parameters with defaults",
+          "They need to be manually extracted from the request object",
+          "They are only available in POST requests"
+        ],
+        "correctAnswer": "They are automatically parsed and can be function parameters with defaults",
+        "explanation": "FastAPI automatically parses query parameters and allows them as function parameters with optional default values."
+      },
+      {
+        "id": "2-1-5-pydantic-models",
+        "type": "multiple-choice",
+        "question": "What is the role of Pydantic models in FastAPI?",
+        "options": [
+          "To define database schemas",
+          "To validate and serialize request/response data",
+          "To handle authentication",
+          "To manage WebSocket connections"
+        ],
+        "correctAnswer": "To validate and serialize request/response data",
+        "explanation": "Pydantic models in FastAPI are used for automatic request validation, response serialization, and generating OpenAPI documentation."
+      },
+      {
+        "id": "2-1-6-automatic-docs",
+        "type": "multiple-choice",
+        "question": "What kind of automatic documentation does FastAPI generate?",
+        "options": [
+          "Only PDF documentation",
+          "Interactive API documentation with Swagger UI and ReDoc",
+          "Only text-based documentation",
+          "Database schema documentation"
+        ],
+        "correctAnswer": "Interactive API documentation with Swagger UI and ReDoc",
+        "explanation": "FastAPI automatically generates interactive API documentation accessible at /docs (Swagger UI) and /redoc (ReDoc) endpoints."
+      },
+      {
+        "id": "2-1-7-response-models",
+        "type": "multiple-choice",
+        "question": "How do you specify a response model in FastAPI?",
+        "options": [
+          "Using the @response_model decorator",
+          "Using the response_model parameter in the route decorator",
+          "By returning a Pydantic model directly",
+          "All of the above"
+        ],
+        "correctAnswer": "All of the above",
+        "explanation": "FastAPI supports multiple ways to specify response models: using response_model parameter, returning Pydantic models directly, or using decorators."
+      },
+      {
+        "id": "2-1-8-dependency-injection",
+        "type": "multiple-choice",
+        "question": "What is dependency injection in FastAPI?",
+        "options": [
+          "A way to inject CSS into HTML responses",
+          "A design pattern for managing code dependencies and reusable components",
+          "A method for database connection management",
+          "A technique for API authentication"
+        ],
+        "correctAnswer": "A design pattern for managing code dependencies and reusable components",
+        "explanation": "Dependency injection in FastAPI allows you to declare dependencies (like database connections, authentication) that are automatically resolved and injected into your route functions."
+      }
+    ]
+  },
+  {
+    "id": "2-2-fastapi-advanced",
+    "title": "Advanced FastAPI Features",
+    "description": "Explore advanced FastAPI concepts including security, middleware, and testing.",
+    "difficulty": "intermediate",
+    "questions": [
+      {
+        "id": "2-2-1-oauth2-jwt",
+        "type": "multiple-choice",
+        "question": "What authentication method does FastAPI commonly use for securing APIs?",
+        "options": [
+          "Basic HTTP Authentication only",
+          "OAuth2 with JWT tokens",
+          "API keys only",
+          "Session-based authentication only"
+        ],
+        "correctAnswer": "OAuth2 with JWT tokens",
+        "explanation": "FastAPI has excellent support for OAuth2 with JWT (JSON Web Tokens) for secure API authentication."
+      },
+      {
+        "id": "2-2-2-middleware-purpose",
+        "type": "multiple-choice",
+        "question": "What is the primary purpose of middleware in FastAPI?",
+        "options": [
+          "To handle database connections",
+          "To process requests and responses globally before they reach route handlers",
+          "To define API routes",
+          "To validate user input"
+        ],
+        "correctAnswer": "To process requests and responses globally before they reach route handlers",
+        "explanation": "Middleware in FastAPI intercepts and processes all requests and responses, useful for CORS, logging, authentication checks, etc."
+      },
+      {
+        "id": "2-2-3-cors-handling",
+        "type": "multiple-choice",
+        "question": "How does FastAPI handle Cross-Origin Resource Sharing (CORS)?",
+        "options": [
+          "It doesn't support CORS",
+          "Using CORSMiddleware from fastapi.middleware.cors",
+          "By manually setting headers in each response",
+          "CORS is automatically enabled for all origins"
+        ],
+        "correctAnswer": "Using CORSMiddleware from fastapi.middleware.cors",
+        "explanation": "FastAPI provides CORSMiddleware that can be easily configured to handle CORS headers for cross-origin requests."
+      },
+      {
+        "id": "2-2-4-websocket-support",
+        "type": "multiple-choice",
+        "question": "Does FastAPI support WebSocket connections?",
+        "options": [
+          "No, only HTTP requests",
+          "Yes, with WebSocket endpoints similar to HTTP routes",
+          "Only through third-party extensions",
+          "WebSockets are deprecated in modern APIs"
+        ],
+        "correctAnswer": "Yes, with WebSocket endpoints similar to HTTP routes",
+        "explanation": "FastAPI supports WebSocket connections with a similar syntax to HTTP routes, allowing real-time bidirectional communication."
+      },
+      {
+        "id": "2-2-5-background-tasks",
+        "type": "multiple-choice",
+        "question": "What are background tasks used for in FastAPI?",
+        "options": [
+          "Running tasks in the background without blocking the response",
+          "Processing images asynchronously",
+          "Database cleanup operations",
+          "All of the above"
+        ],
+        "correctAnswer": "All of the above",
+        "explanation": "Background tasks in FastAPI allow you to run operations after returning a response, useful for email sending, cleanup, or any non-blocking operations."
+      },
+      {
+        "id": "2-2-6-testing-fastapi",
+        "type": "multiple-choice",
+        "question": "What testing framework is commonly used with FastAPI?",
+        "options": [
+          "unittest only",
+          "pytest with TestClient",
+          "Django's test framework",
+          "Flask's testing utilities"
+        ],
+        "correctAnswer": "pytest with TestClient",
+        "explanation": "FastAPI provides a TestClient based on HTTPX that works with pytest for comprehensive API testing."
+      }
+    ]
+  }
+]

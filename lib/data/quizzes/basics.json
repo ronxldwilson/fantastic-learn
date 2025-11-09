@@ -76,8 +76,7 @@
         "id": "10",
         "type": "code-input",
         "question": "Write code to get the user's name and print a greeting.",
-        "correctAnswer": "name = input('Enter your name: ')
-print('Hello, ' + name)",
+        "correctAnswer": "name = input('Enter your name: ')\nprint('Hello, ' + name)",
         "explanation": "Use input() to get user input and print() to display output."
       },
       {
@@ -92,8 +91,7 @@ print('Hello, ' + name)",
         "id": "12",
         "type": "code-input",
         "question": "Write code to check if a number is even.",
-        "correctAnswer": "if number % 2 == 0:
-    print('Even')",
+        "correctAnswer": "if number % 2 == 0:\\n    print('Even')",
         "explanation": "Use modulo operator % to check if divisible by 2."
       },
       {
@@ -154,6 +152,79 @@ print('Hello, ' + name)",
         "question": "Write code to find the length of the string 'Python'.",
         "correctAnswer": "len('Python')",
         "explanation": "len() works on strings, lists, and other sequences."
+      },
+      {
+        "id": "21",
+        "type": "multiple-choice",
+        "question": "What is the output of bool(0)?",
+        "options": ["True", "False", "0", "Error"],
+        "correctAnswer": "False",
+        "explanation": "In Python, 0, empty containers, and None are falsy values."
+      },
+      {
+        "id": "22",
+        "type": "text-input",
+        "question": "What operator is used for string repetition?",
+        "correctAnswer": "*",
+        "explanation": "The * operator repeats strings: 'Hi' * 3 gives 'HiHiHi'"
+      },
+      {
+        "id": "23",
+        "type": "code-input",
+        "question": "Write code to get the first 3 characters of 'Python'.",
+        "correctAnswer": "'Python'[:3]",
+        "explanation": "String slicing uses [start:end] syntax."
+      },
+      {
+        "id": "24",
+        "type": "multiple-choice",
+        "question": "Which of these is a valid Python identifier?",
+        "options": ["123abc", "_private", "for", "my-var"],
+        "correctAnswer": "_private",
+        "explanation": "Identifiers can start with letters or underscores, but not numbers or contain hyphens."
+      },
+      {
+        "id": "25",
+        "type": "code-input",
+        "question": "Write code to check if 'a' is in 'banana'.",
+        "correctAnswer": "'a' in 'banana'",
+        "explanation": "The 'in' operator checks for substring presence."
+      },
+      {
+        "id": "26",
+        "type": "text-input",
+        "question": "What is the result of 10 // 3?",
+        "correctAnswer": "3",
+        "explanation": "Floor division (//) returns the quotient without remainder."
+      },
+      {
+        "id": "27",
+        "type": "code-input",
+        "question": "Write code to round 3.14159 to 2 decimal places.",
+        "correctAnswer": "round(3.14159, 2)",
+        "explanation": "round(number, ndigits) rounds to specified decimal places."
+      },
+      {
+        "id": "28",
+        "type": "multiple-choice",
+        "question": "What does the 'pass' statement do?",
+        "options": ["Exits the program", "Does nothing", "Prints output", "Waits for input"],
+        "correctAnswer": "Does nothing",
+        "explanation": "pass is a no-op statement used as a placeholder."
+      },
+      {
+        "id": "29",
+        "type": "text-input",
+        "question": "What is the maximum value of an int in Python?",
+        "correctAnswer": "unlimited",
+        "explanation": "Python integers can be arbitrarily large (limited only by memory)."
+      },
+      {
+        "id": "30",
+        "type": "code-input",
+        "question": "Write code to swap two variables a and b.",
+        "correctAnswer": "a, b = b, a",
+        "explanation": "Python supports tuple unpacking for simultaneous assignment."
       }
     ]
   },
@@ -177,6 +248,210 @@ print('Hello, ' + name)",
         "question": "What operator is used for exponentiation in Python?",
         "correctAnswer": "**",
         "explanation": "The ** operator raises the left operand to the power of the right operand."
+      },
+      {
+        "id": "3",
+        "type": "multiple-choice",
+        "question": "What is the result of 7 % 3?",
+        "options": ["2", "2.33", "21", "1"],
+        "correctAnswer": "1",
+        "explanation": "% is the modulo operator, which returns the remainder of division."
+      },
+      {
+        "id": "4",
+        "type": "code-input",
+        "question": "Write code to check if 15 is divisible by 5.",
+        "correctAnswer": "15 % 5 == 0",
+        "explanation": "Using modulo to check divisibility - if remainder is 0, it's divisible."
+      },
+      {
+        "id": "5",
+        "type": "multiple-choice",
+        "question": "Which operator has the highest precedence?",
+        "options": ["+", "**", "*", "/"],
+        "correctAnswer": "**",
+        "explanation": "Exponentiation (**) has the highest precedence, followed by *, /, then +, -."
+      },
+      {
+        "id": "6",
+        "type": "text-input",
+        "question": "What does the += operator do?",
+        "correctAnswer": "adds and assigns",
+        "explanation": "x += 5 is equivalent to x = x + 5"
+      },
+      {
+        "id": "7",
+        "type": "code-input",
+        "question": "Write code using *= operator to double a variable x.",
+        "correctAnswer": "x *= 2",
+        "explanation": "*= multiplies the variable by the right operand and assigns the result."
+      },
+      {
+        "id": "8",
+        "type": "multiple-choice",
+        "question": "What is the difference between == and =?",
+        "options": ["== compares, = assigns", "= compares, == assigns", "They are the same", "Neither is used for comparison"],
+        "correctAnswer": "== compares, = assigns",
+        "explanation": "== is the equality comparison operator, = is the assignment operator."
+      },
+      {
+        "id": "9",
+        "type": "text-input",
+        "question": "What does the != operator check?",
+        "correctAnswer": "inequality",
+        "explanation": "!= returns True if the operands are not equal."
+      },
+      {
+        "id": "10",
+        "type": "code-input",
+        "question": "Write code to check if x is greater than 10 and less than 20.",
+        "correctAnswer": "10 < x < 20",
+        "explanation": "Python supports chained comparisons: a < b < c is equivalent to a < b and b < c"
+      },
+      {
+        "id": "11",
+        "type": "multiple-choice",
+        "question": "What does the 'is' operator check?",
+        "options": ["Value equality", "Identity (same object)", "Type equality", "Reference equality"],
+        "correctAnswer": "Identity (same object)",
+        "explanation": "'is' checks if two variables refer to the same object in memory."
+      },
+      {
+        "id": "12",
+        "type": "text-input",
+        "question": "What does the 'in' operator check?",
+        "correctAnswer": "membership",
+        "explanation": "'in' checks if a value exists in a sequence (list, string, etc.)."
+      },
+      {
+        "id": "13",
+        "type": "code-input",
+        "question": "Write code to check if 'apple' is in a list of fruits.",
+        "correctAnswer": "'apple' in fruits",
+        "explanation": "The 'in' operator works with any iterable."
+      },
+      {
+        "id": "14",
+        "type": "multiple-choice",
+        "question": "What is short-circuit evaluation?",
+        "options": ["Fast evaluation", "Stopping evaluation when result is known", "Parallel evaluation", "Recursive evaluation"],
+        "correctAnswer": "Stopping evaluation when result is known",
+        "explanation": "In 'and' and 'or', evaluation stops when the result is determined."
+      },
+      {
+        "id": "15",
+        "type": "code-input",
+        "question": "What is the result of True and False or True?",
+        "correctAnswer": "True",
+        "explanation": "Due to operator precedence and short-circuiting: (True and False) or True = False or True = True"
+      },
+      {
+        "id": "16",
+        "type": "text-input",
+        "question": "What is the bitwise AND operator?",
+        "correctAnswer": "&",
+        "explanation": "& performs bitwise AND operation on integers."
+      },
+      {
+        "id": "17",
+        "type": "text-input",
+        "question": "What is the bitwise OR operator?",
+        "correctAnswer": "|",
+        "explanation": "| performs bitwise OR operation on integers."
+      },
+      {
+        "id": "18",
+        "type": "text-input",
+        "question": "What is the bitwise XOR operator?",
+        "correctAnswer": "^",
+        "explanation": "^ performs bitwise XOR (exclusive OR) operation."
+      },
+      {
+        "id": "19",
+        "type": "text-input",
+        "question": "What is the left shift operator?",
+        "correctAnswer": "<<",
+        "explanation": "<< shifts bits to the left, equivalent to multiplying by 2^n"
+      },
+      {
+        "id": "20",
+        "type": "text-input",
+        "question": "What is the right shift operator?",
+        "correctAnswer": ">>",
+        "explanation": ">> shifts bits to the right, equivalent to floor division by 2^n"
+      },
+      {
+        "id": "21",
+        "type": "code-input",
+        "question": "Write code to perform bitwise AND on 12 and 10.",
+        "correctAnswer": "12 & 10",
+        "explanation": "12 in binary is 1100, 10 is 1010, AND gives 1000 (8 in decimal)"
+      },
+      {
+        "id": "22",
+        "type": "multiple-choice",
+        "question": "What is the result of ~5 in Python?",
+        "options": ["-6", "-5", "5", "6"],
+        "correctAnswer": "-6",
+        "explanation": "~ is bitwise NOT, which flips all bits and adds 1 in two's complement."
+      },
+      {
+        "id": "23",
+        "type": "text-input",
+        "question": "What is operator precedence?",
+        "correctAnswer": "order in which operators are evaluated",
+        "explanation": "Operator precedence determines which operations are performed first in an expression."
+      },
+      {
+        "id": "24",
+        "type": "multiple-choice",
+        "question": "Which has higher precedence: * or +?",
+        "options": ["*", "+", "Same precedence", "Depends on context"],
+        "correctAnswer": "*",
+        "explanation": "Multiplication (*) has higher precedence than addition (+)."
+      },
+      {
+        "id": "25",
+        "type": "code-input",
+        "question": "Write code to calculate 2 + 3 * 4.",
+        "correctAnswer": "2 + 3 * 4",
+        "explanation": "This equals 14 because multiplication is done before addition."
+      },
+      {
+        "id": "26",
+        "type": "code-input",
+        "question": "Write code using parentheses to change precedence in 2 + 3 * 4.",
+        "correctAnswer": "(2 + 3) * 4",
+        "explanation": "Parentheses override default precedence, making this equal 20."
+      },
+      {
+        "id": "27",
+        "type": "text-input",
+        "question": "What does the walrus operator (:=) do?",
+        "correctAnswer": "assignment expression",
+        "explanation": ":= assigns a value to a variable as part of an expression (Python 3.8+)."
+      },
+      {
+        "id": "28",
+        "type": "code-input",
+        "question": "Write code using walrus operator to assign and check length.",
+        "correctAnswer": "if (n := len(data)) > 5:",
+        "explanation": "Walrus operator allows assignment within expressions."
+      },
+      {
+        "id": "29",
+        "type": "multiple-choice",
+        "question": "What is the ternary conditional operator in Python?",
+        "options": ["a ? b : c", "a if condition else b", "condition ? a : b", "if a then b else c"],
+        "correctAnswer": "a if condition else b",
+        "explanation": "Python uses 'value_if_true if condition else value_if_false' syntax."
+      },
+      {
+        "id": "30",
+        "type": "code-input",
+        "question": "Write a ternary expression to assign 'even' or 'odd' based on x % 2.",
+        "correctAnswer": "'even' if x % 2 == 0 else 'odd'",
+        "explanation": "Ternary conditional provides a compact if-else in expressions."
       }
     ]
   }

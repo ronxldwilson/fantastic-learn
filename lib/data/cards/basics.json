@@ -24,6 +24,61 @@
         "id": "4",
         "front": "What is variable assignment?",
         "back": "Using the = operator to bind a name to a value: age = 25"
+      },
+      {
+        "id": "5",
+        "front": "Can you reassign variables to different types?",
+        "back": "Yes, Python is dynamically typed: x = 5; x = 'hello' is valid"
+      },
+      {
+        "id": "6",
+        "front": "What are valid variable names?",
+        "back": "my_var, _private, var123, but not 123var, my-var, or for (reserved)"
+      },
+      {
+        "id": "7",
+        "front": "What is multiple assignment?",
+        "back": "Assign multiple variables at once: a, b, c = 1, 2, 3"
+      },
+      {
+        "id": "8",
+        "front": "How do you swap two variables?",
+        "back": "a, b = b, a - tuple unpacking makes this work"
+      },
+      {
+        "id": "9",
+        "front": "What is variable scope?",
+        "back": "Where a variable can be accessed - local, global, nonlocal"
+      },
+      {
+        "id": "10",
+        "front": "What happens if you use a variable before assignment?",
+        "back": "NameError is raised"
+      },
+      {
+        "id": "11",
+        "front": "How do you delete a variable?",
+        "back": "Use del keyword: del variable_name"
+      },
+      {
+        "id": "12",
+        "front": "What is None?",
+        "back": "Python's null value - represents absence of a value"
+      },
+      {
+        "id": "13",
+        "front": "How do you check if variable exists?",
+        "back": "Use 'variable_name' in locals() or globals()"
+      },
+      {
+        "id": "14",
+        "front": "What are constants in Python?",
+        "back": "No true constants, but UPPERCASE names indicate they shouldn't be changed"
+      },
+      {
+        "id": "15",
+        "front": "Can variables hold functions?",
+        "back": "Yes, functions are first-class objects: my_func = print"
       }
     ]
   },
@@ -47,6 +102,448 @@
         "id": "3",
         "front": "What is type() function?",
         "back": "Returns the type of a value: type(5) returns <class 'int'>"
+      },
+      {
+        "id": "4",
+        "front": "What is isinstance() function?",
+        "back": "Checks if object is instance of class: isinstance(x, int)"
+      },
+      {
+        "id": "5",
+        "front": "What are numeric types?",
+        "back": "int, float, complex - complex uses j: 3+4j"
+      },
+      {
+        "id": "6",
+        "front": "What is the range of int in Python?",
+        "back": "Arbitrary precision - limited only by available memory"
+      },
+      {
+        "id": "7",
+        "front": "How do you convert between numeric types?",
+        "back": "int(3.7) = 3, float(5) = 5.0, complex(2) = (2+0j)"
+      },
+      {
+        "id": "8",
+        "front": "What are the boolean values?",
+        "back": "True and False - capitalized in Python"
+      },
+      {
+        "id": "9",
+        "front": "What values are falsy?",
+        "back": "False, None, 0, 0.0, empty containers: [], {}, '', set()"
+      },
+      {
+        "id": "10",
+        "front": "What is string immutability?",
+        "back": "Strings cannot be modified: s[0] = 'x' raises TypeError"
+      },
+      {
+        "id": "11",
+        "front": "How do you create multiline strings?",
+        "back": "Triple quotes: '''line1\nline2''' or \"\"\"line1\nline2\"\"\""
+      },
+      {
+        "id": "12",
+        "front": "What is string concatenation?",
+        "back": "'hello' + ' ' + 'world' or 'hello {}'.format('world')"
+      },
+      {
+        "id": "13",
+        "front": "What are f-strings?",
+        "back": "Formatted string literals: f'Hello {name}' (Python 3.6+)"
+      },
+      {
+        "id": "14",
+        "front": "What is type conversion?",
+        "back": "Changing type: str(123), int('456'), float('3.14')"
+      },
+      {
+        "id": "15",
+        "front": "What is the difference between mutable and immutable?",
+        "back": "Mutable can be changed (lists), immutable cannot (strings, tuples)"
+      }
+    ]
+  },
+  {
+    "id": "operators",
+    "title": "Operators",
+    "description": "Arithmetic, comparison, logical, and other operators.",
+    "difficulty": "beginner",
+    "cards": [
+      {
+        "id": "1",
+        "front": "What are arithmetic operators?",
+        "back": "+ (add), - (subtract), * (multiply), / (divide), // (floor divide), % (modulo), ** (power)"
+      },
+      {
+        "id": "2",
+        "front": "What is the difference between / and //?",
+        "back": "/ always returns float, // returns integer (floor division)"
+      },
+      {
+        "id": "3",
+        "front": "What are comparison operators?",
+        "back": "== (equal), != (not equal), < (less), > (greater), <= (less equal), >= (greater equal)"
+      },
+      {
+        "id": "4",
+        "front": "What do logical operators return?",
+        "back": "True or False - and, or, not"
+      },
+      {
+        "id": "5",
+        "front": "What is operator precedence?",
+        "back": "Order of evaluation: ** > * / // % > + - > comparisons > not > and > or"
+      },
+      {
+        "id": "6",
+        "front": "What are assignment operators?",
+        "back": "=, +=, -=, *=, /=, //=, %=, **="
+      },
+      {
+        "id": "7",
+        "front": "What does += do?",
+        "back": "x += 5 is equivalent to x = x + 5"
+      },
+      {
+        "id": "8",
+        "front": "What are identity operators?",
+        "back": "is (same object), is not (different object)"
+      },
+      {
+        "id": "9",
+        "front": "What are membership operators?",
+        "back": "in (is member), not in (is not member)"
+      },
+      {
+        "id": "10",
+        "front": "What is the walrus operator?",
+        "back": ":= (assignment expression) - assigns and returns value"
+      },
+      {
+        "id": "11",
+        "front": "How do you use the walrus operator?",
+        "back": "if (n := len(data)) > 0: - assign and test in one expression"
+      },
+      {
+        "id": "12",
+        "front": "What are bitwise operators?",
+        "back": "& (and), | (or), ^ (xor), ~ (not), << (left shift), >> (right shift)"
+      },
+      {
+        "id": "13",
+        "front": "What does & do with integers?",
+        "back": "Bitwise AND: 5 & 3 = 1 (0101 & 0011 = 0001)"
+      },
+      {
+        "id": "14",
+        "front": "What does << do?",
+        "back": "Left shift: 5 << 1 = 10 (multiply by 2)"
+      },
+      {
+        "id": "15",
+        "front": "What does >> do?",
+        "back": "Right shift: 10 >> 1 = 5 (divide by 2)"
+      },
+      {
+        "id": "16",
+        "front": "What is ~ (bitwise not)?",
+        "back": "Flips all bits: ~5 = -6 in two's complement"
+      },
+      {
+        "id": "17",
+        "front": "Can operators be overloaded?",
+        "back": "Yes, by defining special methods like __add__, __eq__ in classes"
+      },
+      {
+        "id": "18",
+        "front": "What is operator chaining?",
+        "back": "1 < x < 10 - equivalent to 1 < x and x < 10"
+      },
+      {
+        "id": "19",
+        "front": "What are augmented assignments?",
+        "back": "Compound assignments: x += 1, y *= 2, etc."
+      },
+      {
+        "id": "20",
+        "front": "What is the ternary operator?",
+        "back": "value_if_true if condition else value_if_false"
+      }
+    ]
+  },
+  {
+    "id": "input-output",
+    "title": "Input and Output",
+    "description": "Reading input and displaying output.",
+    "difficulty": "beginner",
+    "cards": [
+      {
+        "id": "1",
+        "front": "How do you print to console?",
+        "back": "print('Hello World') or print(variable)"
+      },
+      {
+        "id": "2",
+        "front": "How do you print multiple items?",
+        "back": "print('Hello', 'World') or print('Hello', 'World', sep=' ')"
+      },
+      {
+        "id": "3",
+        "front": "What is the default separator in print?",
+        "back": "Space character"
+      },
+      {
+        "id": "4",
+        "front": "How do you print without newline?",
+        "back": "print('Hello', end='') - default end is '\\n'"
+      },
+      {
+        "id": "5",
+        "front": "How do you read user input?",
+        "back": "input() - returns string, or input('prompt: ')"
+      },
+      {
+        "id": "6",
+        "front": "What does input() return?",
+        "back": "Always a string - convert if needed: int(input())"
+      },
+      {
+        "id": "7",
+        "front": "How do you format output?",
+        "back": "print(f'Value: {variable}') or 'Value: {}'.format(variable)"
+      },
+      {
+        "id": "8",
+        "front": "What are f-string benefits?",
+        "back": "Faster, more readable, allow expressions: f'{x + y}'"
+      },
+      {
+        "id": "9",
+        "front": "How do you control decimal places?",
+        "back": "f'{pi:.2f}' or '{:.2f}'.format(pi)"
+      },
+      {
+        "id": "10",
+        "front": "What is repr() vs str()?",
+        "back": "str() for users, repr() for developers - more precise"
+      },
+      {
+        "id": "11",
+        "front": "How do you redirect output?",
+        "back": "import sys; print('Hello', file=sys.stderr)"
+      },
+      {
+        "id": "12",
+        "front": "What is print(*args)?",
+        "back": "Unpacks iterable: print(*[1,2,3]) prints 1 2 3"
+      },
+      {
+        "id": "13",
+        "front": "How do you suppress output?",
+        "back": "Redirect to /dev/null equivalent or use _ = function()"
+      },
+      {
+        "id": "14",
+        "front": "What is input validation?",
+        "back": "Checking input before use: try: num = int(input()) except ValueError: ..."
+      },
+      {
+        "id": "15",
+        "front": "How do you read multiple inputs?",
+        "back": "Use loop or list comprehension: [int(input()) for _ in range(3)]"
+      }
+    ]
+  },
+  {
+    "id": "comments-docstrings",
+    "title": "Comments and Docstrings",
+    "description": "Documentation and code comments.",
+    "difficulty": "beginner",
+    "cards": [
+      {
+        "id": "1",
+        "front": "How do you write a single-line comment?",
+        "back": "# This is a comment"
+      },
+      {
+        "id": "2",
+        "front": "How do you write multi-line comments?",
+        "back": "Multiple # lines, or triple quotes (but that's a string)"
+      },
+      {
+        "id": "3",
+        "front": "What is a docstring?",
+        "back": "String literal documenting a module, function, class, or method"
+      },
+      {
+        "id": "4",
+        "front": "How do you write a function docstring?",
+        "back": "def func():\n    \"\"\"This function does something.\"\"\"\n    pass"
+      },
+      {
+        "id": "5",
+        "front": "What is PEP 257?",
+        "back": "Docstring conventions for Python"
+      },
+      {
+        "id": "6",
+        "front": "How do you access docstrings?",
+        "back": "obj.__doc__ or help(obj)"
+      },
+      {
+        "id": "7",
+        "front": "What should docstrings contain?",
+        "back": "Purpose, parameters, return values, exceptions, examples"
+      },
+      {
+        "id": "8",
+        "front": "What is type hinting?",
+        "back": "Adding type information: def func(x: int) -> str:"
+      },
+      {
+        "id": "9",
+        "front": "How do you comment out code?",
+        "back": "Select lines and use # or triple quotes"
+      },
+      {
+        "id": "10",
+        "front": "What is inline commenting?",
+        "back": "Brief comments on same line: x = 5  # initialize counter"
+      }
+    ]
+  },
+  {
+    "id": "built-in-functions",
+    "title": "Built-in Functions",
+    "description": "Essential built-in functions available without imports.",
+    "difficulty": "beginner",
+    "cards": [
+      {
+        "id": "1",
+        "front": "What does len() do?",
+        "back": "Returns length of sequence: len([1,2,3]) = 3"
+      },
+      {
+        "id": "2",
+        "front": "What does max() and min() do?",
+        "back": "max(iterable) returns largest item, min() returns smallest"
+      },
+      {
+        "id": "3",
+        "front": "What does sum() do?",
+        "back": "Returns sum of numbers in iterable: sum([1,2,3]) = 6"
+      },
+      {
+        "id": "4",
+        "front": "What does sorted() do?",
+        "back": "Returns new sorted list from iterable"
+      },
+      {
+        "id": "5",
+        "front": "What does reversed() do?",
+        "back": "Returns reverse iterator of sequence"
+      },
+      {
+        "id": "6",
+        "front": "What does enumerate() do?",
+        "back": "Returns (index, value) pairs: enumerate(['a','b']) -> (0,'a'), (1,'b')"
+      },
+      {
+        "id": "7",
+        "front": "What does zip() do?",
+        "back": "Combines iterables: zip([1,2], ['a','b']) -> (1,'a'), (2,'b')"
+      },
+      {
+        "id": "8",
+        "front": "What does range() do?",
+        "back": "Creates arithmetic sequence: range(5) -> 0,1,2,3,4"
+      },
+      {
+        "id": "9",
+        "front": "What does abs() do?",
+        "back": "Returns absolute value: abs(-5) = 5"
+      },
+      {
+        "id": "10",
+        "front": "What does round() do?",
+        "back": "Rounds number to nearest integer: round(3.7) = 4"
+      },
+      {
+        "id": "11",
+        "front": "What does pow() do?",
+        "back": "Power function: pow(2,3) = 8, same as 2**3"
+      },
+      {
+        "id": "12",
+        "front": "What does divmod() do?",
+        "back": "Returns quotient and remainder: divmod(7,3) = (2,1)"
+      },
+      {
+        "id": "13",
+        "front": "What does all() do?",
+        "back": "Returns True if all elements truthy: all([1,2,0]) = False"
+      },
+      {
+        "id": "14",
+        "front": "What does any() do?",
+        "back": "Returns True if any element truthy: any([0,0,1]) = True"
+      },
+      {
+        "id": "15",
+        "front": "What does filter() do?",
+        "back": "Filters elements: filter(lambda x: x>0, [-1,0,1]) -> 1"
+      },
+      {
+        "id": "16",
+        "front": "What does map() do?",
+        "back": "Applies function to each element: map(str, [1,2,3]) -> ['1','2','3']"
+      },
+      {
+        "id": "17",
+        "front": "What does chr() and ord() do?",
+        "back": "chr(65) = 'A', ord('A') = 65 - ASCII conversion"
+      },
+      {
+        "id": "18",
+        "front": "What does str(), int(), float() do?",
+        "back": "Type conversion functions"
+      },
+      {
+        "id": "19",
+        "front": "What does repr() do?",
+        "back": "Returns string representation for debugging"
+      },
+      {
+        "id": "20",
+        "front": "What does eval() do?",
+        "back": "Evaluates string as Python expression - use carefully!"
+      },
+      {
+        "id": "21",
+        "front": "What does exec() do?",
+        "back": "Executes string as Python code - use carefully!"
+      },
+      {
+        "id": "22",
+        "front": "What does globals() and locals() do?",
+        "back": "Return global/local symbol tables as dictionaries"
+      },
+      {
+        "id": "23",
+        "front": "What does dir() do?",
+        "back": "Returns list of object attributes/methods"
+      },
+      {
+        "id": "24",
+        "front": "What does help() do?",
+        "back": "Shows documentation for object or module"
+      },
+      {
+        "id": "25",
+        "front": "What does id() do?",
+        "back": "Returns unique identifier for object"
       }
     ]
   }

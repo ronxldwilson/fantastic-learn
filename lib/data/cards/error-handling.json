@@ -29,6 +29,56 @@
         "id": "5",
         "front": "What is the difference between SyntaxError and ValueError?",
         "back": "SyntaxError occurs when Python can't parse the code. ValueError occurs when an operation receives a value of the right type but inappropriate value."
+      },
+      {
+        "id": "6",
+        "front": "What is the else block in try-except?",
+        "back": "The else block executes only if no exception occurred in the try block."
+      },
+      {
+        "id": "7",
+        "front": "How do you catch multiple exceptions?",
+        "back": "except (TypeError, ValueError) as e: or separate except blocks."
+      },
+      {
+        "id": "8",
+        "front": "What is exception chaining?",
+        "back": "When one exception causes another: raise new_exc from original_exc"
+      },
+      {
+        "id": "9",
+        "front": "What does raise do?",
+        "back": "Manually raises an exception: raise ValueError('message')"
+      },
+      {
+        "id": "10",
+        "front": "What is assert statement?",
+        "back": "assert condition, message - raises AssertionError if False"
+      },
+      {
+        "id": "11",
+        "front": "When should you use assert?",
+        "back": "For debugging, not for production error handling"
+      },
+      {
+        "id": "12",
+        "front": "What is the BaseException class?",
+        "back": "Parent class of all exceptions in Python"
+      },
+      {
+        "id": "13",
+        "front": "What is Exception vs BaseException?",
+        "back": "Exception is for user programs, BaseException includes SystemExit, KeyboardInterrupt"
+      },
+      {
+        "id": "14",
+        "front": "How do you create custom exceptions?",
+        "back": "class MyError(Exception): pass"
+      },
+      {
+        "id": "15",
+        "front": "What is __cause__ and __context__?",
+        "back": "Attributes that link chained exceptions"
       }
     ]
   },
@@ -62,6 +112,305 @@
         "id": "5",
         "front": "When does a ZeroDivisionError occur?",
         "back": "ZeroDivisionError occurs when you try to divide a number by zero."
+      },
+      {
+        "id": "6",
+        "front": "When does an AttributeError occur?",
+        "back": "AttributeError occurs when you try to access an attribute that doesn't exist on an object."
+      },
+      {
+        "id": "7",
+        "front": "When does a ValueError occur?",
+        "back": "ValueError occurs when an operation receives a correct type but inappropriate value, like int('abc')."
+      },
+      {
+        "id": "8",
+        "front": "When does an ImportError occur?",
+        "back": "ImportError occurs when an import statement fails to find the module."
+      },
+      {
+        "id": "9",
+        "front": "When does a FileNotFoundError occur?",
+        "back": "FileNotFoundError occurs when trying to open a file that doesn't exist."
+      },
+      {
+        "id": "10",
+        "front": "When does a PermissionError occur?",
+        "back": "PermissionError occurs when trying to perform an operation without sufficient permissions."
+      },
+      {
+        "id": "11",
+        "front": "When does an OSError occur?",
+        "back": "OSError occurs for system-related errors like file operations failing."
+      },
+      {
+        "id": "12",
+        "front": "When does a RuntimeError occur?",
+        "back": "RuntimeError occurs when an error is detected that doesn't fit other categories."
+      },
+      {
+        "id": "13",
+        "front": "When does a StopIteration occur?",
+        "back": "StopIteration is raised by iterators when there are no more items."
+      },
+      {
+        "id": "14",
+        "front": "When does a KeyboardInterrupt occur?",
+        "back": "KeyboardInterrupt occurs when user presses Ctrl+C to interrupt program."
+      },
+      {
+        "id": "15",
+        "front": "When does a SystemExit occur?",
+        "back": "SystemExit is raised by sys.exit() to terminate the program."
+      }
+    ]
+  },
+  {
+    "id": "exception-handling-patterns",
+    "title": "Exception Handling Patterns",
+    "description": "Common patterns for robust error handling.",
+    "difficulty": "intermediate",
+    "cards": [
+      {
+        "id": "1",
+        "front": "What is the EAFP principle?",
+        "back": "Easier to Ask for Forgiveness than Permission - try operation first, handle exceptions"
+      },
+      {
+        "id": "2",
+        "front": "What is the LBYL principle?",
+        "back": "Look Before You Leap - check conditions before operations"
+      },
+      {
+        "id": "3",
+        "front": "How do you handle multiple exception types?",
+        "back": "except (ValueError, TypeError) as e: or separate except blocks"
+      },
+      {
+        "id": "4",
+        "front": "What is exception logging?",
+        "back": "import logging; logging.exception('Error occurred') - logs traceback"
+      },
+      {
+        "id": "5",
+        "front": "How do you re-raise exceptions?",
+        "back": "raise - re-raises the current exception"
+      },
+      {
+        "id": "6",
+        "front": "What is context manager pattern?",
+        "back": "with statement ensures cleanup even if exceptions occur"
+      },
+      {
+        "id": "7",
+        "front": "How do you suppress exceptions?",
+        "back": "from contextlib import suppress; with suppress(ValueError): ..."
+      },
+      {
+        "id": "8",
+        "front": "What is the try-except-else pattern?",
+        "back": "try: risky_code except: handle_error else: success_code"
+      },
+      {
+        "id": "9",
+        "front": "What is nested try-except?",
+        "back": "try: outer except: try: inner except: ..."
+      },
+      {
+        "id": "10",
+        "front": "How do you handle exceptions in loops?",
+        "back": "try: for item in items: process(item) except: handle_error"
+      },
+      {
+        "id": "11",
+        "front": "What is exception transformation?",
+        "back": "except OriginalError: raise NewError() from e"
+      },
+      {
+        "id": "12",
+        "front": "How do you add context to exceptions?",
+        "back": "raise ValueError('Additional info') from e"
+      },
+      {
+        "id": "13",
+        "front": "What is the finally pattern?",
+        "back": "try: code except: handle finally: cleanup - cleanup always runs"
+      },
+      {
+        "id": "14",
+        "front": "How do you handle cleanup in complex code?",
+        "back": "Use try-finally or context managers"
+      },
+      {
+        "id": "15",
+        "front": "What is exception grouping?",
+        "back": "Handle related exceptions together, then handle specific ones separately"
+      }
+    ]
+  },
+  {
+    "id": "advanced-exception-handling",
+    "title": "Advanced Exception Handling",
+    "description": "Advanced techniques for exception management.",
+    "difficulty": "advanced",
+    "cards": [
+      {
+        "id": "1",
+        "front": "What is traceback module?",
+        "back": "Provides functions to extract, format, and print stack traces"
+      },
+      {
+        "id": "2",
+        "front": "How do you get current traceback?",
+        "back": "import traceback; traceback.format_exc()"
+      },
+      {
+        "id": "3",
+        "front": "What is sys.exc_info()?",
+        "back": "Returns information about the current exception: (type, value, traceback)"
+      },
+      {
+        "id": "4",
+        "front": "How do you create exception hierarchies?",
+        "back": "class MyBaseError(Exception): pass; class MySpecificError(MyBaseError): pass"
+      },
+      {
+        "id": "5",
+        "front": "What are exception hooks?",
+        "back": "Custom handlers for uncaught exceptions via sys.excepthook"
+      },
+      {
+        "id": "6",
+        "front": "What is __traceback__ attribute?",
+        "back": "Contains the traceback object associated with the exception"
+      },
+      {
+        "id": "7",
+        "front": "How do you inspect exception attributes?",
+        "back": "e.args, e.__cause__, e.__context__, e.__traceback__"
+      },
+      {
+        "id": "8",
+        "front": "What is warnings module?",
+        "back": "Provides warnings instead of exceptions for non-fatal issues"
+      },
+      {
+        "id": "9",
+        "front": "How do you issue warnings?",
+        "back": "import warnings; warnings.warn('message', UserWarning)"
+      },
+      {
+        "id": "10",
+        "front": "What is contextlib module?",
+        "back": "Provides utilities for context managers and exception handling"
+      },
+      {
+        "id": "11",
+        "front": "What is @contextmanager decorator?",
+        "back": "Turns generator function into context manager"
+      },
+      {
+        "id": "12",
+        "front": "How do you implement context manager?",
+        "back": "class MyContext: def __enter__(self): ... def __exit__(self, exc_type, exc_val, exc_tb): ..."
+      },
+      {
+        "id": "13",
+        "front": "What is suppress context manager?",
+        "back": "from contextlib import suppress; with suppress(ValueError): ..."
+      },
+      {
+        "id": "14",
+        "front": "What is ExitStack?",
+        "back": "Manages multiple context managers dynamically"
+      },
+      {
+        "id": "15",
+        "front": "How do you handle async exceptions?",
+        "back": "Use try-except in async functions, but be aware of event loop behavior"
+      }
+    ]
+  },
+  {
+    "id": "exception-best-practices",
+    "title": "Exception Best Practices",
+    "description": "Guidelines for effective exception handling.",
+    "difficulty": "intermediate",
+    "cards": [
+      {
+        "id": "1",
+        "front": "Should you catch all exceptions?",
+        "back": "No, avoid bare except: - catch specific exceptions you expect"
+      },
+      {
+        "id": "2",
+        "front": "When should you use bare except?",
+        "back": "Rarely, only for cleanup or when you must prevent any exception from propagating"
+      },
+      {
+        "id": "3",
+        "front": "What is exception masking?",
+        "back": "When except block raises new exception, losing original context"
+      },
+      {
+        "id": "4",
+        "front": "How do you avoid exception masking?",
+        "back": "Use raise ... from e or log original exception"
+      },
+      {
+        "id": "5",
+        "front": "Should exceptions be part of API?",
+        "back": "Yes, document which exceptions your functions raise"
+      },
+      {
+        "id": "6",
+        "front": "What is fail-fast principle?",
+        "back": "Fail immediately when something goes wrong, don't continue with invalid state"
+      },
+      {
+        "id": "7",
+        "front": "When should you validate input?",
+        "back": "At function boundaries, use exceptions for invalid input"
+      },
+      {
+        "id": "8",
+        "front": "Should you use exceptions for control flow?",
+        "back": "No, exceptions are for exceptional conditions, not normal flow"
+      },
+      {
+        "id": "9",
+        "front": "How do you test exception handling?",
+        "back": "Use pytest.raises() or unittest.TestCase.assertRaises()"
+      },
+      {
+        "id": "10",
+        "front": "What is defensive programming?",
+        "back": "Writing code that anticipates and handles potential errors"
+      },
+      {
+        "id": "11",
+        "front": "Should you log exceptions?",
+        "back": "Yes, log unexpected exceptions with full traceback"
+      },
+      {
+        "id": "12",
+        "front": "What is graceful degradation?",
+        "back": "System continues functioning with reduced capabilities when errors occur"
+      },
+      {
+        "id": "13",
+        "front": "How do you handle resource cleanup?",
+        "back": "Use try-finally or context managers (with statement)"
+      },
+      {
+        "id": "14",
+        "front": "What is the cost of exceptions?",
+        "back": "Exceptions are expensive, use them only for exceptional cases"
+      },
+      {
+        "id": "15",
+        "front": "Should you subclass built-in exceptions?",
+        "back": "Yes, when you need specific exception types for your application"
       }
     ]
   }

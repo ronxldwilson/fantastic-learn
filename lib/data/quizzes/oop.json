@@ -32,7 +32,7 @@
         "id": "4",
         "type": "code-input",
         "question": "Write the Python code to define a simple class called 'Car' with an __init__ method that takes a 'color' parameter.",
-        "correctAnswer": "class Car:\n    def __init__(self, color):\n        self.color = color",
+        "correctAnswer": "class Car:\\n    def __init__(self, color):\\n        self.color = color",
         "explanation": "Classes are defined with the 'class' keyword, and __init__ is the constructor method."
       },
       {
@@ -73,6 +73,203 @@
         "options": ["Redefining a parent class method in a child class", "Calling a parent method from a child", "Creating new methods in child classes", "Deleting methods from parent classes"],
         "correctAnswer": "Redefining a parent class method in a child class",
         "explanation": "Method overriding allows a child class to provide its own implementation of a method defined in the parent class."
+      },
+      {
+        "id": "4",
+        "type": "code-input",
+        "question": "Write a class with a method that overrides a parent method.",
+        "correctAnswer": "class Animal:\\n    def speak(self):\\n        return 'Some sound'\\n\\nclass Dog(Animal):\\n    def speak(self):\\n        return 'Woof'",
+        "explanation": "Child classes can override parent methods by defining methods with the same name."
+      },
+      {
+        "id": "5",
+        "type": "text-input",
+        "question": "What is method overloading in Python?",
+        "correctAnswer": "not supported natively",
+        "explanation": "Python doesn't support method overloading like other languages. Use default parameters instead."
+      },
+      {
+        "id": "6",
+        "type": "multiple-choice",
+        "question": "What is encapsulation in OOP?",
+        "options": ["Hiding internal details", "Combining data and methods", "Inheriting from parent classes", "Overriding methods"],
+        "correctAnswer": "Hiding internal details",
+        "explanation": "Encapsulation hides the internal implementation details of a class from outside access."
+      },
+      {
+        "id": "7",
+        "type": "code-input",
+        "question": "Write a class with private attributes using name mangling.",
+        "correctAnswer": "class MyClass:\\n    def __init__(self):\\n        self.__private = 42\\n    \\n    def get_private(self):\\n        return self.__private",
+        "explanation": "Double underscores prefix private attributes, which are name-mangled to prevent accidental access."
+      },
+      {
+        "id": "8",
+        "type": "text-input",
+        "question": "What is the difference between a class attribute and an instance attribute?",
+        "correctAnswer": "class attributes are shared, instance attributes are unique",
+        "explanation": "Class attributes are shared by all instances, while instance attributes are unique to each object."
+      },
+      {
+        "id": "9",
+        "type": "code-input",
+        "question": "Write a class with both class and instance attributes.",
+        "correctAnswer": "class Car:\\n    wheels = 4  # class attribute\\n    \\n    def __init__(self, color):\\n        self.color = color  # instance attribute",
+        "explanation": "Class attributes are defined outside __init__, instance attributes inside __init__ with self."
+      },
+      {
+        "id": "10",
+        "type": "multiple-choice",
+        "question": "What is the MRO in Python?",
+        "options": ["Method Resolution Order", "Multiple Return Objects", "Method Return Override", "Module Reference Object"],
+        "correctAnswer": "Method Resolution Order",
+        "explanation": "MRO determines the order in which base classes are searched when looking for a method."
+      },
+      {
+        "id": "11",
+        "type": "text-input",
+        "question": "What is multiple inheritance?",
+        "correctAnswer": "inheriting from multiple parent classes",
+        "explanation": "A class can inherit from multiple parent classes, combining their functionality."
+      },
+      {
+        "id": "12",
+        "type": "code-input",
+        "question": "Write a class that inherits from multiple parents.",
+        "correctAnswer": "class FlyingCar(Car, Airplane):\\n    def fly(self):\\n        return 'Flying!'",
+        "explanation": "Multiple inheritance is specified by listing multiple parent classes in parentheses."
+      },
+      {
+        "id": "13",
+        "type": "text-input",
+        "question": "What is the super() function used for?",
+        "correctAnswer": "calling parent class methods",
+        "explanation": "super() allows you to call methods from parent classes in overridden methods."
+      },
+      {
+        "id": "14",
+        "type": "code-input",
+        "question": "Write code using super() to call a parent method.",
+        "correctAnswer": "class Child(Parent):\\n    def __init__(self, value):\\n        super().__init__(value)\\n        self.child_value = value * 2",
+        "explanation": "super() is commonly used in __init__ to initialize parent class attributes."
+      },
+      {
+        "id": "15",
+        "type": "multiple-choice",
+        "question": "What is a class method in Python?",
+        "options": ["A method that works on instances", "A method that works on the class", "A static method", "A private method"],
+        "correctAnswer": "A method that works on the class",
+        "explanation": "Class methods are decorated with @classmethod and take 'cls' as the first parameter."
+      },
+      {
+        "id": "16",
+        "type": "code-input",
+        "question": "Write a class method.",
+        "correctAnswer": "@classmethod\\ndef from_string(cls, string):\\n    return cls(string.split(','))",
+        "explanation": "Class methods can be used as alternative constructors or for class-level operations."
+      },
+      {
+        "id": "17",
+        "type": "multiple-choice",
+        "question": "What is a static method?",
+        "options": ["A method that doesn't access instance or class data", "A method that accesses class data", "A method that accesses instance data", "A private method"],
+        "correctAnswer": "A method that doesn't access instance or class data",
+        "explanation": "Static methods are decorated with @staticmethod and don't take self or cls parameters."
+      },
+      {
+        "id": "18",
+        "type": "code-input",
+        "question": "Write a static method.",
+        "correctAnswer": "@staticmethod\\ndef is_valid_age(age):\\n    return 0 <= age <= 150",
+        "explanation": "Static methods are utility functions that don't need access to instance or class state."
+      },
+      {
+        "id": "19",
+        "type": "text-input",
+        "question": "What is operator overloading?",
+        "correctAnswer": "defining custom behavior for operators",
+        "explanation": "Special methods like __add__, __sub__ allow classes to define how operators work with their instances."
+      },
+      {
+        "id": "20",
+        "type": "code-input",
+        "question": "Write a class that overloads the + operator.",
+        "correctAnswer": "class Vector:\\n    def __init__(self, x, y):\\n        self.x, self.y = x, y\\n    \\n    def __add__(self, other):\\n        return Vector(self.x + other.x, self.y + other.y)",
+        "explanation": "__add__ defines behavior for the + operator between Vector instances."
+      },
+      {
+        "id": "21",
+        "type": "multiple-choice",
+        "question": "What is the __str__ method used for?",
+        "options": ["String representation for end users", "Internal string representation", "Both", "Neither"],
+        "correctAnswer": "String representation for end users",
+        "explanation": "__str__ should return a readable string representation, while __repr__ is for developers."
+      },
+      {
+        "id": "22",
+        "type": "code-input",
+        "question": "Write a class with __str__ and __repr__ methods.",
+        "correctAnswer": "class Person:\\n    def __init__(self, name, age):\\n        self.name, self.age = name, age\\n    \\n    def __str__(self):\\n        return f'{self.name} ({self.age})'\\n    \\n    def __repr__(self):\\n        return f'Person({self.name!r}, {self.age})'",
+        "explanation": "__str__ for user-friendly output, __repr__ for unambiguous representation."
+      },
+      {
+        "id": "23",
+        "type": "text-input",
+        "question": "What is duck typing in Python?",
+        "correctAnswer": "checking behavior rather than type",
+        "explanation": "Duck typing focuses on what an object can do rather than what type it is."
+      },
+      {
+        "id": "24",
+        "type": "multiple-choice",
+        "question": "What is the Liskov Substitution Principle?",
+        "options": ["Subclasses should be substitutable for their parent classes", "Classes should depend on abstractions", "Software should be open for extension", "High-level modules shouldn't depend on low-level modules"],
+        "correctAnswer": "Subclasses should be substitutable for their parent classes",
+        "explanation": "The Liskov Substitution Principle states that objects of a superclass should be replaceable with objects of a subclass without breaking the program."
+      },
+      {
+        "id": "25",
+        "type": "text-input",
+        "question": "What is composition in OOP?",
+        "correctAnswer": "building complex objects from simpler ones",
+        "explanation": "Composition creates complex objects by combining simpler objects, often preferred over inheritance."
+      },
+      {
+        "id": "26",
+        "type": "code-input",
+        "question": "Write an example of composition.",
+        "correctAnswer": "class Engine:\\n    def start(self): return 'Engine started'\\n\\nclass Car:\\n    def __init__(self):\\n        self.engine = Engine()\\n    \\n    def start(self):\\n        return self.engine.start()",
+        "explanation": "Car 'has-a' Engine, demonstrating composition over inheritance."
+      },
+      {
+        "id": "27",
+        "type": "multiple-choice",
+        "question": "What is a mixin class?",
+        "options": ["A class designed to be inherited with other classes", "A class with only static methods", "A class with no methods", "An abstract base class"],
+        "correctAnswer": "A class designed to be inherited with other classes",
+        "explanation": "Mixin classes provide specific functionality that can be combined with other classes through multiple inheritance."
+      },
+      {
+        "id": "28",
+        "type": "text-input",
+        "question": "What is an abstract base class (ABC)?",
+        "correctAnswer": "a class that cannot be instantiated and defines interface",
+        "explanation": "ABC defines methods that must be implemented by subclasses, using the abc module."
+      },
+      {
+        "id": "29",
+        "type": "code-input",
+        "question": "Write an abstract base class with abc module.",
+        "correctAnswer": "from abc import ABC, abstractmethod\\n\\nclass Shape(ABC):\\n    @abstractmethod\\n    def area(self):\\n        pass\\n    \\n    @abstractmethod\\n    def perimeter(self):\\n        pass",
+        "explanation": "Abstract methods are decorated with @abstractmethod and must be implemented by subclasses."
+      },
+      {
+        "id": "30",
+        "type": "multiple-choice",
+        "question": "What is the difference between isinstance() and issubclass()?",
+        "options": ["isinstance checks objects, issubclass checks classes", "They are the same", "isinstance works on classes, issubclass on objects", "Neither checks inheritance"],
+        "correctAnswer": "isinstance checks objects, issubclass checks classes",
+        "explanation": "isinstance(obj, cls) checks if obj is an instance of cls, issubclass(child, parent) checks class inheritance."
       }
     ]
   }

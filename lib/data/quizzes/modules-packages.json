@@ -76,7 +76,7 @@
         "id": "4",
         "type": "code-input",
         "question": "Write code to get a random integer between 1 and 10.",
-        "correctAnswer": "import random\nrandom.randint(1, 10)",
+        "correctAnswer": "import random\\nrandom.randint(1, 10)",
         "explanation": "Use random.randint(a, b) to get a random integer between a and b inclusive."
       },
       {

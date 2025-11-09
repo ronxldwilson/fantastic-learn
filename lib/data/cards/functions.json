@@ -29,6 +29,280 @@
         "id": "5",
         "front": "What does a function return by default if no return statement is used?",
         "back": "Functions return None by default if no return statement is provided."
+      },
+      {
+        "id": "6",
+        "front": "What is function documentation?",
+        "back": "Docstrings - triple-quoted strings after function definition that describe what the function does."
+      },
+      {
+        "id": "7",
+        "front": "How do you define a function with no parameters?",
+        "back": "def function_name(): - empty parentheses."
+      },
+      {
+        "id": "8",
+        "front": "Can functions be defined inside other functions?",
+        "back": "Yes, nested functions are allowed and create closures."
+      },
+      {
+        "id": "9",
+        "front": "What is function overloading?",
+        "back": "Python doesn't support overloading like some languages - use default parameters or *args instead."
+      },
+      {
+        "id": "10",
+        "front": "How do you make a function return multiple values?",
+        "back": "Return a tuple: return value1, value2 - caller can unpack: a, b = function()"
+      }
+    ]
+  },
+  {
+    "id": "function-parameters",
+    "title": "Function Parameters",
+    "description": "Different ways to define and use function parameters.",
+    "difficulty": "intermediate",
+    "cards": [
+      {
+        "id": "1",
+        "front": "What are positional parameters?",
+        "back": "Parameters that are matched by position when calling the function."
+      },
+      {
+        "id": "2",
+        "front": "What are keyword arguments?",
+        "back": "Arguments passed with parameter name: function(param=value)"
+      },
+      {
+        "id": "3",
+        "front": "How do you define default parameters?",
+        "back": "def func(param=default_value): - default values for optional parameters."
+      },
+      {
+        "id": "4",
+        "front": "What is *args?",
+        "back": "*args collects extra positional arguments into a tuple."
+      },
+      {
+        "id": "5",
+        "front": "What is **kwargs?",
+        "back": "**kwargs collects extra keyword arguments into a dictionary."
+      },
+      {
+        "id": "6",
+        "front": "How do you unpack arguments when calling?",
+        "back": "function(*list_args, **dict_kwargs) - unpacks sequences and mappings."
+      },
+      {
+        "id": "7",
+        "front": "What is parameter order?",
+        "back": "Required params, *args, default params, **kwargs"
+      },
+      {
+        "id": "8",
+        "front": "Can you have required parameters after default ones?",
+        "back": "No, syntax error - default parameters must come after required ones."
+      },
+      {
+        "id": "9",
+        "front": "What is argument unpacking?",
+        "back": "Using * and ** to unpack iterables and mappings as arguments."
+      },
+      {
+        "id": "10",
+        "front": "How do you make keyword-only parameters?",
+        "back": "Parameters after *args or lone * are keyword-only."
+      },
+      {
+        "id": "11",
+        "front": "What are positional-only parameters?",
+        "back": "Parameters before / can only be passed positionally (Python 3.8+)."
+      },
+      {
+        "id": "12",
+        "front": "How do you force keyword arguments?",
+        "back": "def func(*, param): - parameters after * must be keyword arguments."
+      },
+      {
+        "id": "13",
+        "front": "What happens if you modify mutable default arguments?",
+        "back": "The same object is reused across calls - common gotcha!"
+      },
+      {
+        "id": "14",
+        "front": "How to avoid mutable default argument issues?",
+        "back": "Use None as default, then check and create new object inside function."
+      },
+      {
+        "id": "15",
+        "front": "What is function signature?",
+        "back": "The definition of parameters and their types - inspect.signature() can access it."
+      }
+    ]
+  },
+  {
+    "id": "return-values",
+    "title": "Return Values",
+    "description": "How functions return values and what they can return.",
+    "difficulty": "beginner",
+    "cards": [
+      {
+        "id": "1",
+        "front": "What does the return statement do?",
+        "back": "Exits the function and optionally returns a value to the caller."
+      },
+      {
+        "id": "2",
+        "front": "Can you have multiple return statements?",
+        "back": "Yes, but only one will execute - the first one encountered."
+      },
+      {
+        "id": "3",
+        "front": "What happens after a return statement?",
+        "back": "Function execution stops immediately, remaining code is not executed."
+      },
+      {
+        "id": "4",
+        "front": "Can return be used without a value?",
+        "back": "Yes, equivalent to return None."
+      },
+      {
+        "id": "5",
+        "front": "What can functions return?",
+        "back": "Any Python object: numbers, strings, lists, functions, classes, etc."
+      },
+      {
+        "id": "6",
+        "front": "How do you return multiple values?",
+        "back": "Return a tuple: return a, b, c - or explicitly: return (a, b, c)"
+      },
+      {
+        "id": "7",
+        "front": "How does caller receive multiple return values?",
+        "back": "As a tuple, or unpacked: x, y, z = function()"
+      },
+      {
+        "id": "8",
+        "front": "Can you return from inside loops or conditionals?",
+        "back": "Yes, return works from anywhere inside the function."
+      },
+      {
+        "id": "9",
+        "front": "What is early return?",
+        "back": "Returning early from a function when a condition is met, often for error cases."
+      },
+      {
+        "id": "10",
+        "front": "What is implicit return?",
+        "back": "Functions without return statement implicitly return None."
+      },
+      {
+        "id": "11",
+        "front": "Can generators use return?",
+        "back": "Yes, but it raises StopIteration - usually just use bare return to end generator."
+      },
+      {
+        "id": "12",
+        "front": "What is return annotation?",
+        "back": "Type hint for return value: def func() -> int:"
+      },
+      {
+        "id": "13",
+        "front": "How do you document return values?",
+        "back": "In docstrings: \"\"\"Returns: description of return value\"\"\""
+      },
+      {
+        "id": "14",
+        "front": "Can you return a function?",
+        "back": "Yes, functions are first-class objects - this creates closures."
+      },
+      {
+        "id": "15",
+        "front": "What is void function?",
+        "back": "Function that doesn't return a meaningful value, returns None."
+      }
+    ]
+  },
+  {
+    "id": "function-scopes",
+    "title": "Function Scopes",
+    "description": "Variable scope and namespace in functions.",
+    "difficulty": "intermediate",
+    "cards": [
+      {
+        "id": "1",
+        "front": "What is LEGB rule?",
+        "back": "Local, Enclosing, Global, Built-in - order of name resolution."
+      },
+      {
+        "id": "2",
+        "front": "What is local scope?",
+        "back": "Variables defined inside a function, accessible only within that function."
+      },
+      {
+        "id": "3",
+        "front": "What is enclosing scope?",
+        "back": "Scope of outer functions when dealing with nested functions."
+      },
+      {
+        "id": "4",
+        "front": "What is global scope?",
+        "back": "Module-level variables, accessible throughout the module."
+      },
+      {
+        "id": "5",
+        "front": "What is built-in scope?",
+        "back": "Built-in functions and constants like print, len, None."
+      },
+      {
+        "id": "6",
+        "front": "How do you access global variables?",
+        "back": "Just reference them by name - they're visible in functions."
+      },
+      {
+        "id": "7",
+        "front": "How do you modify global variables?",
+        "back": "Use global keyword: global var_name; var_name = new_value"
+      },
+      {
+        "id": "8",
+        "front": "What is nonlocal keyword?",
+        "back": "Access variables from enclosing scope in nested functions."
+      },
+      {
+        "id": "9",
+        "front": "When do you need nonlocal?",
+        "back": "When modifying variables from enclosing scope in nested functions."
+      },
+      {
+        "id": "10",
+        "front": "What is a closure?",
+        "back": "Function that remembers variables from its enclosing scope."
+      },
+      {
+        "id": "11",
+        "front": "How are closures created?",
+        "back": "When a nested function references variables from its enclosing scope."
+      },
+      {
+        "id": "12",
+        "front": "What is variable shadowing?",
+        "back": "Local variable with same name as global variable hides the global one."
+      },
+      {
+        "id": "13",
+        "front": "How do you avoid variable shadowing?",
+        "back": "Use different variable names or explicit global/nonlocal declarations."
+      },
+      {
+        "id": "14",
+        "front": "What is __name__ attribute?",
+        "back": "Contains the function's name as a string."
+      },
+      {
+        "id": "15",
+        "front": "What is function introspection?",
+        "back": "Examining function properties at runtime using attributes like __name__, __doc__, etc."
       }
     ]
   },
@@ -57,6 +331,227 @@
         "id": "4",
         "front": "What is a recursive function?",
         "back": "A recursive function is a function that calls itself during its execution to solve a problem by breaking it down into smaller instances."
+      },
+      {
+        "id": "5",
+        "front": "What is a generator function?",
+        "back": "Function that uses yield instead of return, creating an iterator."
+      },
+      {
+        "id": "6",
+        "front": "What is the difference between return and yield?",
+        "back": "return exits function, yield pauses and resumes on next call."
+      },
+      {
+        "id": "7",
+        "front": "What is a coroutine?",
+        "back": "Function that can pause and resume execution using async/await."
+      },
+      {
+        "id": "8",
+        "front": "What is a method?",
+        "back": "Function defined inside a class that operates on instances."
+      },
+      {
+        "id": "9",
+        "front": "What is a static method?",
+        "back": "@staticmethod - doesn't access instance or class, just utility function."
+      },
+      {
+        "id": "10",
+        "front": "What is a class method?",
+        "back": "@classmethod - receives class as first argument, can modify class state."
+      },
+      {
+        "id": "11",
+        "front": "What is a higher-order function?",
+        "back": "Function that takes other functions as arguments or returns functions."
+      },
+      {
+        "id": "12",
+        "front": "What is function composition?",
+        "back": "Combining functions: result = func2(func1(x))"
+      },
+      {
+        "id": "13",
+        "front": "What is a pure function?",
+        "back": "Function that has no side effects and always returns same result for same inputs."
+      },
+      {
+        "id": "14",
+        "front": "What is a callback function?",
+        "back": "Function passed as argument to be called later, often in event handling."
+      },
+      {
+        "id": "15",
+        "front": "What is function currying?",
+        "back": "Transforming function with multiple arguments into sequence of functions with single argument."
+      }
+    ]
+  },
+  {
+    "id": "decorators",
+    "title": "Decorators",
+    "description": "Functions that modify other functions.",
+    "difficulty": "advanced",
+    "cards": [
+      {
+        "id": "1",
+        "front": "What is a decorator?",
+        "back": "A function that takes another function and extends its behavior without modifying it."
+      },
+      {
+        "id": "2",
+        "front": "How do you apply a decorator?",
+        "back": "@decorator; def function(): or function = decorator(function)"
+      },
+      {
+        "id": "3",
+        "front": "How do you create a simple decorator?",
+        "back": "def decorator(func): def wrapper(*args, **kwargs): return func(*args, **kwargs); return wrapper"
+      },
+      {
+        "id": "4",
+        "front": "What is functools.wraps?",
+        "back": "Preserves original function's metadata when decorating."
+      },
+      {
+        "id": "5",
+        "front": "How do you pass arguments to decorators?",
+        "back": "Create decorator factory: def decorator_factory(arg): def decorator(func): ..."
+      },
+      {
+        "id": "6",
+        "front": "What are decorator chains?",
+        "back": "@decorator1; @decorator2; def func(): - decorators applied from bottom to top."
+      },
+      {
+        "id": "7",
+        "front": "What is @property decorator?",
+        "back": "Turns a method into a read-only property."
+      },
+      {
+        "id": "8",
+        "front": "What is @staticmethod?",
+        "back": "Creates static method that doesn't receive implicit first argument."
+      },
+      {
+        "id": "9",
+        "front": "What is @classmethod?",
+        "back": "Creates class method that receives class as first argument."
+      },
+      {
+        "id": "10",
+        "front": "What is @functools.lru_cache?",
+        "back": "Memoization decorator that caches function results."
+      },
+      {
+        "id": "11",
+        "front": "What is @functools.singledispatch?",
+        "back": "Single dispatch generic functions - different implementations based on argument type."
+      },
+      {
+        "id": "12",
+        "front": "Can decorators be classes?",
+        "back": "Yes, classes can implement __call__ method to be used as decorators."
+      },
+      {
+        "id": "13",
+        "front": "What is decorator execution order?",
+        "back": "Decorators execute at function definition time, not call time."
+      },
+      {
+        "id": "14",
+        "front": "How do you debug decorated functions?",
+        "back": "Use __wrapped__ attribute or functools.wraps to preserve function identity."
+      },
+      {
+        "id": "15",
+        "front": "What are common decorator patterns?",
+        "back": "Logging, timing, authentication, caching, validation, retry logic."
+      }
+    ]
+  },
+  {
+    "id": "generators-iterators",
+    "title": "Generators and Iterators",
+    "description": "Lazy evaluation and iteration patterns.",
+    "difficulty": "advanced",
+    "cards": [
+      {
+        "id": "1",
+        "front": "What is an iterator?",
+        "back": "Object that implements __iter__ and __next__ methods."
+      },
+      {
+        "id": "2",
+        "front": "What is a generator?",
+        "back": "Function that uses yield to create an iterator."
+      },
+      {
+        "id": "3",
+        "front": "What does yield do?",
+        "back": "Pauses function execution and returns a value, resumes on next call."
+      },
+      {
+        "id": "4",
+        "front": "What is generator expression?",
+        "back": "(expression for item in iterable) - creates generator object."
+      },
+      {
+        "id": "5",
+        "front": "What is the difference between list and generator?",
+        "back": "List stores all values in memory, generator computes values on demand."
+      },
+      {
+        "id": "6",
+        "front": "How do you create an iterator class?",
+        "back": "Implement __iter__ (return self) and __next__ (return next item or raise StopIteration)."
+      },
+      {
+        "id": "7",
+        "front": "What is iter() function?",
+        "back": "Creates iterator from iterable object."
+      },
+      {
+        "id": "8",
+        "front": "What is next() function?",
+        "back": "Gets next item from iterator."
+      },
+      {
+        "id": "9",
+        "front": "What happens when iterator is exhausted?",
+        "back": "next() raises StopIteration exception."
+      },
+      {
+        "id": "10",
+        "front": "Can generators be recursive?",
+        "back": "Yes, but need to be careful with infinite recursion."
+      },
+      {
+        "id": "11",
+        "front": "What is yield from?",
+        "back": "Delegates to another generator or iterable."
+      },
+      {
+        "id": "12",
+        "front": "What is a coroutine?",
+        "back": "Generator that can receive values via send() method."
+      },
+      {
+        "id": "13",
+        "front": "How do you send values to generator?",
+        "back": "Use send(value) method on generator object."
+      },
+      {
+        "id": "14",
+        "front": "What is generator pipeline?",
+        "back": "Chaining generators: result = gen3(gen2(gen1(data)))"
+      },
+      {
+        "id": "15",
+        "front": "What are the benefits of generators?",
+        "back": "Memory efficient, lazy evaluation, can represent infinite sequences."
       }
     ]
   }

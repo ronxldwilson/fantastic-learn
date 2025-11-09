@@ -55,7 +55,7 @@
         "id": "2",
         "type": "code-input",
         "question": "Write a for loop that prints numbers 1 to 5.",
-        "correctAnswer": "for i in range(1, 6):\n    print(i)",
+        "correctAnswer": "for i in range(1, 6):\\n    print(i)",
         "explanation": "Use range(1, 6) to generate numbers 1 through 5, and indent the print statement."
       },
       {

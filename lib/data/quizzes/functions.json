@@ -24,8 +24,7 @@
         "id": "3",
         "type": "code-input",
         "question": "Write a function that takes two numbers and returns their sum.",
-        "correctAnswer": "def add_numbers(a, b):
-    return a + b",
+        "correctAnswer": "def add_numbers(a, b):\\n    return a + b",
         "explanation": "Functions use 'def', parameters in parentheses, and 'return' to send back values."
       },
       {
@@ -54,8 +53,7 @@
         "id": "7",
         "type": "code-input",
         "question": "Write a function with a default parameter that greets someone.",
-        "correctAnswer": "def greet(name='World'):
-    return f'Hello, {name}!'",
+        "correctAnswer": "def greet(name='World'):\\n    return f'Hello, {name}!'",
         "explanation": "Default parameters are specified with = in the function definition."
       },
       {
@@ -70,9 +68,7 @@
         "id": "9",
         "type": "code-input",
         "question": "Write code that demonstrates a local variable in a function.",
-        "correctAnswer": "def my_function():
-    local_var = 10
-    return local_var",
+        "correctAnswer": "def my_function():\\n    local_var = 10\\n    return local_var",
         "explanation": "Variables defined inside functions are local to that function."
       },
       {
@@ -86,17 +82,14 @@
         "id": "11",
         "type": "code-input",
         "question": "Write a function that uses *args to accept multiple arguments.",
-        "correctAnswer": "def sum_all(*args):
-    return sum(args)",
+        "correctAnswer": "def sum_all(*args):\\n    return sum(args)",
         "explanation": "*args allows functions to accept a variable number of positional arguments."
       },
       {
         "id": "12",
         "type": "code-input",
         "question": "Write a function that uses **kwargs for keyword arguments.",
-        "correctAnswer": "def print_info(**kwargs):
-    for key, value in kwargs.items():
-        print(f'{key}: {value}')",
+        "correctAnswer": "def print_info(**kwargs):\\n    for key, value in kwargs.items():\\n        print(f'{key}: {value}')",
         "explanation": "**kwargs allows functions to accept a variable number of keyword arguments."
       },
       {
@@ -125,9 +118,7 @@
         "id": "16",
         "type": "code-input",
         "question": "Write a function with a docstring.",
-        "correctAnswer": "def add(a, b):
-    """Add two numbers and return the result."""
-    return a + b",
+        "correctAnswer": "def add(a, b):\\n    '''Add two numbers and return the result.'''\\n    return a + b",
         "explanation": "Docstrings are placed immediately after the function definition."
       },
       {
@@ -142,10 +133,7 @@
         "id": "18",
         "type": "code-input",
         "question": "Write a recursive function to calculate factorial.",
-        "correctAnswer": "def factorial(n):
-    if n <= 1:
-        return 1
-    return n * factorial(n - 1)",
+        "correctAnswer": "def factorial(n):\\n    if n <= 1:\\n        return 1\\n    return n * factorial(n - 1)",
         "explanation": "Recursive functions have a base case and call themselves with modified parameters."
       },
       {
@@ -161,6 +149,114 @@
         "question": "Write code using map() function with a lambda.",
         "correctAnswer": "list(map(lambda x: x * 2, [1, 2, 3]))",
         "explanation": "map() applies a function to each item in an iterable."
+      },
+      {
+        "id": "21",
+        "type": "code-input",
+        "question": "Write a function that accepts variable positional arguments and returns their sum.",
+        "correctAnswer": "def sum_all(*args):\\n    return sum(args)",
+        "explanation": "*args allows the function to accept any number of positional arguments."
+      },
+      {
+        "id": "22",
+        "type": "code-input",
+        "question": "Write a function that accepts keyword arguments and prints them.",
+        "correctAnswer": "def print_kwargs(**kwargs):\\n    for key, value in kwargs.items():\\n        print(f'{key}: {value}')",
+        "explanation": "**kwargs allows the function to accept any number of keyword arguments."
+      },
+      {
+        "id": "23",
+        "type": "multiple-choice",
+        "question": "What is the difference between *args and **kwargs?",
+        "options": ["*args is for keywords, **kwargs is for positional", "**kwargs is for keywords, *args is for positional", "They are the same", "Neither accepts multiple arguments"],
+        "correctAnswer": "**kwargs is for keywords, *args is for positional",
+        "explanation": "*args collects positional arguments as a tuple, **kwargs collects keyword arguments as a dictionary."
+      },
+      {
+        "id": "24",
+        "type": "code-input",
+        "question": "Write a function with both *args and **kwargs.",
+        "correctAnswer": "def func(a, b, *args, **kwargs):\\n    print(f'Required: {a}, {b}')\\n    print(f'Args: {args}')\\n    print(f'kwargs: {kwargs}')",
+        "explanation": "Functions can have required parameters, *args, and **kwargs in that order."
+      },
+      {
+        "id": "25",
+        "type": "text-input",
+        "question": "What is a closure in Python?",
+        "correctAnswer": "a function that remembers variables from its enclosing scope",
+        "explanation": "Closures allow inner functions to access variables from outer functions even after the outer function has finished."
+      },
+      {
+        "id": "26",
+        "type": "code-input",
+        "question": "Write an example of a closure.",
+        "correctAnswer": "def outer(x):\\n    def inner(y):\\n        return x + y\\n    return inner\\n\\nclosure = outer(10)\\nprint(closure(5))  # Outputs 15",
+        "explanation": "The inner function 'remembers' the value of x from the outer function."
+      },
+      {
+        "id": "27",
+        "type": "text-input",
+        "question": "What is a decorator in Python?",
+        "correctAnswer": "a function that takes another function and extends its behavior",
+        "explanation": "Decorators are used to modify the behavior of functions or classes without changing their source code."
+      },
+      {
+        "id": "28",
+        "type": "code-input",
+        "question": "Write a simple decorator that prints before and after function execution.",
+        "correctAnswer": "def my_decorator(func):\\n    def wrapper(*args, **kwargs):\\n        print('Before')\\n        result = func(*args, **kwargs)\\n        print('After')\\n        return result\\n    return wrapper",
+        "explanation": "Decorators typically return a wrapper function that adds functionality around the original function."
+      },
+      {
+        "id": "29",
+        "type": "code-input",
+        "question": "Write code using the @ decorator syntax.",
+        "correctAnswer": "@my_decorator\\ndef my_function():\\n    print('Hello')",
+        "explanation": "The @ symbol is syntactic sugar for applying decorators to functions."
+      },
+      {
+        "id": "30",
+        "type": "multiple-choice",
+        "question": "What is the output of this code: filter(lambda x: x > 2, [1, 2, 3, 4])?",
+        "options": ["[3, 4]", "<filter object>", "Error", "[1, 2]"],
+        "correctAnswer": "<filter object>",
+        "explanation": "filter() returns a filter object, not a list. Use list() to convert it."
+      },
+      {
+        "id": "31",
+        "type": "code-input",
+        "question": "Write code using filter() to get even numbers from a list.",
+        "correctAnswer": "list(filter(lambda x: x % 2 == 0, [1, 2, 3, 4, 5]))",
+        "explanation": "filter() takes a function and an iterable, returning items where the function returns True."
+      },
+      {
+        "id": "32",
+        "type": "code-input",
+        "question": "Write code using reduce() to sum a list (requires functools import).",
+        "correctAnswer": "from functools import reduce\\nreduce(lambda x, y: x + y, [1, 2, 3, 4])",
+        "explanation": "reduce() applies a function cumulatively to the items of an iterable."
+      },
+      {
+        "id": "33",
+        "type": "text-input",
+        "question": "What is partial application?",
+        "correctAnswer": "fixing some arguments of a function to create a new function",
+        "explanation": "Partial application creates a new function with some arguments pre-filled."
+      },
+      {
+        "id": "34",
+        "type": "code-input",
+        "question": "Write code using partial from functools.",
+        "correctAnswer": "from functools import partial\\nadd_five = partial(add, 5)\\nprint(add_five(3))  # Outputs 8",
+        "explanation": "partial() fixes some arguments and returns a new function with the remaining arguments."
+      },
+      {
+        "id": "35",
+        "type": "multiple-choice",
+        "question": "What is a pure function?",
+        "options": ["A function with no side effects", "A function that returns None", "A recursive function", "A function with default parameters"],
+        "correctAnswer": "A function with no side effects",
+        "explanation": "Pure functions don't modify external state and always return the same result for the same inputs."
       }
     ]
   }

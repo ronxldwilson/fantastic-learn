@@ -1,1 +1,542 @@
-[]
+[
+  {
+    "id": "if-else-statements",
+    "title": "If-Else Statements",
+    "description": "Conditional execution using if, elif, and else statements.",
+    "difficulty": "beginner",
+    "cards": [
+      {
+        "id": "1",
+        "front": "What is the basic syntax of an if statement?",
+        "back": "if condition: followed by indented code block"
+      },
+      {
+        "id": "2",
+        "front": "How do you add an else clause?",
+        "back": "if condition: code else: alternative_code"
+      },
+      {
+        "id": "3",
+        "front": "What is elif used for?",
+        "back": "elif (else if) checks additional conditions when the if condition is False"
+      },
+      {
+        "id": "4",
+        "front": "Can you have multiple elif statements?",
+        "back": "Yes, you can chain multiple elif statements to check different conditions"
+      },
+      {
+        "id": "5",
+        "front": "What happens if no conditions are True?",
+        "back": "The else block executes if present, otherwise nothing happens"
+      },
+      {
+        "id": "6",
+        "front": "What types can be used as conditions?",
+        "back": "Any expression that evaluates to True or False, including comparisons, function calls, variables"
+      },
+      {
+        "id": "7",
+        "front": "What is truthiness in Python?",
+        "back": "Non-zero numbers, non-empty strings/lists, True are truthy. 0, empty containers, None, False are falsy"
+      },
+      {
+        "id": "8",
+        "front": "How do you write a one-line if-else?",
+        "back": "variable = value_if_true if condition else value_if_false"
+      },
+      {
+        "id": "9",
+        "front": "What is the difference between '==' and 'is'?",
+        "back": "'==' compares values, 'is' compares object identity"
+      },
+      {
+        "id": "10",
+        "front": "How do you check if a value is in a range?",
+        "back": "Use if x >= min_value and x <= max_value or if min_value <= x <= max_value"
+      },
+      {
+        "id": "11",
+        "front": "What are logical operators?",
+        "back": "and, or, not - used to combine conditions"
+      },
+      {
+        "id": "12",
+        "front": "How does short-circuit evaluation work?",
+        "back": "and stops at first False, or stops at first True - optimizes evaluation"
+      },
+      {
+        "id": "13",
+        "front": "What is a nested if statement?",
+        "back": "An if statement inside another if statement - increases indentation"
+      },
+      {
+        "id": "14",
+        "front": "When should you avoid nested ifs?",
+        "back": "When they become too deep and hard to read - consider elif chains or refactoring"
+      },
+      {
+        "id": "15",
+        "front": "How do you check for None?",
+        "back": "Use if variable is None: or if variable is not None:"
+      },
+      {
+        "id": "16",
+        "front": "What is the ternary operator in Python?",
+        "back": "value_if_true if condition else value_if_false - compact if-else"
+      },
+      {
+        "id": "17",
+        "front": "Can you have an if without else?",
+        "back": "Yes, else is optional"
+      },
+      {
+        "id": "18",
+        "front": "How do you check multiple conditions with or?",
+        "back": "if condition1 or condition2 or condition3:"
+      },
+      {
+        "id": "19",
+        "front": "What is the precedence of logical operators?",
+        "back": "not > and > or"
+      },
+      {
+        "id": "20",
+        "front": "How do you check if a string is not empty?",
+        "back": "if string: or if len(string) > 0:"
+      }
+    ]
+  },
+  {
+    "id": "for-loops",
+    "title": "For Loops",
+    "description": "Iteration using for loops with different types of sequences.",
+    "difficulty": "beginner",
+    "cards": [
+      {
+        "id": "1",
+        "front": "What is the basic syntax of a for loop?",
+        "back": "for item in iterable: followed by indented code block"
+      },
+      {
+        "id": "2",
+        "front": "How do you iterate over a list?",
+        "back": "for item in my_list: process item"
+      },
+      {
+        "id": "3",
+        "front": "How do you iterate over a string?",
+        "back": "for char in my_string: - iterates over each character"
+      },
+      {
+        "id": "4",
+        "front": "What does range() return?",
+        "back": "An immutable sequence of numbers, commonly used for counting loops"
+      },
+      {
+        "id": "5",
+        "front": "How do you create a loop that runs 5 times?",
+        "back": "for i in range(5): - i will be 0, 1, 2, 3, 4"
+      },
+      {
+        "id": "6",
+        "front": "What are the parameters of range()?",
+        "back": "range(start, stop, step) - start defaults to 0, step defaults to 1"
+      },
+      {
+        "id": "7",
+        "front": "How do you iterate with an index?",
+        "back": "for i in range(len(my_list)): or use enumerate(my_list)"
+      },
+      {
+        "id": "8",
+        "front": "What does enumerate() return?",
+        "back": "Pairs of (index, value) for each item in the iterable"
+      },
+      {
+        "id": "9",
+        "front": "How do you iterate over a dictionary?",
+        "back": "for key in dict: or for key, value in dict.items():"
+      },
+      {
+        "id": "10",
+        "front": "What is the difference between iterating over dict and dict.items()?",
+        "back": "dict iterates over keys, dict.items() iterates over (key, value) pairs"
+      },
+      {
+        "id": "11",
+        "front": "How do you iterate in reverse?",
+        "back": "for item in reversed(my_list): or for i in range(len(my_list)-1, -1, -1):"
+      },
+      {
+        "id": "12",
+        "front": "What is a nested for loop?",
+        "back": "A for loop inside another for loop - useful for 2D data"
+      },
+      {
+        "id": "13",
+        "front": "How do you flatten a nested list?",
+        "back": "for sublist in nested_list: for item in sublist:"
+      },
+      {
+        "id": "14",
+        "front": "What is list comprehension?",
+        "back": "Compact way to create lists: [expression for item in iterable]"
+      },
+      {
+        "id": "15",
+        "front": "Can for loops have else clauses?",
+        "back": "Yes, else executes when loop completes normally (not broken)"
+      },
+      {
+        "id": "16",
+        "front": "What does for _ in range(5): do?",
+        "back": "Uses _ as throwaway variable when you don't need the loop variable"
+      },
+      {
+        "id": "17",
+        "front": "How do you iterate over multiple lists simultaneously?",
+        "back": "for a, b in zip(list1, list2):"
+      },
+      {
+        "id": "18",
+        "front": "What does zip() return?",
+        "back": "Iterator of tuples containing elements from each iterable"
+      },
+      {
+        "id": "19",
+        "front": "How do you iterate over lines in a file?",
+        "back": "for line in file: - automatically strips newlines"
+      },
+      {
+        "id": "20",
+        "front": "What is the difference between iter() and next()?",
+        "back": "iter() creates an iterator, next() gets the next item"
+      }
+    ]
+  },
+  {
+    "id": "while-loops",
+    "title": "While Loops",
+    "description": "Loops that continue while a condition is true.",
+    "difficulty": "beginner",
+    "cards": [
+      {
+        "id": "1",
+        "front": "What is the basic syntax of a while loop?",
+        "back": "while condition: followed by indented code block"
+      },
+      {
+        "id": "2",
+        "front": "When should you use while instead of for?",
+        "back": "When you don't know how many iterations in advance, or based on a condition"
+      },
+      {
+        "id": "3",
+        "front": "How do you create an infinite loop?",
+        "back": "while True: - be careful to include a break condition"
+      },
+      {
+        "id": "4",
+        "front": "What is a common while loop pattern?",
+        "back": "while condition: do_something() update_condition()"
+      },
+      {
+        "id": "5",
+        "front": "How do you read user input until they type 'quit'?",
+        "back": "while True: command = input(); if command == 'quit': break"
+      },
+      {
+        "id": "6",
+        "front": "Can while loops have else clauses?",
+        "back": "Yes, else executes when loop exits normally (condition becomes False)"
+      },
+      {
+        "id": "7",
+        "front": "What is a sentinel value?",
+        "back": "A special value that signals the end of input, like -1 for numbers"
+      },
+      {
+        "id": "8",
+        "front": "How do you implement a countdown?",
+        "back": "count = 10; while count > 0: print(count); count -= 1"
+      },
+      {
+        "id": "9",
+        "front": "What is the risk of infinite while loops?",
+        "back": "Program hangs forever if condition never becomes False"
+      },
+      {
+        "id": "10",
+        "front": "How do you use while with lists?",
+        "back": "while my_list: item = my_list.pop(0) - processes until list is empty"
+      },
+      {
+        "id": "11",
+        "front": "What is do-while equivalent in Python?",
+        "back": "while True: do_something(); if condition: break"
+      },
+      {
+        "id": "12",
+        "front": "How do you validate user input?",
+        "back": "while True: try: value = int(input()); break except ValueError: print('Invalid')"
+      },
+      {
+        "id": "13",
+        "front": "What is loop invariant?",
+        "back": "A condition that remains true throughout the loop execution"
+      },
+      {
+        "id": "14",
+        "front": "How do you implement a game loop?",
+        "back": "while not game_over: process_input(); update_game(); render()"
+      },
+      {
+        "id": "15",
+        "front": "What is the difference between while and for with range?",
+        "back": "for i in range(n): is equivalent to i=0; while i < n: ... i+=1"
+      },
+      {
+        "id": "16",
+        "front": "How do you use while with iterators?",
+        "back": "iterator = iter(sequence); while True: try: item = next(iterator) except StopIteration: break"
+      },
+      {
+        "id": "17",
+        "front": "What is a flag variable?",
+        "back": "A boolean variable used to control loop execution, like found = False"
+      },
+      {
+        "id": "18",
+        "front": "How do you implement retry logic?",
+        "back": "attempts = 0; while attempts < max_attempts: try: do_something(); break except: attempts += 1"
+      },
+      {
+        "id": "19",
+        "front": "What is loop fusion?",
+        "back": "Combining multiple loops that iterate over the same data into one"
+      },
+      {
+        "id": "20",
+        "front": "How do you handle timeouts in loops?",
+        "back": "Use time module: start = time.time(); while time.time() - start < timeout:"
+      }
+    ]
+  },
+  {
+    "id": "break-continue-pass",
+    "title": "Break, Continue, and Pass",
+    "description": "Control flow statements that modify loop execution.",
+    "difficulty": "intermediate",
+    "cards": [
+      {
+        "id": "1",
+        "front": "What does break do?",
+        "back": "Immediately exits the innermost loop, skipping any else clause"
+      },
+      {
+        "id": "2",
+        "front": "What does continue do?",
+        "back": "Skips the rest of the current iteration and moves to the next one"
+      },
+      {
+        "id": "3",
+        "front": "What does pass do?",
+        "back": "Does nothing - placeholder statement when syntax requires a statement"
+      },
+      {
+        "id": "4",
+        "front": "Can break and continue be used outside loops?",
+        "back": "No, they only work within loops (for, while)"
+      },
+      {
+        "id": "5",
+        "front": "How do you exit nested loops with break?",
+        "back": "Use a flag variable or restructure code - break only exits innermost loop"
+      },
+      {
+        "id": "6",
+        "front": "When should you use continue?",
+        "back": "To skip processing for certain items without exiting the loop"
+      },
+      {
+        "id": "7",
+        "front": "What is the difference between break and return?",
+        "back": "break exits loop, return exits the entire function"
+      },
+      {
+        "id": "8",
+        "front": "Can you have break in if statements?",
+        "back": "Only if the if is inside a loop - break affects the loop, not the if"
+      },
+      {
+        "id": "9",
+        "front": "What happens with continue in for loops?",
+        "back": "Moves to next item in the iterable"
+      },
+      {
+        "id": "10",
+        "front": "What happens with continue in while loops?",
+        "back": "Jumps back to condition check"
+      },
+      {
+        "id": "11",
+        "front": "When do you use pass in classes?",
+        "back": "As placeholder in empty class definitions or abstract methods"
+      },
+      {
+        "id": "12",
+        "front": "Can pass be used in lambda functions?",
+        "back": "No, lambda must have an expression, not a statement"
+      },
+      {
+        "id": "13",
+        "front": "How do you break out of multiple nested loops?",
+        "back": "Use a flag: done = False; while not done: for item in items: if condition: done = True; break"
+      },
+      {
+        "id": "14",
+        "front": "What is loop else clause?",
+        "back": "Code that runs when loop completes normally (no break)"
+      },
+      {
+        "id": "15",
+        "front": "How do you find first occurrence in a loop?",
+        "back": "for item in items: if condition: result = item; break"
+      },
+      {
+        "id": "16",
+        "front": "What is the purpose of else in loops?",
+        "back": "To execute code only when no break occurred"
+      },
+      {
+        "id": "17",
+        "front": "Can you have multiple breaks in a loop?",
+        "back": "Yes, but only the first break encountered will execute"
+      },
+      {
+        "id": "18",
+        "front": "What is a loop guard?",
+        "back": "A condition at loop start that prevents execution if not met"
+      },
+      {
+        "id": "19",
+        "front": "How do you skip even numbers in a loop?",
+        "back": "for num in range(10): if num % 2 == 0: continue"
+      },
+      {
+        "id": "20",
+        "front": "What is the difference between pass and ... (ellipsis)?",
+        "back": "Both are placeholders, but ... is for incomplete implementations, pass for empty blocks"
+      }
+    ]
+  },
+  {
+    "id": "advanced-control-flow",
+    "title": "Advanced Control Flow",
+    "description": "Complex control structures and patterns.",
+    "difficulty": "advanced",
+    "cards": [
+      {
+        "id": "1",
+        "front": "What is a generator expression?",
+        "back": "(expression for item in iterable) - creates lazy iterator"
+      },
+      {
+        "id": "2",
+        "front": "What is the walrus operator?",
+        "back": ":= - assignment expression, allows assignment in expressions"
+      },
+      {
+        "id": "3",
+        "front": "How do you use the walrus operator?",
+        "back": "if (n := len(data)) > 0: - assigns and tests in one expression"
+      },
+      {
+        "id": "4",
+        "front": "What are context managers?",
+        "back": "Objects that manage resources with __enter__ and __exit__ methods"
+      },
+      {
+        "id": "5",
+        "front": "How do you use context managers?",
+        "back": "with context_manager() as var: - automatically handles setup/cleanup"
+      },
+      {
+        "id": "6",
+        "front": "What is pattern matching?",
+        "back": "match statement for structural pattern matching (Python 3.10+)"
+      },
+      {
+        "id": "7",
+        "front": "How do you use match statements?",
+        "back": "match value: case pattern: code"
+      },
+      {
+        "id": "8",
+        "front": "What are guards in match statements?",
+        "back": "case pattern if condition: - additional condition for matching"
+      },
+      {
+        "id": "9",
+        "front": "What is exception chaining?",
+        "back": "raise new_exception from original_exception - links exceptions"
+      },
+      {
+        "id": "10",
+        "front": "What is assert statement?",
+        "back": "assert condition, message - raises AssertionError if condition False"
+      },
+      {
+        "id": "11",
+        "front": "When should you use assert?",
+        "back": "For debugging and testing assumptions, not for runtime error handling"
+      },
+      {
+        "id": "12",
+        "front": "What is a coroutine?",
+        "back": "Functions that can pause and resume execution using async/await"
+      },
+      {
+        "id": "13",
+        "front": "What is async/await?",
+        "back": "Syntax for asynchronous programming with coroutines"
+      },
+      {
+        "id": "14",
+        "front": "What is a decorator?",
+        "back": "Function that takes another function and extends its behavior"
+      },
+      {
+        "id": "15",
+        "front": "How do you create a simple decorator?",
+        "back": "def decorator(func): def wrapper(*args, **kwargs): return func(*args, **kwargs); return wrapper"
+      },
+      {
+        "id": "16",
+        "front": "What is @ syntax for decorators?",
+        "back": "@decorator; def function(): - syntactic sugar for function = decorator(function)"
+      },
+      {
+        "id": "17",
+        "front": "What is functools.wraps?",
+        "back": "Preserves original function metadata when decorating"
+      },
+      {
+        "id": "18",
+        "front": "What are conditional expressions?",
+        "back": "value_if_true if condition else value_if_false"
+      },
+      {
+        "id": "19",
+        "front": "What is short-circuit evaluation?",
+        "back": "and/or evaluate left to right, stop when result is determined"
+      },
+      {
+        "id": "20",
+        "front": "What is the global keyword?",
+        "back": "Allows modifying global variables from within functions"
+      }
+    ]
+  }
+]

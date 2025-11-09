@@ -29,6 +29,56 @@
         "id": "5",
         "front": "What does the read() method return?",
         "back": "The read() method returns the entire file content as a single string."
+      },
+      {
+        "id": "6",
+        "front": "What is the default file mode?",
+        "back": "'r' for reading (text mode)"
+      },
+      {
+        "id": "7",
+        "front": "How do you open file in binary mode?",
+        "back": "Add 'b' to mode: 'rb', 'wb', 'ab'"
+      },
+      {
+        "id": "8",
+        "front": "What is the difference between text and binary mode?",
+        "back": "Text mode handles encoding/decoding, binary mode works with bytes"
+      },
+      {
+        "id": "9",
+        "front": "What does seek() do?",
+        "back": "Moves file pointer to specified position"
+      },
+      {
+        "id": "10",
+        "front": "What does tell() return?",
+        "back": "Current position of file pointer"
+      },
+      {
+        "id": "11",
+        "front": "How do you check if file is closed?",
+        "back": "file.closed - returns True if closed"
+      },
+      {
+        "id": "12",
+        "front": "What is file buffering?",
+        "back": "Temporary storage of data before writing to disk"
+      },
+      {
+        "id": "13",
+        "front": "How do you force write buffered data?",
+        "back": "file.flush() - writes buffered data immediately"
+      },
+      {
+        "id": "14",
+        "front": "What is newline parameter in open()?",
+        "back": "Controls how newlines are handled: None, '', '\\n', '\\r\\n', '\\r'"
+      },
+      {
+        "id": "15",
+        "front": "What is encoding parameter?",
+        "back": "Text encoding for file: 'utf-8', 'ascii', etc."
       }
     ]
   },
@@ -57,6 +107,393 @@
         "id": "4",
         "front": "What is the difference between read() and readlines()?",
         "back": "read() returns the entire file as one string, readlines() returns a list where each element is a line."
+      },
+      {
+        "id": "5",
+        "front": "What does read(size) do?",
+        "back": "Reads up to size characters/bytes from file"
+      },
+      {
+        "id": "6",
+        "front": "How do you read large files efficiently?",
+        "back": "Use for line in file: or read chunks with read(size)"
+      },
+      {
+        "id": "7",
+        "front": "What is the difference between readline() and readlines()?",
+        "back": "readline() reads one line, readlines() reads all lines into list"
+      },
+      {
+        "id": "8",
+        "front": "How do you strip newlines when reading?",
+        "back": "line.rstrip('\\n') or line.rstrip() for whitespace"
+      },
+      {
+        "id": "9",
+        "front": "What happens when you read past EOF?",
+        "back": "read() returns empty string, readline() returns empty string"
+      },
+      {
+        "id": "10",
+        "front": "How do you check for end of file?",
+        "back": "if not line: break or check file.tell() position"
+      }
+    ]
+  },
+  {
+    "id": "file-writing-methods",
+    "title": "File Writing Methods",
+    "description": "Writing data to files.",
+    "difficulty": "beginner",
+    "cards": [
+      {
+        "id": "1",
+        "front": "How do you write a string to file?",
+        "back": "file.write(string) - writes string to file"
+      },
+      {
+        "id": "2",
+        "front": "How do you write multiple lines?",
+        "back": "file.writelines(list_of_strings) - writes each string"
+      },
+      {
+        "id": "3",
+        "front": "What does write() return?",
+        "back": "Number of characters/bytes written"
+      },
+      {
+        "id": "4",
+        "front": "How do you write with newlines?",
+        "back": "Include '\\n' in strings: file.write('line\\n')"
+      },
+      {
+        "id": "5",
+        "front": "What happens when you write in 'w' mode?",
+        "back": "File is truncated (cleared) before writing"
+      },
+      {
+        "id": "6",
+        "front": "What happens when you write in 'a' mode?",
+        "back": "Data is appended to end of existing file"
+      },
+      {
+        "id": "7",
+        "front": "How do you write formatted data?",
+        "back": "file.write(f'Value: {variable}') or 'Value: {}'.format(variable)"
+      },
+      {
+        "id": "8",
+        "front": "How do you write binary data?",
+        "back": "Open in binary mode and write bytes: file.write(b'data')"
+      },
+      {
+        "id": "9",
+        "front": "What is the difference between write and print to file?",
+        "back": "print(file=file) adds spaces and newlines, write is exact"
+      },
+      {
+        "id": "10",
+        "front": "How do you ensure data is written immediately?",
+        "back": "file.flush() or close file"
+      }
+    ]
+  },
+  {
+    "id": "file-system-operations",
+    "title": "File System Operations",
+    "description": "Working with directories and file paths.",
+    "difficulty": "intermediate",
+    "cards": [
+      {
+        "id": "1",
+        "front": "What is os module for?",
+        "back": "Operating system interface - file operations, paths, environment"
+      },
+      {
+        "id": "2",
+        "front": "How do you get current directory?",
+        "back": "os.getcwd() - returns current working directory"
+      },
+      {
+        "id": "3",
+        "front": "How do you change directory?",
+        "back": "os.chdir(path) - changes current working directory"
+      },
+      {
+        "id": "4",
+        "front": "How do you check if path exists?",
+        "back": "os.path.exists(path) - returns True if exists"
+      },
+      {
+        "id": "5",
+        "front": "How do you check if path is file?",
+        "back": "os.path.isfile(path) - returns True for files"
+      },
+      {
+        "id": "6",
+        "front": "How do you check if path is directory?",
+        "back": "os.path.isdir(path) - returns True for directories"
+      },
+      {
+        "id": "7",
+        "front": "How do you get file size?",
+        "back": "os.path.getsize(path) - returns size in bytes"
+      },
+      {
+        "id": "8",
+        "front": "How do you join paths?",
+        "back": "os.path.join(path1, path2) - creates proper path"
+      },
+      {
+        "id": "9",
+        "front": "How do you get absolute path?",
+        "back": "os.path.abspath(path) - converts to absolute path"
+      },
+      {
+        "id": "10",
+        "front": "How do you split path into directory and filename?",
+        "back": "os.path.split(path) - returns (dirname, basename)"
+      },
+      {
+        "id": "11",
+        "front": "How do you get file extension?",
+        "back": "os.path.splitext(path) - returns (name, extension)"
+      },
+      {
+        "id": "12",
+        "front": "How do you list directory contents?",
+        "back": "os.listdir(path) - returns list of filenames"
+      },
+      {
+        "id": "13",
+        "front": "How do you create directory?",
+        "back": "os.mkdir(path) - creates single directory"
+      },
+      {
+        "id": "14",
+        "front": "How do you create nested directories?",
+        "back": "os.makedirs(path) - creates all intermediate directories"
+      },
+      {
+        "id": "15",
+        "front": "How do you remove file?",
+        "back": "os.remove(path) - deletes file"
+      },
+      {
+        "id": "16",
+        "front": "How do you remove directory?",
+        "back": "os.rmdir(path) - removes empty directory"
+      },
+      {
+        "id": "17",
+        "front": "How do you remove directory tree?",
+        "back": "shutil.rmtree(path) - removes directory and contents"
+      },
+      {
+        "id": "18",
+        "front": "How do you copy file?",
+        "back": "shutil.copy(src, dst) - copies file"
+      },
+      {
+        "id": "19",
+        "front": "How do you move/rename file?",
+        "back": "shutil.move(src, dst) - moves or renames file"
+      },
+      {
+        "id": "20",
+        "front": "What is pathlib module?",
+        "back": "Object-oriented filesystem paths (Python 3.4+)"
+      }
+    ]
+  },
+  {
+    "id": "advanced-file-handling",
+    "title": "Advanced File Handling",
+    "description": "Complex file operations and patterns.",
+    "difficulty": "advanced",
+    "cards": [
+      {
+        "id": "1",
+        "front": "What is tempfile module?",
+        "back": "Creates temporary files and directories"
+      },
+      {
+        "id": "2",
+        "front": "How do you create temporary file?",
+        "back": "tempfile.NamedTemporaryFile() or tempfile.TemporaryFile()"
+      },
+      {
+        "id": "3",
+        "front": "What is mmap module?",
+        "back": "Memory-mapped file I/O for large files"
+      },
+      {
+        "id": "4",
+        "front": "When should you use memory mapping?",
+        "back": "For random access to large files, or when multiple processes need access"
+      },
+      {
+        "id": "5",
+        "front": "What is file locking?",
+        "back": "Preventing multiple processes from accessing file simultaneously"
+      },
+      {
+        "id": "6",
+        "front": "How do you implement file locking?",
+        "back": "Use fcntl (Unix) or msvcrt (Windows) modules"
+      },
+      {
+        "id": "7",
+        "front": "What is atomic file writing?",
+        "back": "Writing to temporary file then renaming - prevents corruption"
+      },
+      {
+        "id": "8",
+        "front": "How do you read CSV files?",
+        "back": "import csv; csv.reader(file) or csv.DictReader(file)"
+      },
+      {
+        "id": "9",
+        "front": "How do you write CSV files?",
+        "back": "csv.writer(file).writerow(data)"
+      },
+      {
+        "id": "10",
+        "front": "What is JSON file handling?",
+        "back": "import json; json.load(file) to read, json.dump(data, file) to write"
+      },
+      {
+        "id": "11",
+        "front": "How do you read binary files?",
+        "back": "Open with 'rb' mode, read() returns bytes"
+      },
+      {
+        "id": "12",
+        "front": "What is pickle module?",
+        "back": "Serializes Python objects to/from files"
+      },
+      {
+        "id": "13",
+        "front": "How do you pickle an object?",
+        "back": "import pickle; pickle.dump(obj, file)"
+      },
+      {
+        "id": "14",
+        "front": "How do you unpickle an object?",
+        "back": "pickle.load(file) - loads pickled object"
+      },
+      {
+        "id": "15",
+        "front": "What are pickle security concerns?",
+        "back": "Never unpickle untrusted data - can execute arbitrary code"
+      },
+      {
+        "id": "16",
+        "front": "What is configparser module?",
+        "back": "Reads and writes .ini style configuration files"
+      },
+      {
+        "id": "17",
+        "front": "How do you handle compressed files?",
+        "back": "Use gzip, bz2, lzma modules for compressed file I/O"
+      },
+      {
+        "id": "18",
+        "front": "What is io module?",
+        "back": "Core I/O functionality - StringIO, BytesIO for in-memory files"
+      },
+      {
+        "id": "19",
+        "front": "What is StringIO?",
+        "back": "In-memory text stream, behaves like file but in memory"
+      },
+      {
+        "id": "20",
+        "front": "What is BytesIO?",
+        "back": "In-memory binary stream, behaves like binary file but in memory"
+      }
+    ]
+  },
+  {
+    "id": "file-handling-best-practices",
+    "title": "File Handling Best Practices",
+    "description": "Guidelines for robust file operations.",
+    "difficulty": "intermediate",
+    "cards": [
+      {
+        "id": "1",
+        "front": "Should you always use 'with' statement?",
+        "back": "Yes, it ensures files are properly closed even on errors"
+      },
+      {
+        "id": "2",
+        "front": "How do you handle file encoding errors?",
+        "back": "Specify encoding in open(), handle UnicodeDecodeError"
+      },
+      {
+        "id": "3",
+        "front": "What is the preferred encoding?",
+        "back": "UTF-8 for text files"
+      },
+      {
+        "id": "4",
+        "front": "How do you handle large files?",
+        "back": "Read in chunks, don't load entire file into memory"
+      },
+      {
+        "id": "5",
+        "front": "What is the difference between binary and text modes?",
+        "back": "Binary preserves exact bytes, text handles encoding/decoding"
+      },
+      {
+        "id": "6",
+        "front": "How do you check file permissions before opening?",
+        "back": "os.access(path, mode) - checks read/write/execute permissions"
+      },
+      {
+        "id": "7",
+        "front": "Should you hardcode file paths?",
+        "back": "No, use os.path.join() or pathlib for cross-platform compatibility"
+      },
+      {
+        "id": "8",
+        "front": "How do you handle file not found errors?",
+        "back": "try: open(file) except FileNotFoundError: handle"
+      },
+      {
+        "id": "9",
+        "front": "What is the difference between os and pathlib?",
+        "back": "pathlib is object-oriented, os is procedural"
+      },
+      {
+        "id": "10",
+        "front": "How do you iterate over files in directory?",
+        "back": "os.listdir(), os.walk(), or pathlib.Path.glob()"
+      },
+      {
+        "id": "11",
+        "front": "What is os.walk()?",
+        "back": "Recursively walks directory tree, yields (dirpath, dirnames, filenames)"
+      },
+      {
+        "id": "12",
+        "front": "How do you get file metadata?",
+        "back": "os.stat(path) - returns stat object with size, mtime, etc."
+      },
+      {
+        "id": "13",
+        "front": "How do you compare files?",
+        "back": "filecmp module - filecmp.cmp() for shallow comparison"
+      },
+      {
+        "id": "14",
+        "front": "What is shallow vs deep file comparison?",
+        "back": "Shallow compares metadata, deep compares content"
+      },
+      {
+        "id": "15",
+        "front": "How do you monitor file changes?",
+        "back": "Use watchdog library or platform-specific APIs"
       }
     ]
   }

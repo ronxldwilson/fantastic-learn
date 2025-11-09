@@ -69,7 +69,7 @@
         "id": "3",
         "type": "code-input",
         "question": "Write code to open a file for writing and write 'Hello World' to it.",
-        "correctAnswer": "file = open('output.txt', 'w')\nfile.write('Hello World')",
+        "correctAnswer": "file = open('output.txt', 'w')\\nfile.write('Hello World')",
         "explanation": "Open with 'w' mode and use write() to write the string."
       },
       {
@@ -99,7 +99,7 @@
         "id": "2",
         "type": "code-input",
         "question": "Write code using 'with' statement to safely open and read a file.",
-        "correctAnswer": "with open('file.txt', 'r') as file:\n    content = file.read()",
+        "correctAnswer": "with open('file.txt', 'r') as file:\\n    content = file.read()",
         "explanation": "The 'with' statement automatically closes the file when done."
       },
       {

@@ -1,1 +1,542 @@
-[]
+[
+  {
+    "id": "lists-basics",
+    "title": "Lists Basics",
+    "description": "Fundamental operations with Python lists.",
+    "difficulty": "beginner",
+    "cards": [
+      {
+        "id": "1",
+        "front": "How do you create an empty list?",
+        "back": "my_list = [] or my_list = list()"
+      },
+      {
+        "id": "2",
+        "front": "How do you create a list with initial values?",
+        "back": "my_list = [1, 2, 3, 4, 5]"
+      },
+      {
+        "id": "3",
+        "front": "How do you access list elements by index?",
+        "back": "my_list[index] - indices start from 0"
+      },
+      {
+        "id": "4",
+        "front": "How do you access the last element?",
+        "back": "my_list[-1] - negative indices count from the end"
+      },
+      {
+        "id": "5",
+        "front": "How do you add an element to the end of a list?",
+        "back": "my_list.append(element)"
+      },
+      {
+        "id": "6",
+        "front": "How do you insert an element at a specific position?",
+        "back": "my_list.insert(index, element)"
+      },
+      {
+        "id": "7",
+        "front": "How do you remove an element by value?",
+        "back": "my_list.remove(value) - removes first occurrence"
+      },
+      {
+        "id": "8",
+        "front": "How do you remove an element by index?",
+        "back": "del my_list[index] or my_list.pop(index)"
+      },
+      {
+        "id": "9",
+        "front": "What does pop() return if no index is given?",
+        "back": "Removes and returns the last element"
+      },
+      {
+        "id": "10",
+        "front": "How do you get the length of a list?",
+        "back": "len(my_list)"
+      },
+      {
+        "id": "11",
+        "front": "How do you check if an element is in a list?",
+        "back": "element in my_list - returns True or False"
+      },
+      {
+        "id": "12",
+        "front": "How do you find the index of an element?",
+        "back": "my_list.index(element) - returns first occurrence index"
+      },
+      {
+        "id": "13",
+        "front": "How do you count occurrences of an element?",
+        "back": "my_list.count(element)"
+      },
+      {
+        "id": "14",
+        "front": "How do you sort a list in place?",
+        "back": "my_list.sort() - modifies original list"
+      },
+      {
+        "id": "15",
+        "front": "How do you sort a list without modifying original?",
+        "back": "sorted(my_list) - returns new sorted list"
+      },
+      {
+        "id": "16",
+        "front": "How do you reverse a list in place?",
+        "back": "my_list.reverse()"
+      },
+      {
+        "id": "17",
+        "front": "How do you create a copy of a list?",
+        "back": "my_list.copy() or my_list[:] - shallow copy"
+      },
+      {
+        "id": "18",
+        "front": "What is list slicing?",
+        "back": "my_list[start:end:step] - extracts portion of list"
+      },
+      {
+        "id": "19",
+        "front": "How do you concatenate two lists?",
+        "back": "list1 + list2 or list1.extend(list2)"
+      },
+      {
+        "id": "20",
+        "front": "What is the difference between append and extend?",
+        "back": "append adds single element, extend adds elements from iterable"
+      }
+    ]
+  },
+  {
+    "id": "tuples-basics",
+    "title": "Tuples Basics",
+    "description": "Immutable sequences in Python.",
+    "difficulty": "beginner",
+    "cards": [
+      {
+        "id": "1",
+        "front": "How do you create an empty tuple?",
+        "back": "my_tuple = () or my_tuple = tuple()"
+      },
+      {
+        "id": "2",
+        "front": "How do you create a tuple with one element?",
+        "back": "my_tuple = (element,) - comma is required"
+      },
+      {
+        "id": "3",
+        "front": "Are tuples mutable?",
+        "back": "No, tuples are immutable - cannot be modified after creation"
+      },
+      {
+        "id": "4",
+        "front": "How do you access tuple elements?",
+        "back": "my_tuple[index] - same as lists"
+      },
+      {
+        "id": "5",
+        "front": "Can you use negative indexing with tuples?",
+        "back": "Yes, my_tuple[-1] for last element"
+      },
+      {
+        "id": "6",
+        "front": "How do you slice tuples?",
+        "back": "my_tuple[start:end:step] - same as lists"
+      },
+      {
+        "id": "7",
+        "front": "How do you concatenate tuples?",
+        "back": "tuple1 + tuple2 - creates new tuple"
+      },
+      {
+        "id": "8",
+        "front": "How do you repeat a tuple?",
+        "back": "my_tuple * n - repeats n times"
+      },
+      {
+        "id": "9",
+        "front": "What methods do tuples have?",
+        "back": "count() and index() - same as lists"
+      },
+      {
+        "id": "10",
+        "front": "When should you use tuples instead of lists?",
+        "back": "When data should not be modified, for dictionary keys, or return multiple values"
+      },
+      {
+        "id": "11",
+        "front": "Can tuples contain mutable objects?",
+        "back": "Yes, but the tuple itself cannot be modified"
+      },
+      {
+        "id": "12",
+        "front": "How do you unpack a tuple?",
+        "back": "a, b, c = my_tuple - assigns to multiple variables"
+      },
+      {
+        "id": "13",
+        "front": "What is tuple unpacking with *?",
+        "back": "first, *rest = my_tuple - rest gets remaining elements as list"
+      },
+      {
+        "id": "14",
+        "front": "How do you convert list to tuple?",
+        "back": "tuple(my_list)"
+      },
+      {
+        "id": "15",
+        "front": "How do you convert tuple to list?",
+        "back": "list(my_tuple)"
+      },
+      {
+        "id": "16",
+        "front": "What is namedtuple?",
+        "back": "Factory function for creating tuple subclasses with named fields"
+      },
+      {
+        "id": "17",
+        "front": "How do you create a namedtuple?",
+        "back": "from collections import namedtuple; Point = namedtuple('Point', ['x', 'y'])"
+      },
+      {
+        "id": "18",
+        "front": "How do you access namedtuple fields?",
+        "back": "point.x, point.y - by attribute name"
+      },
+      {
+        "id": "19",
+        "front": "Are namedtuples immutable?",
+        "back": "Yes, same as regular tuples"
+      },
+      {
+        "id": "20",
+        "front": "What is the advantage of namedtuples?",
+        "back": "More readable code - self-documenting field names instead of indices"
+      }
+    ]
+  },
+  {
+    "id": "dictionaries-basics",
+    "title": "Dictionaries Basics",
+    "description": "Key-value data structures in Python.",
+    "difficulty": "beginner",
+    "cards": [
+      {
+        "id": "1",
+        "front": "How do you create an empty dictionary?",
+        "back": "my_dict = {} or my_dict = dict()"
+      },
+      {
+        "id": "2",
+        "front": "How do you create a dictionary with initial values?",
+        "back": "my_dict = {'key1': 'value1', 'key2': 'value2'}"
+      },
+      {
+        "id": "3",
+        "front": "How do you access dictionary values?",
+        "back": "my_dict['key'] - raises KeyError if key doesn't exist"
+      },
+      {
+        "id": "4",
+        "front": "How do you safely access dictionary values?",
+        "back": "my_dict.get('key') - returns None if key doesn't exist"
+      },
+      {
+        "id": "5",
+        "front": "How do you provide a default value with get()?",
+        "back": "my_dict.get('key', default_value)"
+      },
+      {
+        "id": "6",
+        "front": "How do you add or update a key-value pair?",
+        "back": "my_dict['key'] = value - creates if doesn't exist, updates if exists"
+      },
+      {
+        "id": "7",
+        "front": "How do you delete a key-value pair?",
+        "back": "del my_dict['key'] or my_dict.pop('key')"
+      },
+      {
+        "id": "8",
+        "front": "What does pop() return?",
+        "back": "The value of the removed key"
+      },
+      {
+        "id": "9",
+        "front": "How do you check if a key exists?",
+        "back": "'key' in my_dict - returns True or False"
+      },
+      {
+        "id": "10",
+        "front": "How do you get all keys?",
+        "back": "my_dict.keys() - returns dict_keys object"
+      },
+      {
+        "id": "11",
+        "front": "How do you get all values?",
+        "back": "my_dict.values() - returns dict_values object"
+      },
+      {
+        "id": "12",
+        "front": "How do you get all key-value pairs?",
+        "back": "my_dict.items() - returns dict_items object"
+      },
+      {
+        "id": "13",
+        "front": "How do you iterate over dictionary keys?",
+        "back": "for key in my_dict:"
+      },
+      {
+        "id": "14",
+        "front": "How do you iterate over key-value pairs?",
+        "back": "for key, value in my_dict.items():"
+      },
+      {
+        "id": "15",
+        "front": "What types can be dictionary keys?",
+        "back": "Any immutable type: strings, numbers, tuples (if they contain immutables)"
+      },
+      {
+        "id": "16",
+        "front": "Can lists be dictionary keys?",
+        "back": "No, lists are mutable and not hashable"
+      },
+      {
+        "id": "17",
+        "front": "How do you merge two dictionaries?",
+        "back": "dict1.update(dict2) or {**dict1, **dict2} (Python 3.5+)"
+      },
+      {
+        "id": "18",
+        "front": "What is dictionary comprehension?",
+        "back": "{key: value for item in iterable} - creates dict from comprehension"
+      },
+      {
+        "id": "19",
+        "front": "How do you create a dict from two lists?",
+        "back": "dict(zip(keys_list, values_list))"
+      },
+      {
+        "id": "20",
+        "front": "What is OrderedDict?",
+        "back": "Dictionary that remembers insertion order (Python 3.7+ dicts do this too)"
+      }
+    ]
+  },
+  {
+    "id": "sets-basics",
+    "title": "Sets Basics",
+    "description": "Unordered collections of unique elements.",
+    "difficulty": "intermediate",
+    "cards": [
+      {
+        "id": "1",
+        "front": "How do you create an empty set?",
+        "back": "my_set = set() - {} creates empty dict, not set"
+      },
+      {
+        "id": "2",
+        "front": "How do you create a set with initial values?",
+        "back": "my_set = {1, 2, 3, 4} or set([1, 2, 3, 4])"
+      },
+      {
+        "id": "3",
+        "front": "Are sets ordered?",
+        "back": "No, sets are unordered - no index-based access"
+      },
+      {
+        "id": "4",
+        "front": "Do sets allow duplicates?",
+        "back": "No, sets automatically remove duplicates"
+      },
+      {
+        "id": "5",
+        "front": "How do you add an element to a set?",
+        "back": "my_set.add(element)"
+      },
+      {
+        "id": "6",
+        "front": "How do you add multiple elements?",
+        "back": "my_set.update(iterable)"
+      },
+      {
+        "id": "7",
+        "front": "How do you remove an element?",
+        "back": "my_set.remove(element) - raises KeyError if not found"
+      },
+      {
+        "id": "8",
+        "front": "How do you safely remove an element?",
+        "back": "my_set.discard(element) - no error if not found"
+      },
+      {
+        "id": "9",
+        "front": "What does pop() do in sets?",
+        "back": "Removes and returns an arbitrary element"
+      },
+      {
+        "id": "10",
+        "front": "How do you check if element is in set?",
+        "back": "element in my_set - very fast operation"
+      },
+      {
+        "id": "11",
+        "front": "How do you get set length?",
+        "back": "len(my_set)"
+      },
+      {
+        "id": "12",
+        "front": "What is set union?",
+        "back": "set1 | set2 or set1.union(set2) - all elements from both sets"
+      },
+      {
+        "id": "13",
+        "front": "What is set intersection?",
+        "back": "set1 & set2 or set1.intersection(set2) - elements in both sets"
+      },
+      {
+        "id": "14",
+        "front": "What is set difference?",
+        "back": "set1 - set2 or set1.difference(set2) - elements in set1 but not set2"
+      },
+      {
+        "id": "15",
+        "front": "What is symmetric difference?",
+        "back": "set1 ^ set2 - elements in either set but not both"
+      },
+      {
+        "id": "16",
+        "front": "Are sets mutable?",
+        "back": "Yes, you can add/remove elements"
+      },
+      {
+        "id": "17",
+        "front": "What is frozenset?",
+        "back": "Immutable version of set - can be used as dict keys"
+      },
+      {
+        "id": "18",
+        "front": "How do you create a frozenset?",
+        "back": "frozenset(iterable)"
+      },
+      {
+        "id": "19",
+        "front": "What is set comprehension?",
+        "back": "{expression for item in iterable if condition}"
+      },
+      {
+        "id": "20",
+        "front": "When should you use sets?",
+        "back": "When you need unique elements, fast membership testing, or set operations"
+      }
+    ]
+  },
+  {
+    "id": "advanced-data-structures",
+    "title": "Advanced Data Structures",
+    "description": "Complex data structures from collections module.",
+    "difficulty": "advanced",
+    "cards": [
+      {
+        "id": "1",
+        "front": "What is collections.Counter?",
+        "back": "Dictionary subclass for counting hashable objects"
+      },
+      {
+        "id": "2",
+        "front": "How do you create a Counter?",
+        "back": "from collections import Counter; counter = Counter(iterable)"
+      },
+      {
+        "id": "3",
+        "front": "What methods does Counter have?",
+        "back": "most_common(), elements(), subtract(), update()"
+      },
+      {
+        "id": "4",
+        "front": "What is collections.defaultdict?",
+        "back": "Dictionary that provides default values for missing keys"
+      },
+      {
+        "id": "5",
+        "front": "How do you create a defaultdict?",
+        "back": "from collections import defaultdict; dd = defaultdict(list)"
+      },
+      {
+        "id": "6",
+        "front": "What is collections.deque?",
+        "back": "Double-ended queue - efficient appends/pops from both ends"
+      },
+      {
+        "id": "7",
+        "front": "What operations are efficient on deque?",
+        "back": "append(), appendleft(), pop(), popleft() - all O(1)"
+      },
+      {
+        "id": "8",
+        "front": "How do you create a deque?",
+        "back": "from collections import deque; dq = deque([1, 2, 3])"
+      },
+      {
+        "id": "9",
+        "front": "What is collections.ChainMap?",
+        "back": "Class for chaining multiple dictionaries"
+      },
+      {
+        "id": "10",
+        "front": "How do you create a ChainMap?",
+        "back": "from collections import ChainMap; cm = ChainMap(dict1, dict2)"
+      },
+      {
+        "id": "11",
+        "front": "What is heapq module?",
+        "back": "Provides heap queue algorithm (priority queue)"
+      },
+      {
+        "id": "12",
+        "front": "What is a heap?",
+        "back": "Binary tree where parent nodes are smaller than children (min-heap)"
+      },
+      {
+        "id": "13",
+        "front": "How do you create a heap?",
+        "back": "import heapq; heap = []; heapq.heappush(heap, item)"
+      },
+      {
+        "id": "14",
+        "front": "What is bisect module?",
+        "back": "Provides binary search functions for sorted lists"
+      },
+      {
+        "id": "15",
+        "front": "How do you insert into sorted list?",
+        "back": "import bisect; bisect.insort(sorted_list, item)"
+      },
+      {
+        "id": "16",
+        "front": "What is array module?",
+        "back": "Efficient arrays of basic C types"
+      },
+      {
+        "id": "17",
+        "front": "When to use array vs list?",
+        "back": "When you have many numbers and need memory efficiency"
+      },
+      {
+        "id": "18",
+        "front": "What is weakref module?",
+        "back": "Creates weak references to objects that don't prevent garbage collection"
+      },
+      {
+        "id": "19",
+        "front": "What are dataclasses?",
+        "back": "Decorator and functions for creating classes with automatically added methods"
+      },
+      {
+        "id": "20",
+        "front": "How do you create a dataclass?",
+        "back": "from dataclasses import dataclass; @dataclass class Point: x: int; y: int"
+      }
+    ]
+  }
+]

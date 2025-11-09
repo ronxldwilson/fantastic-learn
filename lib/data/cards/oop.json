@@ -29,6 +29,56 @@
         "id": "5",
         "front": "What is the difference between a class variable and an instance variable?",
         "back": "Class variables are shared by all instances of the class. Instance variables are unique to each object and are defined in __init__ using self."
+      },
+      {
+        "id": "6",
+        "front": "How do you create an instance of a class?",
+        "back": "Call the class like a function: obj = MyClass() or obj = MyClass(arg1, arg2)"
+      },
+      {
+        "id": "7",
+        "front": "What is the __new__ method?",
+        "back": "__new__ creates the instance, __init__ initializes it. Usually you override __init__, not __new__."
+      },
+      {
+        "id": "8",
+        "front": "What is a method?",
+        "back": "A function defined inside a class that operates on instances of the class."
+      },
+      {
+        "id": "9",
+        "front": "What is the difference between instance method and class method?",
+        "back": "Instance method receives self, class method receives cls and is decorated with @classmethod."
+      },
+      {
+        "id": "10",
+        "front": "What is encapsulation?",
+        "back": "Hiding internal details of an object and providing a public interface."
+      },
+      {
+        "id": "11",
+        "front": "How do you make attributes private in Python?",
+        "back": "Prefix with single underscore _private or double __private (name mangling)."
+      },
+      {
+        "id": "12",
+        "front": "What is name mangling?",
+        "back": "__attribute becomes _ClassName__attribute to avoid accidental override."
+      },
+      {
+        "id": "13",
+        "front": "What is the __str__ method?",
+        "back": "Returns string representation for str() and print(). Should be readable."
+      },
+      {
+        "id": "14",
+        "front": "What is the __repr__ method?",
+        "back": "Returns unambiguous string representation. Should be eval-able if possible."
+      },
+      {
+        "id": "15",
+        "front": "What is the difference between __str__ and __repr__?",
+        "back": "__str__ for users, __repr__ for developers. repr() calls __repr__, str() calls __str__."
       }
     ]
   },
@@ -62,6 +112,388 @@
         "id": "5",
         "front": "What is super() used for?",
         "back": "super() is used to call methods from the parent class. It's commonly used in __init__ to initialize parent class attributes."
+      },
+      {
+        "id": "6",
+        "front": "What is multiple inheritance?",
+        "back": "A class can inherit from multiple parent classes: class Child(Parent1, Parent2):"
+      },
+      {
+        "id": "7",
+        "front": "What is the diamond problem?",
+        "back": "Ambiguity when a class inherits from two classes that both inherit from a common base class."
+      },
+      {
+        "id": "8",
+        "front": "How does Python resolve the diamond problem?",
+        "back": "Uses Method Resolution Order (MRO) with C3 linearization algorithm."
+      },
+      {
+        "id": "9",
+        "front": "What is MRO?",
+        "back": "Method Resolution Order - determines the order in which base classes are searched for methods."
+      },
+      {
+        "id": "10",
+        "front": "How do you check MRO?",
+        "back": "Use ClassName.mro() or ClassName.__mro__ attribute."
+      },
+      {
+        "id": "11",
+        "front": "What is duck typing?",
+        "back": "An object is considered compatible if it has the required methods/attributes, regardless of inheritance."
+      },
+      {
+        "id": "12",
+        "front": "What is composition vs inheritance?",
+        "back": "Composition: has-a relationship (object contains other objects). Inheritance: is-a relationship."
+      },
+      {
+        "id": "13",
+        "front": "When should you use inheritance?",
+        "back": "When there's a genuine is-a relationship and subclass truly extends superclass behavior."
+      },
+      {
+        "id": "14",
+        "front": "What is an abstract base class?",
+        "back": "Class that cannot be instantiated and defines interface that subclasses must implement."
+      },
+      {
+        "id": "15",
+        "front": "How do you create abstract methods?",
+        "back": "Use @abstractmethod decorator from abc module."
+      }
+    ]
+  },
+  {
+    "id": "special-methods",
+    "title": "Special Methods (Dunder Methods)",
+    "description": "Magic methods that customize object behavior.",
+    "difficulty": "advanced",
+    "cards": [
+      {
+        "id": "1",
+        "front": "What are dunder methods?",
+        "back": "Double underscore methods like __init__, __str__ that customize object behavior."
+      },
+      {
+        "id": "2",
+        "front": "What is __len__?",
+        "back": "Called by len() function. Should return integer length."
+      },
+      {
+        "id": "3",
+        "front": "What is __getitem__ and __setitem__?",
+        "back": "Enable indexing: obj[key] calls __getitem__, obj[key] = value calls __setitem__."
+      },
+      {
+        "id": "4",
+        "front": "What is __call__?",
+        "back": "Makes object callable like a function: obj(args) calls obj.__call__(args)."
+      },
+      {
+        "id": "5",
+        "front": "What are comparison operators methods?",
+        "back": "__eq__, __ne__, __lt__, __le__, __gt__, __ge__ for ==, !=, <, <=, >, >=."
+      },
+      {
+        "id": "6",
+        "front": "What is __add__, __sub__, etc.?",
+        "back": "Arithmetic operators: __add__ (+), __sub__ (-), __mul__ (*), __truediv__ (/)."
+      },
+      {
+        "id": "7",
+        "front": "What is __iter__ and __next__?",
+        "back": "__iter__ returns iterator object, __next__ returns next item or raises StopIteration."
+      },
+      {
+        "id": "8",
+        "front": "What is __enter__ and __exit__?",
+        "back": "Context manager methods: __enter__ for setup, __exit__ for cleanup."
+      },
+      {
+        "id": "9",
+        "front": "What is __bool__?",
+        "back": "Called by bool() and truthiness tests. Should return True or False."
+      },
+      {
+        "id": "10",
+        "front": "What is __hash__?",
+        "back": "Returns hash value for objects used as dict keys or set elements."
+      },
+      {
+        "id": "11",
+        "front": "What is __del__?",
+        "back": "Destructor called when object is garbage collected. Avoid relying on it."
+      },
+      {
+        "id": "12",
+        "front": "What is __getattr__ and __setattr__?",
+        "back": "__getattr__ called for missing attributes, __setattr__ for all attribute assignments."
+      },
+      {
+        "id": "13",
+        "front": "What is __delattr__?",
+        "back": "Called when deleting attributes with del obj.attr."
+      },
+      {
+        "id": "14",
+        "front": "What are descriptor methods?",
+        "back": "__get__, __set__, __delete__ for implementing descriptors (like @property)."
+      },
+      {
+        "id": "15",
+        "front": "What is operator overloading?",
+        "back": "Defining special methods to customize how operators work with your objects."
+      }
+    ]
+  },
+  {
+    "id": "properties-descriptors",
+    "title": "Properties and Descriptors",
+    "description": "Controlling attribute access and computed properties.",
+    "difficulty": "advanced",
+    "cards": [
+      {
+        "id": "1",
+        "front": "What is @property decorator?",
+        "back": "Turns a method into a read-only property that can be accessed like an attribute."
+      },
+      {
+        "id": "2",
+        "front": "How do you create a setter for a property?",
+        "back": "@property_name.setter decorator on a method to allow setting the property."
+      },
+      {
+        "id": "3",
+        "front": "How do you create a deleter for a property?",
+        "back": "@property_name.deleter decorator on a method to handle property deletion."
+      },
+      {
+        "id": "4",
+        "front": "What is a descriptor?",
+        "back": "Object that implements __get__, __set__, or __delete__ to customize attribute access."
+      },
+      {
+        "id": "5",
+        "front": "What is a data descriptor?",
+        "back": "Descriptor that implements __set__ or __delete__ (takes precedence over instance dict)."
+      },
+      {
+        "id": "6",
+        "front": "What is a non-data descriptor?",
+        "back": "Descriptor that only implements __get__ (instance dict takes precedence)."
+      },
+      {
+        "id": "7",
+        "front": "What is descriptor lookup order?",
+        "back": "1. Data descriptors, 2. Instance dict, 3. Non-data descriptors, 4. Class dict, 5. MRO."
+      },
+      {
+        "id": "8",
+        "front": "What is __getattribute__?",
+        "back": "Called for all attribute access. Very powerful but dangerous if misused."
+      },
+      {
+        "id": "9",
+        "front": "What is __getattr__?",
+        "back": "Called only when attribute is not found through normal lookup."
+      },
+      {
+        "id": "10",
+        "front": "What is a lazy property?",
+        "back": "Property that computes value only when first accessed, then caches it."
+      },
+      {
+        "id": "11",
+        "front": "What is a cached property?",
+        "back": "Property that computes expensive value once and stores result."
+      },
+      {
+        "id": "12",
+        "front": "What is functools.cached_property?",
+        "back": "Decorator that caches property value after first access."
+      },
+      {
+        "id": "13",
+        "front": "When should you use properties vs methods?",
+        "back": "Use properties when accessing computed data that doesn't require parameters."
+      },
+      {
+        "id": "14",
+        "front": "What is attribute validation?",
+        "back": "Using properties to validate values before setting attributes."
+      },
+      {
+        "id": "15",
+        "front": "What is the descriptor protocol?",
+        "back": "Interface that descriptors must implement: __get__, __set__, __delete__."
+      }
+    ]
+  },
+  {
+    "id": "class-design-patterns",
+    "title": "Class Design Patterns",
+    "description": "Common patterns for designing classes.",
+    "difficulty": "advanced",
+    "cards": [
+      {
+        "id": "1",
+        "front": "What is the Singleton pattern?",
+        "back": "Ensures only one instance of a class exists. Use __new__ to control instantiation."
+      },
+      {
+        "id": "2",
+        "front": "What is the Factory pattern?",
+        "back": "Method or class that creates objects without specifying exact class."
+      },
+      {
+        "id": "3",
+        "front": "What is the Builder pattern?",
+        "back": "Separates construction of complex object from its representation."
+      },
+      {
+        "id": "4",
+        "front": "What is the Observer pattern?",
+        "back": "Objects subscribe to events and get notified when events occur."
+      },
+      {
+        "id": "5",
+        "front": "What is the Strategy pattern?",
+        "back": "Define family of algorithms, encapsulate each, make them interchangeable."
+      },
+      {
+        "id": "6",
+        "front": "What is the Decorator pattern?",
+        "back": "Add behavior to objects dynamically without affecting other instances."
+      },
+      {
+        "id": "7",
+        "front": "What is the Adapter pattern?",
+        "back": "Convert interface of a class into another interface clients expect."
+      },
+      {
+        "id": "8",
+        "front": "What is the Command pattern?",
+        "back": "Encapsulate request as an object, allowing parameterization and queuing."
+      },
+      {
+        "id": "9",
+        "front": "What is the Iterator pattern?",
+        "back": "Provide way to access elements of collection sequentially."
+      },
+      {
+        "id": "10",
+        "front": "What is the Template Method pattern?",
+        "back": "Define skeleton of algorithm, let subclasses override specific steps."
+      },
+      {
+        "id": "11",
+        "front": "What is dependency injection?",
+        "back": "Passing dependencies to objects rather than creating them internally."
+      },
+      {
+        "id": "12",
+        "front": "What is SOLID principles?",
+        "back": "Single responsibility, Open-closed, Liskov substitution, Interface segregation, Dependency inversion."
+      },
+      {
+        "id": "13",
+        "front": "What is DRY principle?",
+        "back": "Don't Repeat Yourself - avoid code duplication."
+      },
+      {
+        "id": "14",
+        "front": "What is composition over inheritance?",
+        "back": "Favor has-a relationships over is-a relationships when possible."
+      },
+      {
+        "id": "15",
+        "front": "What is YAGNI principle?",
+        "back": "You Ain't Gonna Need It - don't add functionality until it's actually needed."
+      }
+    ]
+  },
+  {
+    "id": "metaclasses",
+    "title": "Metaclasses",
+    "description": "Classes that create classes.",
+    "difficulty": "advanced",
+    "cards": [
+      {
+        "id": "1",
+        "front": "What is a metaclass?",
+        "back": "Class whose instances are classes. Controls class creation and behavior."
+      },
+      {
+        "id": "2",
+        "front": "How do you define a metaclass?",
+        "back": "class MyMeta(type): pass; then class MyClass(metaclass=MyMeta): pass"
+      },
+      {
+        "id": "3",
+        "front": "What is __new__ in metaclasses?",
+        "back": "Creates the class object. Receives name, bases, namespace dict."
+      },
+      {
+        "id": "4",
+        "front": "What is __init__ in metaclasses?",
+        "back": "Initializes the created class. Less commonly used than __new__."
+      },
+      {
+        "id": "5",
+        "front": "What is the default metaclass?",
+        "back": "type - all classes are instances of type unless specified otherwise."
+      },
+      {
+        "id": "6",
+        "front": "What is class decorator?",
+        "back": "Function that takes a class and returns modified class. Alternative to metaclasses."
+      },
+      {
+        "id": "7",
+        "front": "When should you use metaclasses?",
+        "back": "When you need to modify class creation process for many classes."
+      },
+      {
+        "id": "8",
+        "front": "What is __prepare__ method?",
+        "back": "Returns dict-like object for class namespace during class definition."
+      },
+      {
+        "id": "9",
+        "front": "What is method resolution order (MRO)?",
+        "back": "Order in which base classes are searched for methods and attributes."
+      },
+      {
+        "id": "10",
+        "front": "How do metaclasses affect inheritance?",
+        "back": "Subclasses inherit metaclass from parent unless explicitly specified."
+      },
+      {
+        "id": "11",
+        "front": "What is abstract base class (ABC)?",
+        "back": "Metaclass-based system for defining abstract interfaces."
+      },
+      {
+        "id": "12",
+        "front": "How do you register virtual subclasses?",
+        "back": "Use ABC.register() to make existing classes appear as subclasses."
+      },
+      {
+        "id": "13",
+        "front": "What is __subclasshook__?",
+        "back": "Method to customize isinstance/issubclass checks."
+      },
+      {
+        "id": "14",
+        "front": "What is __instancecheck__ and __subclasscheck__?",
+        "back": "Methods to customize isinstance() and issubclass() behavior."
+      },
+      {
+        "id": "15",
+        "front": "What are common metaclass use cases?",
+        "back": "Enforcing coding standards, adding methods automatically, ORM systems, plugin systems."
       }
     ]
   }

@@ -69,7 +69,7 @@ export default function QuizPage({ params }: PageProps) {
         const progress = JSON.parse(localStorage.getItem('python-learning-progress') || '{}');
         progress[quizId] = {
           completed: true,
-          score: Object.values(newAnswers).filter(a => a.isCorrect).length,
+          score: (Object.values(newAnswers) as { answer: string; isCorrect: boolean }[]).filter(a => a.isCorrect).length,
           total: totalQuestions,
           timestamp: new Date().toISOString()
         };

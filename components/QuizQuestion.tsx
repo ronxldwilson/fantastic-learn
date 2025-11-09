@@ -43,11 +43,26 @@ export default function QuizQuestion({ question, onAnswer, showResult }: QuizQue
       : question.correctAnswer.toLowerCase() === textAnswer.toLowerCase().trim()
   );
 
+  const handleSearch = () => {
+    const searchQuery = encodeURIComponent(question.question);
+    window.open(`https://www.google.com/search?q=${searchQuery}`, '_blank');
+  };
+
   return (
     <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 border border-gray-200 dark:border-gray-700">
-      <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
-        {question.question}
-      </h3>
+      <div className="flex items-start justify-between mb-4">
+        <h3 className="text-xl font-semibold text-gray-900 dark:text-white flex-1 mr-4">
+          {question.question}
+        </h3>
+        <button
+          onClick={handleSearch}
+          className="px-3 py-1 bg-gray-100 hover:bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300 rounded-md text-sm font-medium transition-colors duration-200 flex items-center gap-1"
+          title="Search online for this question"
+        >
+          <span>🔍</span>
+          Search
+        </button>
+      </div>
 
       {question.type === 'multiple-choice' && question.options && (
         <div className="space-y-3">

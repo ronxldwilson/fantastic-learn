@@ -87,7 +87,18 @@ export default function CardViewer({ cards, cardSetId, topicId, onComplete }: Ca
             <p className="text-xl font-medium text-gray-900 dark:text-white mb-4">
               {currentCard.front}
             </p>
-            <p className="text-sm text-gray-500 dark:text-gray-400">Click the button below to reveal answer</p>
+            <p className="text-sm text-gray-500 dark:text-gray-400 mb-4">Click the button below to reveal answer</p>
+            <button
+              onClick={() => {
+                const searchQuery = encodeURIComponent(currentCard.front);
+                window.open(`https://www.google.com/search?q=${searchQuery}`, '_blank');
+              }}
+              className="px-4 py-2 bg-blue-100 hover:bg-blue-200 dark:bg-blue-900/30 dark:hover:bg-blue-900/50 text-blue-700 dark:text-blue-300 rounded-lg text-sm font-medium transition-colors duration-200 flex items-center gap-2 mx-auto"
+              title="Search online for this concept"
+            >
+              <span>🔍</span>
+              Search Online
+            </button>
           </div>
         )}
       </div>

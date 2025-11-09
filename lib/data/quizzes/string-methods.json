@@ -543,7 +543,7 @@
       },
       {
         "id": "10",
-        "code-input",
+        "type": "code-input",
         "question": "Write code to sort strings case-insensitively.",
         "correctAnswer": "sorted(strings, key=str.lower)",
         "explanation": "The key function transforms items before comparison."
@@ -748,7 +748,7 @@
       },
       {
         "id": "6",
-        "multiple-choice",
+        "type": "multiple-choice",
         "question": "Why is repeated concatenation inefficient?",
         "options": ["Creates many temporary strings", "Uses too much memory", "Both", "Neither"],
         "correctAnswer": "Both",
@@ -763,7 +763,7 @@
       },
       {
         "id": "8",
-        "code-input",
+        "type": "code-input",
         "question": "Write code using string concatenation (inefficient).",
         "correctAnswer": "result = ''\nfor s in strings:\n    result += s  # Inefficient!",
         "explanation": "This creates a new string on each iteration."
@@ -785,7 +785,7 @@
       },
       {
         "id": "11",
-        "code-input",
+        "type": "code-input",
         "question": "Write code to efficiently concatenate with separator.",
         "correctAnswer": "'; '.join(strings)",
         "explanation": "join() is efficient even with separators."

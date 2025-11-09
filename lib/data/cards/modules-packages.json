@@ -29,6 +29,31 @@
         "id": "5",
         "front": "Where does Python look for modules?",
         "back": "Python searches in the current directory, then in directories listed in sys.path, including the standard library."
+      },
+      {
+        "id": "6",
+        "front": "What happens when you import a module?",
+        "back": "Python executes the module code and creates a module object in sys.modules"
+      },
+      {
+        "id": "7",
+        "front": "Can you import modules conditionally?",
+        "back": "Yes: try: import optional_module except ImportError: pass"
+      },
+      {
+        "id": "8",
+        "front": "What is importlib?",
+        "back": "Standard library module for dynamic importing: importlib.import_module('mymodule')"
+      },
+      {
+        "id": "9",
+        "front": "How do you reload a module?",
+        "back": "import importlib; importlib.reload(module) - useful for development"
+      },
+      {
+        "id": "10",
+        "front": "What is __import__ function?",
+        "back": "Built-in function for importing modules dynamically, but importlib is preferred"
       }
     ]
   },
@@ -62,6 +87,545 @@
         "id": "5",
         "front": "What is 'datetime' module for?",
         "back": "Date and time manipulation: creating dates, calculating differences, formatting timestamps."
+      },
+      {
+        "id": "6",
+        "front": "What is 'collections' module?",
+        "back": "High-performance container datatypes: Counter, defaultdict, deque, namedtuple."
+      },
+      {
+        "id": "7",
+        "front": "What does 'json' module do?",
+        "back": "JSON encoding/decoding: json.dumps(), json.loads(), json.dump(), json.load()."
+      },
+      {
+        "id": "8",
+        "front": "What is 're' module for?",
+        "back": "Regular expressions: re.match(), re.search(), re.findall(), re.sub()."
+      },
+      {
+        "id": "9",
+        "front": "What does 'itertools' provide?",
+        "back": "Functions creating iterators for efficient looping: chain, cycle, repeat, combinations."
+      },
+      {
+        "id": "10",
+        "front": "What is 'functools' module?",
+        "back": "Higher-order functions: partial, lru_cache, reduce, wraps."
+      },
+      {
+        "id": "11",
+        "front": "What does 'pathlib' offer?",
+        "back": "Object-oriented filesystem paths: Path objects instead of string paths."
+      },
+      {
+        "id": "12",
+        "front": "What is 'argparse' for?",
+        "back": "Command-line argument parsing: creating user-friendly CLI interfaces."
+      },
+      {
+        "id": "13",
+        "front": "What does 'logging' module provide?",
+        "back": "Flexible logging system: debug, info, warning, error, critical levels."
+      },
+      {
+        "id": "14",
+        "front": "What is 'unittest' module?",
+        "back": "Unit testing framework: TestCase, assert methods, test discovery."
+      },
+      {
+        "id": "15",
+        "front": "What does 'sqlite3' do?",
+        "back": "SQLite database interface: connect, cursor, execute, commit."
+      }
+    ]
+  },
+  {
+    "id": "creating-modules",
+    "title": "Creating Modules",
+    "description": "How to write and organize your own modules.",
+    "difficulty": "intermediate",
+    "cards": [
+      {
+        "id": "1",
+        "front": "How do you create a Python module?",
+        "back": "Create a .py file with functions, classes, or variables - filename becomes module name"
+      },
+      {
+        "id": "2",
+        "front": "What is __name__ in a module?",
+        "back": "__name__ is '__main__' when module runs directly, module name when imported"
+      },
+      {
+        "id": "3",
+        "front": "How do you make code run only when module is executed directly?",
+        "back": "Use if __name__ == '__main__': block for scripts"
+      },
+      {
+        "id": "4",
+        "front": "What is __all__ list?",
+        "back": "Defines what gets imported with 'from module import *'"
+      },
+      {
+        "id": "5",
+        "front": "How do you document a module?",
+        "back": "Add module docstring at the top of the file"
+      },
+      {
+        "id": "6",
+        "front": "What is module-level code?",
+        "back": "Code that runs when module is imported - use sparingly"
+      },
+      {
+        "id": "7",
+        "front": "How do you handle module initialization?",
+        "back": "Put initialization code at module level or in functions"
+      },
+      {
+        "id": "8",
+        "front": "What is __file__ attribute?",
+        "back": "Contains the module's file path"
+      },
+      {
+        "id": "9",
+        "front": "How do you create module constants?",
+        "back": "Use UPPERCASE names: MAX_SIZE = 100"
+      },
+      {
+        "id": "10",
+        "front": "What is module scope?",
+        "back": "Global scope within the module file"
+      }
+    ]
+  },
+  {
+    "id": "packages",
+    "title": "Packages",
+    "description": "Organizing modules into packages.",
+    "difficulty": "intermediate",
+    "cards": [
+      {
+        "id": "1",
+        "front": "What is a Python package?",
+        "back": "Directory containing __init__.py and modules - can be imported as a unit"
+      },
+      {
+        "id": "2",
+        "front": "What is __init__.py for?",
+        "back": "Makes directory a package, can contain initialization code and __all__"
+      },
+      {
+        "id": "3",
+        "front": "How do you import from a package?",
+        "back": "from package import module or from package.module import function"
+      },
+      {
+        "id": "4",
+        "front": "What are subpackages?",
+        "back": "Nested packages: package.subpackage.module"
+      },
+      {
+        "id": "5",
+        "front": "How do you create a package structure?",
+        "back": "Create directory with __init__.py and module files"
+      },
+      {
+        "id": "6",
+        "front": "What is namespace package?",
+        "back": "Package without __init__.py - allows split packages across directories"
+      },
+      {
+        "id": "7",
+        "front": "How do you use relative imports?",
+        "back": "from . import module (same package) or from .. import module (parent package)"
+      },
+      {
+        "id": "8",
+        "front": "When should you use relative imports?",
+        "back": "Within packages to avoid hardcoding package names"
+      },
+      {
+        "id": "9",
+        "front": "What is absolute import?",
+        "back": "Full path from top-level package: from mypackage.subpackage import module"
+      },
+      {
+        "id": "10",
+        "front": "How do you handle circular imports?",
+        "back": "Move imports inside functions, use importlib, or restructure code"
+      }
+    ]
+  },
+  {
+    "id": "package-management",
+    "title": "Package Management",
+    "description": "Installing and managing third-party packages.",
+    "difficulty": "intermediate",
+    "cards": [
+      {
+        "id": "1",
+        "front": "What is pip?",
+        "back": "Python package installer: pip install package_name"
+      },
+      {
+        "id": "2",
+        "front": "How do you install a specific version?",
+        "back": "pip install package==1.2.3 or pip install 'package>=1.0.0'"
+      },
+      {
+        "id": "3",
+        "front": "What is requirements.txt?",
+        "back": "File listing package dependencies with versions"
+      },
+      {
+        "id": "4",
+        "front": "How do you create requirements.txt?",
+        "back": "pip freeze > requirements.txt or manually list dependencies"
+      },
+      {
+        "id": "5",
+        "front": "What is virtual environment?",
+        "back": "Isolated Python environment for project dependencies"
+      },
+      {
+        "id": "6",
+        "front": "How do you create a virtual environment?",
+        "back": "python -m venv myenv or virtualenv myenv"
+      },
+      {
+        "id": "7",
+        "front": "How do you activate virtual environment?",
+        "back": "Windows: myenv\\Scripts\\activate, Unix: source myenv/bin/activate"
+      },
+      {
+        "id": "8",
+        "front": "What is conda?",
+        "back": "Package manager for Python and other languages, includes virtual environments"
+      },
+      {
+        "id": "9",
+        "front": "What is PyPI?",
+        "back": "Python Package Index - central repository for Python packages"
+      },
+      {
+        "id": "10",
+        "front": "How do you upgrade pip?",
+        "back": "pip install --upgrade pip"
+      },
+      {
+        "id": "11",
+        "front": "What is pip-tools?",
+        "back": "Tools for managing requirements: pip-compile, pip-sync"
+      },
+      {
+        "id": "12",
+        "front": "How do you install from GitHub?",
+        "back": "pip install git+https://github.com/user/repo.git"
+      },
+      {
+        "id": "13",
+        "front": "What is poetry?",
+        "back": "Modern Python packaging and dependency management tool"
+      },
+      {
+        "id": "14",
+        "front": "What is pipenv?",
+        "back": "Python dependency management tool combining pip and virtualenv"
+      },
+      {
+        "id": "15",
+        "front": "How do you check installed packages?",
+        "back": "pip list or pip show package_name"
+      }
+    ]
+  },
+  {
+    "id": "import-best-practices",
+    "title": "Import Best Practices",
+    "description": "Guidelines for clean and efficient imports.",
+    "difficulty": "intermediate",
+    "cards": [
+      {
+        "id": "1",
+        "front": "Should you use 'from module import *'?",
+        "back": "No, it pollutes namespace and can cause name conflicts"
+      },
+      {
+        "id": "2",
+        "front": "How should you organize imports?",
+        "back": "Standard library, third-party, local modules - separated by blank lines"
+      },
+      {
+        "id": "3",
+        "front": "Should you use relative imports?",
+        "back": "Yes within packages, but absolute imports are clearer"
+      },
+      {
+        "id": "4",
+        "front": "What is import aliasing best practice?",
+        "back": "Use standard aliases: import numpy as np, import pandas as pd"
+      },
+      {
+        "id": "5",
+        "front": "Should you import modules or specific functions?",
+        "back": "Import what you need - specific functions if you use few, whole module if many"
+      },
+      {
+        "id": "6",
+        "front": "How do you handle optional dependencies?",
+        "back": "Try-except import blocks with informative error messages"
+      },
+      {
+        "id": "7",
+        "front": "What is lazy importing?",
+        "back": "Import modules inside functions to reduce startup time"
+      },
+      {
+        "id": "8",
+        "front": "Should you avoid circular imports?",
+        "back": "Yes, they indicate poor design - restructure to eliminate them"
+      },
+      {
+        "id": "9",
+        "front": "How do you import for type hints?",
+        "back": "Use TYPE_CHECKING: from typing import TYPE_CHECKING; if TYPE_CHECKING: import heavy_module"
+      },
+      {
+        "id": "10",
+        "front": "What is import time?",
+        "back": "Time taken to import modules - optimize by importing only what's needed"
+      }
+    ]
+  },
+  {
+    "id": "module-search-path",
+    "title": "Module Search Path",
+    "description": "How Python finds and loads modules.",
+    "difficulty": "advanced",
+    "cards": [
+      {
+        "id": "1",
+        "front": "What is sys.path?",
+        "back": "List of directories Python searches for modules"
+      },
+      {
+        "id": "2",
+        "front": "How do you add to sys.path?",
+        "back": "sys.path.append('/path/to/modules') or sys.path.insert(0, '/path')"
+      },
+      {
+        "id": "3",
+        "front": "What is PYTHONPATH environment variable?",
+        "back": "Colon-separated list of directories added to sys.path"
+      },
+      {
+        "id": "4",
+        "front": "What is site-packages?",
+        "back": "Directory where pip installs third-party packages"
+      },
+      {
+        "id": "5",
+        "front": "What is .pth files?",
+        "back": "Files containing paths to add to sys.path"
+      },
+      {
+        "id": "6",
+        "front": "What is sys.modules?",
+        "back": "Dictionary of loaded modules: module_name -> module_object"
+      },
+      {
+        "id": "7",
+        "front": "How does Python cache modules?",
+        "back": "Compiled .pyc files in __pycache__ directories"
+      },
+      {
+        "id": "8",
+        "front": "What is PYTHONOPTIMIZE?",
+        "back": "Environment variable that removes docstrings and assertions"
+      },
+      {
+        "id": "9",
+        "front": "What is import hooks?",
+        "back": "Custom importers that can load modules from non-standard sources"
+      },
+      {
+        "id": "10",
+        "front": "What is zipimport?",
+        "back": "Allows importing modules from ZIP archives"
+      }
+    ]
+  },
+  {
+    "id": "third-party-packages",
+    "title": "Third-Party Packages",
+    "description": "Popular and useful third-party packages.",
+    "difficulty": "intermediate",
+    "cards": [
+      {
+        "id": "1",
+        "front": "What is NumPy?",
+        "back": "Numerical computing library with N-dimensional arrays"
+      },
+      {
+        "id": "2",
+        "front": "What is pandas?",
+        "back": "Data manipulation and analysis library with DataFrame"
+      },
+      {
+        "id": "3",
+        "front": "What is matplotlib?",
+        "back": "Plotting library for creating visualizations"
+      },
+      {
+        "id": "4",
+        "front": "What is requests?",
+        "back": "HTTP library for making web requests"
+      },
+      {
+        "id": "5",
+        "front": "What is Flask/Django?",
+        "back": "Web frameworks: Flask (micro), Django (full-featured)"
+      },
+      {
+        "id": "6",
+        "front": "What is pytest?",
+        "back": "Testing framework with fixtures and plugins"
+      },
+      {
+        "id": "7",
+        "front": "What is SQLAlchemy?",
+        "back": "SQL toolkit and Object-Relational Mapping (ORM)"
+      },
+      {
+        "id": "8",
+        "front": "What is scikit-learn?",
+        "back": "Machine learning library for Python"
+      },
+      {
+        "id": "9",
+        "front": "What is TensorFlow/PyTorch?",
+        "back": "Deep learning frameworks for neural networks"
+      },
+      {
+        "id": "10",
+        "front": "What is Jupyter?",
+        "back": "Interactive computing environment with notebooks"
+      }
+    ]
+  },
+  {
+    "id": "distribution-deployment",
+    "title": "Distribution and Deployment",
+    "description": "Packaging and distributing Python code.",
+    "difficulty": "advanced",
+    "cards": [
+      {
+        "id": "1",
+        "front": "What is setup.py?",
+        "back": "Script defining package metadata and dependencies"
+      },
+      {
+        "id": "2",
+        "front": "What is pyproject.toml?",
+        "back": "Modern configuration file for Python projects (PEP 518)"
+      },
+      {
+        "id": "3",
+        "front": "What is setup.cfg?",
+        "back": "Configuration file for setup.py with package metadata"
+      },
+      {
+        "id": "4",
+        "front": "How do you build a distribution?",
+        "back": "python setup.py sdist bdist_wheel or python -m build"
+      },
+      {
+        "id": "5",
+        "front": "What is wheel vs source distribution?",
+        "back": "Wheel: pre-built, faster install; Source: requires compilation"
+      },
+      {
+        "id": "6",
+        "front": "What is MANIFEST.in?",
+        "back": "File specifying additional files to include in distribution"
+      },
+      {
+        "id": "7",
+        "front": "How do you upload to PyPI?",
+        "back": "Use twine: twine upload dist/*"
+      },
+      {
+        "id": "8",
+        "front": "What is version control for packages?",
+        "back": "Use semantic versioning: MAJOR.MINOR.PATCH"
+      },
+      {
+        "id": "9",
+        "front": "What is entry points?",
+        "back": "Define console scripts in setup.py for command-line tools"
+      },
+      {
+        "id": "10",
+        "front": "What is pyinstaller/cx_Freeze?",
+        "back": "Tools for creating standalone executables from Python scripts"
+      }
+    ]
+  },
+  {
+    "id": "module-execution",
+    "title": "Module Execution",
+    "description": "How modules are executed and loaded.",
+    "difficulty": "advanced",
+    "cards": [
+      {
+        "id": "1",
+        "front": "What happens when you run 'python module.py'?",
+        "back": "__name__ is set to '__main__', module code executes"
+      },
+      {
+        "id": "2",
+        "front": "What is the module execution order?",
+        "back": "1. Find module, 2. Compile to bytecode, 3. Execute, 4. Create module object"
+      },
+      {
+        "id": "3",
+        "front": "What is bytecode compilation?",
+        "back": "Python compiles .py to .pyc files for faster loading"
+      },
+      {
+        "id": "4",
+        "front": "What is __pycache__?",
+        "back": "Directory containing compiled bytecode files"
+      },
+      {
+        "id": "5",
+        "front": "Can you run modules without .py extension?",
+        "back": "Yes, if in ZIP archive or other importable location"
+      },
+      {
+        "id": "6",
+        "front": "What is -m flag?",
+        "back": "python -m module runs module as script: __name__ = '__main__'"
+      },
+      {
+        "id": "7",
+        "front": "What is shebang line?",
+        "back": "#!/usr/bin/env python3 - allows direct execution on Unix"
+      },
+      {
+        "id": "8",
+        "front": "What is __main__.py?",
+        "back": "Special file in packages that runs when package executed with -m"
+      },
+      {
+        "id": "9",
+        "front": "How do you handle module cleanup?",
+        "back": "Use try-finally or atexit.register() for cleanup functions"
+      },
+      {
+        "id": "10",
+        "front": "What is module reloading?",
+        "back": "Forcing re-execution of module code during development"
       }
     ]
   }

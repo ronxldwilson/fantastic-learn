@@ -41,6 +41,79 @@
         "question": "Write code to check if 'Python' starts with 'Py'.",
         "correctAnswer": "'Python'.startswith('Py')",
         "explanation": "The startswith() method returns True if the string starts with the specified prefix."
+      },
+      {
+        "id": "6",
+        "type": "text-input",
+        "question": "What method converts a string to lowercase?",
+        "correctAnswer": "lower",
+        "explanation": "The lower() method converts all characters to lowercase."
+      },
+      {
+        "id": "7",
+        "type": "multiple-choice",
+        "question": "Which method capitalizes the first character?",
+        "options": ["upper()", "lower()", "capitalize()", "title()"],
+        "correctAnswer": "capitalize()",
+        "explanation": "capitalize() makes the first character uppercase and the rest lowercase."
+      },
+      {
+        "id": "8",
+        "type": "code-input",
+        "question": "Write code to remove only leading whitespace.",
+        "correctAnswer": "'  hello'.lstrip()",
+        "explanation": "lstrip() removes whitespace from the left side only."
+      },
+      {
+        "id": "9",
+        "type": "text-input",
+        "question": "What method removes trailing whitespace?",
+        "correctAnswer": "rstrip",
+        "explanation": "rstrip() removes whitespace from the right side of the string."
+      },
+      {
+        "id": "10",
+        "type": "multiple-choice",
+        "question": "What does 'hello world'.split(' ') do?",
+        "options": ["Splits on spaces", "Splits on 'o'", "Joins with space", "Replaces spaces"],
+        "correctAnswer": "Splits on spaces",
+        "explanation": "split(separator) splits the string using the specified separator."
+      },
+      {
+        "id": "11",
+        "type": "code-input",
+        "question": "Write code to split 'a,b,c' on commas.",
+        "correctAnswer": "'a,b,c'.split(',')",
+        "explanation": "Specify the separator character in split()."
+      },
+      {
+        "id": "12",
+        "type": "text-input",
+        "question": "What method finds the first occurrence of a substring?",
+        "correctAnswer": "find",
+        "explanation": "find() returns the lowest index where the substring is found."
+      },
+      {
+        "id": "13",
+        "type": "multiple-choice",
+        "question": "What does find() return if substring is not found?",
+        "options": ["-1", "0", "None", "Error"],
+        "correctAnswer": "-1",
+        "explanation": "find() returns -1 when the substring is not found."
+      },
+      {
+        "id": "14",
+        "type": "code-input",
+        "question": "Write code to check if 'world' is in 'hello world'.",
+        "correctAnswer": "'world' in 'hello world'",
+        "explanation": "The 'in' operator checks for substring presence."
+      },
+      {
+        "id": "15",
+        "type": "text-input",
+        "question": "What is the difference between find() and index()?",
+        "correctAnswer": "index() raises exception if not found, find() returns -1",
+        "explanation": "index() raises ValueError when substring not found, find() returns -1."
       }
     ]
   },
@@ -86,6 +159,79 @@
         "options": ["isdigit()", "isnumeric()", "isalpha()", "isalnum()"],
         "correctAnswer": "isdigit()",
         "explanation": "The isdigit() method returns True if all characters are digits."
+      },
+      {
+        "id": "6",
+        "type": "code-input",
+        "question": "Write code to check if a string contains only letters.",
+        "correctAnswer": "'hello'.isalpha()",
+        "explanation": "isalpha() returns True if all characters are letters."
+      },
+      {
+        "id": "7",
+        "type": "text-input",
+        "question": "What method checks for alphanumeric characters?",
+        "correctAnswer": "isalnum",
+        "explanation": "isalnum() returns True if all characters are alphanumeric."
+      },
+      {
+        "id": "8",
+        "type": "multiple-choice",
+        "question": "Which method checks if string contains only whitespace?",
+        "options": ["isspace()", "isalpha()", "isdigit()", "isalnum()"],
+        "correctAnswer": "isspace()",
+        "explanation": "isspace() returns True if all characters are whitespace."
+      },
+      {
+        "id": "9",
+        "type": "code-input",
+        "question": "Write code to check if a string is a valid identifier.",
+        "correctAnswer": "'variable1'.isidentifier()",
+        "explanation": "isidentifier() checks if the string is a valid Python identifier."
+      },
+      {
+        "id": "10",
+        "type": "text-input",
+        "question": "What method checks if string starts with uppercase?",
+        "correctAnswer": "istitle",
+        "explanation": "istitle() returns True if the string is title-cased."
+      },
+      {
+        "id": "11",
+        "type": "multiple-choice",
+        "question": "What does 'Hello World'.istitle() return?",
+        "options": ["True", "False", "None", "Error"],
+        "correctAnswer": "True",
+        "explanation": "istitle() returns True if each word starts with uppercase and rest are lowercase."
+      },
+      {
+        "id": "12",
+        "type": "code-input",
+        "question": "Write code to center a string with padding.",
+        "correctAnswer": "'hello'.center(10)",
+        "explanation": "center(width) centers the string in a field of given width."
+      },
+      {
+        "id": "13",
+        "type": "text-input",
+        "question": "What method left-justifies a string?",
+        "correctAnswer": "ljust",
+        "explanation": "ljust(width) left-aligns the string in a field of given width."
+      },
+      {
+        "id": "14",
+        "type": "code-input",
+        "question": "Write code to right-justify a string.",
+        "correctAnswer": "'hello'.rjust(10)",
+        "explanation": "rjust(width) right-aligns the string in a field of given width."
+      },
+      {
+        "id": "15",
+        "type": "multiple-choice",
+        "question": "What does zfill() do?",
+        "options": ["Fills with zeros on left", "Fills with spaces", "Removes zeros", "Centers text"],
+        "correctAnswer": "Fills with zeros on left",
+        "explanation": "zfill(width) pads the string on the left with zeros to reach the width."
       }
     ]
   },
@@ -123,6 +269,556 @@
         "question": "What is the most modern and recommended string formatting method?",
         "correctAnswer": "f-strings",
         "explanation": "f-strings (formatted string literals) are the most modern, readable, and performant formatting method."
+      },
+      {
+        "id": "5",
+        "type": "code-input",
+        "question": "Write code using % formatting for 'Name: %s, Age: %d'.",
+        "correctAnswer": "'Name: %s, Age: %d' % ('Alice', 25)",
+        "explanation": "% formatting uses % operator with format specifiers."
+      },
+      {
+        "id": "6",
+        "type": "multiple-choice",
+        "question": "What is the advantage of f-strings over .format()?",
+        "options": ["Faster", "More readable", "Both", "None"],
+        "correctAnswer": "Both",
+        "explanation": "f-strings are both faster and more readable than .format()."
+      },
+      {
+        "id": "7",
+        "type": "code-input",
+        "question": "Write f-string with number formatting.",
+        "correctAnswer": "f'Price: ${price:.2f}'",
+        "explanation": "f-strings support format specifications after colons."
+      },
+      {
+        "id": "8",
+        "type": "text-input",
+        "question": "What module provides Template class?",
+        "correctAnswer": "string",
+        "explanation": "The string module provides Template class for safe string substitution."
+      },
+      {
+        "id": "9",
+        "type": "code-input",
+        "question": "Write code using string.Template.",
+        "correctAnswer": "from string import Template\nt = Template('Hello $name')\nprint(t.substitute(name='Alice'))",
+        "explanation": "Template uses $variable syntax for substitution."
+      },
+      {
+        "id": "10",
+        "type": "multiple-choice",
+        "question": "Which formatting method is safest for user input?",
+        "options": ["% formatting", ".format()", "f-strings", "Template"],
+        "correctAnswer": "Template",
+        "explanation": "Template is safest as it doesn't evaluate expressions, only substitutes values."
+      },
+      {
+        "id": "11",
+        "type": "code-input",
+        "question": "Write f-string with expressions.",
+        "correctAnswer": "f'The sum is {a + b}'",
+        "explanation": "f-strings can contain any valid Python expression."
+      },
+      {
+        "id": "12",
+        "type": "text-input",
+        "question": "What does !r do in f-strings?",
+        "correctAnswer": "calls repr() on the value",
+        "explanation": "!r calls repr() to get the string representation of the object."
+      },
+      {
+        "id": "13",
+        "type": "code-input",
+        "question": "Write f-string with repr formatting.",
+        "correctAnswer": "f'Debug: {value!r}'",
+        "explanation": "!r shows the repr() of the value for debugging."
+      },
+      {
+        "id": "14",
+        "type": "multiple-choice",
+        "question": "Can f-strings be used in older Python versions?",
+        "options": ["Yes", "No, Python 3.6+", "Only with import", "With backport"],
+        "correctAnswer": "No, Python 3.6+",
+        "explanation": "f-strings were introduced in Python 3.6."
+      },
+      {
+        "id": "15",
+        "type": "code-input",
+        "question": "Write .format() with named placeholders.",
+        "correctAnswer": "'Hello {name}, you are {age} years old'.format(name='Alice', age=25)",
+        "explanation": ".format() supports named placeholders for clarity."
+      }
+    ]
+  },
+  {
+    "id": "string-slicing",
+    "title": "String Slicing and Indexing",
+    "description": "Learn about accessing string characters and substrings.",
+    "difficulty": "beginner",
+    "questions": [
+      {
+        "id": "1",
+        "type": "text-input",
+        "question": "How do you access the first character of a string?",
+        "correctAnswer": "string[0]",
+        "explanation": "Strings are zero-indexed, so the first character is at index 0."
+      },
+      {
+        "id": "2",
+        "type": "code-input",
+        "question": "Write code to get the last character of 'Python'.",
+        "correctAnswer": "'Python'[-1]",
+        "explanation": "Negative indexing starts from the end, -1 is the last character."
+      },
+      {
+        "id": "3",
+        "type": "multiple-choice",
+        "question": "What does 'hello'[1:4] return?",
+        "options": ["'h'", "'ell'", "'ello'", "'lo'"],
+        "correctAnswer": "'ell'",
+        "explanation": "Slicing [1:4] returns characters from index 1 up to but not including 4."
+      },
+      {
+        "id": "4",
+        "type": "code-input",
+        "question": "Write code to get every other character from 'Python'.",
+        "correctAnswer": "'Python'[::2]",
+        "explanation": "Step parameter 2 skips every other character."
+      },
+      {
+        "id": "5",
+        "type": "text-input",
+        "question": "What does [::-1] do to a string?",
+        "correctAnswer": "reverses the string",
+        "explanation": "Negative step reverses the string."
+      },
+      {
+        "id": "6",
+        "type": "multiple-choice",
+        "question": "Can strings be modified after creation?",
+        "options": ["Yes", "No", "Only some characters", "With special methods"],
+        "correctAnswer": "No",
+        "explanation": "Strings are immutable - they cannot be modified after creation."
+      },
+      {
+        "id": "7",
+        "type": "code-input",
+        "question": "Write code to get characters 2 through 5 from 'Hello World'.",
+        "correctAnswer": "'Hello World'[2:6]",
+        "explanation": "Slice from index 2 to 6 (exclusive) to get characters 2-5."
+      },
+      {
+        "id": "8",
+        "type": "text-input",
+        "question": "What is the length of 'Python'[2:]?",
+        "correctAnswer": "4",
+        "explanation": "[2:] takes from index 2 to the end: 'thon'."
+      },
+      {
+        "id": "9",
+        "type": "code-input",
+        "question": "Write code to get the first 3 characters of a string.",
+        "correctAnswer": "string[:3]",
+        "explanation": "[:3] takes from the beginning up to index 3 (exclusive)."
+      },
+      {
+        "id": "10",
+        "type": "multiple-choice",
+        "question": "What happens if you try to access string[10] on a 5-character string?",
+        "options": ["Returns last character", "Returns None", "Raises IndexError", "Returns empty string"],
+        "correctAnswer": "Raises IndexError",
+        "explanation": "Accessing beyond string length raises IndexError."
+      },
+      {
+        "id": "11",
+        "type": "code-input",
+        "question": "Write code to safely get a character or default value.",
+        "correctAnswer": "char = string[index] if index < len(string) else 'default'",
+        "explanation": "Check bounds before accessing to avoid IndexError."
+      },
+      {
+        "id": "12",
+        "type": "text-input",
+        "question": "What method gets the length of a string?",
+        "correctAnswer": "len",
+        "explanation": "len() returns the number of characters in the string."
+      },
+      {
+        "id": "13",
+        "type": "multiple-choice",
+        "question": "Does slicing create a copy or view?",
+        "options": ["Copy", "View", "Depends on Python version", "Neither"],
+        "correctAnswer": "Copy",
+        "explanation": "String slicing always creates a new string copy."
+      },
+      {
+        "id": "14",
+        "type": "code-input",
+        "question": "Write code to extract domain from email address.",
+        "correctAnswer": "email[email.find('@')+1:]",
+        "explanation": "Find @ position and slice from after it to get domain."
+      },
+      {
+        "id": "15",
+        "type": "text-input",
+        "question": "What is string immutability?",
+        "correctAnswer": "strings cannot be modified in place",
+        "explanation": "String operations that appear to modify strings actually create new strings."
+      }
+    ]
+  },
+  {
+    "id": "string-comparison",
+    "title": "String Comparison and Sorting",
+    "description": "Learn about comparing and sorting strings.",
+    "difficulty": "beginner",
+    "questions": [
+      {
+        "id": "1",
+        "type": "multiple-choice",
+        "question": "How are strings compared in Python?",
+        "options": ["Lexicographically", "By length", "By ASCII values", "Randomly"],
+        "correctAnswer": "Lexicographically",
+        "explanation": "Strings are compared character by character using lexicographic order."
+      },
+      {
+        "id": "2",
+        "type": "code-input",
+        "question": "Write code to check if 'apple' comes before 'banana'.",
+        "correctAnswer": "'apple' < 'banana'",
+        "explanation": "Comparison operators work lexicographically on strings."
+      },
+      {
+        "id": "3",
+        "type": "text-input",
+        "question": "What is the ASCII value of 'A'?",
+        "correctAnswer": "65",
+        "explanation": "'A' has ASCII value 65, which affects string comparison."
+      },
+      {
+        "id": "4",
+        "type": "multiple-choice",
+        "question": "Which string is greater: 'Apple' or 'apple'?",
+        "options": ["'Apple'", "'apple'", "They are equal", "Depends on system"],
+        "correctAnswer": "'apple'",
+        "explanation": "Uppercase letters have lower ASCII values than lowercase."
+      },
+      {
+        "id": "5",
+        "type": "code-input",
+        "question": "Write code to sort a list of strings.",
+        "correctAnswer": "sorted(['banana', 'apple', 'cherry'])",
+        "explanation": "sorted() returns a new sorted list of strings."
+      },
+      {
+        "id": "6",
+        "type": "text-input",
+        "question": "What method sorts a list in place?",
+        "correctAnswer": "sort",
+        "explanation": "list.sort() sorts the list in place and returns None."
+      },
+      {
+        "id": "7",
+        "type": "multiple-choice",
+        "question": "How does case affect string sorting?",
+        "options": ["Uppercase comes first", "Lowercase comes first", "Mixed results", "No effect"],
+        "correctAnswer": "Uppercase comes first",
+        "explanation": "ASCII values: 'A' (65) < 'a' (97), so uppercase sorts before lowercase."
+      },
+      {
+        "id": "8",
+        "type": "code-input",
+        "question": "Write code for case-insensitive string comparison.",
+        "correctAnswer": "'Apple'.lower() == 'apple'.lower()",
+        "explanation": "Convert both strings to same case before comparing."
+      },
+      {
+        "id": "9",
+        "type": "text-input",
+        "question": "What function provides case-insensitive sorting?",
+        "correctAnswer": "sorted with key=str.lower",
+        "explanation": "Use key=str.lower for case-insensitive sorting."
+      },
+      {
+        "id": "10",
+        "code-input",
+        "question": "Write code to sort strings case-insensitively.",
+        "correctAnswer": "sorted(strings, key=str.lower)",
+        "explanation": "The key function transforms items before comparison."
+      },
+      {
+        "id": "11",
+        "type": "multiple-choice",
+        "question": "What does 'apple' == 'Apple' return?",
+        "options": ["True", "False", "None", "Error"],
+        "correctAnswer": "False",
+        "explanation": "String comparison is case-sensitive by default."
+      },
+      {
+        "id": "12",
+        "type": "code-input",
+        "question": "Write code to check equality ignoring case.",
+        "correctAnswer": "'Hello'.casefold() == 'hello'.casefold()",
+        "explanation": "casefold() is more aggressive than lower() for case-insensitive comparison."
+      },
+      {
+        "id": "13",
+        "type": "text-input",
+        "question": "What is the difference between lower() and casefold()?",
+        "correctAnswer": "casefold() handles more Unicode cases",
+        "explanation": "casefold() is more aggressive for case-insensitive operations."
+      },
+      {
+        "id": "14",
+        "type": "multiple-choice",
+        "question": "Which is better for case-insensitive comparison?",
+        "options": ["lower()", "casefold()", "upper()", "Depends on language"],
+        "correctAnswer": "casefold()",
+        "explanation": "casefold() handles more edge cases in Unicode."
+      },
+      {
+        "id": "15",
+        "type": "code-input",
+        "question": "Write code to sort strings by length.",
+        "correctAnswer": "sorted(strings, key=len)",
+        "explanation": "Use key=len to sort strings by their length."
+      }
+    ]
+  },
+  {
+    "id": "string-encoding",
+    "title": "String Encoding and Unicode",
+    "description": "Learn about character encoding and Unicode in strings.",
+    "difficulty": "advanced",
+    "questions": [
+      {
+        "id": "1",
+        "type": "text-input",
+        "question": "What is Unicode?",
+        "correctAnswer": "universal character encoding standard",
+        "explanation": "Unicode is a standard for encoding characters from all writing systems."
+      },
+      {
+        "id": "2",
+        "type": "multiple-choice",
+        "question": "What does UTF-8 stand for?",
+        "options": ["Unicode Text Format 8", "Universal Text Format 8", "Unicode Transformation Format 8", "Universal Transformation Format 8"],
+        "correctAnswer": "Unicode Transformation Format 8",
+        "explanation": "UTF-8 is a variable-width character encoding for Unicode."
+      },
+      {
+        "id": "3",
+        "type": "text-input",
+        "question": "How are strings stored in Python 3?",
+        "correctAnswer": "as Unicode",
+        "explanation": "Python 3 strings are Unicode strings by default."
+      },
+      {
+        "id": "4",
+        "type": "code-input",
+        "question": "Write code to encode a string to bytes.",
+        "correctAnswer": "'hello'.encode('utf-8')",
+        "explanation": "encode() converts a string to bytes using the specified encoding."
+      },
+      {
+        "id": "5",
+        "type": "multiple-choice",
+        "question": "What does decode() do?",
+        "options": ["Converts bytes to string", "Converts string to bytes", "Compresses string", "Encrypts string"],
+        "correctAnswer": "Converts bytes to string",
+        "explanation": "decode() converts bytes back to a string using the specified encoding."
+      },
+      {
+        "id": "6",
+        "type": "code-input",
+        "question": "Write code to decode UTF-8 bytes to string.",
+        "correctAnswer": "b'hello'.decode('utf-8')",
+        "explanation": "decode() with encoding converts bytes to string."
+      },
+      {
+        "id": "7",
+        "type": "text-input",
+        "question": "What is the default encoding in Python?",
+        "correctAnswer": "UTF-8",
+        "explanation": "UTF-8 is the default encoding for strings in Python 3."
+      },
+      {
+        "id": "8",
+        "type": "multiple-choice",
+        "question": "What happens with unsupported characters in encoding?",
+        "options": ["Ignored", "Replaced", "Raises error", "All of the above"],
+        "correctAnswer": "All of the above",
+        "explanation": "Depending on error handling, unsupported characters can be ignored, replaced, or cause errors."
+      },
+      {
+        "id": "9",
+        "type": "code-input",
+        "question": "Write code to handle encoding errors gracefully.",
+        "correctAnswer": "'text'.encode('ascii', errors='ignore')",
+        "explanation": "errors='ignore' skips characters that cannot be encoded."
+      },
+      {
+        "id": "10",
+        "type": "text-input",
+        "question": "What does errors='replace' do?",
+        "correctAnswer": "replaces unencodable characters with ?",
+        "explanation": "errors='replace' substitutes problematic characters with replacement characters."
+      },
+      {
+        "id": "11",
+        "type": "multiple-choice",
+        "question": "What is ASCII?",
+        "options": ["Unicode subset", "7-bit character set", "Both", "Neither"],
+        "correctAnswer": "Both",
+        "explanation": "ASCII is a 7-bit character set and a subset of Unicode."
+      },
+      {
+        "id": "12",
+        "type": "code-input",
+        "question": "Write code to check if a string is ASCII.",
+        "correctAnswer": "'hello'.isascii()",
+        "explanation": "isascii() returns True if all characters are ASCII."
+      },
+      {
+        "id": "13",
+        "type": "text-input",
+        "question": "What is the ord() function?",
+        "correctAnswer": "returns Unicode code point",
+        "explanation": "ord() returns the Unicode code point (integer) for a character."
+      },
+      {
+        "id": "14",
+        "type": "code-input",
+        "question": "Write code to get Unicode code point for 'A'.",
+        "correctAnswer": "ord('A')",
+        "explanation": "ord('A') returns 65, the Unicode code point for 'A'."
+      },
+      {
+        "id": "15",
+        "type": "text-input",
+        "question": "What does chr() do?",
+        "correctAnswer": "converts code point to character",
+        "explanation": "chr() returns the character for the given Unicode code point."
+      }
+    ]
+  },
+  {
+    "id": "string-performance",
+    "title": "String Performance and Optimization",
+    "description": "Learn about string performance considerations and optimization techniques.",
+    "difficulty": "advanced",
+    "questions": [
+      {
+        "id": "1",
+        "type": "text-input",
+        "question": "Why are strings immutable in Python?",
+        "correctAnswer": "for performance and thread safety",
+        "explanation": "Immutability allows string interning and safe sharing between threads."
+      },
+      {
+        "id": "2",
+        "type": "multiple-choice",
+        "question": "What is string interning?",
+        "options": ["Storing strings in memory", "Reusing identical string objects", "Compressing strings", "Encrypting strings"],
+        "correctAnswer": "Reusing identical string objects",
+        "explanation": "String interning reuses memory for identical strings to save space."
+      },
+      {
+        "id": "3",
+        "type": "code-input",
+        "question": "Write code to manually intern a string.",
+        "correctAnswer": "import sys\ns = sys.intern('hello')",
+        "explanation": "sys.intern() adds the string to the intern pool."
+      },
+      {
+        "id": "4",
+        "type": "text-input",
+        "question": "What is the most efficient way to build strings?",
+        "correctAnswer": "using join() on list",
+        "explanation": "Building with join() is more efficient than repeated concatenation."
+      },
+      {
+        "id": "5",
+        "type": "code-input",
+        "question": "Write efficient string building code.",
+        "correctAnswer": "parts = []\nfor item in items:\n    parts.append(str(item))\nresult = ''.join(parts)",
+        "explanation": "Collect parts in a list, then join - avoids creating intermediate strings."
+      },
+      {
+        "id": "6",
+        "multiple-choice",
+        "question": "Why is repeated concatenation inefficient?",
+        "options": ["Creates many temporary strings", "Uses too much memory", "Both", "Neither"],
+        "correctAnswer": "Both",
+        "explanation": "Each + creates a new string, leading to quadratic time complexity."
+      },
+      {
+        "id": "7",
+        "type": "text-input",
+        "question": "What is the time complexity of string concatenation with +?",
+        "correctAnswer": "O(n^2)",
+        "explanation": "Repeated concatenation is O(n²) due to creating intermediate strings."
+      },
+      {
+        "id": "8",
+        "code-input",
+        "question": "Write code using string concatenation (inefficient).",
+        "correctAnswer": "result = ''\nfor s in strings:\n    result += s  # Inefficient!",
+        "explanation": "This creates a new string on each iteration."
+      },
+      {
+        "id": "9",
+        "type": "multiple-choice",
+        "question": "Which is faster for string building?",
+        "options": ["join()", "+=", "f-strings", "format()"],
+        "correctAnswer": "join()",
+        "explanation": "join() is the most efficient for building strings from many parts."
+      },
+      {
+        "id": "10",
+        "type": "text-input",
+        "question": "What is the advantage of f-strings over other formatting?",
+        "correctAnswer": "fastest formatting method",
+        "explanation": "f-strings are the fastest string formatting method in Python."
+      },
+      {
+        "id": "11",
+        "code-input",
+        "question": "Write code to efficiently concatenate with separator.",
+        "correctAnswer": "'; '.join(strings)",
+        "explanation": "join() is efficient even with separators."
+      },
+      {
+        "id": "12",
+        "type": "multiple-choice",
+        "question": "When should you use StringIO?",
+        "options": ["For file-like string operations", "For building large strings", "For parsing strings", "All of the above"],
+        "correctAnswer": "All of the above",
+        "explanation": "StringIO provides file-like operations on strings."
+      },
+      {
+        "id": "13",
+        "type": "code-input",
+        "question": "Write code using StringIO.",
+        "correctAnswer": "from io import StringIO\noutput = StringIO()\noutput.write('Hello')\nprint(output.getvalue())",
+        "explanation": "StringIO acts like a file but operates on strings."
+      },
+      {
+        "id": "14",
+        "type": "text-input",
+        "question": "What is string interning's memory benefit?",
+        "correctAnswer": "reuses memory for identical strings",
+        "explanation": "Interned strings share memory, reducing overall memory usage."
+      },
+      {
+        "id": "15",
+        "type": "multiple-choice",
+        "question": "Which strings are automatically interned?",
+        "options": ["All strings", "Short strings with ASCII", "Only literals", "None"],
+        "correctAnswer": "Short strings with ASCII",
+        "explanation": "Python automatically interns short strings containing only ASCII characters."
       }
     ]
   }

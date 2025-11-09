@@ -19,6 +19,930 @@
         "question": "What is the base class for all exceptions in Python?",
         "correctAnswer": "Exception",
         "explanation": "Exception is the base class for all built-in exceptions."
+      },
+      {
+        "id": "3",
+        "type": "multiple-choice",
+        "question": "What does the try block contain?",
+        "options": ["Error handling code", "Code that might raise exceptions", "Cleanup code", "Exception definitions"],
+        "correctAnswer": "Code that might raise exceptions",
+        "explanation": "The try block contains code that might raise an exception."
+      },
+      {
+        "id": "4",
+        "type": "code-input",
+        "question": "Write a basic try-except block.",
+        "correctAnswer": "try:\n    risky_operation()\nexcept SomeError:\n    handle_error()",
+        "explanation": "Basic structure: try block with risky code, except block to handle specific errors."
+      },
+      {
+        "id": "5",
+        "type": "multiple-choice",
+        "question": "What does the finally block do?",
+        "options": ["Handles exceptions", "Contains risky code", "Always executes", "Raises exceptions"],
+        "correctAnswer": "Always executes",
+        "explanation": "The finally block executes whether an exception occurs or not."
+      },
+      {
+        "id": "6",
+        "type": "code-input",
+        "question": "Write a try-except-finally block.",
+        "correctAnswer": "try:\n    file = open('data.txt')\n    process(file)\nexcept IOError:\n    print('File error')\nfinally:\n    file.close()",
+        "explanation": "Use finally for cleanup that must happen regardless of exceptions."
+      },
+      {
+        "id": "7",
+        "type": "multiple-choice",
+        "question": "What happens if no exception occurs in try?",
+        "options": ["finally doesn't execute", "except blocks execute", "finally still executes", "program crashes"],
+        "correctAnswer": "finally still executes",
+        "explanation": "finally block executes regardless of whether an exception occurs."
+      },
+      {
+        "id": "8",
+        "type": "text-input",
+        "question": "What is the else block in try-except used for?",
+        "correctAnswer": "Code that runs only if no exception occurs",
+        "explanation": "The else block executes when try completes without exceptions."
+      },
+      {
+        "id": "9",
+        "type": "code-input",
+        "question": "Write a try-except-else block.",
+        "correctAnswer": "try:\n    result = risky_calculation()\nexcept ValueError:\n    result = default_value\nelse:\n    print('Calculation successful')",
+        "explanation": "else block runs only when no exception occurs in try."
+      },
+      {
+        "id": "10",
+        "type": "multiple-choice",
+        "question": "Can you have multiple except blocks?",
+        "options": ["No, only one", "Yes, for different exception types", "Only with finally", "Only for base exceptions"],
+        "correctAnswer": "Yes, for different exception types",
+        "explanation": "Multiple except blocks can catch different types of exceptions."
+      },
+      {
+        "id": "11",
+        "type": "code-input",
+        "question": "Write multiple except blocks.",
+        "correctAnswer": "try:\n    operation()\nexcept ValueError:\n    handle_value_error()\nexcept TypeError:\n    handle_type_error()\nexcept:\n    handle_other_errors()",
+        "explanation": "Catch specific exceptions first, then more general ones."
+      },
+      {
+        "id": "12",
+        "type": "text-input",
+        "question": "What is exception chaining?",
+        "correctAnswer": "Linking exceptions when one causes another",
+        "explanation": "Use 'raise new_exc from original_exc' to link exceptions."
+      },
+      {
+        "id": "13",
+        "type": "multiple-choice",
+        "question": "What does bare except: catch?",
+        "options": ["Only specific exceptions", "All exceptions including system exit", "Only BaseException", "Nothing"],
+        "correctAnswer": "All exceptions including system exit",
+        "explanation": "Bare except catches all exceptions, including KeyboardInterrupt and SystemExit."
+      },
+      {
+        "id": "14",
+        "type": "text-input",
+        "question": "What should you avoid using bare except for?",
+        "correctAnswer": "Masking important exceptions",
+        "explanation": "Bare except can hide bugs by catching unexpected exceptions."
+      },
+      {
+        "id": "15",
+        "type": "code-input",
+        "question": "Write a proper bare except usage.",
+        "correctAnswer": "try:\n    cleanup()\nexcept:\n    # Last resort cleanup\n    pass",
+        "explanation": "Bare except is acceptable only for final cleanup when you must not fail."
+      }
+    ]
+  },
+  {
+    "id": "exception-types",
+    "title": "Exception Types",
+    "description": "Understanding different types of exceptions.",
+    "difficulty": "intermediate",
+    "questions": [
+      {
+        "id": "1",
+        "type": "multiple-choice",
+        "question": "What type of error is ValueError?",
+        "options": ["Syntax error", "Wrong value type", "Wrong value for correct type", "Import error"],
+        "correctAnswer": "Wrong value for correct type",
+        "explanation": "ValueError occurs when operation receives correct type but inappropriate value."
+      },
+      {
+        "id": "2",
+        "type": "multiple-choice",
+        "question": "What causes TypeError?",
+        "options": ["Wrong value", "Wrong type for operation", "Missing file", "Network error"],
+        "correctAnswer": "Wrong type for operation",
+        "explanation": "TypeError occurs when operation applied to inappropriate type."
+      },
+      {
+        "id": "3",
+        "type": "multiple-choice",
+        "question": "What is IndexError?",
+        "options": ["Wrong index type", "Index out of range", "Wrong list type", "Empty list"],
+        "correctAnswer": "Index out of range",
+        "explanation": "IndexError occurs when trying to access invalid index in sequence."
+      },
+      {
+        "id": "4",
+        "type": "multiple-choice",
+        "question": "What causes KeyError?",
+        "options": ["Wrong key type", "Key not in dictionary", "Empty dictionary", "Wrong dictionary type"],
+        "correctAnswer": "Key not in dictionary",
+        "explanation": "KeyError occurs when trying to access non-existent dictionary key."
+      },
+      {
+        "id": "5",
+        "type": "multiple-choice",
+        "question": "What is ZeroDivisionError?",
+        "options": ["Dividing by string", "Dividing by zero", "Wrong divisor type", "Division overflow"],
+        "correctAnswer": "Dividing by zero",
+        "explanation": "ZeroDivisionError occurs when dividing by zero."
+      },
+      {
+        "id": "6",
+        "type": "multiple-choice",
+        "question": "What causes AttributeError?",
+        "options": ["Wrong object type", "Missing attribute", "Wrong method call", "Wrong arguments"],
+        "correctAnswer": "Missing attribute",
+        "explanation": "AttributeError occurs when trying to access non-existent attribute."
+      },
+      {
+        "id": "7",
+        "type": "multiple-choice",
+        "question": "What is NameError?",
+        "options": ["Wrong variable name", "Undefined variable", "Wrong function name", "Import error"],
+        "correctAnswer": "Undefined variable",
+        "explanation": "NameError occurs when trying to use undefined variable or name."
+      },
+      {
+        "id": "8",
+        "type": "multiple-choice",
+        "question": "What causes ImportError?",
+        "options": ["Wrong import syntax", "Module not found", "Wrong module name", "Circular import"],
+        "correctAnswer": "Module not found",
+        "explanation": "ImportError occurs when import statement fails to find module."
+      },
+      {
+        "id": "9",
+        "type": "multiple-choice",
+        "question": "What is FileNotFoundError?",
+        "options": ["Wrong file content", "File not found", "Permission denied", "Wrong file mode"],
+        "correctAnswer": "File not found",
+        "explanation": "FileNotFoundError occurs when trying to open non-existent file."
+      },
+      {
+        "id": "10",
+        "type": "multiple-choice",
+        "question": "What causes StopIteration?",
+        "options": ["Loop end", "Iterator exhaustion", "Wrong iteration", "Empty container"],
+        "correctAnswer": "Iterator exhaustion",
+        "explanation": "StopIteration raised by iterators when no more items available."
+      },
+      {
+        "id": "11",
+        "type": "text-input",
+        "question": "What exception is raised by int('abc')?",
+        "correctAnswer": "ValueError",
+        "explanation": "int() expects string representation of number, 'abc' is not valid."
+      },
+      {
+        "id": "12",
+        "type": "text-input",
+        "question": "What exception is raised by accessing my_list[10] when len(my_list) == 5?",
+        "correctAnswer": "IndexError",
+        "explanation": "Index 10 is out of range for list of length 5."
+      },
+      {
+        "id": "13",
+        "type": "text-input",
+        "question": "What exception is raised by my_dict['missing_key']?",
+        "correctAnswer": "KeyError",
+        "explanation": "Key 'missing_key' does not exist in dictionary."
+      },
+      {
+        "id": "14",
+        "type": "text-input",
+        "question": "What exception is raised by 5 / 0?",
+        "correctAnswer": "ZeroDivisionError",
+        "explanation": "Division by zero is mathematically undefined."
+      },
+      {
+        "id": "15",
+        "type": "text-input",
+        "question": "What exception is raised by undefined_variable?",
+        "correctAnswer": "NameError",
+        "explanation": "Trying to access variable that hasn't been defined."
+      }
+    ]
+  },
+  {
+    "id": "raising-exceptions",
+    "title": "Raising Exceptions",
+    "description": "How to raise exceptions manually.",
+    "difficulty": "intermediate",
+    "questions": [
+      {
+        "id": "1",
+        "type": "code-input",
+        "question": "Write code to raise a ValueError.",
+        "correctAnswer": "raise ValueError('Invalid value provided')",
+        "explanation": "Use raise statement with exception class and optional message."
+      },
+      {
+        "id": "2",
+        "type": "multiple-choice",
+        "question": "Can you raise any object as an exception?",
+        "options": ["Yes, any object", "No, must be BaseException subclass", "Only built-in exceptions", "Only strings"],
+        "correctAnswer": "No, must be BaseException subclass",
+        "explanation": "Exceptions must inherit from BaseException."
+      },
+      {
+        "id": "3",
+        "type": "code-input",
+        "question": "Write code to re-raise the current exception.",
+        "correctAnswer": "raise",
+        "explanation": "Bare raise re-raises the currently caught exception."
+      },
+      {
+        "id": "4",
+        "type": "text-input",
+        "question": "What is exception chaining?",
+        "correctAnswer": "Linking original exception to new one",
+        "explanation": "Use 'raise new_exc from original_exc' to preserve exception history."
+      },
+      {
+        "id": "5",
+        "type": "code-input",
+        "question": "Write exception chaining.",
+        "correctAnswer": "try:\n    risky_operation()\nexcept ValueError as e:\n    raise CustomError('Operation failed') from e",
+        "explanation": "Chain exceptions to preserve original error context."
+      },
+      {
+        "id": "6",
+        "type": "multiple-choice",
+        "question": "What does raise without arguments do?",
+        "options": ["Raises BaseException", "Re-raises current exception", "Raises RuntimeError", "Does nothing"],
+        "correctAnswer": "Re-raises current exception",
+        "explanation": "Bare raise re-raises the exception currently being handled."
+      },
+      {
+        "id": "7",
+        "type": "text-input",
+        "question": "What is assert statement?",
+        "correctAnswer": "Conditional exception raising",
+        "explanation": "assert condition, message raises AssertionError if condition False."
+      },
+      {
+        "id": "8",
+        "type": "code-input",
+        "question": "Write an assert statement.",
+        "correctAnswer": "assert x > 0, 'x must be positive'",
+        "explanation": "Assert checks condition and raises AssertionError with message if false."
+      },
+      {
+        "id": "9",
+        "type": "multiple-choice",
+        "question": "When should you use assert?",
+        "options": ["Production error handling", "Debugging and testing assumptions", "User input validation", "File operations"],
+        "correctAnswer": "Debugging and testing assumptions",
+        "explanation": "Assert is for debugging, not production error handling."
+      },
+      {
+        "id": "10",
+        "type": "text-input",
+        "question": "What happens to assert in optimized Python (-O flag)?",
+        "correctAnswer": "Assertions are disabled",
+        "explanation": "Python optimization removes assert statements."
+      },
+      {
+        "id": "11",
+        "type": "code-input",
+        "question": "Write input validation that raises exception.",
+        "correctAnswer": "if age < 0:\n    raise ValueError('Age cannot be negative')",
+        "explanation": "Validate input and raise appropriate exception for invalid values."
+      },
+      {
+        "id": "12",
+        "type": "multiple-choice",
+        "question": "Should you raise exceptions for expected conditions?",
+        "options": ["Always", "Never", "Only for programming errors", "Only for user errors"],
+        "correctAnswer": "Only for programming errors",
+        "explanation": "Raise exceptions for unexpected/programming errors, not expected conditions."
+      },
+      {
+        "id": "13",
+        "type": "text-input",
+        "question": "What is the difference between raise and return?",
+        "correctAnswer": "raise interrupts execution, return exits function normally",
+        "explanation": "raise causes exception propagation, return exits function with value."
+      },
+      {
+        "id": "14",
+        "type": "code-input",
+        "question": "Write exception for invalid function arguments.",
+        "correctAnswer": "def divide(a, b):\n    if b == 0:\n        raise ZeroDivisionError('Cannot divide by zero')\n    return a / b",
+        "explanation": "Validate arguments and raise exceptions for invalid inputs."
+      },
+      {
+        "id": "15",
+        "type": "multiple-choice",
+        "question": "What information should exception messages contain?",
+        "options": ["Only exception type", "What went wrong and why", "Stack trace", "Nothing"],
+        "correctAnswer": "What went wrong and why",
+        "explanation": "Exception messages should explain what failed and why."
+      }
+    ]
+  },
+  {
+    "id": "custom-exceptions",
+    "title": "Custom Exceptions",
+    "description": "Creating and using custom exception classes.",
+    "difficulty": "advanced",
+    "questions": [
+      {
+        "id": "1",
+        "type": "code-input",
+        "question": "Write a basic custom exception class.",
+        "correctAnswer": "class CustomError(Exception):\n    pass",
+        "explanation": "Custom exceptions inherit from Exception or its subclasses."
+      },
+      {
+        "id": "2",
+        "type": "code-input",
+        "question": "Write a custom exception with message.",
+        "correctAnswer": "class ValidationError(Exception):\n    def __init__(self, message):\n        self.message = message\n        super().__init__(self.message)",
+        "explanation": "Override __init__ to accept custom parameters."
+      },
+      {
+        "id": "3",
+        "type": "multiple-choice",
+        "question": "Should custom exceptions inherit from?",
+        "options": ["BaseException", "Exception", "ValueError", "Any class"],
+        "correctAnswer": "Exception",
+        "explanation": "Custom exceptions should inherit from Exception, not BaseException."
+      },
+      {
+        "id": "4",
+        "type": "code-input",
+        "question": "Write an exception hierarchy.",
+        "correctAnswer": "class AppError(Exception):\n    pass\n\nclass DatabaseError(AppError):\n    pass\n\nclass ConnectionError(DatabaseError):\n    pass",
+        "explanation": "Create exception hierarchies for different error categories."
+      },
+      {
+        "id": "5",
+        "type": "multiple-choice",
+        "question": "Why create custom exceptions?",
+        "options": ["Look cool", "Specific error handling", "Confuse other developers", "Slower code"],
+        "correctAnswer": "Specific error handling",
+        "explanation": "Custom exceptions allow catching specific errors in your application."
+      },
+      {
+        "id": "6",
+        "type": "code-input",
+        "question": "Write exception with additional data.",
+        "correctAnswer": "class HTTPError(Exception):\n    def __init__(self, status_code, message):\n        self.status_code = status_code\n        self.message = message\n        super().__init__(f'{status_code}: {message}')",
+        "explanation": "Store additional context in exception instances."
+      },
+      {
+        "id": "7",
+        "type": "text-input",
+        "question": "What is the naming convention for exceptions?",
+        "correctAnswer": "End with Error",
+        "explanation": "Exception classes should end with 'Error'."
+      },
+      {
+        "id": "8",
+        "type": "code-input",
+        "question": "Write exception that catches multiple related errors.",
+        "correctAnswer": "try:\n    database_operation()\nexcept (ConnectionError, TimeoutError) as e:\n    handle_database_error(e)",
+        "explanation": "Catch related custom exceptions together."
+      },
+      {
+        "id": "9",
+        "type": "multiple-choice",
+        "question": "Should exceptions store stack traces?",
+        "options": ["Always", "Never", "Python does it automatically", "Only custom ones"],
+        "correctAnswer": "Python does it automatically",
+        "explanation": "Python automatically attaches traceback to exception instances."
+      },
+      {
+        "id": "10",
+        "type": "text-input",
+        "question": "What is __cause__ attribute?",
+        "correctAnswer": "Original exception in chained exceptions",
+        "explanation": "__cause__ contains the original exception when using 'from'."
+      },
+      {
+        "id": "11",
+        "type": "code-input",
+        "question": "Write exception that wraps another exception.",
+        "correctAnswer": "try:\n    low_level_operation()\nexcept LowLevelError as e:\n    raise HighLevelError('Operation failed') from e",
+        "explanation": "Wrap low-level exceptions in higher-level application exceptions."
+      },
+      {
+        "id": "12",
+        "type": "multiple-choice",
+        "question": "When should you create custom exceptions?",
+        "options": ["For every function", "When you need specific error handling", "Never", "Only for logging"],
+        "correctAnswer": "When you need specific error handling",
+        "explanation": "Create custom exceptions when callers need to handle specific error types."
+      },
+      {
+        "id": "13",
+        "type": "text-input",
+        "question": "What is the benefit of exception hierarchies?",
+        "correctAnswer": "Flexible error handling",
+        "explanation": "Catch base exceptions to handle all related errors, or specific ones for precise handling."
+      },
+      {
+        "id": "14",
+        "type": "code-input",
+        "question": "Write exception with custom string representation.",
+        "correctAnswer": "class ValidationError(Exception):\n    def __str__(self):\n        return f'Validation failed: {self.message}'",
+        "explanation": "Override __str__ for better error messages."
+      },
+      {
+        "id": "15",
+        "type": "multiple-choice",
+        "question": "Should exceptions be part of your API?",
+        "options": ["No", "Yes, document them", "Only base exceptions", "Only in private APIs"],
+        "correctAnswer": "Yes, document them",
+        "explanation": "Document which exceptions your functions raise as part of the API."
+      }
+    ]
+  },
+  {
+    "id": "context-managers",
+    "title": "Context Managers",
+    "description": "Using with statements for resource management.",
+    "difficulty": "intermediate",
+    "questions": [
+      {
+        "id": "1",
+        "type": "text-input",
+        "question": "What is a context manager?",
+        "correctAnswer": "Object managing resource setup and cleanup",
+        "explanation": "Context managers handle resource acquisition and release."
+      },
+      {
+        "id": "2",
+        "type": "code-input",
+        "question": "Write a with statement for file handling.",
+        "correctAnswer": "with open('file.txt', 'r') as f:\n    content = f.read()",
+        "explanation": "with ensures file is closed even if exceptions occur."
+      },
+      {
+        "id": "3",
+        "type": "text-input",
+        "question": "What methods must context managers implement?",
+        "correctAnswer": "__enter__ and __exit__",
+        "explanation": "__enter__ for setup, __exit__ for cleanup."
+      },
+      {
+        "id": "4",
+        "type": "code-input",
+        "question": "Write a simple context manager class.",
+        "correctAnswer": "class MyContext:\n    def __enter__(self):\n        print('Entering')\n        return self\n    def __exit__(self, exc_type, exc_val, exc_tb):\n        print('Exiting')",
+        "explanation": "__enter__ returns object for 'as' clause, __exit__ handles cleanup."
+      },
+      {
+        "id": "5",
+        "type": "text-input",
+        "question": "What does __exit__ return?",
+        "correctAnswer": "True to suppress exception, False/None to propagate",
+        "explanation": "Returning True suppresses the exception, otherwise it's re-raised."
+      },
+      {
+        "id": "6",
+        "type": "code-input",
+        "question": "Write context manager that suppresses exceptions.",
+        "correctAnswer": "class Suppress:\n    def __enter__(self):\n        return self\n    def __exit__(self, exc_type, exc_val, exc_tb):\n        return True  # Suppress any exception",
+        "explanation": "Return True from __exit__ to suppress exceptions."
+      },
+      {
+        "id": "7",
+        "type": "text-input",
+        "question": "What is @contextmanager decorator?",
+        "correctAnswer": "Creates context manager from generator function",
+        "explanation": "Decorator that turns generator into context manager."
+      },
+      {
+        "id": "8",
+        "type": "code-input",
+        "question": "Write context manager using @contextmanager.",
+        "correctAnswer": "from contextlib import contextmanager\n\n@contextmanager\ndef my_context():\n    print('Setup')\n    try:\n        yield\n    finally:\n        print('Cleanup')",
+        "explanation": "Generator yields control, cleanup happens in finally."
+      },
+      {
+        "id": "9",
+        "type": "text-input",
+        "question": "What is contextlib.suppress?",
+        "correctAnswer": "Context manager that suppresses specified exceptions",
+        "explanation": "suppress(ValueError, TypeError) ignores those exceptions."
+      },
+      {
+        "id": "10",
+        "type": "code-input",
+        "question": "Write code using suppress.",
+        "correctAnswer": "from contextlib import suppress\n\nwith suppress(FileNotFoundError):\n    os.remove('file.txt')",
+        "explanation": "Suppress FileNotFoundError if file doesn't exist."
+      },
+      {
+        "id": "11",
+        "type": "multiple-choice",
+        "question": "Can you nest with statements?",
+        "options": ["No", "Yes", "Only same type", "Only different types"],
+        "correctAnswer": "Yes",
+        "explanation": "You can nest with statements arbitrarily deep."
+      },
+      {
+        "id": "12",
+        "type": "code-input",
+        "question": "Write multiple context managers in one with.",
+        "correctAnswer": "with open('input.txt') as f, open('output.txt', 'w') as g:\n    g.write(f.read())",
+        "explanation": "Comma separates multiple context managers."
+      },
+      {
+        "id": "13",
+        "type": "text-input",
+        "question": "What is ExitStack?",
+        "correctAnswer": "Manages dynamic number of context managers",
+        "explanation": "ExitStack manages context managers that are determined at runtime."
+      },
+      {
+        "id": "14",
+        "type": "code-input",
+        "question": "Write code that conditionally uses context manager.",
+        "correctAnswer": "from contextlib import ExitStack\n\nwith ExitStack() as stack:\n    if condition:\n        stack.enter_context(some_context())\n    # ...",
+        "explanation": "ExitStack allows conditional context manager usage."
+      },
+      {
+        "id": "15",
+        "type": "multiple-choice",
+        "question": "Why use context managers?",
+        "options": ["Performance", "Automatic cleanup", "Code style", "Memory efficiency"],
+        "correctAnswer": "Automatic cleanup",
+        "explanation": "Context managers ensure cleanup happens even with exceptions."
+      }
+    ]
+  },
+  {
+    "id": "exception-handling-patterns",
+    "title": "Exception Handling Patterns",
+    "description": "Common patterns for robust error handling.",
+    "difficulty": "intermediate",
+    "questions": [
+      {
+        "id": "1",
+        "type": "code-input",
+        "question": "Write the 'look before you leap' pattern.",
+        "correctAnswer": "if os.path.exists(filename):\n    with open(filename) as f:\n        process(f)",
+        "explanation": "Check conditions before operations to avoid exceptions."
+      },
+      {
+        "id": "2",
+        "type": "code-input",
+        "question": "Write the 'easier to ask forgiveness' pattern.",
+        "correctAnswer": "try:\n    with open(filename) as f:\n        process(f)\nexcept FileNotFoundError:\n    handle_missing_file()",
+        "explanation": "Try operation first, handle exceptions if they occur."
+      },
+      {
+        "id": "3",
+        "type": "multiple-choice",
+        "question": "Which pattern is generally preferred in Python?",
+        "options": ["LBYL", "EAFP", "Depends on situation", "Neither"],
+        "correctAnswer": "EAFP",
+        "explanation": "EAFP is more Pythonic and avoids race conditions."
+      },
+      {
+        "id": "4",
+        "type": "code-input",
+        "question": "Write retry pattern with exceptions.",
+        "correctAnswer": "for attempt in range(max_attempts):\n    try:\n        risky_operation()\n        break\n    except TemporaryError:\n        if attempt == max_attempts - 1:\n            raise\n        time.sleep(delay)",
+        "explanation": "Retry operation on temporary failures."
+      },
+      {
+        "id": "5",
+        "type": "code-input",
+        "question": "Write input validation with exceptions.",
+        "correctAnswer": "def get_positive_number():\n    while True:\n        try:\n            value = int(input('Enter positive number: '))\n            if value <= 0:\n                raise ValueError('Must be positive')\n            return value\n        except ValueError as e:\n            print(f'Invalid input: {e}')",
+        "explanation": "Validate input and provide feedback on errors."
+      },
+      {
+        "id": "6",
+        "type": "code-input",
+        "question": "Write exception transformation pattern.",
+        "correctAnswer": "try:\n    low_level_call()\nexcept LowLevelError as e:\n    raise ApplicationError('Operation failed') from e",
+        "explanation": "Transform low-level exceptions to application-specific ones."
+      },
+      {
+        "id": "7",
+        "type": "multiple-choice",
+        "question": "What is exception logging pattern?",
+        "options": ["Log all exceptions", "Log unexpected exceptions", "Never log", "Log only messages"],
+        "correctAnswer": "Log unexpected exceptions",
+        "explanation": "Log exceptions you don't expect to handle, with full traceback."
+      },
+      {
+        "id": "8",
+        "type": "code-input",
+        "question": "Write exception logging.",
+        "correctAnswer": "import logging\n\ntry:\n    risky_operation()\nexcept Exception as e:\n    logging.exception('Unexpected error occurred')\n    raise",
+        "explanation": "Log exception with traceback, then re-raise."
+      },
+      {
+        "id": "9",
+        "type": "text-input",
+        "question": "What is 'finally for cleanup' pattern?",
+        "correctAnswer": "Use finally to ensure cleanup happens",
+        "explanation": "finally ensures cleanup regardless of exceptions."
+      },
+      {
+        "id": "10",
+        "type": "code-input",
+        "question": "Write resource cleanup pattern.",
+        "correctAnswer": "resource = acquire_resource()\ntry:\n    use_resource(resource)\nfinally:\n    resource.release()",
+        "explanation": "Ensure resource cleanup in finally block."
+      },
+      {
+        "id": "11",
+        "type": "multiple-choice",
+        "question": "What is defensive programming?",
+        "options": ["Assume nothing will fail", "Add checks and validations", "Ignore all errors", "Use bare except everywhere"],
+        "correctAnswer": "Add checks and validations",
+        "explanation": "Defensive programming anticipates and handles potential errors."
+      },
+      {
+        "id": "12",
+        "type": "code-input",
+        "question": "Write graceful degradation pattern.",
+        "correctAnswer": "try:\n    enhanced_feature()\nexcept ImportError:\n    # Fall back to basic version\n    basic_feature()",
+        "explanation": "Continue with reduced functionality when optional features fail."
+      },
+      {
+        "id": "13",
+        "type": "text-input",
+        "question": "What is 'exception as control flow' anti-pattern?",
+        "correctAnswer": "Using exceptions for normal program flow",
+        "explanation": "Don't use exceptions for expected conditions."
+      },
+      {
+        "id": "14",
+        "type": "code-input",
+        "question": "Write proper iteration with exception handling.",
+        "correctAnswer": "for item in items:\n    try:\n        process_item(item)\n    except ProcessingError:\n        log_error(item)\n        continue",
+        "explanation": "Handle errors per item without stopping entire operation."
+      },
+      {
+        "id": "15",
+        "type": "multiple-choice",
+        "question": "When should you catch all exceptions?",
+        "options": ["Always", "Never", "Only at top level for logging", "Only in threads"],
+        "correctAnswer": "Only at top level for logging",
+        "explanation": "Catch all exceptions only at application boundaries for logging."
+      }
+    ]
+  },
+  {
+    "id": "best-practices",
+    "title": "Best Practices",
+    "description": "Guidelines for effective exception handling.",
+    "difficulty": "intermediate",
+    "questions": [
+      {
+        "id": "1",
+        "type": "multiple-choice",
+        "question": "Should you use bare except?",
+        "options": ["Always", "Never", "Only for cleanup", "Only for debugging"],
+        "correctAnswer": "Only for cleanup",
+        "explanation": "Bare except can hide bugs; use only for final cleanup."
+      },
+      {
+        "id": "2",
+        "type": "text-input",
+        "question": "What should exception messages contain?",
+        "correctAnswer": "What went wrong and context",
+        "explanation": "Messages should explain the error and relevant context."
+      },
+      {
+        "id": "3",
+        "type": "multiple-choice",
+        "question": "Should exceptions be part of API design?",
+        "options": ["No", "Yes, document them", "Only built-in ones", "Only custom ones"],
+        "correctAnswer": "Yes, document them",
+        "explanation": "Document which exceptions functions raise as part of API."
+      },
+      {
+        "id": "4",
+        "type": "text-input",
+        "question": "What is the difference between BaseException and Exception?",
+        "correctAnswer": "BaseException includes SystemExit, KeyboardInterrupt",
+        "explanation": "Exception is for application errors, BaseException for system-level."
+      },
+      {
+        "id": "5",
+        "type": "multiple-choice",
+        "question": "Should you raise exceptions in __init__?",
+        "options": ["Never", "Only for invalid arguments", "Always", "Only for missing files"],
+        "correctAnswer": "Only for invalid arguments",
+        "explanation": "Raise exceptions in __init__ for invalid construction parameters."
+      },
+      {
+        "id": "6",
+        "type": "text-input",
+        "question": "What is 'exception safety'?",
+        "correctAnswer": "Object remains in valid state after exceptions",
+        "explanation": "Ensure objects are properly cleaned up after exceptions."
+      },
+      {
+        "id": "7",
+        "type": "multiple-choice",
+        "question": "Should you use exceptions for control flow?",
+        "options": ["Yes, they're efficient", "No, use for exceptional cases only", "Only in loops", "Only for user input"],
+        "correctAnswer": "No, use for exceptional cases only",
+        "explanation": "Exceptions are expensive; don't use for normal program flow."
+      },
+      {
+        "id": "8",
+        "type": "text-input",
+        "question": "What is the cost of exceptions?",
+        "correctAnswer": "Expensive when raised, cheap when not",
+        "explanation": "Creating exception objects and stack traces is costly."
+      },
+      {
+        "id": "9",
+        "type": "multiple-choice",
+        "question": "When should you catch exceptions?",
+        "options": ["At every function", "Where you can handle them", "Never", "Only at main"],
+        "correctAnswer": "Where you can handle them",
+        "explanation": "Catch exceptions where you can actually do something about them."
+      },
+      {
+        "id": "10",
+        "type": "text-input",
+        "question": "What is 'exception transparency'?",
+        "correctAnswer": "Let exceptions propagate unless you can handle them",
+        "explanation": "Don't catch exceptions you can't properly handle."
+      },
+      {
+        "id": "11",
+        "type": "multiple-choice",
+        "question": "Should you log exceptions?",
+        "options": ["Never", "Always", "Only unexpected ones", "Only with user messages"],
+        "correctAnswer": "Only unexpected ones",
+        "explanation": "Log exceptions you don't expect to handle, with full context."
+      },
+      {
+        "id": "12",
+        "type": "code-input",
+        "question": "Write proper exception handling in a library function.",
+        "correctAnswer": "def library_function():\n    try:\n        risky_operation()\n    except SpecificError as e:\n        # Clean up and re-raise with context\n        cleanup()\n        raise LibraryError('Operation failed') from e",
+        "explanation": "Library functions should clean up and re-raise with appropriate context."
+      },
+      {
+        "id": "13",
+        "type": "text-input",
+        "question": "What is 'RAII' in Python?",
+        "correctAnswer": "Resource Acquisition Is Initialization",
+        "explanation": "Resources acquired in object construction, released in destruction."
+      },
+      {
+        "id": "14",
+        "type": "multiple-choice",
+        "question": "Should you subclass built-in exceptions?",
+        "options": ["Never", "Always", "When you need specific handling", "Only for ValueError"],
+        "correctAnswer": "When you need specific handling",
+        "explanation": "Subclass built-ins when callers need to handle specific error types."
+      },
+      {
+        "id": "15",
+        "type": "text-input",
+        "question": "What is the most important exception handling principle?",
+        "correctAnswer": "Fail fast, fail clearly",
+        "explanation": "Detect errors early and provide clear error messages."
+      }
+    ]
+  },
+  {
+    "id": "debugging-exceptions",
+    "title": "Debugging Exceptions",
+    "description": "Tools and techniques for debugging exception-related issues.",
+    "difficulty": "intermediate",
+    "questions": [
+      {
+        "id": "1",
+        "type": "text-input",
+        "question": "What does traceback module do?",
+        "correctAnswer": "Extract, format, and print stack traces",
+        "explanation": "traceback provides functions to work with exception tracebacks."
+      },
+      {
+        "id": "2",
+        "type": "code-input",
+        "question": "Write code to print current exception traceback.",
+        "correctAnswer": "import traceback\n\ntry:\n    risky_operation()\nexcept Exception:\n    traceback.print_exc()",
+        "explanation": "print_exc() prints the current exception's traceback."
+      },
+      {
+        "id": "3",
+        "type": "text-input",
+        "question": "What is sys.exc_info()?",
+        "correctAnswer": "Returns current exception info as tuple",
+        "explanation": "Returns (exception_type, exception_value, traceback) for current exception."
+      },
+      {
+        "id": "4",
+        "type": "code-input",
+        "question": "Write code to get exception info.",
+        "correctAnswer": "import sys\n\ntry:\n    operation()\nexcept Exception:\n    exc_type, exc_value, exc_traceback = sys.exc_info()",
+        "explanation": "sys.exc_info() provides detailed exception information."
+      },
+      {
+        "id": "5",
+        "type": "text-input",
+        "question": "What is the difference between __traceback__ and traceback module?",
+        "correctAnswer": "__traceback__ is attribute, traceback is module",
+        "explanation": "Exception.__traceback__ contains traceback object, traceback module formats it."
+      },
+      {
+        "id": "6",
+        "type": "multiple-choice",
+        "question": "What does pdb stand for?",
+        "options": ["Python Debug", "Python Debugger", "Program Database", "Process Debug"],
+        "correctAnswer": "Python Debugger",
+        "explanation": "pdb is Python's built-in debugger."
+      },
+      {
+        "id": "7",
+        "type": "code-input",
+        "question": "Write code to start debugger on exception.",
+        "correctAnswer": "import pdb\n\ntry:\n    buggy_code()\nexcept Exception:\n    pdb.post_mortem()",
+        "explanation": "post_mortem() starts debugger at point of exception."
+      },
+      {
+        "id": "8",
+        "type": "text-input",
+        "question": "What is logging.exception()?",
+        "correctAnswer": "Logs exception with traceback",
+        "explanation": "exception() method logs the current exception with full traceback."
+      },
+      {
+        "id": "9",
+        "type": "code-input",
+        "question": "Write exception logging.",
+        "correctAnswer": "import logging\n\ntry:\n    operation()\nexcept Exception as e:\n    logging.exception('Error occurred')\n    raise",
+        "explanation": "Log exception with traceback, then re-raise."
+      },
+      {
+        "id": "10",
+        "type": "multiple-choice",
+        "question": "What is a stack trace?",
+        "options": ["Function names", "Call stack at exception point", "Variable values", "Execution time"],
+        "correctAnswer": "Call stack at exception point",
+        "explanation": "Stack trace shows the sequence of function calls leading to exception."
+      },
+      {
+        "id": "11",
+        "type": "text-input",
+        "question": "What does 'raise from None' do?",
+        "correctAnswer": "Suppresses exception chaining",
+        "explanation": "from None prevents __cause__ from being set."
+      },
+      {
+        "id": "12",
+        "type": "code-input",
+        "question": "Write code to suppress exception chaining.",
+        "correctAnswer": "try:\n    low_level()\nexcept LowLevelError:\n    raise HighLevelError('Failed') from None",
+        "explanation": "from None prevents original exception from appearing in traceback."
+      },
+      {
+        "id": "13",
+        "type": "multiple-choice",
+        "question": "What is postmortem debugging?",
+        "options": ["Debug after program ends", "Debug at exception point", "Debug before exceptions", "Debug performance"],
+        "correctAnswer": "Debug at exception point",
+        "explanation": "Postmortem debugging examines program state after exception."
+      },
+      {
+        "id": "14",
+        "type": "text-input",
+        "question": "What is the __cause__ attribute?",
+        "correctAnswer": "Original exception in chained exceptions",
+        "explanation": "__cause__ contains the exception that caused the current one."
+      },
+      {
+        "id": "15",
+        "type": "multiple-choice",
+        "question": "Should you catch and ignore all exceptions?",
+        "options": ["Yes, for robustness", "No, it hides bugs", "Only in production", "Only for logging"],
+        "correctAnswer": "No, it hides bugs",
+        "explanation": "Ignoring exceptions can hide programming errors and make debugging impossible."
       }
     ]
   }

@@ -29,39 +29,583 @@
         "id": "5",
         "front": "How do you check if a string starts with specific text?",
         "back": "Use the startswith() method: 'Python'.startswith('Py') returns True"
+      },
+      {
+        "id": "6",
+        "front": "How do you convert a string to lowercase?",
+        "back": "Use the lower() method: 'HELLO'.lower() returns 'hello'"
+      },
+      {
+        "id": "7",
+        "front": "How do you get the length of a string?",
+        "back": "Use the len() function: len('hello') returns 5"
+      },
+      {
+        "id": "8",
+        "front": "How do you check if a string contains a substring?",
+        "back": "Use the 'in' operator: 'world' in 'hello world' returns True"
+      },
+      {
+        "id": "9",
+        "front": "How do you concatenate strings?",
+        "back": "Use + operator: 'hello' + ' ' + 'world' or 'hello {}'.format('world')"
+      },
+      {
+        "id": "10",
+        "front": "How do you repeat a string?",
+        "back": "Use * operator: 'hello' * 3 returns 'hellohellohello'"
+      },
+      {
+        "id": "11",
+        "front": "How do you access individual characters?",
+        "back": "Use indexing: 'hello'[0] returns 'h'"
+      },
+      {
+        "id": "12",
+        "front": "How do you get the last character?",
+        "back": "Use negative indexing: 'hello'[-1] returns 'o'"
       }
     ]
   },
   {
-    "id": "advanced-string-operations",
-    "title": "Advanced String Operations",
-    "description": "More complex string manipulation techniques.",
+    "id": "string-testing-methods",
+    "title": "String Testing Methods",
+    "description": "Methods to check string properties and content.",
+    "difficulty": "beginner",
+    "cards": [
+      {
+        "id": "1",
+        "front": "What does isdigit() check?",
+        "back": "Returns True if all characters are digits: '123'.isdigit() returns True"
+      },
+      {
+        "id": "2",
+        "front": "What does isalpha() check?",
+        "back": "Returns True if all characters are letters: 'hello'.isalpha() returns True"
+      },
+      {
+        "id": "3",
+        "front": "What does isalnum() check?",
+        "back": "Returns True if all characters are letters or digits: 'hello123'.isalnum() returns True"
+      },
+      {
+        "id": "4",
+        "front": "What does islower() check?",
+        "back": "Returns True if all letters are lowercase: 'hello'.islower() returns True"
+      },
+      {
+        "id": "5",
+        "front": "What does isupper() check?",
+        "back": "Returns True if all letters are uppercase: 'HELLO'.isupper() returns True"
+      },
+      {
+        "id": "6",
+        "front": "What does isspace() check?",
+        "back": "Returns True if all characters are whitespace: '   '.isspace() returns True"
+      },
+      {
+        "id": "7",
+        "front": "What does istitle() check?",
+        "back": "Returns True if string is titlecased: 'Hello World'.istitle() returns True"
+      },
+      {
+        "id": "8",
+        "front": "What does startswith() do?",
+        "back": "Checks if string starts with specified prefix: 'hello'.startswith('he') returns True"
+      },
+      {
+        "id": "9",
+        "front": "What does endswith() do?",
+        "back": "Checks if string ends with specified suffix: 'hello'.endswith('lo') returns True"
+      },
+      {
+        "id": "10",
+        "front": "What does isidentifier() check?",
+        "back": "Returns True if string is a valid Python identifier: 'variable'.isidentifier() returns True"
+      },
+      {
+        "id": "11",
+        "front": "What does isprintable() check?",
+        "back": "Returns True if all characters are printable: 'hello\\n'.isprintable() returns False"
+      },
+      {
+        "id": "12",
+        "front": "What does isascii() check?",
+        "back": "Returns True if all characters are ASCII: 'hello'.isascii() returns True"
+      }
+    ]
+  },
+  {
+    "id": "string-transformation-methods",
+    "title": "String Transformation Methods",
+    "description": "Methods to change case and format of strings.",
+    "difficulty": "beginner",
+    "cards": [
+      {
+        "id": "1",
+        "front": "What does capitalize() do?",
+        "back": "Capitalizes first character, lowercases rest: 'hello world'.capitalize() returns 'Hello world'"
+      },
+      {
+        "id": "2",
+        "front": "What does title() do?",
+        "back": "Capitalizes first letter of each word: 'hello world'.title() returns 'Hello World'"
+      },
+      {
+        "id": "3",
+        "front": "What does swapcase() do?",
+        "back": "Swaps case of all characters: 'Hello'.swapcase() returns 'hELLO'"
+      },
+      {
+        "id": "4",
+        "front": "What does casefold() do?",
+        "back": "Converts to lowercase for caseless comparison: more aggressive than lower()"
+      },
+      {
+        "id": "5",
+        "front": "What does center() do?",
+        "back": "Centers string in field of given width: 'hello'.center(10) returns '  hello   '"
+      },
+      {
+        "id": "6",
+        "front": "What does ljust() do?",
+        "back": "Left-justifies string in field: 'hello'.ljust(10) returns 'hello     '"
+      },
+      {
+        "id": "7",
+        "front": "What does rjust() do?",
+        "back": "Right-justifies string in field: 'hello'.rjust(10) returns '     hello'"
+      },
+      {
+        "id": "8",
+        "front": "What does zfill() do?",
+        "back": "Pads string with zeros on left: '42'.zfill(5) returns '00042'"
+      },
+      {
+        "id": "9",
+        "front": "What does expandtabs() do?",
+        "back": "Replaces tabs with spaces: 'hello\\tworld'.expandtabs(4) replaces tab with 4 spaces"
+      },
+      {
+        "id": "10",
+        "front": "What does translate() do?",
+        "back": "Applies translation table to string: useful for character replacement"
+      }
+    ]
+  },
+  {
+    "id": "string-searching-finding",
+    "title": "String Searching and Finding",
+    "description": "Methods to locate and work with substrings.",
     "difficulty": "intermediate",
     "cards": [
       {
         "id": "1",
-        "front": "How do you find the position of a substring?",
-        "back": "Use the find() method: 'hello world'.find('world') returns 6 (the starting index)"
+        "front": "What does find() do?",
+        "back": "Returns lowest index of substring: 'hello world'.find('world') returns 6"
       },
       {
         "id": "2",
-        "front": "How do you join a list of strings?",
-        "back": "Use the join() method: ' '.join(['Hello', 'World']) returns 'Hello World'"
+        "front": "What does rfind() do?",
+        "back": "Returns highest index of substring: 'hello world world'.rfind('world') returns 12"
       },
       {
         "id": "3",
-        "front": "How do you count occurrences of a substring?",
-        "back": "Use the count() method: 'hello hello'.count('hello') returns 2"
+        "front": "What does index() do?",
+        "back": "Like find() but raises ValueError if not found: 'hello'.index('x') raises error"
       },
       {
         "id": "4",
-        "front": "What does the isdigit() method check?",
-        "back": "isdigit() returns True if all characters in the string are digits: '123'.isdigit() returns True"
+        "front": "What does rindex() do?",
+        "back": "Like rfind() but raises ValueError if not found"
       },
       {
         "id": "5",
-        "front": "What is string slicing?",
-        "back": "String slicing extracts a portion of a string using indices: 'Python'[0:3] returns 'Pyt'"
+        "front": "What does count() do?",
+        "back": "Counts non-overlapping occurrences: 'hello hello'.count('hello') returns 2"
+      },
+      {
+        "id": "6",
+        "front": "What does partition() do?",
+        "back": "Splits at first occurrence: 'hello world'.partition(' ') returns ('hello', ' ', 'world')"
+      },
+      {
+        "id": "7",
+        "front": "What does rpartition() do?",
+        "back": "Splits at last occurrence: 'hello world test'.rpartition(' ') returns ('hello world', ' ', 'test')"
+      },
+      {
+        "id": "8",
+        "front": "What does splitlines() do?",
+        "back": "Splits on line breaks: 'hello\\nworld'.splitlines() returns ['hello', 'world']"
+      },
+      {
+        "id": "9",
+        "front": "What does maketrans() do?",
+        "back": "Creates translation table for translate(): str.maketrans('aeiou', '12345')"
+      },
+      {
+        "id": "10",
+        "front": "What does encode() do?",
+        "back": "Encodes string to bytes: 'hello'.encode('utf-8') returns b'hello'"
+      }
+    ]
+  },
+  {
+    "id": "string-splitting-joining",
+    "title": "String Splitting and Joining",
+    "description": "Methods to split strings and join sequences.",
+    "difficulty": "beginner",
+    "cards": [
+      {
+        "id": "1",
+        "front": "What does split() do?",
+        "back": "Splits string by separator: 'hello world'.split() returns ['hello', 'world']"
+      },
+      {
+        "id": "2",
+        "front": "What does split() use as default separator?",
+        "back": "Any whitespace (spaces, tabs, newlines)"
+      },
+      {
+        "id": "3",
+        "front": "How do you split on specific character?",
+        "back": "'a,b,c'.split(',') returns ['a', 'b', 'c']"
+      },
+      {
+        "id": "4",
+        "front": "What does rsplit() do?",
+        "back": "Splits from right: 'a b c d'.rsplit(' ', 2) returns ['a b', 'c', 'd']"
+      },
+      {
+        "id": "5",
+        "front": "What does join() do?",
+        "back": "Joins sequence with string as separator: ' '.join(['hello', 'world']) returns 'hello world'"
+      },
+      {
+        "id": "6",
+        "front": "How do you join without separator?",
+        "back": "''.join(['hello', 'world']) returns 'helloworld'"
+      },
+      {
+        "id": "7",
+        "front": "What does splitlines() do?",
+        "back": "Splits on line boundaries: 'hello\\nworld\\ntest'.splitlines() returns ['hello', 'world', 'test']"
+      },
+      {
+        "id": "8",
+        "front": "How do you split and keep separator?",
+        "back": "Use re.split() with capturing groups for regex-based splitting"
+      },
+      {
+        "id": "9",
+        "front": "What is the maxsplit parameter?",
+        "back": "Limits number of splits: 'a b c d'.split(' ', 2) returns ['a', 'b', 'c d']"
+      },
+      {
+        "id": "10",
+        "front": "How do you split on multiple delimiters?",
+        "back": "Use re.split() or chain split() calls: 'a,b;c'.replace(',', ';').split(';')"
+      }
+    ]
+  },
+  {
+    "id": "string-formatting",
+    "title": "String Formatting",
+    "description": "Methods and techniques for string formatting.",
+    "difficulty": "intermediate",
+    "cards": [
+      {
+        "id": "1",
+        "front": "What is the format() method?",
+        "back": "Formats string with placeholders: 'Hello {}'.format('world') returns 'Hello world'"
+      },
+      {
+        "id": "2",
+        "front": "How do you use positional arguments?",
+        "back": "'{0} {1}'.format('hello', 'world') returns 'hello world'"
+      },
+      {
+        "id": "3",
+        "front": "How do you use keyword arguments?",
+        "back": "'{name} is {age}'.format(name='Alice', age=25)"
+      },
+      {
+        "id": "4",
+        "front": "What are f-strings?",
+        "back": "Literal string interpolation: f'Hello {name}' (Python 3.6+)"
+      },
+      {
+        "id": "5",
+        "front": "How do you format numbers in f-strings?",
+        "back": "f'Value: {pi:.2f}' formats pi to 2 decimal places"
+      },
+      {
+        "id": "6",
+        "front": "What is % formatting?",
+        "back": "Old-style formatting: 'Hello %s' % 'world' returns 'Hello world'"
+      },
+      {
+        "id": "7",
+        "front": "How do you format dates in strings?",
+        "back": "Use datetime.strftime(): datetime.now().strftime('%Y-%m-%d')"
+      },
+      {
+        "id": "8",
+        "front": "What does lstrip() and rstrip() do?",
+        "back": "lstrip() removes leading whitespace, rstrip() removes trailing whitespace"
+      },
+      {
+        "id": "9",
+        "front": "How do you strip specific characters?",
+        "back": "'hello'.strip('lo') removes 'l','o' from ends: returns 'hel'"
+      },
+      {
+        "id": "10",
+        "front": "What does removeprefix() do?",
+        "back": "Removes prefix if present: 'hello world'.removeprefix('hello ') returns 'world'"
+      },
+      {
+        "id": "11",
+        "front": "What does removesuffix() do?",
+        "back": "Removes suffix if present: 'hello.txt'.removesuffix('.txt') returns 'hello'"
+      },
+      {
+        "id": "12",
+        "front": "How do you pad strings with specific character?",
+        "back": "'hello'.ljust(10, '*') returns 'hello*****'"
+      }
+    ]
+  },
+  {
+    "id": "string-slicing-advanced",
+    "title": "String Slicing and Advanced Operations",
+    "description": "Advanced string manipulation techniques.",
+    "difficulty": "intermediate",
+    "cards": [
+      {
+        "id": "1",
+        "front": "What is string slicing syntax?",
+        "back": "string[start:end:step] - extracts substring with optional step"
+      },
+      {
+        "id": "2",
+        "front": "How do you reverse a string?",
+        "back": "'hello'[::-1] returns 'olleh'"
+      },
+      {
+        "id": "3",
+        "front": "How do you get every other character?",
+        "back": "'hello'[::2] returns 'hlo'"
+      },
+      {
+        "id": "4",
+        "front": "What does negative step do?",
+        "back": "Reverses direction: 'hello'[3:0:-1] returns 'lle'"
+      },
+      {
+        "id": "5",
+        "front": "How do you check if string is palindrome?",
+        "back": "string == string[::-1]"
+      },
+      {
+        "id": "6",
+        "front": "What does string[::] do?",
+        "back": "Creates a copy of the string"
+      },
+      {
+        "id": "7",
+        "front": "How do you extract domain from email?",
+        "back": "'user@example.com'.split('@')[1] or 'user@example.com'.partition('@')[2]"
+      },
+      {
+        "id": "8",
+        "front": "What does string[:] do?",
+        "back": "Creates shallow copy (same as string[::])"
+      },
+      {
+        "id": "9",
+        "front": "How do you get string length without len()?",
+        "back": "sum(1 for _ in string) - but len() is better!"
+      },
+      {
+        "id": "10",
+        "front": "What is string interning?",
+        "back": "Python caches short strings for memory efficiency"
+      }
+    ]
+  },
+  {
+    "id": "unicode-encoding",
+    "title": "Unicode and Encoding",
+    "description": "Working with Unicode strings and encoding.",
+    "difficulty": "advanced",
+    "cards": [
+      {
+        "id": "1",
+        "front": "What is Unicode?",
+        "back": "Universal character encoding standard supporting all writing systems"
+      },
+      {
+        "id": "2",
+        "front": "What does encode() do?",
+        "back": "Converts string to bytes: 'hello'.encode('utf-8')"
+      },
+      {
+        "id": "3",
+        "front": "What does decode() do?",
+        "back": "Converts bytes to string: b'hello'.decode('utf-8')"
+      },
+      {
+        "id": "4",
+        "front": "What is UTF-8?",
+        "back": "Variable-length encoding for Unicode, backward compatible with ASCII"
+      },
+      {
+        "id": "5",
+        "front": "How do you handle encoding errors?",
+        "back": "'text'.encode('ascii', errors='ignore') ignores unencodable characters"
+      },
+      {
+        "id": "6",
+        "front": "What does ord() do?",
+        "back": "Returns Unicode code point: ord('A') returns 65"
+      },
+      {
+        "id": "7",
+        "front": "What does chr() do?",
+        "back": "Returns character from code point: chr(65) returns 'A'"
+      },
+      {
+        "id": "8",
+        "front": "What is a code point?",
+        "back": "Unique number assigned to each Unicode character"
+      },
+      {
+        "id": "9",
+        "front": "How do you normalize Unicode?",
+        "back": "import unicodedata; unicodedata.normalize('NFC', text)"
+      },
+      {
+        "id": "10",
+        "front": "What is string representation?",
+        "back": "__str__() for users, __repr__() for developers/debugging"
+      }
+    ]
+  },
+  {
+    "id": "string-performance-best-practices",
+    "title": "String Performance and Best Practices",
+    "description": "Efficient string handling and best practices.",
+    "difficulty": "intermediate",
+    "cards": [
+      {
+        "id": "1",
+        "front": "Why are strings immutable?",
+        "back": "Allows string interning and thread safety, prevents accidental modification"
+      },
+      {
+        "id": "2",
+        "front": "How do you efficiently build strings?",
+        "back": "Use ''.join(list_of_strings) instead of += in loops"
+      },
+      {
+        "id": "3",
+        "front": "Why is join() better than + for concatenation?",
+        "back": "+ creates new string each time, join() calculates total size first"
+      },
+      {
+        "id": "4",
+        "front": "When should you use f-strings vs format()?",
+        "back": "f-strings for readability, format() when template is dynamic"
+      },
+      {
+        "id": "5",
+        "front": "How do you avoid string concatenation in loops?",
+        "back": "Use list comprehension then join: ''.join(str(x) for x in items)"
+      },
+      {
+        "id": "6",
+        "front": "What is string interning?",
+        "back": "Python reuses identical string objects to save memory"
+      },
+      {
+        "id": "7",
+        "front": "When does Python intern strings?",
+        "back": "Literals, identifiers, compile-time constants, strings with only ASCII letters/digits/underscores"
+      },
+      {
+        "id": "8",
+        "front": "How do you force string interning?",
+        "back": "sys.intern(string) - useful for dictionary keys"
+      },
+      {
+        "id": "9",
+        "front": "What is the cost of string operations?",
+        "back": "Creation is expensive, but comparison and slicing are fast"
+      },
+      {
+        "id": "10",
+        "front": "How do you check string equality efficiently?",
+        "back": "Python optimizes string comparison by length and content"
+      }
+    ]
+  },
+  {
+    "id": "real-world-string-processing",
+    "title": "Real-World String Processing",
+    "description": "Practical string processing techniques.",
+    "difficulty": "intermediate",
+    "cards": [
+      {
+        "id": "1",
+        "front": "How do you parse CSV data?",
+        "back": "Use csv module: csv.reader() handles quotes and escaping"
+      },
+      {
+        "id": "2",
+        "front": "How do you clean user input?",
+        "back": "input.strip().lower() - normalize whitespace and case"
+      },
+      {
+        "id": "3",
+        "front": "How do you extract numbers from text?",
+        "back": "Use regular expressions: re.findall(r'\\d+', text)"
+      },
+      {
+        "id": "4",
+        "front": "How do you format file paths?",
+        "back": "Use os.path.join() or pathlib.Path for cross-platform compatibility"
+      },
+      {
+        "id": "5",
+        "front": "How do you create slugs for URLs?",
+        "back": "text.lower().replace(' ', '-').replace('_', '-') - simple slugification"
+      },
+      {
+        "id": "6",
+        "front": "How do you validate email format?",
+        "back": "'@' in email and '.' in email.split('@')[1] - basic validation"
+      },
+      {
+        "id": "7",
+        "front": "How do you remove punctuation?",
+        "back": "import string; text.translate(str.maketrans('', '', string.punctuation))"
+      },
+      {
+        "id": "8",
+        "front": "How do you count words in text?",
+        "back": "len(text.split()) - simple word count"
+      },
+      {
+        "id": "9",
+        "front": "How do you find most common words?",
+        "back": "from collections import Counter; Counter(text.lower().split()).most_common(10)"
+      },
+      {
+        "id": "10",
+        "front": "How do you generate random strings?",
+        "back": "import random, string; ''.join(random.choices(string.ascii_letters, k=10))"
       }
     ]
   }

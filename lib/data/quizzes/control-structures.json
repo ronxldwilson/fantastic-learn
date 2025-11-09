@@ -34,6 +34,89 @@
         "question": "What keyword is used for multiple conditions?",
         "correctAnswer": "elif",
         "explanation": "'elif' (else if) allows checking multiple conditions in sequence."
+      },
+      {
+        "id": "5",
+        "type": "multiple-choice",
+        "question": "What values are considered falsy in Python?",
+        "options": ["0, empty containers, None, False", "1, non-empty containers, True", "All numbers except 0", "Only None"],
+        "correctAnswer": "0, empty containers, None, False",
+        "explanation": "False, None, 0, 0.0, empty strings/lists/dicts/sets are falsy."
+      },
+      {
+        "id": "6",
+        "type": "code-input",
+        "question": "Write an if-elif-else chain that categorizes temperature.",
+        "correctAnswer": "if temp > 30:\\n    print('Hot')\\nelif temp > 20:\\n    print('Warm')\\nelse:\\n    print('Cold')",
+        "explanation": "Use elif for multiple conditions and else for the default case."
+      },
+      {
+        "id": "7",
+        "type": "multiple-choice",
+        "question": "What is short-circuit evaluation?",
+        "options": ["and stops at first False, or stops at first True", "Both and and or evaluate all conditions", "Only or short-circuits", "Only and short-circuits"],
+        "correctAnswer": "and stops at first False, or stops at first True",
+        "explanation": "and returns False immediately if any operand is False, or returns True immediately if any operand is True."
+      },
+      {
+        "id": "8",
+        "type": "text-input",
+        "question": "What is the ternary operator in Python?",
+        "correctAnswer": "value_if_true if condition else value_if_false",
+        "explanation": "It's a compact way to write simple if-else statements in a single line."
+      },
+      {
+        "id": "9",
+        "type": "multiple-choice",
+        "question": "Can you have multiple elif statements?",
+        "options": ["Yes, as many as needed", "No, only one elif allowed", "Only if else is present", "Only for numeric comparisons"],
+        "correctAnswer": "Yes, as many as needed",
+        "explanation": "You can chain multiple elif statements to check different conditions."
+      },
+      {
+        "id": "10",
+        "type": "code-input",
+        "question": "Write a conditional that checks if a number is in range [10, 20].",
+        "correctAnswer": "if 10 <= x <= 20:",
+        "explanation": "Python allows chained comparisons: a <= b <= c is equivalent to a <= b and b <= c."
+      },
+      {
+        "id": "11",
+        "type": "multiple-choice",
+        "question": "What happens if you have an if without else?",
+        "options": ["Syntax error", "Code after if never executes", "It's valid, else is optional", "Program crashes"],
+        "correctAnswer": "It's valid, else is optional",
+        "explanation": "The else clause is optional in Python conditional statements."
+      },
+      {
+        "id": "12",
+        "type": "text-input",
+        "question": "What operator has higher precedence than comparison operators?",
+        "correctAnswer": "not",
+        "explanation": "not > and > or > comparisons in operator precedence."
+      },
+      {
+        "id": "13",
+        "type": "multiple-choice",
+        "question": "What is truthiness in Python?",
+        "options": ["All non-zero values are True", "Only True and False exist", "Non-zero numbers, non-empty containers are truthy", "Only boolean True is truthy"],
+        "correctAnswer": "Non-zero numbers, non-empty containers are truthy",
+        "explanation": "Any non-zero number, non-empty string/list/dict/set, and True are truthy."
+      },
+      {
+        "id": "14",
+        "type": "code-input",
+        "question": "Write a conditional using 'in' operator.",
+        "correctAnswer": "if item in my_list:",
+        "explanation": "The 'in' operator checks membership in sequences and containers."
+      },
+      {
+        "id": "15",
+        "type": "multiple-choice",
+        "question": "What is the difference between '==' and 'is'?",
+        "options": ["'==' compares values, 'is' compares identity", "'is' compares values, '==' compares identity", "They are the same", "Only 'is' works with numbers"],
+        "correctAnswer": "'==' compares values, 'is' compares identity",
+        "explanation": "'==' checks if values are equal, 'is' checks if they are the same object in memory."
       }
     ]
   },
@@ -72,6 +155,797 @@
         "question": "What type of loop continues as long as a condition is true?",
         "correctAnswer": "while",
         "explanation": "While loops execute as long as their condition evaluates to True."
+      },
+      {
+        "id": "5",
+        "type": "code-input",
+        "question": "Write a while loop that counts from 1 to 5.",
+        "correctAnswer": "i = 1\\nwhile i <= 5:\\n    print(i)\\n    i += 1",
+        "explanation": "Initialize counter, check condition, execute body, update counter."
+      },
+      {
+        "id": "6",
+        "type": "multiple-choice",
+        "question": "What does range(5) generate?",
+        "options": ["[0, 1, 2, 3, 4, 5]", "[1, 2, 3, 4, 5]", "[0, 1, 2, 3, 4]", "[5, 4, 3, 2, 1, 0]"],
+        "correctAnswer": "[0, 1, 2, 3, 4]",
+        "explanation": "range(n) generates numbers from 0 to n-1."
+      },
+      {
+        "id": "7",
+        "type": "text-input",
+        "question": "What function gives you both index and value in a for loop?",
+        "correctAnswer": "enumerate",
+        "explanation": "enumerate(iterable) returns (index, value) pairs."
+      },
+      {
+        "id": "8",
+        "type": "code-input",
+        "question": "Write a loop that iterates over a list with indices.",
+        "correctAnswer": "for i, item in enumerate(my_list):\\n    print(f'Index {i}: {item}')",
+        "explanation": "Use enumerate() to get both index and value in each iteration."
+      },
+      {
+        "id": "9",
+        "type": "multiple-choice",
+        "question": "What does zip() do in a for loop?",
+        "options": ["Combines multiple iterables", "Creates a zipper object", "Compresses data", "Speeds up loops"],
+        "correctAnswer": "Combines multiple iterables",
+        "explanation": "zip() takes multiple iterables and returns tuples combining elements from each."
+      },
+      {
+        "id": "10",
+        "type": "code-input",
+        "question": "Write a loop that processes two lists simultaneously.",
+        "correctAnswer": "for a, b in zip(list1, list2):\\n    print(f'{a} and {b}')",
+        "explanation": "zip() combines corresponding elements from multiple iterables."
+      },
+      {
+        "id": "11",
+        "type": "text-input",
+        "question": "What is the underscore variable commonly used for?",
+        "correctAnswer": "Ignoring loop variables",
+        "explanation": "for _ in range(5): is used when you don't need the loop variable."
+      },
+      {
+        "id": "12",
+        "type": "multiple-choice",
+        "question": "What happens if you modify a list while iterating over it?",
+        "options": ["It's safe and recommended", "Can cause unexpected behavior or errors", "The list becomes empty", "Nothing happens"],
+        "correctAnswer": "Can cause unexpected behavior or errors",
+        "explanation": "Modifying a list while iterating can skip elements or cause IndexError."
+      },
+      {
+        "id": "13",
+        "type": "code-input",
+        "question": "Write a for loop that iterates over a dictionary's keys.",
+        "correctAnswer": "for key in my_dict:",
+        "explanation": "By default, iterating over a dict gives you the keys."
+      },
+      {
+        "id": "14",
+        "type": "code-input",
+        "question": "Write a for loop that iterates over key-value pairs.",
+        "correctAnswer": "for key, value in my_dict.items():",
+        "explanation": "Use .items() to get both keys and values."
+      },
+      {
+        "id": "15",
+        "type": "multiple-choice",
+        "question": "What is the else clause in loops used for?",
+        "options": ["Handles exceptions", "Executes when loop completes normally", "Provides default values", "Creates nested loops"],
+        "correctAnswer": "Executes when loop completes normally",
+        "explanation": "The else clause executes after the loop finishes, but not if break was used."
+      }
+    ]
+  },
+  {
+    "id": "loop-control-statements",
+    "title": "Loop Control Statements",
+    "description": "Master break, continue, and pass statements.",
+    "difficulty": "intermediate",
+    "questions": [
+      {
+        "id": "1",
+        "type": "multiple-choice",
+        "question": "What does the break statement do?",
+        "options": ["Skips current iteration", "Exits the loop immediately", "Restarts the loop", "Slows down execution"],
+        "correctAnswer": "Exits the loop immediately",
+        "explanation": "break terminates the innermost loop and continues execution after the loop."
+      },
+      {
+        "id": "2",
+        "type": "multiple-choice",
+        "question": "What does the continue statement do?",
+        "options": ["Exits the loop", "Skips to next iteration", "Restarts current iteration", "Ends the program"],
+        "correctAnswer": "Skips to next iteration",
+        "explanation": "continue skips the rest of the current iteration and moves to the next one."
+      },
+      {
+        "id": "3",
+        "type": "text-input",
+        "question": "What statement does nothing but can be used as a placeholder?",
+        "correctAnswer": "pass",
+        "explanation": "pass is a no-op statement used when syntax requires a statement but you don't want to do anything."
+      },
+      {
+        "id": "4",
+        "type": "code-input",
+        "question": "Write a loop that skips even numbers using continue.",
+        "correctAnswer": "for i in range(10):\\n    if i % 2 == 0:\\n        continue\\n    print(i)",
+        "explanation": "Use continue to skip the print statement for even numbers."
+      },
+      {
+        "id": "5",
+        "type": "code-input",
+        "question": "Write a loop that stops when it finds a negative number.",
+        "correctAnswer": "for num in numbers:\\n    if num < 0:\\n        break\\n    print(num)",
+        "explanation": "Use break to exit the loop when a condition is met."
+      },
+      {
+        "id": "6",
+        "type": "multiple-choice",
+        "question": "Does break work in nested loops?",
+        "options": ["Only in the outermost loop", "Only in the innermost loop", "In all loops", "Breaks don't work in nested loops"],
+        "correctAnswer": "Only in the innermost loop",
+        "explanation": "break only exits the innermost loop containing the break statement."
+      },
+      {
+        "id": "7",
+        "type": "code-input",
+        "question": "How do you break out of nested loops in Python?",
+        "correctAnswer": "Use a flag variable or restructure the code",
+        "explanation": "Python doesn't have labeled breaks, so use a flag or put loops in a function."
+      },
+      {
+        "id": "8",
+        "type": "multiple-choice",
+        "question": "What happens to the else clause when break is executed?",
+        "options": ["It still executes", "It never executes", "It executes only for break", "Program crashes"],
+        "correctAnswer": "It never executes",
+        "explanation": "The else clause only executes if the loop completes normally without break."
+      },
+      {
+        "id": "9",
+        "type": "code-input",
+        "question": "Write a pass statement in an empty if block.",
+        "correctAnswer": "if condition:\\n    pass",
+        "explanation": "pass is used when you need a statement but don't want to do anything."
+      },
+      {
+        "id": "10",
+        "type": "multiple-choice",
+        "question": "Can continue be used in while loops?",
+        "options": ["No, only in for loops", "Yes, in both for and while loops", "Only in infinite while loops", "Only in conditional while loops"],
+        "correctAnswer": "Yes, in both for and while loops",
+        "explanation": "continue works in both for and while loops to skip to the next iteration."
+      },
+      {
+        "id": "11",
+        "type": "text-input",
+        "question": "What control statement can only be used inside loops?",
+        "correctAnswer": "break and continue",
+        "explanation": "break and continue can only be used within loop constructs (for, while)."
+      },
+      {
+        "id": "12",
+        "type": "code-input",
+        "question": "Write a while loop that uses break to exit on user input 'quit'.",
+        "correctAnswer": "while True:\\n    command = input('> ')\\n    if command == 'quit':\\n        break\\n    process(command)",
+        "explanation": "Use an infinite loop with break to exit based on user input."
+      },
+      {
+        "id": "13",
+        "type": "multiple-choice",
+        "question": "What is the difference between break in for vs while loops?",
+        "options": ["Different in for loops", "Same behavior in both", "Only works in while loops", "Causes different errors"],
+        "correctAnswer": "Same behavior in both",
+        "explanation": "break works identically in for and while loops - it exits the loop."
+      },
+      {
+        "id": "14",
+        "type": "code-input",
+        "question": "Write a loop that skips processing for None values.",
+        "correctAnswer": "for item in items:\\n    if item is None:\\n        continue\\n    process(item)",
+        "explanation": "Use continue to skip None values and only process valid items."
+      },
+      {
+        "id": "15",
+        "type": "multiple-choice",
+        "question": "Can pass be used outside of class definitions?",
+        "options": ["No, only in classes", "Yes, anywhere a statement is needed", "Only in functions", "Only at module level"],
+        "correctAnswer": "Yes, anywhere a statement is needed",
+        "explanation": "pass can be used anywhere Python expects a statement but you want to do nothing."
+      }
+    ]
+  },
+  {
+    "id": "nested-control-structures",
+    "title": "Nested Control Structures",
+    "description": "Working with nested conditionals and loops.",
+    "difficulty": "intermediate",
+    "questions": [
+      {
+        "id": "1",
+        "type": "code-input",
+        "question": "Write a nested if statement that checks grade ranges.",
+        "correctAnswer": "if score >= 90:\\n    grade = 'A'\\n    if score >= 95:\\n        grade = 'A+'\\nelif score >= 80:\\n    grade = 'B'\\nelse:\\n    grade = 'C'",
+        "explanation": "Nested if statements allow checking sub-conditions within broader categories."
+      },
+      {
+        "id": "2",
+        "type": "code-input",
+        "question": "Write a nested loop that prints a multiplication table.",
+        "correctAnswer": "for i in range(1, 4):\\n    for j in range(1, 4):\\n        print(f'{i} * {j} = {i*j}')",
+        "explanation": "Nested loops iterate over multiple dimensions of data."
+      },
+      {
+        "id": "3",
+        "type": "multiple-choice",
+        "question": "What is the maximum recommended nesting level?",
+        "options": ["1 level", "2-3 levels", "Unlimited", "5 levels"],
+        "correctAnswer": "2-3 levels",
+        "explanation": "Deep nesting (more than 3-4 levels) makes code hard to read and maintain."
+      },
+      {
+        "id": "4",
+        "type": "code-input",
+        "question": "Write a loop inside a conditional.",
+        "correctAnswer": "if condition:\\n    for item in items:\\n        process(item)",
+        "explanation": "You can nest any control structures as long as indentation is correct."
+      },
+      {
+        "id": "5",
+        "type": "multiple-choice",
+        "question": "How do indentation levels work in nested structures?",
+        "options": ["Each level adds 2 spaces", "Each level adds 4 spaces", "Indentation is flexible", "No indentation needed"],
+        "correctAnswer": "Each level adds 4 spaces",
+        "explanation": "Python uses 4 spaces per indentation level by convention."
+      },
+      {
+        "id": "6",
+        "type": "code-input",
+        "question": "Write a conditional inside a loop with break.",
+        "correctAnswer": "for item in items:\\n    if item == target:\\n        found = True\\n        break",
+        "explanation": "Nested control flow allows complex logic within loops."
+      },
+      {
+        "id": "7",
+        "type": "text-input",
+        "question": "What is a common problem with deeply nested code?",
+        "correctAnswer": "Hard to read and maintain",
+        "explanation": "Deep nesting creates complex control flow that's difficult to understand."
+      },
+      {
+        "id": "8",
+        "type": "multiple-choice",
+        "question": "How can you reduce nesting in conditionals?",
+        "options": ["Use more indentation", "Use early returns", "Add more comments", "Use longer variable names"],
+        "correctAnswer": "Use early returns",
+        "explanation": "Early returns can flatten nested if statements."
+      },
+      {
+        "id": "9",
+        "type": "code-input",
+        "question": "Write a flattened version of nested conditions.",
+        "correctAnswer": "if not condition1:\\n    return\\nif not condition2:\\n    return\\ndo_something()",
+        "explanation": "Early returns eliminate the need for deep nesting."
+      },
+      {
+        "id": "10",
+        "type": "multiple-choice",
+        "question": "What is the scope of variables in nested blocks?",
+        "options": ["Only accessible in their block", "Accessible in outer blocks too", "Global scope only", "No scope rules"],
+        "correctAnswer": "Accessible in outer blocks too",
+        "explanation": "Inner blocks can access variables from outer blocks (LEGB rule)."
+      },
+      {
+        "id": "11",
+        "type": "code-input",
+        "question": "Write a loop that processes a 2D list.",
+        "correctAnswer": "for row in matrix:\\n    for item in row:\\n        process(item)",
+        "explanation": "Nested loops are perfect for processing multi-dimensional data."
+      },
+      {
+        "id": "12",
+        "type": "text-input",
+        "question": "What control structure is commonly used with nested loops?",
+        "correctAnswer": "break",
+        "explanation": "break is often used to exit nested loops when a condition is met."
+      },
+      {
+        "id": "13",
+        "type": "multiple-choice",
+        "question": "Can you have while loops inside for loops?",
+        "options": ["No, not allowed", "Yes, any combination works", "Only for inside while", "Causes syntax error"],
+        "correctAnswer": "Yes, any combination works",
+        "explanation": "You can nest any control structures: for in while, while in for, etc."
+      },
+      {
+        "id": "14",
+        "type": "code-input",
+        "question": "Write a conditional that contains a loop with continue.",
+        "correctAnswer": "if should_process:\\n    for item in items:\\n        if item.skip:\\n            continue\\n        process(item)",
+        "explanation": "Complex nesting allows sophisticated control flow."
+      },
+      {
+        "id": "15",
+        "type": "multiple-choice",
+        "question": "What is the main drawback of nested control structures?",
+        "options": ["Slower execution", "Increased complexity", "More memory usage", "Syntax errors"],
+        "correctAnswer": "Increased complexity",
+        "explanation": "Nested structures increase cognitive load and make code harder to understand."
+      }
+    ]
+  },
+  {
+    "id": "advanced-control-flow",
+    "title": "Advanced Control Flow",
+    "description": "Context managers, comprehensions, and modern Python features.",
+    "difficulty": "advanced",
+    "questions": [
+      {
+        "id": "1",
+        "type": "text-input",
+        "question": "What is the walrus operator and how is it used?",
+        "correctAnswer": ":= assignment expression",
+        "explanation": ":= allows assignment within expressions, useful in conditionals and loops."
+      },
+      {
+        "id": "2",
+        "type": "code-input",
+        "question": "Write a conditional using the walrus operator.",
+        "correctAnswer": "if (n := len(data)) > 0:",
+        "explanation": "Assign and test in one expression."
+      },
+      {
+        "id": "3",
+        "type": "text-input",
+        "question": "What is a context manager?",
+        "correctAnswer": "Object managing resource setup/cleanup",
+        "explanation": "Context managers handle resource management with __enter__ and __exit__."
+      },
+      {
+        "id": "4",
+        "type": "code-input",
+        "question": "Write a with statement for file handling.",
+        "correctAnswer": "with open('file.txt', 'r') as f:\\n    data = f.read()",
+        "explanation": "with ensures file is closed even if exceptions occur."
+      },
+      {
+        "id": "5",
+        "type": "text-input",
+        "question": "What is pattern matching (Python 3.10+)?",
+        "correctAnswer": "Structural pattern matching with match/case",
+        "explanation": "match statement allows matching values against patterns."
+      },
+      {
+        "id": "6",
+        "type": "code-input",
+        "question": "Write a simple match statement.",
+        "correctAnswer": "match value:\\n    case 1:\\n        print('one')\\n    case 2:\\n        print('two')\\n    case _:\\n        print('other')",
+        "explanation": "match/case provides pattern matching similar to other languages."
+      },
+      {
+        "id": "7",
+        "type": "text-input",
+        "question": "What is a generator expression?",
+        "correctAnswer": "Lazy iterator comprehension",
+        "explanation": "Like list comprehension but uses () and yields values on demand."
+      },
+      {
+        "id": "8",
+        "type": "code-input",
+        "question": "Write a generator expression for squares.",
+        "correctAnswer": "squares = (x**2 for x in range(10))",
+        "explanation": "Generator expressions are memory-efficient for large sequences."
+      },
+      {
+        "id": "9",
+        "type": "multiple-choice",
+        "question": "What is the difference between list and generator comprehensions?",
+        "options": ["List creates list immediately, generator is lazy", "Generator is faster", "List uses more memory", "Both create the same thing"],
+        "correctAnswer": "List creates list immediately, generator is lazy",
+        "explanation": "List comprehensions create entire lists, generators yield values on demand."
+      },
+      {
+        "id": "10",
+        "type": "text-input",
+        "question": "What is structural pattern matching?",
+        "correctAnswer": "Matching against data structures and types",
+        "explanation": "match can destructure tuples, lists, and objects."
+      },
+      {
+        "id": "11",
+        "type": "code-input",
+        "question": "Write a match statement with tuple unpacking.",
+        "correctAnswer": "match point:\\n    case (0, 0):\\n        print('origin')\\n    case (x, 0):\\n        print(f'x-axis at {x}')\\n    case (0, y):\\n        print(f'y-axis at {y}')",
+        "explanation": "Pattern matching can destructure complex data structures."
+      },
+      {
+        "id": "12",
+        "type": "text-input",
+        "question": "What is a guard in pattern matching?",
+        "correctAnswer": "Additional condition with 'if'",
+        "explanation": "case pattern if condition: adds extra constraints."
+      },
+      {
+        "id": "13",
+        "type": "multiple-choice",
+        "question": "Can context managers be nested?",
+        "options": ["No, only one at a time", "Yes, with multiple with statements", "Only in Python 3.7+", "Causes syntax error"],
+        "correctAnswer": "Yes, with multiple with statements",
+        "explanation": "You can nest with statements or use commas: with A() as a, B() as b:"
+      },
+      {
+        "id": "14",
+        "type": "code-input",
+        "question": "Write nested context managers.",
+        "correctAnswer": "with open('input.txt') as f, open('output.txt', 'w') as g:\\n    g.write(f.read())",
+        "explanation": "Multiple context managers can be used in a single with statement."
+      },
+      {
+        "id": "15",
+        "type": "text-input",
+        "question": "What is the @contextmanager decorator?",
+        "correctAnswer": "Creates context manager from generator",
+        "explanation": "Decorator that turns a generator function into a context manager."
+      }
+    ]
+  },
+  {
+    "id": "control-flow-patterns",
+    "title": "Control Flow Patterns",
+    "description": "Common patterns and idioms in Python control flow.",
+    "difficulty": "intermediate",
+    "questions": [
+      {
+        "id": "1",
+        "type": "code-input",
+        "question": "Write a loop that finds the first match.",
+        "correctAnswer": "for item in items:\\n    if matches_criteria(item):\\n        result = item\\n        break",
+        "explanation": "Use break to exit loop once the first match is found."
+      },
+      {
+        "id": "2",
+        "type": "code-input",
+        "question": "Write a loop that processes items until a sentinel value.",
+        "correctAnswer": "while True:\\n    item = get_next_item()\\n    if item is None:\\n        break\\n    process(item)",
+        "explanation": "Sentinel-controlled loop continues until a special value is encountered."
+      },
+      {
+        "id": "3",
+        "type": "code-input",
+        "question": "Write a validation loop.",
+        "correctAnswer": "while True:\\n    value = input('Enter value: ')\\n    if is_valid(value):\\n        break\\n    print('Invalid input')",
+        "explanation": "Loop continues until valid input is provided."
+      },
+      {
+        "id": "4",
+        "type": "multiple-choice",
+        "question": "What is an 'infinite loop with break' pattern used for?",
+        "options": ["Creating bugs", "Menu systems and user input", "Mathematical calculations", "File processing"],
+        "correctAnswer": "Menu systems and user input",
+        "explanation": "Infinite loops with break are common for interactive programs."
+      },
+      {
+        "id": "5",
+        "type": "code-input",
+        "question": "Write a loop that skips invalid items.",
+        "correctAnswer": "for item in items:\\n    if not is_valid(item):\\n        continue\\n    process(item)",
+        "explanation": "Use continue to skip invalid items and only process valid ones."
+      },
+      {
+        "id": "6",
+        "type": "text-input",
+        "question": "What is the 'loop and a half' pattern?",
+        "correctAnswer": "Loop that runs at least once",
+        "explanation": "while True: ... if condition: break - ensures one iteration minimum."
+      },
+      {
+        "id": "7",
+        "type": "code-input",
+        "question": "Write a loop-and-a-half pattern.",
+        "correctAnswer": "while True:\\n    command = input('> ')\\n    if command == 'quit':\\n        break\\n    if command:\\n        process(command)",
+        "explanation": "Loop runs at least once, checking exit condition in the middle."
+      },
+      {
+        "id": "8",
+        "type": "multiple-choice",
+        "question": "What is defensive programming in loops?",
+        "options": ["Adding lots of if statements", "Validating inputs and handling edge cases", "Using only while loops", "Avoiding for loops"],
+        "correctAnswer": "Validating inputs and handling edge cases",
+        "explanation": "Defensive programming anticipates and handles error conditions."
+      },
+      {
+        "id": "9",
+        "type": "code-input",
+        "question": "Write a robust input loop with error handling.",
+        "correctAnswer": "while True:\\n    try:\\n        value = int(input('Enter number: '))\\n        break\\n    except ValueError:\\n        print('Please enter a valid number')",
+        "explanation": "Handle exceptions gracefully in user input loops."
+      },
+      {
+        "id": "10",
+        "type": "text-input",
+        "question": "What is a 'flag variable' pattern?",
+        "correctAnswer": "Boolean variable controlling loop execution",
+        "explanation": "found = False; while not found: - use flag to control complex exit conditions."
+      },
+      {
+        "id": "11",
+        "type": "code-input",
+        "question": "Write a loop using a flag variable.",
+        "correctAnswer": "found = False\\nfor item in items:\\n    if matches(item):\\n        found = True\\n        break\\nif found:\\n    print('Item found')",
+        "explanation": "Flag variables help manage complex loop exit conditions."
+      },
+      {
+        "id": "12",
+        "type": "multiple-choice",
+        "question": "What is the 'EAFP' principle?",
+        "options": ["Easier to Ask for Forgiveness than Permission", "Error After Function Processing", "Early Function Argument Processing", "Exception And Function Pattern"],
+        "correctAnswer": "Easier to Ask for Forgiveness than Permission",
+        "explanation": "Try operations first, handle exceptions rather than checking preconditions."
+      },
+      {
+        "id": "13",
+        "type": "code-input",
+        "question": "Write EAFP-style code.",
+        "correctAnswer": "try:\\n    value = my_dict['key']\\nexcept KeyError:\\n    value = default",
+        "explanation": "Try to access, handle exception if key doesn't exist."
+      },
+      {
+        "id": "14",
+        "type": "text-input",
+        "question": "What is 'LBYL' and how does it differ from EAFP?",
+        "correctAnswer": "Look Before You Leap - check conditions before actions",
+        "explanation": "LBYL checks preconditions, EAFP tries and handles failures."
+      },
+      {
+        "id": "15",
+        "type": "multiple-choice",
+        "question": "When should you prefer EAFP over LBYL?",
+        "options": ["For simple checks", "When operations are atomic", "For complex preconditions", "When performance is critical"],
+        "correctAnswer": "When operations are atomic",
+        "explanation": "EAFP works well when the check and action are atomic operations."
+      }
+    ]
+  },
+  {
+    "id": "control-flow-best-practices",
+    "title": "Control Flow Best Practices",
+    "description": "Guidelines for writing clean and maintainable control flow.",
+    "difficulty": "intermediate",
+    "questions": [
+      {
+        "id": "1",
+        "type": "multiple-choice",
+        "question": "What's the recommended maximum nesting level?",
+        "options": ["1 level", "2-3 levels", "5 levels", "Unlimited"],
+        "correctAnswer": "2-3 levels",
+        "explanation": "Deep nesting makes code hard to read and understand."
+      },
+      {
+        "id": "2",
+        "type": "text-input",
+        "question": "What technique can reduce nesting?",
+        "correctAnswer": "Early returns",
+        "explanation": "Return early from functions to avoid deep nesting."
+      },
+      {
+        "id": "3",
+        "type": "multiple-choice",
+        "question": "Should you use else clauses in loops?",
+        "options": ["Always", "Never", "Only when necessary", "Only for while loops"],
+        "correctAnswer": "Only when necessary",
+        "explanation": "else in loops can be confusing - use when you need to distinguish normal vs break exit."
+      },
+      {
+        "id": "4",
+        "type": "text-input",
+        "question": "What is a good use case for infinite while loops?",
+        "correctAnswer": "Event loops and user interfaces",
+        "explanation": "Infinite loops with break are appropriate for programs that run until explicitly stopped."
+      },
+      {
+        "id": "5",
+        "type": "multiple-choice",
+        "question": "How should you handle complex conditions?",
+        "options": ["One long line", "Extract to variables or functions", "Use nested ifs", "Ignore complexity"],
+        "correctAnswer": "Extract to variables or functions",
+        "explanation": "Complex conditions should be extracted to well-named variables or functions."
+      },
+      {
+        "id": "6",
+        "type": "code-input",
+        "question": "Write a complex condition extracted to a variable.",
+        "correctAnswer": "is_valid = age >= 18 and not banned and account_active\\nif is_valid:\\n    grant_access()",
+        "explanation": "Extract complex conditions to descriptive variable names."
+      },
+      {
+        "id": "7",
+        "type": "text-input",
+        "question": "What is the problem with modifying lists during iteration?",
+        "correctAnswer": "Can skip elements or cause errors",
+        "explanation": "Modifying a list while iterating can change indices and cause unexpected behavior."
+      },
+      {
+        "id": "8",
+        "type": "multiple-choice",
+        "question": "How should you modify a list during iteration?",
+        "options": ["Modify in place carefully", "Create a new list", "Use while loop with indices", "Don't modify during iteration"],
+        "correctAnswer": "Create a new list",
+        "explanation": "Safest approach is to create a new list with the modifications."
+      },
+      {
+        "id": "9",
+        "type": "code-input",
+        "question": "Write safe list modification during iteration.",
+        "correctAnswer": "new_list = [item for item in old_list if should_keep(item)]",
+        "explanation": "List comprehensions create new lists without modifying the original during iteration."
+      },
+      {
+        "id": "10",
+        "type": "text-input",
+        "question": "What is 'loop invariant'?",
+        "correctAnswer": "Condition that remains true throughout loop",
+        "explanation": "Loop invariants help prove correctness and understand loop behavior."
+      },
+      {
+        "id": "11",
+        "type": "multiple-choice",
+        "question": "Should you optimize loops prematurely?",
+        "options": ["Yes, always", "No, profile first", "Only for large datasets", "Only for simple loops"],
+        "correctAnswer": "No, profile first",
+        "explanation": "Optimize only after identifying actual bottlenecks through profiling."
+      },
+      {
+        "id": "12",
+        "type": "text-input",
+        "question": "What is a 'sentinel value'?",
+        "correctAnswer": "Special value indicating end of input",
+        "explanation": "Common in loops: process until sentinel value is encountered."
+      },
+      {
+        "id": "13",
+        "type": "multiple-choice",
+        "question": "When should you use for loops vs while loops?",
+        "options": ["Always use for loops", "Always use while loops", "Use for when you know iterations, while for conditions", "Use while for sequences, for for conditions"],
+        "correctAnswer": "Use for when you know iterations, while for conditions",
+        "explanation": "for loops are for definite iteration, while loops for indefinite iteration."
+      },
+      {
+        "id": "14",
+        "type": "text-input",
+        "question": "What is 'defensive programming'?",
+        "correctAnswer": "Writing code that anticipates errors",
+        "explanation": "Add checks and validations to handle unexpected inputs gracefully."
+      },
+      {
+        "id": "15",
+        "type": "multiple-choice",
+        "question": "How should you name loop variables?",
+        "options": ["Use single letters like i, j, k", "Use descriptive names", "Use random names", "Don't name them"],
+        "correctAnswer": "Use descriptive names",
+        "explanation": "Descriptive names make code self-documenting: for user in users: not for u in users:"
+      }
+    ]
+  },
+  {
+    "id": "performance-considerations",
+    "title": "Performance Considerations",
+    "description": "Optimizing control flow for better performance.",
+    "difficulty": "advanced",
+    "questions": [
+      {
+        "id": "1",
+        "type": "multiple-choice",
+        "question": "Which is generally faster: for loops or while loops?",
+        "options": ["for loops", "while loops", "Same speed", "Depends on the condition"],
+        "correctAnswer": "Same speed",
+        "explanation": "Performance difference is negligible - choose based on readability."
+      },
+      {
+        "id": "2",
+        "type": "text-input",
+        "question": "What is the most expensive operation in loops?",
+        "correctAnswer": "Function calls",
+        "explanation": "Function calls have overhead - avoid calling functions repeatedly in tight loops."
+      },
+      {
+        "id": "3",
+        "type": "code-input",
+        "question": "Optimize a loop with repeated function calls.",
+        "correctAnswer": "length = len(my_list)  # Call once\\nfor i in range(length):\\n    process(my_list[i])",
+        "explanation": "Cache expensive operations outside the loop."
+      },
+      {
+        "id": "4",
+        "type": "multiple-choice",
+        "question": "When should you use list comprehensions vs loops?",
+        "options": ["Always use comprehensions", "Always use loops", "Comprehensions for simple operations", "Loops for complex operations"],
+        "correctAnswer": "Comprehensions for simple operations",
+        "explanation": "Comprehensions are faster for simple transformations but loops are better for complex logic."
+      },
+      {
+        "id": "5",
+        "type": "text-input",
+        "question": "What is 'loop unrolling'?",
+        "correctAnswer": "Manually expanding loop body to reduce overhead",
+        "explanation": "Process multiple items per iteration to reduce loop overhead (rarely needed in Python)."
+      },
+      {
+        "id": "6",
+        "type": "multiple-choice",
+        "question": "Should you optimize string concatenation in loops?",
+        "options": ["No, Python handles it", "Yes, use join()", "Use +=", "Use append()"],
+        "correctAnswer": "Yes, use join()",
+        "explanation": "Use ''.join() instead of += for building strings in loops."
+      },
+      {
+        "id": "7",
+        "type": "code-input",
+        "question": "Write efficient string building in a loop.",
+        "correctAnswer": "parts = []\\nfor item in items:\\n    parts.append(str(item))\\nresult = ''.join(parts)",
+        "explanation": "Collect parts in a list, then join - much faster than repeated concatenation."
+      },
+      {
+        "id": "8",
+        "type": "text-input",
+        "question": "What is 'constant folding'?",
+        "correctAnswer": "Evaluating constant expressions at compile time",
+        "explanation": "Python automatically optimizes constant expressions like 2*3+1."
+      },
+      {
+        "id": "9",
+        "type": "multiple-choice",
+        "question": "When does Python optimize loops?",
+        "options": ["Never", "For simple loops", "For all loops", "Only for comprehensions"],
+        "correctAnswer": "For all loops",
+        "explanation": "Python's bytecode compiler optimizes all loops, but comprehensions get additional optimization."
+      },
+      {
+        "id": "10",
+        "type": "text-input",
+        "question": "What is the cost of exception handling in loops?",
+        "correctAnswer": "Expensive when exceptions occur frequently",
+        "explanation": "Exceptions have high overhead - don't use them for normal control flow."
+      },
+      {
+        "id": "11",
+        "type": "multiple-choice",
+        "question": "Should you use try-except inside loops?",
+        "options": ["Always", "Never", "Only for unexpected errors", "Only for expected errors"],
+        "correctAnswer": "Only for unexpected errors",
+        "explanation": "Use try-except for truly exceptional cases, not for normal validation."
+      },
+      {
+        "id": "12",
+        "type": "text-input",
+        "question": "What is 'short-circuit evaluation' performance benefit?",
+        "correctAnswer": "Avoids evaluating unnecessary expressions",
+        "explanation": "and/or stop evaluating as soon as result is determined."
+      },
+      {
+        "id": "13",
+        "type": "multiple-choice",
+        "question": "Which conditional is faster?",
+        "options": ["if x == 1 or x == 2", "if x in (1, 2)", "Same speed", "Depends on x"],
+        "correctAnswer": "if x in (1, 2)",
+        "explanation": "Membership testing with tuples is optimized and often faster than multiple comparisons."
+      },
+      {
+        "id": "14",
+        "type": "code-input",
+        "question": "Optimize a loop that checks multiple conditions.",
+        "correctAnswer": "valid_values = {1, 2, 3, 4, 5}\\nif x in valid_values:\\n    process(x)",
+        "explanation": "Use set membership for fast lookups instead of multiple if-elif."
+      },
+      {
+        "id": "15",
+        "type": "text-input",
+        "question": "What is the most important performance rule for loops?",
+        "correctAnswer": "Avoid unnecessary work inside loops",
+        "explanation": "Move calculations and function calls outside loops when possible."
       }
     ]
   }

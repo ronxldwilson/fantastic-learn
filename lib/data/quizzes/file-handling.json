@@ -41,6 +41,79 @@
         "question": "Write code to read all lines from a file into a list.",
         "correctAnswer": "lines = file.readlines()",
         "explanation": "The readlines() method reads all lines and returns them as a list of strings."
+      },
+      {
+        "id": "6",
+        "type": "text-input",
+        "question": "What method reads one line at a time from a file?",
+        "correctAnswer": "readline",
+        "explanation": "The readline() method reads and returns one line from the file."
+      },
+      {
+        "id": "7",
+        "type": "multiple-choice",
+        "question": "What does read() return when called on an empty file?",
+        "options": ["None", "Empty string", "False", "Zero"],
+        "correctAnswer": "Empty string",
+        "explanation": "read() returns an empty string when the file is empty or at EOF."
+      },
+      {
+        "id": "8",
+        "type": "code-input",
+        "question": "Write code to read the first 100 characters from a file.",
+        "correctAnswer": "content = file.read(100)",
+        "explanation": "read(size) reads up to 'size' characters from the file."
+      },
+      {
+        "id": "9",
+        "type": "text-input",
+        "question": "What is the difference between read() and readlines()?",
+        "correctAnswer": "read() returns string, readlines() returns list of lines",
+        "explanation": "read() returns the entire content as a string, readlines() returns a list where each element is a line."
+      },
+      {
+        "id": "10",
+        "type": "multiple-choice",
+        "question": "Which method is most memory-efficient for large files?",
+        "options": ["read()", "readlines()", "Looping with readline()", "All are equally efficient"],
+        "correctAnswer": "Looping with readline()",
+        "explanation": "Looping with readline() processes one line at a time, using minimal memory."
+      },
+      {
+        "id": "11",
+        "type": "code-input",
+        "question": "Write code to iterate through a file line by line.",
+        "correctAnswer": "for line in file:\n    print(line)",
+        "explanation": "You can iterate directly over a file object to process lines one by one."
+      },
+      {
+        "id": "12",
+        "type": "text-input",
+        "question": "What does the 'r' mode stand for in file opening?",
+        "correctAnswer": "read",
+        "explanation": "'r' mode opens the file for reading (default mode)."
+      },
+      {
+        "id": "13",
+        "type": "multiple-choice",
+        "question": "Can you read from a file opened in write mode?",
+        "options": ["Yes", "No", "Only if file exists", "Only with special permission"],
+        "correctAnswer": "No",
+        "explanation": "Write mode ('w') only allows writing, not reading."
+      },
+      {
+        "id": "14",
+        "type": "code-input",
+        "question": "Write code to check if a file exists before opening it.",
+        "correctAnswer": "import os\nif os.path.exists('file.txt'):\n    file = open('file.txt')",
+        "explanation": "Use os.path.exists() to check file existence before opening."
+      },
+      {
+        "id": "15",
+        "type": "text-input",
+        "question": "What is the default encoding for text files in Python?",
+        "correctAnswer": "UTF-8",
+        "explanation": "Python uses UTF-8 encoding by default for text file operations."
       }
     ]
   },
@@ -69,7 +142,7 @@
         "id": "3",
         "type": "code-input",
         "question": "Write code to open a file for writing and write 'Hello World' to it.",
-        "correctAnswer": "file = open('output.txt', 'w')\\nfile.write('Hello World')",
+        "correctAnswer": "file = open('output.txt', 'w')\nfile.write('Hello World')",
         "explanation": "Open with 'w' mode and use write() to write the string."
       },
       {
@@ -79,6 +152,86 @@
         "options": ["'w' overwrites, 'a' appends", "'a' overwrites, 'w' appends", "They are the same", "'w' is for reading, 'a' for writing"],
         "correctAnswer": "'w' overwrites, 'a' appends",
         "explanation": "'w' mode overwrites the file, 'a' mode appends to the existing content."
+      },
+      {
+        "id": "5",
+        "type": "code-input",
+        "question": "Write code to append text to an existing file.",
+        "correctAnswer": "file = open('output.txt', 'a')\nfile.write('More text')",
+        "explanation": "Use 'a' mode to append to the end of an existing file."
+      },
+      {
+        "id": "6",
+        "type": "text-input",
+        "question": "What does the 'x' mode do?",
+        "correctAnswer": "creates file exclusively",
+        "explanation": "'x' mode creates a new file but fails if the file already exists."
+      },
+      {
+        "id": "7",
+        "type": "multiple-choice",
+        "question": "Which method writes multiple lines to a file?",
+        "options": ["write()", "writelines()", "Both", "Neither"],
+        "correctAnswer": "Both",
+        "explanation": "write() can write strings with newlines, writelines() writes a list of strings."
+      },
+      {
+        "id": "8",
+        "type": "code-input",
+        "question": "Write code to write a list of strings to a file.",
+        "correctAnswer": "lines = ['line1\\n', 'line2\\n']\nfile.writelines(lines)",
+        "explanation": "writelines() writes each string in the list to the file."
+      },
+      {
+        "id": "9",
+        "type": "text-input",
+        "question": "What happens if you write() without newlines?",
+        "correctAnswer": "all text appears on one line",
+        "explanation": "write() doesn't add newlines automatically - you must include them explicitly."
+      },
+      {
+        "id": "10",
+        "type": "multiple-choice",
+        "question": "Can write() handle non-string data?",
+        "options": ["Yes, automatically", "No, only strings", "Yes, with encoding", "Only for binary mode"],
+        "correctAnswer": "No, only strings",
+        "explanation": "write() only accepts string data for text files."
+      },
+      {
+        "id": "11",
+        "type": "code-input",
+        "question": "Write code to write formatted data to a file.",
+        "correctAnswer": "file.write(f'Name: {name}, Age: {age}\\n')",
+        "explanation": "Use f-strings or other formatting to write structured data."
+      },
+      {
+        "id": "12",
+        "type": "text-input",
+        "question": "What is the return value of write()?",
+        "correctAnswer": "number of characters written",
+        "explanation": "write() returns the number of characters written to the file."
+      },
+      {
+        "id": "13",
+        "type": "multiple-choice",
+        "question": "When is data actually written to disk?",
+        "options": ["Immediately", "When file is closed", "When buffer is full", "All of the above"],
+        "correctAnswer": "All of the above",
+        "explanation": "Data is written when the buffer is full, file is closed, or explicitly flushed."
+      },
+      {
+        "id": "14",
+        "type": "code-input",
+        "question": "Write code to force writing buffered data to disk.",
+        "correctAnswer": "file.flush()",
+        "explanation": "flush() forces any buffered data to be written to the underlying storage."
+      },
+      {
+        "id": "15",
+        "type": "text-input",
+        "question": "What mode creates a file only if it doesn't exist?",
+        "correctAnswer": "'x'",
+        "explanation": "'x' mode is for exclusive creation - fails if file exists."
       }
     ]
   },
@@ -99,7 +252,7 @@
         "id": "2",
         "type": "code-input",
         "question": "Write code using 'with' statement to safely open and read a file.",
-        "correctAnswer": "with open('file.txt', 'r') as file:\\n    content = file.read()",
+        "correctAnswer": "with open('file.txt', 'r') as file:\n    content = file.read()",
         "explanation": "The 'with' statement automatically closes the file when done."
       },
       {
@@ -116,6 +269,552 @@
         "question": "What module provides functions for working with file paths?",
         "correctAnswer": "os",
         "explanation": "The os module provides functions like os.path.exists() for file path operations."
+      },
+      {
+        "id": "5",
+        "type": "code-input",
+        "question": "Write code to check if a file exists.",
+        "correctAnswer": "import os\nos.path.exists('file.txt')",
+        "explanation": "os.path.exists() returns True if the path exists."
+      },
+      {
+        "id": "6",
+        "type": "text-input",
+        "question": "What method closes an open file?",
+        "correctAnswer": "close",
+        "explanation": "The close() method closes the file and frees system resources."
+      },
+      {
+        "id": "7",
+        "type": "multiple-choice",
+        "question": "Can you operate on a closed file?",
+        "options": ["Yes", "No", "Only for reading", "Only for writing"],
+        "correctAnswer": "No",
+        "explanation": "Once closed, file operations will raise ValueError."
+      },
+      {
+        "id": "8",
+        "type": "code-input",
+        "question": "Write code to safely handle file operations with error checking.",
+        "correctAnswer": "try:\n    file = open('data.txt')\n    # operations\nfinally:\n    file.close()",
+        "explanation": "Use try-finally to ensure files are closed even if errors occur."
+      },
+      {
+        "id": "9",
+        "type": "text-input",
+        "question": "What is a file object?",
+        "correctAnswer": "an object that provides file operations",
+        "explanation": "A file object is returned by open() and provides methods for file operations."
+      },
+      {
+        "id": "10",
+        "type": "multiple-choice",
+        "question": "Which attribute tells if a file is closed?",
+        "options": ["closed", "is_closed", "status", "state"],
+        "correctAnswer": "closed",
+        "explanation": "The closed attribute is True if the file is closed, False otherwise."
+      },
+      {
+        "id": "11",
+        "type": "code-input",
+        "question": "Write code to get the current position in a file.",
+        "correctAnswer": "position = file.tell()",
+        "explanation": "tell() returns the current stream position in bytes."
+      },
+      {
+        "id": "12",
+        "type": "text-input",
+        "question": "What method changes the file position?",
+        "correctAnswer": "seek",
+        "explanation": "seek() changes the stream position to the given byte offset."
+      },
+      {
+        "id": "13",
+        "type": "multiple-choice",
+        "question": "What does seek(0, 0) do?",
+        "options": ["Go to end", "Go to beginning", "Go to middle", "Stay in place"],
+        "correctAnswer": "Go to beginning",
+        "explanation": "seek(0, 0) moves to the beginning of the file."
+      },
+      {
+        "id": "14",
+        "type": "code-input",
+        "question": "Write code to truncate a file to 100 bytes.",
+        "correctAnswer": "file.truncate(100)",
+        "explanation": "truncate() resizes the file to the specified size."
+      },
+      {
+        "id": "15",
+        "type": "text-input",
+        "question": "What is buffering in file operations?",
+        "correctAnswer": "temporary storage of data before writing to disk",
+        "explanation": "Buffering improves performance by collecting data before actual disk writes."
+      }
+    ]
+  },
+  {
+    "id": "binary-files",
+    "title": "Working with Binary Files",
+    "description": "Learn how to handle binary data in files.",
+    "difficulty": "intermediate",
+    "questions": [
+      {
+        "id": "1",
+        "type": "text-input",
+        "question": "What mode is used to open binary files?",
+        "correctAnswer": "'rb' or 'wb'",
+        "explanation": "Use 'rb' for reading binary files, 'wb' for writing binary files."
+      },
+      {
+        "id": "2",
+        "type": "multiple-choice",
+        "question": "What type of data does read() return for binary files?",
+        "options": ["str", "bytes", "list", "dict"],
+        "correctAnswer": "bytes",
+        "explanation": "Binary mode returns bytes objects instead of strings."
+      },
+      {
+        "id": "3",
+        "type": "code-input",
+        "question": "Write code to read a binary file.",
+        "correctAnswer": "with open('file.bin', 'rb') as f:\n    data = f.read()",
+        "explanation": "Use 'rb' mode to read binary data as bytes."
+      },
+      {
+        "id": "4",
+        "type": "text-input",
+        "question": "How do you write bytes to a binary file?",
+        "correctAnswer": "use write() with bytes object",
+        "explanation": "Pass a bytes object to write() when working with binary files."
+      },
+      {
+        "id": "5",
+        "type": "code-input",
+        "question": "Write code to write binary data to a file.",
+        "correctAnswer": "data = b'\\x00\\x01\\x02'\nwith open('file.bin', 'wb') as f:\n    f.write(data)",
+        "explanation": "Use bytes literals or bytearray for binary data."
+      },
+      {
+        "id": "6",
+        "type": "multiple-choice",
+        "question": "Can you mix text and binary modes?",
+        "options": ["Yes", "No", "Only for reading", "Only for writing"],
+        "correctAnswer": "No",
+        "explanation": "Files must be opened in either text or binary mode, not both."
+      },
+      {
+        "id": "7",
+        "type": "text-input",
+        "question": "What module helps work with binary data structures?",
+        "correctAnswer": "struct",
+        "explanation": "The struct module provides functions to pack/unpack binary data."
+      },
+      {
+        "id": "8",
+        "type": "code-input",
+        "question": "Write code to pack integers into binary format.",
+        "correctAnswer": "import struct\ndata = struct.pack('ii', 1, 2)",
+        "explanation": "struct.pack() converts Python values to binary format."
+      },
+      {
+        "id": "9",
+        "type": "text-input",
+        "question": "What does 'b' in mode strings indicate?",
+        "correctAnswer": "binary mode",
+        "explanation": "The 'b' flag indicates binary mode for file operations."
+      },
+      {
+        "id": "10",
+        "type": "multiple-choice",
+        "question": "Which is better for large binary files?",
+        "options": ["Reading all at once", "Reading in chunks", "Both are fine", "Depends on file type"],
+        "correctAnswer": "Reading in chunks",
+        "explanation": "Large binary files should be processed in chunks to manage memory."
+      },
+      {
+        "id": "11",
+        "type": "code-input",
+        "question": "Write code to read a binary file in chunks.",
+        "correctAnswer": "with open('large.bin', 'rb') as f:\n    while chunk := f.read(1024):\n        process(chunk)",
+        "explanation": "Read binary files in fixed-size chunks to handle large files."
+      },
+      {
+        "id": "12",
+        "type": "text-input",
+        "question": "What is the difference between bytes and bytearray?",
+        "correctAnswer": "bytes is immutable, bytearray is mutable",
+        "explanation": "bytes objects cannot be modified, bytearray objects can be changed."
+      },
+      {
+        "id": "13",
+        "type": "code-input",
+        "question": "Write code to create a mutable byte array.",
+        "correctAnswer": "data = bytearray(b'hello')\ndata[0] = 72  # 'H'",
+        "explanation": "bytearray() creates mutable binary data that can be modified."
+      },
+      {
+        "id": "14",
+        "type": "multiple-choice",
+        "question": "Can binary files contain text data?",
+        "options": ["Yes", "No", "Only encoded text", "Never"],
+        "correctAnswer": "Yes",
+        "explanation": "Binary files can contain any data, including encoded text."
+      },
+      {
+        "id": "15",
+        "type": "text-input",
+        "question": "What is endianness in binary data?",
+        "correctAnswer": "byte order in multi-byte values",
+        "explanation": "Endianness determines whether the most significant byte comes first (big-endian) or last (little-endian)."
+      }
+    ]
+  },
+  {
+    "id": "file-paths",
+    "title": "File Paths and Directories",
+    "description": "Learn about file paths and directory operations.",
+    "difficulty": "intermediate",
+    "questions": [
+      {
+        "id": "1",
+        "type": "text-input",
+        "question": "What module provides path operations?",
+        "correctAnswer": "os.path",
+        "explanation": "os.path provides functions for path manipulations."
+      },
+      {
+        "id": "2",
+        "type": "code-input",
+        "question": "Write code to join path components.",
+        "correctAnswer": "import os\npath = os.path.join('folder', 'file.txt')",
+        "explanation": "os.path.join() creates a path from components using the correct separator."
+      },
+      {
+        "id": "3",
+        "type": "multiple-choice",
+        "question": "What does os.path.abspath() do?",
+        "options": ["Makes path relative", "Makes path absolute", "Splits path", "Joins paths"],
+        "correctAnswer": "Makes path absolute",
+        "explanation": "abspath() returns the absolute path for a given path."
+      },
+      {
+        "id": "4",
+        "type": "text-input",
+        "question": "How do you get the directory name from a path?",
+        "correctAnswer": "os.path.dirname()",
+        "explanation": "dirname() returns the directory portion of a path."
+      },
+      {
+        "id": "5",
+        "type": "code-input",
+        "question": "Write code to get the filename from a full path.",
+        "correctAnswer": "filename = os.path.basename('/path/to/file.txt')",
+        "explanation": "basename() returns the final component of a path."
+      },
+      {
+        "id": "6",
+        "type": "text-input",
+        "question": "What function checks if a path is absolute?",
+        "correctAnswer": "os.path.isabs()",
+        "explanation": "isabs() returns True if the path is absolute."
+      },
+      {
+        "id": "7",
+        "type": "multiple-choice",
+        "question": "Which module is preferred for path operations in Python 3.4+?",
+        "options": ["os.path", "pathlib", "Both", "Neither"],
+        "correctAnswer": "pathlib",
+        "explanation": "pathlib provides an object-oriented interface for path operations."
+      },
+      {
+        "id": "8",
+        "type": "code-input",
+        "question": "Write code using pathlib to create a Path object.",
+        "correctAnswer": "from pathlib import Path\np = Path('folder/file.txt')",
+        "explanation": "Path() creates a path object for object-oriented path operations."
+      },
+      {
+        "id": "9",
+        "type": "text-input",
+        "question": "How do you check if a path exists using pathlib?",
+        "correctAnswer": "path.exists()",
+        "explanation": "The exists() method returns True if the path exists."
+      },
+      {
+        "id": "10",
+        "type": "code-input",
+        "question": "Write code to read a file using pathlib.",
+        "correctAnswer": "from pathlib import Path\ncontent = Path('file.txt').read_text()",
+        "explanation": "Path objects have read_text() and write_text() methods."
+      },
+      {
+        "id": "11",
+        "type": "text-input",
+        "question": "What method lists directory contents with pathlib?",
+        "correctAnswer": "iterdir()",
+        "explanation": "iterdir() returns an iterator of Path objects in the directory."
+      },
+      {
+        "id": "12",
+        "type": "multiple-choice",
+        "question": "Which is more Pythonic: os.path or pathlib?",
+        "options": ["os.path", "pathlib", "Both equally", "Depends on use case"],
+        "correctAnswer": "pathlib",
+        "explanation": "pathlib is more Pythonic with its object-oriented approach."
+      },
+      {
+        "id": "13",
+        "type": "code-input",
+        "question": "Write code to create a directory with pathlib.",
+        "correctAnswer": "from pathlib import Path\nPath('new_dir').mkdir()",
+        "explanation": "mkdir() creates a directory at the path location."
+      },
+      {
+        "id": "14",
+        "type": "text-input",
+        "question": "How do you get file extension with pathlib?",
+        "correctAnswer": "path.suffix",
+        "explanation": "The suffix attribute returns the file extension."
+      },
+      {
+        "id": "15",
+        "type": "code-input",
+        "question": "Write code to find all .txt files in a directory.",
+        "correctAnswer": "txt_files = list(Path('dir').glob('*.txt'))",
+        "explanation": "glob() finds files matching a pattern in the directory."
+      }
+    ]
+  },
+  {
+    "id": "file-formats",
+    "title": "Working with File Formats",
+    "description": "Learn to handle common file formats like CSV and JSON.",
+    "difficulty": "intermediate",
+    "questions": [
+      {
+        "id": "1",
+        "type": "text-input",
+        "question": "What module handles CSV files?",
+        "correctAnswer": "csv",
+        "explanation": "The csv module provides classes for reading and writing CSV files."
+      },
+      {
+        "id": "2",
+        "type": "code-input",
+        "question": "Write code to read a CSV file.",
+        "correctAnswer": "import csv\nwith open('data.csv') as f:\n    reader = csv.reader(f)\n    for row in reader:\n        print(row)",
+        "explanation": "csv.reader() creates a reader object that iterates over CSV rows."
+      },
+      {
+        "id": "3",
+        "type": "text-input",
+        "question": "What does csv.DictReader do?",
+        "correctAnswer": "reads CSV as dictionaries",
+        "explanation": "DictReader returns each row as a dictionary with header keys."
+      },
+      {
+        "id": "4",
+        "type": "code-input",
+        "question": "Write code to write data to a CSV file.",
+        "correctAnswer": "import csv\nwith open('output.csv', 'w') as f:\n    writer = csv.writer(f)\n    writer.writerow(['name', 'age'])\n    writer.writerow(['Alice', 25])",
+        "explanation": "csv.writer() creates a writer for outputting CSV data."
+      },
+      {
+        "id": "5",
+        "type": "multiple-choice",
+        "question": "What module handles JSON files?",
+        "options": ["json", "xml", "yaml", "pickle"],
+        "correctAnswer": "json",
+        "explanation": "The json module provides functions for JSON encoding/decoding."
+      },
+      {
+        "id": "6",
+        "type": "code-input",
+        "question": "Write code to load JSON from a file.",
+        "correctAnswer": "import json\nwith open('data.json') as f:\n    data = json.load(f)",
+        "explanation": "json.load() reads and parses JSON data from a file."
+      },
+      {
+        "id": "7",
+        "type": "text-input",
+        "question": "What function converts a Python object to JSON string?",
+        "correctAnswer": "json.dumps()",
+        "explanation": "dumps() serializes a Python object to a JSON string."
+      },
+      {
+        "id": "8",
+        "type": "code-input",
+        "question": "Write code to save data as JSON.",
+        "correctAnswer": "import json\ndata = {'name': 'Alice', 'age': 25}\nwith open('output.json', 'w') as f:\n    json.dump(data, f)",
+        "explanation": "json.dump() writes Python objects as JSON to a file."
+      },
+      {
+        "id": "9",
+        "type": "multiple-choice",
+        "question": "What does pickle do?",
+        "options": ["Compresses files", "Serializes Python objects", "Encrypts data", "Validates JSON"],
+        "correctAnswer": "Serializes Python objects",
+        "explanation": "pickle can serialize and deserialize Python objects to/from bytes."
+      },
+      {
+        "id": "10",
+        "type": "code-input",
+        "question": "Write code to pickle an object.",
+        "correctAnswer": "import pickle\nwith open('data.pkl', 'wb') as f:\n    pickle.dump(obj, f)",
+        "explanation": "pickle.dump() serializes an object to a binary file."
+      },
+      {
+        "id": "11",
+        "type": "text-input",
+        "question": "What is the security concern with pickle?",
+        "correctAnswer": "can execute arbitrary code",
+        "explanation": "Unpickling untrusted data can execute malicious code."
+      },
+      {
+        "id": "12",
+        "type": "multiple-choice",
+        "question": "Which format is best for configuration files?",
+        "options": ["CSV", "JSON", "Pickle", "All are good"],
+        "correctAnswer": "JSON",
+        "explanation": "JSON is human-readable, language-agnostic, and widely supported."
+      },
+      {
+        "id": "13",
+        "type": "code-input",
+        "question": "Write code to read a CSV with headers as dictionaries.",
+        "correctAnswer": "import csv\nwith open('data.csv') as f:\n    reader = csv.DictReader(f)\n    for row in reader:\n        print(row['name'])",
+        "explanation": "DictReader uses the first row as keys for dictionary access."
+      },
+      {
+        "id": "14",
+        "type": "text-input",
+        "question": "What CSV parameter handles different delimiters?",
+        "correctAnswer": "delimiter",
+        "explanation": "The delimiter parameter specifies the field separator character."
+      },
+      {
+        "id": "15",
+        "type": "code-input",
+        "question": "Write code to handle tab-separated values.",
+        "correctAnswer": "import csv\nwith open('data.tsv') as f:\n    reader = csv.reader(f, delimiter='\\t')\n    for row in reader:\n        print(row)",
+        "explanation": "Specify delimiter='\\t' for tab-separated files."
+      }
+    ]
+  },
+  {
+    "id": "error-handling",
+    "title": "File Error Handling",
+    "description": "Learn to handle errors and exceptions in file operations.",
+    "difficulty": "intermediate",
+    "questions": [
+      {
+        "id": "1",
+        "type": "text-input",
+        "question": "What exception is raised when a file doesn't exist?",
+        "correctAnswer": "FileNotFoundError",
+        "explanation": "FileNotFoundError occurs when trying to open a non-existent file."
+      },
+      {
+        "id": "2",
+        "type": "code-input",
+        "question": "Write code to handle file not found error.",
+        "correctAnswer": "try:\n    file = open('missing.txt')\nexcept FileNotFoundError:\n    print('File not found')",
+        "explanation": "Use try-except to catch FileNotFoundError."
+      },
+      {
+        "id": "3",
+        "type": "multiple-choice",
+        "question": "What exception occurs for permission issues?",
+        "options": ["FileNotFoundError", "PermissionError", "IsADirectoryError", "OSError"],
+        "correctAnswer": "PermissionError",
+        "explanation": "PermissionError is raised when file access is denied."
+      },
+      {
+        "id": "4",
+        "type": "text-input",
+        "question": "What does IsADirectoryError mean?",
+        "correctAnswer": "trying to open directory as file",
+        "explanation": "This error occurs when attempting file operations on a directory."
+      },
+      {
+        "id": "5",
+        "type": "code-input",
+        "question": "Write code to handle multiple file errors.",
+        "correctAnswer": "try:\n    with open('file.txt') as f:\n        data = f.read()\nexcept (FileNotFoundError, PermissionError) as e:\n    print(f'Error: {e}')",
+        "explanation": "Catch multiple exception types in a single except clause."
+      },
+      {
+        "id": "6",
+        "type": "text-input",
+        "question": "What is OSError?",
+        "correctAnswer": "base class for OS-related errors",
+        "explanation": "OSError is the base class for operating system related errors."
+      },
+      {
+        "id": "7",
+        "type": "multiple-choice",
+        "question": "When does UnicodeDecodeError occur?",
+        "options": ["Wrong encoding", "File not found", "Permission denied", "Disk full"],
+        "correctAnswer": "Wrong encoding",
+        "explanation": "UnicodeDecodeError happens when trying to decode bytes with wrong encoding."
+      },
+      {
+        "id": "8",
+        "type": "code-input",
+        "question": "Write code to handle encoding errors.",
+        "correctAnswer": "try:\n    with open('file.txt', encoding='utf-8') as f:\n        text = f.read()\nexcept UnicodeDecodeError:\n    print('Encoding error')",
+        "explanation": "Specify encoding and catch UnicodeDecodeError for text files."
+      },
+      {
+        "id": "9",
+        "type": "text-input",
+        "question": "What causes IOError?",
+        "correctAnswer": "input/output operation failures",
+        "explanation": "IOError occurs for various I/O operation failures."
+      },
+      {
+        "id": "10",
+        "type": "multiple-choice",
+        "question": "Is it better to check file existence before opening?",
+        "options": ["Always", "Never", "Sometimes", "Depends"],
+        "correctAnswer": "Sometimes",
+        "explanation": "Better to try opening and handle exceptions - avoids race conditions."
+      },
+      {
+        "id": "11",
+        "type": "code-input",
+        "question": "Write code for robust file reading.",
+        "correctAnswer": "def read_file(filename):\n    try:\n        with open(filename, 'r') as f:\n            return f.read()\n    except (FileNotFoundError, PermissionError, UnicodeDecodeError) as e:\n        print(f'Error reading {filename}: {e}')\n        return None",
+        "explanation": "Handle common file errors gracefully in a function."
+      },
+      {
+        "id": "12",
+        "type": "text-input",
+        "question": "What is a race condition in file operations?",
+        "correctAnswer": "file state changes between check and use",
+        "explanation": "Race conditions occur when file state changes between checking and using it."
+      },
+      {
+        "id": "13",
+        "type": "multiple-choice",
+        "question": "Which approach avoids race conditions?",
+        "options": ["Check then open", "Try to open and handle errors", "Both", "Neither"],
+        "correctAnswer": "Try to open and handle errors",
+        "explanation": "Exception handling is safer than checking existence first."
+      },
+      {
+        "id": "14",
+        "type": "code-input",
+        "question": "Write code to handle file write errors.",
+        "correctAnswer": "try:\n    with open('output.txt', 'w') as f:\n        f.write(data)\nexcept (PermissionError, OSError) as e:\n    print(f'Write failed: {e}')",
+        "explanation": "Handle permission and OS errors when writing files."
+      },
+      {
+        "id": "15",
+        "type": "text-input",
+        "question": "What should you do with file handles in exception handling?",
+        "correctAnswer": "use with statement or try-finally",
+        "explanation": "Ensure files are closed properly even when exceptions occur."
       }
     ]
   }

@@ -1,6 +1,6 @@
 [
   {
-    "id": "exceptions",
+    "id": "1",
     "title": "Exceptions and Try-Except",
     "description": "Learn to handle errors gracefully.",
     "difficulty": "intermediate",
@@ -9,7 +9,12 @@
         "id": "1",
         "type": "multiple-choice",
         "question": "Which block catches exceptions?",
-        "options": ["try", "catch", "except", "finally"],
+        "options": [
+          "try",
+          "catch",
+          "except",
+          "finally"
+        ],
         "correctAnswer": "except",
         "explanation": "The \"except\" block catches and handles exceptions."
       },
@@ -24,7 +29,12 @@
         "id": "3",
         "type": "multiple-choice",
         "question": "What does the try block contain?",
-        "options": ["Error handling code", "Code that might raise exceptions", "Cleanup code", "Exception definitions"],
+        "options": [
+          "Error handling code",
+          "Code that might raise exceptions",
+          "Cleanup code",
+          "Exception definitions"
+        ],
         "correctAnswer": "Code that might raise exceptions",
         "explanation": "The try block contains code that might raise an exception."
       },
@@ -39,7 +49,12 @@
         "id": "5",
         "type": "multiple-choice",
         "question": "What does the finally block do?",
-        "options": ["Handles exceptions", "Contains risky code", "Always executes", "Raises exceptions"],
+        "options": [
+          "Handles exceptions",
+          "Contains risky code",
+          "Always executes",
+          "Raises exceptions"
+        ],
         "correctAnswer": "Always executes",
         "explanation": "The finally block executes whether an exception occurs or not."
       },
@@ -54,7 +69,12 @@
         "id": "7",
         "type": "multiple-choice",
         "question": "What happens if no exception occurs in try?",
-        "options": ["finally doesn't execute", "except blocks execute", "finally still executes", "program crashes"],
+        "options": [
+          "finally doesn't execute",
+          "except blocks execute",
+          "finally still executes",
+          "program crashes"
+        ],
         "correctAnswer": "finally still executes",
         "explanation": "finally block executes regardless of whether an exception occurs."
       },
@@ -76,7 +96,12 @@
         "id": "10",
         "type": "multiple-choice",
         "question": "Can you have multiple except blocks?",
-        "options": ["No, only one", "Yes, for different exception types", "Only with finally", "Only for base exceptions"],
+        "options": [
+          "No, only one",
+          "Yes, for different exception types",
+          "Only with finally",
+          "Only for base exceptions"
+        ],
         "correctAnswer": "Yes, for different exception types",
         "explanation": "Multiple except blocks can catch different types of exceptions."
       },
@@ -98,7 +123,12 @@
         "id": "13",
         "type": "multiple-choice",
         "question": "What does bare except: catch?",
-        "options": ["Only specific exceptions", "All exceptions including system exit", "Only BaseException", "Nothing"],
+        "options": [
+          "Only specific exceptions",
+          "All exceptions including system exit",
+          "Only BaseException",
+          "Nothing"
+        ],
         "correctAnswer": "All exceptions including system exit",
         "explanation": "Bare except catches all exceptions, including KeyboardInterrupt and SystemExit."
       },
@@ -119,7 +149,7 @@
     ]
   },
   {
-    "id": "exception-types",
+    "id": "2",
     "title": "Exception Types",
     "description": "Understanding different types of exceptions.",
     "difficulty": "intermediate",
@@ -128,7 +158,12 @@
         "id": "1",
         "type": "multiple-choice",
         "question": "What type of error is ValueError?",
-        "options": ["Syntax error", "Wrong value type", "Wrong value for correct type", "Import error"],
+        "options": [
+          "Syntax error",
+          "Wrong value type",
+          "Wrong value for correct type",
+          "Import error"
+        ],
         "correctAnswer": "Wrong value for correct type",
         "explanation": "ValueError occurs when operation receives correct type but inappropriate value."
       },
@@ -136,7 +171,12 @@
         "id": "2",
         "type": "multiple-choice",
         "question": "What causes TypeError?",
-        "options": ["Wrong value", "Wrong type for operation", "Missing file", "Network error"],
+        "options": [
+          "Wrong value",
+          "Wrong type for operation",
+          "Missing file",
+          "Network error"
+        ],
         "correctAnswer": "Wrong type for operation",
         "explanation": "TypeError occurs when operation applied to inappropriate type."
       },
@@ -144,7 +184,12 @@
         "id": "3",
         "type": "multiple-choice",
         "question": "What is IndexError?",
-        "options": ["Wrong index type", "Index out of range", "Wrong list type", "Empty list"],
+        "options": [
+          "Wrong index type",
+          "Index out of range",
+          "Wrong list type",
+          "Empty list"
+        ],
         "correctAnswer": "Index out of range",
         "explanation": "IndexError occurs when trying to access invalid index in sequence."
       },
@@ -152,7 +197,12 @@
         "id": "4",
         "type": "multiple-choice",
         "question": "What causes KeyError?",
-        "options": ["Wrong key type", "Key not in dictionary", "Empty dictionary", "Wrong dictionary type"],
+        "options": [
+          "Wrong key type",
+          "Key not in dictionary",
+          "Empty dictionary",
+          "Wrong dictionary type"
+        ],
         "correctAnswer": "Key not in dictionary",
         "explanation": "KeyError occurs when trying to access non-existent dictionary key."
       },
@@ -160,7 +210,12 @@
         "id": "5",
         "type": "multiple-choice",
         "question": "What is ZeroDivisionError?",
-        "options": ["Dividing by string", "Dividing by zero", "Wrong divisor type", "Division overflow"],
+        "options": [
+          "Dividing by string",
+          "Dividing by zero",
+          "Wrong divisor type",
+          "Division overflow"
+        ],
         "correctAnswer": "Dividing by zero",
         "explanation": "ZeroDivisionError occurs when dividing by zero."
       },
@@ -168,7 +223,12 @@
         "id": "6",
         "type": "multiple-choice",
         "question": "What causes AttributeError?",
-        "options": ["Wrong object type", "Missing attribute", "Wrong method call", "Wrong arguments"],
+        "options": [
+          "Wrong object type",
+          "Missing attribute",
+          "Wrong method call",
+          "Wrong arguments"
+        ],
         "correctAnswer": "Missing attribute",
         "explanation": "AttributeError occurs when trying to access non-existent attribute."
       },
@@ -176,7 +236,12 @@
         "id": "7",
         "type": "multiple-choice",
         "question": "What is NameError?",
-        "options": ["Wrong variable name", "Undefined variable", "Wrong function name", "Import error"],
+        "options": [
+          "Wrong variable name",
+          "Undefined variable",
+          "Wrong function name",
+          "Import error"
+        ],
         "correctAnswer": "Undefined variable",
         "explanation": "NameError occurs when trying to use undefined variable or name."
       },
@@ -184,7 +249,12 @@
         "id": "8",
         "type": "multiple-choice",
         "question": "What causes ImportError?",
-        "options": ["Wrong import syntax", "Module not found", "Wrong module name", "Circular import"],
+        "options": [
+          "Wrong import syntax",
+          "Module not found",
+          "Wrong module name",
+          "Circular import"
+        ],
         "correctAnswer": "Module not found",
         "explanation": "ImportError occurs when import statement fails to find module."
       },
@@ -192,7 +262,12 @@
         "id": "9",
         "type": "multiple-choice",
         "question": "What is FileNotFoundError?",
-        "options": ["Wrong file content", "File not found", "Permission denied", "Wrong file mode"],
+        "options": [
+          "Wrong file content",
+          "File not found",
+          "Permission denied",
+          "Wrong file mode"
+        ],
         "correctAnswer": "File not found",
         "explanation": "FileNotFoundError occurs when trying to open non-existent file."
       },
@@ -200,7 +275,12 @@
         "id": "10",
         "type": "multiple-choice",
         "question": "What causes StopIteration?",
-        "options": ["Loop end", "Iterator exhaustion", "Wrong iteration", "Empty container"],
+        "options": [
+          "Loop end",
+          "Iterator exhaustion",
+          "Wrong iteration",
+          "Empty container"
+        ],
         "correctAnswer": "Iterator exhaustion",
         "explanation": "StopIteration raised by iterators when no more items available."
       },
@@ -242,7 +322,7 @@
     ]
   },
   {
-    "id": "raising-exceptions",
+    "id": "3",
     "title": "Raising Exceptions",
     "description": "How to raise exceptions manually.",
     "difficulty": "intermediate",
@@ -258,7 +338,12 @@
         "id": "2",
         "type": "multiple-choice",
         "question": "Can you raise any object as an exception?",
-        "options": ["Yes, any object", "No, must be BaseException subclass", "Only built-in exceptions", "Only strings"],
+        "options": [
+          "Yes, any object",
+          "No, must be BaseException subclass",
+          "Only built-in exceptions",
+          "Only strings"
+        ],
         "correctAnswer": "No, must be BaseException subclass",
         "explanation": "Exceptions must inherit from BaseException."
       },
@@ -287,7 +372,12 @@
         "id": "6",
         "type": "multiple-choice",
         "question": "What does raise without arguments do?",
-        "options": ["Raises BaseException", "Re-raises current exception", "Raises RuntimeError", "Does nothing"],
+        "options": [
+          "Raises BaseException",
+          "Re-raises current exception",
+          "Raises RuntimeError",
+          "Does nothing"
+        ],
         "correctAnswer": "Re-raises current exception",
         "explanation": "Bare raise re-raises the exception currently being handled."
       },
@@ -309,7 +399,12 @@
         "id": "9",
         "type": "multiple-choice",
         "question": "When should you use assert?",
-        "options": ["Production error handling", "Debugging and testing assumptions", "User input validation", "File operations"],
+        "options": [
+          "Production error handling",
+          "Debugging and testing assumptions",
+          "User input validation",
+          "File operations"
+        ],
         "correctAnswer": "Debugging and testing assumptions",
         "explanation": "Assert is for debugging, not production error handling."
       },
@@ -331,7 +426,12 @@
         "id": "12",
         "type": "multiple-choice",
         "question": "Should you raise exceptions for expected conditions?",
-        "options": ["Always", "Never", "Only for programming errors", "Only for user errors"],
+        "options": [
+          "Always",
+          "Never",
+          "Only for programming errors",
+          "Only for user errors"
+        ],
         "correctAnswer": "Only for programming errors",
         "explanation": "Raise exceptions for unexpected/programming errors, not expected conditions."
       },
@@ -353,14 +453,19 @@
         "id": "15",
         "type": "multiple-choice",
         "question": "What information should exception messages contain?",
-        "options": ["Only exception type", "What went wrong and why", "Stack trace", "Nothing"],
+        "options": [
+          "Only exception type",
+          "What went wrong and why",
+          "Stack trace",
+          "Nothing"
+        ],
         "correctAnswer": "What went wrong and why",
         "explanation": "Exception messages should explain what failed and why."
       }
     ]
   },
   {
-    "id": "custom-exceptions",
+    "id": "4",
     "title": "Custom Exceptions",
     "description": "Creating and using custom exception classes.",
     "difficulty": "advanced",
@@ -383,7 +488,12 @@
         "id": "3",
         "type": "multiple-choice",
         "question": "Should custom exceptions inherit from?",
-        "options": ["BaseException", "Exception", "ValueError", "Any class"],
+        "options": [
+          "BaseException",
+          "Exception",
+          "ValueError",
+          "Any class"
+        ],
         "correctAnswer": "Exception",
         "explanation": "Custom exceptions should inherit from Exception, not BaseException."
       },
@@ -398,7 +508,12 @@
         "id": "5",
         "type": "multiple-choice",
         "question": "Why create custom exceptions?",
-        "options": ["Look cool", "Specific error handling", "Confuse other developers", "Slower code"],
+        "options": [
+          "Look cool",
+          "Specific error handling",
+          "Confuse other developers",
+          "Slower code"
+        ],
         "correctAnswer": "Specific error handling",
         "explanation": "Custom exceptions allow catching specific errors in your application."
       },
@@ -427,7 +542,12 @@
         "id": "9",
         "type": "multiple-choice",
         "question": "Should exceptions store stack traces?",
-        "options": ["Always", "Never", "Python does it automatically", "Only custom ones"],
+        "options": [
+          "Always",
+          "Never",
+          "Python does it automatically",
+          "Only custom ones"
+        ],
         "correctAnswer": "Python does it automatically",
         "explanation": "Python automatically attaches traceback to exception instances."
       },
@@ -449,7 +569,12 @@
         "id": "12",
         "type": "multiple-choice",
         "question": "When should you create custom exceptions?",
-        "options": ["For every function", "When you need specific error handling", "Never", "Only for logging"],
+        "options": [
+          "For every function",
+          "When you need specific error handling",
+          "Never",
+          "Only for logging"
+        ],
         "correctAnswer": "When you need specific error handling",
         "explanation": "Create custom exceptions when callers need to handle specific error types."
       },
@@ -471,14 +596,19 @@
         "id": "15",
         "type": "multiple-choice",
         "question": "Should exceptions be part of your API?",
-        "options": ["No", "Yes, document them", "Only base exceptions", "Only in private APIs"],
+        "options": [
+          "No",
+          "Yes, document them",
+          "Only base exceptions",
+          "Only in private APIs"
+        ],
         "correctAnswer": "Yes, document them",
         "explanation": "Document which exceptions your functions raise as part of the API."
       }
     ]
   },
   {
-    "id": "context-managers",
+    "id": "5",
     "title": "Context Managers",
     "description": "Using with statements for resource management.",
     "difficulty": "intermediate",
@@ -557,7 +687,12 @@
         "id": "11",
         "type": "multiple-choice",
         "question": "Can you nest with statements?",
-        "options": ["No", "Yes", "Only same type", "Only different types"],
+        "options": [
+          "No",
+          "Yes",
+          "Only same type",
+          "Only different types"
+        ],
         "correctAnswer": "Yes",
         "explanation": "You can nest with statements arbitrarily deep."
       },
@@ -586,14 +721,19 @@
         "id": "15",
         "type": "multiple-choice",
         "question": "Why use context managers?",
-        "options": ["Performance", "Automatic cleanup", "Code style", "Memory efficiency"],
+        "options": [
+          "Performance",
+          "Automatic cleanup",
+          "Code style",
+          "Memory efficiency"
+        ],
         "correctAnswer": "Automatic cleanup",
         "explanation": "Context managers ensure cleanup happens even with exceptions."
       }
     ]
   },
   {
-    "id": "exception-handling-patterns",
+    "id": "6",
     "title": "Exception Handling Patterns",
     "description": "Common patterns for robust error handling.",
     "difficulty": "intermediate",
@@ -616,7 +756,12 @@
         "id": "3",
         "type": "multiple-choice",
         "question": "Which pattern is generally preferred in Python?",
-        "options": ["LBYL", "EAFP", "Depends on situation", "Neither"],
+        "options": [
+          "LBYL",
+          "EAFP",
+          "Depends on situation",
+          "Neither"
+        ],
         "correctAnswer": "EAFP",
         "explanation": "EAFP is more Pythonic and avoids race conditions."
       },
@@ -645,7 +790,12 @@
         "id": "7",
         "type": "multiple-choice",
         "question": "What is exception logging pattern?",
-        "options": ["Log all exceptions", "Log unexpected exceptions", "Never log", "Log only messages"],
+        "options": [
+          "Log all exceptions",
+          "Log unexpected exceptions",
+          "Never log",
+          "Log only messages"
+        ],
         "correctAnswer": "Log unexpected exceptions",
         "explanation": "Log exceptions you don't expect to handle, with full traceback."
       },
@@ -674,7 +824,12 @@
         "id": "11",
         "type": "multiple-choice",
         "question": "What is defensive programming?",
-        "options": ["Assume nothing will fail", "Add checks and validations", "Ignore all errors", "Use bare except everywhere"],
+        "options": [
+          "Assume nothing will fail",
+          "Add checks and validations",
+          "Ignore all errors",
+          "Use bare except everywhere"
+        ],
         "correctAnswer": "Add checks and validations",
         "explanation": "Defensive programming anticipates and handles potential errors."
       },
@@ -703,14 +858,19 @@
         "id": "15",
         "type": "multiple-choice",
         "question": "When should you catch all exceptions?",
-        "options": ["Always", "Never", "Only at top level for logging", "Only in threads"],
+        "options": [
+          "Always",
+          "Never",
+          "Only at top level for logging",
+          "Only in threads"
+        ],
         "correctAnswer": "Only at top level for logging",
         "explanation": "Catch all exceptions only at application boundaries for logging."
       }
     ]
   },
   {
-    "id": "best-practices",
+    "id": "7",
     "title": "Best Practices",
     "description": "Guidelines for effective exception handling.",
     "difficulty": "intermediate",
@@ -719,7 +879,12 @@
         "id": "1",
         "type": "multiple-choice",
         "question": "Should you use bare except?",
-        "options": ["Always", "Never", "Only for cleanup", "Only for debugging"],
+        "options": [
+          "Always",
+          "Never",
+          "Only for cleanup",
+          "Only for debugging"
+        ],
         "correctAnswer": "Only for cleanup",
         "explanation": "Bare except can hide bugs; use only for final cleanup."
       },
@@ -734,7 +899,12 @@
         "id": "3",
         "type": "multiple-choice",
         "question": "Should exceptions be part of API design?",
-        "options": ["No", "Yes, document them", "Only built-in ones", "Only custom ones"],
+        "options": [
+          "No",
+          "Yes, document them",
+          "Only built-in ones",
+          "Only custom ones"
+        ],
         "correctAnswer": "Yes, document them",
         "explanation": "Document which exceptions functions raise as part of API."
       },
@@ -749,7 +919,12 @@
         "id": "5",
         "type": "multiple-choice",
         "question": "Should you raise exceptions in __init__?",
-        "options": ["Never", "Only for invalid arguments", "Always", "Only for missing files"],
+        "options": [
+          "Never",
+          "Only for invalid arguments",
+          "Always",
+          "Only for missing files"
+        ],
         "correctAnswer": "Only for invalid arguments",
         "explanation": "Raise exceptions in __init__ for invalid construction parameters."
       },
@@ -764,7 +939,12 @@
         "id": "7",
         "type": "multiple-choice",
         "question": "Should you use exceptions for control flow?",
-        "options": ["Yes, they're efficient", "No, use for exceptional cases only", "Only in loops", "Only for user input"],
+        "options": [
+          "Yes, they're efficient",
+          "No, use for exceptional cases only",
+          "Only in loops",
+          "Only for user input"
+        ],
         "correctAnswer": "No, use for exceptional cases only",
         "explanation": "Exceptions are expensive; don't use for normal program flow."
       },
@@ -779,7 +959,12 @@
         "id": "9",
         "type": "multiple-choice",
         "question": "When should you catch exceptions?",
-        "options": ["At every function", "Where you can handle them", "Never", "Only at main"],
+        "options": [
+          "At every function",
+          "Where you can handle them",
+          "Never",
+          "Only at main"
+        ],
         "correctAnswer": "Where you can handle them",
         "explanation": "Catch exceptions where you can actually do something about them."
       },
@@ -794,7 +979,12 @@
         "id": "11",
         "type": "multiple-choice",
         "question": "Should you log exceptions?",
-        "options": ["Never", "Always", "Only unexpected ones", "Only with user messages"],
+        "options": [
+          "Never",
+          "Always",
+          "Only unexpected ones",
+          "Only with user messages"
+        ],
         "correctAnswer": "Only unexpected ones",
         "explanation": "Log exceptions you don't expect to handle, with full context."
       },
@@ -816,7 +1006,12 @@
         "id": "14",
         "type": "multiple-choice",
         "question": "Should you subclass built-in exceptions?",
-        "options": ["Never", "Always", "When you need specific handling", "Only for ValueError"],
+        "options": [
+          "Never",
+          "Always",
+          "When you need specific handling",
+          "Only for ValueError"
+        ],
         "correctAnswer": "When you need specific handling",
         "explanation": "Subclass built-ins when callers need to handle specific error types."
       },
@@ -830,7 +1025,7 @@
     ]
   },
   {
-    "id": "debugging-exceptions",
+    "id": "8",
     "title": "Debugging Exceptions",
     "description": "Tools and techniques for debugging exception-related issues.",
     "difficulty": "intermediate",
@@ -874,7 +1069,12 @@
         "id": "6",
         "type": "multiple-choice",
         "question": "What does pdb stand for?",
-        "options": ["Python Debug", "Python Debugger", "Program Database", "Process Debug"],
+        "options": [
+          "Python Debug",
+          "Python Debugger",
+          "Program Database",
+          "Process Debug"
+        ],
         "correctAnswer": "Python Debugger",
         "explanation": "pdb is Python's built-in debugger."
       },
@@ -903,7 +1103,12 @@
         "id": "10",
         "type": "multiple-choice",
         "question": "What is a stack trace?",
-        "options": ["Function names", "Call stack at exception point", "Variable values", "Execution time"],
+        "options": [
+          "Function names",
+          "Call stack at exception point",
+          "Variable values",
+          "Execution time"
+        ],
         "correctAnswer": "Call stack at exception point",
         "explanation": "Stack trace shows the sequence of function calls leading to exception."
       },
@@ -925,7 +1130,12 @@
         "id": "13",
         "type": "multiple-choice",
         "question": "What is postmortem debugging?",
-        "options": ["Debug after program ends", "Debug at exception point", "Debug before exceptions", "Debug performance"],
+        "options": [
+          "Debug after program ends",
+          "Debug at exception point",
+          "Debug before exceptions",
+          "Debug performance"
+        ],
         "correctAnswer": "Debug at exception point",
         "explanation": "Postmortem debugging examines program state after exception."
       },
@@ -940,7 +1150,12 @@
         "id": "15",
         "type": "multiple-choice",
         "question": "Should you catch and ignore all exceptions?",
-        "options": ["Yes, for robustness", "No, it hides bugs", "Only in production", "Only for logging"],
+        "options": [
+          "Yes, for robustness",
+          "No, it hides bugs",
+          "Only in production",
+          "Only for logging"
+        ],
         "correctAnswer": "No, it hides bugs",
         "explanation": "Ignoring exceptions can hide programming errors and make debugging impossible."
       }

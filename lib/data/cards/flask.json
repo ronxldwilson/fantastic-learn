@@ -1,97 +1,321 @@
 [
   {
-    "id": "3-1-flask-basics",
-    "title": "Flask Fundamentals",
-    "description": "Core concepts and basic usage of Flask web framework.",
-    "difficulty": "beginner",
+    "id": "1",
+    "title": "Flask Basics",
+    "description": "Fundamental concepts of Flask",
     "cards": [
       {
-        "id": "3-1-1-flask-import",
-        "front": "How do you import Flask?",
-        "back": "from flask import Flask"
+        "id": "1",
+        "front": "What is Flask?",
+        "back": "A lightweight WSGI web application framework written in Python."
       },
       {
-        "id": "3-1-2-app-creation",
-        "front": "How do you create a Flask app?",
-        "back": "app = Flask(__name__)"
+        "id": "2",
+        "front": "What does WSGI stand for?",
+        "back": "Web Server Gateway Interface - a specification for web servers and applications."
       },
       {
-        "id": "3-1-3-basic-route",
-        "front": "How do you define a basic route?",
-        "back": "@app.route('/')\ndef hello():\n    return 'Hello World'"
+        "id": "3",
+        "front": "What is the default port for Flask?",
+        "back": "5000"
       },
       {
-        "id": "3-1-4-route-methods",
-        "front": "How do you specify HTTP methods for a route?",
-        "back": "@app.route('/submit', methods=['GET', 'POST'])\ndef submit():\n    if request.method == 'POST':\n        # handle POST\n        pass\n    return 'Response'"
+        "id": "4",
+        "front": "How do you install Flask?",
+        "back": "pip install flask"
       },
       {
-        "id": "3-1-5-url-variables",
-        "front": "How do you capture URL variables?",
-        "back": "@app.route('/user/<username>')\ndef show_user(username):\n    return f'User: {username}'"
-      },
-      {
-        "id": "3-1-6-url-converters",
-        "front": "What URL converters does Flask support?",
-        "back": "string (default), int, float, path, uuid"
-      },
-      {
-        "id": "3-1-7-render-template",
-        "front": "How do you render a template?",
-        "back": "from flask import render_template\n\nreturn render_template('index.html', name='John')"
-      },
-      {
-        "id": "3-1-8-request-object",
-        "front": "How do you access request data?",
-        "back": "from flask import request\n\n# Query params: request.args.get('key')\n# Form data: request.form['field']\n# JSON: request.get_json()"
+        "id": "5",
+        "front": "What is the difference between Flask and Django?",
+        "back": "Flask is a micro-framework with minimal dependencies, Django is a full-stack framework."
       }
     ]
   },
   {
-    "id": "3-2-flask-advanced",
-    "title": "Advanced Flask Features",
-    "description": "Advanced concepts including blueprints, extensions, and best practices.",
-    "difficulty": "intermediate",
+    "id": "2",
+    "title": "Flask Routing",
+    "description": "Creating and managing routes in Flask",
     "cards": [
       {
-        "id": "3-2-1-blueprint-creation",
-        "front": "How do you create a Flask Blueprint?",
-        "back": "from flask import Blueprint\n\nbp = Blueprint('auth', __name__, url_prefix='/auth')\n\n@bp.route('/login')\ndef login():\n    return 'Login page'"
+        "id": "1",
+        "front": "How do you define a route?",
+        "back": "Using the @app.route() decorator"
       },
       {
-        "id": "3-2-2-blueprint-registration",
-        "front": "How do you register a Blueprint?",
-        "back": "app.register_blueprint(auth_bp)"
+        "id": "2",
+        "front": "What is a URL variable?",
+        "back": "A dynamic part of the URL defined with <variable_name>"
       },
       {
-        "id": "3-2-3-flask-sqlalchemy-setup",
-        "front": "How do you set up Flask-SQLAlchemy?",
-        "back": "from flask_sqlalchemy import SQLAlchemy\n\ndb = SQLAlchemy(app)\n\nclass User(db.Model):\n    id = db.Column(db.Integer, primary_key=True)\n    username = db.Column(db.String(80), unique=True)"
+        "id": "3",
+        "front": "How do you specify HTTP methods?",
+        "back": "Using the methods parameter: methods=['GET', 'POST']"
       },
       {
-        "id": "3-2-4-flask-wtf-form",
-        "front": "How do you create a WTForms form in Flask?",
-        "back": "from flask_wtf import FlaskForm\nfrom wtforms import StringField, SubmitField\nfrom wtforms.validators import DataRequired\n\nclass ContactForm(FlaskForm):\n    name = StringField('Name', validators=[DataRequired()])\n    submit = SubmitField('Submit')"
+        "id": "4",
+        "front": "What is the default HTTP method?",
+        "back": "GET"
       },
       {
-        "id": "3-2-5-flask-session",
-        "front": "How do you use Flask sessions?",
-        "back": "from flask import session\n\n# Set session data\nsession['username'] = 'john'\n\n# Get session data\nusername = session.get('username')\n\n# Don't forget to set secret key!\napp.secret_key = 'your-secret-key'"
+        "id": "5",
+        "front": "How do you handle multiple routes?",
+        "back": "Using multiple @app.route decorators or add_url_rule()"
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "title": "Templates",
+    "description": "Using Jinja2 templates in Flask",
+    "cards": [
+      {
+        "id": "1",
+        "front": "What templating engine does Flask use?",
+        "back": "Jinja2"
       },
       {
-        "id": "3-2-6-error-handling",
-        "front": "How do you handle errors in Flask?",
-        "back": "@app.errorhandler(404)\ndef page_not_found(e):\n    return render_template('404.html'), 404"
+        "id": "2",
+        "front": "How do you render a template?",
+        "back": "Using render_template() function"
       },
       {
-        "id": "3-2-7-before-request",
-        "front": "How do you run code before each request?",
-        "back": "@app.before_request\ndef before_request():\n    # Code to run before each request\n    pass"
+        "id": "3",
+        "front": "Where are templates stored?",
+        "back": "In the templates/ directory"
       },
       {
-        "id": "3-2-8-flask-testing",
-        "front": "How do you test a Flask application?",
-        "back": "import unittest\nfrom app import app\n\nclass FlaskTestCase(unittest.TestCase):\n    def setUp(self):\n        self.app = app.test_client()\n    \n    def test_home(self):\n        response = self.app.get('/')\n        self.assertEqual(response.status_code, 200)"
+        "id": "4",
+        "front": "What is template inheritance?",
+        "back": "Child templates extending and overriding parent templates"
+      },
+      {
+        "id": "5",
+        "front": "How do you pass variables to templates?",
+        "back": "As keyword arguments to render_template()"
+      }
+    ]
+  },
+  {
+    "id": "4",
+    "title": "Request Handling",
+    "description": "Processing HTTP requests in Flask",
+    "cards": [
+      {
+        "id": "1",
+        "front": "What is the request object?",
+        "back": "An object containing information about the current HTTP request"
+      },
+      {
+        "id": "2",
+        "front": "How do you access form data?",
+        "back": "Using request.form"
+      },
+      {
+        "id": "3",
+        "front": "How do you access query parameters?",
+        "back": "Using request.args"
+      },
+      {
+        "id": "4",
+        "front": "What is request.method?",
+        "back": "The HTTP method of the request (GET, POST, etc.)"
+      },
+      {
+        "id": "5",
+        "front": "How do you access JSON data?",
+        "back": "Using request.get_json()"
+      }
+    ]
+  },
+  {
+    "id": "5",
+    "title": "Response Handling",
+    "description": "Creating HTTP responses in Flask",
+    "cards": [
+      {
+        "id": "1",
+        "front": "How do you return a string response?",
+        "back": "By returning the string directly from the view function"
+      },
+      {
+        "id": "2",
+        "front": "What is make_response() for?",
+        "back": "Creating custom Response objects with status codes and headers"
+      },
+      {
+        "id": "3",
+        "front": "How do you set response headers?",
+        "back": "Using response.headers attribute"
+      },
+      {
+        "id": "4",
+        "front": "What is jsonify() used for?",
+        "back": "Converting dictionaries to JSON response objects"
+      },
+      {
+        "id": "5",
+        "front": "What is the default success status code?",
+        "back": "200 OK"
+      }
+    ]
+  },
+  {
+    "id": "6",
+    "title": "Flask Extensions",
+    "description": "Popular Flask extensions and their uses",
+    "cards": [
+      {
+        "id": "1",
+        "front": "What is Flask-WTF?",
+        "back": "A form handling extension with CSRF protection"
+      },
+      {
+        "id": "2",
+        "front": "What is Flask-SQLAlchemy?",
+        "back": "An ORM extension for database operations"
+      },
+      {
+        "id": "3",
+        "front": "What is Flask-Login?",
+        "back": "An extension for user authentication and session management"
+      },
+      {
+        "id": "4",
+        "front": "What is Flask-Mail?",
+        "back": "An extension for sending emails"
+      },
+      {
+        "id": "5",
+        "front": "How do you initialize extensions?",
+        "back": "Using extension.init_app(app) or extension(app)"
+      }
+    ]
+  },
+  {
+    "id": "7",
+    "title": "Database Integration",
+    "description": "Working with databases in Flask",
+    "cards": [
+      {
+        "id": "1",
+        "front": "What is SQLAlchemy?",
+        "back": "A Python SQL toolkit and Object-Relational Mapping library"
+      },
+      {
+        "id": "2",
+        "front": "How do you define models?",
+        "back": "By inheriting from db.Model in Flask-SQLAlchemy"
+      },
+      {
+        "id": "3",
+        "front": "What is Flask-Migrate?",
+        "back": "A database migration tool for schema changes"
+      },
+      {
+        "id": "4",
+        "front": "What does CRUD stand for?",
+        "back": "Create, Read, Update, Delete"
+      },
+      {
+        "id": "5",
+        "front": "How do you query the database?",
+        "back": "Using Model.query or db.session.query()"
+      }
+    ]
+  },
+  {
+    "id": "8",
+    "title": "Authentication",
+    "description": "User authentication and security in Flask",
+    "cards": [
+      {
+        "id": "1",
+        "front": "What is Flask-Login?",
+        "back": "An extension for managing user authentication and sessions"
+      },
+      {
+        "id": "2",
+        "front": "What is generate_password_hash()?",
+        "back": "A function for securely hashing passwords"
+      },
+      {
+        "id": "3",
+        "front": "What is CSRF protection?",
+        "back": "Protection against Cross-Site Request Forgery attacks"
+      },
+      {
+        "id": "4",
+        "front": "What is the session object?",
+        "back": "Stores user-specific data across requests"
+      },
+      {
+        "id": "5",
+        "front": "What does @login_required do?",
+        "back": "Restricts access to authenticated users only"
+      }
+    ]
+  },
+  {
+    "id": "9",
+    "title": "Error Handling",
+    "description": "Handling errors and exceptions in Flask",
+    "cards": [
+      {
+        "id": "1",
+        "front": "How do you register error handlers?",
+        "back": "Using @app.errorhandler() decorator"
+      },
+      {
+        "id": "2",
+        "front": "What is the default 404 page?",
+        "back": "A simple Not Found page in development mode"
+      },
+      {
+        "id": "3",
+        "front": "What is app.logger?",
+        "back": "Flask's built-in logging system"
+      },
+      {
+        "id": "4",
+        "front": "How do you enable debug mode?",
+        "back": "app.run(debug=True) or app.debug = True"
+      },
+      {
+        "id": "5",
+        "front": "What is try-except used for?",
+        "back": "Catching and handling exceptions in Python code"
+      }
+    ]
+  },
+  {
+    "id": "10",
+    "title": "Deployment",
+    "description": "Deploying Flask applications to production",
+    "cards": [
+      {
+        "id": "1",
+        "front": "What is the recommended WSGI server?",
+        "back": "Gunicorn"
+      },
+      {
+        "id": "2",
+        "front": "What is Docker used for?",
+        "back": "Containerizing applications for consistent deployment"
+      },
+      {
+        "id": "3",
+        "front": "What are environment variables for?",
+        "back": "Storing configuration that varies between environments"
+      },
+      {
+        "id": "4",
+        "front": "Why is HTTPS important?",
+        "back": "Provides encrypted communication between client and server"
+      },
+      {
+        "id": "5",
+        "front": "What is production monitoring?",
+        "back": "Tracking application performance, errors, and resources"
       }
     ]
   }

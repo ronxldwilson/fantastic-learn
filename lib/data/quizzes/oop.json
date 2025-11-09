@@ -1,6 +1,6 @@
 [
   {
-    "id": "classes-objects",
+    "id": "1",
     "title": "Classes and Objects",
     "description": "Test your understanding of classes and objects in Python.",
     "difficulty": "intermediate",
@@ -9,7 +9,12 @@
         "id": "1",
         "type": "multiple-choice",
         "question": "What is a class in Python?",
-        "options": ["A blueprint for creating objects", "An instance of an object", "A built-in data type", "A function definition"],
+        "options": [
+          "A blueprint for creating objects",
+          "An instance of an object",
+          "A built-in data type",
+          "A function definition"
+        ],
         "correctAnswer": "A blueprint for creating objects",
         "explanation": "A class is a blueprint or template for creating objects that defines their structure and behavior."
       },
@@ -24,7 +29,12 @@
         "id": "3",
         "type": "multiple-choice",
         "question": "What is an object in Python?",
-        "options": ["An instance of a class", "A class definition", "A module", "A function"],
+        "options": [
+          "An instance of a class",
+          "A class definition",
+          "A module",
+          "A function"
+        ],
         "correctAnswer": "An instance of a class",
         "explanation": "An object is an instance of a class that has its own attributes and methods."
       },
@@ -39,14 +49,19 @@
         "id": "5",
         "type": "multiple-choice",
         "question": "What is the purpose of the __init__ method?",
-        "options": ["To initialize object attributes", "To create class methods", "To define class variables", "To inherit from parent classes"],
+        "options": [
+          "To initialize object attributes",
+          "To create class methods",
+          "To define class variables",
+          "To inherit from parent classes"
+        ],
         "correctAnswer": "To initialize object attributes",
         "explanation": "The __init__ method is called when an object is created and is used to initialize the object's attributes."
       }
     ]
   },
   {
-    "id": "inheritance",
+    "id": "2",
     "title": "Inheritance",
     "description": "Practice with inheritance concepts in Python.",
     "difficulty": "intermediate",
@@ -55,7 +70,12 @@
         "id": "1",
         "type": "multiple-choice",
         "question": "What does inheritance allow in OOP?",
-        "options": ["A class to inherit attributes and methods from another class", "Objects to share methods", "Classes to be converted to objects", "Methods to be called without instances"],
+        "options": [
+          "A class to inherit attributes and methods from another class",
+          "Objects to share methods",
+          "Classes to be converted to objects",
+          "Methods to be called without instances"
+        ],
         "correctAnswer": "A class to inherit attributes and methods from another class",
         "explanation": "Inheritance allows a child class to inherit properties and methods from a parent class."
       },
@@ -70,7 +90,12 @@
         "id": "3",
         "type": "multiple-choice",
         "question": "What is method overriding?",
-        "options": ["Redefining a parent class method in a child class", "Calling a parent method from a child", "Creating new methods in child classes", "Deleting methods from parent classes"],
+        "options": [
+          "Redefining a parent class method in a child class",
+          "Calling a parent method from a child",
+          "Creating new methods in child classes",
+          "Deleting methods from parent classes"
+        ],
         "correctAnswer": "Redefining a parent class method in a child class",
         "explanation": "Method overriding allows a child class to provide its own implementation of a method defined in the parent class."
       },
@@ -92,7 +117,12 @@
         "id": "6",
         "type": "multiple-choice",
         "question": "What is encapsulation in OOP?",
-        "options": ["Hiding internal details", "Combining data and methods", "Inheriting from parent classes", "Overriding methods"],
+        "options": [
+          "Hiding internal details",
+          "Combining data and methods",
+          "Inheriting from parent classes",
+          "Overriding methods"
+        ],
         "correctAnswer": "Hiding internal details",
         "explanation": "Encapsulation hides the internal implementation details of a class from outside access."
       },
@@ -121,7 +151,12 @@
         "id": "10",
         "type": "multiple-choice",
         "question": "What is the MRO in Python?",
-        "options": ["Method Resolution Order", "Multiple Return Objects", "Method Return Override", "Module Reference Object"],
+        "options": [
+          "Method Resolution Order",
+          "Multiple Return Objects",
+          "Method Return Override",
+          "Module Reference Object"
+        ],
         "correctAnswer": "Method Resolution Order",
         "explanation": "MRO determines the order in which base classes are searched when looking for a method."
       },
@@ -157,7 +192,12 @@
         "id": "15",
         "type": "multiple-choice",
         "question": "What is a class method in Python?",
-        "options": ["A method that works on instances", "A method that works on the class", "A static method", "A private method"],
+        "options": [
+          "A method that works on instances",
+          "A method that works on the class",
+          "A static method",
+          "A private method"
+        ],
         "correctAnswer": "A method that works on the class",
         "explanation": "Class methods are decorated with @classmethod and take 'cls' as the first parameter."
       },
@@ -172,7 +212,12 @@
         "id": "17",
         "type": "multiple-choice",
         "question": "What is a static method?",
-        "options": ["A method that doesn't access instance or class data", "A method that accesses class data", "A method that accesses instance data", "A private method"],
+        "options": [
+          "A method that doesn't access instance or class data",
+          "A method that accesses class data",
+          "A method that accesses instance data",
+          "A private method"
+        ],
         "correctAnswer": "A method that doesn't access instance or class data",
         "explanation": "Static methods are decorated with @staticmethod and don't take self or cls parameters."
       },
@@ -201,7 +246,12 @@
         "id": "21",
         "type": "multiple-choice",
         "question": "What is the __str__ method used for?",
-        "options": ["String representation for end users", "Internal string representation", "Both", "Neither"],
+        "options": [
+          "String representation for end users",
+          "Internal string representation",
+          "Both",
+          "Neither"
+        ],
         "correctAnswer": "String representation for end users",
         "explanation": "__str__ should return a readable string representation, while __repr__ is for developers."
       },
@@ -223,7 +273,12 @@
         "id": "24",
         "type": "multiple-choice",
         "question": "What is the Liskov Substitution Principle?",
-        "options": ["Subclasses should be substitutable for their parent classes", "Classes should depend on abstractions", "Software should be open for extension", "High-level modules shouldn't depend on low-level modules"],
+        "options": [
+          "Subclasses should be substitutable for their parent classes",
+          "Classes should depend on abstractions",
+          "Software should be open for extension",
+          "High-level modules shouldn't depend on low-level modules"
+        ],
         "correctAnswer": "Subclasses should be substitutable for their parent classes",
         "explanation": "The Liskov Substitution Principle states that objects of a superclass should be replaceable with objects of a subclass without breaking the program."
       },
@@ -245,7 +300,12 @@
         "id": "27",
         "type": "multiple-choice",
         "question": "What is a mixin class?",
-        "options": ["A class designed to be inherited with other classes", "A class with only static methods", "A class with no methods", "An abstract base class"],
+        "options": [
+          "A class designed to be inherited with other classes",
+          "A class with only static methods",
+          "A class with no methods",
+          "An abstract base class"
+        ],
         "correctAnswer": "A class designed to be inherited with other classes",
         "explanation": "Mixin classes provide specific functionality that can be combined with other classes through multiple inheritance."
       },
@@ -267,7 +327,12 @@
         "id": "30",
         "type": "multiple-choice",
         "question": "What is the difference between isinstance() and issubclass()?",
-        "options": ["isinstance checks objects, issubclass checks classes", "They are the same", "isinstance works on classes, issubclass on objects", "Neither checks inheritance"],
+        "options": [
+          "isinstance checks objects, issubclass checks classes",
+          "They are the same",
+          "isinstance works on classes, issubclass on objects",
+          "Neither checks inheritance"
+        ],
         "correctAnswer": "isinstance checks objects, issubclass checks classes",
         "explanation": "isinstance(obj, cls) checks if obj is an instance of cls, issubclass(child, parent) checks class inheritance."
       }

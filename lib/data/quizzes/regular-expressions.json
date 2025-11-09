@@ -1,6 +1,6 @@
 [
   {
-    "id": "regex-basics",
+    "id": "1",
     "title": "Regular Expressions Basics",
     "description": "Learn the fundamentals of regular expressions in Python.",
     "difficulty": "advanced",
@@ -23,7 +23,12 @@
         "id": "3",
         "type": "multiple-choice",
         "question": "What does the pattern 'a.b' match?",
-        "options": ["'a' followed by any character followed by 'b'", "'a.b' literally", "'ab' with a dot", "'a' or 'b'"],
+        "options": [
+          "'a' followed by any character followed by 'b'",
+          "'a.b' literally",
+          "'ab' with a dot",
+          "'a' or 'b'"
+        ],
         "correctAnswer": "'a' followed by any character followed by 'b'",
         "explanation": "The dot (.) matches any single character except newline."
       },
@@ -45,7 +50,12 @@
         "id": "6",
         "type": "multiple-choice",
         "question": "What does [abc] match?",
-        "options": ["'abc' literally", "Any of a, b, or c", "'a' followed by 'b' followed by 'c'", "Nothing"],
+        "options": [
+          "'abc' literally",
+          "Any of a, b, or c",
+          "'a' followed by 'b' followed by 'c'",
+          "Nothing"
+        ],
         "correctAnswer": "Any of a, b, or c",
         "explanation": "Character classes [abc] match any single character within the brackets."
       },
@@ -81,7 +91,12 @@
         "id": "11",
         "type": "multiple-choice",
         "question": "What does re.match() do?",
-        "options": ["Finds all matches", "Matches from the beginning", "Replaces matches", "Splits on matches"],
+        "options": [
+          "Finds all matches",
+          "Matches from the beginning",
+          "Replaces matches",
+          "Splits on matches"
+        ],
         "correctAnswer": "Matches from the beginning",
         "explanation": "re.match() only matches from the beginning of the string."
       },
@@ -89,7 +104,12 @@
         "id": "12",
         "type": "multiple-choice",
         "question": "What does re.search() do?",
-        "options": ["Finds all matches", "Matches from the beginning only", "Finds the first match anywhere", "Replaces matches"],
+        "options": [
+          "Finds all matches",
+          "Matches from the beginning only",
+          "Finds the first match anywhere",
+          "Replaces matches"
+        ],
         "correctAnswer": "Finds the first match anywhere",
         "explanation": "re.search() finds the first match anywhere in the string."
       },
@@ -97,7 +117,12 @@
         "id": "13",
         "type": "multiple-choice",
         "question": "What does re.findall() return?",
-        "options": ["A match object", "A list of all matches", "The first match", "Boolean"],
+        "options": [
+          "A match object",
+          "A list of all matches",
+          "The first match",
+          "Boolean"
+        ],
         "correctAnswer": "A list of all matches",
         "explanation": "re.findall() returns a list of all non-overlapping matches."
       },
@@ -140,7 +165,12 @@
         "id": "19",
         "type": "multiple-choice",
         "question": "What is the difference between greedy and non-greedy matching?",
-        "options": ["Greedy matches as much as possible, non-greedy as little as possible", "Non-greedy is faster", "They are the same", "Greedy uses more memory"],
+        "options": [
+          "Greedy matches as much as possible, non-greedy as little as possible",
+          "Non-greedy is faster",
+          "They are the same",
+          "Greedy uses more memory"
+        ],
         "correctAnswer": "Greedy matches as much as possible, non-greedy as little as possible",
         "explanation": "Greedy quantifiers (*, +, {}) match as much as possible, non-greedy versions (*?, +?, {}?) match as little as possible."
       },

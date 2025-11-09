@@ -1,6 +1,6 @@
 [
   {
-    "id": "conditionals",
+    "id": "1",
     "title": "Conditional Statements",
     "description": "Master if-else statements and conditional logic.",
     "difficulty": "beginner",
@@ -9,7 +9,12 @@
         "id": "1",
         "type": "multiple-choice",
         "question": "Which keyword is used to start a conditional statement?",
-        "options": ["for", "while", "if", "def"],
+        "options": [
+          "for",
+          "while",
+          "if",
+          "def"
+        ],
         "correctAnswer": "if",
         "explanation": "The 'if' keyword starts a conditional statement that executes code based on a condition."
       },
@@ -24,7 +29,12 @@
         "id": "3",
         "type": "multiple-choice",
         "question": "What is the purpose of the else clause?",
-        "options": ["To execute code when the if condition is false", "To create nested conditions", "To repeat code execution", "To define functions"],
+        "options": [
+          "To execute code when the if condition is false",
+          "To create nested conditions",
+          "To repeat code execution",
+          "To define functions"
+        ],
         "correctAnswer": "To execute code when the if condition is false",
         "explanation": "The else clause provides an alternative code path when the if condition evaluates to false."
       },
@@ -39,7 +49,12 @@
         "id": "5",
         "type": "multiple-choice",
         "question": "What values are considered falsy in Python?",
-        "options": ["0, empty containers, None, False", "1, non-empty containers, True", "All numbers except 0", "Only None"],
+        "options": [
+          "0, empty containers, None, False",
+          "1, non-empty containers, True",
+          "All numbers except 0",
+          "Only None"
+        ],
         "correctAnswer": "0, empty containers, None, False",
         "explanation": "False, None, 0, 0.0, empty strings/lists/dicts/sets are falsy."
       },
@@ -54,7 +69,12 @@
         "id": "7",
         "type": "multiple-choice",
         "question": "What is short-circuit evaluation?",
-        "options": ["and stops at first False, or stops at first True", "Both and and or evaluate all conditions", "Only or short-circuits", "Only and short-circuits"],
+        "options": [
+          "and stops at first False, or stops at first True",
+          "Both and and or evaluate all conditions",
+          "Only or short-circuits",
+          "Only and short-circuits"
+        ],
         "correctAnswer": "and stops at first False, or stops at first True",
         "explanation": "and returns False immediately if any operand is False, or returns True immediately if any operand is True."
       },
@@ -69,7 +89,12 @@
         "id": "9",
         "type": "multiple-choice",
         "question": "Can you have multiple elif statements?",
-        "options": ["Yes, as many as needed", "No, only one elif allowed", "Only if else is present", "Only for numeric comparisons"],
+        "options": [
+          "Yes, as many as needed",
+          "No, only one elif allowed",
+          "Only if else is present",
+          "Only for numeric comparisons"
+        ],
         "correctAnswer": "Yes, as many as needed",
         "explanation": "You can chain multiple elif statements to check different conditions."
       },
@@ -84,7 +109,12 @@
         "id": "11",
         "type": "multiple-choice",
         "question": "What happens if you have an if without else?",
-        "options": ["Syntax error", "Code after if never executes", "It's valid, else is optional", "Program crashes"],
+        "options": [
+          "Syntax error",
+          "Code after if never executes",
+          "It's valid, else is optional",
+          "Program crashes"
+        ],
         "correctAnswer": "It's valid, else is optional",
         "explanation": "The else clause is optional in Python conditional statements."
       },
@@ -99,7 +129,12 @@
         "id": "13",
         "type": "multiple-choice",
         "question": "What is truthiness in Python?",
-        "options": ["All non-zero values are True", "Only True and False exist", "Non-zero numbers, non-empty containers are truthy", "Only boolean True is truthy"],
+        "options": [
+          "All non-zero values are True",
+          "Only True and False exist",
+          "Non-zero numbers, non-empty containers are truthy",
+          "Only boolean True is truthy"
+        ],
         "correctAnswer": "Non-zero numbers, non-empty containers are truthy",
         "explanation": "Any non-zero number, non-empty string/list/dict/set, and True are truthy."
       },
@@ -114,14 +149,19 @@
         "id": "15",
         "type": "multiple-choice",
         "question": "What is the difference between '==' and 'is'?",
-        "options": ["'==' compares values, 'is' compares identity", "'is' compares values, '==' compares identity", "They are the same", "Only 'is' works with numbers"],
+        "options": [
+          "'==' compares values, 'is' compares identity",
+          "'is' compares values, '==' compares identity",
+          "They are the same",
+          "Only 'is' works with numbers"
+        ],
         "correctAnswer": "'==' compares values, 'is' compares identity",
         "explanation": "'==' checks if values are equal, 'is' checks if they are the same object in memory."
       }
     ]
   },
   {
-    "id": "loops",
+    "id": "2",
     "title": "Loops",
     "description": "Learn about for and while loops in Python.",
     "difficulty": "beginner",
@@ -130,7 +170,12 @@
         "id": "1",
         "type": "multiple-choice",
         "question": "Which loop is best for iterating over a sequence?",
-        "options": ["while", "for", "if", "def"],
+        "options": [
+          "while",
+          "for",
+          "if",
+          "def"
+        ],
         "correctAnswer": "for",
         "explanation": "For loops are ideal for iterating over sequences like lists, strings, or ranges."
       },
@@ -145,7 +190,12 @@
         "id": "3",
         "type": "multiple-choice",
         "question": "What is the difference between break and continue?",
-        "options": ["break exits the loop, continue skips to next iteration", "continue exits the loop, break skips iteration", "Both do the same thing", "Neither affects loop execution"],
+        "options": [
+          "break exits the loop, continue skips to next iteration",
+          "continue exits the loop, break skips iteration",
+          "Both do the same thing",
+          "Neither affects loop execution"
+        ],
         "correctAnswer": "break exits the loop, continue skips to next iteration",
         "explanation": "break terminates the loop entirely, while continue skips the current iteration and moves to the next."
       },
@@ -167,7 +217,12 @@
         "id": "6",
         "type": "multiple-choice",
         "question": "What does range(5) generate?",
-        "options": ["[0, 1, 2, 3, 4, 5]", "[1, 2, 3, 4, 5]", "[0, 1, 2, 3, 4]", "[5, 4, 3, 2, 1, 0]"],
+        "options": [
+          "[0, 1, 2, 3, 4, 5]",
+          "[1, 2, 3, 4, 5]",
+          "[0, 1, 2, 3, 4]",
+          "[5, 4, 3, 2, 1, 0]"
+        ],
         "correctAnswer": "[0, 1, 2, 3, 4]",
         "explanation": "range(n) generates numbers from 0 to n-1."
       },
@@ -189,7 +244,12 @@
         "id": "9",
         "type": "multiple-choice",
         "question": "What does zip() do in a for loop?",
-        "options": ["Combines multiple iterables", "Creates a zipper object", "Compresses data", "Speeds up loops"],
+        "options": [
+          "Combines multiple iterables",
+          "Creates a zipper object",
+          "Compresses data",
+          "Speeds up loops"
+        ],
         "correctAnswer": "Combines multiple iterables",
         "explanation": "zip() takes multiple iterables and returns tuples combining elements from each."
       },
@@ -211,7 +271,12 @@
         "id": "12",
         "type": "multiple-choice",
         "question": "What happens if you modify a list while iterating over it?",
-        "options": ["It's safe and recommended", "Can cause unexpected behavior or errors", "The list becomes empty", "Nothing happens"],
+        "options": [
+          "It's safe and recommended",
+          "Can cause unexpected behavior or errors",
+          "The list becomes empty",
+          "Nothing happens"
+        ],
         "correctAnswer": "Can cause unexpected behavior or errors",
         "explanation": "Modifying a list while iterating can skip elements or cause IndexError."
       },
@@ -233,14 +298,19 @@
         "id": "15",
         "type": "multiple-choice",
         "question": "What is the else clause in loops used for?",
-        "options": ["Handles exceptions", "Executes when loop completes normally", "Provides default values", "Creates nested loops"],
+        "options": [
+          "Handles exceptions",
+          "Executes when loop completes normally",
+          "Provides default values",
+          "Creates nested loops"
+        ],
         "correctAnswer": "Executes when loop completes normally",
         "explanation": "The else clause executes after the loop finishes, but not if break was used."
       }
     ]
   },
   {
-    "id": "loop-control-statements",
+    "id": "3",
     "title": "Loop Control Statements",
     "description": "Master break, continue, and pass statements.",
     "difficulty": "intermediate",
@@ -249,7 +319,12 @@
         "id": "1",
         "type": "multiple-choice",
         "question": "What does the break statement do?",
-        "options": ["Skips current iteration", "Exits the loop immediately", "Restarts the loop", "Slows down execution"],
+        "options": [
+          "Skips current iteration",
+          "Exits the loop immediately",
+          "Restarts the loop",
+          "Slows down execution"
+        ],
         "correctAnswer": "Exits the loop immediately",
         "explanation": "break terminates the innermost loop and continues execution after the loop."
       },
@@ -257,7 +332,12 @@
         "id": "2",
         "type": "multiple-choice",
         "question": "What does the continue statement do?",
-        "options": ["Exits the loop", "Skips to next iteration", "Restarts current iteration", "Ends the program"],
+        "options": [
+          "Exits the loop",
+          "Skips to next iteration",
+          "Restarts current iteration",
+          "Ends the program"
+        ],
         "correctAnswer": "Skips to next iteration",
         "explanation": "continue skips the rest of the current iteration and moves to the next one."
       },
@@ -286,7 +366,12 @@
         "id": "6",
         "type": "multiple-choice",
         "question": "Does break work in nested loops?",
-        "options": ["Only in the outermost loop", "Only in the innermost loop", "In all loops", "Breaks don't work in nested loops"],
+        "options": [
+          "Only in the outermost loop",
+          "Only in the innermost loop",
+          "In all loops",
+          "Breaks don't work in nested loops"
+        ],
         "correctAnswer": "Only in the innermost loop",
         "explanation": "break only exits the innermost loop containing the break statement."
       },
@@ -301,7 +386,12 @@
         "id": "8",
         "type": "multiple-choice",
         "question": "What happens to the else clause when break is executed?",
-        "options": ["It still executes", "It never executes", "It executes only for break", "Program crashes"],
+        "options": [
+          "It still executes",
+          "It never executes",
+          "It executes only for break",
+          "Program crashes"
+        ],
         "correctAnswer": "It never executes",
         "explanation": "The else clause only executes if the loop completes normally without break."
       },
@@ -316,7 +406,12 @@
         "id": "10",
         "type": "multiple-choice",
         "question": "Can continue be used in while loops?",
-        "options": ["No, only in for loops", "Yes, in both for and while loops", "Only in infinite while loops", "Only in conditional while loops"],
+        "options": [
+          "No, only in for loops",
+          "Yes, in both for and while loops",
+          "Only in infinite while loops",
+          "Only in conditional while loops"
+        ],
         "correctAnswer": "Yes, in both for and while loops",
         "explanation": "continue works in both for and while loops to skip to the next iteration."
       },
@@ -338,7 +433,12 @@
         "id": "13",
         "type": "multiple-choice",
         "question": "What is the difference between break in for vs while loops?",
-        "options": ["Different in for loops", "Same behavior in both", "Only works in while loops", "Causes different errors"],
+        "options": [
+          "Different in for loops",
+          "Same behavior in both",
+          "Only works in while loops",
+          "Causes different errors"
+        ],
         "correctAnswer": "Same behavior in both",
         "explanation": "break works identically in for and while loops - it exits the loop."
       },
@@ -353,14 +453,19 @@
         "id": "15",
         "type": "multiple-choice",
         "question": "Can pass be used outside of class definitions?",
-        "options": ["No, only in classes", "Yes, anywhere a statement is needed", "Only in functions", "Only at module level"],
+        "options": [
+          "No, only in classes",
+          "Yes, anywhere a statement is needed",
+          "Only in functions",
+          "Only at module level"
+        ],
         "correctAnswer": "Yes, anywhere a statement is needed",
         "explanation": "pass can be used anywhere Python expects a statement but you want to do nothing."
       }
     ]
   },
   {
-    "id": "nested-control-structures",
+    "id": "4",
     "title": "Nested Control Structures",
     "description": "Working with nested conditionals and loops.",
     "difficulty": "intermediate",
@@ -383,7 +488,12 @@
         "id": "3",
         "type": "multiple-choice",
         "question": "What is the maximum recommended nesting level?",
-        "options": ["1 level", "2-3 levels", "Unlimited", "5 levels"],
+        "options": [
+          "1 level",
+          "2-3 levels",
+          "Unlimited",
+          "5 levels"
+        ],
         "correctAnswer": "2-3 levels",
         "explanation": "Deep nesting (more than 3-4 levels) makes code hard to read and maintain."
       },
@@ -398,7 +508,12 @@
         "id": "5",
         "type": "multiple-choice",
         "question": "How do indentation levels work in nested structures?",
-        "options": ["Each level adds 2 spaces", "Each level adds 4 spaces", "Indentation is flexible", "No indentation needed"],
+        "options": [
+          "Each level adds 2 spaces",
+          "Each level adds 4 spaces",
+          "Indentation is flexible",
+          "No indentation needed"
+        ],
         "correctAnswer": "Each level adds 4 spaces",
         "explanation": "Python uses 4 spaces per indentation level by convention."
       },
@@ -420,7 +535,12 @@
         "id": "8",
         "type": "multiple-choice",
         "question": "How can you reduce nesting in conditionals?",
-        "options": ["Use more indentation", "Use early returns", "Add more comments", "Use longer variable names"],
+        "options": [
+          "Use more indentation",
+          "Use early returns",
+          "Add more comments",
+          "Use longer variable names"
+        ],
         "correctAnswer": "Use early returns",
         "explanation": "Early returns can flatten nested if statements."
       },
@@ -435,7 +555,12 @@
         "id": "10",
         "type": "multiple-choice",
         "question": "What is the scope of variables in nested blocks?",
-        "options": ["Only accessible in their block", "Accessible in outer blocks too", "Global scope only", "No scope rules"],
+        "options": [
+          "Only accessible in their block",
+          "Accessible in outer blocks too",
+          "Global scope only",
+          "No scope rules"
+        ],
         "correctAnswer": "Accessible in outer blocks too",
         "explanation": "Inner blocks can access variables from outer blocks (LEGB rule)."
       },
@@ -457,7 +582,12 @@
         "id": "13",
         "type": "multiple-choice",
         "question": "Can you have while loops inside for loops?",
-        "options": ["No, not allowed", "Yes, any combination works", "Only for inside while", "Causes syntax error"],
+        "options": [
+          "No, not allowed",
+          "Yes, any combination works",
+          "Only for inside while",
+          "Causes syntax error"
+        ],
         "correctAnswer": "Yes, any combination works",
         "explanation": "You can nest any control structures: for in while, while in for, etc."
       },
@@ -472,14 +602,19 @@
         "id": "15",
         "type": "multiple-choice",
         "question": "What is the main drawback of nested control structures?",
-        "options": ["Slower execution", "Increased complexity", "More memory usage", "Syntax errors"],
+        "options": [
+          "Slower execution",
+          "Increased complexity",
+          "More memory usage",
+          "Syntax errors"
+        ],
         "correctAnswer": "Increased complexity",
         "explanation": "Nested structures increase cognitive load and make code harder to understand."
       }
     ]
   },
   {
-    "id": "advanced-control-flow",
+    "id": "5",
     "title": "Advanced Control Flow",
     "description": "Context managers, comprehensions, and modern Python features.",
     "difficulty": "advanced",
@@ -544,7 +679,12 @@
         "id": "9",
         "type": "multiple-choice",
         "question": "What is the difference between list and generator comprehensions?",
-        "options": ["List creates list immediately, generator is lazy", "Generator is faster", "List uses more memory", "Both create the same thing"],
+        "options": [
+          "List creates list immediately, generator is lazy",
+          "Generator is faster",
+          "List uses more memory",
+          "Both create the same thing"
+        ],
         "correctAnswer": "List creates list immediately, generator is lazy",
         "explanation": "List comprehensions create entire lists, generators yield values on demand."
       },
@@ -573,7 +713,12 @@
         "id": "13",
         "type": "multiple-choice",
         "question": "Can context managers be nested?",
-        "options": ["No, only one at a time", "Yes, with multiple with statements", "Only in Python 3.7+", "Causes syntax error"],
+        "options": [
+          "No, only one at a time",
+          "Yes, with multiple with statements",
+          "Only in Python 3.7+",
+          "Causes syntax error"
+        ],
         "correctAnswer": "Yes, with multiple with statements",
         "explanation": "You can nest with statements or use commas: with A() as a, B() as b:"
       },
@@ -594,7 +739,7 @@
     ]
   },
   {
-    "id": "control-flow-patterns",
+    "id": "6",
     "title": "Control Flow Patterns",
     "description": "Common patterns and idioms in Python control flow.",
     "difficulty": "intermediate",
@@ -624,7 +769,12 @@
         "id": "4",
         "type": "multiple-choice",
         "question": "What is an 'infinite loop with break' pattern used for?",
-        "options": ["Creating bugs", "Menu systems and user input", "Mathematical calculations", "File processing"],
+        "options": [
+          "Creating bugs",
+          "Menu systems and user input",
+          "Mathematical calculations",
+          "File processing"
+        ],
         "correctAnswer": "Menu systems and user input",
         "explanation": "Infinite loops with break are common for interactive programs."
       },
@@ -653,7 +803,12 @@
         "id": "8",
         "type": "multiple-choice",
         "question": "What is defensive programming in loops?",
-        "options": ["Adding lots of if statements", "Validating inputs and handling edge cases", "Using only while loops", "Avoiding for loops"],
+        "options": [
+          "Adding lots of if statements",
+          "Validating inputs and handling edge cases",
+          "Using only while loops",
+          "Avoiding for loops"
+        ],
         "correctAnswer": "Validating inputs and handling edge cases",
         "explanation": "Defensive programming anticipates and handles error conditions."
       },
@@ -682,7 +837,12 @@
         "id": "12",
         "type": "multiple-choice",
         "question": "What is the 'EAFP' principle?",
-        "options": ["Easier to Ask for Forgiveness than Permission", "Error After Function Processing", "Early Function Argument Processing", "Exception And Function Pattern"],
+        "options": [
+          "Easier to Ask for Forgiveness than Permission",
+          "Error After Function Processing",
+          "Early Function Argument Processing",
+          "Exception And Function Pattern"
+        ],
         "correctAnswer": "Easier to Ask for Forgiveness than Permission",
         "explanation": "Try operations first, handle exceptions rather than checking preconditions."
       },
@@ -704,14 +864,19 @@
         "id": "15",
         "type": "multiple-choice",
         "question": "When should you prefer EAFP over LBYL?",
-        "options": ["For simple checks", "When operations are atomic", "For complex preconditions", "When performance is critical"],
+        "options": [
+          "For simple checks",
+          "When operations are atomic",
+          "For complex preconditions",
+          "When performance is critical"
+        ],
         "correctAnswer": "When operations are atomic",
         "explanation": "EAFP works well when the check and action are atomic operations."
       }
     ]
   },
   {
-    "id": "control-flow-best-practices",
+    "id": "7",
     "title": "Control Flow Best Practices",
     "description": "Guidelines for writing clean and maintainable control flow.",
     "difficulty": "intermediate",
@@ -720,7 +885,12 @@
         "id": "1",
         "type": "multiple-choice",
         "question": "What's the recommended maximum nesting level?",
-        "options": ["1 level", "2-3 levels", "5 levels", "Unlimited"],
+        "options": [
+          "1 level",
+          "2-3 levels",
+          "5 levels",
+          "Unlimited"
+        ],
         "correctAnswer": "2-3 levels",
         "explanation": "Deep nesting makes code hard to read and understand."
       },
@@ -735,7 +905,12 @@
         "id": "3",
         "type": "multiple-choice",
         "question": "Should you use else clauses in loops?",
-        "options": ["Always", "Never", "Only when necessary", "Only for while loops"],
+        "options": [
+          "Always",
+          "Never",
+          "Only when necessary",
+          "Only for while loops"
+        ],
         "correctAnswer": "Only when necessary",
         "explanation": "else in loops can be confusing - use when you need to distinguish normal vs break exit."
       },
@@ -750,7 +925,12 @@
         "id": "5",
         "type": "multiple-choice",
         "question": "How should you handle complex conditions?",
-        "options": ["One long line", "Extract to variables or functions", "Use nested ifs", "Ignore complexity"],
+        "options": [
+          "One long line",
+          "Extract to variables or functions",
+          "Use nested ifs",
+          "Ignore complexity"
+        ],
         "correctAnswer": "Extract to variables or functions",
         "explanation": "Complex conditions should be extracted to well-named variables or functions."
       },
@@ -772,7 +952,12 @@
         "id": "8",
         "type": "multiple-choice",
         "question": "How should you modify a list during iteration?",
-        "options": ["Modify in place carefully", "Create a new list", "Use while loop with indices", "Don't modify during iteration"],
+        "options": [
+          "Modify in place carefully",
+          "Create a new list",
+          "Use while loop with indices",
+          "Don't modify during iteration"
+        ],
         "correctAnswer": "Create a new list",
         "explanation": "Safest approach is to create a new list with the modifications."
       },
@@ -794,7 +979,12 @@
         "id": "11",
         "type": "multiple-choice",
         "question": "Should you optimize loops prematurely?",
-        "options": ["Yes, always", "No, profile first", "Only for large datasets", "Only for simple loops"],
+        "options": [
+          "Yes, always",
+          "No, profile first",
+          "Only for large datasets",
+          "Only for simple loops"
+        ],
         "correctAnswer": "No, profile first",
         "explanation": "Optimize only after identifying actual bottlenecks through profiling."
       },
@@ -809,7 +999,12 @@
         "id": "13",
         "type": "multiple-choice",
         "question": "When should you use for loops vs while loops?",
-        "options": ["Always use for loops", "Always use while loops", "Use for when you know iterations, while for conditions", "Use while for sequences, for for conditions"],
+        "options": [
+          "Always use for loops",
+          "Always use while loops",
+          "Use for when you know iterations, while for conditions",
+          "Use while for sequences, for for conditions"
+        ],
         "correctAnswer": "Use for when you know iterations, while for conditions",
         "explanation": "for loops are for definite iteration, while loops for indefinite iteration."
       },
@@ -824,14 +1019,19 @@
         "id": "15",
         "type": "multiple-choice",
         "question": "How should you name loop variables?",
-        "options": ["Use single letters like i, j, k", "Use descriptive names", "Use random names", "Don't name them"],
+        "options": [
+          "Use single letters like i, j, k",
+          "Use descriptive names",
+          "Use random names",
+          "Don't name them"
+        ],
         "correctAnswer": "Use descriptive names",
         "explanation": "Descriptive names make code self-documenting: for user in users: not for u in users:"
       }
     ]
   },
   {
-    "id": "performance-considerations",
+    "id": "8",
     "title": "Performance Considerations",
     "description": "Optimizing control flow for better performance.",
     "difficulty": "advanced",
@@ -840,7 +1040,12 @@
         "id": "1",
         "type": "multiple-choice",
         "question": "Which is generally faster: for loops or while loops?",
-        "options": ["for loops", "while loops", "Same speed", "Depends on the condition"],
+        "options": [
+          "for loops",
+          "while loops",
+          "Same speed",
+          "Depends on the condition"
+        ],
         "correctAnswer": "Same speed",
         "explanation": "Performance difference is negligible - choose based on readability."
       },
@@ -862,7 +1067,12 @@
         "id": "4",
         "type": "multiple-choice",
         "question": "When should you use list comprehensions vs loops?",
-        "options": ["Always use comprehensions", "Always use loops", "Comprehensions for simple operations", "Loops for complex operations"],
+        "options": [
+          "Always use comprehensions",
+          "Always use loops",
+          "Comprehensions for simple operations",
+          "Loops for complex operations"
+        ],
         "correctAnswer": "Comprehensions for simple operations",
         "explanation": "Comprehensions are faster for simple transformations but loops are better for complex logic."
       },
@@ -877,7 +1087,12 @@
         "id": "6",
         "type": "multiple-choice",
         "question": "Should you optimize string concatenation in loops?",
-        "options": ["No, Python handles it", "Yes, use join()", "Use +=", "Use append()"],
+        "options": [
+          "No, Python handles it",
+          "Yes, use join()",
+          "Use +=",
+          "Use append()"
+        ],
         "correctAnswer": "Yes, use join()",
         "explanation": "Use ''.join() instead of += for building strings in loops."
       },
@@ -899,7 +1114,12 @@
         "id": "9",
         "type": "multiple-choice",
         "question": "When does Python optimize loops?",
-        "options": ["Never", "For simple loops", "For all loops", "Only for comprehensions"],
+        "options": [
+          "Never",
+          "For simple loops",
+          "For all loops",
+          "Only for comprehensions"
+        ],
         "correctAnswer": "For all loops",
         "explanation": "Python's bytecode compiler optimizes all loops, but comprehensions get additional optimization."
       },
@@ -914,7 +1134,12 @@
         "id": "11",
         "type": "multiple-choice",
         "question": "Should you use try-except inside loops?",
-        "options": ["Always", "Never", "Only for unexpected errors", "Only for expected errors"],
+        "options": [
+          "Always",
+          "Never",
+          "Only for unexpected errors",
+          "Only for expected errors"
+        ],
         "correctAnswer": "Only for unexpected errors",
         "explanation": "Use try-except for truly exceptional cases, not for normal validation."
       },
@@ -929,7 +1154,12 @@
         "id": "13",
         "type": "multiple-choice",
         "question": "Which conditional is faster?",
-        "options": ["if x == 1 or x == 2", "if x in (1, 2)", "Same speed", "Depends on x"],
+        "options": [
+          "if x == 1 or x == 2",
+          "if x in (1, 2)",
+          "Same speed",
+          "Depends on x"
+        ],
         "correctAnswer": "if x in (1, 2)",
         "explanation": "Membership testing with tuples is optimized and often faster than multiple comparisons."
       },

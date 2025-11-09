@@ -1,6 +1,6 @@
 [
   {
-    "id": "basic-list-comprehensions",
+    "id": "1",
     "title": "Basic List Comprehensions",
     "description": "Learn the fundamentals of list comprehensions in Python.",
     "difficulty": "intermediate",
@@ -9,7 +9,12 @@
         "id": "1",
         "type": "multiple-choice",
         "question": "What is a list comprehension in Python?",
-        "options": ["A way to create lists using loops", "A type of loop", "A list method", "A string operation"],
+        "options": [
+          "A way to create lists using loops",
+          "A type of loop",
+          "A list method",
+          "A string operation"
+        ],
         "correctAnswer": "A way to create lists using loops",
         "explanation": "List comprehensions provide a concise way to create lists using a single line of code."
       },
@@ -31,7 +36,12 @@
         "id": "4",
         "type": "multiple-choice",
         "question": "What is the output of [x for x in range(3)]?",
-        "options": ["[0, 1, 2]", "[1, 2, 3]", "[0, 1, 2, 3]", "Error"],
+        "options": [
+          "[0, 1, 2]",
+          "[1, 2, 3]",
+          "[0, 1, 2, 3]",
+          "Error"
+        ],
         "correctAnswer": "[0, 1, 2]",
         "explanation": "range(3) produces 0, 1, 2, and x takes each value."
       },
@@ -60,7 +70,12 @@
         "id": "8",
         "type": "multiple-choice",
         "question": "Which is more efficient: list comprehensions or for loops?",
-        "options": ["For loops", "List comprehensions", "They are equally efficient", "Depends on the use case"],
+        "options": [
+          "For loops",
+          "List comprehensions",
+          "They are equally efficient",
+          "Depends on the use case"
+        ],
         "correctAnswer": "List comprehensions",
         "explanation": "List comprehensions are generally faster and more memory efficient than equivalent for loops."
       },
@@ -89,7 +104,12 @@
         "id": "12",
         "type": "multiple-choice",
         "question": "Can list comprehensions contain multiple if conditions?",
-        "options": ["No", "Yes, using 'and'", "Yes, using multiple 'if'", "Only one condition allowed"],
+        "options": [
+          "No",
+          "Yes, using 'and'",
+          "Yes, using multiple 'if'",
+          "Only one condition allowed"
+        ],
         "correctAnswer": "Yes, using 'and'",
         "explanation": "Multiple conditions can be combined using 'and' in the if clause."
       },
@@ -132,7 +152,12 @@
         "id": "18",
         "type": "multiple-choice",
         "question": "When should you avoid list comprehensions?",
-        "options": ["Always use them", "When the logic is complex", "Never avoid them", "Only for simple cases"],
+        "options": [
+          "Always use them",
+          "When the logic is complex",
+          "Never avoid them",
+          "Only for simple cases"
+        ],
         "correctAnswer": "When the logic is complex",
         "explanation": "Complex comprehensions can be hard to read - use regular loops instead."
       },
@@ -147,7 +172,12 @@
         "id": "20",
         "type": "multiple-choice",
         "question": "What is the output of [x**2 for x in range(3)]?",
-        "options": ["[0, 1, 4]", "[1, 4, 9]", "[0, 1, 2]", "Error"],
+        "options": [
+          "[0, 1, 4]",
+          "[1, 4, 9]",
+          "[0, 1, 2]",
+          "Error"
+        ],
         "correctAnswer": "[0, 1, 4]",
         "explanation": "range(3) gives 0, 1, 2; squared: 0, 1, 4"
       }

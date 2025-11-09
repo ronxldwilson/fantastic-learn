@@ -1,6 +1,6 @@
 [
   {
-    "id": "basic-string-methods",
+    "id": "1",
     "title": "Basic String Methods",
     "description": "Learn essential string manipulation methods.",
     "difficulty": "beginner",
@@ -9,7 +9,12 @@
         "id": "1",
         "type": "multiple-choice",
         "question": "Which method converts a string to uppercase?",
-        "options": ["lower()", "upper()", "capitalize()", "title()"],
+        "options": [
+          "lower()",
+          "upper()",
+          "capitalize()",
+          "title()"
+        ],
         "correctAnswer": "upper()",
         "explanation": "The upper() method converts all characters in a string to uppercase."
       },
@@ -31,7 +36,12 @@
         "id": "4",
         "type": "multiple-choice",
         "question": "Which method replaces all occurrences of a substring?",
-        "options": ["find()", "replace()", "split()", "join()"],
+        "options": [
+          "find()",
+          "replace()",
+          "split()",
+          "join()"
+        ],
         "correctAnswer": "replace()",
         "explanation": "The replace() method replaces all occurrences of a substring with another string."
       },
@@ -53,7 +63,12 @@
         "id": "7",
         "type": "multiple-choice",
         "question": "Which method capitalizes the first character?",
-        "options": ["upper()", "lower()", "capitalize()", "title()"],
+        "options": [
+          "upper()",
+          "lower()",
+          "capitalize()",
+          "title()"
+        ],
         "correctAnswer": "capitalize()",
         "explanation": "capitalize() makes the first character uppercase and the rest lowercase."
       },
@@ -75,7 +90,12 @@
         "id": "10",
         "type": "multiple-choice",
         "question": "What does 'hello world'.split(' ') do?",
-        "options": ["Splits on spaces", "Splits on 'o'", "Joins with space", "Replaces spaces"],
+        "options": [
+          "Splits on spaces",
+          "Splits on 'o'",
+          "Joins with space",
+          "Replaces spaces"
+        ],
         "correctAnswer": "Splits on spaces",
         "explanation": "split(separator) splits the string using the specified separator."
       },
@@ -97,7 +117,12 @@
         "id": "13",
         "type": "multiple-choice",
         "question": "What does find() return if substring is not found?",
-        "options": ["-1", "0", "None", "Error"],
+        "options": [
+          "-1",
+          "0",
+          "None",
+          "Error"
+        ],
         "correctAnswer": "-1",
         "explanation": "find() returns -1 when the substring is not found."
       },
@@ -118,7 +143,7 @@
     ]
   },
   {
-    "id": "advanced-string-methods",
+    "id": "2",
     "title": "Advanced String Methods",
     "description": "Explore more complex string operations.",
     "difficulty": "intermediate",
@@ -134,7 +159,12 @@
         "id": "2",
         "type": "multiple-choice",
         "question": "Which method joins a list of strings with a separator?",
-        "options": ["split()", "join()", "concat()", "merge()"],
+        "options": [
+          "split()",
+          "join()",
+          "concat()",
+          "merge()"
+        ],
         "correctAnswer": "join()",
         "explanation": "The join() method joins elements of an iterable with a string separator."
       },
@@ -156,7 +186,12 @@
         "id": "5",
         "type": "multiple-choice",
         "question": "Which method checks if all characters are digits?",
-        "options": ["isdigit()", "isnumeric()", "isalpha()", "isalnum()"],
+        "options": [
+          "isdigit()",
+          "isnumeric()",
+          "isalpha()",
+          "isalnum()"
+        ],
         "correctAnswer": "isdigit()",
         "explanation": "The isdigit() method returns True if all characters are digits."
       },
@@ -178,7 +213,12 @@
         "id": "8",
         "type": "multiple-choice",
         "question": "Which method checks if string contains only whitespace?",
-        "options": ["isspace()", "isalpha()", "isdigit()", "isalnum()"],
+        "options": [
+          "isspace()",
+          "isalpha()",
+          "isdigit()",
+          "isalnum()"
+        ],
         "correctAnswer": "isspace()",
         "explanation": "isspace() returns True if all characters are whitespace."
       },
@@ -200,7 +240,12 @@
         "id": "11",
         "type": "multiple-choice",
         "question": "What does 'Hello World'.istitle() return?",
-        "options": ["True", "False", "None", "Error"],
+        "options": [
+          "True",
+          "False",
+          "None",
+          "Error"
+        ],
         "correctAnswer": "True",
         "explanation": "istitle() returns True if each word starts with uppercase and rest are lowercase."
       },
@@ -229,14 +274,19 @@
         "id": "15",
         "type": "multiple-choice",
         "question": "What does zfill() do?",
-        "options": ["Fills with zeros on left", "Fills with spaces", "Removes zeros", "Centers text"],
+        "options": [
+          "Fills with zeros on left",
+          "Fills with spaces",
+          "Removes zeros",
+          "Centers text"
+        ],
         "correctAnswer": "Fills with zeros on left",
         "explanation": "zfill(width) pads the string on the left with zeros to reach the width."
       }
     ]
   },
   {
-    "id": "string-formatting",
+    "id": "3",
     "title": "String Formatting",
     "description": "Learn different ways to format strings in Python.",
     "difficulty": "intermediate",
@@ -245,7 +295,12 @@
         "id": "1",
         "type": "multiple-choice",
         "question": "Which is the oldest string formatting method?",
-        "options": ["% formatting", ".format()", "f-strings", "template strings"],
+        "options": [
+          "% formatting",
+          ".format()",
+          "f-strings",
+          "template strings"
+        ],
         "correctAnswer": "% formatting",
         "explanation": "% formatting is the oldest method, similar to C's printf."
       },
@@ -281,7 +336,12 @@
         "id": "6",
         "type": "multiple-choice",
         "question": "What is the advantage of f-strings over .format()?",
-        "options": ["Faster", "More readable", "Both", "None"],
+        "options": [
+          "Faster",
+          "More readable",
+          "Both",
+          "None"
+        ],
         "correctAnswer": "Both",
         "explanation": "f-strings are both faster and more readable than .format()."
       },
@@ -310,7 +370,12 @@
         "id": "10",
         "type": "multiple-choice",
         "question": "Which formatting method is safest for user input?",
-        "options": ["% formatting", ".format()", "f-strings", "Template"],
+        "options": [
+          "% formatting",
+          ".format()",
+          "f-strings",
+          "Template"
+        ],
         "correctAnswer": "Template",
         "explanation": "Template is safest as it doesn't evaluate expressions, only substitutes values."
       },
@@ -339,7 +404,12 @@
         "id": "14",
         "type": "multiple-choice",
         "question": "Can f-strings be used in older Python versions?",
-        "options": ["Yes", "No, Python 3.6+", "Only with import", "With backport"],
+        "options": [
+          "Yes",
+          "No, Python 3.6+",
+          "Only with import",
+          "With backport"
+        ],
         "correctAnswer": "No, Python 3.6+",
         "explanation": "f-strings were introduced in Python 3.6."
       },
@@ -353,7 +423,7 @@
     ]
   },
   {
-    "id": "string-slicing",
+    "id": "4",
     "title": "String Slicing and Indexing",
     "description": "Learn about accessing string characters and substrings.",
     "difficulty": "beginner",
@@ -376,7 +446,12 @@
         "id": "3",
         "type": "multiple-choice",
         "question": "What does 'hello'[1:4] return?",
-        "options": ["'h'", "'ell'", "'ello'", "'lo'"],
+        "options": [
+          "'h'",
+          "'ell'",
+          "'ello'",
+          "'lo'"
+        ],
         "correctAnswer": "'ell'",
         "explanation": "Slicing [1:4] returns characters from index 1 up to but not including 4."
       },
@@ -398,7 +473,12 @@
         "id": "6",
         "type": "multiple-choice",
         "question": "Can strings be modified after creation?",
-        "options": ["Yes", "No", "Only some characters", "With special methods"],
+        "options": [
+          "Yes",
+          "No",
+          "Only some characters",
+          "With special methods"
+        ],
         "correctAnswer": "No",
         "explanation": "Strings are immutable - they cannot be modified after creation."
       },
@@ -427,7 +507,12 @@
         "id": "10",
         "type": "multiple-choice",
         "question": "What happens if you try to access string[10] on a 5-character string?",
-        "options": ["Returns last character", "Returns None", "Raises IndexError", "Returns empty string"],
+        "options": [
+          "Returns last character",
+          "Returns None",
+          "Raises IndexError",
+          "Returns empty string"
+        ],
         "correctAnswer": "Raises IndexError",
         "explanation": "Accessing beyond string length raises IndexError."
       },
@@ -449,7 +534,12 @@
         "id": "13",
         "type": "multiple-choice",
         "question": "Does slicing create a copy or view?",
-        "options": ["Copy", "View", "Depends on Python version", "Neither"],
+        "options": [
+          "Copy",
+          "View",
+          "Depends on Python version",
+          "Neither"
+        ],
         "correctAnswer": "Copy",
         "explanation": "String slicing always creates a new string copy."
       },
@@ -470,7 +560,7 @@
     ]
   },
   {
-    "id": "string-comparison",
+    "id": "5",
     "title": "String Comparison and Sorting",
     "description": "Learn about comparing and sorting strings.",
     "difficulty": "beginner",
@@ -479,7 +569,12 @@
         "id": "1",
         "type": "multiple-choice",
         "question": "How are strings compared in Python?",
-        "options": ["Lexicographically", "By length", "By ASCII values", "Randomly"],
+        "options": [
+          "Lexicographically",
+          "By length",
+          "By ASCII values",
+          "Randomly"
+        ],
         "correctAnswer": "Lexicographically",
         "explanation": "Strings are compared character by character using lexicographic order."
       },
@@ -501,7 +596,12 @@
         "id": "4",
         "type": "multiple-choice",
         "question": "Which string is greater: 'Apple' or 'apple'?",
-        "options": ["'Apple'", "'apple'", "They are equal", "Depends on system"],
+        "options": [
+          "'Apple'",
+          "'apple'",
+          "They are equal",
+          "Depends on system"
+        ],
         "correctAnswer": "'apple'",
         "explanation": "Uppercase letters have lower ASCII values than lowercase."
       },
@@ -523,7 +623,12 @@
         "id": "7",
         "type": "multiple-choice",
         "question": "How does case affect string sorting?",
-        "options": ["Uppercase comes first", "Lowercase comes first", "Mixed results", "No effect"],
+        "options": [
+          "Uppercase comes first",
+          "Lowercase comes first",
+          "Mixed results",
+          "No effect"
+        ],
         "correctAnswer": "Uppercase comes first",
         "explanation": "ASCII values: 'A' (65) < 'a' (97), so uppercase sorts before lowercase."
       },
@@ -552,7 +657,12 @@
         "id": "11",
         "type": "multiple-choice",
         "question": "What does 'apple' == 'Apple' return?",
-        "options": ["True", "False", "None", "Error"],
+        "options": [
+          "True",
+          "False",
+          "None",
+          "Error"
+        ],
         "correctAnswer": "False",
         "explanation": "String comparison is case-sensitive by default."
       },
@@ -574,7 +684,12 @@
         "id": "14",
         "type": "multiple-choice",
         "question": "Which is better for case-insensitive comparison?",
-        "options": ["lower()", "casefold()", "upper()", "Depends on language"],
+        "options": [
+          "lower()",
+          "casefold()",
+          "upper()",
+          "Depends on language"
+        ],
         "correctAnswer": "casefold()",
         "explanation": "casefold() handles more edge cases in Unicode."
       },
@@ -588,7 +703,7 @@
     ]
   },
   {
-    "id": "string-encoding",
+    "id": "6",
     "title": "String Encoding and Unicode",
     "description": "Learn about character encoding and Unicode in strings.",
     "difficulty": "advanced",
@@ -604,7 +719,12 @@
         "id": "2",
         "type": "multiple-choice",
         "question": "What does UTF-8 stand for?",
-        "options": ["Unicode Text Format 8", "Universal Text Format 8", "Unicode Transformation Format 8", "Universal Transformation Format 8"],
+        "options": [
+          "Unicode Text Format 8",
+          "Universal Text Format 8",
+          "Unicode Transformation Format 8",
+          "Universal Transformation Format 8"
+        ],
         "correctAnswer": "Unicode Transformation Format 8",
         "explanation": "UTF-8 is a variable-width character encoding for Unicode."
       },
@@ -626,7 +746,12 @@
         "id": "5",
         "type": "multiple-choice",
         "question": "What does decode() do?",
-        "options": ["Converts bytes to string", "Converts string to bytes", "Compresses string", "Encrypts string"],
+        "options": [
+          "Converts bytes to string",
+          "Converts string to bytes",
+          "Compresses string",
+          "Encrypts string"
+        ],
         "correctAnswer": "Converts bytes to string",
         "explanation": "decode() converts bytes back to a string using the specified encoding."
       },
@@ -648,7 +773,12 @@
         "id": "8",
         "type": "multiple-choice",
         "question": "What happens with unsupported characters in encoding?",
-        "options": ["Ignored", "Replaced", "Raises error", "All of the above"],
+        "options": [
+          "Ignored",
+          "Replaced",
+          "Raises error",
+          "All of the above"
+        ],
         "correctAnswer": "All of the above",
         "explanation": "Depending on error handling, unsupported characters can be ignored, replaced, or cause errors."
       },
@@ -670,7 +800,12 @@
         "id": "11",
         "type": "multiple-choice",
         "question": "What is ASCII?",
-        "options": ["Unicode subset", "7-bit character set", "Both", "Neither"],
+        "options": [
+          "Unicode subset",
+          "7-bit character set",
+          "Both",
+          "Neither"
+        ],
         "correctAnswer": "Both",
         "explanation": "ASCII is a 7-bit character set and a subset of Unicode."
       },
@@ -705,7 +840,7 @@
     ]
   },
   {
-    "id": "string-performance",
+    "id": "7",
     "title": "String Performance and Optimization",
     "description": "Learn about string performance considerations and optimization techniques.",
     "difficulty": "advanced",
@@ -721,7 +856,12 @@
         "id": "2",
         "type": "multiple-choice",
         "question": "What is string interning?",
-        "options": ["Storing strings in memory", "Reusing identical string objects", "Compressing strings", "Encrypting strings"],
+        "options": [
+          "Storing strings in memory",
+          "Reusing identical string objects",
+          "Compressing strings",
+          "Encrypting strings"
+        ],
         "correctAnswer": "Reusing identical string objects",
         "explanation": "String interning reuses memory for identical strings to save space."
       },
@@ -750,7 +890,12 @@
         "id": "6",
         "type": "multiple-choice",
         "question": "Why is repeated concatenation inefficient?",
-        "options": ["Creates many temporary strings", "Uses too much memory", "Both", "Neither"],
+        "options": [
+          "Creates many temporary strings",
+          "Uses too much memory",
+          "Both",
+          "Neither"
+        ],
         "correctAnswer": "Both",
         "explanation": "Each + creates a new string, leading to quadratic time complexity."
       },
@@ -772,7 +917,12 @@
         "id": "9",
         "type": "multiple-choice",
         "question": "Which is faster for string building?",
-        "options": ["join()", "+=", "f-strings", "format()"],
+        "options": [
+          "join()",
+          "+=",
+          "f-strings",
+          "format()"
+        ],
         "correctAnswer": "join()",
         "explanation": "join() is the most efficient for building strings from many parts."
       },
@@ -794,7 +944,12 @@
         "id": "12",
         "type": "multiple-choice",
         "question": "When should you use StringIO?",
-        "options": ["For file-like string operations", "For building large strings", "For parsing strings", "All of the above"],
+        "options": [
+          "For file-like string operations",
+          "For building large strings",
+          "For parsing strings",
+          "All of the above"
+        ],
         "correctAnswer": "All of the above",
         "explanation": "StringIO provides file-like operations on strings."
       },
@@ -816,7 +971,12 @@
         "id": "15",
         "type": "multiple-choice",
         "question": "Which strings are automatically interned?",
-        "options": ["All strings", "Short strings with ASCII", "Only literals", "None"],
+        "options": [
+          "All strings",
+          "Short strings with ASCII",
+          "Only literals",
+          "None"
+        ],
         "correctAnswer": "Short strings with ASCII",
         "explanation": "Python automatically interns short strings containing only ASCII characters."
       }

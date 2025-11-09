@@ -1,6 +1,6 @@
 [
   {
-    "id": "reading-files",
+    "id": "1",
     "title": "Reading Files",
     "description": "Learn how to read data from files in Python.",
     "difficulty": "beginner",
@@ -9,7 +9,12 @@
         "id": "1",
         "type": "multiple-choice",
         "question": "Which function is used to open a file in Python?",
-        "options": ["open()", "read()", "write()", "close()"],
+        "options": [
+          "open()",
+          "read()",
+          "write()",
+          "close()"
+        ],
         "correctAnswer": "open()",
         "explanation": "The open() function is used to open a file and returns a file object."
       },
@@ -31,7 +36,12 @@
         "id": "4",
         "type": "multiple-choice",
         "question": "What happens if you try to read from a file that doesn't exist?",
-        "options": ["It creates a new file", "It raises a FileNotFoundError", "It returns an empty string", "It opens the file in write mode"],
+        "options": [
+          "It creates a new file",
+          "It raises a FileNotFoundError",
+          "It returns an empty string",
+          "It opens the file in write mode"
+        ],
         "correctAnswer": "It raises a FileNotFoundError",
         "explanation": "Python raises a FileNotFoundError when trying to open a file that doesn't exist."
       },
@@ -53,7 +63,12 @@
         "id": "7",
         "type": "multiple-choice",
         "question": "What does read() return when called on an empty file?",
-        "options": ["None", "Empty string", "False", "Zero"],
+        "options": [
+          "None",
+          "Empty string",
+          "False",
+          "Zero"
+        ],
         "correctAnswer": "Empty string",
         "explanation": "read() returns an empty string when the file is empty or at EOF."
       },
@@ -75,7 +90,12 @@
         "id": "10",
         "type": "multiple-choice",
         "question": "Which method is most memory-efficient for large files?",
-        "options": ["read()", "readlines()", "Looping with readline()", "All are equally efficient"],
+        "options": [
+          "read()",
+          "readlines()",
+          "Looping with readline()",
+          "All are equally efficient"
+        ],
         "correctAnswer": "Looping with readline()",
         "explanation": "Looping with readline() processes one line at a time, using minimal memory."
       },
@@ -97,7 +117,12 @@
         "id": "13",
         "type": "multiple-choice",
         "question": "Can you read from a file opened in write mode?",
-        "options": ["Yes", "No", "Only if file exists", "Only with special permission"],
+        "options": [
+          "Yes",
+          "No",
+          "Only if file exists",
+          "Only with special permission"
+        ],
         "correctAnswer": "No",
         "explanation": "Write mode ('w') only allows writing, not reading."
       },
@@ -118,7 +143,7 @@
     ]
   },
   {
-    "id": "writing-files",
+    "id": "2",
     "title": "Writing Files",
     "description": "Learn how to write data to files in Python.",
     "difficulty": "beginner",
@@ -127,7 +152,12 @@
         "id": "1",
         "type": "multiple-choice",
         "question": "What mode should you use to write to a file?",
-        "options": ["'r'", "'w'", "'a'", "'x'"],
+        "options": [
+          "'r'",
+          "'w'",
+          "'a'",
+          "'x'"
+        ],
         "correctAnswer": "'w'",
         "explanation": "'w' mode opens the file for writing, creating it if it doesn't exist."
       },
@@ -149,7 +179,12 @@
         "id": "4",
         "type": "multiple-choice",
         "question": "What is the difference between 'w' and 'a' modes?",
-        "options": ["'w' overwrites, 'a' appends", "'a' overwrites, 'w' appends", "They are the same", "'w' is for reading, 'a' for writing"],
+        "options": [
+          "'w' overwrites, 'a' appends",
+          "'a' overwrites, 'w' appends",
+          "They are the same",
+          "'w' is for reading, 'a' for writing"
+        ],
         "correctAnswer": "'w' overwrites, 'a' appends",
         "explanation": "'w' mode overwrites the file, 'a' mode appends to the existing content."
       },
@@ -171,7 +206,12 @@
         "id": "7",
         "type": "multiple-choice",
         "question": "Which method writes multiple lines to a file?",
-        "options": ["write()", "writelines()", "Both", "Neither"],
+        "options": [
+          "write()",
+          "writelines()",
+          "Both",
+          "Neither"
+        ],
         "correctAnswer": "Both",
         "explanation": "write() can write strings with newlines, writelines() writes a list of strings."
       },
@@ -193,7 +233,12 @@
         "id": "10",
         "type": "multiple-choice",
         "question": "Can write() handle non-string data?",
-        "options": ["Yes, automatically", "No, only strings", "Yes, with encoding", "Only for binary mode"],
+        "options": [
+          "Yes, automatically",
+          "No, only strings",
+          "Yes, with encoding",
+          "Only for binary mode"
+        ],
         "correctAnswer": "No, only strings",
         "explanation": "write() only accepts string data for text files."
       },
@@ -215,7 +260,12 @@
         "id": "13",
         "type": "multiple-choice",
         "question": "When is data actually written to disk?",
-        "options": ["Immediately", "When file is closed", "When buffer is full", "All of the above"],
+        "options": [
+          "Immediately",
+          "When file is closed",
+          "When buffer is full",
+          "All of the above"
+        ],
         "correctAnswer": "All of the above",
         "explanation": "Data is written when the buffer is full, file is closed, or explicitly flushed."
       },
@@ -236,7 +286,7 @@
     ]
   },
   {
-    "id": "file-management",
+    "id": "3",
     "title": "File Management",
     "description": "Learn about file operations and best practices.",
     "difficulty": "intermediate",
@@ -259,7 +309,12 @@
         "id": "3",
         "type": "multiple-choice",
         "question": "What is the benefit of using the 'with' statement for file operations?",
-        "options": ["It's faster", "It automatically closes the file", "It creates backup files", "It compresses the file"],
+        "options": [
+          "It's faster",
+          "It automatically closes the file",
+          "It creates backup files",
+          "It compresses the file"
+        ],
         "correctAnswer": "It automatically closes the file",
         "explanation": "The 'with' statement ensures files are properly closed even if an error occurs."
       },
@@ -288,7 +343,12 @@
         "id": "7",
         "type": "multiple-choice",
         "question": "Can you operate on a closed file?",
-        "options": ["Yes", "No", "Only for reading", "Only for writing"],
+        "options": [
+          "Yes",
+          "No",
+          "Only for reading",
+          "Only for writing"
+        ],
         "correctAnswer": "No",
         "explanation": "Once closed, file operations will raise ValueError."
       },
@@ -310,7 +370,12 @@
         "id": "10",
         "type": "multiple-choice",
         "question": "Which attribute tells if a file is closed?",
-        "options": ["closed", "is_closed", "status", "state"],
+        "options": [
+          "closed",
+          "is_closed",
+          "status",
+          "state"
+        ],
         "correctAnswer": "closed",
         "explanation": "The closed attribute is True if the file is closed, False otherwise."
       },
@@ -332,7 +397,12 @@
         "id": "13",
         "type": "multiple-choice",
         "question": "What does seek(0, 0) do?",
-        "options": ["Go to end", "Go to beginning", "Go to middle", "Stay in place"],
+        "options": [
+          "Go to end",
+          "Go to beginning",
+          "Go to middle",
+          "Stay in place"
+        ],
         "correctAnswer": "Go to beginning",
         "explanation": "seek(0, 0) moves to the beginning of the file."
       },
@@ -353,7 +423,7 @@
     ]
   },
   {
-    "id": "binary-files",
+    "id": "4",
     "title": "Working with Binary Files",
     "description": "Learn how to handle binary data in files.",
     "difficulty": "intermediate",
@@ -369,7 +439,12 @@
         "id": "2",
         "type": "multiple-choice",
         "question": "What type of data does read() return for binary files?",
-        "options": ["str", "bytes", "list", "dict"],
+        "options": [
+          "str",
+          "bytes",
+          "list",
+          "dict"
+        ],
         "correctAnswer": "bytes",
         "explanation": "Binary mode returns bytes objects instead of strings."
       },
@@ -398,7 +473,12 @@
         "id": "6",
         "type": "multiple-choice",
         "question": "Can you mix text and binary modes?",
-        "options": ["Yes", "No", "Only for reading", "Only for writing"],
+        "options": [
+          "Yes",
+          "No",
+          "Only for reading",
+          "Only for writing"
+        ],
         "correctAnswer": "No",
         "explanation": "Files must be opened in either text or binary mode, not both."
       },
@@ -427,7 +507,12 @@
         "id": "10",
         "type": "multiple-choice",
         "question": "Which is better for large binary files?",
-        "options": ["Reading all at once", "Reading in chunks", "Both are fine", "Depends on file type"],
+        "options": [
+          "Reading all at once",
+          "Reading in chunks",
+          "Both are fine",
+          "Depends on file type"
+        ],
         "correctAnswer": "Reading in chunks",
         "explanation": "Large binary files should be processed in chunks to manage memory."
       },
@@ -456,7 +541,12 @@
         "id": "14",
         "type": "multiple-choice",
         "question": "Can binary files contain text data?",
-        "options": ["Yes", "No", "Only encoded text", "Never"],
+        "options": [
+          "Yes",
+          "No",
+          "Only encoded text",
+          "Never"
+        ],
         "correctAnswer": "Yes",
         "explanation": "Binary files can contain any data, including encoded text."
       },
@@ -470,7 +560,7 @@
     ]
   },
   {
-    "id": "file-paths",
+    "id": "5",
     "title": "File Paths and Directories",
     "description": "Learn about file paths and directory operations.",
     "difficulty": "intermediate",
@@ -493,7 +583,12 @@
         "id": "3",
         "type": "multiple-choice",
         "question": "What does os.path.abspath() do?",
-        "options": ["Makes path relative", "Makes path absolute", "Splits path", "Joins paths"],
+        "options": [
+          "Makes path relative",
+          "Makes path absolute",
+          "Splits path",
+          "Joins paths"
+        ],
         "correctAnswer": "Makes path absolute",
         "explanation": "abspath() returns the absolute path for a given path."
       },
@@ -522,7 +617,12 @@
         "id": "7",
         "type": "multiple-choice",
         "question": "Which module is preferred for path operations in Python 3.4+?",
-        "options": ["os.path", "pathlib", "Both", "Neither"],
+        "options": [
+          "os.path",
+          "pathlib",
+          "Both",
+          "Neither"
+        ],
         "correctAnswer": "pathlib",
         "explanation": "pathlib provides an object-oriented interface for path operations."
       },
@@ -558,7 +658,12 @@
         "id": "12",
         "type": "multiple-choice",
         "question": "Which is more Pythonic: os.path or pathlib?",
-        "options": ["os.path", "pathlib", "Both equally", "Depends on use case"],
+        "options": [
+          "os.path",
+          "pathlib",
+          "Both equally",
+          "Depends on use case"
+        ],
         "correctAnswer": "pathlib",
         "explanation": "pathlib is more Pythonic with its object-oriented approach."
       },
@@ -586,7 +691,7 @@
     ]
   },
   {
-    "id": "file-formats",
+    "id": "6",
     "title": "Working with File Formats",
     "description": "Learn to handle common file formats like CSV and JSON.",
     "difficulty": "intermediate",
@@ -623,7 +728,12 @@
         "id": "5",
         "type": "multiple-choice",
         "question": "What module handles JSON files?",
-        "options": ["json", "xml", "yaml", "pickle"],
+        "options": [
+          "json",
+          "xml",
+          "yaml",
+          "pickle"
+        ],
         "correctAnswer": "json",
         "explanation": "The json module provides functions for JSON encoding/decoding."
       },
@@ -652,7 +762,12 @@
         "id": "9",
         "type": "multiple-choice",
         "question": "What does pickle do?",
-        "options": ["Compresses files", "Serializes Python objects", "Encrypts data", "Validates JSON"],
+        "options": [
+          "Compresses files",
+          "Serializes Python objects",
+          "Encrypts data",
+          "Validates JSON"
+        ],
         "correctAnswer": "Serializes Python objects",
         "explanation": "pickle can serialize and deserialize Python objects to/from bytes."
       },
@@ -674,7 +789,12 @@
         "id": "12",
         "type": "multiple-choice",
         "question": "Which format is best for configuration files?",
-        "options": ["CSV", "JSON", "Pickle", "All are good"],
+        "options": [
+          "CSV",
+          "JSON",
+          "Pickle",
+          "All are good"
+        ],
         "correctAnswer": "JSON",
         "explanation": "JSON is human-readable, language-agnostic, and widely supported."
       },
@@ -702,7 +822,7 @@
     ]
   },
   {
-    "id": "error-handling",
+    "id": "7",
     "title": "File Error Handling",
     "description": "Learn to handle errors and exceptions in file operations.",
     "difficulty": "intermediate",
@@ -725,7 +845,12 @@
         "id": "3",
         "type": "multiple-choice",
         "question": "What exception occurs for permission issues?",
-        "options": ["FileNotFoundError", "PermissionError", "IsADirectoryError", "OSError"],
+        "options": [
+          "FileNotFoundError",
+          "PermissionError",
+          "IsADirectoryError",
+          "OSError"
+        ],
         "correctAnswer": "PermissionError",
         "explanation": "PermissionError is raised when file access is denied."
       },
@@ -754,7 +879,12 @@
         "id": "7",
         "type": "multiple-choice",
         "question": "When does UnicodeDecodeError occur?",
-        "options": ["Wrong encoding", "File not found", "Permission denied", "Disk full"],
+        "options": [
+          "Wrong encoding",
+          "File not found",
+          "Permission denied",
+          "Disk full"
+        ],
         "correctAnswer": "Wrong encoding",
         "explanation": "UnicodeDecodeError happens when trying to decode bytes with wrong encoding."
       },
@@ -776,7 +906,12 @@
         "id": "10",
         "type": "multiple-choice",
         "question": "Is it better to check file existence before opening?",
-        "options": ["Always", "Never", "Sometimes", "Depends"],
+        "options": [
+          "Always",
+          "Never",
+          "Sometimes",
+          "Depends"
+        ],
         "correctAnswer": "Sometimes",
         "explanation": "Better to try opening and handle exceptions - avoids race conditions."
       },
@@ -798,7 +933,12 @@
         "id": "13",
         "type": "multiple-choice",
         "question": "Which approach avoids race conditions?",
-        "options": ["Check then open", "Try to open and handle errors", "Both", "Neither"],
+        "options": [
+          "Check then open",
+          "Try to open and handle errors",
+          "Both",
+          "Neither"
+        ],
         "correctAnswer": "Try to open and handle errors",
         "explanation": "Exception handling is safer than checking existence first."
       },

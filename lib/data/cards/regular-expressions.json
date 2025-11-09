@@ -1,6 +1,6 @@
 [
   {
-    "id": "regex-patterns",
+    "id": "1",
     "title": "Regex Patterns",
     "description": "Common regex patterns and metacharacters.",
     "difficulty": "advanced",
@@ -83,7 +83,7 @@
     ]
   },
   {
-    "id": "regex-functions",
+    "id": "2",
     "title": "Regex Functions",
     "description": "Python re module functions and usage.",
     "difficulty": "advanced",

@@ -1,6 +1,6 @@
 [
   {
-    "id": "defining-functions",
+    "id": "1",
     "title": "Defining Functions",
     "description": "Learn how to define and call functions in Python.",
     "difficulty": "beginner",
@@ -58,7 +58,7 @@
     ]
   },
   {
-    "id": "function-parameters",
+    "id": "2",
     "title": "Function Parameters",
     "description": "Different ways to define and use function parameters.",
     "difficulty": "intermediate",
@@ -141,7 +141,7 @@
     ]
   },
   {
-    "id": "return-values",
+    "id": "3",
     "title": "Return Values",
     "description": "How functions return values and what they can return.",
     "difficulty": "beginner",
@@ -224,7 +224,7 @@
     ]
   },
   {
-    "id": "function-scopes",
+    "id": "4",
     "title": "Function Scopes",
     "description": "Variable scope and namespace in functions.",
     "difficulty": "intermediate",
@@ -307,7 +307,7 @@
     ]
   },
   {
-    "id": "function-types",
+    "id": "5",
     "title": "Types of Functions",
     "description": "Explore different types of functions in Python.",
     "difficulty": "intermediate",
@@ -390,7 +390,7 @@
     ]
   },
   {
-    "id": "decorators",
+    "id": "6",
     "title": "Decorators",
     "description": "Functions that modify other functions.",
     "difficulty": "advanced",
@@ -473,7 +473,7 @@
     ]
   },
   {
-    "id": "generators-iterators",
+    "id": "7",
     "title": "Generators and Iterators",
     "description": "Lazy evaluation and iteration patterns.",
     "difficulty": "advanced",

@@ -1,6 +1,6 @@
 [
   {
-    "id": "variables-data-types",
+    "id": "1",
     "title": "Variables and Data Types",
     "description": "Test your knowledge of Python variables and data types.",
     "difficulty": "beginner",
@@ -9,7 +9,12 @@
         "id": "1",
         "type": "multiple-choice",
         "question": "Which of the following is not a valid Python data type?",
-        "options": ["int", "str", "float", "integer"],
+        "options": [
+          "int",
+          "str",
+          "float",
+          "integer"
+        ],
         "correctAnswer": "integer",
         "explanation": "Python uses \"int\" for integers, not \"integer\"."
       },
@@ -21,12 +26,17 @@
         "explanation": "In Python, variables are declared by simply assigning a value using the = operator."
       },
       {
-      "id": "3",
-      "type": "multiple-choice",
-      "question": "Which of these is a correct way to create a string in Python?",
-      "options": ["\"Hello\"", "'Hello'", "Both A and B", "Neither"],
-      "correctAnswer": "Both A and B",
-      "explanation": "Python supports both single and double quotes for strings."
+        "id": "3",
+        "type": "multiple-choice",
+        "question": "Which of these is a correct way to create a string in Python?",
+        "options": [
+          "\"Hello\"",
+          "'Hello'",
+          "Both A and B",
+          "Neither"
+        ],
+        "correctAnswer": "Both A and B",
+        "explanation": "Python supports both single and double quotes for strings."
       },
       {
         "id": "4",
@@ -39,7 +49,12 @@
         "id": "5",
         "type": "multiple-choice",
         "question": "What is the result of 5 + 3 * 2 in Python?",
-        "options": ["16", "11", "13", "26"],
+        "options": [
+          "16",
+          "11",
+          "13",
+          "26"
+        ],
         "correctAnswer": "11",
         "explanation": "Multiplication has higher precedence than addition, so 3 * 2 = 6, then 5 + 6 = 11."
       },
@@ -61,7 +76,12 @@
         "id": "8",
         "type": "multiple-choice",
         "question": "Which of these is NOT a valid variable name in Python?",
-        "options": ["my_variable", "myVariable", "my-variable", "my_var123"],
+        "options": [
+          "my_variable",
+          "myVariable",
+          "my-variable",
+          "my_var123"
+        ],
         "correctAnswer": "my-variable",
         "explanation": "Variable names cannot contain hyphens. Use underscores instead."
       },
@@ -83,7 +103,12 @@
         "id": "11",
         "type": "multiple-choice",
         "question": "What is the difference between '==' and '=' in Python?",
-        "options": ["They are the same", "'==' compares values, '=' assigns values", "'=' compares values, '==' assigns values", "Neither is used for comparison"],
+        "options": [
+          "They are the same",
+          "'==' compares values, '=' assigns values",
+          "'=' compares values, '==' assigns values",
+          "Neither is used for comparison"
+        ],
         "correctAnswer": "'==' compares values, '=' assigns values",
         "explanation": "'=' is the assignment operator, '==' is the equality comparison operator."
       },
@@ -98,7 +123,12 @@
         "id": "13",
         "type": "multiple-choice",
         "question": "What is the result of 'Hello' + ' ' + 'World'?",
-        "options": ["HelloWorld", "Hello World", "Error", "Hello+World"],
+        "options": [
+          "HelloWorld",
+          "Hello World",
+          "Error",
+          "Hello+World"
+        ],
         "correctAnswer": "Hello World",
         "explanation": "The + operator concatenates strings."
       },
@@ -120,7 +150,12 @@
         "id": "16",
         "type": "multiple-choice",
         "question": "Which of these creates a floating-point number?",
-        "options": ["25", "25.0", "int(25)", "str(25)"],
+        "options": [
+          "25",
+          "25.0",
+          "int(25)",
+          "str(25)"
+        ],
         "correctAnswer": "25.0",
         "explanation": "Numbers with decimal points are floats."
       },
@@ -142,7 +177,12 @@
         "id": "19",
         "type": "multiple-choice",
         "question": "What does the 'len()' function return?",
-        "options": ["The last element", "The number of elements", "The first element", "The middle element"],
+        "options": [
+          "The last element",
+          "The number of elements",
+          "The first element",
+          "The middle element"
+        ],
         "correctAnswer": "The number of elements",
         "explanation": "len() returns the number of items in a sequence."
       },
@@ -157,7 +197,12 @@
         "id": "21",
         "type": "multiple-choice",
         "question": "What is the output of bool(0)?",
-        "options": ["True", "False", "0", "Error"],
+        "options": [
+          "True",
+          "False",
+          "0",
+          "Error"
+        ],
         "correctAnswer": "False",
         "explanation": "In Python, 0, empty containers, and None are falsy values."
       },
@@ -179,7 +224,12 @@
         "id": "24",
         "type": "multiple-choice",
         "question": "Which of these is a valid Python identifier?",
-        "options": ["123abc", "_private", "for", "my-var"],
+        "options": [
+          "123abc",
+          "_private",
+          "for",
+          "my-var"
+        ],
         "correctAnswer": "_private",
         "explanation": "Identifiers can start with letters or underscores, but not numbers or contain hyphens."
       },
@@ -208,7 +258,12 @@
         "id": "28",
         "type": "multiple-choice",
         "question": "What does the 'pass' statement do?",
-        "options": ["Exits the program", "Does nothing", "Prints output", "Waits for input"],
+        "options": [
+          "Exits the program",
+          "Does nothing",
+          "Prints output",
+          "Waits for input"
+        ],
         "correctAnswer": "Does nothing",
         "explanation": "pass is a no-op statement used as a placeholder."
       },
@@ -229,7 +284,7 @@
     ]
   },
   {
-    "id": "operators",
+    "id": "2",
     "title": "Operators",
     "description": "Practice with Python operators.",
     "difficulty": "beginner",
@@ -238,7 +293,12 @@
         "id": "1",
         "type": "multiple-choice",
         "question": "What is the result of 5 // 2 in Python?",
-        "options": ["2", "2.5", "3", "2.0"],
+        "options": [
+          "2",
+          "2.5",
+          "3",
+          "2.0"
+        ],
         "correctAnswer": "2",
         "explanation": "// is floor division, which returns the integer part of the division."
       },
@@ -253,7 +313,12 @@
         "id": "3",
         "type": "multiple-choice",
         "question": "What is the result of 7 % 3?",
-        "options": ["2", "2.33", "21", "1"],
+        "options": [
+          "2",
+          "2.33",
+          "21",
+          "1"
+        ],
         "correctAnswer": "1",
         "explanation": "% is the modulo operator, which returns the remainder of division."
       },
@@ -268,7 +333,12 @@
         "id": "5",
         "type": "multiple-choice",
         "question": "Which operator has the highest precedence?",
-        "options": ["+", "**", "*", "/"],
+        "options": [
+          "+",
+          "**",
+          "*",
+          "/"
+        ],
         "correctAnswer": "**",
         "explanation": "Exponentiation (**) has the highest precedence, followed by *, /, then +, -."
       },
@@ -290,7 +360,12 @@
         "id": "8",
         "type": "multiple-choice",
         "question": "What is the difference between == and =?",
-        "options": ["== compares, = assigns", "= compares, == assigns", "They are the same", "Neither is used for comparison"],
+        "options": [
+          "== compares, = assigns",
+          "= compares, == assigns",
+          "They are the same",
+          "Neither is used for comparison"
+        ],
         "correctAnswer": "== compares, = assigns",
         "explanation": "== is the equality comparison operator, = is the assignment operator."
       },
@@ -312,7 +387,12 @@
         "id": "11",
         "type": "multiple-choice",
         "question": "What does the 'is' operator check?",
-        "options": ["Value equality", "Identity (same object)", "Type equality", "Reference equality"],
+        "options": [
+          "Value equality",
+          "Identity (same object)",
+          "Type equality",
+          "Reference equality"
+        ],
         "correctAnswer": "Identity (same object)",
         "explanation": "'is' checks if two variables refer to the same object in memory."
       },
@@ -334,7 +414,12 @@
         "id": "14",
         "type": "multiple-choice",
         "question": "What is short-circuit evaluation?",
-        "options": ["Fast evaluation", "Stopping evaluation when result is known", "Parallel evaluation", "Recursive evaluation"],
+        "options": [
+          "Fast evaluation",
+          "Stopping evaluation when result is known",
+          "Parallel evaluation",
+          "Recursive evaluation"
+        ],
         "correctAnswer": "Stopping evaluation when result is known",
         "explanation": "In 'and' and 'or', evaluation stops when the result is determined."
       },
@@ -391,7 +476,12 @@
         "id": "22",
         "type": "multiple-choice",
         "question": "What is the result of ~5 in Python?",
-        "options": ["-6", "-5", "5", "6"],
+        "options": [
+          "-6",
+          "-5",
+          "5",
+          "6"
+        ],
         "correctAnswer": "-6",
         "explanation": "~ is bitwise NOT, which flips all bits and adds 1 in two's complement."
       },
@@ -406,7 +496,12 @@
         "id": "24",
         "type": "multiple-choice",
         "question": "Which has higher precedence: * or +?",
-        "options": ["*", "+", "Same precedence", "Depends on context"],
+        "options": [
+          "*",
+          "+",
+          "Same precedence",
+          "Depends on context"
+        ],
         "correctAnswer": "*",
         "explanation": "Multiplication (*) has higher precedence than addition (+)."
       },
@@ -442,7 +537,12 @@
         "id": "29",
         "type": "multiple-choice",
         "question": "What is the ternary conditional operator in Python?",
-        "options": ["a ? b : c", "a if condition else b", "condition ? a : b", "if a then b else c"],
+        "options": [
+          "a ? b : c",
+          "a if condition else b",
+          "condition ? a : b",
+          "if a then b else c"
+        ],
         "correctAnswer": "a if condition else b",
         "explanation": "Python uses 'value_if_true if condition else value_if_false' syntax."
       },

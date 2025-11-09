@@ -1,6 +1,6 @@
 [
   {
-    "id": "essential-string-methods",
+    "id": "1",
     "title": "Essential String Methods",
     "description": "Most commonly used string manipulation methods.",
     "difficulty": "beginner",
@@ -68,7 +68,7 @@
     ]
   },
   {
-    "id": "string-testing-methods",
+    "id": "2",
     "title": "String Testing Methods",
     "description": "Methods to check string properties and content.",
     "difficulty": "beginner",
@@ -136,7 +136,7 @@
     ]
   },
   {
-    "id": "string-transformation-methods",
+    "id": "3",
     "title": "String Transformation Methods",
     "description": "Methods to change case and format of strings.",
     "difficulty": "beginner",
@@ -194,7 +194,7 @@
     ]
   },
   {
-    "id": "string-searching-finding",
+    "id": "4",
     "title": "String Searching and Finding",
     "description": "Methods to locate and work with substrings.",
     "difficulty": "intermediate",
@@ -252,7 +252,7 @@
     ]
   },
   {
-    "id": "string-splitting-joining",
+    "id": "5",
     "title": "String Splitting and Joining",
     "description": "Methods to split strings and join sequences.",
     "difficulty": "beginner",
@@ -310,7 +310,7 @@
     ]
   },
   {
-    "id": "string-formatting",
+    "id": "6",
     "title": "String Formatting",
     "description": "Methods and techniques for string formatting.",
     "difficulty": "intermediate",
@@ -378,7 +378,7 @@
     ]
   },
   {
-    "id": "string-slicing-advanced",
+    "id": "7",
     "title": "String Slicing and Advanced Operations",
     "description": "Advanced string manipulation techniques.",
     "difficulty": "intermediate",
@@ -436,7 +436,7 @@
     ]
   },
   {
-    "id": "unicode-encoding",
+    "id": "8",
     "title": "Unicode and Encoding",
     "description": "Working with Unicode strings and encoding.",
     "difficulty": "advanced",
@@ -494,7 +494,7 @@
     ]
   },
   {
-    "id": "string-performance-best-practices",
+    "id": "9",
     "title": "String Performance and Best Practices",
     "description": "Efficient string handling and best practices.",
     "difficulty": "intermediate",
@@ -552,7 +552,7 @@
     ]
   },
   {
-    "id": "real-world-string-processing",
+    "id": "10",
     "title": "Real-World String Processing",
     "description": "Practical string processing techniques.",
     "difficulty": "intermediate",

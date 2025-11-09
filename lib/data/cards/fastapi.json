@@ -1,117 +1,321 @@
 [
   {
-    "id": "2-1-fastapi-basics",
-    "title": "FastAPI Fundamentals",
-    "description": "Core concepts and basic usage of FastAPI framework.",
-    "difficulty": "beginner",
+    "id": "1",
+    "title": "FastAPI Basics",
+    "description": "Fundamental concepts of FastAPI",
     "cards": [
       {
-        "id": "2-1-1-fastapi-import",
-        "front": "How do you import FastAPI?",
-        "back": "from fastapi import FastAPI"
+        "id": "1",
+        "front": "What is FastAPI?",
+        "back": "A modern, fast web framework for building APIs with Python 3.7+ based on standard Python type hints."
       },
       {
-        "id": "2-1-2-app-instance",
-        "front": "How do you create a FastAPI application instance?",
-        "back": "app = FastAPI()"
+        "id": "2",
+        "front": "What does ASGI stand for?",
+        "back": "Asynchronous Server Gateway Interface - a successor to WSGI for async web applications."
       },
       {
-        "id": "2-1-3-basic-route",
-        "front": "How do you create a basic GET route?",
-        "back": "@app.get('/')\ndef read_root():\n    return {'message': 'Hello World'}"
+        "id": "3",
+        "front": "What is the default port for FastAPI?",
+        "back": "8000"
       },
       {
-        "id": "2-1-4-path-parameters",
-        "front": "How do you define path parameters?",
-        "back": "@app.get('/users/{user_id}')\ndef get_user(user_id: int):\n    return {'user_id': user_id}\n\n# FastAPI automatically converts the path parameter to the specified type\n# Supports: str, int, float, bool, and more"
+        "id": "4",
+        "front": "Which server is recommended for FastAPI?",
+        "back": "Uvicorn - a lightning-fast ASGI server."
       },
       {
-        "id": "2-1-5-query-parameters",
-        "front": "How do you handle query parameters?",
-        "back": "@app.get('/items/')\ndef read_items(skip: int = 0, limit: int = 10):\n    return {'skip': skip, 'limit': limit}"
-      },
-      {
-        "id": "2-1-6-request-body",
-        "front": "How do you handle request bodies with Pydantic?",
-        "back": "from pydantic import BaseModel\n\nclass Item(BaseModel):\n    name: str\n    price: float\n\n@app.post('/items/')\ndef create_item(item: Item):\n    return item\n\n# FastAPI automatically validates the JSON request body against the Pydantic model\n# Returns 422 validation error if data doesn't match the schema"
-      },
-      {
-        "id": "2-1-7-response-model",
-        "front": "How do you specify a response model?",
-        "back": "@app.get('/items/{item_id}', response_model=Item)\ndef get_item(item_id: int):\n    return {'name': 'Item', 'price': 10.0}"
-      },
-      {
-        "id": "2-1-8-automatic-docs",
-        "front": "Where can you access automatic API documentation?",
-        "back": "/docs (Swagger UI) and /redoc (ReDoc)\n\n# FastAPI automatically generates interactive documentation\n# You can test API endpoints directly from the browser\n# Available at: http://localhost:8000/docs"
-      },
-      {
-        "id": "2-1-9-http-status-codes",
-        "front": "What HTTP status codes does FastAPI use automatically?",
-        "back": "200 OK - Successful request\n201 Created - Resource created\n204 No Content - Successful request, no content returned\n400 Bad Request - Invalid request data\n404 Not Found - Resource not found\n422 Unprocessable Entity - Validation error\n500 Internal Server Error - Server error"
-      },
-      {
-        "id": "2-1-10-error-responses",
-        "front": "How do you create custom error responses?",
-        "back": "from fastapi import HTTPException\n\n@app.get('/items/{item_id}')\ndef get_item(item_id: int):\n    if item_id not in items:\n        raise HTTPException(status_code=404, detail='Item not found')\n    return items[item_id]\n\n# FastAPI automatically converts HTTPException to proper JSON error response"
+        "id": "5",
+        "front": "How do you install FastAPI?",
+        "back": "pip install fastapi"
       }
     ]
   },
   {
-    "id": "2-2-fastapi-advanced",
-    "title": "Advanced FastAPI Features",
-    "description": "Advanced concepts including dependencies, security, and async operations.",
-    "difficulty": "intermediate",
+    "id": "2",
+    "title": "FastAPI Routing",
+    "description": "Creating and managing routes in FastAPI",
     "cards": [
       {
-        "id": "2-2-1-dependency-injection",
-        "front": "How do you create a dependency function?",
-        "back": "from fastapi import Depends\n\ndef get_current_user():\n    return {'username': 'user'}\n\n@app.get('/users/me')\ndef get_current_user_info(current_user = Depends(get_current_user)):\n    return current_user"
+        "id": "1",
+        "front": "How do you define a GET route?",
+        "back": "@app.get('/endpoint')"
       },
       {
-        "id": "2-2-2-async-endpoints",
-        "front": "How do you create an async endpoint?",
-        "back": "@app.get('/async-endpoint')\nasync def async_function():\n    # async operations here\n    return {'message': 'Async response'}"
+        "id": "2",
+        "front": "What is a path parameter?",
+        "back": "A variable part of the URL path, like /users/{user_id}"
       },
       {
-        "id": "2-2-3-oauth2-security",
-        "front": "How do you add OAuth2 authentication?",
-        "back": "from fastapi.security import OAuth2PasswordBearer\n\noauth2_scheme = OAuth2PasswordBearer(tokenUrl='token')\n\n@app.get('/secure')\ndef secure_endpoint(token: str = Depends(oauth2_scheme)):\n    return {'token': token}"
+        "id": "3",
+        "front": "How do you make a path parameter optional?",
+        "back": "By providing a default value in the function parameter"
       },
       {
-        "id": "2-2-4-cors-middleware",
-        "front": "How do you enable CORS?",
-        "back": "from fastapi.middleware.cors import CORSMiddleware\n\napp.add_middleware(\n    CORSMiddleware,\n    allow_origins=['http://localhost:3000'],\n    allow_credentials=True,\n    allow_methods=['*'],\n    allow_headers=['*'],\n)"
+        "id": "4",
+        "front": "What decorator handles POST requests?",
+        "back": "@app.post"
       },
       {
-        "id": "2-2-5-background-tasks",
-        "front": "How do you run background tasks?",
-        "back": "from fastapi import BackgroundTasks\n\n@app.post('/send-email')\ndef send_email(background_tasks: BackgroundTasks):\n    background_tasks.add_task(send_email_task, 'email@example.com')\n    return {'message': 'Email will be sent'}"
+        "id": "5",
+        "front": "What is @app.api_route used for?",
+        "back": "Handling multiple HTTP methods with a single decorator"
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "title": "Request Handling",
+    "description": "Working with HTTP requests in FastAPI",
+    "cards": [
+      {
+        "id": "1",
+        "front": "How do you access query parameters?",
+        "back": "As function parameters with default values"
       },
       {
-        "id": "2-2-6-file-upload",
-        "front": "How do you handle file uploads?",
-        "back": "from fastapi import UploadFile, File\n\n@app.post('/upload')\ndef upload_file(file: UploadFile = File(...)):\n    return {'filename': file.filename}"
+        "id": "2",
+        "front": "What is the Request object?",
+        "back": "An object containing information about the incoming HTTP request"
       },
       {
-        "id": "2-2-7-websocket-basic",
-        "front": "How do you create a WebSocket endpoint?",
-        "back": "from fastapi import WebSocket\n\n@app.websocket('/ws')\nasync def websocket_endpoint(websocket: WebSocket):\n    await websocket.accept()\n    while True:\n        data = await websocket.receive_text()\n        await websocket.send_text(f'Message: {data}')"
+        "id": "3",
+        "front": "How do you get the request body as JSON?",
+        "back": "By using Pydantic models as function parameters"
       },
       {
-        "id": "2-2-8-custom-middleware",
-        "front": "How do you create custom middleware?",
-        "back": "from fastapi import Request\n\n@app.middleware('http')\nasync def custom_middleware(request: Request, call_next):\n    # Process request\n    response = await call_next(request)\n    # Process response\n    return response\n\n# Middleware runs on every request, useful for logging, authentication, etc."
+        "id": "4",
+        "front": "What is the difference between File and UploadFile?",
+        "back": "File is for small files stored in memory, UploadFile is for large files with async handling"
       },
       {
-        "id": "2-2-9-testing-fastapi",
-        "front": "How do you test FastAPI applications?",
-        "back": "from fastapi.testclient import TestClient\n\nclient = TestClient(app)\n\ndef test_get_items():\n    response = client.get('/items/')\n    assert response.status_code == 200\n    assert response.json() == {'items': []}\n\n# Use pytest with TestClient for comprehensive API testing"
+        "id": "5",
+        "front": "How do you access headers?",
+        "back": "Using the Header() function from fastapi"
+      }
+    ]
+  },
+  {
+    "id": "4",
+    "title": "Response Handling",
+    "description": "Creating and customizing HTTP responses",
+    "cards": [
+      {
+        "id": "1",
+        "front": "How do you return JSON responses?",
+        "back": "By returning a dictionary or Pydantic model"
       },
       {
-        "id": "2-2-10-running-fastapi",
-        "front": "How do you run a FastAPI application?",
-        "back": "# Development\nuvicorn main:app --reload\n\n# Production\nuvicorn main:app --host 0.0.0.0 --port 8000\n\n# With Gunicorn (production)\ngunicorn main:app -w 4 -k uvicorn.workers.UvicornWorker\n\n# Default: http://localhost:8000"
+        "id": "2",
+        "front": "What is the Response class used for?",
+        "back": "Creating custom HTTP responses with specific status codes and content"
+      },
+      {
+        "id": "3",
+        "front": "What is the default status code for successful responses?",
+        "back": "200 OK"
+      },
+      {
+        "id": "4",
+        "front": "How do you return HTML responses?",
+        "back": "Using HTMLResponse from fastapi.responses"
+      },
+      {
+        "id": "5",
+        "front": "What is JSONResponse?",
+        "back": "A response class for returning JSON with custom status codes"
+      }
+    ]
+  },
+  {
+    "id": "5",
+    "title": "Pydantic Models",
+    "description": "Data validation and serialization with Pydantic",
+    "cards": [
+      {
+        "id": "1",
+        "front": "What is Pydantic?",
+        "back": "A data validation and parsing library using Python type hints"
+      },
+      {
+        "id": "2",
+        "front": "How do you create a Pydantic model?",
+        "back": "By inheriting from BaseModel"
+      },
+      {
+        "id": "3",
+        "front": "What happens with invalid data?",
+        "back": "Returns 422 Unprocessable Entity with detailed error information"
+      },
+      {
+        "id": "4",
+        "front": "How do you make a field optional?",
+        "back": "Using Optional[type] or providing a default value"
+      },
+      {
+        "id": "5",
+        "front": "What is Field() used for?",
+        "back": "Adding validation constraints and metadata to model fields"
+      }
+    ]
+  },
+  {
+    "id": "6",
+    "title": "Dependency Injection",
+    "description": "Managing dependencies in FastAPI applications",
+    "cards": [
+      {
+        "id": "1",
+        "front": "What is dependency injection?",
+        "back": "A way to inject reusable code into path operations"
+      },
+      {
+        "id": "2",
+        "front": "How do you define a dependency?",
+        "back": "Using the Depends() function"
+      },
+      {
+        "id": "3",
+        "front": "What is dependency scope?",
+        "back": "The lifetime of a dependency instance"
+      },
+      {
+        "id": "4",
+        "front": "How do you create global dependencies?",
+        "back": "Using app.dependency()"
+      },
+      {
+        "id": "5",
+        "front": "Can dependencies depend on other dependencies?",
+        "back": "Yes, dependencies can be nested"
+      }
+    ]
+  },
+  {
+    "id": "7",
+    "title": "Authentication & Security",
+    "description": "Implementing security features in FastAPI",
+    "cards": [
+      {
+        "id": "1",
+        "front": "What is OAuth2?",
+        "back": "An authorization framework for delegated access"
+      },
+      {
+        "id": "2",
+        "front": "How do you implement JWT?",
+        "back": "Using python-jose or PyJWT libraries"
+      },
+      {
+        "id": "3",
+        "front": "What is CORS?",
+        "back": "Cross-Origin Resource Sharing - controls browser cross-origin requests"
+      },
+      {
+        "id": "4",
+        "front": "How do you add CORS middleware?",
+        "back": "Using CORSMiddleware from fastapi.middleware.cors"
+      },
+      {
+        "id": "5",
+        "front": "What is a security scheme?",
+        "back": "Defines authentication methods in OpenAPI documentation"
+      }
+    ]
+  },
+  {
+    "id": "8",
+    "title": "Database Integration",
+    "description": "Connecting databases to FastAPI applications",
+    "cards": [
+      {
+        "id": "1",
+        "front": "What is SQLAlchemy?",
+        "back": "A Python SQL toolkit and Object-Relational Mapping library"
+      },
+      {
+        "id": "2",
+        "front": "How do you define database models?",
+        "back": "Using SQLAlchemy's declarative base classes"
+      },
+      {
+        "id": "3",
+        "front": "What is async SQLAlchemy?",
+        "back": "SQLAlchemy with async database drivers for non-blocking operations"
+      },
+      {
+        "id": "4",
+        "front": "What does CRUD stand for?",
+        "back": "Create, Read, Update, Delete"
+      },
+      {
+        "id": "5",
+        "front": "How do you handle database sessions?",
+        "back": "Using dependency injection to manage session lifecycle"
+      }
+    ]
+  },
+  {
+    "id": "9",
+    "title": "File Handling",
+    "description": "Uploading and serving files in FastAPI",
+    "cards": [
+      {
+        "id": "1",
+        "front": "What is UploadFile?",
+        "back": "A class for handling file uploads asynchronously"
+      },
+      {
+        "id": "2",
+        "front": "How do you serve static files?",
+        "back": "Using StaticFiles from fastapi.staticfiles"
+      },
+      {
+        "id": "3",
+        "front": "What is the difference between File and Form?",
+        "back": "File is for file uploads, Form is for form data"
+      },
+      {
+        "id": "4",
+        "front": "How do you validate file types?",
+        "back": "By checking content_type or using file extensions"
+      },
+      {
+        "id": "5",
+        "front": "What is multipart/form-data?",
+        "back": "The encoding type for file uploads in HTTP"
+      }
+    ]
+  },
+  {
+    "id": "10",
+    "title": "Testing & Deployment",
+    "description": "Testing and deploying FastAPI applications",
+    "cards": [
+      {
+        "id": "1",
+        "front": "What is TestClient?",
+        "back": "A client for testing FastAPI applications"
+      },
+      {
+        "id": "2",
+        "front": "Which testing framework is recommended?",
+        "back": "pytest"
+      },
+      {
+        "id": "3",
+        "front": "How do you deploy FastAPI?",
+        "back": "Using uvicorn with gunicorn for production"
+      },
+      {
+        "id": "4",
+        "front": "What is Docker used for?",
+        "back": "Containerizing applications for consistent deployment"
+      },
+      {
+        "id": "5",
+        "front": "What are environment variables used for?",
+        "back": "Storing configuration that varies between environments"
       }
     ]
   }

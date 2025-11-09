@@ -1,225 +1,671 @@
 [
   {
-    "id": "9-1-data-analysis-basics",
-    "title": "Data Analysis Fundamentals",
-    "description": "Test your knowledge of data analysis concepts, statistics, and data manipulation.",
-    "difficulty": "beginner",
+    "id": "1",
+    "title": "Introduction to Data Science",
+    "description": "Basic concepts and overview of data science",
     "questions": [
       {
-        "id": "9-1-1-data-science-definition",
-        "type": "multiple-choice",
+        "id": "1",
         "question": "What is data science?",
         "options": [
-          "Only collecting data",
-          "Extracting insights and knowledge from data using scientific methods",
-          "Writing computer programs",
-          "Designing databases"
+          "Extracting insights from data using scientific methods",
+          "Storing large amounts of data",
+          "Creating data visualizations",
+          "Writing algorithms"
         ],
-        "correctAnswer": "Extracting insights and knowledge from data using scientific methods",
-        "explanation": "Data science combines statistics, programming, and domain expertise to extract meaningful insights from data."
+        "correct_answer": "Extracting insights from data using scientific methods",
+        "explanation": "Data science combines statistics, programming, and domain expertise to extract insights from data."
       },
       {
-        "id": "9-1-2-mean-median-mode",
-        "type": "multiple-choice",
-        "question": "What is the median in a dataset?",
+        "id": "2",
+        "question": "What is the most important programming language for data science?",
         "options": [
-          "The most frequent value",
-          "The average of all values",
-          "The middle value when data is sorted",
-          "The difference between max and min"
+          "Python",
+          "Java",
+          "C++",
+          "Ruby"
         ],
-        "correctAnswer": "The middle value when data is sorted",
-        "explanation": "The median is the middle value in a sorted dataset, less affected by outliers than the mean."
+        "correct_answer": "Python",
+        "explanation": "Python is the most popular language for data science due to its simplicity and extensive libraries."
       },
       {
-        "id": "9-1-3-standard-deviation",
-        "type": "multiple-choice",
-        "question": "What does standard deviation measure?",
+        "id": "3",
+        "question": "What is machine learning?",
         "options": [
-          "The center of the data",
-          "The spread or variability of the data",
-          "The most common value",
-          "The range of the data"
+          "A subset of AI that learns from data",
+          "A programming paradigm",
+          "A database technology",
+          "A web development framework"
         ],
-        "correctAnswer": "The spread or variability of the data",
-        "explanation": "Standard deviation measures how spread out the values are from the mean of the dataset."
+        "correct_answer": "A subset of AI that learns from data",
+        "explanation": "Machine learning is a method of data analysis that automates analytical model building."
       },
       {
-        "id": "9-1-4-correlation-definition",
-        "type": "multiple-choice",
-        "question": "What does correlation measure?",
+        "id": "4",
+        "question": "What is the difference between AI and machine learning?",
         "options": [
-          "The average of two variables",
-          "The relationship between two variables",
-          "The difference between two variables",
-          "The ratio of two variables"
+          "AI is broader, ML is a subset of AI",
+          "ML is broader, AI is a subset of ML",
+          "They are the same",
+          "AI is for robots, ML is for data"
         ],
-        "correctAnswer": "The relationship between two variables",
-        "explanation": "Correlation measures how strongly two variables are related to each other."
+        "correct_answer": "AI is broader, ML is a subset of AI",
+        "explanation": "Artificial Intelligence encompasses machine learning and other approaches to create intelligent systems."
       },
       {
-        "id": "9-1-5-pandas-purpose",
-        "type": "multiple-choice",
-        "question": "What is pandas used for in Python?",
+        "id": "5",
+        "question": "What is big data?",
         "options": [
-          "Creating visualizations",
-          "Data manipulation and analysis",
-          "Machine learning algorithms",
-          "Web development"
+          "Data that is too large or complex for traditional tools",
+          "Data stored in large databases",
+          "Data from big companies",
+          "Data that is important"
         ],
-        "correctAnswer": "Data manipulation and analysis",
-        "explanation": "Pandas is a Python library for data manipulation and analysis, providing data structures like DataFrame."
-      },
-      {
-        "id": "9-1-6-data-cleaning",
-        "type": "multiple-choice",
-        "question": "What is data cleaning?",
-        "options": [
-          "Removing all data from a dataset",
-          "Preparing data for analysis by handling missing values and errors",
-          "Creating new data",
-          "Encrypting data"
-        ],
-        "correctAnswer": "Preparing data for analysis by handling missing values and errors",
-        "explanation": "Data cleaning involves identifying and correcting errors, handling missing values, and preparing data for analysis."
-      },
-      {
-        "id": "9-1-7-normal-distribution",
-        "type": "multiple-choice",
-        "question": "What is a normal distribution?",
-        "options": [
-          "A distribution with two peaks",
-          "A symmetric bell-shaped distribution",
-          "A distribution that is always skewed",
-          "A distribution with no variation"
-        ],
-        "correctAnswer": "A symmetric bell-shaped distribution",
-        "explanation": "A normal distribution is symmetric around the mean, with most values clustering around the center."
-      },
-      {
-        "id": "9-1-8-hypothesis-testing",
-        "type": "multiple-choice",
-        "question": "What is hypothesis testing used for?",
-        "options": [
-          "Creating hypotheses",
-          "Testing claims about populations using sample data",
-          "Designing experiments",
-          "Collecting survey data"
-        ],
-        "correctAnswer": "Testing claims about populations using sample data",
-        "explanation": "Hypothesis testing is a statistical method to determine if there's enough evidence to reject a null hypothesis."
+        "correct_answer": "Data that is too large or complex for traditional tools",
+        "explanation": "Big data refers to datasets that are too large or complex to be processed by traditional methods."
       }
     ]
   },
   {
-    "id": "9-2-data-visualization-ml",
-    "title": "Data Visualization & Machine Learning",
-    "description": "Explore data visualization techniques and machine learning fundamentals.",
-    "difficulty": "intermediate",
+    "id": "2",
+    "title": "Python for Data Science",
+    "description": "Essential Python libraries and tools",
     "questions": [
       {
-        "id": "9-2-1-matplotlib-purpose",
-        "type": "multiple-choice",
-        "question": "What is matplotlib used for?",
+        "id": "1",
+        "question": "What is NumPy used for?",
         "options": [
-          "Data analysis",
-          "Creating static, animated, and interactive visualizations",
+          "Numerical computing and arrays",
+          "Data visualization",
           "Machine learning",
+          "Web development"
+        ],
+        "correct_answer": "Numerical computing and arrays",
+        "explanation": "NumPy provides support for large, multi-dimensional arrays and mathematical functions."
+      },
+      {
+        "id": "2",
+        "question": "What is pandas used for?",
+        "options": [
+          "Data manipulation and analysis",
+          "Creating charts",
+          "Machine learning algorithms",
           "Web scraping"
         ],
-        "correctAnswer": "Creating static, animated, and interactive visualizations",
-        "explanation": "Matplotlib is a Python library for creating various types of plots and charts for data visualization."
+        "correct_answer": "Data manipulation and analysis",
+        "explanation": "Pandas provides data structures and operations for working with structured data."
       },
       {
-        "id": "9-2-2-seaborn-advantage",
-        "type": "multiple-choice",
-        "question": "What is seaborn built on top of?",
+        "id": "3",
+        "question": "What is matplotlib used for?",
         "options": [
-          "Plotly",
-          "Matplotlib",
-          "Bokeh",
-          "ggplot2"
+          "Creating static, animated, and interactive visualizations",
+          "Machine learning",
+          "Statistical analysis",
+          "Data cleaning"
         ],
-        "correctAnswer": "Matplotlib",
-        "explanation": "Seaborn is built on top of matplotlib and provides a high-level interface for statistical graphics."
+        "correct_answer": "Creating static, animated, and interactive visualizations",
+        "explanation": "Matplotlib is a comprehensive library for creating visualizations in Python."
       },
       {
-        "id": "9-2-3-scatter-plot",
-        "type": "multiple-choice",
-        "question": "What type of plot shows the relationship between two continuous variables?",
+        "id": "4",
+        "question": "What is scikit-learn?",
         "options": [
-          "Bar chart",
-          "Histogram",
-          "Scatter plot",
-          "Pie chart"
+          "A machine learning library for Python",
+          "A data visualization tool",
+          "A statistical package",
+          "A database connector"
         ],
-        "correctAnswer": "Scatter plot",
-        "explanation": "Scatter plots display the relationship between two continuous variables, showing correlation patterns."
+        "correct_answer": "A machine learning library for Python",
+        "explanation": "Scikit-learn provides simple and efficient tools for predictive data analysis."
       },
       {
-        "id": "9-2-4-train-test-split",
-        "type": "multiple-choice",
-        "question": "Why do we split data into training and testing sets?",
+        "id": "5",
+        "question": "What is Jupyter Notebook?",
         "options": [
-          "To reduce data size",
-          "To evaluate model performance on unseen data",
-          "To speed up training",
-          "To increase accuracy"
+          "An interactive computing environment",
+          "A text editor",
+          "A database",
+          "A web browser"
         ],
-        "correctAnswer": "To evaluate model performance on unseen data",
-        "explanation": "Train-test split allows us to train the model on one portion of data and evaluate its performance on unseen data."
-      },
+        "correct_answer": "An interactive computing environment",
+        "explanation": "Jupyter Notebook allows creating and sharing documents with live code, equations, and visualizations."
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "title": "Data Collection and Cleaning",
+    "description": "Gathering and preparing data for analysis",
+    "questions": [
       {
-        "id": "9-2-5-overfitting-signs",
-        "type": "multiple-choice",
-        "question": "What is a sign of overfitting in a model?",
+        "id": "1",
+        "question": "What is data cleaning?",
         "options": [
-          "High training accuracy, low testing accuracy",
-          "Low training accuracy, high testing accuracy",
-          "Both accuracies are similar and high",
-          "Both accuracies are similar and low"
+          "Removing errors and inconsistencies from data",
+          "Collecting new data",
+          "Analyzing data",
+          "Visualizing data"
         ],
-        "correctAnswer": "High training accuracy, low testing accuracy",
-        "explanation": "Overfitting occurs when a model performs well on training data but poorly on new, unseen data."
+        "correct_answer": "Removing errors and inconsistencies from data",
+        "explanation": "Data cleaning involves identifying and correcting errors in datasets."
       },
       {
-        "id": "9-2-6-feature-scaling",
-        "type": "multiple-choice",
-        "question": "When should you apply feature scaling?",
+        "id": "2",
+        "question": "What is ETL?",
         "options": [
-          "Always to all features",
-          "When features have different scales and algorithm is distance-based",
-          "Only for categorical features",
-          "Never, it's not important"
+          "Extract, Transform, Load",
+          "Export, Transfer, Load",
+          "Extract, Translate, Load",
+          "Edit, Transform, Load"
         ],
-        "correctAnswer": "When features have different scales and algorithm is distance-based",
-        "explanation": "Feature scaling is important for algorithms like KNN, SVM, and neural networks where distance calculations matter."
+        "correct_answer": "Extract, Transform, Load",
+        "explanation": "ETL is a process that extracts data from sources, transforms it, and loads it into a destination."
       },
       {
-        "id": "9-2-7-cross-validation",
-        "type": "multiple-choice",
-        "question": "What does cross-validation help with?",
+        "id": "3",
+        "question": "What are missing values in data?",
         "options": [
-          "Speeding up model training",
-          "Reducing overfitting",
-          "Providing more reliable performance estimates",
+          "Data points that are not available",
+          "Incorrect data",
+          "Duplicate data",
+          "Outdated data"
+        ],
+        "correct_answer": "Data points that are not available",
+        "explanation": "Missing values occur when no data value is stored for a variable in an observation."
+      },
+      {
+        "id": "4",
+        "question": "What is data normalization?",
+        "options": [
+          "Scaling data to a standard range",
+          "Removing duplicates",
+          "Converting data types",
+          "Sorting data"
+        ],
+        "correct_answer": "Scaling data to a standard range",
+        "explanation": "Data normalization scales numeric variables to a standard range, usually 0 to 1."
+      },
+      {
+        "id": "5",
+        "question": "What is feature engineering?",
+        "options": [
+          "Creating new features from existing data",
+          "Removing features",
+          "Combining datasets",
+          "Splitting data"
+        ],
+        "correct_answer": "Creating new features from existing data",
+        "explanation": "Feature engineering involves creating new input features from existing ones to improve model performance."
+      }
+    ]
+  },
+  {
+    "id": "4",
+    "title": "Exploratory Data Analysis",
+    "description": "Understanding and exploring datasets",
+    "questions": [
+      {
+        "id": "1",
+        "question": "What is EDA?",
+        "options": [
+          "Exploratory Data Analysis",
+          "Export Data Analysis",
+          "Extract Data Algorithm",
+          "Evaluate Data Accuracy"
+        ],
+        "correct_answer": "Exploratory Data Analysis",
+        "explanation": "EDA is an approach to analyzing datasets to summarize their main characteristics."
+      },
+      {
+        "id": "2",
+        "question": "What is a histogram used for?",
+        "options": [
+          "Showing the distribution of a single variable",
+          "Comparing two variables",
+          "Showing relationships between variables",
+          "Displaying categorical data"
+        ],
+        "correct_answer": "Showing the distribution of a single variable",
+        "explanation": "Histograms display the frequency distribution of a continuous variable."
+      },
+      {
+        "id": "3",
+        "question": "What is a scatter plot used for?",
+        "options": [
+          "Showing the relationship between two continuous variables",
+          "Showing categorical data",
+          "Showing time series data",
+          "Showing proportions"
+        ],
+        "correct_answer": "Showing the relationship between two continuous variables",
+        "explanation": "Scatter plots display values for two variables as points on a Cartesian plane."
+      },
+      {
+        "id": "4",
+        "question": "What is correlation?",
+        "options": [
+          "A statistical measure of the relationship between two variables",
+          "A measure of data quality",
+          "A type of data visualization",
+          "A machine learning algorithm"
+        ],
+        "correct_answer": "A statistical measure of the relationship between two variables",
+        "explanation": "Correlation measures how closely two variables move together."
+      },
+      {
+        "id": "5",
+        "question": "What is the purpose of a box plot?",
+        "options": [
+          "To show the distribution and outliers of data",
+          "To show time series data",
+          "To compare categories",
+          "To show correlations"
+        ],
+        "correct_answer": "To show the distribution and outliers of data",
+        "explanation": "Box plots display the median, quartiles, and potential outliers of a dataset."
+      }
+    ]
+  },
+  {
+    "id": "5",
+    "title": "Statistics for Data Science",
+    "description": "Statistical concepts essential for data science",
+    "questions": [
+      {
+        "id": "1",
+        "question": "What is the mean?",
+        "options": [
+          "The average of a set of numbers",
+          "The middle value in a sorted list",
+          "The most frequent value",
+          "The difference between max and min"
+        ],
+        "correct_answer": "The average of a set of numbers",
+        "explanation": "The mean is calculated by summing all values and dividing by the number of values."
+      },
+      {
+        "id": "2",
+        "question": "What is standard deviation?",
+        "options": [
+          "A measure of the spread of data around the mean",
+          "The average of squared differences",
+          "The square root of variance",
           "All of the above"
         ],
-        "correctAnswer": "All of the above",
-        "explanation": "Cross-validation helps assess model performance reliably, reduces overfitting, and provides better estimates than single train-test split."
+        "correct_answer": "All of the above",
+        "explanation": "Standard deviation measures data variability and is the square root of variance."
       },
       {
-        "id": "9-2-8-confusion-matrix",
-        "type": "multiple-choice",
-        "question": "In a confusion matrix, what does 'precision' measure?",
+        "id": "3",
+        "question": "What is a normal distribution?",
         "options": [
-          "Proportion of true positives among all positive predictions",
-          "Proportion of true positives among all actual positives",
-          "Proportion of correct predictions",
-          "Proportion of negative predictions that are correct"
+          "A bell-shaped probability distribution",
+          "A uniform distribution",
+          "A skewed distribution",
+          "A discrete distribution"
         ],
-        "correctAnswer": "Proportion of true positives among all positive predictions",
-        "explanation": "Precision measures the accuracy of positive predictions, showing how many predicted positives are actually positive."
+        "correct_answer": "A bell-shaped probability distribution",
+        "explanation": "The normal distribution is symmetric around the mean with most values near the center."
+      },
+      {
+        "id": "4",
+        "question": "What is hypothesis testing?",
+        "options": [
+          "A method to test claims about populations using sample data",
+          "A way to create hypotheses",
+          "A statistical visualization",
+          "A machine learning technique"
+        ],
+        "correct_answer": "A method to test claims about populations using sample data",
+        "explanation": "Hypothesis testing uses statistical methods to determine if claims about data are likely true."
+      },
+      {
+        "id": "5",
+        "question": "What is p-value?",
+        "options": [
+          "The probability of observing the data if the null hypothesis is true",
+          "The probability of the alternative hypothesis",
+          "The significance level",
+          "The test statistic"
+        ],
+        "correct_answer": "The probability of observing the data if the null hypothesis is true",
+        "explanation": "A low p-value indicates strong evidence against the null hypothesis."
+      }
+    ]
+  },
+  {
+    "id": "6",
+    "title": "Supervised Learning",
+    "description": "Machine learning with labeled data",
+    "questions": [
+      {
+        "id": "1",
+        "question": "What is supervised learning?",
+        "options": [
+          "Learning from labeled training data",
+          "Learning from unlabeled data",
+          "Learning without a teacher",
+          "Reinforcement learning"
+        ],
+        "correct_answer": "Learning from labeled training data",
+        "explanation": "Supervised learning uses input-output pairs to learn a mapping function."
+      },
+      {
+        "id": "2",
+        "question": "What is regression?",
+        "options": [
+          "Predicting continuous values",
+          "Predicting categories",
+          "Grouping similar items",
+          "Finding anomalies"
+        ],
+        "correct_answer": "Predicting continuous values",
+        "explanation": "Regression predicts continuous numerical values based on input features."
+      },
+      {
+        "id": "3",
+        "question": "What is classification?",
+        "options": [
+          "Predicting discrete categories",
+          "Predicting continuous values",
+          "Finding patterns",
+          "Reducing dimensions"
+        ],
+        "correct_answer": "Predicting discrete categories",
+        "explanation": "Classification assigns input data to predefined categories."
+      },
+      {
+        "id": "4",
+        "question": "What is overfitting?",
+        "options": [
+          "Model performs well on training data but poorly on new data",
+          "Model performs poorly on training data",
+          "Model has too few parameters",
+          "Model converges too slowly"
+        ],
+        "correct_answer": "Model performs well on training data but poorly on new data",
+        "explanation": "Overfitting occurs when a model learns noise in the training data instead of the underlying pattern."
+      },
+      {
+        "id": "5",
+        "question": "What is cross-validation?",
+        "options": [
+          "A technique to assess model performance",
+          "A way to split data",
+          "A type of model",
+          "A optimization method"
+        ],
+        "correct_answer": "A technique to assess model performance",
+        "explanation": "Cross-validation splits data into training and testing sets multiple times to evaluate model performance."
+      }
+    ]
+  },
+  {
+    "id": "7",
+    "title": "Unsupervised Learning",
+    "description": "Machine learning with unlabeled data",
+    "questions": [
+      {
+        "id": "1",
+        "question": "What is unsupervised learning?",
+        "options": [
+          "Learning from unlabeled data",
+          "Learning from labeled data",
+          "Learning with reinforcement",
+          "Learning from examples"
+        ],
+        "correct_answer": "Learning from unlabeled data",
+        "explanation": "Unsupervised learning finds patterns in data without labeled examples."
+      },
+      {
+        "id": "2",
+        "question": "What is clustering?",
+        "options": [
+          "Grouping similar data points together",
+          "Predicting categories",
+          "Finding outliers",
+          "Reducing dimensions"
+        ],
+        "correct_answer": "Grouping similar data points together",
+        "explanation": "Clustering algorithms group data points based on similarity measures."
+      },
+      {
+        "id": "3",
+        "question": "What is K-means clustering?",
+        "options": [
+          "A centroid-based clustering algorithm",
+          "A hierarchical clustering method",
+          "A density-based clustering method",
+          "A model-based clustering method"
+        ],
+        "correct_answer": "A centroid-based clustering algorithm",
+        "explanation": "K-means partitions data into k clusters, each represented by a centroid."
+      },
+      {
+        "id": "4",
+        "question": "What is PCA?",
+        "options": [
+          "Principal Component Analysis for dimensionality reduction",
+          "A clustering algorithm",
+          "A classification method",
+          "A regression technique"
+        ],
+        "correct_answer": "Principal Component Analysis for dimensionality reduction",
+        "explanation": "PCA reduces the dimensionality of data while preserving variance."
+      },
+      {
+        "id": "5",
+        "question": "What is anomaly detection?",
+        "options": [
+          "Finding data points that deviate significantly from normal behavior",
+          "Finding patterns in data",
+          "Grouping similar items",
+          "Predicting future values"
+        ],
+        "correct_answer": "Finding data points that deviate significantly from normal behavior",
+        "explanation": "Anomaly detection identifies outliers or unusual observations in data."
+      }
+    ]
+  },
+  {
+    "id": "8",
+    "title": "Deep Learning",
+    "description": "Neural networks and deep learning concepts",
+    "questions": [
+      {
+        "id": "1",
+        "question": "What is deep learning?",
+        "options": [
+          "A subset of machine learning using neural networks with multiple layers",
+          "Learning from deep data",
+          "A type of supervised learning",
+          "A statistical method"
+        ],
+        "correct_answer": "A subset of machine learning using neural networks with multiple layers",
+        "explanation": "Deep learning uses artificial neural networks with multiple hidden layers."
+      },
+      {
+        "id": "2",
+        "question": "What is a neural network?",
+        "options": [
+          "A computing system inspired by biological neural networks",
+          "A database system",
+          "A programming language",
+          "A web framework"
+        ],
+        "correct_answer": "A computing system inspired by biological neural networks",
+        "explanation": "Neural networks are composed of interconnected nodes that process and transmit information."
+      },
+      {
+        "id": "3",
+        "question": "What is backpropagation?",
+        "options": [
+          "An algorithm for training neural networks",
+          "A method for data preprocessing",
+          "A visualization technique",
+          "A clustering method"
+        ],
+        "correct_answer": "An algorithm for training neural networks",
+        "explanation": "Backpropagation calculates gradients to update neural network weights."
+      },
+      {
+        "id": "4",
+        "question": "What is TensorFlow?",
+        "options": [
+          "An open-source machine learning framework",
+          "A data visualization library",
+          "A statistical package",
+          "A database"
+        ],
+        "correct_answer": "An open-source machine learning framework",
+        "explanation": "TensorFlow is a framework for building and training machine learning models."
+      },
+      {
+        "id": "5",
+        "question": "What is PyTorch?",
+        "options": [
+          "An open-source machine learning library",
+          "A data analysis tool",
+          "A web framework",
+          "A database ORM"
+        ],
+        "correct_answer": "An open-source machine learning library",
+        "explanation": "PyTorch is a Python-based scientific computing package for deep learning."
+      }
+    ]
+  },
+  {
+    "id": "9",
+    "title": "Data Science Ethics and Best Practices",
+    "description": "Ethical considerations and professional practices",
+    "questions": [
+      {
+        "id": "1",
+        "question": "What is data privacy?",
+        "options": [
+          "Protecting personal information from unauthorized access",
+          "Storing data securely",
+          "Analyzing data anonymously",
+          "All of the above"
+        ],
+        "correct_answer": "All of the above",
+        "explanation": "Data privacy involves protecting individuals' personal information and ensuring ethical use."
+      },
+      {
+        "id": "2",
+        "question": "What is bias in machine learning?",
+        "options": [
+          "Systematic errors that can disadvantage certain groups",
+          "Random errors in predictions",
+          "Errors due to insufficient data",
+          "Errors due to poor algorithms"
+        ],
+        "correct_answer": "Systematic errors that can disadvantage certain groups",
+        "explanation": "Bias occurs when a model produces systematically prejudiced results due to flawed assumptions."
+      },
+      {
+        "id": "3",
+        "question": "What is GDPR?",
+        "options": [
+          "General Data Protection Regulation",
+          "Global Data Privacy Rules",
+          "General Database Guidelines",
+          "Global Data Processing Requirements"
+        ],
+        "correct_answer": "General Data Protection Regulation",
+        "explanation": "GDPR is a regulation for data protection and privacy in the European Union."
+      },
+      {
+        "id": "4",
+        "question": "What is reproducible research?",
+        "options": [
+          "Research that can be replicated by others",
+          "Research that is published",
+          "Research that uses open data",
+          "Research that is peer-reviewed"
+        ],
+        "correct_answer": "Research that can be replicated by others",
+        "explanation": "Reproducible research allows others to verify and build upon findings."
+      },
+      {
+        "id": "5",
+        "question": "What is data governance?",
+        "options": [
+          "Managing the availability, usability, integrity, and security of data",
+          "Storing data in databases",
+          "Analyzing data patterns",
+          "Creating data visualizations"
+        ],
+        "correct_answer": "Managing the availability, usability, integrity, and security of data",
+        "explanation": "Data governance establishes processes and responsibilities for data management."
+      }
+    ]
+  },
+  {
+    "id": "10",
+    "title": "Data Science in Production",
+    "description": "Deploying and maintaining data science models",
+    "questions": [
+      {
+        "id": "1",
+        "question": "What is model deployment?",
+        "options": [
+          "Making a trained model available for use in production",
+          "Training a new model",
+          "Evaluating model performance",
+          "Collecting training data"
+        ],
+        "correct_answer": "Making a trained model available for use in production",
+        "explanation": "Model deployment involves integrating a trained model into an application or service."
+      },
+      {
+        "id": "2",
+        "question": "What is MLOps?",
+        "options": [
+          "Machine Learning Operations",
+          "Model Lifecycle Optimization",
+          "Machine Learning Optimization Process",
+          "Model Learning Operations"
+        ],
+        "correct_answer": "Machine Learning Operations",
+        "explanation": "MLOps applies DevOps principles to machine learning model development and deployment."
+      },
+      {
+        "id": "3",
+        "question": "What is model monitoring?",
+        "options": [
+          "Tracking model performance and behavior in production",
+          "Monitoring server resources",
+          "Monitoring user activity",
+          "Monitoring network traffic"
+        ],
+        "correct_answer": "Tracking model performance and behavior in production",
+        "explanation": "Model monitoring ensures models continue to perform well after deployment."
+      },
+      {
+        "id": "4",
+        "question": "What is A/B testing?",
+        "options": [
+          "Comparing two versions of a model or feature",
+          "Testing model accuracy",
+          "Testing data quality",
+          "Testing system performance"
+        ],
+        "correct_answer": "Comparing two versions of a model or feature",
+        "explanation": "A/B testing compares two variants to determine which performs better."
+      },
+      {
+        "id": "5",
+        "question": "What is model retraining?",
+        "options": [
+          "Updating a model with new data to maintain performance",
+          "Training a model from scratch",
+          "Fine-tuning hyperparameters",
+          "Testing model accuracy"
+        ],
+        "correct_answer": "Updating a model with new data to maintain performance",
+        "explanation": "Model retraining updates existing models with new data to adapt to changing patterns."
       }
     ]
   }

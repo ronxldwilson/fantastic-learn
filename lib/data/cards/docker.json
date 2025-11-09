@@ -1,145 +1,321 @@
 [
   {
-    "id": "7-1-docker-basics",
-    "title": "Docker Fundamentals",
-    "description": "Core Docker commands and container management concepts.",
-    "difficulty": "beginner",
+    "id": "1",
+    "title": "Docker Basics",
+    "description": "Fundamental Docker concepts",
     "cards": [
       {
-        "id": "7-1-1-docker-version",
-        "front": "How do you check Docker version?",
-        "back": "docker --version"
+        "id": "1",
+        "front": "What is Docker?",
+        "back": "An open-source platform for developing, shipping, and running applications in containers."
       },
       {
-        "id": "7-1-2-docker-run",
-        "front": "How do you run a container interactively?",
-        "back": "docker run -it ubuntu bash"
+        "id": "2",
+        "front": "What is a Docker container?",
+        "back": "A lightweight, standalone executable package that includes everything needed to run an application."
       },
       {
-        "id": "7-1-3-docker-ps",
-        "front": "How do you list all containers?",
-        "back": "docker ps -a"
+        "id": "3",
+        "front": "What is a Docker image?",
+        "back": "A read-only template used to create containers."
       },
       {
-        "id": "7-1-4-docker-images",
-        "front": "How do you list all images?",
+        "id": "4",
+        "front": "What is Docker Hub?",
+        "back": "A cloud-based registry service for sharing and managing Docker images."
+      },
+      {
+        "id": "5",
+        "front": "Difference between container and VM?",
+        "back": "Containers share the host OS kernel, VMs include a full operating system."
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "title": "Docker Installation",
+    "description": "Installing and setting up Docker",
+    "cards": [
+      {
+        "id": "1",
+        "front": "How to check Docker installation?",
+        "back": "docker --version or docker version"
+      },
+      {
+        "id": "2",
+        "front": "What is Docker Desktop?",
+        "back": "A GUI application for managing Docker on Windows and macOS."
+      },
+      {
+        "id": "3",
+        "front": "What is the Docker daemon?",
+        "back": "The background service (dockerd) that manages Docker containers."
+      },
+      {
+        "id": "4",
+        "front": "What is Docker Compose?",
+        "back": "A tool for defining and running multi-container Docker applications."
+      },
+      {
+        "id": "5",
+        "front": "How to start Docker daemon on Linux?",
+        "back": "sudo systemctl start docker"
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "title": "Docker Images",
+    "description": "Working with Docker images",
+    "cards": [
+      {
+        "id": "1",
+        "front": "How to pull an image?",
+        "back": "docker pull <image_name>"
+      },
+      {
+        "id": "2",
+        "front": "How to list images?",
         "back": "docker images"
       },
       {
-        "id": "7-1-5-docker-build",
-        "front": "How do you build an image from Dockerfile?",
-        "back": "docker build -t myapp ."
+        "id": "3",
+        "front": "What is a Dockerfile?",
+        "back": "A text file with instructions for building a Docker image."
       },
       {
-        "id": "7-1-6-docker-stop",
-        "front": "How do you stop a running container?",
+        "id": "4",
+        "front": "What does FROM do in Dockerfile?",
+        "back": "Specifies the base image for the new image."
+      },
+      {
+        "id": "5",
+        "front": "How to build an image?",
+        "back": "docker build -t <name> ."
+      }
+    ]
+  },
+  {
+    "id": "4",
+    "title": "Docker Containers",
+    "description": "Running and managing containers",
+    "cards": [
+      {
+        "id": "1",
+        "front": "How to run a container?",
+        "back": "docker run <image_name>"
+      },
+      {
+        "id": "2",
+        "front": "How to list running containers?",
+        "back": "docker ps"
+      },
+      {
+        "id": "3",
+        "front": "How to stop a container?",
         "back": "docker stop <container_id>"
       },
       {
-        "id": "7-1-7-docker-rm",
-        "front": "How do you remove a container?",
+        "id": "4",
+        "front": "Difference between stop and kill?",
+        "back": "stop sends SIGTERM (graceful), kill sends SIGKILL (immediate)."
+      },
+      {
+        "id": "5",
+        "front": "How to remove a container?",
         "back": "docker rm <container_id>"
-      },
-      {
-        "id": "7-1-8-docker-rmi",
-        "front": "How do you remove an image?",
-        "back": "docker rmi <image_id>"
       }
     ]
   },
   {
-    "id": "7-2-dockerfile",
-    "title": "Dockerfile Instructions",
-    "description": "Common Dockerfile instructions and best practices.",
-    "difficulty": "intermediate",
+    "id": "5",
+    "title": "Docker Networking",
+    "description": "Container networking concepts",
     "cards": [
       {
-        "id": "7-2-1-from-instruction",
-        "front": "What does FROM do in a Dockerfile?",
-        "back": "Specifies the base image to build upon"
+        "id": "1",
+        "front": "What is the default network driver?",
+        "back": "bridge"
       },
       {
-        "id": "7-2-2-copy-instruction",
-        "front": "How do you copy files into the image?",
-        "back": "COPY source destination"
+        "id": "2",
+        "front": "What is port mapping?",
+        "back": "Mapping container ports to host ports using -p flag."
       },
       {
-        "id": "7-2-3-run-instruction",
-        "front": "What does RUN do?",
-        "back": "Executes commands during image build"
+        "id": "3",
+        "front": "How to expose ports?",
+        "back": "docker run -p host_port:container_port"
       },
       {
-        "id": "7-2-4-cmd-instruction",
-        "front": "What does CMD do?",
-        "back": "Specifies the default command to run when container starts"
+        "id": "4",
+        "front": "What is host network mode?",
+        "back": "Containers use the host's network stack directly."
       },
       {
-        "id": "7-2-5-entrypoint",
-        "front": "How is ENTRYPOINT different from CMD?",
-        "back": "ENTRYPOINT sets the executable, CMD provides default arguments"
-      },
-      {
-        "id": "7-2-6-workdir",
-        "front": "What does WORKDIR do?",
-        "back": "Sets the working directory for subsequent instructions"
-      },
-      {
-        "id": "7-2-7-expose",
-        "front": "What does EXPOSE do?",
-        "back": "Documents which ports the container listens on"
-      },
-      {
-        "id": "7-2-8-env",
-        "front": "How do you set environment variables?",
-        "back": "ENV KEY=value"
+        "id": "5",
+        "front": "How to connect to custom network?",
+        "back": "docker network connect <network> <container>"
       }
     ]
   },
   {
-    "id": "7-3-docker-compose",
+    "id": "6",
+    "title": "Docker Volumes",
+    "description": "Persistent data storage",
+    "cards": [
+      {
+        "id": "1",
+        "front": "What is a Docker volume?",
+        "back": "Persistent storage that survives container restarts and removals."
+      },
+      {
+        "id": "2",
+        "front": "How to create a named volume?",
+        "back": "docker volume create <name>"
+      },
+      {
+        "id": "3",
+        "front": "How to mount a volume?",
+        "back": "docker run -v volume_name:/container/path"
+      },
+      {
+        "id": "4",
+        "front": "What is a bind mount?",
+        "back": "Mounting an existing host directory into a container."
+      },
+      {
+        "id": "5",
+        "front": "How to list volumes?",
+        "back": "docker volume ls"
+      }
+    ]
+  },
+  {
+    "id": "7",
     "title": "Docker Compose",
-    "description": "Multi-container applications with Docker Compose.",
-    "difficulty": "intermediate",
+    "description": "Multi-container applications",
     "cards": [
       {
-        "id": "7-3-1-compose-file",
-        "front": "What is the default Docker Compose file name?",
-        "back": "docker-compose.yml"
+        "id": "1",
+        "front": "What is docker-compose.yml?",
+        "back": "A YAML file defining services, networks, and volumes for multi-container apps."
       },
       {
-        "id": "7-3-2-compose-up",
-        "front": "How do you start services with Compose?",
+        "id": "2",
+        "front": "How to start Compose services?",
         "back": "docker-compose up"
       },
       {
-        "id": "7-3-3-compose-down",
-        "front": "How do you stop and remove services?",
+        "id": "3",
+        "front": "What is the services section?",
+        "back": "Defines each container and its configuration."
+      },
+      {
+        "id": "4",
+        "front": "How to stop Compose services?",
         "back": "docker-compose down"
       },
       {
-        "id": "7-3-4-compose-build",
-        "front": "How do you build images with Compose?",
-        "back": "docker-compose build"
+        "id": "5",
+        "front": "What is depends_on?",
+        "back": "Specifies the order in which services should be started."
+      }
+    ]
+  },
+  {
+    "id": "8",
+    "title": "Docker Best Practices",
+    "description": "Development and production best practices",
+    "cards": [
+      {
+        "id": "1",
+        "front": "What is .dockerignore for?",
+        "back": "Excludes unnecessary files from the build context."
       },
       {
-        "id": "7-3-5-compose-logs",
-        "front": "How do you view service logs?",
-        "back": "docker-compose logs"
+        "id": "2",
+        "front": "What is a multi-stage build?",
+        "back": "Using multiple FROM statements to optimize final image size."
       },
       {
-        "id": "7-3-6-compose-exec",
-        "front": "How do you run commands in running services?",
-        "back": "docker-compose exec service_name command"
+        "id": "3",
+        "front": "Why avoid running as root?",
+        "back": "Limits damage if the container is compromised."
       },
       {
-        "id": "7-3-7-volumes-compose",
-        "front": "How do you define volumes in Compose?",
-        "back": "volumes:\n  - ./data:/app/data"
+        "id": "4",
+        "front": "What is HEALTHCHECK?",
+        "back": "Defines a command to check if a container is healthy."
       },
       {
-        "id": "7-3-8-depends-on",
-        "front": "How do you specify service dependencies?",
-        "back": "depends_on:\n  - database"
+        "id": "5",
+        "front": "Why use specific image tags?",
+        "back": "Ensures reproducible builds."
+      }
+    ]
+  },
+  {
+    "id": "9",
+    "title": "Docker Security",
+    "description": "Security considerations",
+    "cards": [
+      {
+        "id": "1",
+        "front": "What is Docker Content Trust?",
+        "back": "Uses digital signatures to verify image authenticity."
+      },
+      {
+        "id": "2",
+        "front": "What is security scanning?",
+        "back": "Checks images for known vulnerabilities."
+      },
+      {
+        "id": "3",
+        "front": "Why use non-root users?",
+        "back": "Follows the principle of least privilege."
+      },
+      {
+        "id": "4",
+        "front": "What does --read-only do?",
+        "back": "Makes the container filesystem read-only."
+      },
+      {
+        "id": "5",
+        "front": "What is least privilege?",
+        "back": "Granting minimal necessary permissions."
+      }
+    ]
+  },
+  {
+    "id": "10",
+    "title": "Docker Production",
+    "description": "Running Docker in production",
+    "cards": [
+      {
+        "id": "1",
+        "front": "What is container orchestration?",
+        "back": "Managing multiple containers across hosts."
+      },
+      {
+        "id": "2",
+        "front": "What is Kubernetes?",
+        "back": "An open-source platform for automating container operations."
+      },
+      {
+        "id": "3",
+        "front": "What is Docker Swarm?",
+        "back": "Docker's native clustering and orchestration tool."
+      },
+      {
+        "id": "4",
+        "front": "What is a reverse proxy?",
+        "back": "Forwards requests to appropriate backend services."
+      },
+      {
+        "id": "5",
+        "front": "What is container monitoring?",
+        "back": "Tracking container performance, health, and metrics."
       }
     ]
   }

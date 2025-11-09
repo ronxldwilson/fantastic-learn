@@ -1,193 +1,321 @@
 [
   {
-    "id": "9-1-statistics-basics",
+    "id": "1",
+    "title": "Data Science Basics",
+    "description": "Fundamental concepts of data science",
+    "cards": [
+      {
+        "id": "1",
+        "front": "What is data science?",
+        "back": "Extracting insights from data using scientific methods, statistics, and programming."
+      },
+      {
+        "id": "2",
+        "front": "What is the most important language for data science?",
+        "back": "Python - due to its simplicity and extensive libraries."
+      },
+      {
+        "id": "3",
+        "front": "What is machine learning?",
+        "back": "A subset of AI that automates analytical model building from data."
+      },
+      {
+        "id": "4",
+        "front": "Difference between AI and ML?",
+        "back": "AI is broader (encompassing ML and other approaches), ML is a subset focused on learning from data."
+      },
+      {
+        "id": "5",
+        "front": "What is big data?",
+        "back": "Datasets too large or complex for traditional data processing tools."
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "title": "Python Libraries",
+    "description": "Essential Python libraries for data science",
+    "cards": [
+      {
+        "id": "1",
+        "front": "What is NumPy used for?",
+        "back": "Numerical computing, multi-dimensional arrays, and mathematical functions."
+      },
+      {
+        "id": "2",
+        "front": "What is pandas used for?",
+        "back": "Data manipulation and analysis with DataFrame and Series structures."
+      },
+      {
+        "id": "3",
+        "front": "What is matplotlib used for?",
+        "back": "Creating static, animated, and interactive visualizations."
+      },
+      {
+        "id": "4",
+        "front": "What is scikit-learn?",
+        "back": "A machine learning library providing tools for predictive data analysis."
+      },
+      {
+        "id": "5",
+        "front": "What is Jupyter Notebook?",
+        "back": "An interactive computing environment for creating documents with live code."
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "title": "Data Preparation",
+    "description": "Cleaning and preparing data for analysis",
+    "cards": [
+      {
+        "id": "1",
+        "front": "What is data cleaning?",
+        "back": "Removing errors, inconsistencies, and irrelevant data from datasets."
+      },
+      {
+        "id": "2",
+        "front": "What is ETL?",
+        "back": "Extract, Transform, Load - the process of preparing data for analysis."
+      },
+      {
+        "id": "3",
+        "front": "What are missing values?",
+        "back": "Data points that are not available or recorded for a variable."
+      },
+      {
+        "id": "4",
+        "front": "What is data normalization?",
+        "back": "Scaling numeric variables to a standard range, usually 0 to 1."
+      },
+      {
+        "id": "5",
+        "front": "What is feature engineering?",
+        "back": "Creating new input features from existing data to improve model performance."
+      }
+    ]
+  },
+  {
+    "id": "4",
+    "title": "EDA - Exploratory Data Analysis",
+    "description": "Understanding and exploring datasets",
+    "cards": [
+      {
+        "id": "1",
+        "front": "What is EDA?",
+        "back": "Exploratory Data Analysis - analyzing datasets to summarize main characteristics."
+      },
+      {
+        "id": "2",
+        "front": "What is a histogram used for?",
+        "back": "Showing the frequency distribution of a single continuous variable."
+      },
+      {
+        "id": "3",
+        "front": "What is a scatter plot used for?",
+        "back": "Displaying the relationship between two continuous variables."
+      },
+      {
+        "id": "4",
+        "front": "What is correlation?",
+        "back": "A statistical measure of the relationship between two variables."
+      },
+      {
+        "id": "5",
+        "front": "What is a box plot used for?",
+        "back": "Showing data distribution, median, quartiles, and potential outliers."
+      }
+    ]
+  },
+  {
+    "id": "5",
     "title": "Statistics Fundamentals",
-    "description": "Core statistical concepts and measures.",
-    "difficulty": "beginner",
+    "description": "Essential statistical concepts",
     "cards": [
       {
-        "id": "9-1-1-mean-calculation",
-        "front": "How do you calculate the mean (average)?",
-        "back": "Sum of all values divided by number of values: (x₁ + x₂ + ... + xn) / n"
+        "id": "1",
+        "front": "What is the mean?",
+        "back": "The average of a set of numbers, calculated by summing and dividing by count."
       },
       {
-        "id": "9-1-2-median-calculation",
-        "front": "How do you find the median?",
-        "back": "Sort the data, median is the middle value. For even count, average of two middle values."
-      },
-      {
-        "id": "9-1-3-mode-definition",
-        "front": "What is the mode?",
-        "back": "The value that appears most frequently in a dataset."
-      },
-      {
-        "id": "9-1-4-variance-formula",
-        "front": "How do you calculate variance?",
-        "back": "Average of squared differences from the mean: Σ(xi - μ)² / n"
-      },
-      {
-        "id": "9-1-5-standard-deviation",
+        "id": "2",
         "front": "What is standard deviation?",
-        "back": "Square root of variance, measures spread of data around the mean."
+        "back": "A measure of data spread around the mean; square root of variance."
       },
       {
-        "id": "9-1-6-correlation-coefficient",
-        "front": "What does a correlation coefficient of -1 mean?",
-        "back": "Perfect negative correlation - as one variable increases, the other decreases."
+        "id": "3",
+        "front": "What is a normal distribution?",
+        "back": "A bell-shaped probability distribution symmetric around the mean."
       },
       {
-        "id": "9-1-7-p-value",
-        "front": "What does a p-value less than 0.05 indicate?",
-        "back": "Statistically significant result - the observed effect is unlikely due to chance."
+        "id": "4",
+        "front": "What is hypothesis testing?",
+        "back": "Testing claims about populations using sample data and statistical methods."
       },
       {
-        "id": "9-1-8-confidence-interval",
-        "front": "What is a 95% confidence interval?",
-        "back": "Range where we are 95% confident the true population parameter lies."
+        "id": "5",
+        "front": "What is a p-value?",
+        "back": "The probability of observing data if the null hypothesis is true."
       }
     ]
   },
   {
-    "id": "9-2-pandas-operations",
-    "title": "Pandas Data Manipulation",
-    "description": "Common pandas operations for data analysis.",
-    "difficulty": "intermediate",
+    "id": "6",
+    "title": "Supervised Learning",
+    "description": "Machine learning with labeled data",
     "cards": [
       {
-        "id": "9-2-1-pandas-read-csv",
-        "front": "How do you read a CSV file in pandas?",
-        "back": "import pandas as pd\ndf = pd.read_csv('file.csv')"
+        "id": "1",
+        "front": "What is supervised learning?",
+        "back": "Learning from labeled training data to predict outputs for new inputs."
       },
       {
-        "id": "9-2-2-pandas-head",
-        "front": "How do you view the first 5 rows of a DataFrame?",
-        "back": "df.head()"
+        "id": "2",
+        "front": "What is regression?",
+        "back": "Predicting continuous numerical values based on input features."
       },
       {
-        "id": "9-2-3-pandas-info",
-        "front": "How do you get DataFrame information?",
-        "back": "df.info() - shows columns, dtypes, non-null counts"
+        "id": "3",
+        "front": "What is classification?",
+        "back": "Predicting discrete categories or classes for input data."
       },
       {
-        "id": "9-2-4-pandas-describe",
-        "front": "How do you get summary statistics?",
-        "back": "df.describe() - shows count, mean, std, min, quartiles, max"
+        "id": "4",
+        "front": "What is overfitting?",
+        "back": "When a model performs well on training data but poorly on new data."
       },
       {
-        "id": "9-2-5-pandas-filter",
-        "front": "How do you filter rows in pandas?",
-        "back": "df[df['column'] > value]\ndf.query('column > value')"
-      },
-      {
-        "id": "9-2-6-pandas-groupby",
-        "front": "How do you group data and aggregate?",
-        "back": "df.groupby('category')['value'].mean()"
-      },
-      {
-        "id": "9-2-7-pandas-merge",
-        "front": "How do you join two DataFrames?",
-        "back": "pd.merge(df1, df2, on='key', how='inner')"
-      },
-      {
-        "id": "9-2-8-pandas-fillna",
-        "front": "How do you handle missing values?",
-        "back": "df.fillna(value) - fill with specific value\ndf.dropna() - remove rows with NaN"
+        "id": "5",
+        "front": "What is cross-validation?",
+        "back": "A technique to assess model performance by splitting data multiple ways."
       }
     ]
   },
   {
-    "id": "9-3-machine-learning",
-    "title": "Machine Learning Concepts",
-    "description": "Key ML algorithms and evaluation metrics.",
-    "difficulty": "intermediate",
+    "id": "7",
+    "title": "Unsupervised Learning",
+    "description": "Machine learning with unlabeled data",
     "cards": [
       {
-        "id": "9-3-1-supervised-unsupervised",
-        "front": "Difference between supervised and unsupervised learning?",
-        "back": "Supervised: labeled training data, predict outputs\nUnsupervised: unlabeled data, find patterns/structures"
+        "id": "1",
+        "front": "What is unsupervised learning?",
+        "back": "Finding patterns in data without labeled examples or supervision."
       },
       {
-        "id": "9-3-2-linear-regression",
-        "front": "When to use linear regression?",
-        "back": "Predict continuous numerical values with linear relationship between variables."
+        "id": "2",
+        "front": "What is clustering?",
+        "back": "Grouping similar data points together based on characteristics."
       },
       {
-        "id": "9-3-3-logistic-regression",
-        "front": "When to use logistic regression?",
-        "back": "Binary classification problems, outputs probability between 0 and 1."
+        "id": "3",
+        "front": "What is K-means?",
+        "back": "A centroid-based clustering algorithm that partitions data into k clusters."
       },
       {
-        "id": "9-3-4-decision-trees",
-        "front": "Advantages of decision trees?",
-        "back": "Easy to interpret, handle both numerical and categorical data, no need for scaling."
+        "id": "4",
+        "front": "What is PCA?",
+        "back": "Principal Component Analysis - reduces dimensionality while preserving variance."
       },
       {
-        "id": "9-3-5-random-forest",
-        "front": "What is Random Forest?",
-        "back": "Ensemble method combining multiple decision trees to reduce overfitting and improve accuracy."
-      },
-      {
-        "id": "9-3-6-k-means",
-        "front": "How does K-Means clustering work?",
-        "back": "Iteratively assigns points to K clusters based on distance to centroids, then updates centroids."
-      },
-      {
-        "id": "9-3-7-cross-validation",
-        "front": "Why use cross-validation?",
-        "back": "Provides more reliable performance estimates, helps detect overfitting, makes better use of limited data."
-      },
-      {
-        "id": "9-3-8-feature-importance",
-        "front": "How to determine feature importance?",
-        "back": "Random Forest feature_importances_, correlation analysis, recursive feature elimination, permutation importance."
+        "id": "5",
+        "front": "What is anomaly detection?",
+        "back": "Finding data points that deviate significantly from normal behavior."
       }
     ]
   },
   {
-    "id": "9-4-data-visualization",
-    "title": "Data Visualization",
-    "description": "Creating effective visualizations with Python libraries.",
-    "difficulty": "intermediate",
+    "id": "8",
+    "title": "Deep Learning",
+    "description": "Neural networks and deep learning",
     "cards": [
       {
-        "id": "9-4-1-matplotlib-plot",
-        "front": "Basic matplotlib line plot?",
-        "back": "import matplotlib.pyplot as plt\nplt.plot(x, y)\nplt.xlabel('X Label')\nplt.ylabel('Y Label')\nplt.title('Title')\nplt.show()"
+        "id": "1",
+        "front": "What is deep learning?",
+        "back": "A subset of ML using neural networks with multiple hidden layers."
       },
       {
-        "id": "9-4-2-seaborn-scatter",
-        "front": "Seaborn scatter plot with hue?",
-        "back": "import seaborn as sns\nsns.scatterplot(data=df, x='x_col', y='y_col', hue='category')"
+        "id": "2",
+        "front": "What is a neural network?",
+        "back": "A computing system inspired by biological neural networks."
       },
       {
-        "id": "9-4-3-histogram",
-        "front": "When to use a histogram?",
-        "back": "Show distribution of a single continuous variable, visualize data spread and central tendency."
+        "id": "3",
+        "front": "What is backpropagation?",
+        "back": "An algorithm for training neural networks by calculating gradients."
       },
       {
-        "id": "9-4-4-box-plot",
-        "front": "What does a box plot show?",
-        "back": "Median, quartiles, outliers, and spread of data distribution."
+        "id": "4",
+        "front": "What is TensorFlow?",
+        "back": "An open-source framework for building and training ML models."
       },
       {
-        "id": "9-4-5-heatmap-correlation",
-        "front": "How to create a correlation heatmap?",
-        "back": "import seaborn as sns\ncorr_matrix = df.corr()\nsns.heatmap(corr_matrix, annot=True, cmap='coolwarm')"
+        "id": "5",
+        "front": "What is PyTorch?",
+        "back": "A Python-based scientific computing package for deep learning."
+      }
+    ]
+  },
+  {
+    "id": "9",
+    "title": "Ethics & Best Practices",
+    "description": "Ethical considerations in data science",
+    "cards": [
+      {
+        "id": "1",
+        "front": "What is data privacy?",
+        "back": "Protecting personal information from unauthorized access and misuse."
       },
       {
-        "id": "9-4-6-subplots",
-        "front": "How to create multiple plots in one figure?",
-        "back": "fig, axes = plt.subplots(2, 2)\naxes[0,0].plot(x1, y1)\naxes[0,1].scatter(x2, y2)"
+        "id": "2",
+        "front": "What is bias in ML?",
+        "back": "Systematic errors that can disadvantage certain groups or produce unfair results."
       },
       {
-        "id": "9-4-7-plotly-interactive",
-        "front": "Why use Plotly for visualization?",
-        "back": "Creates interactive plots, supports web deployment, better for exploratory data analysis."
+        "id": "3",
+        "front": "What is GDPR?",
+        "back": "General Data Protection Regulation - EU regulation for data protection."
       },
       {
-        "id": "9-4-8-visualization-best-practices",
-        "front": "Data visualization best practices?",
-        "back": "Choose appropriate chart types, use clear labels, avoid chart junk, ensure color accessibility, tell a story with data."
+        "id": "4",
+        "front": "What is reproducible research?",
+        "back": "Research that can be replicated and verified by others."
+      },
+      {
+        "id": "5",
+        "front": "What is data governance?",
+        "back": "Managing data availability, usability, integrity, and security."
+      }
+    ]
+  },
+  {
+    "id": "10",
+    "title": "Production Data Science",
+    "description": "Deploying and maintaining models",
+    "cards": [
+      {
+        "id": "1",
+        "front": "What is model deployment?",
+        "back": "Making a trained model available for use in production applications."
+      },
+      {
+        "id": "2",
+        "front": "What is MLOps?",
+        "back": "Machine Learning Operations - applying DevOps to ML development."
+      },
+      {
+        "id": "3",
+        "front": "What is model monitoring?",
+        "back": "Tracking model performance and behavior in production environments."
+      },
+      {
+        "id": "4",
+        "front": "What is A/B testing?",
+        "back": "Comparing two versions of a model or feature to determine which performs better."
+      },
+      {
+        "id": "5",
+        "front": "What is model retraining?",
+        "back": "Updating a model with new data to maintain performance over time."
       }
     ]
   }

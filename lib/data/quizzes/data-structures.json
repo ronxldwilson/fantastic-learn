@@ -1,6 +1,6 @@
 [
   {
-    "id": "lists",
+    "id": "1",
     "title": "Lists",
     "description": "Master Python lists and their operations.",
     "difficulty": "beginner",
@@ -9,7 +9,12 @@
         "id": "1",
         "type": "multiple-choice",
         "question": "How do you create an empty list in Python?",
-        "options": ["list()", "[ ]", "{}", "list = empty"],
+        "options": [
+          "list()",
+          "[ ]",
+          "{}",
+          "list = empty"
+        ],
         "correctAnswer": "[ ]",
         "explanation": "Both list() and [] create empty lists, but [] is more common and readable."
       },
@@ -31,7 +36,12 @@
         "id": "4",
         "type": "multiple-choice",
         "question": "Which of these is NOT a valid way to access list elements?",
-        "options": ["list[0]", "list[-1]", "list[1.5]", "list[2:5]"],
+        "options": [
+          "list[0]",
+          "list[-1]",
+          "list[1.5]",
+          "list[2:5]"
+        ],
         "correctAnswer": "list[1.5]",
         "explanation": "List indices must be integers. list[1.5] is invalid, but slicing with integers works."
       },
@@ -46,7 +56,12 @@
         "id": "6",
         "type": "multiple-choice",
         "question": "What does list.insert(index, element) do?",
-        "options": ["Replaces element at index", "Adds element before index", "Adds element after index", "Removes element at index"],
+        "options": [
+          "Replaces element at index",
+          "Adds element before index",
+          "Adds element after index",
+          "Removes element at index"
+        ],
         "correctAnswer": "Adds element before index",
         "explanation": "insert() adds the element at the specified index, shifting existing elements to the right."
       },
@@ -68,7 +83,12 @@
         "id": "9",
         "type": "multiple-choice",
         "question": "What does list.reverse() do?",
-        "options": ["Sorts in reverse order", "Reverses the list in place", "Returns a reversed copy", "Removes last element"],
+        "options": [
+          "Sorts in reverse order",
+          "Reverses the list in place",
+          "Returns a reversed copy",
+          "Removes last element"
+        ],
         "correctAnswer": "Reverses the list in place",
         "explanation": "reverse() modifies the original list by reversing its elements."
       },
@@ -83,7 +103,12 @@
         "id": "11",
         "type": "multiple-choice",
         "question": "What is list slicing?",
-        "options": ["Removing elements", "Extracting a portion", "Sorting elements", "Finding elements"],
+        "options": [
+          "Removing elements",
+          "Extracting a portion",
+          "Sorting elements",
+          "Finding elements"
+        ],
         "correctAnswer": "Extracting a portion",
         "explanation": "Slicing uses [start:end:step] to extract a portion of the list."
       },
@@ -105,7 +130,12 @@
         "id": "14",
         "type": "multiple-choice",
         "question": "What does list.clear() do?",
-        "options": ["Removes all elements", "Creates empty list", "Returns empty list", "Removes duplicates"],
+        "options": [
+          "Removes all elements",
+          "Creates empty list",
+          "Returns empty list",
+          "Removes duplicates"
+        ],
         "correctAnswer": "Removes all elements",
         "explanation": "clear() removes all elements from the list, making it empty."
       },
@@ -119,7 +149,7 @@
     ]
   },
   {
-    "id": "dictionaries",
+    "id": "2",
     "title": "Dictionaries",
     "description": "Learn about Python dictionaries and key-value pairs.",
     "difficulty": "beginner",
@@ -128,7 +158,12 @@
         "id": "1",
         "type": "multiple-choice",
         "question": "How do you create an empty dictionary?",
-        "options": ["dict()", "{}", "[ ]", "dict = empty"],
+        "options": [
+          "dict()",
+          "{}",
+          "[ ]",
+          "dict = empty"
+        ],
         "correctAnswer": "{}",
         "explanation": "Both dict() and {} create empty dictionaries, but {} is more concise."
       },
@@ -150,7 +185,12 @@
         "id": "4",
         "type": "multiple-choice",
         "question": "What types can be used as dictionary keys?",
-        "options": ["Only strings", "Any hashable type", "Only numbers", "Any type"],
+        "options": [
+          "Only strings",
+          "Any hashable type",
+          "Only numbers",
+          "Any type"
+        ],
         "correctAnswer": "Any hashable type",
         "explanation": "Keys must be hashable (immutable) types like strings, numbers, tuples."
       },
@@ -186,7 +226,12 @@
         "id": "9",
         "type": "multiple-choice",
         "question": "What does dict.pop(key) do?",
-        "options": ["Removes random key", "Removes and returns value for key", "Removes all keys", "Returns first key"],
+        "options": [
+          "Removes random key",
+          "Removes and returns value for key",
+          "Removes all keys",
+          "Returns first key"
+        ],
         "correctAnswer": "Removes and returns value for key",
         "explanation": "pop() removes the key and returns its value."
       },
@@ -208,7 +253,12 @@
         "id": "12",
         "type": "multiple-choice",
         "question": "What does dict.setdefault(key, default) do?",
-        "options": ["Always sets the value", "Sets only if key doesn't exist", "Replaces existing value", "Returns default only"],
+        "options": [
+          "Always sets the value",
+          "Sets only if key doesn't exist",
+          "Replaces existing value",
+          "Returns default only"
+        ],
         "correctAnswer": "Sets only if key doesn't exist",
         "explanation": "setdefault() sets the value only if the key is not already present."
       },
@@ -230,14 +280,19 @@
         "id": "15",
         "type": "multiple-choice",
         "question": "Are dictionaries ordered in Python 3.7+?",
-        "options": ["No, never ordered", "Yes, insertion order preserved", "Only when sorted", "Only for string keys"],
+        "options": [
+          "No, never ordered",
+          "Yes, insertion order preserved",
+          "Only when sorted",
+          "Only for string keys"
+        ],
         "correctAnswer": "Yes, insertion order preserved",
         "explanation": "Python 3.7+ dictionaries maintain insertion order."
       }
     ]
   },
   {
-    "id": "tuples",
+    "id": "3",
     "title": "Tuples",
     "description": "Master immutable sequences in Python.",
     "difficulty": "beginner",
@@ -246,7 +301,12 @@
         "id": "1",
         "type": "multiple-choice",
         "question": "Which of these is immutable in Python?",
-        "options": ["List", "Dictionary", "Tuple", "Set"],
+        "options": [
+          "List",
+          "Dictionary",
+          "Tuple",
+          "Set"
+        ],
         "correctAnswer": "Tuple",
         "explanation": "Tuples are immutable - their contents cannot be changed after creation."
       },
@@ -261,7 +321,12 @@
         "id": "3",
         "type": "multiple-choice",
         "question": "How do you create a tuple with one element?",
-        "options": ["(1)", "(1,)", "tuple(1)", "[1]"],
+        "options": [
+          "(1)",
+          "(1,)",
+          "tuple(1)",
+          "[1]"
+        ],
         "correctAnswer": "(1,)",
         "explanation": "Single-element tuples need a trailing comma to distinguish from parentheses."
       },
@@ -297,7 +362,12 @@
         "id": "8",
         "type": "multiple-choice",
         "question": "Can tuples contain mutable objects?",
-        "options": ["No, never", "Yes, but tuple itself is immutable", "Only other tuples", "Only immutable objects"],
+        "options": [
+          "No, never",
+          "Yes, but tuple itself is immutable",
+          "Only other tuples",
+          "Only immutable objects"
+        ],
         "correctAnswer": "Yes, but tuple itself is immutable",
         "explanation": "Tuples can contain lists, dicts, etc., but the tuple references can't change."
       },
@@ -312,7 +382,12 @@
         "id": "10",
         "type": "multiple-choice",
         "question": "Can tuples be used as dictionary keys?",
-        "options": ["No, never", "Only if they contain immutable elements", "Only empty tuples", "Only single-element tuples"],
+        "options": [
+          "No, never",
+          "Only if they contain immutable elements",
+          "Only empty tuples",
+          "Only single-element tuples"
+        ],
         "correctAnswer": "Only if they contain immutable elements",
         "explanation": "Tuples are hashable if all their elements are hashable."
       },
@@ -334,7 +409,12 @@
         "id": "13",
         "type": "multiple-choice",
         "question": "What is tuple concatenation?",
-        "options": ["Joining with +", "Merging elements", "Creating nested tuples", "Converting to list"],
+        "options": [
+          "Joining with +",
+          "Merging elements",
+          "Creating nested tuples",
+          "Converting to list"
+        ],
         "correctAnswer": "Joining with +",
         "explanation": "+ creates a new tuple by concatenating two tuples."
       },
@@ -355,7 +435,7 @@
     ]
   },
   {
-    "id": "sets",
+    "id": "4",
     "title": "Sets",
     "description": "Learn about unordered collections of unique elements.",
     "difficulty": "intermediate",
@@ -371,7 +451,12 @@
         "id": "2",
         "type": "multiple-choice",
         "question": "How do you create an empty set?",
-        "options": ["{}", "set()", "[]", "empty_set"],
+        "options": [
+          "{}",
+          "set()",
+          "[]",
+          "empty_set"
+        ],
         "correctAnswer": "set()",
         "explanation": "{} creates an empty dict, set() creates an empty set."
       },
@@ -400,7 +485,12 @@
         "id": "6",
         "type": "multiple-choice",
         "question": "What does set.remove(element) do?",
-        "options": ["Removes element safely", "Raises error if not found", "Removes all elements", "Removes random element"],
+        "options": [
+          "Removes element safely",
+          "Raises error if not found",
+          "Removes all elements",
+          "Removes random element"
+        ],
         "correctAnswer": "Raises error if not found",
         "explanation": "remove() raises KeyError if the element is not in the set."
       },
@@ -422,7 +512,12 @@
         "id": "9",
         "type": "multiple-choice",
         "question": "Are sets ordered in Python?",
-        "options": ["Yes, insertion order", "No, unordered", "Only in Python 3.7+", "Only for hashable elements"],
+        "options": [
+          "Yes, insertion order",
+          "No, unordered",
+          "Only in Python 3.7+",
+          "Only for hashable elements"
+        ],
         "correctAnswer": "No, unordered",
         "explanation": "Sets are unordered collections - no guaranteed order."
       },
@@ -471,7 +566,7 @@
     ]
   },
   {
-    "id": "advanced-list-operations",
+    "id": "5",
     "title": "Advanced List Operations",
     "description": "Complex list manipulations and patterns.",
     "difficulty": "intermediate",
@@ -494,7 +589,12 @@
         "id": "3",
         "type": "multiple-choice",
         "question": "What is list comprehension?",
-        "options": ["Loop syntax", "Compact list creation", "List sorting", "Element removal"],
+        "options": [
+          "Loop syntax",
+          "Compact list creation",
+          "List sorting",
+          "Element removal"
+        ],
         "correctAnswer": "Compact list creation",
         "explanation": "List comprehensions create lists from iterables in a compact syntax."
       },
@@ -516,7 +616,12 @@
         "id": "6",
         "type": "multiple-choice",
         "question": "What is the difference between sort() and sorted()?",
-        "options": ["sort() is faster", "sort() modifies list, sorted() returns new", "sorted() modifies list", "No difference"],
+        "options": [
+          "sort() is faster",
+          "sort() modifies list, sorted() returns new",
+          "sorted() modifies list",
+          "No difference"
+        ],
         "correctAnswer": "sort() modifies list, sorted() returns new",
         "explanation": "sort() changes the original list, sorted() creates a new sorted list."
       },
@@ -538,7 +643,12 @@
         "id": "9",
         "type": "multiple-choice",
         "question": "What does list slicing [::-1] do?",
-        "options": ["Reverses list", "Sorts list", "Removes duplicates", "Creates copy"],
+        "options": [
+          "Reverses list",
+          "Sorts list",
+          "Removes duplicates",
+          "Creates copy"
+        ],
         "correctAnswer": "Reverses list",
         "explanation": "[::-1] reverses the list using negative step."
       },
@@ -560,7 +670,12 @@
         "id": "12",
         "type": "multiple-choice",
         "question": "What is list multiplication?",
-        "options": ["Element-wise multiplication", "Repeats the list", "Matrix multiplication", "Raises to power"],
+        "options": [
+          "Element-wise multiplication",
+          "Repeats the list",
+          "Matrix multiplication",
+          "Raises to power"
+        ],
         "correctAnswer": "Repeats the list",
         "explanation": "[1, 2] * 3 creates [1, 2, 1, 2, 1, 2]."
       },
@@ -582,14 +697,19 @@
         "id": "15",
         "type": "multiple-choice",
         "question": "What is shallow copy vs deep copy?",
-        "options": ["Shallow copies nested objects", "Deep copies everything", "Shallow is faster", "No difference"],
+        "options": [
+          "Shallow copies nested objects",
+          "Deep copies everything",
+          "Shallow is faster",
+          "No difference"
+        ],
         "correctAnswer": "Deep copies everything",
         "explanation": "Shallow copy shares nested objects, deep copy creates independent copies."
       }
     ]
   },
   {
-    "id": "advanced-dict-operations",
+    "id": "6",
     "title": "Advanced Dictionary Operations",
     "description": "Complex dictionary manipulations and patterns.",
     "difficulty": "intermediate",
@@ -626,7 +746,12 @@
         "id": "5",
         "type": "multiple-choice",
         "question": "What does dict.fromkeys(iterable, value) do?",
-        "options": ["Creates dict from keys only", "Creates dict with default value", "Copies another dict", "Creates empty dict"],
+        "options": [
+          "Creates dict from keys only",
+          "Creates dict with default value",
+          "Copies another dict",
+          "Creates empty dict"
+        ],
         "correctAnswer": "Creates dict with default value",
         "explanation": "fromkeys() creates a dict with keys from iterable, all with the same value."
       },
@@ -648,7 +773,12 @@
         "id": "8",
         "type": "multiple-choice",
         "question": "What is OrderedDict?",
-        "options": ["Sorted dictionary", "Remembers insertion order", "Alphabetically ordered", "Value-ordered"],
+        "options": [
+          "Sorted dictionary",
+          "Remembers insertion order",
+          "Alphabetically ordered",
+          "Value-ordered"
+        ],
         "correctAnswer": "Remembers insertion order",
         "explanation": "OrderedDict maintains insertion order (dict does this in Python 3.7+)."
       },
@@ -670,7 +800,12 @@
         "id": "11",
         "type": "multiple-choice",
         "question": "What is dict view objects?",
-        "options": ["Copies of dict data", "Dynamic views of dict", "Static snapshots", "Only for keys"],
+        "options": [
+          "Copies of dict data",
+          "Dynamic views of dict",
+          "Static snapshots",
+          "Only for keys"
+        ],
         "correctAnswer": "Dynamic views of dict",
         "explanation": "keys(), values(), items() return views that reflect dict changes."
       },
@@ -692,7 +827,12 @@
         "id": "14",
         "type": "multiple-choice",
         "question": "What is the most common dict lookup error?",
-        "options": ["KeyError", "TypeError", "ValueError", "IndexError"],
+        "options": [
+          "KeyError",
+          "TypeError",
+          "ValueError",
+          "IndexError"
+        ],
         "correctAnswer": "KeyError",
         "explanation": "KeyError occurs when accessing a non-existent key."
       },
@@ -706,7 +846,7 @@
     ]
   },
   {
-    "id": "set-operations-advanced",
+    "id": "7",
     "title": "Advanced Set Operations",
     "description": "Complex set manipulations and mathematical operations.",
     "difficulty": "advanced",
@@ -743,7 +883,12 @@
         "id": "5",
         "type": "multiple-choice",
         "question": "What does set.isdisjoint(other) check?",
-        "options": ["No common elements", "All elements common", "One is subset", "Sets are equal"],
+        "options": [
+          "No common elements",
+          "All elements common",
+          "One is subset",
+          "Sets are equal"
+        ],
         "correctAnswer": "No common elements",
         "explanation": "isdisjoint() returns True if sets have no elements in common."
       },
@@ -751,7 +896,12 @@
         "id": "6",
         "type": "multiple-choice",
         "question": "What does set.issubset(other) check?",
-        "options": ["Contains all elements of other", "All elements are in other", "Sets are equal", "No common elements"],
+        "options": [
+          "Contains all elements of other",
+          "All elements are in other",
+          "Sets are equal",
+          "No common elements"
+        ],
         "correctAnswer": "All elements are in other",
         "explanation": "issubset() returns True if all elements of set are in other."
       },
@@ -780,7 +930,12 @@
         "id": "10",
         "type": "multiple-choice",
         "question": "Can sets contain other sets?",
-        "options": ["Yes, always", "No, sets not hashable", "Only frozensets", "Only empty sets"],
+        "options": [
+          "Yes, always",
+          "No, sets not hashable",
+          "Only frozensets",
+          "Only empty sets"
+        ],
         "correctAnswer": "Only frozensets",
         "explanation": "Sets can contain frozensets (immutable), but not regular sets."
       },
@@ -802,7 +957,12 @@
         "id": "13",
         "type": "multiple-choice",
         "question": "What is the time complexity of set operations?",
-        "options": ["O(n)", "O(1)", "O(log n)", "O(n log n)"],
+        "options": [
+          "O(n)",
+          "O(1)",
+          "O(log n)",
+          "O(n log n)"
+        ],
         "correctAnswer": "O(1)",
         "explanation": "Most set operations are average O(1) due to hashing."
       },
@@ -823,7 +983,7 @@
     ]
   },
   {
-    "id": "data-structure-comparisons",
+    "id": "8",
     "title": "Data Structure Comparisons",
     "description": "When to use different data structures.",
     "difficulty": "intermediate",
@@ -832,7 +992,12 @@
         "id": "1",
         "type": "multiple-choice",
         "question": "When should you use a list over a tuple?",
-        "options": ["When immutability is needed", "When elements will change", "When using as dict keys", "When memory is critical"],
+        "options": [
+          "When immutability is needed",
+          "When elements will change",
+          "When using as dict keys",
+          "When memory is critical"
+        ],
         "correctAnswer": "When elements will change",
         "explanation": "Lists are mutable, tuples are immutable."
       },
@@ -840,7 +1005,12 @@
         "id": "2",
         "type": "multiple-choice",
         "question": "When should you use a set over a list?",
-        "options": ["When order matters", "When duplicates are OK", "When checking membership", "When indexing by position"],
+        "options": [
+          "When order matters",
+          "When duplicates are OK",
+          "When checking membership",
+          "When indexing by position"
+        ],
         "correctAnswer": "When checking membership",
         "explanation": "Sets provide fast membership testing (O(1) average)."
       },
@@ -848,7 +1018,12 @@
         "id": "3",
         "type": "multiple-choice",
         "question": "When should you use a tuple over a list?",
-        "options": ["When modifying elements", "When using as dict keys", "When changing size", "When sorting frequently"],
+        "options": [
+          "When modifying elements",
+          "When using as dict keys",
+          "When changing size",
+          "When sorting frequently"
+        ],
         "correctAnswer": "When using as dict keys",
         "explanation": "Tuples are hashable and can be used as dictionary keys."
       },
@@ -856,7 +1031,12 @@
         "id": "4",
         "type": "multiple-choice",
         "question": "What is the main advantage of dictionaries?",
-        "options": ["Maintains order", "Fast lookup by key", "Allows duplicates", "Memory efficient"],
+        "options": [
+          "Maintains order",
+          "Fast lookup by key",
+          "Allows duplicates",
+          "Memory efficient"
+        ],
         "correctAnswer": "Fast lookup by key",
         "explanation": "Dicts provide average O(1) key lookup."
       },
@@ -864,7 +1044,12 @@
         "id": "5",
         "type": "multiple-choice",
         "question": "When would you choose a list over a dict?",
-        "options": ["When accessing by meaningful keys", "When order and position matter", "When preventing duplicates", "When memory is limited"],
+        "options": [
+          "When accessing by meaningful keys",
+          "When order and position matter",
+          "When preventing duplicates",
+          "When memory is limited"
+        ],
         "correctAnswer": "When order and position matter",
         "explanation": "Lists maintain order and allow positional access."
       },
@@ -872,7 +1057,12 @@
         "id": "6",
         "type": "multiple-choice",
         "question": "What structure for unique elements with fast lookup?",
-        "options": ["List", "Tuple", "Set", "Dict"],
+        "options": [
+          "List",
+          "Tuple",
+          "Set",
+          "Dict"
+        ],
         "correctAnswer": "Set",
         "explanation": "Sets provide unique elements with fast membership testing."
       },
@@ -880,7 +1070,12 @@
         "id": "7",
         "type": "multiple-choice",
         "question": "What structure when you need key-value mapping?",
-        "options": ["List", "Tuple", "Set", "Dict"],
+        "options": [
+          "List",
+          "Tuple",
+          "Set",
+          "Dict"
+        ],
         "correctAnswer": "Dict",
         "explanation": "Dictionaries map keys to values."
       },
@@ -888,7 +1083,12 @@
         "id": "8",
         "type": "multiple-choice",
         "question": "What structure for immutable sequences?",
-        "options": ["List", "Tuple", "Set", "Dict"],
+        "options": [
+          "List",
+          "Tuple",
+          "Set",
+          "Dict"
+        ],
         "correctAnswer": "Tuple",
         "explanation": "Tuples are immutable sequences."
       },
@@ -896,7 +1096,12 @@
         "id": "9",
         "type": "multiple-choice",
         "question": "What structure when you need to maintain insertion order?",
-        "options": ["Set", "Dict (Python 3.7+)", "List", "Tuple"],
+        "options": [
+          "Set",
+          "Dict (Python 3.7+)",
+          "List",
+          "Tuple"
+        ],
         "correctAnswer": "Dict (Python 3.7+)",
         "explanation": "Dicts maintain insertion order in Python 3.7+."
       },
@@ -904,7 +1109,12 @@
         "id": "10",
         "type": "multiple-choice",
         "question": "What structure for counting occurrences?",
-        "options": ["List", "Set", "Dict", "Counter"],
+        "options": [
+          "List",
+          "Set",
+          "Dict",
+          "Counter"
+        ],
         "correctAnswer": "Counter",
         "explanation": "Counter (from collections) is designed for counting."
       },
@@ -912,7 +1122,12 @@
         "id": "11",
         "type": "multiple-choice",
         "question": "What structure when you need LIFO (Last In, First Out)?",
-        "options": ["Queue", "Stack (list)", "Set", "Dict"],
+        "options": [
+          "Queue",
+          "Stack (list)",
+          "Set",
+          "Dict"
+        ],
         "correctAnswer": "Stack (list)",
         "explanation": "Lists can be used as stacks with append() and pop()."
       },
@@ -920,7 +1135,12 @@
         "id": "12",
         "type": "multiple-choice",
         "question": "What structure when you need FIFO (First In, First Out)?",
-        "options": ["Stack", "Queue (deque)", "Set", "Dict"],
+        "options": [
+          "Stack",
+          "Queue (deque)",
+          "Set",
+          "Dict"
+        ],
         "correctAnswer": "Queue (deque)",
         "explanation": "deque provides efficient FIFO operations."
       },
@@ -928,7 +1148,12 @@
         "id": "13",
         "type": "multiple-choice",
         "question": "What structure for mathematical set operations?",
-        "options": ["List", "Tuple", "Set", "Dict"],
+        "options": [
+          "List",
+          "Tuple",
+          "Set",
+          "Dict"
+        ],
         "correctAnswer": "Set",
         "explanation": "Sets support union, intersection, difference operations."
       },
@@ -936,7 +1161,12 @@
         "id": "14",
         "type": "multiple-choice",
         "question": "What structure when memory efficiency is critical?",
-        "options": ["List", "Tuple", "Set", "Dict"],
+        "options": [
+          "List",
+          "Tuple",
+          "Set",
+          "Dict"
+        ],
         "correctAnswer": "Tuple",
         "explanation": "Tuples are more memory efficient than lists."
       },
@@ -944,14 +1174,19 @@
         "id": "15",
         "type": "multiple-choice",
         "question": "What structure for default values in dict?",
-        "options": ["Regular dict", "defaultdict", "OrderedDict", "Counter"],
+        "options": [
+          "Regular dict",
+          "defaultdict",
+          "OrderedDict",
+          "Counter"
+        ],
         "correctAnswer": "defaultdict",
         "explanation": "defaultdict provides default values for missing keys."
       }
     ]
   },
   {
-    "id": "performance-memory-considerations",
+    "id": "9",
     "title": "Performance and Memory Considerations",
     "description": "Efficiency aspects of different data structures.",
     "difficulty": "advanced",
@@ -960,7 +1195,12 @@
         "id": "1",
         "type": "multiple-choice",
         "question": "What is the time complexity of list.append()?",
-        "options": ["O(1)", "O(n)", "O(log n)", "O(n²)"],
+        "options": [
+          "O(1)",
+          "O(n)",
+          "O(log n)",
+          "O(n²)"
+        ],
         "correctAnswer": "O(1)",
         "explanation": "append() adds to end of list in amortized O(1) time."
       },
@@ -968,7 +1208,12 @@
         "id": "2",
         "type": "multiple-choice",
         "question": "What is the time complexity of list.insert(0, item)?",
-        "options": ["O(1)", "O(n)", "O(log n)", "O(n²)"],
+        "options": [
+          "O(1)",
+          "O(n)",
+          "O(log n)",
+          "O(n²)"
+        ],
         "correctAnswer": "O(n)",
         "explanation": "insert() at beginning requires shifting all elements."
       },
@@ -976,7 +1221,12 @@
         "id": "3",
         "type": "multiple-choice",
         "question": "What is the time complexity of dict[key] lookup?",
-        "options": ["O(1) average", "O(n)", "O(log n)", "O(n²)"],
+        "options": [
+          "O(1) average",
+          "O(n)",
+          "O(log n)",
+          "O(n²)"
+        ],
         "correctAnswer": "O(1) average",
         "explanation": "Dictionary lookups are average O(1) due to hashing."
       },
@@ -984,7 +1234,12 @@
         "id": "4",
         "type": "multiple-choice",
         "question": "What is the time complexity of 'item in list'?",
-        "options": ["O(1)", "O(n)", "O(log n)", "O(n²)"],
+        "options": [
+          "O(1)",
+          "O(n)",
+          "O(log n)",
+          "O(n²)"
+        ],
         "correctAnswer": "O(n)",
         "explanation": "List membership testing requires linear search."
       },
@@ -992,7 +1247,12 @@
         "id": "5",
         "type": "multiple-choice",
         "question": "What is the time complexity of 'item in set'?",
-        "options": ["O(1) average", "O(n)", "O(log n)", "O(n²)"],
+        "options": [
+          "O(1) average",
+          "O(n)",
+          "O(log n)",
+          "O(n²)"
+        ],
         "correctAnswer": "O(1) average",
         "explanation": "Set membership testing is average O(1) due to hashing."
       },
@@ -1000,7 +1260,12 @@
         "id": "6",
         "type": "multiple-choice",
         "question": "Which uses more memory: list or tuple?",
-        "options": ["List", "Tuple", "Same", "Depends on elements"],
+        "options": [
+          "List",
+          "Tuple",
+          "Same",
+          "Depends on elements"
+        ],
         "correctAnswer": "List",
         "explanation": "Lists have overhead for dynamic resizing."
       },
@@ -1008,7 +1273,12 @@
         "id": "7",
         "type": "multiple-choice",
         "question": "What happens when a list runs out of capacity?",
-        "options": ["Raises error", "Automatically resizes", "Slows down", "Deletes elements"],
+        "options": [
+          "Raises error",
+          "Automatically resizes",
+          "Slows down",
+          "Deletes elements"
+        ],
         "correctAnswer": "Automatically resizes",
         "explanation": "Lists automatically resize when capacity is exceeded."
       },
@@ -1016,7 +1286,12 @@
         "id": "8",
         "type": "multiple-choice",
         "question": "What is amortized time complexity?",
-        "options": ["Worst case", "Average case over many operations", "Best case", "Theoretical only"],
+        "options": [
+          "Worst case",
+          "Average case over many operations",
+          "Best case",
+          "Theoretical only"
+        ],
         "correctAnswer": "Average case over many operations",
         "explanation": "Amortized analysis considers average cost over sequence of operations."
       },
@@ -1031,7 +1306,12 @@
         "id": "10",
         "type": "multiple-choice",
         "question": "When should you use deque instead of list?",
-        "options": ["For random access", "For append/pop from ends", "For sorting", "For counting"],
+        "options": [
+          "For random access",
+          "For append/pop from ends",
+          "For sorting",
+          "For counting"
+        ],
         "correctAnswer": "For append/pop from ends",
         "explanation": "deque provides O(1) operations on both ends."
       },
@@ -1039,7 +1319,12 @@
         "id": "11",
         "type": "multiple-choice",
         "question": "What is the space complexity of a set?",
-        "options": ["O(1)", "O(n)", "O(n²)", "O(log n)"],
+        "options": [
+          "O(1)",
+          "O(n)",
+          "O(n²)",
+          "O(log n)"
+        ],
         "correctAnswer": "O(n)",
         "explanation": "Sets store each element, so space is O(n)."
       },
@@ -1047,7 +1332,12 @@
         "id": "12",
         "type": "multiple-choice",
         "question": "What causes hash collisions in dicts/sets?",
-        "options": ["Same values", "Same hash values", "Same keys", "Large data"],
+        "options": [
+          "Same values",
+          "Same hash values",
+          "Same keys",
+          "Large data"
+        ],
         "correctAnswer": "Same hash values",
         "explanation": "Different keys can have same hash, causing collisions."
       },
@@ -1062,7 +1352,12 @@
         "id": "14",
         "type": "multiple-choice",
         "question": "What is cache locality?",
-        "options": ["CPU speed", "Memory access patterns", "Network latency", "Disk I/O"],
+        "options": [
+          "CPU speed",
+          "Memory access patterns",
+          "Network latency",
+          "Disk I/O"
+        ],
         "correctAnswer": "Memory access patterns",
         "explanation": "Cache locality refers to how data is accessed in memory."
       },
@@ -1070,14 +1365,19 @@
         "id": "15",
         "type": "multiple-choice",
         "question": "Which has better cache locality: list or dict?",
-        "options": ["Dict", "List", "Same", "Depends on usage"],
+        "options": [
+          "Dict",
+          "List",
+          "Same",
+          "Depends on usage"
+        ],
         "correctAnswer": "List",
         "explanation": "Lists have better cache locality due to contiguous storage."
       }
     ]
   },
   {
-    "id": "common-pitfalls",
+    "id": "10",
     "title": "Common Pitfalls and Gotchas",
     "description": "Avoiding common mistakes with data structures.",
     "difficulty": "intermediate",
@@ -1086,7 +1386,12 @@
         "id": "1",
         "type": "multiple-choice",
         "question": "What happens when you modify a list while iterating?",
-        "options": ["Works fine", "May skip elements or error", "Always errors", "Nothing"],
+        "options": [
+          "Works fine",
+          "May skip elements or error",
+          "Always errors",
+          "Nothing"
+        ],
         "correctAnswer": "May skip elements or error",
         "explanation": "Modifying list during iteration can cause unexpected behavior."
       },
@@ -1101,7 +1406,12 @@
         "id": "3",
         "type": "multiple-choice",
         "question": "Why shouldn't you use mutable objects as dict keys?",
-        "options": ["Slower", "May change hash", "Takes more memory", "Not allowed"],
+        "options": [
+          "Slower",
+          "May change hash",
+          "Takes more memory",
+          "Not allowed"
+        ],
         "correctAnswer": "May change hash",
         "explanation": "If key changes, its hash changes, making it unfindable."
       },
@@ -1116,7 +1426,12 @@
         "id": "5",
         "type": "multiple-choice",
         "question": "What is the issue with using list as dict key?",
-        "options": ["TypeError", "Unhashable type", "Slow", "Memory leak"],
+        "options": [
+          "TypeError",
+          "Unhashable type",
+          "Slow",
+          "Memory leak"
+        ],
         "correctAnswer": "Unhashable type",
         "explanation": "Lists are mutable and unhashable, can't be dict keys."
       },
@@ -1131,7 +1446,12 @@
         "id": "7",
         "type": "multiple-choice",
         "question": "Why is {} an empty dict, not empty set?",
-        "options": ["Historical reasons", "Sets are newer", "Dicts are more common", "All of above"],
+        "options": [
+          "Historical reasons",
+          "Sets are newer",
+          "Dicts are more common",
+          "All of above"
+        ],
         "correctAnswer": "Historical reasons",
         "explanation": "{} was dict syntax before set() was added."
       },
@@ -1146,7 +1466,12 @@
         "id": "9",
         "type": "multiple-choice",
         "question": "What happens with set([1, 2, [3, 4]])?",
-        "options": ["Works fine", "TypeError: unhashable type", "Creates nested set", "Ignores list"],
+        "options": [
+          "Works fine",
+          "TypeError: unhashable type",
+          "Creates nested set",
+          "Ignores list"
+        ],
         "correctAnswer": "TypeError: unhashable type",
         "explanation": "Lists are unhashable, can't be in sets."
       },
@@ -1161,7 +1486,12 @@
         "id": "11",
         "type": "multiple-choice",
         "question": "Why does 'a' in ['a', 'b', 'c'] work but [1, 2] in [[1, 2], [3, 4]] not work as expected?",
-        "options": ["Lists not hashable", "Identity vs equality", "Shallow comparison", "Type mismatch"],
+        "options": [
+          "Lists not hashable",
+          "Identity vs equality",
+          "Shallow comparison",
+          "Type mismatch"
+        ],
         "correctAnswer": "Identity vs equality",
         "explanation": "'in' uses == for lists, not identity. Different list objects with same contents are not identical."
       },
@@ -1176,7 +1506,12 @@
         "id": "13",
         "type": "multiple-choice",
         "question": "What is the issue with comparing floats for equality?",
-        "options": ["TypeError", "Precision errors", "Always False", "Always True"],
+        "options": [
+          "TypeError",
+          "Precision errors",
+          "Always False",
+          "Always True"
+        ],
         "correctAnswer": "Precision errors",
         "explanation": "Floating point arithmetic can have precision issues."
       },
@@ -1191,7 +1526,12 @@
         "id": "15",
         "type": "multiple-choice",
         "question": "Why should you avoid using 'is' for float comparison?",
-        "options": ["TypeError", "Identity != equality for floats", "Performance", "Syntax error"],
+        "options": [
+          "TypeError",
+          "Identity != equality for floats",
+          "Performance",
+          "Syntax error"
+        ],
         "correctAnswer": "Identity != equality for floats",
         "explanation": "'is' checks identity, not value. Different float objects can represent same value."
       }

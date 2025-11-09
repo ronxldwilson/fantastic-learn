@@ -1,12 +1,12 @@
 [
   {
-    "id": "1-ml-fundamentals",
+    "id": "1",
     "title": "Machine Learning Fundamentals",
     "description": "Test your knowledge of core machine learning concepts, algorithms, and terminology.",
     "difficulty": "intermediate",
     "questions": [
       {
-        "id": "1-1-ml-definition",
+        "id": "1",
         "type": "multiple-choice",
         "question": "What is the primary goal of machine learning?",
         "options": [
@@ -19,7 +19,7 @@
         "explanation": "Machine learning focuses on algorithms that can learn patterns from data and make predictions or decisions without being explicitly programmed for each specific task."
       },
       {
-        "id": "1-2-supervised-vs-unsupervised",
+        "id": "2",
         "type": "multiple-choice",
         "question": "In supervised learning, the training data includes:",
         "options": [
@@ -32,7 +32,7 @@
         "explanation": "Supervised learning algorithms learn from labeled training data where each example has both input features and the correct output (label)."
       },
       {
-        "id": "1-3-linear-regression",
+        "id": "3",
         "type": "multiple-choice",
         "question": "Linear regression is primarily used for:",
         "options": [
@@ -45,7 +45,7 @@
         "explanation": "Linear regression predicts continuous output values by finding the best linear relationship between input features and the target variable."
       },
       {
-        "id": "1-4-overfitting-definition",
+        "id": "4",
         "type": "multiple-choice",
         "question": "What is overfitting in machine learning?",
         "options": [
@@ -58,7 +58,7 @@
         "explanation": "Overfitting occurs when a model learns the training data too well, including noise and outliers, making it perform poorly on unseen data."
       },
       {
-        "id": "1-5-neural-networks",
+        "id": "5",
         "type": "multiple-choice",
         "question": "What makes neural networks different from traditional machine learning algorithms?",
         "options": [
@@ -71,7 +71,7 @@
         "explanation": "Neural networks can learn complex hierarchical representations directly from raw input data through multiple layers of processing."
       },
       {
-        "id": "1-6-gradient-descent",
+        "id": "6",
         "type": "multiple-choice",
         "question": "What is the main purpose of gradient descent in machine learning?",
         "options": [
@@ -84,7 +84,7 @@
         "explanation": "Gradient descent is an optimization algorithm that finds the minimum of a loss function by taking steps proportional to the negative gradient."
       },
       {
-        "id": "1-7-confusion-matrix",
+        "id": "7",
         "type": "multiple-choice",
         "question": "In a confusion matrix for binary classification, what does the term 'recall' represent?",
         "options": [
@@ -97,7 +97,7 @@
         "explanation": "Recall (also called sensitivity or true positive rate) measures the ability of a model to find all the relevant cases within a dataset."
       },
       {
-        "id": "1-8-feature-scaling",
+        "id": "8",
         "type": "multiple-choice",
         "question": "Why is feature scaling important in many machine learning algorithms?",
         "options": [
@@ -110,7 +110,7 @@
         "explanation": "Feature scaling ensures that features with different scales (e.g., age in years vs. income in dollars) don't dominate the learning process."
       },
       {
-        "id": "1-9-cross-validation",
+        "id": "9",
         "type": "multiple-choice",
         "question": "What is the main benefit of k-fold cross-validation?",
         "options": [
@@ -123,7 +123,7 @@
         "explanation": "Cross-validation helps assess how well a model will generalize to new data by testing it on multiple subsets of the available data."
       },
       {
-        "id": "1-10-regularization-l2",
+        "id": "10",
         "type": "multiple-choice",
         "question": "What type of regularization adds a penalty equal to the square of the magnitude of coefficients?",
         "options": [
@@ -138,13 +138,13 @@
     ]
   },
   {
-    "id": "2-deep-learning-basics",
+    "id": "2",
     "title": "Deep Learning Fundamentals",
     "description": "Explore neural networks, activation functions, and deep learning architectures.",
     "difficulty": "advanced",
     "questions": [
       {
-        "id": "2-1-activation-functions",
+        "id": "1",
         "type": "multiple-choice",
         "question": "Which activation function is commonly used in the output layer for binary classification?",
         "options": [
@@ -157,7 +157,7 @@
         "explanation": "Sigmoid activation function outputs values between 0 and 1, making it suitable for binary classification probabilities."
       },
       {
-        "id": "2-2-cnn-purpose",
+        "id": "2",
         "type": "multiple-choice",
         "question": "What is the primary advantage of Convolutional Neural Networks (CNNs) over regular neural networks for image processing?",
         "options": [
@@ -170,7 +170,7 @@
         "explanation": "CNNs use convolutional layers that learn spatial patterns and hierarchies, making them highly effective for image recognition tasks."
       },
       {
-        "id": "2-3-backpropagation",
+        "id": "3",
         "type": "multiple-choice",
         "question": "What is the purpose of backpropagation in neural networks?",
         "options": [
@@ -183,7 +183,7 @@
         "explanation": "Backpropagation computes the gradient of the loss function with respect to each weight by propagating errors backward through the network."
       },
       {
-        "id": "2-4-vanishing-gradient",
+        "id": "4",
         "type": "multiple-choice",
         "question": "What problem occurs when training very deep neural networks with sigmoid activation functions?",
         "options": [
@@ -196,7 +196,7 @@
         "explanation": "The vanishing gradient problem occurs when gradients become extremely small during backpropagation, preventing the network from learning effectively."
       },
       {
-        "id": "2-5-batch-normalization",
+        "id": "5",
         "type": "multiple-choice",
         "question": "What is the main benefit of batch normalization in neural networks?",
         "options": [
@@ -207,6 +207,1238 @@
         ],
         "correctAnswer": "It stabilizes and accelerates training by normalizing layer inputs",
         "explanation": "Batch normalization normalizes the inputs to each layer, reducing internal covariate shift and allowing for higher learning rates."
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "title": "Data Preprocessing",
+    "description": "Learn about data cleaning, feature engineering, and preparing data for machine learning.",
+    "difficulty": "intermediate",
+    "questions": [
+      {
+        "id": "1",
+        "type": "multiple-choice",
+        "question": "What is data preprocessing in machine learning?",
+        "options": [
+          "The process of training models",
+          "The process of preparing and cleaning raw data for modeling",
+          "The process of deploying models",
+          "The process of visualizing results"
+        ],
+        "correctAnswer": "The process of preparing and cleaning raw data for modeling",
+        "explanation": "Data preprocessing involves cleaning, transforming, and organizing raw data into a format suitable for machine learning algorithms."
+      },
+      {
+        "id": "2",
+        "type": "multiple-choice",
+        "question": "Which technique is used to handle missing values by replacing them with the mean?",
+        "options": [
+          "Deletion",
+          "Imputation",
+          "Normalization",
+          "Encoding"
+        ],
+        "correctAnswer": "Imputation",
+        "explanation": "Imputation replaces missing values with statistical measures like mean, median, or mode, or uses more advanced techniques like KNN imputation."
+      },
+      {
+        "id": "3",
+        "type": "multiple-choice",
+        "question": "What is one-hot encoding used for?",
+        "options": [
+          "Scaling numerical features",
+          "Converting categorical variables to numerical format",
+          "Handling missing values",
+          "Reducing dimensionality"
+        ],
+        "correctAnswer": "Converting categorical variables to numerical format",
+        "explanation": "One-hot encoding creates binary columns for each category, allowing categorical variables to be used in machine learning algorithms."
+      },
+      {
+        "id": "4",
+        "type": "multiple-choice",
+        "question": "What is the purpose of train-test split?",
+        "options": [
+          "To increase training time",
+          "To evaluate model performance on unseen data",
+          "To make the model more complex",
+          "To reduce dataset size"
+        ],
+        "correctAnswer": "To evaluate model performance on unseen data",
+        "explanation": "Train-test split divides data into training and testing sets, allowing evaluation of model generalization on unseen data."
+      },
+      {
+        "id": "5",
+        "type": "multiple-choice",
+        "question": "What does feature scaling do?",
+        "options": [
+          "Removes features from the dataset",
+          "Changes the scale/range of numerical features",
+          "Creates new features",
+          "Selects the most important features"
+        ],
+        "correctAnswer": "Changes the scale/range of numerical features",
+        "explanation": "Feature scaling normalizes or standardizes numerical features to bring them to a similar scale, preventing features with larger ranges from dominating."
+      },
+      {
+        "id": "6",
+        "type": "multiple-choice",
+        "question": "What is outlier detection used for?",
+        "options": [
+          "To find the best model parameters",
+          "To identify data points that deviate significantly from the norm",
+          "To split data into categories",
+          "To visualize data distributions"
+        ],
+        "correctAnswer": "To identify data points that deviate significantly from the norm",
+        "explanation": "Outlier detection identifies unusual data points that may be errors or represent rare events, which can affect model performance."
+      },
+      {
+        "id": "7",
+        "type": "multiple-choice",
+        "question": "What is data normalization?",
+        "options": [
+          "Scaling features to a standard normal distribution",
+          "Converting categorical to numerical data",
+          "Removing duplicate rows",
+          "Filling missing values"
+        ],
+        "correctAnswer": "Scaling features to a standard normal distribution",
+        "explanation": "Normalization scales features to have a mean of 0 and standard deviation of 1, following a standard normal distribution."
+      },
+      {
+        "id": "8",
+        "type": "multiple-choice",
+        "question": "What is feature engineering?",
+        "options": [
+          "Training machine learning models",
+          "Creating new features from existing data",
+          "Evaluating model performance",
+          "Deploying models to production"
+        ],
+        "correctAnswer": "Creating new features from existing data",
+        "explanation": "Feature engineering involves creating new features, transforming existing ones, or selecting the most relevant features to improve model performance."
+      }
+    ]
+  },
+  {
+    "id": "4",
+    "title": "Model Evaluation & Validation",
+    "description": "Understand how to evaluate and validate machine learning models.",
+    "difficulty": "intermediate",
+    "questions": [
+      {
+        "id": "1",
+        "type": "multiple-choice",
+        "question": "What is the purpose of a confusion matrix?",
+        "options": [
+          "To visualize data distributions",
+          "To show the performance of a classification model",
+          "To compare different algorithms",
+          "To select the best features"
+        ],
+        "correctAnswer": "To show the performance of a classification model",
+        "explanation": "A confusion matrix shows the number of correct and incorrect predictions, broken down by each class."
+      },
+      {
+        "id": "2",
+        "type": "multiple-choice",
+        "question": "What does precision measure in classification?",
+        "options": [
+          "The proportion of actual positives correctly identified",
+          "The proportion of predicted positives that are actually positive",
+          "The proportion of negative predictions that are correct",
+          "The overall accuracy of the model"
+        ],
+        "correctAnswer": "The proportion of predicted positives that are actually positive",
+        "explanation": "Precision measures how many of the predicted positive cases are actually positive, focusing on the quality of positive predictions."
+      },
+      {
+        "id": "3",
+        "type": "multiple-choice",
+        "question": "What is F1-score?",
+        "options": [
+          "A measure of model speed",
+          "The harmonic mean of precision and recall",
+          "A type of regularization",
+          "A dimensionality reduction technique"
+        ],
+        "correctAnswer": "The harmonic mean of precision and recall",
+        "explanation": "F1-score is the harmonic mean of precision and recall, providing a balanced measure of classification performance."
+      },
+      {
+        "id": "4",
+        "type": "multiple-choice",
+        "question": "What is ROC curve used for?",
+        "options": [
+          "Comparing different classification models",
+          "Visualizing the trade-off between true positive rate and false positive rate",
+          "Showing feature importance",
+          "Displaying data distributions"
+        ],
+        "correctAnswer": "Visualizing the trade-off between true positive rate and false positive rate",
+        "explanation": "ROC curve plots the true positive rate against the false positive rate at different classification thresholds."
+      },
+      {
+        "id": "5",
+        "type": "multiple-choice",
+        "question": "What does AUC stand for in the context of ROC curves?",
+        "options": [
+          "Area Under Curve",
+          "Automated Unit Classifier",
+          "Average User Confidence",
+          "Artificial Understanding Coefficient"
+        ],
+        "correctAnswer": "Area Under Curve",
+        "explanation": "AUC (Area Under Curve) measures the area under the ROC curve, providing a single metric for model performance."
+      },
+      {
+        "id": "6",
+        "type": "multiple-choice",
+        "question": "What is mean squared error (MSE) used to evaluate?",
+        "options": [
+          "Classification models",
+          "Regression models",
+          "Clustering models",
+          "Dimensionality reduction"
+        ],
+        "correctAnswer": "Regression models",
+        "explanation": "MSE measures the average squared difference between predicted and actual values in regression problems."
+      },
+      {
+        "id": "7",
+        "type": "multiple-choice",
+        "question": "What is R-squared (R²) in regression?",
+        "options": [
+          "A measure of model complexity",
+          "The proportion of variance explained by the model",
+          "A type of regularization",
+          "A distance metric"
+        ],
+        "correctAnswer": "The proportion of variance explained by the model",
+        "explanation": "R-squared measures how well the regression model explains the variability of the response data."
+      },
+      {
+        "id": "8",
+        "type": "multiple-choice",
+        "question": "What is cross-validation?",
+        "options": [
+          "A method to train models faster",
+          "A technique to evaluate model performance on multiple data splits",
+          "A way to reduce model complexity",
+          "A type of ensemble method"
+        ],
+        "correctAnswer": "A technique to evaluate model performance on multiple data splits",
+        "explanation": "Cross-validation splits the data into multiple folds, training and testing the model on different combinations to get reliable performance estimates."
+      }
+    ]
+  },
+  {
+    "id": "5",
+    "title": "Supervised Learning Algorithms",
+    "description": "Deep dive into popular supervised learning algorithms and their applications.",
+    "difficulty": "intermediate",
+    "questions": [
+      {
+        "id": "1",
+        "type": "multiple-choice",
+        "question": "What is the key difference between linear regression and logistic regression?",
+        "options": [
+          "Linear regression is for classification, logistic for regression",
+          "Logistic regression outputs probabilities, linear regression outputs continuous values",
+          "Linear regression uses sigmoid activation, logistic doesn't",
+          "Logistic regression is only for binary classification"
+        ],
+        "correctAnswer": "Logistic regression outputs probabilities, linear regression outputs continuous values",
+        "explanation": "Linear regression predicts continuous numerical values, while logistic regression predicts probabilities for classification tasks."
+      },
+      {
+        "id": "2",
+        "type": "multiple-choice",
+        "question": "What is the main advantage of Support Vector Machines (SVM)?",
+        "options": [
+          "They are very fast to train",
+          "They work well with high-dimensional data",
+          "They don't require feature scaling",
+          "They can handle missing values automatically"
+        ],
+        "correctAnswer": "They work well with high-dimensional data",
+        "explanation": "SVMs are effective in high-dimensional spaces and can handle non-linear classification using kernel functions."
+      },
+      {
+        "id": "3",
+        "type": "multiple-choice",
+        "question": "What does 'k' represent in k-Nearest Neighbors algorithm?",
+        "options": [
+          "The number of features",
+          "The number of nearest neighbors to consider",
+          "The number of classes",
+          "The distance metric used"
+        ],
+        "correctAnswer": "The number of nearest neighbors to consider",
+        "explanation": "k-NN classifies a data point by looking at the k closest training examples and using majority voting."
+      },
+      {
+        "id": "4",
+        "type": "multiple-choice",
+        "question": "What is bagging in ensemble methods?",
+        "options": [
+          "Training models sequentially",
+          "Training multiple models on random subsets of data",
+          "Combining different types of models",
+          "Using only the best performing models"
+        ],
+        "correctAnswer": "Training multiple models on random subsets of data",
+        "explanation": "Bagging (Bootstrap Aggregating) creates multiple models by training on random subsets of the training data."
+      },
+      {
+        "id": "5",
+        "type": "multiple-choice",
+        "question": "What is boosting in ensemble learning?",
+        "options": [
+          "Training models in parallel",
+          "Training models sequentially where each model corrects the previous one's errors",
+          "Using only weak learners",
+          "Randomly selecting features"
+        ],
+        "correctAnswer": "Training models sequentially where each model corrects the previous one's errors",
+        "explanation": "Boosting trains models sequentially, with each new model focusing on correcting the mistakes of the previous models."
+      },
+      {
+        "id": "6",
+        "type": "multiple-choice",
+        "question": "What is the main difference between Random Forest and Gradient Boosting?",
+        "options": [
+          "Random Forest uses bagging, Gradient Boosting uses boosting",
+          "Random Forest is for regression only",
+          "Gradient Boosting requires more tuning",
+          "Both A and C"
+        ],
+        "correctAnswer": "Both A and C",
+        "explanation": "Random Forest uses bagging (parallel models), while Gradient Boosting uses boosting (sequential models), and Gradient Boosting typically requires more hyperparameter tuning."
+      },
+      {
+        "id": "7",
+        "type": "multiple-choice",
+        "question": "What is XGBoost?",
+        "options": [
+          "A type of neural network",
+          "An optimized gradient boosting library",
+          "A clustering algorithm",
+          "A dimensionality reduction technique"
+        ],
+        "correctAnswer": "An optimized gradient boosting library",
+        "explanation": "XGBoost is an optimized implementation of gradient boosting that includes regularization and parallel processing for better performance."
+      },
+      {
+        "id": "8",
+        "type": "multiple-choice",
+        "question": "What is the 'curse of dimensionality'?",
+        "options": [
+          "When models become too complex",
+          "When there are too many features relative to samples",
+          "When data has too many categories",
+          "When features are highly correlated"
+        ],
+        "correctAnswer": "When there are too many features relative to samples",
+        "explanation": "The curse of dimensionality refers to problems that arise when working with high-dimensional data, where the volume of the space increases exponentially."
+      }
+    ]
+  },
+  {
+    "id": "6",
+    "title": "Unsupervised Learning",
+    "description": "Explore clustering, dimensionality reduction, and other unsupervised techniques.",
+    "difficulty": "intermediate",
+    "questions": [
+      {
+        "id": "1",
+        "type": "multiple-choice",
+        "question": "What is the elbow method used for in k-means clustering?",
+        "options": [
+          "Choosing the optimal number of clusters",
+          "Evaluating cluster quality",
+          "Speeding up the algorithm",
+          "Handling outliers"
+        ],
+        "correctAnswer": "Choosing the optimal number of clusters",
+        "explanation": "The elbow method plots the within-cluster sum of squares against the number of clusters, looking for an 'elbow' point where adding more clusters doesn't significantly improve the fit."
+      },
+      {
+        "id": "2",
+        "type": "multiple-choice",
+        "question": "What is hierarchical clustering?",
+        "options": [
+          "Clustering data in multiple dimensions",
+          "Building a hierarchy of clusters using agglomerative or divisive approaches",
+          "Clustering based on density",
+          "Clustering using neural networks"
+        ],
+        "correctAnswer": "Building a hierarchy of clusters using agglomerative or divisive approaches",
+        "explanation": "Hierarchical clustering creates a tree-like structure of clusters, either by starting with individual points and merging (agglomerative) or starting with one cluster and splitting (divisive)."
+      },
+      {
+        "id": "3",
+        "type": "multiple-choice",
+        "question": "What is DBSCAN?",
+        "options": [
+          "A supervised learning algorithm",
+          "A density-based clustering algorithm",
+          "A dimensionality reduction technique",
+          "A type of neural network"
+        ],
+        "correctAnswer": "A density-based clustering algorithm",
+        "explanation": "DBSCAN (Density-Based Spatial Clustering of Applications with Noise) groups together points that are closely packed, marking points in low-density regions as outliers."
+      },
+      {
+        "id": "4",
+        "type": "multiple-choice",
+        "question": "What does PCA do?",
+        "options": [
+          "Creates new features",
+          "Reduces dimensionality while preserving variance",
+          "Selects the most important features",
+          "Normalizes feature scales"
+        ],
+        "correctAnswer": "Reduces dimensionality while preserving variance",
+        "explanation": "PCA finds principal components that capture the maximum variance in the data, allowing dimensionality reduction while preserving as much information as possible."
+      },
+      {
+        "id": "5",
+        "type": "multiple-choice",
+        "question": "What is t-SNE used for?",
+        "options": [
+          "Speeding up training",
+          "Visualizing high-dimensional data in 2D or 3D",
+          "Feature selection",
+          "Handling missing values"
+        ],
+        "correctAnswer": "Visualizing high-dimensional data in 2D or 3D",
+        "explanation": "t-SNE (t-Distributed Stochastic Neighbor Embedding) is a dimensionality reduction technique specifically designed for visualizing high-dimensional data."
+      },
+      {
+        "id": "6",
+        "type": "multiple-choice",
+        "question": "What is the silhouette score used for?",
+        "options": [
+          "Evaluating clustering quality",
+          "Measuring model accuracy",
+          "Assessing feature importance",
+          "Comparing algorithms"
+        ],
+        "correctAnswer": "Evaluating clustering quality",
+        "explanation": "The silhouette score measures how similar an object is to its own cluster compared to other clusters, providing a measure of clustering quality."
+      },
+      {
+        "id": "7",
+        "type": "multiple-choice",
+        "question": "What is anomaly detection?",
+        "options": [
+          "Finding patterns in data",
+          "Identifying unusual or suspicious cases",
+          "Grouping similar items",
+          "Predicting future values"
+        ],
+        "correctAnswer": "Identifying unusual or suspicious cases",
+        "explanation": "Anomaly detection identifies data points that deviate significantly from the normal behavior or expected patterns in the dataset."
+      },
+      {
+        "id": "8",
+        "type": "multiple-choice",
+        "question": "What is the main difference between supervised and unsupervised learning?",
+        "options": [
+          "Supervised learning requires labeled data, unsupervised learning doesn't",
+          "Supervised learning is always better",
+          "Unsupervised learning can't make predictions",
+          "Supervised learning is only for classification"
+        ],
+        "correctAnswer": "Supervised learning requires labeled data, unsupervised learning doesn't",
+        "explanation": "Supervised learning algorithms learn from labeled training data, while unsupervised learning algorithms find patterns in unlabeled data."
+      }
+    ]
+  },
+  {
+    "id": "7",
+    "title": "Neural Networks & Deep Learning",
+    "description": "Advanced concepts in neural networks, architectures, and training techniques.",
+    "difficulty": "advanced",
+    "questions": [
+      {
+        "id": "1",
+        "type": "multiple-choice",
+        "question": "What is a perceptron?",
+        "options": [
+          "A type of activation function",
+          "The basic building block of neural networks",
+          "A loss function",
+          "An optimization algorithm"
+        ],
+        "correctAnswer": "The basic building block of neural networks",
+        "explanation": "A perceptron is a single-layer neural network unit that takes multiple inputs, applies weights and bias, and produces a binary output."
+      },
+      {
+        "id": "2",
+        "type": "multiple-choice",
+        "question": "What is the vanishing gradient problem?",
+        "options": [
+          "When gradients become too large",
+          "When gradients become too small during backpropagation",
+          "When the learning rate is too high",
+          "When the loss function is not convex"
+        ],
+        "correctAnswer": "When gradients become too small during backpropagation",
+        "explanation": "The vanishing gradient problem occurs in deep networks when gradients become exponentially small during backpropagation, preventing weight updates in earlier layers."
+      },
+      {
+        "id": "3",
+        "type": "multiple-choice",
+        "question": "What does LSTM stand for?",
+        "options": [
+          "Long Short-Term Memory",
+          "Large Scale Training Method",
+          "Linear Statistical Transformation",
+          "Local Spatial Transformer"
+        ],
+        "correctAnswer": "Long Short-Term Memory",
+        "explanation": "LSTM (Long Short-Term Memory) is a type of recurrent neural network designed to remember information for long periods, solving the vanishing gradient problem."
+      },
+      {
+        "id": "4",
+        "type": "multiple-choice",
+        "question": "What is transfer learning?",
+        "options": [
+          "Moving models between different frameworks",
+          "Using pre-trained models for new tasks",
+          "Converting models to different formats",
+          "Training models on multiple datasets"
+        ],
+        "correctAnswer": "Using pre-trained models for new tasks",
+        "explanation": "Transfer learning leverages knowledge from pre-trained models on large datasets to improve performance on related tasks with smaller datasets."
+      },
+      {
+        "id": "5",
+        "type": "multiple-choice",
+        "question": "What is dropout in neural networks?",
+        "options": [
+          "A type of activation function",
+          "A regularization technique that randomly drops neurons during training",
+          "A method to reduce network size",
+          "An optimization algorithm"
+        ],
+        "correctAnswer": "A regularization technique that randomly drops neurons during training",
+        "explanation": "Dropout randomly deactivates neurons during training to prevent overfitting by forcing the network to learn redundant representations."
+      },
+      {
+        "id": "6",
+        "type": "multiple-choice",
+        "question": "What is a convolutional layer in CNNs?",
+        "options": [
+          "A layer that performs matrix multiplication",
+          "A layer that applies convolutional filters to detect patterns",
+          "A layer that reduces dimensionality",
+          "A layer that combines features"
+        ],
+        "correctAnswer": "A layer that applies convolutional filters to detect patterns",
+        "explanation": "Convolutional layers apply learnable filters to input data, detecting local patterns and features in images or sequences."
+      },
+      {
+        "id": "7",
+        "type": "multiple-choice",
+        "question": "What is the purpose of pooling layers in CNNs?",
+        "options": [
+          "To increase network depth",
+          "To reduce spatial dimensions and computational complexity",
+          "To add non-linearity",
+          "To normalize inputs"
+        ],
+        "correctAnswer": "To reduce spatial dimensions and computational complexity",
+        "explanation": "Pooling layers (like max pooling) reduce the spatial dimensions of feature maps, making the network more computationally efficient and providing translational invariance."
+      },
+      {
+        "id": "8",
+        "type": "multiple-choice",
+        "question": "What is reinforcement learning?",
+        "options": [
+          "Learning from labeled data",
+          "Learning through trial and error with rewards",
+          "Learning from unlabeled data",
+          "Learning by imitating experts"
+        ],
+        "correctAnswer": "Learning through trial and error with rewards",
+        "explanation": "Reinforcement learning involves agents learning optimal behavior through interactions with an environment, receiving rewards or penalties for actions."
+      }
+    ]
+  },
+  {
+    "id": "8",
+    "title": "Natural Language Processing",
+    "description": "Explore text processing, language models, and NLP applications.",
+    "difficulty": "advanced",
+    "questions": [
+      {
+        "id": "1",
+        "type": "multiple-choice",
+        "question": "What is tokenization in NLP?",
+        "options": [
+          "Converting text to numbers",
+          "Breaking text into smaller units like words or sentences",
+          "Analyzing sentence structure",
+          "Generating text summaries"
+        ],
+        "correctAnswer": "Breaking text into smaller units like words or sentences",
+        "explanation": "Tokenization splits text into tokens (words, phrases, or characters) that can be processed by NLP models."
+      },
+      {
+        "id": "2",
+        "type": "multiple-choice",
+        "question": "What is word embedding?",
+        "options": [
+          "Converting words to images",
+          "Representing words as dense vectors in continuous space",
+          "Counting word frequencies",
+          "Analyzing word pronunciations"
+        ],
+        "correctAnswer": "Representing words as dense vectors in continuous space",
+        "explanation": "Word embeddings represent words as dense vectors where semantically similar words have similar vector representations."
+      },
+      {
+        "id": "3",
+        "type": "multiple-choice",
+        "question": "What is TF-IDF?",
+        "options": [
+          "A type of neural network",
+          "A statistical measure of word importance in documents",
+          "A text generation algorithm",
+          "A language translation method"
+        ],
+        "correctAnswer": "A statistical measure of word importance in documents",
+        "explanation": "TF-IDF (Term Frequency-Inverse Document Frequency) measures how important a word is to a document in a collection, balancing term frequency with document frequency."
+      },
+      {
+        "id": "4",
+        "type": "multiple-choice",
+        "question": "What does BERT stand for?",
+        "options": [
+          "Basic Encoding and Representation Technique",
+          "Bidirectional Encoder Representations from Transformers",
+          "Binary Encoding and Retrieval Transformer",
+          "Bayesian Entity Recognition Tool"
+        ],
+        "correctAnswer": "Bidirectional Encoder Representations from Transformers",
+        "explanation": "BERT (Bidirectional Encoder Representations from Transformers) is a transformer-based model that understands context from both directions in text."
+      },
+      {
+        "id": "5",
+        "type": "multiple-choice",
+        "question": "What is sentiment analysis?",
+        "options": [
+          "Analyzing text structure",
+          "Determining the emotional tone of text",
+          "Translating between languages",
+          "Summarizing long documents"
+        ],
+        "correctAnswer": "Determining the emotional tone of text",
+        "explanation": "Sentiment analysis determines whether text expresses positive, negative, or neutral sentiment."
+      },
+      {
+        "id": "6",
+        "type": "multiple-choice",
+        "question": "What is named entity recognition (NER)?",
+        "options": [
+          "Identifying parts of speech",
+          "Extracting structured information from unstructured text",
+          "Generating text responses",
+          "Translating text"
+        ],
+        "correctAnswer": "Extracting structured information from unstructured text",
+        "explanation": "NER identifies and classifies named entities like persons, organizations, locations, dates, etc., from text."
+      },
+      {
+        "id": "7",
+        "type": "multiple-choice",
+        "question": "What is the attention mechanism in transformers?",
+        "options": [
+          "A way to focus on important parts of the input",
+          "A method to reduce model size",
+          "A technique for faster training",
+          "A type of regularization"
+        ],
+        "correctAnswer": "A way to focus on important parts of the input",
+        "explanation": "The attention mechanism allows models to focus on relevant parts of the input sequence when making predictions, improving context understanding."
+      },
+      {
+        "id": "8",
+        "type": "multiple-choice",
+        "question": "What is text preprocessing in NLP?",
+        "options": [
+          "Writing text from scratch",
+          "Cleaning and preparing text data for analysis",
+          "Generating new text",
+          "Translating text to images"
+        ],
+        "correctAnswer": "Cleaning and preparing text data for analysis",
+        "explanation": "Text preprocessing includes tasks like removing punctuation, stop words, stemming, lemmatization, and normalization to prepare text for NLP models."
+      }
+    ]
+  },
+  {
+    "id": "9",
+    "title": "Computer Vision",
+    "description": "Learn about image processing, object detection, and visual recognition.",
+    "difficulty": "advanced",
+    "questions": [
+      {
+        "id": "1",
+        "type": "multiple-choice",
+        "question": "What is image classification?",
+        "options": [
+          "Detecting objects in images",
+          "Assigning labels to entire images",
+          "Segmenting images into regions",
+          "Generating image descriptions"
+        ],
+        "correctAnswer": "Assigning labels to entire images",
+        "explanation": "Image classification assigns predefined labels or categories to entire images based on their visual content."
+      },
+      {
+        "id": "2",
+        "type": "multiple-choice",
+        "question": "What is object detection?",
+        "options": [
+          "Classifying entire images",
+          "Locating and classifying objects within images",
+          "Generating new images",
+          "Analyzing image colors"
+        ],
+        "correctAnswer": "Locating and classifying objects within images",
+        "explanation": "Object detection identifies and locates multiple objects in an image, providing both classification and bounding box coordinates."
+      },
+      {
+        "id": "3",
+        "type": "multiple-choice",
+        "question": "What is semantic segmentation?",
+        "options": [
+          "Classifying pixels into categories",
+          "Detecting object boundaries",
+          "Generating 3D models from 2D images",
+          "Enhancing image quality"
+        ],
+        "correctAnswer": "Classifying pixels into categories",
+        "explanation": "Semantic segmentation assigns each pixel in an image to a class or category, providing detailed understanding of image content."
+      },
+      {
+        "id": "4",
+        "type": "multiple-choice",
+        "question": "What is a region proposal network (RPN) in object detection?",
+        "options": [
+          "A type of CNN layer",
+          "A network that proposes regions likely to contain objects",
+          "A method for image enhancement",
+          "A technique for image compression"
+        ],
+        "correctAnswer": "A network that proposes regions likely to contain objects",
+        "explanation": "RPN generates potential object bounding boxes (region proposals) that are then classified and refined by the detection network."
+      },
+      {
+        "id": "5",
+        "type": "multiple-choice",
+        "question": "What is the IoU (Intersection over Union) metric?",
+        "options": [
+          "A measure of image quality",
+          "A metric for evaluating object detection accuracy",
+          "A method for image compression",
+          "A technique for data augmentation"
+        ],
+        "correctAnswer": "A metric for evaluating object detection accuracy",
+        "explanation": "IoU measures the overlap between predicted and ground truth bounding boxes, used to evaluate object detection performance."
+      },
+      {
+        "id": "6",
+        "type": "multiple-choice",
+        "question": "What is data augmentation in computer vision?",
+        "options": [
+          "Increasing dataset size artificially",
+          "Creating synthetic training images through transformations",
+          "Both A and B",
+          "Reducing dataset size"
+        ],
+        "correctAnswer": "Both A and B",
+        "explanation": "Data augmentation artificially increases dataset size and diversity by applying transformations like rotation, flipping, scaling, and color changes to existing images."
+      },
+      {
+        "id": "7",
+        "type": "multiple-choice",
+        "question": "What is transfer learning in computer vision?",
+        "options": [
+          "Converting images between formats",
+          "Using pre-trained models on new vision tasks",
+          "Training models from scratch",
+          "Compressing image files"
+        ],
+        "correctAnswer": "Using pre-trained models on new vision tasks",
+        "explanation": "Transfer learning applies knowledge from models trained on large datasets (like ImageNet) to new, smaller vision tasks."
+      },
+      {
+        "id": "8",
+        "type": "multiple-choice",
+        "question": "What is the purpose of a fully connected layer in CNNs?",
+        "options": [
+          "Extracting local features",
+          "Combining features for final classification",
+          "Reducing spatial dimensions",
+          "Normalizing feature maps"
+        ],
+        "correctAnswer": "Combining features for final classification",
+        "explanation": "Fully connected layers combine features learned by convolutional layers to make final predictions or classifications."
+      }
+    ]
+  },
+  {
+    "id": "10",
+    "title": "Model Deployment & Production",
+    "description": "Learn about deploying ML models to production environments.",
+    "difficulty": "intermediate",
+    "questions": [
+      {
+        "id": "1",
+        "type": "multiple-choice",
+        "question": "What is model serialization?",
+        "options": [
+          "Converting models to a format that can be saved and loaded",
+          "Making models run faster",
+          "Reducing model size",
+          "Training models in parallel"
+        ],
+        "correctAnswer": "Converting models to a format that can be saved and loaded",
+        "explanation": "Model serialization converts trained models into a format (like pickle, joblib, or ONNX) that can be saved to disk and loaded later."
+      },
+      {
+        "id": "2",
+        "type": "multiple-choice",
+        "question": "What is A/B testing in ML deployment?",
+        "options": [
+          "Comparing two different models",
+          "Testing model performance on new data",
+          "Evaluating model fairness",
+          "Checking model speed"
+        ],
+        "correctAnswer": "Comparing two different models",
+        "explanation": "A/B testing compares two versions of a model (or system) by serving them to different user groups and measuring performance metrics."
+      },
+      {
+        "id": "3",
+        "type": "multiple-choice",
+        "question": "What is model monitoring?",
+        "options": [
+          "Tracking model training progress",
+          "Monitoring model performance in production",
+          "Visualizing model architecture",
+          "Debugging model code"
+        ],
+        "correctAnswer": "Monitoring model performance in production",
+        "explanation": "Model monitoring tracks key metrics like accuracy, latency, and data drift to ensure models perform well in production environments."
+      },
+      {
+        "id": "4",
+        "type": "multiple-choice",
+        "question": "What is containerization in ML deployment?",
+        "options": [
+          "Compressing model files",
+          "Packaging models and dependencies in containers",
+          "Converting models to different formats",
+          "Reducing model inference time"
+        ],
+        "correctAnswer": "Packaging models and dependencies in containers",
+        "explanation": "Containerization packages ML models with their dependencies and runtime environment, ensuring consistent deployment across different systems."
+      },
+      {
+        "id": "5",
+        "type": "multiple-choice",
+        "question": "What is MLOps?",
+        "options": [
+          "A type of machine learning algorithm",
+          "Practices for deploying and maintaining ML systems in production",
+          "A data visualization tool",
+          "A model evaluation metric"
+        ],
+        "correctAnswer": "Practices for deploying and maintaining ML systems in production",
+        "explanation": "MLOps combines ML, DevOps, and data engineering practices to standardize and streamline ML lifecycle management."
+      },
+      {
+        "id": "6",
+        "type": "multiple-choice",
+        "question": "What is model versioning?",
+        "options": [
+          "Updating model code",
+          "Tracking different versions of trained models",
+          "Changing model hyperparameters",
+          "Converting model formats"
+        ],
+        "correctAnswer": "Tracking different versions of trained models",
+        "explanation": "Model versioning tracks different iterations of trained models, allowing rollback to previous versions and comparison of performance."
+      },
+      {
+        "id": "7",
+        "type": "multiple-choice",
+        "question": "What is feature drift?",
+        "options": [
+          "When model features change over time",
+          "When input data distribution changes",
+          "When model accuracy decreases",
+          "When training data becomes outdated"
+        ],
+        "correctAnswer": "When input data distribution changes",
+        "explanation": "Feature drift (or data drift) occurs when the statistical properties of input features change over time, potentially degrading model performance."
+      },
+      {
+        "id": "8",
+        "type": "multiple-choice",
+        "question": "What is REST API in the context of ML deployment?",
+        "options": [
+          "A type of ML model",
+          "A standard for building web services to serve ML predictions",
+          "A data storage format",
+          "A model evaluation technique"
+        ],
+        "correctAnswer": "A standard for building web services to serve ML predictions",
+        "explanation": "REST APIs provide a standardized way to expose ML models as web services, allowing applications to send data and receive predictions via HTTP requests."
+      }
+    ]
+  },
+  {
+    "id": "11",
+    "title": "Ethics & Bias in AI",
+    "description": "Understand ethical considerations, bias detection, and responsible AI practices.",
+    "difficulty": "intermediate",
+    "questions": [
+      {
+        "id": "1",
+        "type": "multiple-choice",
+        "question": "What is algorithmic bias?",
+        "options": [
+          "When algorithms are inefficient",
+          "When AI systems produce unfair outcomes for different groups",
+          "When models overfit the training data",
+          "When algorithms require too much data"
+        ],
+        "correctAnswer": "When AI systems produce unfair outcomes for different groups",
+        "explanation": "Algorithmic bias occurs when AI systems systematically disadvantage certain groups due to biased training data or flawed algorithms."
+      },
+      {
+        "id": "2",
+        "type": "multiple-choice",
+        "question": "What is model interpretability?",
+        "options": [
+          "How fast a model makes predictions",
+          "How well humans can understand model decisions",
+          "How accurate a model is",
+          "How complex a model is"
+        ],
+        "correctAnswer": "How well humans can understand model decisions",
+        "explanation": "Model interpretability refers to the ability to understand and explain how a model makes predictions, which is crucial for trust and accountability."
+      },
+      {
+        "id": "3",
+        "type": "multiple-choice",
+        "question": "What is data privacy in AI?",
+        "options": [
+          "Keeping training data secret",
+          "Protecting individuals' personal information in AI systems",
+          "Preventing data leaks during training",
+          "All of the above"
+        ],
+        "correctAnswer": "All of the above",
+        "explanation": "Data privacy in AI encompasses protecting personal information, ensuring proper data handling, and complying with privacy regulations like GDPR."
+      },
+      {
+        "id": "4",
+        "type": "multiple-choice",
+        "question": "What is fairness in machine learning?",
+        "options": [
+          "Treating all data points equally",
+          "Ensuring AI systems don't discriminate against protected groups",
+          "Making models as accurate as possible",
+          "Using diverse training data"
+        ],
+        "correctAnswer": "Ensuring AI systems don't discriminate against protected groups",
+        "explanation": "Fairness in ML involves designing systems that don't systematically disadvantage certain demographic groups and ensuring equitable treatment."
+      },
+      {
+        "id": "5",
+        "type": "multiple-choice",
+        "question": "What are the potential risks of black-box AI models?",
+        "options": [
+          "They are slower than other models",
+          "They require more computing resources",
+          "They cannot be understood or audited by humans",
+          "They are less accurate"
+        ],
+        "correctAnswer": "They cannot be understood or audited by humans",
+        "explanation": "Black-box models lack interpretability, making it difficult to understand decision-making processes, debug issues, or ensure ethical behavior."
+      },
+      {
+        "id": "6",
+        "type": "multiple-choice",
+        "question": "What is AI safety?",
+        "options": [
+          "Preventing AI systems from harming humans",
+          "Making AI systems more efficient",
+          "Ensuring AI systems are secure from hacking",
+          "All of the above"
+        ],
+        "correctAnswer": "All of the above",
+        "explanation": "AI safety encompasses preventing harm, ensuring robustness, maintaining security, and aligning AI systems with human values."
+      },
+      {
+        "id": "7",
+        "type": "multiple-choice",
+        "question": "What is the purpose of bias detection tools?",
+        "options": [
+          "To identify and mitigate unfair treatment in AI systems",
+          "To improve model accuracy",
+          "To speed up model training",
+          "To reduce model size"
+        ],
+        "correctAnswer": "To identify and mitigate unfair treatment in AI systems",
+        "explanation": "Bias detection tools help identify discriminatory patterns in AI systems, allowing developers to address fairness issues before deployment."
+      },
+      {
+        "id": "8",
+        "type": "multiple-choice",
+        "question": "What is responsible AI development?",
+        "options": [
+          "Developing AI quickly",
+          "Considering ethical, social, and technical implications throughout AI lifecycle",
+          "Focusing only on technical performance",
+          "Ignoring user feedback"
+        ],
+        "correctAnswer": "Considering ethical, social, and technical implications throughout AI lifecycle",
+        "explanation": "Responsible AI development involves ethical considerations, fairness, transparency, accountability, and societal impact throughout the entire AI development process."
+      }
+    ]
+  },
+  {
+    "id": "12",
+    "title": "Time Series Analysis",
+    "description": "Learn about time series data, forecasting, and temporal pattern recognition.",
+    "difficulty": "advanced",
+    "questions": [
+      {
+        "id": "1",
+        "type": "multiple-choice",
+        "question": "What is a time series?",
+        "options": [
+          "A series of data points indexed in time order",
+          "A type of neural network",
+          "A clustering algorithm",
+          "A dimensionality reduction technique"
+        ],
+        "correctAnswer": "A series of data points indexed in time order",
+        "explanation": "A time series is a sequence of data points collected or recorded at regular time intervals, showing how a variable changes over time."
+      },
+      {
+        "id": "2",
+        "type": "multiple-choice",
+        "question": "What is stationarity in time series?",
+        "options": [
+          "When data points are evenly spaced",
+          "When statistical properties remain constant over time",
+          "When the series has no trends or seasonality",
+          "Both B and C"
+        ],
+        "correctAnswer": "Both B and C",
+        "explanation": "A stationary time series has constant statistical properties (mean, variance) over time and no systematic trends or seasonal patterns."
+      },
+      {
+        "id": "3",
+        "type": "multiple-choice",
+        "question": "What is ARIMA?",
+        "options": [
+          "A type of neural network",
+          "AutoRegressive Integrated Moving Average - a forecasting method",
+          "A clustering algorithm",
+          "A dimensionality reduction technique"
+        ],
+        "correctAnswer": "AutoRegressive Integrated Moving Average - a forecasting method",
+        "explanation": "ARIMA is a popular statistical method for time series forecasting that combines autoregression, differencing, and moving averages."
+      },
+      {
+        "id": "4",
+        "type": "multiple-choice",
+        "question": "What is seasonality in time series?",
+        "options": [
+          "Random fluctuations in data",
+          "Regular patterns that repeat over fixed periods",
+          "Long-term trends in data",
+          "Outliers in the data"
+        ],
+        "correctAnswer": "Regular patterns that repeat over fixed periods",
+        "explanation": "Seasonality refers to predictable, recurring patterns in time series data that occur at regular intervals, like daily, weekly, or yearly cycles."
+      },
+      {
+        "id": "5",
+        "type": "multiple-choice",
+        "question": "What is autocorrelation?",
+        "options": [
+          "The correlation between different time series",
+          "The correlation of a time series with its own past values",
+          "The correlation between independent variables",
+          "The correlation between predicted and actual values"
+        ],
+        "correctAnswer": "The correlation of a time series with its own past values",
+        "explanation": "Autocorrelation measures how correlated a time series is with its own past values, helping identify patterns and dependencies."
+      },
+      {
+        "id": "6",
+        "type": "multiple-choice",
+        "question": "What is exponential smoothing?",
+        "options": [
+          "A method to reduce data size",
+          "A forecasting technique that gives more weight to recent observations",
+          "A way to handle missing values",
+          "A technique for data normalization"
+        ],
+        "correctAnswer": "A forecasting technique that gives more weight to recent observations",
+        "explanation": "Exponential smoothing assigns exponentially decreasing weights to past observations, giving more importance to recent data for forecasting."
+      },
+      {
+        "id": "7",
+        "type": "multiple-choice",
+        "question": "What are LSTM networks commonly used for?",
+        "options": [
+          "Image classification",
+          "Time series prediction and sequence modeling",
+          "Natural language processing",
+          "Both B and C"
+        ],
+        "correctAnswer": "Both B and C",
+        "explanation": "LSTM networks excel at modeling sequential data, making them ideal for time series forecasting, language modeling, and other sequence prediction tasks."
+      },
+      {
+        "id": "8",
+        "type": "multiple-choice",
+        "question": "What is cross-validation in time series?",
+        "options": [
+          "Comparing multiple time series",
+          "Using rolling forecast origin for validation",
+          "Splitting time series randomly",
+          "Validating seasonal patterns"
+        ],
+        "correctAnswer": "Using rolling forecast origin for validation",
+        "explanation": "Time series cross-validation uses techniques like rolling forecast origin to maintain temporal order and avoid data leakage."
+      }
+    ]
+  },
+  {
+    "id": "13",
+    "title": "Optimization & Hyperparameter Tuning",
+    "description": "Master model optimization, hyperparameter tuning, and performance improvement techniques.",
+    "difficulty": "intermediate",
+    "questions": [
+      {
+        "id": "1",
+        "type": "multiple-choice",
+        "question": "What are hyperparameters?",
+        "options": [
+          "Model parameters learned during training",
+          "Configuration settings set before training",
+          "The output of a trained model",
+          "Training data characteristics"
+        ],
+        "correctAnswer": "Configuration settings set before training",
+        "explanation": "Hyperparameters are external configuration settings that control the learning process and must be set before training begins."
+      },
+      {
+        "id": "2",
+        "type": "multiple-choice",
+        "question": "What is grid search?",
+        "options": [
+          "A method to visualize data",
+          "An exhaustive search over specified hyperparameter values",
+          "A technique for feature selection",
+          "A way to reduce model complexity"
+        ],
+        "correctAnswer": "An exhaustive search over specified hyperparameter values",
+        "explanation": "Grid search systematically tries all combinations of hyperparameter values from specified lists to find the optimal configuration."
+      },
+      {
+        "id": "3",
+        "type": "multiple-choice",
+        "question": "What is random search?",
+        "options": [
+          "Randomly selecting features",
+          "Randomly sampling hyperparameter combinations",
+          "Randomly splitting data",
+          "Randomly initializing weights"
+        ],
+        "correctAnswer": "Randomly sampling hyperparameter combinations",
+        "explanation": "Random search samples random combinations of hyperparameters from specified distributions, often more efficient than grid search."
+      },
+      {
+        "id": "4",
+        "type": "multiple-choice",
+        "question": "What is Bayesian optimization?",
+        "options": [
+          "Using Bayesian statistics for model training",
+          "A probabilistic approach to hyperparameter tuning",
+          "A method for Bayesian network construction",
+          "Using Bayes' theorem for predictions"
+        ],
+        "correctAnswer": "A probabilistic approach to hyperparameter tuning",
+        "explanation": "Bayesian optimization uses probabilistic models to predict which hyperparameter combinations will perform well, efficiently exploring the search space."
+      },
+      {
+        "id": "5",
+        "type": "multiple-choice",
+        "question": "What is early stopping?",
+        "options": [
+          "Stopping training when validation performance starts to degrade",
+          "Stopping training after a fixed number of epochs",
+          "Stopping training when training loss becomes zero",
+          "Stopping training when model converges"
+        ],
+        "correctAnswer": "Stopping training when validation performance starts to degrade",
+        "explanation": "Early stopping monitors validation performance and stops training when it begins to worsen, preventing overfitting."
+      },
+      {
+        "id": "6",
+        "type": "multiple-choice",
+        "question": "What is learning rate scheduling?",
+        "options": [
+          "Changing the learning rate during training",
+          "Scheduling when to update model weights",
+          "Planning the training curriculum",
+          "Organizing the dataset"
+        ],
+        "correctAnswer": "Changing the learning rate during training",
+        "explanation": "Learning rate scheduling adjusts the learning rate during training, often starting high and decreasing over time for better convergence."
+      },
+      {
+        "id": "7",
+        "type": "multiple-choice",
+        "question": "What is regularization?",
+        "options": [
+          "Making models more complex",
+          "Adding penalties to prevent overfitting",
+          "Increasing training data size",
+          "Using more features"
+        ],
+        "correctAnswer": "Adding penalties to prevent overfitting",
+        "explanation": "Regularization adds penalty terms to the loss function to discourage complex models and prevent overfitting."
+      },
+      {
+        "id": "8",
+        "type": "multiple-choice",
+        "question": "What is model pruning?",
+        "options": [
+          "Removing unnecessary parts of a trained model",
+          "Adding complexity to models",
+          "Increasing model size",
+          "Combining multiple models"
+        ],
+        "correctAnswer": "Removing unnecessary parts of a trained model",
+        "explanation": "Model pruning removes redundant weights or neurons from trained models to reduce size and computational requirements while maintaining performance."
       }
     ]
   }

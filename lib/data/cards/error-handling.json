@@ -1,6 +1,6 @@
 [
   {
-    "id": "exceptions-basics",
+    "id": "1",
     "title": "Exception Basics",
     "description": "Learn about exceptions and error handling in Python.",
     "difficulty": "intermediate",
@@ -83,7 +83,7 @@
     ]
   },
   {
-    "id": "common-exceptions",
+    "id": "2",
     "title": "Common Exceptions",
     "description": "Familiarize yourself with frequently encountered exceptions.",
     "difficulty": "intermediate",
@@ -166,7 +166,7 @@
     ]
   },
   {
-    "id": "exception-handling-patterns",
+    "id": "3",
     "title": "Exception Handling Patterns",
     "description": "Common patterns for robust error handling.",
     "difficulty": "intermediate",
@@ -249,7 +249,7 @@
     ]
   },
   {
-    "id": "advanced-exception-handling",
+    "id": "4",
     "title": "Advanced Exception Handling",
     "description": "Advanced techniques for exception management.",
     "difficulty": "advanced",
@@ -332,7 +332,7 @@
     ]
   },
   {
-    "id": "exception-best-practices",
+    "id": "5",
     "title": "Exception Best Practices",
     "description": "Guidelines for effective exception handling.",
     "difficulty": "intermediate",

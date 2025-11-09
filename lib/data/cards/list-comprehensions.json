@@ -1,6 +1,6 @@
 [
   {
-    "id": "list-comp-basics",
+    "id": "1",
     "title": "List Comprehension Basics",
     "description": "Fundamental concepts of list comprehensions.",
     "difficulty": "intermediate",
@@ -83,7 +83,7 @@
     ]
   },
   {
-    "id": "conditional-comprehensions",
+    "id": "2",
     "title": "Conditional Comprehensions",
     "description": "Using conditions and ternary operators in comprehensions.",
     "difficulty": "intermediate",
@@ -141,7 +141,7 @@
     ]
   },
   {
-    "id": "nested-comprehensions",
+    "id": "3",
     "title": "Nested Comprehensions",
     "description": "Working with multiple iterables and nested structures.",
     "difficulty": "advanced",
@@ -199,7 +199,7 @@
     ]
   },
   {
-    "id": "dictionary-comprehensions",
+    "id": "4",
     "title": "Dictionary Comprehensions",
     "description": "Creating dictionaries with comprehension syntax.",
     "difficulty": "intermediate",
@@ -257,7 +257,7 @@
     ]
   },
   {
-    "id": "set-comprehensions",
+    "id": "5",
     "title": "Set Comprehensions",
     "description": "Creating sets with comprehension syntax.",
     "difficulty": "intermediate",
@@ -315,7 +315,7 @@
     ]
   },
   {
-    "id": "generator-expressions",
+    "id": "6",
     "title": "Generator Expressions",
     "description": "Memory-efficient alternatives to list comprehensions.",
     "difficulty": "intermediate",
@@ -373,7 +373,7 @@
     ]
   },
   {
-    "id": "advanced-comprehensions",
+    "id": "7",
     "title": "Advanced Comprehensions",
     "description": "Complex comprehension techniques and use cases.",
     "difficulty": "advanced",
@@ -431,7 +431,7 @@
     ]
   },
   {
-    "id": "comprehension-performance",
+    "id": "8",
     "title": "Comprehension Performance",
     "description": "When and how comprehensions perform better.",
     "difficulty": "advanced",
@@ -489,7 +489,7 @@
     ]
   },
   {
-    "id": "comprehension-best-practices",
+    "id": "9",
     "title": "Comprehension Best Practices",
     "description": "Guidelines for writing readable and efficient comprehensions.",
     "difficulty": "intermediate",
@@ -547,7 +547,7 @@
     ]
   },
   {
-    "id": "real-world-use-cases",
+    "id": "10",
     "title": "Real-World Use Cases",
     "description": "Practical applications of comprehensions in Python code.",
     "difficulty": "intermediate",

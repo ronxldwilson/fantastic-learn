@@ -1,225 +1,671 @@
 [
   {
-    "id": "7-1-docker-basics",
+    "id": "1",
     "title": "Docker Fundamentals",
-    "description": "Test your knowledge of Docker basics, containers, and images.",
-    "difficulty": "beginner",
+    "description": "Basic concepts and getting started with Docker",
     "questions": [
       {
-        "id": "7-1-1-docker-definition",
-        "type": "multiple-choice",
+        "id": "1",
         "question": "What is Docker?",
         "options": [
-          "A programming language",
           "A containerization platform",
-          "A cloud storage service",
-          "A code editor"
+          "A virtual machine manager",
+          "A cloud computing service",
+          "A programming language"
         ],
-        "correctAnswer": "A containerization platform",
+        "correct_answer": "A containerization platform",
         "explanation": "Docker is an open-source platform for developing, shipping, and running applications in containers."
       },
       {
-        "id": "7-1-2-container-vs-vm",
-        "type": "multiple-choice",
-        "question": "How are Docker containers different from virtual machines?",
+        "id": "2",
+        "question": "What is a Docker container?",
         "options": [
+          "A lightweight, standalone executable package",
+          "A virtual machine",
+          "A physical server",
+          "A database"
+        ],
+        "correct_answer": "A lightweight, standalone executable package",
+        "explanation": "A container is a lightweight, standalone executable package that includes everything needed to run an application."
+      },
+      {
+        "id": "3",
+        "question": "What is a Docker image?",
+        "options": [
+          "A template for creating containers",
+          "A running container",
+          "A virtual machine image",
+          "A file system"
+        ],
+        "correct_answer": "A template for creating containers",
+        "explanation": "A Docker image is a read-only template used to create containers."
+      },
+      {
+        "id": "4",
+        "question": "What is Docker Hub?",
+        "options": [
+          "A registry for Docker images",
+          "A container orchestration tool",
+          "A Docker CLI tool",
+          "A monitoring service"
+        ],
+        "correct_answer": "A registry for Docker images",
+        "explanation": "Docker Hub is a cloud-based registry service for sharing and managing Docker images."
+      },
+      {
+        "id": "5",
+        "question": "What is the difference between a container and a virtual machine?",
+        "options": [
+          "Containers share the host OS, VMs have their own OS",
           "Containers are heavier than VMs",
-          "Containers share the host OS kernel, VMs have their own OS",
           "VMs are faster than containers",
           "Containers require more resources"
         ],
-        "correctAnswer": "Containers share the host OS kernel, VMs have their own OS",
-        "explanation": "Containers share the host system's kernel, making them lightweight compared to VMs which include a full operating system."
-      },
-      {
-        "id": "7-1-3-docker-image",
-        "type": "multiple-choice",
-        "question": "What is a Docker image?",
-        "options": [
-          "A running container instance",
-          "A blueprint/template for containers",
-          "A storage volume",
-          "A network configuration"
-        ],
-        "correctAnswer": "A blueprint/template for containers",
-        "explanation": "A Docker image is a lightweight, standalone, executable package that includes everything needed to run an application."
-      },
-      {
-        "id": "7-1-4-dockerfile-purpose",
-        "type": "multiple-choice",
-        "question": "What is the purpose of a Dockerfile?",
-        "options": [
-          "To run containers",
-          "To define how to build a Docker image",
-          "To manage container networks",
-          "To store container data"
-        ],
-        "correctAnswer": "To define how to build a Docker image",
-        "explanation": "A Dockerfile is a text file with instructions for building a Docker image."
-      },
-      {
-        "id": "7-1-5-docker-run",
-        "type": "multiple-choice",
-        "question": "Which command runs a container from an image?",
-        "options": [
-          "docker start",
-          "docker create",
-          "docker run",
-          "docker build"
-        ],
-        "correctAnswer": "docker run",
-        "explanation": "docker run creates and starts a container from a specified image."
-      },
-      {
-        "id": "7-1-6-docker-ps",
-        "type": "multiple-choice",
-        "question": "What does 'docker ps' show?",
-        "options": [
-          "All Docker images",
-          "Running containers",
-          "Container logs",
-          "Docker networks"
-        ],
-        "correctAnswer": "Running containers",
-        "explanation": "docker ps lists all running containers. Use docker ps -a to see all containers."
-      },
-      {
-        "id": "7-1-7-docker-build",
-        "type": "multiple-choice",
-        "question": "Which command builds a Docker image from a Dockerfile?",
-        "options": [
-          "docker create",
-          "docker build",
-          "docker run",
-          "docker pull"
-        ],
-        "correctAnswer": "docker build",
-        "explanation": "docker build builds an image from a Dockerfile in the current directory."
-      },
-      {
-        "id": "7-1-8-port-mapping",
-        "type": "multiple-choice",
-        "question": "How do you map a container port to a host port?",
-        "options": [
-          "-p host_port:container_port",
-          "-port host_port container_port",
-          "--map host_port container_port",
-          "-m host_port:container_port"
-        ],
-        "correctAnswer": "-p host_port:container_port",
-        "explanation": "The -p flag maps container ports to host ports in the format host_port:container_port."
+        "correct_answer": "Containers share the host OS, VMs have their own OS",
+        "explanation": "Containers share the host operating system kernel, while virtual machines include a full operating system."
       }
     ]
   },
   {
-    "id": "7-2-docker-advanced",
-    "title": "Advanced Docker Concepts",
-    "description": "Explore Docker Compose, volumes, networking, and orchestration.",
-    "difficulty": "intermediate",
+    "id": "2",
+    "title": "Docker Installation and Setup",
+    "description": "Installing and configuring Docker",
     "questions": [
       {
-        "id": "7-2-1-docker-compose",
-        "type": "multiple-choice",
-        "question": "What is Docker Compose used for?",
+        "id": "1",
+        "question": "How do you check if Docker is installed?",
         "options": [
-          "Building single containers",
-          "Defining and running multi-container applications",
-          "Managing Docker images",
-          "Container security"
-        ],
-        "correctAnswer": "Defining and running multi-container applications",
-        "explanation": "Docker Compose allows you to define and run multi-container Docker applications using a YAML file."
-      },
-      {
-        "id": "7-2-2-docker-volumes",
-        "type": "multiple-choice",
-        "question": "What is the purpose of Docker volumes?",
-        "options": [
-          "To increase container memory",
-          "To persist data beyond container lifecycle",
-          "To share data between containers",
+          "docker --version",
+          "docker version",
+          "docker info",
           "All of the above"
         ],
-        "correctAnswer": "All of the above",
-        "explanation": "Docker volumes provide persistent storage, allowing data to persist beyond container lifecycle and be shared between containers."
+        "correct_answer": "All of the above",
+        "explanation": "Any of these commands can be used to check Docker installation and version."
       },
       {
-        "id": "7-2-3-docker-networking",
-        "type": "multiple-choice",
-        "question": "What is the default Docker network driver?",
+        "id": "2",
+        "question": "What is Docker Desktop?",
         "options": [
-          "host",
-          "bridge",
-          "overlay",
-          "macvlan"
+          "A GUI application for Docker",
+          "A command-line tool",
+          "A server component",
+          "A registry service"
         ],
-        "correctAnswer": "bridge",
-        "explanation": "The bridge network driver is the default and creates an internal network for containers to communicate."
+        "correct_answer": "A GUI application for Docker",
+        "explanation": "Docker Desktop provides a GUI for managing Docker on Windows and macOS."
       },
       {
-        "id": "7-2-4-dockerfile-from",
-        "type": "multiple-choice",
+        "id": "3",
+        "question": "What is the Docker daemon?",
+        "options": [
+          "The background service that manages containers",
+          "A CLI tool",
+          "A GUI application",
+          "A registry"
+        ],
+        "correct_answer": "The background service that manages containers",
+        "explanation": "The Docker daemon (dockerd) is the persistent process that manages Docker containers."
+      },
+      {
+        "id": "4",
+        "question": "What is Docker Compose?",
+        "options": [
+          "A tool for defining and running multi-container applications",
+          "A container orchestration tool",
+          "A monitoring tool",
+          "A security tool"
+        ],
+        "correct_answer": "A tool for defining and running multi-container applications",
+        "explanation": "Docker Compose allows you to define and run multi-container Docker applications."
+      },
+      {
+        "id": "5",
+        "question": "How do you start the Docker daemon on Linux?",
+        "options": [
+          "sudo systemctl start docker",
+          "sudo service docker start",
+          "docker start",
+          "dockerd"
+        ],
+        "correct_answer": "sudo systemctl start docker",
+        "explanation": "On modern Linux systems with systemd, Docker is started using systemctl."
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "title": "Working with Docker Images",
+    "description": "Creating, managing, and using Docker images",
+    "questions": [
+      {
+        "id": "1",
+        "question": "How do you pull an image from Docker Hub?",
+        "options": [
+          "docker pull <image>",
+          "docker get <image>",
+          "docker download <image>",
+          "docker fetch <image>"
+        ],
+        "correct_answer": "docker pull <image>",
+        "explanation": "docker pull downloads an image from a registry to your local machine."
+      },
+      {
+        "id": "2",
+        "question": "How do you list Docker images?",
+        "options": [
+          "docker images",
+          "docker list images",
+          "docker ps -a",
+          "docker show images"
+        ],
+        "correct_answer": "docker images",
+        "explanation": "docker images lists all images available locally."
+      },
+      {
+        "id": "3",
+        "question": "What is a Dockerfile?",
+        "options": [
+          "A text file with instructions to build an image",
+          "A configuration file for containers",
+          "A log file",
+          "A script for running containers"
+        ],
+        "correct_answer": "A text file with instructions to build an image",
+        "explanation": "A Dockerfile contains instructions for building a Docker image."
+      },
+      {
+        "id": "4",
         "question": "What does the FROM instruction do in a Dockerfile?",
         "options": [
-          "Specifies the base image to build upon",
-          "Copies files into the image",
-          "Runs commands during build",
-          "Sets environment variables"
+          "Specifies the base image",
+          "Sets the working directory",
+          "Copies files",
+          "Runs commands"
         ],
-        "correctAnswer": "Specifies the base image to build upon",
-        "explanation": "FROM specifies the base image that subsequent instructions will build upon."
+        "correct_answer": "Specifies the base image",
+        "explanation": "FROM specifies the base image that the new image will be built upon."
       },
       {
-        "id": "7-2-5-multi-stage-builds",
-        "type": "multiple-choice",
-        "question": "What is the benefit of multi-stage Docker builds?",
+        "id": "5",
+        "question": "How do you build a Docker image?",
         "options": [
-          "Faster build times",
-          "Smaller final image sizes",
-          "Better security",
-          "All of the above"
+          "docker build -t <name> .",
+          "docker create <name>",
+          "docker make <name>",
+          "docker compile <name>"
         ],
-        "correctAnswer": "All of the above",
-        "explanation": "Multi-stage builds allow you to use different base images for building and running, resulting in smaller, more secure final images."
-      },
+        "correct_answer": "docker build -t <name> .",
+        "explanation": "docker build creates an image from a Dockerfile, -t tags it with a name."
+      }
+    ]
+  },
+  {
+    "id": "4",
+    "title": "Docker Containers",
+    "description": "Running and managing Docker containers",
+    "questions": [
       {
-        "id": "7-2-6-docker-registry",
-        "type": "multiple-choice",
-        "question": "What is Docker Hub?",
+        "id": "1",
+        "question": "How do you run a container from an image?",
         "options": [
-          "A container orchestration tool",
-          "A public registry for Docker images",
-          "A Docker networking plugin",
-          "A container monitoring tool"
+          "docker run <image>",
+          "docker start <image>",
+          "docker create <image>",
+          "docker execute <image>"
         ],
-        "correctAnswer": "A public registry for Docker images",
-        "explanation": "Docker Hub is a cloud-based registry service for sharing and managing Docker images."
+        "correct_answer": "docker run <image>",
+        "explanation": "docker run creates and starts a container from an image."
       },
       {
-        "id": "7-2-7-docker-swarm",
-        "type": "multiple-choice",
+        "id": "2",
+        "question": "How do you list running containers?",
+        "options": [
+          "docker ps",
+          "docker containers",
+          "docker list",
+          "docker running"
+        ],
+        "correct_answer": "docker ps",
+        "explanation": "docker ps lists all running containers."
+      },
+      {
+        "id": "3",
+        "question": "How do you stop a running container?",
+        "options": [
+          "docker stop <container>",
+          "docker kill <container>",
+          "docker end <container>",
+          "docker halt <container>"
+        ],
+        "correct_answer": "docker stop <container>",
+        "explanation": "docker stop gracefully stops a running container."
+      },
+      {
+        "id": "4",
+        "question": "What is the difference between docker stop and docker kill?",
+        "options": [
+          "stop sends SIGTERM, kill sends SIGKILL",
+          "stop is for images, kill is for containers",
+          "stop removes containers, kill keeps them",
+          "They are the same"
+        ],
+        "correct_answer": "stop sends SIGTERM, kill sends SIGKILL",
+        "explanation": "docker stop sends SIGTERM for graceful shutdown, docker kill sends SIGKILL for immediate termination."
+      },
+      {
+        "id": "5",
+        "question": "How do you remove a container?",
+        "options": [
+          "docker rm <container>",
+          "docker delete <container>",
+          "docker remove <container>",
+          "docker erase <container>"
+        ],
+        "correct_answer": "docker rm <container>",
+        "explanation": "docker rm removes one or more containers."
+      }
+    ]
+  },
+  {
+    "id": "5",
+    "title": "Docker Networking",
+    "description": "Networking concepts in Docker",
+    "questions": [
+      {
+        "id": "1",
+        "question": "What is the default Docker network driver?",
+        "options": [
+          "bridge",
+          "host",
+          "overlay",
+          "none"
+        ],
+        "correct_answer": "bridge",
+        "explanation": "The bridge driver creates a private network between containers on the same host."
+      },
+      {
+        "id": "2",
+        "question": "What is port mapping in Docker?",
+        "options": [
+          "Mapping container ports to host ports",
+          "Mapping host ports to container ports",
+          "Creating network bridges",
+          "Setting up VPN connections"
+        ],
+        "correct_answer": "Mapping container ports to host ports",
+        "explanation": "Port mapping allows external access to services running inside containers."
+      },
+      {
+        "id": "3",
+        "question": "How do you expose ports in docker run?",
+        "options": [
+          "-p host_port:container_port",
+          "-e host_port:container_port",
+          "--port host_port:container_port",
+          "-x host_port:container_port"
+        ],
+        "correct_answer": "-p host_port:container_port",
+        "explanation": "The -p flag maps host ports to container ports."
+      },
+      {
+        "id": "4",
+        "question": "What is the host network mode?",
+        "options": [
+          "Containers use the host's network stack",
+          "Containers get their own IP addresses",
+          "Containers share a bridge network",
+          "Containers have no network access"
+        ],
+        "correct_answer": "Containers use the host's network stack",
+        "explanation": "In host mode, containers use the host's network directly without isolation."
+      },
+      {
+        "id": "5",
+        "question": "How do you connect containers to a custom network?",
+        "options": [
+          "docker network connect <network> <container>",
+          "docker connect <network> <container>",
+          "docker attach <network> <container>",
+          "docker join <network> <container>"
+        ],
+        "correct_answer": "docker network connect <network> <container>",
+        "explanation": "docker network connect connects a container to a network."
+      }
+    ]
+  },
+  {
+    "id": "6",
+    "title": "Docker Volumes",
+    "description": "Persistent data storage in Docker",
+    "questions": [
+      {
+        "id": "1",
+        "question": "What is a Docker volume?",
+        "options": [
+          "A way to persist data generated by containers",
+          "A type of container",
+          "A network configuration",
+          "A security feature"
+        ],
+        "correct_answer": "A way to persist data generated by containers",
+        "explanation": "Volumes provide persistent storage that survives container restarts and removals."
+      },
+      {
+        "id": "2",
+        "question": "How do you create a named volume?",
+        "options": [
+          "docker volume create <name>",
+          "docker create volume <name>",
+          "docker make volume <name>",
+          "docker new volume <name>"
+        ],
+        "correct_answer": "docker volume create <name>",
+        "explanation": "docker volume create creates a new named volume."
+      },
+      {
+        "id": "3",
+        "question": "How do you mount a volume in docker run?",
+        "options": [
+          "-v volume_name:/container/path",
+          "-m volume_name:/container/path",
+          "--volume volume_name:/container/path",
+          "-d volume_name:/container/path"
+        ],
+        "correct_answer": "-v volume_name:/container/path",
+        "explanation": "The -v flag mounts a volume to a path inside the container."
+      },
+      {
+        "id": "4",
+        "question": "What is a bind mount?",
+        "options": [
+          "Mounting a host directory into a container",
+          "Mounting a volume to a container",
+          "Creating a network mount",
+          "Mounting a container to another container"
+        ],
+        "correct_answer": "Mounting a host directory into a container",
+        "explanation": "Bind mounts mount existing host directories into containers."
+      },
+      {
+        "id": "5",
+        "question": "How do you list Docker volumes?",
+        "options": [
+          "docker volume ls",
+          "docker volumes",
+          "docker list volumes",
+          "docker show volumes"
+        ],
+        "correct_answer": "docker volume ls",
+        "explanation": "docker volume ls lists all volumes."
+      }
+    ]
+  },
+  {
+    "id": "7",
+    "title": "Docker Compose",
+    "description": "Defining and running multi-container applications",
+    "questions": [
+      {
+        "id": "1",
+        "question": "What is a docker-compose.yml file?",
+        "options": [
+          "A YAML file defining multi-container applications",
+          "A configuration file for single containers",
+          "A log file",
+          "A Dockerfile alternative"
+        ],
+        "correct_answer": "A YAML file defining multi-container applications",
+        "explanation": "docker-compose.yml defines services, networks, and volumes for multi-container apps."
+      },
+      {
+        "id": "2",
+        "question": "How do you start services with Docker Compose?",
+        "options": [
+          "docker-compose up",
+          "docker-compose start",
+          "docker-compose run",
+          "docker-compose create"
+        ],
+        "correct_answer": "docker-compose up",
+        "explanation": "docker-compose up builds, (re)creates, and starts containers."
+      },
+      {
+        "id": "3",
+        "question": "What is the services section in docker-compose.yml?",
+        "options": [
+          "Defines the containers to be created",
+          "Defines networks",
+          "Defines volumes",
+          "Defines environment variables"
+        ],
+        "correct_answer": "Defines the containers to be created",
+        "explanation": "The services section defines each container and its configuration."
+      },
+      {
+        "id": "4",
+        "question": "How do you stop Docker Compose services?",
+        "options": [
+          "docker-compose down",
+          "docker-compose stop",
+          "docker-compose halt",
+          "docker-compose end"
+        ],
+        "correct_answer": "docker-compose down",
+        "explanation": "docker-compose down stops and removes containers, networks, and volumes."
+      },
+      {
+        "id": "5",
+        "question": "What is the depends_on option?",
+        "options": [
+          "Specifies service dependencies",
+          "Specifies network dependencies",
+          "Specifies volume dependencies",
+          "Specifies environment dependencies"
+        ],
+        "correct_answer": "Specifies service dependencies",
+        "explanation": "depends_on defines the order in which services should be started."
+      }
+    ]
+  },
+  {
+    "id": "8",
+    "title": "Docker Best Practices",
+    "description": "Best practices for Docker development and production",
+    "questions": [
+      {
+        "id": "1",
+        "question": "Why should you use .dockerignore?",
+        "options": [
+          "To exclude files from the build context",
+          "To ignore containers",
+          "To exclude images",
+          "To ignore networks"
+        ],
+        "correct_answer": "To exclude files from the build context",
+        "explanation": ".dockerignore prevents unnecessary files from being sent to the Docker daemon during builds."
+      },
+      {
+        "id": "2",
+        "question": "What is a multi-stage build?",
+        "options": [
+          "Using multiple FROM statements to optimize image size",
+          "Building containers in parallel",
+          "Building images for multiple architectures",
+          "Building images for multiple environments"
+        ],
+        "correct_answer": "Using multiple FROM statements to optimize image size",
+        "explanation": "Multi-stage builds allow copying artifacts from intermediate images to final images."
+      },
+      {
+        "id": "3",
+        "question": "Why should you avoid running containers as root?",
+        "options": [
+          "For security reasons",
+          "For performance reasons",
+          "For compatibility reasons",
+          "For networking reasons"
+        ],
+        "correct_answer": "For security reasons",
+        "explanation": "Running as root can pose security risks if the container is compromised."
+      },
+      {
+        "id": "4",
+        "question": "What is the purpose of HEALTHCHECK?",
+        "options": [
+          "To check if a container is healthy",
+          "To check network connectivity",
+          "To check disk usage",
+          "To check memory usage"
+        ],
+        "correct_answer": "To check if a container is healthy",
+        "explanation": "HEALTHCHECK defines a command to check the health of a container."
+      },
+      {
+        "id": "5",
+        "question": "Why should you use specific image tags?",
+        "options": [
+          "To ensure reproducible builds",
+          "To reduce image size",
+          "To improve performance",
+          "To simplify networking"
+        ],
+        "correct_answer": "To ensure reproducible builds",
+        "explanation": "Specific tags prevent unexpected changes when images are updated."
+      }
+    ]
+  },
+  {
+    "id": "9",
+    "title": "Docker Security",
+    "description": "Security considerations and best practices",
+    "questions": [
+      {
+        "id": "1",
+        "question": "What is Docker Content Trust?",
+        "options": [
+          "A feature for verifying image integrity",
+          "A network security tool",
+          "A container monitoring tool",
+          "A logging tool"
+        ],
+        "correct_answer": "A feature for verifying image integrity",
+        "explanation": "Docker Content Trust uses digital signatures to verify image authenticity."
+      },
+      {
+        "id": "2",
+        "question": "What is a security scan in Docker?",
+        "options": [
+          "Checking images for known vulnerabilities",
+          "Scanning networks for threats",
+          "Monitoring container performance",
+          "Analyzing logs for security issues"
+        ],
+        "correct_answer": "Checking images for known vulnerabilities",
+        "explanation": "Security scanning identifies known security vulnerabilities in images."
+      },
+      {
+        "id": "3",
+        "question": "Why should you use non-root users in containers?",
+        "options": [
+          "To limit the damage if compromised",
+          "To improve performance",
+          "To reduce image size",
+          "To simplify networking"
+        ],
+        "correct_answer": "To limit the damage if compromised",
+        "explanation": "Non-root users follow the principle of least privilege."
+      },
+      {
+        "id": "4",
+        "question": "What is the --read-only flag?",
+        "options": [
+          "Makes the container filesystem read-only",
+          "Makes volumes read-only",
+          "Makes networks read-only",
+          "Makes logs read-only"
+        ],
+        "correct_answer": "Makes the container filesystem read-only",
+        "explanation": "The --read-only flag prevents writes to the container's filesystem."
+      },
+      {
+        "id": "5",
+        "question": "What is the principle of least privilege?",
+        "options": [
+          "Granting minimal necessary permissions",
+          "Granting maximum permissions",
+          "Granting equal permissions to all",
+          "Granting permissions based on role"
+        ],
+        "correct_answer": "Granting minimal necessary permissions",
+        "explanation": "Least privilege means giving users/containers only the permissions they need."
+      }
+    ]
+  },
+  {
+    "id": "10",
+    "title": "Docker in Production",
+    "description": "Running Docker in production environments",
+    "questions": [
+      {
+        "id": "1",
+        "question": "What is container orchestration?",
+        "options": [
+          "Managing multiple containers across hosts",
+          "Creating containers",
+          "Monitoring containers",
+          "Securing containers"
+        ],
+        "correct_answer": "Managing multiple containers across hosts",
+        "explanation": "Orchestration tools manage container lifecycle, scaling, and networking across clusters."
+      },
+      {
+        "id": "2",
+        "question": "What is Kubernetes?",
+        "options": [
+          "A container orchestration platform",
+          "A Docker registry",
+          "A monitoring tool",
+          "A security scanner"
+        ],
+        "correct_answer": "A container orchestration platform",
+        "explanation": "Kubernetes is an open-source platform for automating container operations."
+      },
+      {
+        "id": "3",
         "question": "What is Docker Swarm?",
         "options": [
-          "A container monitoring tool",
-          "Docker's native clustering and orchestration solution",
-          "A Docker networking plugin",
-          "A container security scanner"
+          "Docker's native clustering and orchestration tool",
+          "A third-party orchestration tool",
+          "A monitoring service",
+          "A registry service"
         ],
-        "correctAnswer": "Docker's native clustering and orchestration solution",
-        "explanation": "Docker Swarm is Docker's native tool for clustering and orchestrating Docker containers across multiple hosts."
+        "correct_answer": "Docker's native clustering and orchestration tool",
+        "explanation": "Docker Swarm provides clustering and orchestration capabilities for Docker."
       },
       {
-        "id": "7-2-8-docker-security",
-        "type": "multiple-choice",
-        "question": "What is a Docker security best practice?",
+        "id": "4",
+        "question": "What is a reverse proxy?",
         "options": [
-          "Run containers as root",
-          "Use the latest base images",
-          "Run only one process per container",
-          "Ignore security updates"
+          "A server that forwards requests to appropriate services",
+          "A proxy for outgoing requests",
+          "A monitoring proxy",
+          "A security proxy"
         ],
-        "correctAnswer": "Run only one process per container",
-        "explanation": "Running only one process per container follows the single responsibility principle and improves security and maintainability."
+        "correct_answer": "A server that forwards requests to appropriate services",
+        "explanation": "Reverse proxies route incoming requests to the appropriate backend services."
+      },
+      {
+        "id": "5",
+        "question": "What is container monitoring?",
+        "options": [
+          "Tracking container performance and health",
+          "Monitoring networks",
+          "Monitoring disks",
+          "Monitoring users"
+        ],
+        "correct_answer": "Tracking container performance and health",
+        "explanation": "Container monitoring tracks metrics like CPU, memory, and application health."
       }
     ]
   }

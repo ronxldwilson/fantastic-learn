@@ -1,6 +1,6 @@
 [
   {
-    "id": "file-operations-basics",
+    "id": "1",
     "title": "File Operations Basics",
     "description": "Fundamental concepts of file handling in Python.",
     "difficulty": "beginner",
@@ -83,7 +83,7 @@
     ]
   },
   {
-    "id": "file-reading-methods",
+    "id": "2",
     "title": "File Reading Methods",
     "description": "Different ways to read file content.",
     "difficulty": "beginner",
@@ -141,7 +141,7 @@
     ]
   },
   {
-    "id": "file-writing-methods",
+    "id": "3",
     "title": "File Writing Methods",
     "description": "Writing data to files.",
     "difficulty": "beginner",
@@ -199,7 +199,7 @@
     ]
   },
   {
-    "id": "file-system-operations",
+    "id": "4",
     "title": "File System Operations",
     "description": "Working with directories and file paths.",
     "difficulty": "intermediate",
@@ -307,7 +307,7 @@
     ]
   },
   {
-    "id": "advanced-file-handling",
+    "id": "5",
     "title": "Advanced File Handling",
     "description": "Complex file operations and patterns.",
     "difficulty": "advanced",
@@ -415,7 +415,7 @@
     ]
   },
   {
-    "id": "file-handling-best-practices",
+    "id": "6",
     "title": "File Handling Best Practices",
     "description": "Guidelines for robust file operations.",
     "difficulty": "intermediate",

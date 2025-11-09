@@ -1,6 +1,6 @@
 [
   {
-    "id": "defining-functions",
+    "id": "1",
     "title": "Defining Functions",
     "description": "Practice creating and calling functions.",
     "difficulty": "beginner",
@@ -9,16 +9,21 @@
         "id": "1",
         "type": "multiple-choice",
         "question": "Which keyword is used to define a function in Python?",
-        "options": ["func", "def", "function", "define"],
+        "options": [
+          "func",
+          "def",
+          "function",
+          "define"
+        ],
         "correctAnswer": "def",
         "explanation": "The \"def\" keyword is used to define a function in Python."
       },
       {
-      "id": "2",
-      "type": "text-input",
-      "question": "What is the syntax to define a function that takes no parameters?",
-      "correctAnswer": "def function_name():",
-      "explanation": "Functions are defined with \"def\" followed by the name and parentheses."
+        "id": "2",
+        "type": "text-input",
+        "question": "What is the syntax to define a function that takes no parameters?",
+        "correctAnswer": "def function_name():",
+        "explanation": "Functions are defined with \"def\" followed by the name and parentheses."
       },
       {
         "id": "3",
@@ -31,7 +36,12 @@
         "id": "4",
         "type": "multiple-choice",
         "question": "What happens if a function doesn't have a return statement?",
-        "options": ["It returns None", "It returns 0", "It returns an empty string", "It causes an error"],
+        "options": [
+          "It returns None",
+          "It returns 0",
+          "It returns an empty string",
+          "It causes an error"
+        ],
         "correctAnswer": "It returns None",
         "explanation": "Functions without return statements implicitly return None."
       },
@@ -60,7 +70,12 @@
         "id": "8",
         "type": "multiple-choice",
         "question": "What is function scope?",
-        "options": ["Where functions are defined", "The accessibility of variables in a function", "The number of parameters", "The return type"],
+        "options": [
+          "Where functions are defined",
+          "The accessibility of variables in a function",
+          "The number of parameters",
+          "The return type"
+        ],
         "correctAnswer": "The accessibility of variables in a function",
         "explanation": "Scope determines where variables can be accessed - local vs global."
       },
@@ -96,7 +111,12 @@
         "id": "13",
         "type": "multiple-choice",
         "question": "What is a lambda function?",
-        "options": ["An anonymous function", "A named function", "A recursive function", "A built-in function"],
+        "options": [
+          "An anonymous function",
+          "A named function",
+          "A recursive function",
+          "A built-in function"
+        ],
         "correctAnswer": "An anonymous function",
         "explanation": "Lambda functions are small anonymous functions defined with the lambda keyword."
       },
@@ -125,7 +145,12 @@
         "id": "17",
         "type": "multiple-choice",
         "question": "What is function recursion?",
-        "options": ["A function calling itself", "A function calling other functions", "Multiple functions with the same name", "Functions defined inside other functions"],
+        "options": [
+          "A function calling itself",
+          "A function calling other functions",
+          "Multiple functions with the same name",
+          "Functions defined inside other functions"
+        ],
         "correctAnswer": "A function calling itself",
         "explanation": "Recursion occurs when a function calls itself to solve a problem."
       },
@@ -168,7 +193,12 @@
         "id": "23",
         "type": "multiple-choice",
         "question": "What is the difference between *args and **kwargs?",
-        "options": ["*args is for keywords, **kwargs is for positional", "**kwargs is for keywords, *args is for positional", "They are the same", "Neither accepts multiple arguments"],
+        "options": [
+          "*args is for keywords, **kwargs is for positional",
+          "**kwargs is for keywords, *args is for positional",
+          "They are the same",
+          "Neither accepts multiple arguments"
+        ],
         "correctAnswer": "**kwargs is for keywords, *args is for positional",
         "explanation": "*args collects positional arguments as a tuple, **kwargs collects keyword arguments as a dictionary."
       },
@@ -218,7 +248,12 @@
         "id": "30",
         "type": "multiple-choice",
         "question": "What is the output of this code: filter(lambda x: x > 2, [1, 2, 3, 4])?",
-        "options": ["[3, 4]", "<filter object>", "Error", "[1, 2]"],
+        "options": [
+          "[3, 4]",
+          "<filter object>",
+          "Error",
+          "[1, 2]"
+        ],
         "correctAnswer": "<filter object>",
         "explanation": "filter() returns a filter object, not a list. Use list() to convert it."
       },
@@ -254,7 +289,12 @@
         "id": "35",
         "type": "multiple-choice",
         "question": "What is a pure function?",
-        "options": ["A function with no side effects", "A function that returns None", "A recursive function", "A function with default parameters"],
+        "options": [
+          "A function with no side effects",
+          "A function that returns None",
+          "A recursive function",
+          "A function with default parameters"
+        ],
         "correctAnswer": "A function with no side effects",
         "explanation": "Pure functions don't modify external state and always return the same result for the same inputs."
       }

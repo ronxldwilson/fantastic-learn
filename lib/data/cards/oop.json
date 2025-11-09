@@ -1,6 +1,6 @@
 [
   {
-    "id": "classes-basics",
+    "id": "1",
     "title": "Classes Basics",
     "description": "Fundamental concepts of classes and objects.",
     "difficulty": "intermediate",
@@ -83,7 +83,7 @@
     ]
   },
   {
-    "id": "inheritance-polymorphism",
+    "id": "2",
     "title": "Inheritance and Polymorphism",
     "description": "Advanced OOP concepts.",
     "difficulty": "advanced",
@@ -166,7 +166,7 @@
     ]
   },
   {
-    "id": "special-methods",
+    "id": "3",
     "title": "Special Methods (Dunder Methods)",
     "description": "Magic methods that customize object behavior.",
     "difficulty": "advanced",
@@ -249,7 +249,7 @@
     ]
   },
   {
-    "id": "properties-descriptors",
+    "id": "4",
     "title": "Properties and Descriptors",
     "description": "Controlling attribute access and computed properties.",
     "difficulty": "advanced",
@@ -332,7 +332,7 @@
     ]
   },
   {
-    "id": "class-design-patterns",
+    "id": "5",
     "title": "Class Design Patterns",
     "description": "Common patterns for designing classes.",
     "difficulty": "advanced",
@@ -415,7 +415,7 @@
     ]
   },
   {
-    "id": "metaclasses",
+    "id": "6",
     "title": "Metaclasses",
     "description": "Classes that create classes.",
     "difficulty": "advanced",

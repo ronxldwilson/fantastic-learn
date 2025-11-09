@@ -1,199 +1,671 @@
 [
   {
-    "id": "2-1-fastapi-basics",
+    "id": "1",
     "title": "FastAPI Fundamentals",
-    "description": "Test your knowledge of FastAPI basics, routing, and core concepts.",
-    "difficulty": "beginner",
+    "description": "Basic concepts and getting started with FastAPI",
     "questions": [
       {
-        "id": "2-1-1-fastapi-definition",
-        "type": "multiple-choice",
-        "question": "What is FastAPI primarily used for?",
+        "id": "1",
+        "question": "What is FastAPI?",
         "options": [
-          "Building desktop applications",
-          "Creating modern, fast web APIs with automatic documentation",
-          "Developing mobile applications",
-          "Data analysis and visualization"
+          "A Python web framework for building APIs",
+          "A database management system",
+          "A front-end JavaScript library",
+          "A machine learning library"
         ],
-        "correctAnswer": "Creating modern, fast web APIs with automatic documentation",
+        "correct_answer": "A Python web framework for building APIs",
         "explanation": "FastAPI is a modern, fast web framework for building APIs with Python 3.7+ based on standard Python type hints."
       },
       {
-        "id": "2-1-2-async-support",
-        "type": "multiple-choice",
-        "question": "What makes FastAPI particularly fast compared to other Python web frameworks?",
+        "id": "2",
+        "question": "How do you install FastAPI?",
         "options": [
-          "It uses C extensions",
-          "It has built-in async support and automatic request validation",
-          "It pre-compiles all routes",
-          "It uses a different Python interpreter"
+          "pip install fastapi",
+          "npm install fastapi",
+          "gem install fastapi",
+          "apt-get install fastapi"
         ],
-        "correctAnswer": "It has built-in async support and automatic request validation",
-        "explanation": "FastAPI leverages Python's async/await syntax and provides automatic request validation using Pydantic models."
+        "correct_answer": "pip install fastapi",
+        "explanation": "FastAPI is installed using pip, Python's package manager."
       },
       {
-        "id": "2-1-3-path-parameters",
-        "type": "multiple-choice",
-        "question": "How do you define a path parameter in FastAPI?",
+        "id": "3",
+        "question": "What is the default port for FastAPI applications?",
         "options": [
-          "@app.get('/users/{user_id}')",
-          "@app.get('/users/<user_id>')",
-          "@app.get('/users/[user_id]')",
-          "@app.get('/users/(user_id)')"
+          "8000",
+          "3000",
+          "5000",
+          "8080"
         ],
-        "correctAnswer": "@app.get('/users/{user_id}')",
-        "explanation": "Path parameters in FastAPI are defined using curly braces {} in the route decorator."
+        "correct_answer": "8000",
+        "explanation": "FastAPI uses port 8000 by default when running with uvicorn."
       },
       {
-        "id": "2-1-4-query-parameters",
-        "type": "multiple-choice",
-        "question": "How are query parameters handled in FastAPI?",
+        "id": "4",
+        "question": "Which ASGI server is commonly used with FastAPI?",
         "options": [
-          "They must be explicitly defined in the route decorator",
-          "They are automatically parsed and can be function parameters with defaults",
-          "They need to be manually extracted from the request object",
-          "They are only available in POST requests"
+          "Uvicorn",
+          "Gunicorn",
+          "Apache",
+          "Nginx"
         ],
-        "correctAnswer": "They are automatically parsed and can be function parameters with defaults",
-        "explanation": "FastAPI automatically parses query parameters and allows them as function parameters with optional default values."
+        "correct_answer": "Uvicorn",
+        "explanation": "Uvicorn is the recommended ASGI server for FastAPI applications."
       },
       {
-        "id": "2-1-5-pydantic-models",
-        "type": "multiple-choice",
-        "question": "What is the role of Pydantic models in FastAPI?",
+        "id": "5",
+        "question": "What does API stand for?",
         "options": [
-          "To define database schemas",
-          "To validate and serialize request/response data",
-          "To handle authentication",
-          "To manage WebSocket connections"
+          "Application Programming Interface",
+          "Advanced Python Interface",
+          "Automated Program Integration",
+          "Application Process Integration"
         ],
-        "correctAnswer": "To validate and serialize request/response data",
-        "explanation": "Pydantic models in FastAPI are used for automatic request validation, response serialization, and generating OpenAPI documentation."
-      },
-      {
-        "id": "2-1-6-automatic-docs",
-        "type": "multiple-choice",
-        "question": "What kind of automatic documentation does FastAPI generate?",
-        "options": [
-          "Only PDF documentation",
-          "Interactive API documentation with Swagger UI and ReDoc",
-          "Only text-based documentation",
-          "Database schema documentation"
-        ],
-        "correctAnswer": "Interactive API documentation with Swagger UI and ReDoc",
-        "explanation": "FastAPI automatically generates interactive API documentation accessible at /docs (Swagger UI) and /redoc (ReDoc) endpoints."
-      },
-      {
-        "id": "2-1-7-response-models",
-        "type": "multiple-choice",
-        "question": "How do you specify a response model in FastAPI?",
-        "options": [
-          "Using the @response_model decorator",
-          "Using the response_model parameter in the route decorator",
-          "By returning a Pydantic model directly",
-          "All of the above"
-        ],
-        "correctAnswer": "All of the above",
-        "explanation": "FastAPI supports multiple ways to specify response models: using response_model parameter, returning Pydantic models directly, or using decorators."
-      },
-      {
-        "id": "2-1-8-dependency-injection",
-        "type": "multiple-choice",
-        "question": "What is dependency injection in FastAPI?",
-        "options": [
-          "A way to inject CSS into HTML responses",
-          "A design pattern for managing code dependencies and reusable components",
-          "A method for database connection management",
-          "A technique for API authentication"
-        ],
-        "correctAnswer": "A design pattern for managing code dependencies and reusable components",
-        "explanation": "Dependency injection in FastAPI allows you to declare dependencies (like database connections, authentication) that are automatically resolved and injected into your route functions."
+        "correct_answer": "Application Programming Interface",
+        "explanation": "API stands for Application Programming Interface, which defines how software components interact."
       }
     ]
   },
   {
-    "id": "2-2-fastapi-advanced",
-    "title": "Advanced FastAPI Features",
-    "description": "Explore advanced FastAPI concepts including security, middleware, and testing.",
-    "difficulty": "intermediate",
+    "id": "2",
+    "title": "FastAPI Routing",
+    "description": "Understanding routes and path parameters in FastAPI",
     "questions": [
       {
-        "id": "2-2-1-oauth2-jwt",
-        "type": "multiple-choice",
-        "question": "What authentication method does FastAPI commonly use for securing APIs?",
+        "id": "1",
+        "question": "How do you define a route in FastAPI?",
         "options": [
-          "Basic HTTP Authentication only",
-          "OAuth2 with JWT tokens",
-          "API keys only",
-          "Session-based authentication only"
+          "Using the @app.route decorator",
+          "Using the @app.get decorator",
+          "Using the def route() function",
+          "Using the app.add_route() method"
         ],
-        "correctAnswer": "OAuth2 with JWT tokens",
-        "explanation": "FastAPI has excellent support for OAuth2 with JWT (JSON Web Tokens) for secure API authentication."
+        "correct_answer": "Using the @app.get decorator",
+        "explanation": "Routes in FastAPI are defined using decorators like @app.get, @app.post, etc."
       },
       {
-        "id": "2-2-2-middleware-purpose",
-        "type": "multiple-choice",
-        "question": "What is the primary purpose of middleware in FastAPI?",
+        "id": "2",
+        "question": "What is a path parameter in FastAPI?",
         "options": [
-          "To handle database connections",
-          "To process requests and responses globally before they reach route handlers",
-          "To define API routes",
-          "To validate user input"
+          "A parameter passed in the URL path",
+          "A parameter passed in the query string",
+          "A parameter passed in the request body",
+          "A parameter passed in the headers"
         ],
-        "correctAnswer": "To process requests and responses globally before they reach route handlers",
-        "explanation": "Middleware in FastAPI intercepts and processes all requests and responses, useful for CORS, logging, authentication checks, etc."
+        "correct_answer": "A parameter passed in the URL path",
+        "explanation": "Path parameters are variables in the URL path, like /users/{user_id}."
       },
       {
-        "id": "2-2-3-cors-handling",
-        "type": "multiple-choice",
-        "question": "How does FastAPI handle Cross-Origin Resource Sharing (CORS)?",
+        "id": "3",
+        "question": "Which decorator is used for handling POST requests?",
         "options": [
-          "It doesn't support CORS",
-          "Using CORSMiddleware from fastapi.middleware.cors",
-          "By manually setting headers in each response",
-          "CORS is automatically enabled for all origins"
+          "@app.get",
+          "@app.post",
+          "@app.put",
+          "@app.delete"
         ],
-        "correctAnswer": "Using CORSMiddleware from fastapi.middleware.cors",
-        "explanation": "FastAPI provides CORSMiddleware that can be easily configured to handle CORS headers for cross-origin requests."
+        "correct_answer": "@app.post",
+        "explanation": "@app.post is used for handling HTTP POST requests."
       },
       {
-        "id": "2-2-4-websocket-support",
-        "type": "multiple-choice",
-        "question": "Does FastAPI support WebSocket connections?",
+        "id": "4",
+        "question": "How do you make a path parameter optional?",
         "options": [
-          "No, only HTTP requests",
-          "Yes, with WebSocket endpoints similar to HTTP routes",
-          "Only through third-party extensions",
-          "WebSockets are deprecated in modern APIs"
+          "By using Optional[type] from typing",
+          "By adding a default value",
+          "By using the ? operator",
+          "By wrapping it in brackets"
         ],
-        "correctAnswer": "Yes, with WebSocket endpoints similar to HTTP routes",
-        "explanation": "FastAPI supports WebSocket connections with a similar syntax to HTTP routes, allowing real-time bidirectional communication."
+        "correct_answer": "By adding a default value",
+        "explanation": "Optional path parameters can be made by providing a default value in the function parameter."
       },
       {
-        "id": "2-2-5-background-tasks",
-        "type": "multiple-choice",
-        "question": "What are background tasks used for in FastAPI?",
+        "id": "5",
+        "question": "What is the difference between @app.get and @app.api_route?",
         "options": [
-          "Running tasks in the background without blocking the response",
-          "Processing images asynchronously",
-          "Database cleanup operations",
+          "@app.api_route can handle multiple HTTP methods",
+          "@app.get is for GET requests only",
+          "Both are the same",
+          "@app.api_route is deprecated"
+        ],
+        "correct_answer": "@app.api_route can handle multiple HTTP methods",
+        "explanation": "@app.api_route can be used to handle multiple HTTP methods with a single decorator."
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "title": "Request and Response Handling",
+    "description": "Working with requests and responses in FastAPI",
+    "questions": [
+      {
+        "id": "1",
+        "question": "What is the Request object in FastAPI?",
+        "options": [
+          "An object representing the incoming HTTP request",
+          "An object for creating HTTP responses",
+          "An object for database queries",
+          "An object for file handling"
+        ],
+        "correct_answer": "An object representing the incoming HTTP request",
+        "explanation": "The Request object contains information about the incoming HTTP request."
+      },
+      {
+        "id": "2",
+        "question": "How do you return JSON responses in FastAPI?",
+        "options": [
+          "By returning a dictionary",
+          "By using json.dumps()",
+          "By creating a Response object",
+          "By using the @json decorator"
+        ],
+        "correct_answer": "By returning a dictionary",
+        "explanation": "FastAPI automatically converts returned dictionaries to JSON responses."
+      },
+      {
+        "id": "3",
+        "question": "What is the Response class used for?",
+        "options": [
+          "To create custom HTTP responses",
+          "To handle incoming requests",
+          "To validate data",
+          "To manage dependencies"
+        ],
+        "correct_answer": "To create custom HTTP responses",
+        "explanation": "The Response class allows creating custom HTTP responses with specific status codes and content."
+      },
+      {
+        "id": "4",
+        "question": "How do you access query parameters in FastAPI?",
+        "options": [
+          "Through function parameters with default values",
+          "Through the request.query_params attribute",
+          "Through the request.body",
+          "Through path parameters"
+        ],
+        "correct_answer": "Through function parameters with default values",
+        "explanation": "Query parameters are accessed as function parameters with optional default values."
+      },
+      {
+        "id": "5",
+        "question": "What is the default response status code for successful requests?",
+        "options": [
+          "200",
+          "201",
+          "202",
+          "204"
+        ],
+        "correct_answer": "200",
+        "explanation": "200 OK is the default status code for successful HTTP requests."
+      }
+    ]
+  },
+  {
+    "id": "4",
+    "title": "Data Validation with Pydantic",
+    "description": "Using Pydantic models for request/response validation",
+    "questions": [
+      {
+        "id": "1",
+        "question": "What is Pydantic?",
+        "options": [
+          "A data validation library",
+          "A database ORM",
+          "A web framework",
+          "A testing framework"
+        ],
+        "correct_answer": "A data validation library",
+        "explanation": "Pydantic is a Python library for data validation and parsing using Python type hints."
+      },
+      {
+        "id": "2",
+        "question": "How do you define a Pydantic model in FastAPI?",
+        "options": [
+          "By inheriting from BaseModel",
+          "By using the @model decorator",
+          "By creating a class with __init__",
+          "By using dataclasses"
+        ],
+        "correct_answer": "By inheriting from BaseModel",
+        "explanation": "Pydantic models are created by inheriting from BaseModel."
+      },
+      {
+        "id": "3",
+        "question": "What happens when invalid data is sent to a FastAPI endpoint?",
+        "options": [
+          "A 422 Unprocessable Entity error is returned",
+          "A 400 Bad Request error is returned",
+          "The data is silently ignored",
+          "A 500 Internal Server Error is returned"
+        ],
+        "correct_answer": "A 422 Unprocessable Entity error is returned",
+        "explanation": "FastAPI returns a 422 error with detailed validation information when request data is invalid."
+      },
+      {
+        "id": "4",
+        "question": "How do you make a field optional in a Pydantic model?",
+        "options": [
+          "By using Optional[type]",
+          "By setting default=None",
+          "By using Union[type, None]",
           "All of the above"
         ],
-        "correctAnswer": "All of the above",
-        "explanation": "Background tasks in FastAPI allow you to run operations after returning a response, useful for email sending, cleanup, or any non-blocking operations."
+        "correct_answer": "All of the above",
+        "explanation": "Optional fields can be defined using Optional[type], default values, or Union[type, None]."
       },
       {
-        "id": "2-2-6-testing-fastapi",
-        "type": "multiple-choice",
-        "question": "What testing framework is commonly used with FastAPI?",
+        "id": "5",
+        "question": "What is field validation in Pydantic?",
         "options": [
-          "unittest only",
-          "pytest with TestClient",
-          "Django's test framework",
-          "Flask's testing utilities"
+          "Checking data types and constraints",
+          "Validating database connections",
+          "Checking API keys",
+          "Validating file uploads"
         ],
-        "correctAnswer": "pytest with TestClient",
-        "explanation": "FastAPI provides a TestClient based on HTTPX that works with pytest for comprehensive API testing."
+        "correct_answer": "Checking data types and constraints",
+        "explanation": "Field validation ensures that data matches specified types and constraints."
+      }
+    ]
+  },
+  {
+    "id": "5",
+    "title": "Dependency Injection",
+    "description": "Using dependencies in FastAPI for code reuse",
+    "questions": [
+      {
+        "id": "1",
+        "question": "What is dependency injection in FastAPI?",
+        "options": [
+          "A way to inject reusable code into path operations",
+          "A way to inject database connections",
+          "A way to inject authentication",
+          "All of the above"
+        ],
+        "correct_answer": "All of the above",
+        "explanation": "Dependency injection in FastAPI allows injecting reusable code, database connections, authentication, etc."
+      },
+      {
+        "id": "2",
+        "question": "How do you define a dependency in FastAPI?",
+        "options": [
+          "Using the Depends() function",
+          "Using the @dependency decorator",
+          "Using the inject() function",
+          "Using the dep() function"
+        ],
+        "correct_answer": "Using the Depends() function",
+        "explanation": "Dependencies are defined using the Depends() function from fastapi."
+      },
+      {
+        "id": "3",
+        "question": "Where can dependencies be used?",
+        "options": [
+          "Path operation functions",
+          "Other dependencies",
+          "Middleware",
+          "All of the above"
+        ],
+        "correct_answer": "All of the above",
+        "explanation": "Dependencies can be used in path operations, other dependencies, and middleware."
+      },
+      {
+        "id": "4",
+        "question": "What is a dependency's scope?",
+        "options": [
+          "The lifetime of the dependency instance",
+          "The number of times it can be used",
+          "The file where it's defined",
+          "The HTTP method it's associated with"
+        ],
+        "correct_answer": "The lifetime of the dependency instance",
+        "explanation": "Dependency scope refers to how long a dependency instance lives."
+      },
+      {
+        "id": "5",
+        "question": "How do you create a global dependency?",
+        "options": [
+          "By adding it to the app instance",
+          "By using app.dependency()",
+          "By importing it in every file",
+          "By using global variables"
+        ],
+        "correct_answer": "By using app.dependency()",
+        "explanation": "Global dependencies are added using app.dependency() method."
+      }
+    ]
+  },
+  {
+    "id": "6",
+    "title": "Authentication and Security",
+    "description": "Implementing authentication and security features",
+    "questions": [
+      {
+        "id": "1",
+        "question": "What is OAuth2 in FastAPI?",
+        "options": [
+          "An authorization framework",
+          "An authentication protocol",
+          "A security standard",
+          "All of the above"
+        ],
+        "correct_answer": "All of the above",
+        "explanation": "OAuth2 is an authorization framework that provides authentication and security."
+      },
+      {
+        "id": "2",
+        "question": "How do you implement JWT authentication?",
+        "options": [
+          "Using python-jose library",
+          "Using PyJWT library",
+          "Using both python-jose and PyJWT",
+          "Using built-in FastAPI JWT"
+        ],
+        "correct_answer": "Using both python-jose and PyJWT",
+        "explanation": "JWT authentication can be implemented using python-jose or PyJWT libraries."
+      },
+      {
+        "id": "3",
+        "question": "What is a security scheme in OpenAPI?",
+        "options": [
+          "A way to define authentication methods",
+          "A way to define API endpoints",
+          "A way to define data models",
+          "A way to define responses"
+        ],
+        "correct_answer": "A way to define authentication methods",
+        "explanation": "Security schemes define how authentication is handled in the API documentation."
+      },
+      {
+        "id": "4",
+        "question": "How do you protect routes with authentication?",
+        "options": [
+          "Using dependencies",
+          "Using middleware",
+          "Using decorators",
+          "All of the above"
+        ],
+        "correct_answer": "Using dependencies",
+        "explanation": "Routes are protected by using authentication dependencies."
+      },
+      {
+        "id": "5",
+        "question": "What is CORS in web APIs?",
+        "options": [
+          "Cross-Origin Resource Sharing",
+          "Cross-Origin Request Security",
+          "Client-Origin Resource Sharing",
+          "Client-Origin Request Security"
+        ],
+        "correct_answer": "Cross-Origin Resource Sharing",
+        "explanation": "CORS is a security feature that allows or restricts requests from different origins."
+      }
+    ]
+  },
+  {
+    "id": "7",
+    "title": "Database Integration",
+    "description": "Connecting FastAPI to databases",
+    "questions": [
+      {
+        "id": "1",
+        "question": "What is SQLAlchemy?",
+        "options": [
+          "A Python SQL toolkit and ORM",
+          "A database management system",
+          "A web framework",
+          "A testing library"
+        ],
+        "correct_answer": "A Python SQL toolkit and ORM",
+        "explanation": "SQLAlchemy is a Python library for working with databases using SQL."
+      },
+      {
+        "id": "2",
+        "question": "How do you define database models in FastAPI?",
+        "options": [
+          "Using SQLAlchemy Base classes",
+          "Using Pydantic models",
+          "Using Django models",
+          "Using plain Python classes"
+        ],
+        "correct_answer": "Using SQLAlchemy Base classes",
+        "explanation": "Database models are defined using SQLAlchemy's declarative base classes."
+      },
+      {
+        "id": "3",
+        "question": "What is an async database session?",
+        "options": [
+          "A session that supports asynchronous operations",
+          "A session that runs in the background",
+          "A session that caches results",
+          "A session that logs all operations"
+        ],
+        "correct_answer": "A session that supports asynchronous operations",
+        "explanation": "Async database sessions allow non-blocking database operations."
+      },
+      {
+        "id": "4",
+        "question": "What is CRUD in database operations?",
+        "options": [
+          "Create, Read, Update, Delete",
+          "Connect, Run, Update, Disconnect",
+          "Cache, Retrieve, Update, Delete",
+          "Create, Retrieve, Update, Drop"
+        ],
+        "correct_answer": "Create, Read, Update, Delete",
+        "explanation": "CRUD represents the four basic operations on database records."
+      },
+      {
+        "id": "5",
+        "question": "How do you handle database connections in FastAPI?",
+        "options": [
+          "Using dependency injection",
+          "Using global variables",
+          "Using middleware",
+          "All of the above"
+        ],
+        "correct_answer": "Using dependency injection",
+        "explanation": "Database connections are typically managed using dependency injection."
+      }
+    ]
+  },
+  {
+    "id": "8",
+    "title": "File Uploads and Static Files",
+    "description": "Handling file uploads and serving static files",
+    "questions": [
+      {
+        "id": "1",
+        "question": "How do you handle file uploads in FastAPI?",
+        "options": [
+          "Using the File type from fastapi",
+          "Using the UploadFile type",
+          "Using multipart/form-data",
+          "All of the above"
+        ],
+        "correct_answer": "All of the above",
+        "explanation": "File uploads are handled using File and UploadFile types with multipart/form-data."
+      },
+      {
+        "id": "2",
+        "question": "What is the UploadFile class used for?",
+        "options": [
+          "Handling uploaded files asynchronously",
+          "Validating file types",
+          "Storing files in memory",
+          "All of the above"
+        ],
+        "correct_answer": "All of the above",
+        "explanation": "UploadFile provides async file handling, validation, and memory management."
+      },
+      {
+        "id": "3",
+        "question": "How do you serve static files in FastAPI?",
+        "options": [
+          "Using StaticFiles from fastapi.staticfiles",
+          "Using the app.static() method",
+          "Using nginx or apache",
+          "Using file servers"
+        ],
+        "correct_answer": "Using StaticFiles from fastapi.staticfiles",
+        "explanation": "Static files are served using the StaticFiles class from fastapi.staticfiles."
+      },
+      {
+        "id": "4",
+        "question": "What is the default upload size limit?",
+        "options": [
+          "100 MB",
+          "1 GB",
+          "Unlimited",
+          "Depends on the server"
+        ],
+        "correct_answer": "Depends on the server",
+        "explanation": "Upload size limits depend on the ASGI server configuration."
+      },
+      {
+        "id": "5",
+        "question": "How do you validate uploaded file types?",
+        "options": [
+          "By checking the content_type attribute",
+          "By reading the file extension",
+          "By using magic numbers",
+          "All of the above"
+        ],
+        "correct_answer": "All of the above",
+        "explanation": "File type validation can use content_type, file extensions, or magic numbers."
+      }
+    ]
+  },
+  {
+    "id": "9",
+    "title": "Testing FastAPI Applications",
+    "description": "Writing and running tests for FastAPI apps",
+    "questions": [
+      {
+        "id": "1",
+        "question": "What is the TestClient in FastAPI?",
+        "options": [
+          "A client for testing FastAPI applications",
+          "A client for API documentation",
+          "A client for database testing",
+          "A client for deployment"
+        ],
+        "correct_answer": "A client for testing FastAPI applications",
+        "explanation": "TestClient provides a way to test FastAPI applications using requests."
+      },
+      {
+        "id": "2",
+        "question": "Which testing framework is commonly used with FastAPI?",
+        "options": [
+          "pytest",
+          "unittest",
+          "nose",
+          "doctest"
+        ],
+        "correct_answer": "pytest",
+        "explanation": "pytest is the recommended testing framework for FastAPI applications."
+      },
+      {
+        "id": "3",
+        "question": "How do you test async endpoints?",
+        "options": [
+          "Using async test functions",
+          "Using the TestClient",
+          "Using httpx",
+          "All of the above"
+        ],
+        "correct_answer": "All of the above",
+        "explanation": "Async endpoints can be tested using async functions, TestClient, or httpx."
+      },
+      {
+        "id": "4",
+        "question": "What is mocking in testing?",
+        "options": [
+          "Replacing real objects with fake ones",
+          "Recording test results",
+          "Measuring performance",
+          "Debugging code"
+        ],
+        "correct_answer": "Replacing real objects with fake ones",
+        "explanation": "Mocking replaces real dependencies with fake objects for testing."
+      },
+      {
+        "id": "5",
+        "question": "How do you test database operations?",
+        "options": [
+          "Using test databases",
+          "Using in-memory databases",
+          "Using mocking",
+          "All of the above"
+        ],
+        "correct_answer": "All of the above",
+        "explanation": "Database testing can use test databases, in-memory databases, or mocking."
+      }
+    ]
+  },
+  {
+    "id": "10",
+    "title": "Deployment and Production",
+    "description": "Deploying FastAPI applications to production",
+    "questions": [
+      {
+        "id": "1",
+        "question": "What is the recommended way to deploy FastAPI?",
+        "options": [
+          "Using uvicorn with gunicorn",
+          "Using python app.py",
+          "Using flask run",
+          "Using django runserver"
+        ],
+        "correct_answer": "Using uvicorn with gunicorn",
+        "explanation": "Production deployment uses uvicorn as ASGI server with gunicorn as process manager."
+      },
+      {
+        "id": "2",
+        "question": "What is Docker used for in FastAPI deployment?",
+        "options": [
+          "Containerizing applications",
+          "Load balancing",
+          "Caching",
+          "Logging"
+        ],
+        "correct_answer": "Containerizing applications",
+        "explanation": "Docker creates containers for consistent deployment across environments."
+      },
+      {
+        "id": "3",
+        "question": "What is the purpose of environment variables?",
+        "options": [
+          "Storing configuration settings",
+          "Storing user data",
+          "Storing temporary files",
+          "Storing logs"
+        ],
+        "correct_answer": "Storing configuration settings",
+        "explanation": "Environment variables store configuration that varies between environments."
+      },
+      {
+        "id": "4",
+        "question": "What is HTTPS and why is it important?",
+        "options": [
+          "Secure HTTP for encrypted communication",
+          "A faster version of HTTP",
+          "A protocol for file transfer",
+          "A database protocol"
+        ],
+        "correct_answer": "Secure HTTP for encrypted communication",
+        "explanation": "HTTPS provides encrypted communication between client and server."
+      },
+      {
+        "id": "5",
+        "question": "What is monitoring in production?",
+        "options": [
+          "Tracking application performance and errors",
+          "Tracking user behavior",
+          "Tracking server resources",
+          "All of the above"
+        ],
+        "correct_answer": "All of the above",
+        "explanation": "Monitoring tracks performance, errors, user behavior, and server resources."
       }
     ]
   }

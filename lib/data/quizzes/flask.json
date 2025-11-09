@@ -1,199 +1,671 @@
 [
   {
-    "id": "3-1-flask-basics",
+    "id": "1",
     "title": "Flask Fundamentals",
-    "description": "Test your knowledge of Flask basics, routing, and core concepts.",
-    "difficulty": "beginner",
+    "description": "Basic concepts and getting started with Flask",
     "questions": [
       {
-        "id": "3-1-1-flask-definition",
-        "type": "multiple-choice",
+        "id": "1",
         "question": "What is Flask?",
         "options": [
-          "A full-stack web framework",
-          "A lightweight WSGI web application framework",
-          "A database ORM",
-          "A front-end JavaScript library"
+          "A Python web framework",
+          "A database management system",
+          "A front-end JavaScript library",
+          "A machine learning library"
         ],
-        "correctAnswer": "A lightweight WSGI web application framework",
-        "explanation": "Flask is a micro web framework for Python that provides the basics for building web applications."
+        "correct_answer": "A Python web framework",
+        "explanation": "Flask is a lightweight WSGI web application framework written in Python."
       },
       {
-        "id": "3-1-2-flask-routing",
-        "type": "multiple-choice",
-        "question": "How do you define a route in Flask?",
+        "id": "2",
+        "question": "How do you install Flask?",
         "options": [
-          "@app.route('/hello')",
-          "@app.get('/hello')",
-          "app.add_url_rule('/hello')",
-          "All of the above"
+          "pip install flask",
+          "npm install flask",
+          "gem install flask",
+          "apt-get install flask"
         ],
-        "correctAnswer": "All of the above",
-        "explanation": "Flask supports multiple ways to define routes: using @app.route decorator, @app.get/@app.post decorators, or add_url_rule method."
+        "correct_answer": "pip install flask",
+        "explanation": "Flask is installed using pip, Python's package manager."
       },
       {
-        "id": "3-1-3-flask-app-creation",
-        "type": "multiple-choice",
-        "question": "How do you create a Flask application?",
+        "id": "3",
+        "question": "What is the default port for Flask applications?",
         "options": [
-          "app = Flask(__name__)",
-          "app = Flask()",
-          "flask_app = Flask(__name__)",
-          "Both A and C"
+          "8000",
+          "3000",
+          "5000",
+          "8080"
         ],
-        "correctAnswer": "Both A and C",
-        "explanation": "A Flask application is created by instantiating the Flask class, typically with __name__ as the import name."
+        "correct_answer": "5000",
+        "explanation": "Flask uses port 5000 by default in development mode."
       },
       {
-        "id": "3-1-4-url-variables",
-        "type": "multiple-choice",
-        "question": "How do you capture URL variables in Flask?",
+        "id": "4",
+        "question": "What does WSGI stand for?",
         "options": [
-          "@app.route('/user/<username>')",
-          "@app.route('/user/{username}')",
-          "@app.route('/user/<int:user_id>')",
-          "Both A and C"
+          "Web Server Gateway Interface",
+          "Web Service Gateway Interface",
+          "Web System Gateway Interface",
+          "Web Application Gateway Interface"
         ],
-        "correctAnswer": "Both A and C",
-        "explanation": "Flask uses angle brackets <> for URL variables, and supports converters like int, float, string, etc."
+        "correct_answer": "Web Server Gateway Interface",
+        "explanation": "WSGI is a specification for web servers and application servers to communicate."
       },
       {
-        "id": "3-1-5-jinja2-templates",
-        "type": "multiple-choice",
-        "question": "What templating engine does Flask use by default?",
+        "id": "5",
+        "question": "What is the main difference between Flask and Django?",
         "options": [
-          "Django templates",
-          "Handlebars",
-          "Jinja2",
-          "Mustache"
+          "Flask is micro-framework, Django is full-stack",
+          "Flask is for APIs only, Django for websites",
+          "Flask is older, Django is newer",
+          "Flask is paid, Django is free"
         ],
-        "correctAnswer": "Jinja2",
-        "explanation": "Flask uses Jinja2 as its default templating engine for rendering HTML templates."
-      },
-      {
-        "id": "3-1-6-flask-request-object",
-        "type": "multiple-choice",
-        "question": "How do you access form data in Flask?",
-        "options": [
-          "request.form['field_name']",
-          "request.POST['field_name']",
-          "request.data['field_name']",
-          "request.input['field_name']"
-        ],
-        "correctAnswer": "request.form['field_name']",
-        "explanation": "Form data is accessed through the request.form dictionary in Flask."
-      },
-      {
-        "id": "3-1-7-flask-session",
-        "type": "multiple-choice",
-        "question": "How do you store data in Flask sessions?",
-        "options": [
-          "session['key'] = 'value'",
-          "request.session['key'] = 'value'",
-          "flask_session.set('key', 'value')",
-          "app.session['key'] = 'value'"
-        ],
-        "correctAnswer": "session['key'] = 'value'",
-        "explanation": "Flask sessions work like dictionaries and store data on the server side with a session ID in cookies."
-      },
-      {
-        "id": "3-1-8-flask-extensions",
-        "type": "multiple-choice",
-        "question": "What is the naming convention for Flask extensions?",
-        "options": [
-          "Flask-Something",
-          "flask_something",
-          "Something-Flask",
-          "flask-something"
-        ],
-        "correctAnswer": "Flask-Something",
-        "explanation": "Flask extensions typically follow the naming convention Flask-Something, like Flask-SQLAlchemy or Flask-WTF."
+        "correct_answer": "Flask is micro-framework, Django is full-stack",
+        "explanation": "Flask is a micro-framework with minimal dependencies, while Django is a full-stack framework."
       }
     ]
   },
   {
-    "id": "3-2-flask-advanced",
-    "title": "Advanced Flask Concepts",
-    "description": "Explore advanced Flask features including blueprints, extensions, and security.",
-    "difficulty": "intermediate",
+    "id": "2",
+    "title": "Flask Routing",
+    "description": "Creating routes and handling URLs in Flask",
     "questions": [
       {
-        "id": "3-2-1-flask-blueprints",
-        "type": "multiple-choice",
-        "question": "What is the purpose of Flask Blueprints?",
+        "id": "1",
+        "question": "How do you define a route in Flask?",
         "options": [
-          "To create database models",
-          "To organize applications into modules and components",
-          "To handle authentication",
-          "To manage static files"
+          "Using the @app.route decorator",
+          "Using the @app.get decorator",
+          "Using the def route() function",
+          "Using the app.add_route() method"
         ],
-        "correctAnswer": "To organize applications into modules and components",
-        "explanation": "Blueprints in Flask allow you to organize your application into reusable components and modules."
+        "correct_answer": "Using the @app.route decorator",
+        "explanation": "Routes in Flask are defined using the @app.route() decorator."
       },
       {
-        "id": "3-2-2-flask-sqlalchemy",
-        "type": "multiple-choice",
-        "question": "What does Flask-SQLAlchemy provide?",
+        "id": "2",
+        "question": "What is a URL variable in Flask?",
         "options": [
-          "A template engine",
-          "Database ORM functionality for Flask applications",
-          "Form validation",
-          "User authentication"
+          "A variable part of the URL path",
+          "A variable in the query string",
+          "A variable in the request body",
+          "A variable in the headers"
         ],
-        "correctAnswer": "Database ORM functionality for Flask applications",
-        "explanation": "Flask-SQLAlchemy is an extension that adds SQLAlchemy ORM support to Flask applications."
+        "correct_answer": "A variable part of the URL path",
+        "explanation": "URL variables are dynamic parts of the URL defined with <variable_name>."
       },
       {
-        "id": "3-2-3-flask-wtf",
-        "type": "multiple-choice",
-        "question": "What is Flask-WTF used for?",
+        "id": "3",
+        "question": "How do you specify HTTP methods for a route?",
         "options": [
-          "Web template formatting",
-          "Web form handling and validation",
-          "Web testing framework",
-          "Web socket connections"
+          "Using the methods parameter",
+          "Using different decorators",
+          "Using the method() function",
+          "Methods are automatic"
         ],
-        "correctAnswer": "Web form handling and validation",
-        "explanation": "Flask-WTF integrates WTForms with Flask, providing form handling, validation, and CSRF protection."
+        "correct_answer": "Using the methods parameter",
+        "explanation": "HTTP methods are specified using methods=['GET', 'POST'] in @app.route()."
       },
       {
-        "id": "3-2-4-flask-security",
-        "type": "multiple-choice",
-        "question": "How do you protect against CSRF attacks in Flask?",
+        "id": "4",
+        "question": "What is the default HTTP method for Flask routes?",
         "options": [
-          "Using Flask-WTF forms",
-          "Manually checking tokens",
-          "Using Flask-Security extension",
+          "GET",
+          "POST",
+          "PUT",
+          "DELETE"
+        ],
+        "correct_answer": "GET",
+        "explanation": "GET is the default HTTP method if no methods are specified."
+      },
+      {
+        "id": "5",
+        "question": "How do you handle multiple routes with the same function?",
+        "options": [
+          "Using multiple @app.route decorators",
+          "Using a single decorator with multiple URLs",
+          "Using the app.add_url_rule() method",
           "All of the above"
         ],
-        "correctAnswer": "All of the above",
-        "explanation": "Flask-WTF provides CSRF protection, Flask-Security offers comprehensive security features, or you can implement manual token checking."
+        "correct_answer": "All of the above",
+        "explanation": "Multiple routes can be handled using multiple decorators, multiple URLs in one decorator, or add_url_rule()."
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "title": "Templates and Views",
+    "description": "Using Jinja2 templates in Flask applications",
+    "questions": [
+      {
+        "id": "1",
+        "question": "What templating engine does Flask use?",
+        "options": [
+          "Jinja2",
+          "Django templates",
+          "Mustache",
+          "Handlebars"
+        ],
+        "correct_answer": "Jinja2",
+        "explanation": "Flask uses Jinja2 as its default templating engine."
       },
       {
-        "id": "3-2-5-flask-testing",
-        "type": "multiple-choice",
-        "question": "How do you write tests for Flask applications?",
+        "id": "2",
+        "question": "How do you render a template in Flask?",
         "options": [
-          "Using unittest with Flask's test client",
-          "Using pytest with app.test_client()",
-          "Using Selenium for end-to-end testing",
+          "Using render_template()",
+          "Using render()",
+          "Using template()",
+          "Using display()"
+        ],
+        "correct_answer": "Using render_template()",
+        "explanation": "Templates are rendered using the render_template() function."
+      },
+      {
+        "id": "3",
+        "question": "Where should templates be stored?",
+        "options": [
+          "In the templates/ directory",
+          "In the static/ directory",
+          "In the app/ directory",
+          "Anywhere in the project"
+        ],
+        "correct_answer": "In the templates/ directory",
+        "explanation": "Templates should be placed in a templates/ directory by default."
+      },
+      {
+        "id": "4",
+        "question": "What is template inheritance?",
+        "options": [
+          "Extending base templates with child templates",
+          "Copying templates from parent to child",
+          "Using templates from other applications",
+          "Automatic template generation"
+        ],
+        "correct_answer": "Extending base templates with child templates",
+        "explanation": "Template inheritance allows child templates to extend and override parent templates."
+      },
+      {
+        "id": "5",
+        "question": "How do you pass variables to templates?",
+        "options": [
+          "As keyword arguments to render_template()",
+          "Using global variables",
+          "Using session variables",
+          "Using request variables"
+        ],
+        "correct_answer": "As keyword arguments to render_template()",
+        "explanation": "Variables are passed to templates as keyword arguments in render_template()."
+      }
+    ]
+  },
+  {
+    "id": "4",
+    "title": "Request Handling",
+    "description": "Processing HTTP requests in Flask",
+    "questions": [
+      {
+        "id": "1",
+        "question": "What is the request object in Flask?",
+        "options": [
+          "An object containing request information",
+          "An object for creating responses",
+          "An object for database queries",
+          "An object for file handling"
+        ],
+        "correct_answer": "An object containing request information",
+        "explanation": "The request object contains information about the current HTTP request."
+      },
+      {
+        "id": "2",
+        "question": "How do you access form data?",
+        "options": [
+          "Using request.form",
+          "Using request.data",
+          "Using request.body",
+          "Using request.input"
+        ],
+        "correct_answer": "Using request.form",
+        "explanation": "Form data is accessed through request.form, which is a MultiDict."
+      },
+      {
+        "id": "3",
+        "question": "How do you access query parameters?",
+        "options": [
+          "Using request.args",
+          "Using request.query",
+          "Using request.params",
+          "Using request.get"
+        ],
+        "correct_answer": "Using request.args",
+        "explanation": "Query parameters are accessed through request.args."
+      },
+      {
+        "id": "4",
+        "question": "What is request.method?",
+        "options": [
+          "The HTTP method of the request",
+          "The request URL",
+          "The request headers",
+          "The request body"
+        ],
+        "correct_answer": "The HTTP method of the request",
+        "explanation": "request.method contains the HTTP method (GET, POST, etc.)."
+      },
+      {
+        "id": "5",
+        "question": "How do you access JSON data from requests?",
+        "options": [
+          "Using request.get_json()",
+          "Using request.json",
+          "Using request.data",
+          "Using json.loads(request.data)"
+        ],
+        "correct_answer": "Using request.get_json()",
+        "explanation": "JSON data is accessed using request.get_json() method."
+      }
+    ]
+  },
+  {
+    "id": "5",
+    "title": "Response Handling",
+    "description": "Creating and customizing HTTP responses",
+    "questions": [
+      {
+        "id": "1",
+        "question": "How do you return a simple string response?",
+        "options": [
+          "By returning the string directly",
+          "Using make_response()",
+          "Using Response()",
+          "Using return_string()"
+        ],
+        "correct_answer": "By returning the string directly",
+        "explanation": "Simple strings can be returned directly from view functions."
+      },
+      {
+        "id": "2",
+        "question": "What is make_response() used for?",
+        "options": [
+          "Creating custom response objects",
+          "Making HTTP requests",
+          "Creating templates",
+          "Handling errors"
+        ],
+        "correct_answer": "Creating custom response objects",
+        "explanation": "make_response() creates Response objects with custom status codes and headers."
+      },
+      {
+        "id": "3",
+        "question": "How do you set response headers?",
+        "options": [
+          "Using response.headers",
+          "Using response.set_header()",
+          "Using response.add_header()",
+          "Using the headers parameter in make_response()"
+        ],
+        "correct_answer": "Using response.headers",
+        "explanation": "Headers are set using the headers attribute of Response objects."
+      },
+      {
+        "id": "4",
+        "question": "What is jsonify() used for?",
+        "options": [
+          "Converting dictionaries to JSON responses",
+          "Parsing JSON requests",
+          "Validating JSON data",
+          "Storing JSON data"
+        ],
+        "correct_answer": "Converting dictionaries to JSON responses",
+        "explanation": "jsonify() converts Python dictionaries to JSON response objects."
+      },
+      {
+        "id": "5",
+        "question": "What is the default status code for successful responses?",
+        "options": [
+          "200",
+          "201",
+          "202",
+          "204"
+        ],
+        "correct_answer": "200",
+        "explanation": "200 OK is the default status code for successful responses."
+      }
+    ]
+  },
+  {
+    "id": "6",
+    "title": "Flask Extensions",
+    "description": "Using Flask extensions for additional functionality",
+    "questions": [
+      {
+        "id": "1",
+        "question": "What is Flask-WTF?",
+        "options": [
+          "A form handling extension",
+          "A database extension",
+          "A testing extension",
+          "A security extension"
+        ],
+        "correct_answer": "A form handling extension",
+        "explanation": "Flask-WTF provides form handling and CSRF protection."
+      },
+      {
+        "id": "2",
+        "question": "What is Flask-SQLAlchemy?",
+        "options": [
+          "An ORM for database operations",
+          "A SQL query builder",
+          "A database migration tool",
+          "A database backup tool"
+        ],
+        "correct_answer": "An ORM for database operations",
+        "explanation": "Flask-SQLAlchemy provides SQLAlchemy integration for Flask applications."
+      },
+      {
+        "id": "3",
+        "question": "What is Flask-Login used for?",
+        "options": [
+          "User session management",
+          "User authentication",
+          "User authorization",
           "All of the above"
         ],
-        "correctAnswer": "All of the above",
-        "explanation": "Flask supports various testing approaches: unit tests with test client, pytest, and end-to-end testing with Selenium."
+        "correct_answer": "All of the above",
+        "explanation": "Flask-Login handles user sessions, authentication, and authorization."
       },
       {
-        "id": "3-2-6-flask-deployment",
-        "type": "multiple-choice",
-        "question": "What WSGI server is commonly used for Flask deployment?",
+        "id": "4",
+        "question": "What is Flask-Mail?",
         "options": [
-          "Apache HTTP Server",
+          "An email sending extension",
+          "A mail server",
+          "A contact form handler",
+          "An email validation tool"
+        ],
+        "correct_answer": "An email sending extension",
+        "explanation": "Flask-Mail provides email sending capabilities."
+      },
+      {
+        "id": "5",
+        "question": "How do you initialize a Flask extension?",
+        "options": [
+          "extension.init_app(app)",
+          "app.init_extension(extension)",
+          "extension(app)",
+          "All of the above"
+        ],
+        "correct_answer": "All of the above",
+        "explanation": "Extensions can be initialized using init_app(), direct instantiation, or factory pattern."
+      }
+    ]
+  },
+  {
+    "id": "7",
+    "title": "Database Integration",
+    "description": "Connecting databases to Flask applications",
+    "questions": [
+      {
+        "id": "1",
+        "question": "What is SQLAlchemy?",
+        "options": [
+          "A Python SQL toolkit and ORM",
+          "A database management system",
+          "A web framework",
+          "A testing library"
+        ],
+        "correct_answer": "A Python SQL toolkit and ORM",
+        "explanation": "SQLAlchemy is a Python library for working with databases using SQL."
+      },
+      {
+        "id": "2",
+        "question": "How do you define models in Flask-SQLAlchemy?",
+        "options": [
+          "By inheriting from db.Model",
+          "By inheriting from Model",
+          "By using the @model decorator",
+          "By creating classes with __init__"
+        ],
+        "correct_answer": "By inheriting from db.Model",
+        "explanation": "Models are defined by inheriting from db.Model in Flask-SQLAlchemy."
+      },
+      {
+        "id": "3",
+        "question": "What is Flask-Migrate?",
+        "options": [
+          "A database migration tool",
+          "A data import tool",
+          "A backup tool",
+          "A query optimizer"
+        ],
+        "correct_answer": "A database migration tool",
+        "explanation": "Flask-Migrate handles database schema migrations."
+      },
+      {
+        "id": "4",
+        "question": "What does CRUD stand for?",
+        "options": [
+          "Create, Read, Update, Delete",
+          "Connect, Run, Update, Disconnect",
+          "Cache, Retrieve, Update, Delete",
+          "Create, Retrieve, Update, Drop"
+        ],
+        "correct_answer": "Create, Read, Update, Delete",
+        "explanation": "CRUD represents the four basic operations on database records."
+      },
+      {
+        "id": "5",
+        "question": "How do you query the database?",
+        "options": [
+          "Using Model.query",
+          "Using db.query()",
+          "Using session.query()",
+          "All of the above"
+        ],
+        "correct_answer": "All of the above",
+        "explanation": "Database queries can be made using Model.query, db.session.query(), etc."
+      }
+    ]
+  },
+  {
+    "id": "8",
+    "title": "Authentication and Security",
+    "description": "Implementing authentication and security in Flask",
+    "questions": [
+      {
+        "id": "1",
+        "question": "What is Flask-Login?",
+        "options": [
+          "A user authentication extension",
+          "A password hashing library",
+          "A token generator",
+          "A session manager"
+        ],
+        "correct_answer": "A user authentication extension",
+        "explanation": "Flask-Login manages user authentication and sessions."
+      },
+      {
+        "id": "2",
+        "question": "What is Werkzeug's generate_password_hash() for?",
+        "options": [
+          "Hashing passwords securely",
+          "Generating random passwords",
+          "Validating passwords",
+          "Storing passwords"
+        ],
+        "correct_answer": "Hashing passwords securely",
+        "explanation": "generate_password_hash() creates secure password hashes."
+      },
+      {
+        "id": "3",
+        "question": "What is CSRF protection?",
+        "options": [
+          "Protection against cross-site request forgery",
+          "Protection against SQL injection",
+          "Protection against XSS",
+          "Protection against session hijacking"
+        ],
+        "correct_answer": "Protection against cross-site request forgery",
+        "explanation": "CSRF protection prevents unauthorized actions on behalf of authenticated users."
+      },
+      {
+        "id": "4",
+        "question": "What is the session object used for?",
+        "options": [
+          "Storing user data between requests",
+          "Storing database connections",
+          "Storing configuration",
+          "Storing logs"
+        ],
+        "correct_answer": "Storing user data between requests",
+        "explanation": "The session object stores user-specific data across requests."
+      },
+      {
+        "id": "5",
+        "question": "How do you protect routes with login_required?",
+        "options": [
+          "Using the @login_required decorator",
+          "Using the @auth_required decorator",
+          "Using the @protected decorator",
+          "Using middleware"
+        ],
+        "correct_answer": "Using the @login_required decorator",
+        "explanation": "@login_required decorator restricts access to authenticated users."
+      }
+    ]
+  },
+  {
+    "id": "9",
+    "title": "Error Handling and Logging",
+    "description": "Handling errors and logging in Flask applications",
+    "questions": [
+      {
+        "id": "1",
+        "question": "How do you register error handlers?",
+        "options": [
+          "Using @app.errorhandler()",
+          "Using @app.exception()",
+          "Using try-except blocks",
+          "Using error middleware"
+        ],
+        "correct_answer": "Using @app.errorhandler()",
+        "explanation": "@app.errorhandler() decorator registers functions to handle specific errors."
+      },
+      {
+        "id": "2",
+        "question": "What is the default error page for 404?",
+        "options": [
+          "A simple Not Found page",
+          "A detailed error page",
+          "A redirect to home",
+          "A blank page"
+        ],
+        "correct_answer": "A simple Not Found page",
+        "explanation": "Flask provides a default 404 Not Found page in development mode."
+      },
+      {
+        "id": "3",
+        "question": "What is app.logger?",
+        "options": [
+          "Flask's built-in logger",
+          "A custom logging library",
+          "A database logger",
+          "A file logger"
+        ],
+        "correct_answer": "Flask's built-in logger",
+        "explanation": "app.logger is Flask's integrated logging system."
+      },
+      {
+        "id": "4",
+        "question": "How do you enable debug mode?",
+        "options": [
+          "app.debug = True",
+          "app.run(debug=True)",
+          "DEBUG=True in environment",
+          "All of the above"
+        ],
+        "correct_answer": "All of the above",
+        "explanation": "Debug mode can be enabled through app.debug, run parameter, or environment variable."
+      },
+      {
+        "id": "5",
+        "question": "What is the purpose of try-except in Flask?",
+        "options": [
+          "Handling exceptions and errors",
+          "Creating loops",
+          "Defining functions",
+          "Importing modules"
+        ],
+        "correct_answer": "Handling exceptions and errors",
+        "explanation": "try-except blocks catch and handle exceptions in Python code."
+      }
+    ]
+  },
+  {
+    "id": "10",
+    "title": "Deployment and Production",
+    "description": "Deploying Flask applications to production",
+    "questions": [
+      {
+        "id": "1",
+        "question": "What is the recommended WSGI server for production?",
+        "options": [
           "Gunicorn",
-          "Nginx",
-          "Tomcat"
+          "Uvicorn",
+          "Flask's built-in server",
+          "Apache"
         ],
-        "correctAnswer": "Gunicorn",
-        "explanation": "Gunicorn is a popular WSGI HTTP Server commonly used for deploying Flask applications in production."
+        "correct_answer": "Gunicorn",
+        "explanation": "Gunicorn is the recommended WSGI server for production Flask deployments."
+      },
+      {
+        "id": "2",
+        "question": "What is Docker used for?",
+        "options": [
+          "Containerizing applications",
+          "Load balancing",
+          "Caching",
+          "Logging"
+        ],
+        "correct_answer": "Containerizing applications",
+        "explanation": "Docker creates containers for consistent deployment across environments."
+      },
+      {
+        "id": "3",
+        "question": "What is the purpose of environment variables?",
+        "options": [
+          "Storing configuration settings",
+          "Storing user data",
+          "Storing temporary files",
+          "Storing logs"
+        ],
+        "correct_answer": "Storing configuration settings",
+        "explanation": "Environment variables store configuration that varies between environments."
+      },
+      {
+        "id": "4",
+        "question": "What is HTTPS and why is it important?",
+        "options": [
+          "Secure HTTP for encrypted communication",
+          "A faster version of HTTP",
+          "A protocol for file transfer",
+          "A database protocol"
+        ],
+        "correct_answer": "Secure HTTP for encrypted communication",
+        "explanation": "HTTPS provides encrypted communication between client and server."
+      },
+      {
+        "id": "5",
+        "question": "What is monitoring in production?",
+        "options": [
+          "Tracking application performance and errors",
+          "Tracking user behavior",
+          "Tracking server resources",
+          "All of the above"
+        ],
+        "correct_answer": "All of the above",
+        "explanation": "Monitoring tracks performance, errors, user behavior, and server resources."
       }
     ]
   }

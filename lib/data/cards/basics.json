@@ -1,6 +1,6 @@
 [
   {
-    "id": "variables",
+    "id": "1",
     "title": "Variables",
     "description": "Learn about variables in Python.",
     "difficulty": "beginner",
@@ -83,7 +83,7 @@
     ]
   },
   {
-    "id": "data-types",
+    "id": "2",
     "title": "Data Types",
     "description": "Basic data types in Python.",
     "difficulty": "beginner",
@@ -166,7 +166,7 @@
     ]
   },
   {
-    "id": "operators",
+    "id": "3",
     "title": "Operators",
     "description": "Arithmetic, comparison, logical, and other operators.",
     "difficulty": "beginner",
@@ -274,7 +274,7 @@
     ]
   },
   {
-    "id": "input-output",
+    "id": "4",
     "title": "Input and Output",
     "description": "Reading input and displaying output.",
     "difficulty": "beginner",
@@ -357,7 +357,7 @@
     ]
   },
   {
-    "id": "comments-docstrings",
+    "id": "5",
     "title": "Comments and Docstrings",
     "description": "Documentation and code comments.",
     "difficulty": "beginner",
@@ -415,7 +415,7 @@
     ]
   },
   {
-    "id": "built-in-functions",
+    "id": "6",
     "title": "Built-in Functions",
     "description": "Essential built-in functions available without imports.",
     "difficulty": "beginner",

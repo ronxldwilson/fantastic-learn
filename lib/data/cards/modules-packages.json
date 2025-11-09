@@ -1,6 +1,6 @@
 [
   {
-    "id": "module-imports",
+    "id": "1",
     "title": "Module Imports",
     "description": "Different ways to import modules and functions.",
     "difficulty": "beginner",
@@ -58,7 +58,7 @@
     ]
   },
   {
-    "id": "python-standard-library",
+    "id": "2",
     "title": "Python Standard Library",
     "description": "Essential modules that come with Python.",
     "difficulty": "intermediate",
@@ -141,7 +141,7 @@
     ]
   },
   {
-    "id": "creating-modules",
+    "id": "3",
     "title": "Creating Modules",
     "description": "How to write and organize your own modules.",
     "difficulty": "intermediate",
@@ -199,7 +199,7 @@
     ]
   },
   {
-    "id": "packages",
+    "id": "4",
     "title": "Packages",
     "description": "Organizing modules into packages.",
     "difficulty": "intermediate",
@@ -257,7 +257,7 @@
     ]
   },
   {
-    "id": "package-management",
+    "id": "5",
     "title": "Package Management",
     "description": "Installing and managing third-party packages.",
     "difficulty": "intermediate",
@@ -340,7 +340,7 @@
     ]
   },
   {
-    "id": "import-best-practices",
+    "id": "6",
     "title": "Import Best Practices",
     "description": "Guidelines for clean and efficient imports.",
     "difficulty": "intermediate",
@@ -398,7 +398,7 @@
     ]
   },
   {
-    "id": "module-search-path",
+    "id": "7",
     "title": "Module Search Path",
     "description": "How Python finds and loads modules.",
     "difficulty": "advanced",
@@ -456,7 +456,7 @@
     ]
   },
   {
-    "id": "third-party-packages",
+    "id": "8",
     "title": "Third-Party Packages",
     "description": "Popular and useful third-party packages.",
     "difficulty": "intermediate",
@@ -514,7 +514,7 @@
     ]
   },
   {
-    "id": "distribution-deployment",
+    "id": "9",
     "title": "Distribution and Deployment",
     "description": "Packaging and distributing Python code.",
     "difficulty": "advanced",
@@ -572,7 +572,7 @@
     ]
   },
   {
-    "id": "module-execution",
+    "id": "10",
     "title": "Module Execution",
     "description": "How modules are executed and loaded.",
     "difficulty": "advanced",

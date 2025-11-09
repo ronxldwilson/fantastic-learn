@@ -1,6 +1,6 @@
 [
   {
-    "id": "if-else-statements",
+    "id": "1",
     "title": "If-Else Statements",
     "description": "Conditional execution using if, elif, and else statements.",
     "difficulty": "beginner",
@@ -108,7 +108,7 @@
     ]
   },
   {
-    "id": "for-loops",
+    "id": "2",
     "title": "For Loops",
     "description": "Iteration using for loops with different types of sequences.",
     "difficulty": "beginner",
@@ -216,7 +216,7 @@
     ]
   },
   {
-    "id": "while-loops",
+    "id": "3",
     "title": "While Loops",
     "description": "Loops that continue while a condition is true.",
     "difficulty": "beginner",
@@ -324,7 +324,7 @@
     ]
   },
   {
-    "id": "break-continue-pass",
+    "id": "4",
     "title": "Break, Continue, and Pass",
     "description": "Control flow statements that modify loop execution.",
     "difficulty": "intermediate",
@@ -432,7 +432,7 @@
     ]
   },
   {
-    "id": "advanced-control-flow",
+    "id": "5",
     "title": "Advanced Control Flow",
     "description": "Complex control structures and patterns.",
     "difficulty": "advanced",

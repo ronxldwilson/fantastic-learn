@@ -1,6 +1,6 @@
 [
   {
-    "id": "lists-basics",
+    "id": "1",
     "title": "Lists Basics",
     "description": "Fundamental operations with Python lists.",
     "difficulty": "beginner",
@@ -108,7 +108,7 @@
     ]
   },
   {
-    "id": "tuples-basics",
+    "id": "2",
     "title": "Tuples Basics",
     "description": "Immutable sequences in Python.",
     "difficulty": "beginner",
@@ -216,7 +216,7 @@
     ]
   },
   {
-    "id": "dictionaries-basics",
+    "id": "3",
     "title": "Dictionaries Basics",
     "description": "Key-value data structures in Python.",
     "difficulty": "beginner",
@@ -324,7 +324,7 @@
     ]
   },
   {
-    "id": "sets-basics",
+    "id": "4",
     "title": "Sets Basics",
     "description": "Unordered collections of unique elements.",
     "difficulty": "intermediate",
@@ -432,7 +432,7 @@
     ]
   },
   {
-    "id": "advanced-data-structures",
+    "id": "5",
     "title": "Advanced Data Structures",
     "description": "Complex data structures from collections module.",
     "difficulty": "advanced",

@@ -1,6 +1,6 @@
 [
   {
-    "id": "importing-modules",
+    "id": "1",
     "title": "Importing Modules",
     "description": "Learn how to import and use modules in Python.",
     "difficulty": "beginner",
@@ -9,7 +9,12 @@
         "id": "1",
         "type": "multiple-choice",
         "question": "Which statement is used to import a module?",
-        "options": ["include", "require", "import", "using"],
+        "options": [
+          "include",
+          "require",
+          "import",
+          "using"
+        ],
         "correctAnswer": "import",
         "explanation": "The import statement is used to bring modules into your Python program."
       },
@@ -38,7 +43,12 @@
         "id": "5",
         "type": "multiple-choice",
         "question": "Which is generally preferred for importing?",
-        "options": ["import math", "from math import *", "from math import sqrt, sin, cos", "It depends on usage"],
+        "options": [
+          "import math",
+          "from math import *",
+          "from math import sqrt, sin, cos",
+          "It depends on usage"
+        ],
         "correctAnswer": "It depends on usage",
         "explanation": "Use 'import module' for clarity, 'from module import specific' when you need specific functions frequently."
       },
@@ -53,7 +63,12 @@
         "id": "7",
         "type": "multiple-choice",
         "question": "What does 'import math as m' do?",
-        "options": ["Imports math module with alias m", "Imports only m from math", "Creates a new module called m", "Nothing, it's invalid"],
+        "options": [
+          "Imports math module with alias m",
+          "Imports only m from math",
+          "Creates a new module called m",
+          "Nothing, it's invalid"
+        ],
         "correctAnswer": "Imports math module with alias m",
         "explanation": "The 'as' keyword creates an alias for the imported module."
       },
@@ -75,7 +90,12 @@
         "id": "10",
         "type": "multiple-choice",
         "question": "Which import style is recommended by PEP 8?",
-        "options": ["from module import *", "import module", "from module import specific", "All are equally good"],
+        "options": [
+          "from module import *",
+          "import module",
+          "from module import specific",
+          "All are equally good"
+        ],
         "correctAnswer": "import module",
         "explanation": "PEP 8 recommends using 'import module' or 'from module import specific' over wildcard imports."
       },
@@ -97,7 +117,12 @@
         "id": "13",
         "type": "multiple-choice",
         "question": "Where does Python look for modules?",
-        "options": ["Only current directory", "Built-in modules only", "sys.path", "PYTHONPATH only"],
+        "options": [
+          "Only current directory",
+          "Built-in modules only",
+          "sys.path",
+          "PYTHONPATH only"
+        ],
         "correctAnswer": "sys.path",
         "explanation": "Python searches for modules in the directories listed in sys.path."
       },
@@ -118,7 +143,7 @@
     ]
   },
   {
-    "id": "standard-library",
+    "id": "2",
     "title": "Standard Library",
     "description": "Explore Python's built-in modules.",
     "difficulty": "intermediate",
@@ -127,7 +152,12 @@
         "id": "1",
         "type": "multiple-choice",
         "question": "Which module provides mathematical functions?",
-        "options": ["os", "sys", "math", "random"],
+        "options": [
+          "os",
+          "sys",
+          "math",
+          "random"
+        ],
         "correctAnswer": "math",
         "explanation": "The math module provides mathematical functions like sqrt, sin, cos, etc."
       },
@@ -156,7 +186,12 @@
         "id": "5",
         "type": "multiple-choice",
         "question": "Which module is used for date and time operations?",
-        "options": ["calendar", "time", "datetime", "All of the above"],
+        "options": [
+          "calendar",
+          "time",
+          "datetime",
+          "All of the above"
+        ],
         "correctAnswer": "All of the above",
         "explanation": "Python has time, datetime, and calendar modules for date/time operations."
       },
@@ -171,7 +206,12 @@
         "id": "7",
         "type": "multiple-choice",
         "question": "What does the 'json' module do?",
-        "options": ["Handle JSON data", "Create graphics", "Send emails", "Parse XML"],
+        "options": [
+          "Handle JSON data",
+          "Create graphics",
+          "Send emails",
+          "Parse XML"
+        ],
         "correctAnswer": "Handle JSON data",
         "explanation": "The json module provides methods for encoding and decoding JSON data."
       },
@@ -193,7 +233,12 @@
         "id": "10",
         "type": "multiple-choice",
         "question": "What does the 'collections' module provide?",
-        "options": ["Container datatypes", "File operations", "Network protocols", "Database access"],
+        "options": [
+          "Container datatypes",
+          "File operations",
+          "Network protocols",
+          "Database access"
+        ],
         "correctAnswer": "Container datatypes",
         "explanation": "The collections module provides specialized container datatypes like defaultdict, namedtuple, etc."
       },
@@ -215,7 +260,12 @@
         "id": "13",
         "type": "multiple-choice",
         "question": "What does the 'functools' module contain?",
-        "options": ["Higher-order functions", "File system functions", "String operations", "Math operations"],
+        "options": [
+          "Higher-order functions",
+          "File system functions",
+          "String operations",
+          "Math operations"
+        ],
         "correctAnswer": "Higher-order functions",
         "explanation": "functools provides higher-order functions like partial, reduce, and lru_cache."
       },
@@ -236,7 +286,7 @@
     ]
   },
   {
-    "id": "creating-modules",
+    "id": "3",
     "title": "Creating Modules",
     "description": "Learn how to create your own Python modules.",
     "difficulty": "intermediate",
@@ -252,7 +302,12 @@
         "id": "2",
         "type": "multiple-choice",
         "question": "What happens when you import a module?",
-        "options": ["The module code is executed", "Only function definitions are loaded", "Only variables are loaded", "Nothing happens"],
+        "options": [
+          "The module code is executed",
+          "Only function definitions are loaded",
+          "Only variables are loaded",
+          "Nothing happens"
+        ],
         "correctAnswer": "The module code is executed",
         "explanation": "When you import a module, Python executes all the code in that module file."
       },
@@ -274,7 +329,12 @@
         "id": "5",
         "type": "multiple-choice",
         "question": "What is a module in Python?",
-        "options": ["A function", "A class", "A file containing Python code", "A built-in type"],
+        "options": [
+          "A function",
+          "A class",
+          "A file containing Python code",
+          "A built-in type"
+        ],
         "correctAnswer": "A file containing Python code",
         "explanation": "A module is simply a file containing Python definitions and statements."
       },
@@ -296,7 +356,12 @@
         "id": "8",
         "type": "multiple-choice",
         "question": "What happens to module-level code when imported?",
-        "options": ["It's ignored", "It's executed once", "It's executed every time", "It's compiled only"],
+        "options": [
+          "It's ignored",
+          "It's executed once",
+          "It's executed every time",
+          "It's compiled only"
+        ],
         "correctAnswer": "It's executed once",
         "explanation": "Module-level code is executed when the module is first imported."
       },
@@ -325,7 +390,12 @@
         "id": "12",
         "type": "multiple-choice",
         "question": "Can modules contain classes?",
-        "options": ["No, only functions", "Yes, classes and functions", "Only variables", "Only imports"],
+        "options": [
+          "No, only functions",
+          "Yes, classes and functions",
+          "Only variables",
+          "Only imports"
+        ],
         "correctAnswer": "Yes, classes and functions",
         "explanation": "Modules can contain classes, functions, variables, and any valid Python code."
       },
@@ -353,7 +423,7 @@
     ]
   },
   {
-    "id": "packages",
+    "id": "4",
     "title": "Packages",
     "description": "Learn about Python packages and package structure.",
     "difficulty": "intermediate",
@@ -369,7 +439,12 @@
         "id": "2",
         "type": "multiple-choice",
         "question": "What file is required to make a directory a package?",
-        "options": ["__main__.py", "__init__.py", "setup.py", "requirements.txt"],
+        "options": [
+          "__main__.py",
+          "__init__.py",
+          "setup.py",
+          "requirements.txt"
+        ],
         "correctAnswer": "__init__.py",
         "explanation": "The __init__.py file makes Python treat a directory as a package."
       },
@@ -398,7 +473,12 @@
         "id": "6",
         "type": "multiple-choice",
         "question": "What can __init__.py contain?",
-        "options": ["Nothing", "Initialization code", "Imports from submodules", "All of the above"],
+        "options": [
+          "Nothing",
+          "Initialization code",
+          "Imports from submodules",
+          "All of the above"
+        ],
         "correctAnswer": "All of the above",
         "explanation": "__init__.py can be empty or contain initialization code and imports."
       },
@@ -420,7 +500,12 @@
         "id": "9",
         "type": "multiple-choice",
         "question": "What is a namespace package?",
-        "options": ["A package without __init__.py", "A package with only one module", "A built-in package", "A virtual package"],
+        "options": [
+          "A package without __init__.py",
+          "A package with only one module",
+          "A built-in package",
+          "A virtual package"
+        ],
         "correctAnswer": "A package without __init__.py",
         "explanation": "Namespace packages allow splitting packages across multiple directories without __init__.py files."
       },
@@ -449,7 +534,12 @@
         "id": "13",
         "type": "multiple-choice",
         "question": "When should you use relative imports?",
-        "options": ["Always", "Within packages", "Only for built-ins", "Never"],
+        "options": [
+          "Always",
+          "Within packages",
+          "Only for built-ins",
+          "Never"
+        ],
         "correctAnswer": "Within packages",
         "explanation": "Relative imports are used within packages to refer to other modules in the same package."
       },
@@ -470,7 +560,7 @@
     ]
   },
   {
-    "id": "pip-package-manager",
+    "id": "5",
     "title": "Package Management with pip",
     "description": "Learn how to manage third-party packages using pip.",
     "difficulty": "beginner",
@@ -493,7 +583,12 @@
         "id": "3",
         "type": "multiple-choice",
         "question": "How do you list installed packages?",
-        "options": ["pip list", "pip show", "pip installed", "pip packages"],
+        "options": [
+          "pip list",
+          "pip show",
+          "pip installed",
+          "pip packages"
+        ],
         "correctAnswer": "pip list",
         "explanation": "The 'pip list' command shows all installed packages."
       },
@@ -515,7 +610,12 @@
         "id": "6",
         "type": "multiple-choice",
         "question": "What is a requirements.txt file used for?",
-        "options": ["List dependencies", "Store package versions", "Both A and B", "Store pip configuration"],
+        "options": [
+          "List dependencies",
+          "Store package versions",
+          "Both A and B",
+          "Store pip configuration"
+        ],
         "correctAnswer": "Both A and B",
         "explanation": "requirements.txt lists project dependencies and their versions."
       },
@@ -537,7 +637,12 @@
         "id": "9",
         "type": "multiple-choice",
         "question": "What does 'pip install --upgrade package' do?",
-        "options": ["Installs latest version", "Upgrades existing package", "Both A and B", "Installs development version"],
+        "options": [
+          "Installs latest version",
+          "Upgrades existing package",
+          "Both A and B",
+          "Installs development version"
+        ],
         "correctAnswer": "Both A and B",
         "explanation": "The --upgrade flag installs the latest version, upgrading if already installed."
       },
@@ -559,7 +664,12 @@
         "id": "12",
         "type": "multiple-choice",
         "question": "What is a wheel file?",
-        "options": ["A built package format", "A source distribution", "A virtual environment", "A requirements file"],
+        "options": [
+          "A built package format",
+          "A source distribution",
+          "A virtual environment",
+          "A requirements file"
+        ],
         "correctAnswer": "A built package format",
         "explanation": "Wheel files (.whl) are a built, compiled package format for faster installation."
       },
@@ -587,7 +697,7 @@
     ]
   },
   {
-    "id": "virtual-environments",
+    "id": "6",
     "title": "Virtual Environments",
     "description": "Learn about virtual environments for isolated Python environments.",
     "difficulty": "intermediate",
@@ -603,7 +713,12 @@
         "id": "2",
         "type": "multiple-choice",
         "question": "Which module creates virtual environments?",
-        "options": ["venv", "virtualenv", "pipenv", "All of the above"],
+        "options": [
+          "venv",
+          "virtualenv",
+          "pipenv",
+          "All of the above"
+        ],
         "correctAnswer": "All of the above",
         "explanation": "venv (built-in), virtualenv, and pipenv are tools for creating virtual environments."
       },
@@ -639,7 +754,12 @@
         "id": "7",
         "type": "multiple-choice",
         "question": "What happens when you activate a virtual environment?",
-        "options": ["Python path changes", "Pip installs to venv", "Both A and B", "Nothing changes"],
+        "options": [
+          "Python path changes",
+          "Pip installs to venv",
+          "Both A and B",
+          "Nothing changes"
+        ],
         "correctAnswer": "Both A and B",
         "explanation": "Activation changes the Python path and makes pip install to the virtual environment."
       },
@@ -661,7 +781,12 @@
         "id": "10",
         "type": "multiple-choice",
         "question": "Can you have different Python versions in virtual environments?",
-        "options": ["No", "Yes, with different base interpreters", "Only major versions", "Only minor versions"],
+        "options": [
+          "No",
+          "Yes, with different base interpreters",
+          "Only major versions",
+          "Only minor versions"
+        ],
         "correctAnswer": "Yes, with different base interpreters",
         "explanation": "You can create virtual environments based on different Python installations."
       },
@@ -690,7 +815,12 @@
         "id": "14",
         "type": "multiple-choice",
         "question": "What does 'pipenv install package' do?",
-        "options": ["Installs package", "Creates virtual environment", "Updates Pipfile", "All of the above"],
+        "options": [
+          "Installs package",
+          "Creates virtual environment",
+          "Updates Pipfile",
+          "All of the above"
+        ],
         "correctAnswer": "All of the above",
         "explanation": "pipenv install creates venv if needed, installs package, and updates Pipfile."
       },
@@ -704,7 +834,7 @@
     ]
   },
   {
-    "id": "module-best-practices",
+    "id": "7",
     "title": "Module Best Practices",
     "description": "Learn best practices for organizing and using modules and packages.",
     "difficulty": "advanced",
@@ -713,7 +843,12 @@
         "id": "1",
         "type": "multiple-choice",
         "question": "What should you avoid in module imports?",
-        "options": ["from module import *", "import module", "from module import specific", "import module as alias"],
+        "options": [
+          "from module import *",
+          "import module",
+          "from module import specific",
+          "import module as alias"
+        ],
         "correctAnswer": "from module import *",
         "explanation": "Wildcard imports can cause naming conflicts and make code unclear."
       },
@@ -728,7 +863,12 @@
         "id": "3",
         "type": "multiple-choice",
         "question": "Where should import statements be placed?",
-        "options": ["At the end of file", "At the top of file", "Inside functions", "Anywhere"],
+        "options": [
+          "At the end of file",
+          "At the top of file",
+          "Inside functions",
+          "Anywhere"
+        ],
         "correctAnswer": "At the top of file",
         "explanation": "Import statements should be at the top of the file after module docstrings."
       },
@@ -750,7 +890,12 @@
         "id": "6",
         "type": "multiple-choice",
         "question": "What should be in __all__?",
-        "options": ["All variables", "Public API", "Everything", "Nothing"],
+        "options": [
+          "All variables",
+          "Public API",
+          "Everything",
+          "Nothing"
+        ],
         "correctAnswer": "Public API",
         "explanation": "__all__ defines what gets imported with 'from module import *'."
       },
@@ -772,7 +917,12 @@
         "id": "9",
         "type": "multiple-choice",
         "question": "Should you use relative imports in executable scripts?",
-        "options": ["Always", "Never", "Sometimes", "Only in packages"],
+        "options": [
+          "Always",
+          "Never",
+          "Sometimes",
+          "Only in packages"
+        ],
         "correctAnswer": "Never",
         "explanation": "Relative imports don't work in executable scripts, only in packages."
       },
@@ -787,7 +937,12 @@
         "id": "11",
         "type": "multiple-choice",
         "question": "How can you avoid circular imports?",
-        "options": ["Import inside functions", "Restructure code", "Use import aliases", "All of the above"],
+        "options": [
+          "Import inside functions",
+          "Restructure code",
+          "Use import aliases",
+          "All of the above"
+        ],
         "correctAnswer": "All of the above",
         "explanation": "Moving imports inside functions, restructuring, or using lazy imports can avoid circular dependencies."
       },
@@ -816,7 +971,12 @@
         "id": "15",
         "type": "multiple-choice",
         "question": "What tool is replacing setup.py for modern Python packaging?",
-        "options": ["pip", "pyproject.toml", "requirements.txt", "MANIFEST.in"],
+        "options": [
+          "pip",
+          "pyproject.toml",
+          "requirements.txt",
+          "MANIFEST.in"
+        ],
         "correctAnswer": "pyproject.toml",
         "explanation": "pyproject.toml is the modern standard for Python package configuration."
       }

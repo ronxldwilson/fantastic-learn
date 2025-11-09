@@ -1,0 +1,79 @@
+[
+  {
+    "id": "classes-objects",
+    "title": "Classes and Objects",
+    "description": "Test your understanding of classes and objects in Python.",
+    "difficulty": "intermediate",
+    "questions": [
+      {
+        "id": "1",
+        "type": "multiple-choice",
+        "question": "What is a class in Python?",
+        "options": ["A blueprint for creating objects", "An instance of an object", "A built-in data type", "A function definition"],
+        "correctAnswer": "A blueprint for creating objects",
+        "explanation": "A class is a blueprint or template for creating objects that defines their structure and behavior."
+      },
+      {
+        "id": "2",
+        "type": "text-input",
+        "question": "What keyword is used to define a class in Python?",
+        "correctAnswer": "class",
+        "explanation": "The 'class' keyword is used to define a new class in Python."
+      },
+      {
+        "id": "3",
+        "type": "multiple-choice",
+        "question": "What is an object in Python?",
+        "options": ["An instance of a class", "A class definition", "A module", "A function"],
+        "correctAnswer": "An instance of a class",
+        "explanation": "An object is an instance of a class that has its own attributes and methods."
+      },
+      {
+        "id": "4",
+        "type": "code-input",
+        "question": "Write the Python code to define a simple class called 'Car' with an __init__ method that takes a 'color' parameter.",
+        "correctAnswer": "class Car:\n    def __init__(self, color):\n        self.color = color",
+        "explanation": "Classes are defined with the 'class' keyword, and __init__ is the constructor method."
+      },
+      {
+        "id": "5",
+        "type": "multiple-choice",
+        "question": "What is the purpose of the __init__ method?",
+        "options": ["To initialize object attributes", "To create class methods", "To define class variables", "To inherit from parent classes"],
+        "correctAnswer": "To initialize object attributes",
+        "explanation": "The __init__ method is called when an object is created and is used to initialize the object's attributes."
+      }
+    ]
+  },
+  {
+    "id": "inheritance",
+    "title": "Inheritance",
+    "description": "Practice with inheritance concepts in Python.",
+    "difficulty": "intermediate",
+    "questions": [
+      {
+        "id": "1",
+        "type": "multiple-choice",
+        "question": "What does inheritance allow in OOP?",
+        "options": ["A class to inherit attributes and methods from another class", "Objects to share methods", "Classes to be converted to objects", "Methods to be called without instances"],
+        "correctAnswer": "A class to inherit attributes and methods from another class",
+        "explanation": "Inheritance allows a child class to inherit properties and methods from a parent class."
+      },
+      {
+        "id": "2",
+        "type": "code-input",
+        "question": "Write the Python code to create a class 'Dog' that inherits from 'Animal'.",
+        "correctAnswer": "class Dog(Animal):\n    pass",
+        "explanation": "Inheritance is specified by putting the parent class name in parentheses after the child class name."
+      },
+      {
+        "id": "3",
+        "type": "multiple-choice",
+        "question": "What is method overriding?",
+        "options": ["Redefining a parent class method in a child class", "Calling a parent method from a child", "Creating new methods in child classes", "Deleting methods from parent classes"],
+        "correctAnswer": "Redefining a parent class method in a child class",
+        "explanation": "Method overriding allows a child class to provide its own implementation of a method defined in the parent class."
+      }
+    ]
+  }
+]

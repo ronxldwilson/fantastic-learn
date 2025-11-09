@@ -1,0 +1,63 @@
+[
+  {
+    "id": "defining-functions",
+    "title": "Defining Functions",
+    "description": "Learn how to define and call functions in Python.",
+    "difficulty": "beginner",
+    "cards": [
+      {
+        "id": "1",
+        "front": "What keyword is used to define a function in Python?",
+        "back": "The 'def' keyword is used to define a function. Example: def my_function():"
+      },
+      {
+        "id": "2",
+        "front": "How do you call a function in Python?",
+        "back": "Use the function name followed by parentheses: function_name(). Add arguments inside the parentheses if needed."
+      },
+      {
+        "id": "3",
+        "front": "What is a function parameter?",
+        "back": "A parameter is a variable listed inside the parentheses in the function definition that receives values when the function is called."
+      },
+      {
+        "id": "4",
+        "front": "What is the difference between parameters and arguments?",
+        "back": "Parameters are the variables in the function definition. Arguments are the actual values passed to the function when it's called."
+      },
+      {
+        "id": "5",
+        "front": "What does a function return by default if no return statement is used?",
+        "back": "Functions return None by default if no return statement is provided."
+      }
+    ]
+  },
+  {
+    "id": "function-types",
+    "title": "Types of Functions",
+    "description": "Explore different types of functions in Python.",
+    "difficulty": "intermediate",
+    "cards": [
+      {
+        "id": "1",
+        "front": "What is a built-in function?",
+        "back": "Built-in functions are functions that are available in Python without importing any modules, like print(), len(), type()."
+      },
+      {
+        "id": "2",
+        "front": "What is a user-defined function?",
+        "back": "User-defined functions are functions created by the programmer using the 'def' keyword to perform specific tasks."
+      },
+      {
+        "id": "3",
+        "front": "What are lambda functions?",
+        "back": "Lambda functions are small anonymous functions defined using the 'lambda' keyword. They can have any number of arguments but only one expression."
+      },
+      {
+        "id": "4",
+        "front": "What is a recursive function?",
+        "back": "A recursive function is a function that calls itself during its execution to solve a problem by breaking it down into smaller instances."
+      }
+    ]
+  }
+]

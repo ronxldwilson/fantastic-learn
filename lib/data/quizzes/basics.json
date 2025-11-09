@@ -1,0 +1,56 @@
+[
+  {
+    "id": "variables-data-types",
+    "title": "Variables and Data Types",
+    "description": "Test your knowledge of Python variables and data types.",
+    "difficulty": "beginner",
+    "questions": [
+      {
+        "id": "1",
+        "type": "multiple-choice",
+        "question": "Which of the following is not a valid Python data type?",
+        "options": ["int", "str", "float", "integer"],
+        "correctAnswer": "integer",
+        "explanation": "Python uses \"int\" for integers, not \"integer\"."
+      },
+      {
+        "id": "2",
+        "type": "code-input",
+        "question": "Write the Python code to declare a variable named 'name' with the value 'Alice'.",
+        "correctAnswer": "name = 'Alice'",
+        "explanation": "In Python, variables are declared by simply assigning a value using the = operator."
+      },
+      {
+        "id": "3",
+        "type": "multiple-choice",
+        "question": "Which of these is a correct way to create a string in Python?",
+        "options": ["\"Hello\"", "'Hello'", "Both A and B", "Neither"],
+        "correctAnswer": "Both A and B",
+        "explanation": "Python supports both single and double quotes for strings."
+      }
+    ]
+  },
+  {
+    "id": "operators",
+    "title": "Operators",
+    "description": "Practice with Python operators.",
+    "difficulty": "beginner",
+    "questions": [
+      {
+        "id": "1",
+        "type": "multiple-choice",
+        "question": "What is the result of 5 // 2 in Python?",
+        "options": ["2", "2.5", "3", "2.0"],
+        "correctAnswer": "2",
+        "explanation": "// is floor division, which returns the integer part of the division."
+      },
+      {
+        "id": "2",
+        "type": "text-input",
+        "question": "What operator is used for exponentiation in Python?",
+        "correctAnswer": "**",
+        "explanation": "The ** operator raises the left operand to the power of the right operand."
+      }
+    ]
+  }
+]

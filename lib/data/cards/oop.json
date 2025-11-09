@@ -1,0 +1,68 @@
+[
+  {
+    "id": "classes-basics",
+    "title": "Classes Basics",
+    "description": "Fundamental concepts of classes and objects.",
+    "difficulty": "intermediate",
+    "cards": [
+      {
+        "id": "1",
+        "front": "What is a class?",
+        "back": "A class is a blueprint or template for creating objects. It defines the structure and behavior that objects of that class will have."
+      },
+      {
+        "id": "2",
+        "front": "What is an object?",
+        "back": "An object is an instance of a class. It has its own set of attributes (data) and can perform actions defined by the class methods."
+      },
+      {
+        "id": "3",
+        "front": "What is the __init__ method?",
+        "back": "The __init__ method is a special method called the constructor. It's automatically called when an object is created and is used to initialize the object's attributes."
+      },
+      {
+        "id": "4",
+        "front": "What is 'self' in Python classes?",
+        "back": "'self' refers to the instance of the class. It's the first parameter in instance methods and allows access to the object's attributes and methods."
+      },
+      {
+        "id": "5",
+        "front": "What is the difference between a class variable and an instance variable?",
+        "back": "Class variables are shared by all instances of the class. Instance variables are unique to each object and are defined in __init__ using self."
+      }
+    ]
+  },
+  {
+    "id": "inheritance-polymorphism",
+    "title": "Inheritance and Polymorphism",
+    "description": "Advanced OOP concepts.",
+    "difficulty": "advanced",
+    "cards": [
+      {
+        "id": "1",
+        "front": "What is inheritance?",
+        "back": "Inheritance allows a class (child/subclass) to inherit attributes and methods from another class (parent/superclass), promoting code reuse."
+      },
+      {
+        "id": "2",
+        "front": "How do you create a subclass in Python?",
+        "back": "Define a new class and put the parent class name in parentheses: class ChildClass(ParentClass):"
+      },
+      {
+        "id": "3",
+        "front": "What is method overriding?",
+        "back": "Method overriding occurs when a subclass provides its own implementation of a method that is already defined in its parent class."
+      },
+      {
+        "id": "4",
+        "front": "What is polymorphism?",
+        "back": "Polymorphism allows objects of different classes to be treated as objects of a common superclass. It enables the same method name to behave differently based on the object."
+      },
+      {
+        "id": "5",
+        "front": "What is super() used for?",
+        "back": "super() is used to call methods from the parent class. It's commonly used in __init__ to initialize parent class attributes."
+      }
+    ]
+  }
+]

@@ -1,0 +1,68 @@
+[
+  {
+    "id": "exceptions-basics",
+    "title": "Exception Basics",
+    "description": "Learn about exceptions and error handling in Python.",
+    "difficulty": "intermediate",
+    "cards": [
+      {
+        "id": "1",
+        "front": "What is an exception in Python?",
+        "back": "An exception is an error that occurs during program execution. When an exception occurs, the normal flow of the program is disrupted."
+      },
+      {
+        "id": "2",
+        "front": "What is the purpose of try-except blocks?",
+        "back": "Try-except blocks allow you to handle exceptions gracefully. Code that might raise an exception goes in the try block, and error handling code goes in the except block."
+      },
+      {
+        "id": "3",
+        "front": "What happens if an exception is not handled?",
+        "back": "If an exception is not caught, the program terminates and displays a traceback showing where the error occurred."
+      },
+      {
+        "id": "4",
+        "front": "What is the finally block used for?",
+        "back": "The finally block contains code that will always execute, regardless of whether an exception occurred or not. It's often used for cleanup operations."
+      },
+      {
+        "id": "5",
+        "front": "What is the difference between SyntaxError and ValueError?",
+        "back": "SyntaxError occurs when Python can't parse the code. ValueError occurs when an operation receives a value of the right type but inappropriate value."
+      }
+    ]
+  },
+  {
+    "id": "common-exceptions",
+    "title": "Common Exceptions",
+    "description": "Familiarize yourself with frequently encountered exceptions.",
+    "difficulty": "intermediate",
+    "cards": [
+      {
+        "id": "1",
+        "front": "When does a NameError occur?",
+        "back": "NameError occurs when you try to use a variable or function name that hasn't been defined."
+      },
+      {
+        "id": "2",
+        "front": "When does a TypeError occur?",
+        "back": "TypeError occurs when an operation is applied to an object of inappropriate type, like trying to add a string and an integer."
+      },
+      {
+        "id": "3",
+        "front": "When does an IndexError occur?",
+        "back": "IndexError occurs when you try to access an index that doesn't exist in a sequence, like accessing list[10] when the list only has 5 elements."
+      },
+      {
+        "id": "4",
+        "front": "When does a KeyError occur?",
+        "back": "KeyError occurs when you try to access a dictionary key that doesn't exist."
+      },
+      {
+        "id": "5",
+        "front": "When does a ZeroDivisionError occur?",
+        "back": "ZeroDivisionError occurs when you try to divide a number by zero."
+      }
+    ]
+  }
+]

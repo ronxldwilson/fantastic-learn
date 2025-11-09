@@ -1,0 +1,78 @@
+[
+  {
+    "id": "conditionals",
+    "title": "Conditional Statements",
+    "description": "Master if-else statements and conditional logic.",
+    "difficulty": "beginner",
+    "questions": [
+      {
+        "id": "1",
+        "type": "multiple-choice",
+        "question": "Which keyword is used to start a conditional statement?",
+        "options": ["for", "while", "if", "def"],
+        "correctAnswer": "if",
+        "explanation": "The 'if' keyword starts a conditional statement that executes code based on a condition."
+      },
+      {
+        "id": "2",
+        "type": "code-input",
+        "question": "Write an if statement that checks if x is greater than 10.",
+        "correctAnswer": "if x > 10:",
+        "explanation": "The if statement uses a condition followed by a colon, and the code block is indented."
+      },
+      {
+        "id": "3",
+        "type": "multiple-choice",
+        "question": "What is the purpose of the else clause?",
+        "options": ["To execute code when the if condition is false", "To create nested conditions", "To repeat code execution", "To define functions"],
+        "correctAnswer": "To execute code when the if condition is false",
+        "explanation": "The else clause provides an alternative code path when the if condition evaluates to false."
+      },
+      {
+        "id": "4",
+        "type": "text-input",
+        "question": "What keyword is used for multiple conditions?",
+        "correctAnswer": "elif",
+        "explanation": "'elif' (else if) allows checking multiple conditions in sequence."
+      }
+    ]
+  },
+  {
+    "id": "loops",
+    "title": "Loops",
+    "description": "Learn about for and while loops in Python.",
+    "difficulty": "beginner",
+    "questions": [
+      {
+        "id": "1",
+        "type": "multiple-choice",
+        "question": "Which loop is best for iterating over a sequence?",
+        "options": ["while", "for", "if", "def"],
+        "correctAnswer": "for",
+        "explanation": "For loops are ideal for iterating over sequences like lists, strings, or ranges."
+      },
+      {
+        "id": "2",
+        "type": "code-input",
+        "question": "Write a for loop that prints numbers 1 to 5.",
+        "correctAnswer": "for i in range(1, 6):\n    print(i)",
+        "explanation": "Use range(1, 6) to generate numbers 1 through 5, and indent the print statement."
+      },
+      {
+        "id": "3",
+        "type": "multiple-choice",
+        "question": "What is the difference between break and continue?",
+        "options": ["break exits the loop, continue skips to next iteration", "continue exits the loop, break skips iteration", "Both do the same thing", "Neither affects loop execution"],
+        "correctAnswer": "break exits the loop, continue skips to next iteration",
+        "explanation": "break terminates the loop entirely, while continue skips the current iteration and moves to the next."
+      },
+      {
+        "id": "4",
+        "type": "text-input",
+        "question": "What type of loop continues as long as a condition is true?",
+        "correctAnswer": "while",
+        "explanation": "While loops execute as long as their condition evaluates to True."
+      }
+    ]
+  }
+]

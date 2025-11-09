@@ -1,0 +1,44 @@
+[
+  {
+    "id": "basics",
+    "title": "Python Basics",
+    "description": "Learn the fundamentals of Python including variables, data types, and basic operations.",
+    "icon": "🐍"
+  },
+  {
+    "id": "control-structures",
+    "title": "Control Structures",
+    "description": "Master loops, conditionals, and control flow in Python.",
+    "icon": "🔀"
+  },
+  {
+    "id": "data-structures",
+    "title": "Data Structures",
+    "description": "Learn about lists, dictionaries, tuples, and sets.",
+    "icon": "📊"
+  },
+  {
+    "id": "functions",
+    "title": "Functions",
+    "description": "Learn about defining and using functions, parameters, return values, and scope.",
+    "icon": "⚙️"
+  },
+  {
+    "id": "oop",
+    "title": "Object-Oriented Programming",
+    "description": "Master classes, objects, inheritance, and encapsulation in Python.",
+    "icon": "🏗️"
+  },
+  {
+    "id": "file-handling",
+    "title": "File Handling",
+    "description": "Learn to read from and write to files in Python.",
+    "icon": "📁"
+  },
+  {
+    "id": "error-handling",
+    "title": "Error Handling",
+    "description": "Master try-except blocks and exception handling.",
+    "icon": "🛡️"
+  }
+]

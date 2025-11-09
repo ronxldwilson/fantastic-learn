@@ -1,0 +1,100 @@
+[
+  {
+    "id": "lists",
+    "title": "Lists",
+    "description": "Master Python lists and their operations.",
+    "difficulty": "beginner",
+    "questions": [
+      {
+        "id": "1",
+        "type": "multiple-choice",
+        "question": "How do you create an empty list in Python?",
+        "options": ["list()", "[ ]", "{}", "list = empty"],
+        "correctAnswer": "[ ]",
+        "explanation": "Both list() and [] create empty lists, but [] is more common and readable."
+      },
+      {
+        "id": "2",
+        "type": "text-input",
+        "question": "What method adds an element to the end of a list?",
+        "correctAnswer": "append",
+        "explanation": "The append() method adds an element to the end of the list."
+      },
+      {
+        "id": "3",
+        "type": "code-input",
+        "question": "Write code to create a list of numbers from 1 to 5.",
+        "correctAnswer": "numbers = [1, 2, 3, 4, 5]",
+        "explanation": "Lists are created using square brackets with comma-separated values."
+      },
+      {
+        "id": "4",
+        "type": "multiple-choice",
+        "question": "Which of these is NOT a valid way to access list elements?",
+        "options": ["list[0]", "list[-1]", "list[1.5]", "list[2:5]"],
+        "correctAnswer": "list[1.5]",
+        "explanation": "List indices must be integers. list[1.5] is invalid, but slicing with integers works."
+      }
+    ]
+  },
+  {
+    "id": "dictionaries",
+    "title": "Dictionaries",
+    "description": "Learn about Python dictionaries and key-value pairs.",
+    "difficulty": "beginner",
+    "questions": [
+      {
+        "id": "1",
+        "type": "multiple-choice",
+        "question": "How do you create an empty dictionary?",
+        "options": ["dict()", "{}", "[ ]", "dict = empty"],
+        "correctAnswer": "{}",
+        "explanation": "Both dict() and {} create empty dictionaries, but {} is more concise."
+      },
+      {
+        "id": "2",
+        "type": "code-input",
+        "question": "Write code to create a dictionary with keys 'name' and 'age'.",
+        "correctAnswer": "person = {'name': 'Alice', 'age': 25}",
+        "explanation": "Dictionaries use curly braces with key-value pairs separated by colons."
+      },
+      {
+        "id": "3",
+        "type": "text-input",
+        "question": "What method gets a value from a dictionary with a default if key doesn't exist?",
+        "correctAnswer": "get",
+        "explanation": "The get() method returns the value for a key, or a default value if the key is not found."
+      }
+    ]
+  },
+  {
+    "id": "tuples-sets",
+    "title": "Tuples and Sets",
+    "description": "Explore tuples and sets in Python.",
+    "difficulty": "intermediate",
+    "questions": [
+      {
+        "id": "1",
+        "type": "multiple-choice",
+        "question": "Which of these is immutable in Python?",
+        "options": ["List", "Dictionary", "Tuple", "Set"],
+        "correctAnswer": "Tuple",
+        "explanation": "Tuples are immutable - their contents cannot be changed after creation."
+      },
+      {
+        "id": "2",
+        "type": "text-input",
+        "question": "What data structure contains only unique elements?",
+        "correctAnswer": "set",
+        "explanation": "Sets automatically remove duplicate elements and only store unique values."
+      },
+      {
+        "id": "3",
+        "type": "code-input",
+        "question": "Write code to create a tuple with three elements.",
+        "correctAnswer": "my_tuple = (1, 2, 3)",
+        "explanation": "Tuples are created using parentheses with comma-separated values."
+      }
+    ]
+  }
+]

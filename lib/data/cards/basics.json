@@ -1,0 +1,53 @@
+[
+  {
+    "id": "variables",
+    "title": "Variables",
+    "description": "Learn about variables in Python.",
+    "difficulty": "beginner",
+    "cards": [
+      {
+        "id": "1",
+        "front": "What is a variable in Python?",
+        "back": "A variable is a name that refers to a value stored in memory. You create one by assigning a value: x = 5"
+      },
+      {
+        "id": "2",
+        "front": "How do you declare a variable in Python?",
+        "back": "Python doesn't require explicit declaration. Just assign a value: name = 'Alice'"
+      },
+      {
+        "id": "3",
+        "front": "What are the rules for variable names?",
+        "back": "Must start with letter or underscore, can contain letters, digits, underscores. Case-sensitive. No reserved words."
+      },
+      {
+        "id": "4",
+        "front": "What is variable assignment?",
+        "back": "Using the = operator to bind a name to a value: age = 25"
+      }
+    ]
+  },
+  {
+    "id": "data-types",
+    "title": "Data Types",
+    "description": "Basic data types in Python.",
+    "difficulty": "beginner",
+    "cards": [
+      {
+        "id": "1",
+        "front": "What are the basic data types in Python?",
+        "back": "int (integers), float (decimals), str (strings), bool (True/False)"
+      },
+      {
+        "id": "2",
+        "front": "How do you create a string?",
+        "back": "Use single or double quotes: 'hello' or \"hello\""
+      },
+      {
+        "id": "3",
+        "front": "What is type() function?",
+        "back": "Returns the type of a value: type(5) returns <class 'int'>"
+      }
+    ]
+  }
+]

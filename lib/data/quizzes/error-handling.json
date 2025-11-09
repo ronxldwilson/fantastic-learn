@@ -1,0 +1,25 @@
+[
+  {
+    "id": "exceptions",
+    "title": "Exceptions and Try-Except",
+    "description": "Learn to handle errors gracefully.",
+    "difficulty": "intermediate",
+    "questions": [
+      {
+        "id": "1",
+        "type": "multiple-choice",
+        "question": "Which block catches exceptions?",
+        "options": ["try", "catch", "except", "finally"],
+        "correctAnswer": "except",
+        "explanation": "The \"except\" block catches and handles exceptions."
+      },
+      {
+        "id": "2",
+        "type": "text-input",
+        "question": "What is the base class for all exceptions in Python?",
+        "correctAnswer": "Exception",
+        "explanation": "Exception is the base class for all built-in exceptions."
+      }
+    ]
+  }
+]

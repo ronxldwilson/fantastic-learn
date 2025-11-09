@@ -1,0 +1,25 @@
+[
+  {
+    "id": "defining-functions",
+    "title": "Defining Functions",
+    "description": "Practice creating and calling functions.",
+    "difficulty": "beginner",
+    "questions": [
+      {
+        "id": "1",
+        "type": "multiple-choice",
+        "question": "Which keyword is used to define a function in Python?",
+        "options": ["func", "def", "function", "define"],
+        "correctAnswer": "def",
+        "explanation": "The \"def\" keyword is used to define a function in Python."
+      },
+      {
+        "id": "2",
+        "type": "text-input",
+        "question": "What is the syntax to define a function that takes no parameters?",
+        "correctAnswer": "def function_name():",
+        "explanation": "Functions are defined with \"def\" followed by the name and parentheses."
+      }
+    ]
+  }
+]

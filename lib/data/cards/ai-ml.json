@@ -44,6 +44,116 @@
         "id": "8",
         "front": "How does K-Nearest Neighbors (KNN) work?",
         "back": "A lazy learning algorithm that classifies new instances based on the majority vote of their k nearest neighbors in the training data."
+      },
+      {
+        "id": "9",
+        "front": "What is Naive Bayes?",
+        "back": "A probabilistic classifier based on Bayes' theorem that assumes independence between features."
+      },
+      {
+        "id": "10",
+        "front": "What is ensemble learning?",
+        "back": "Combining multiple models to improve predictive performance and reduce overfitting."
+      },
+      {
+        "id": "11",
+        "front": "What is overfitting?",
+        "back": "When a model performs well on training data but poorly on new data, usually due to learning noise in the training set."
+      },
+      {
+        "id": "12",
+        "front": "What is underfitting?",
+        "back": "When a model is too simple to capture the underlying patterns in the data, performing poorly even on training data."
+      },
+      {
+        "id": "13",
+        "front": "What is bias-variance tradeoff?",
+        "back": "The balance between model complexity (variance) and simplicity (bias) - high bias leads to underfitting, high variance to overfitting."
+      },
+      {
+        "id": "14",
+        "front": "What is cross-validation?",
+        "back": "A technique to evaluate model performance by splitting data into multiple train/test sets and averaging results."
+      },
+      {
+        "id": "15",
+        "front": "What is k-fold cross-validation?",
+        "back": "Cross-validation where data is split into k equal parts, using each part as test set once while others are training set."
+      },
+      {
+        "id": "16",
+        "front": "What is gradient boosting?",
+        "back": "An ensemble method that builds models sequentially, each new model correcting errors of the previous ones."
+      },
+      {
+        "id": "17",
+        "front": "What is XGBoost?",
+        "back": "Extreme Gradient Boosting - optimized gradient boosting with regularization, parallel processing, and tree pruning."
+      },
+      {
+        "id": "18",
+        "front": "What is LightGBM?",
+        "back": "Light Gradient Boosting Machine - uses histogram-based algorithms for faster training and lower memory usage."
+      },
+      {
+        "id": "19",
+        "front": "What is CatBoost?",
+        "back": "Categorical Boosting - handles categorical features automatically without preprocessing, uses ordered boosting."
+      },
+      {
+        "id": "20",
+        "front": "What is AdaBoost?",
+        "back": "Adaptive Boosting - adjusts weights of incorrectly classified instances to focus learning on hard examples."
+      },
+      {
+        "id": "21",
+        "front": "What is bagging?",
+        "back": "Bootstrap AGGregatING - training multiple models on random subsets of data and averaging predictions."
+      },
+      {
+        "id": "22",
+        "front": "What is the difference between bagging and boosting?",
+        "back": "Bagging trains models independently in parallel; boosting trains models sequentially, each correcting previous errors."
+      },
+      {
+        "id": "23",
+        "front": "What is regularization?",
+        "back": "Techniques that add penalties to the loss function to prevent overfitting by discouraging complex models."
+      },
+      {
+        "id": "24",
+        "front": "What is L1 regularization (Lasso)?",
+        "back": "Adds absolute value of coefficients to loss function, promotes sparsity by setting some coefficients to zero."
+      },
+      {
+        "id": "25",
+        "front": "What is L2 regularization (Ridge)?",
+        "back": "Adds squared value of coefficients to loss function, prevents large coefficients and reduces overfitting."
+      },
+      {
+        "id": "26",
+        "front": "What is Elastic Net?",
+        "back": "Combines L1 and L2 regularization to get benefits of both sparsity and coefficient shrinkage."
+      },
+      {
+        "id": "27",
+        "front": "What is early stopping?",
+        "back": "Stopping training when validation performance stops improving, preventing overfitting."
+      },
+      {
+        "id": "28",
+        "front": "What is dropout in neural networks?",
+        "back": "Regularization technique that randomly drops neurons during training to prevent co-adaptation."
+      },
+      {
+        "id": "29",
+        "front": "What is batch normalization?",
+        "back": "Normalizes layer inputs during training to stabilize learning and allow higher learning rates."
+      },
+      {
+        "id": "30",
+        "front": "What is transfer learning?",
+        "back": "Using knowledge from a pre-trained model on a new but related task, especially useful with limited data."
       }
     ]
   },
@@ -87,6 +197,121 @@
         "id": "7",
         "front": "What is anomaly detection?",
         "back": "The identification of data points that deviate significantly from the normal behavior or expected patterns in the dataset."
+      },
+      {
+        "id": "8",
+        "front": "What is t-SNE?",
+        "back": "t-Distributed Stochastic Neighbor Embedding - a technique for visualizing high-dimensional data in 2D or 3D."
+      },
+      {
+        "id": "9",
+        "front": "What is Gaussian Mixture Models (GMM)?",
+        "back": "A probabilistic model that assumes data points are generated from a mixture of several Gaussian distributions."
+      },
+      {
+        "id": "10",
+        "front": "What is the elbow method?",
+        "back": "A technique for determining the optimal number of clusters in K-means by plotting the sum of squared distances."
+      },
+      {
+        "id": "11",
+        "front": "What is hierarchical clustering?",
+        "back": "A clustering method that builds a hierarchy of clusters through agglomerative (bottom-up) or divisive (top-down) approaches."
+      },
+      {
+        "id": "12",
+        "front": "What is agglomerative clustering?",
+        "back": "Bottom-up hierarchical clustering that starts with individual points and merges them into clusters step by step."
+      },
+      {
+        "id": "13",
+        "front": "What is divisive clustering?",
+        "back": "Top-down hierarchical clustering that starts with all points in one cluster and splits them recursively."
+      },
+      {
+        "id": "14",
+        "front": "What is DBSCAN?",
+        "back": "Density-Based Spatial Clustering of Applications with Noise - groups points that are closely packed together."
+      },
+      {
+        "id": "15",
+        "front": "What is OPTICS?",
+        "back": "Ordering Points To Identify the Clustering Structure - extends DBSCAN to find clusters of varying densities."
+      },
+      {
+        "id": "16",
+        "front": "What is Gaussian Mixture Models (GMM)?",
+        "back": "Probabilistic model assuming data points are generated from a mixture of several Gaussian distributions."
+      },
+      {
+        "id": "17",
+        "front": "What is Expectation-Maximization (EM) algorithm?",
+        "back": "Iterative algorithm for finding maximum likelihood estimates in models with latent variables, used in GMM."
+      },
+      {
+        "id": "18",
+        "front": "What is t-SNE?",
+        "back": "t-Distributed Stochastic Neighbor Embedding - dimensionality reduction technique for visualizing high-dimensional data in 2D/3D."
+      },
+      {
+        "id": "19",
+        "front": "What is UMAP?",
+        "back": "Uniform Manifold Approximation and Projection - faster dimensionality reduction alternative to t-SNE."
+      },
+      {
+        "id": "20",
+        "front": "What is Principal Component Analysis (PCA)?",
+        "back": "Linear dimensionality reduction technique that finds principal components explaining maximum variance in data."
+      },
+      {
+        "id": "21",
+        "front": "What is eigenvalue decomposition?",
+        "back": "Mathematical technique used in PCA to find principal components by decomposing the covariance matrix."
+      },
+      {
+        "id": "22",
+        "front": "What is explained variance ratio?",
+        "back": "The proportion of total variance explained by each principal component in PCA."
+      },
+      {
+        "id": "23",
+        "front": "What is reconstruction error in PCA?",
+        "back": "The difference between original data and data reconstructed from principal components."
+      },
+      {
+        "id": "24",
+        "front": "What is Independent Component Analysis (ICA)?",
+        "back": "Technique for separating multivariate signals into additive subcomponents assuming independence."
+      },
+      {
+        "id": "25",
+        "front": "What is Non-negative Matrix Factorization (NMF)?",
+        "back": "Matrix factorization technique that decomposes data into non-negative factors, useful for topic modeling."
+      },
+      {
+        "id": "26",
+        "front": "What is Latent Dirichlet Allocation (LDA)?",
+        "back": "Generative probabilistic model for topic discovery in text collections."
+      },
+      {
+        "id": "27",
+        "front": "What is anomaly detection?",
+        "back": "Identifying data points that deviate significantly from normal behavior or expected patterns."
+      },
+      {
+        "id": "28",
+        "front": "What is Isolation Forest?",
+        "back": "Ensemble method for anomaly detection that isolates anomalies by randomly partitioning data."
+      },
+      {
+        "id": "29",
+        "front": "What is One-Class SVM?",
+        "back": "SVM variant for anomaly detection that learns a decision boundary around normal data points."
+      },
+      {
+        "id": "30",
+        "front": "What is Local Outlier Factor (LOF)?",
+        "back": "Density-based anomaly detection method that compares local density of a point to its neighbors."
       }
     ]
   },
@@ -135,6 +360,166 @@
         "id": "8",
         "front": "What is transfer learning?",
         "back": "Using a pre-trained model on a new but related task, leveraging knowledge learned from a large dataset."
+      },
+      {
+        "id": "9",
+        "front": "What is a loss function?",
+        "back": "A function that measures how well the model's predictions match the actual target values."
+      },
+      {
+        "id": "10",
+        "front": "What is overfitting in neural networks?",
+        "back": "When a model performs well on training data but poorly on unseen data, usually due to excessive model complexity."
+      },
+      {
+        "id": "11",
+        "front": "What is a perceptron?",
+        "back": "The basic building block of neural networks - a single neuron that takes inputs, applies weights and bias, and produces output via activation function."
+      },
+      {
+        "id": "12",
+        "front": "What is backpropagation?",
+        "back": "Algorithm for training neural networks by computing gradients of loss function and updating weights through chain rule."
+      },
+      {
+        "id": "13",
+        "front": "What is gradient descent?",
+        "back": "Optimization algorithm that minimizes loss function by iteratively moving in direction of steepest descent."
+      },
+      {
+        "id": "14",
+        "front": "What is stochastic gradient descent (SGD)?",
+        "back": "Variant of gradient descent that uses single training example per iteration, making it faster but noisier."
+      },
+      {
+        "id": "15",
+        "front": "What is mini-batch gradient descent?",
+        "back": "Compromise between batch and stochastic GD - uses small batches of data for each weight update."
+      },
+      {
+        "id": "16",
+        "front": "What is Adam optimizer?",
+        "back": "Adaptive Moment Estimation - combines benefits of AdaGrad and RMSProp, adapts learning rates for each parameter."
+      },
+      {
+        "id": "17",
+        "front": "What is learning rate annealing?",
+        "back": "Gradually decreasing learning rate during training to allow fine-tuning of weights as training progresses."
+      },
+      {
+        "id": "18",
+        "front": "What is vanishing gradient problem?",
+        "back": "Issue in deep networks where gradients become extremely small during backpropagation, preventing effective learning."
+      },
+      {
+        "id": "19",
+        "front": "What is exploding gradient problem?",
+        "back": "Opposite of vanishing gradients - gradients become extremely large, causing unstable training."
+      },
+      {
+        "id": "20",
+        "front": "What are skip connections?",
+        "back": "Connections that skip one or more layers in neural networks, helping with gradient flow (used in ResNet)."
+      },
+      {
+        "id": "21",
+        "front": "What is ResNet?",
+        "back": "Residual Network - uses skip connections to solve vanishing gradient problem in very deep networks."
+      },
+      {
+        "id": "22",
+        "front": "What is DenseNet?",
+        "back": "Densely Connected Convolutional Network - each layer receives feature maps from all preceding layers."
+      },
+      {
+        "id": "23",
+        "front": "What is a convolutional layer?",
+        "back": "Layer that applies learnable filters (kernels) across input to detect local patterns and features."
+      },
+      {
+        "id": "24",
+        "front": "What is pooling in CNNs?",
+        "back": "Downsampling operation that reduces spatial dimensions while retaining important features."
+      },
+      {
+        "id": "25",
+        "front": "What is max pooling?",
+        "back": "Pooling operation that takes maximum value from each pool region, preserving prominent features."
+      },
+      {
+        "id": "26",
+        "front": "What is average pooling?",
+        "back": "Pooling operation that takes average value from each pool region, providing smoother downsampling."
+      },
+      {
+        "id": "27",
+        "front": "What is global average pooling?",
+        "back": "Pooling operation that reduces entire feature map to single value per channel, reducing parameters."
+      },
+      {
+        "id": "28",
+        "front": "What is a recurrent neural network (RNN)?",
+        "back": "Neural network with loops that allows information to persist, ideal for sequential data."
+      },
+      {
+        "id": "29",
+        "front": "What is the vanishing gradient problem in RNNs?",
+        "back": "Gradients become very small when backpropagating through many time steps, making learning long-term dependencies difficult."
+      },
+      {
+        "id": "30",
+        "front": "What is Long Short-Term Memory (LSTM)?",
+        "back": "RNN variant with gates that control information flow, solving vanishing gradient problem for long sequences."
+      },
+      {
+        "id": "31",
+        "front": "What are LSTM gates?",
+        "back": "Forget gate, input gate, and output gate that control what information to keep, add, or output at each time step."
+      },
+      {
+        "id": "32",
+        "front": "What is Gated Recurrent Unit (GRU)?",
+        "back": "Simplified LSTM variant with fewer parameters - combines forget and input gates into update gate."
+      },
+      {
+        "id": "33",
+        "front": "What is attention mechanism?",
+        "back": "Mechanism that allows model to focus on relevant parts of input when producing output."
+      },
+      {
+        "id": "34",
+        "front": "What is self-attention?",
+        "back": "Attention mechanism where sequence elements attend to each other to compute representations."
+      },
+      {
+        "id": "35",
+        "front": "What is the transformer architecture?",
+        "back": "Neural network architecture based entirely on attention mechanisms, no recurrence or convolution."
+      },
+      {
+        "id": "36",
+        "front": "What is multi-head attention?",
+        "back": "Multiple attention mechanisms running in parallel, allowing model to attend to different aspects simultaneously."
+      },
+      {
+        "id": "37",
+        "front": "What is positional encoding?",
+        "back": "Technique to inject position information into transformer models since they have no inherent sequence awareness."
+      },
+      {
+        "id": "38",
+        "front": "What is teacher forcing?",
+        "back": "Training technique for sequence models where ground truth is used as input instead of model predictions."
+      },
+      {
+        "id": "39",
+        "front": "What is beam search?",
+        "back": "Search algorithm that keeps track of k most probable sequences during decoding, better than greedy search."
+      },
+      {
+        "id": "40",
+        "front": "What is generative adversarial network (GAN)?",
+        "back": "Framework with generator and discriminator networks competing to produce realistic synthetic data."
       }
     ]
   },
@@ -193,6 +578,81 @@
         "id": "10",
         "front": "What is train-validation-test split?",
         "back": "Dividing data into training (60-80%), validation (10-20%), and test (10-20%) sets for model development and evaluation."
+      },
+      {
+        "id": "11",
+        "front": "What is stratified sampling?",
+        "back": "Sampling method that maintains the same proportion of classes in train/test sets as in the original data."
+      },
+      {
+        "id": "12",
+        "front": "What is SMOTE?",
+        "back": "Synthetic Minority Over-sampling Technique - generates synthetic examples of minority class to handle imbalanced data."
+      },
+      {
+        "id": "13",
+        "front": "What is Tomek links?",
+        "back": "Pairs of examples from different classes that are nearest neighbors, used for removing noisy or borderline examples."
+      },
+      {
+        "id": "14",
+        "front": "What is data leakage?",
+        "back": "When information from outside the training set improperly influences the model, leading to overly optimistic performance."
+      },
+      {
+        "id": "15",
+        "front": "What is target leakage?",
+        "back": "When features that are not available at prediction time are used during training, causing data leakage."
+      },
+      {
+        "id": "16",
+        "front": "What is feature leakage?",
+        "back": "When information that would not be available at prediction time is included in features, causing data leakage."
+      },
+      {
+        "id": "17",
+        "front": "What is data augmentation?",
+        "back": "Techniques to artificially increase dataset size by creating modified versions of existing data."
+      },
+      {
+        "id": "18",
+        "front": "What is label smoothing?",
+        "back": "Technique that replaces hard labels (0/1) with soft labels (e.g., 0.1/0.9) to reduce overfitting and improve calibration."
+      },
+      {
+        "id": "19",
+        "front": "What is mixup?",
+        "back": "Data augmentation technique that creates new training examples by convex combinations of pairs of examples and their labels."
+      },
+      {
+        "id": "20",
+        "front": "What is cutout?",
+        "back": "Regularization technique that randomly masks out square regions of input images during training."
+      },
+      {
+        "id": "21",
+        "front": "What is random erasing?",
+        "back": "Data augmentation that randomly selects a rectangle region in an image and erases its pixels with random values."
+      },
+      {
+        "id": "22",
+        "front": "What is normalization vs standardization?",
+        "back": "Normalization scales to [0,1]; standardization transforms to mean=0, std=1 using z-score."
+      },
+      {
+        "id": "23",
+        "front": "What is robust scaling?",
+        "back": "Scaling using median and IQR instead of mean and std, making it robust to outliers."
+      },
+      {
+        "id": "24",
+        "front": "What is power transformation?",
+        "back": "Family of transformations (Box-Cox, Yeo-Johnson) to make data more Gaussian-like."
+      },
+      {
+        "id": "25",
+        "front": "What is quantile transformation?",
+        "back": "Transforms features to follow uniform or normal distribution using quantiles."
       }
     ]
   },
@@ -251,6 +711,56 @@
         "id": "10",
         "front": "What is a confusion matrix?",
         "back": "A table showing the performance of a classification model with actual vs predicted values: [[TN, FP], [FN, TP]]."
+      },
+      {
+        "id": "11",
+        "front": "What is AUROC?",
+        "back": "Area Under the Receiver Operating Characteristic curve - measures ability to distinguish between classes."
+      },
+      {
+        "id": "12",
+        "front": "What is log loss (cross-entropy)?",
+        "back": "Measure of uncertainty in predictions - lower values indicate better calibrated probabilities."
+      },
+      {
+        "id": "13",
+        "front": "What is brier score?",
+        "back": "Measure of accuracy of probabilistic predictions, quadratic loss between predicted probabilities and outcomes."
+      },
+      {
+        "id": "14",
+        "front": "What is Cohen's kappa?",
+        "back": "Statistic that measures inter-rater agreement, accounts for agreement occurring by chance."
+      },
+      {
+        "id": "15",
+        "front": "What is Matthews correlation coefficient (MCC)?",
+        "back": "Correlation coefficient between observed and predicted binary classifications, ranges from -1 to +1."
+      },
+      {
+        "id": "16",
+        "front": "What is top-k accuracy?",
+        "back": "Accuracy metric where prediction is correct if true label is among top k predicted classes."
+      },
+      {
+        "id": "17",
+        "front": "What is mean absolute percentage error (MAPE)?",
+        "back": "Measure of prediction accuracy as percentage - average of absolute percentage errors."
+      },
+      {
+        "id": "18",
+        "front": "What is symmetric mean absolute percentage error (sMAPE)?",
+        "back": "Symmetrical version of MAPE that bounds error between 0 and 200%, treating over/under-forecasts equally."
+      },
+      {
+        "id": "19",
+        "front": "What is R-squared adjusted?",
+        "back": "Modified R-squared that penalizes addition of irrelevant features, better for comparing models with different numbers of features."
+      },
+      {
+        "id": "20",
+        "front": "What is Akaike information criterion (AIC)?",
+        "back": "Measure of relative quality of statistical models, penalizes model complexity to prevent overfitting."
       }
     ]
   },
@@ -309,6 +819,56 @@
         "id": "10",
         "front": "What is feature importance?",
         "back": "A measure of how much each feature contributes to the model's predictions, often from tree-based models."
+      },
+      {
+        "id": "11",
+        "front": "What is permutation feature importance?",
+        "back": "Method that measures feature importance by randomly shuffling feature values and observing performance drop."
+      },
+      {
+        "id": "12",
+        "front": "What is SHAP (SHapley Additive exPlanations)?",
+        "back": "Game theory approach to explain individual predictions by computing feature contributions."
+      },
+      {
+        "id": "13",
+        "front": "What is LIME (Local Interpretable Model-agnostic Explanations)?",
+        "back": "Technique that explains individual predictions by approximating model locally with interpretable model."
+      },
+      {
+        "id": "14",
+        "front": "What is partial dependence plots (PDP)?",
+        "back": "Visualization showing marginal effect of feature on predicted outcome, averaged over other features."
+      },
+      {
+        "id": "15",
+        "front": "What is individual conditional expectation (ICE) plots?",
+        "back": "Extension of PDP showing effect of feature on prediction for individual instances."
+      },
+      {
+        "id": "16",
+        "front": "What is feature interaction?",
+        "back": "When effect of one feature depends on values of other features, requiring interaction terms."
+      },
+      {
+        "id": "17",
+        "front": "What is domain knowledge feature engineering?",
+        "back": "Creating features based on understanding of problem domain and data generation process."
+      },
+      {
+        "id": "18",
+        "front": "What is temporal feature engineering?",
+        "back": "Creating features from time series data like lags, rolling statistics, seasonal decompositions."
+      },
+      {
+        "id": "19",
+        "front": "What is text feature engineering?",
+        "back": "Extracting features from text like n-grams, TF-IDF, word embeddings, sentiment scores."
+      },
+      {
+        "id": "20",
+        "front": "What is image feature engineering?",
+        "back": "Extracting features from images like color histograms, texture features, edge detection."
       }
     ]
   },
@@ -498,6 +1058,51 @@
         "id": "11",
         "front": "What is mAP (mean Average Precision)?",
         "back": "Standard metric for object detection that averages precision across different IoU thresholds."
+      },
+      {
+        "id": "12",
+        "front": "What is non-maximum suppression (NMS)?",
+        "back": "Algorithm that removes overlapping bounding boxes, keeping only the one with highest confidence."
+      },
+      {
+        "id": "13",
+        "front": "What is anchor boxes?",
+        "back": "Predefined bounding boxes of different sizes and aspect ratios used in object detection algorithms."
+      },
+      {
+        "id": "14",
+        "front": "What is region proposal network (RPN)?",
+        "back": "Network that proposes regions likely to contain objects, used in Faster R-CNN and similar detectors."
+      },
+      {
+        "id": "15",
+        "front": "What is RoI pooling?",
+        "back": "Technique that extracts fixed-size feature maps from regions of interest for object detection."
+      },
+      {
+        "id": "16",
+        "front": "What is Mask R-CNN?",
+        "back": "Extension of Faster R-CNN that adds segmentation masks to object detection and classification."
+      },
+      {
+        "id": "17",
+        "front": "What is single shot detector (SSD)?",
+        "back": "Object detection method that predicts bounding boxes and class probabilities at multiple scales in single pass."
+      },
+      {
+        "id": "18",
+        "front": "What is focal loss?",
+        "back": "Loss function that addresses class imbalance in object detection by down-weighting easy examples."
+      },
+      {
+        "id": "19",
+        "front": "What is image segmentation?",
+        "back": "Task of partitioning image into multiple segments to simplify or change representation for analysis."
+      },
+      {
+        "id": "20",
+        "front": "What is U-Net?",
+        "back": "Convolutional network architecture for biomedical image segmentation with encoder-decoder structure."
       }
     ]
   },
@@ -904,6 +1509,371 @@
         "id": "10",
         "front": "What are limitations of AutoML?",
         "back": "May not capture domain expertise, can be expensive, limited customization, black-box nature."
+      },
+      {
+        "id": "11",
+        "front": "What is automated model deployment?",
+        "back": "Tools that automatically deploy trained models to production environments with monitoring and scaling."
+      }
+    ]
+  },
+  {
+    "id": "17",
+    "title": "Reinforcement Learning",
+    "description": "Key concepts in reinforcement learning and decision-making.",
+    "difficulty": "advanced",
+    "cards": [
+      {
+        "id": "1",
+        "front": "What is reinforcement learning?",
+        "back": "Learning through trial and error with rewards/penalties to maximize cumulative reward."
+      },
+      {
+        "id": "2",
+        "front": "What is an agent in RL?",
+        "back": "The learner that interacts with the environment to achieve goals."
+      },
+      {
+        "id": "3",
+        "front": "What is an environment in RL?",
+        "back": "The world the agent interacts with, providing states, rewards, and accepting actions."
+      },
+      {
+        "id": "4",
+        "front": "What is a policy in RL?",
+        "back": "A strategy that maps states to actions, defining agent behavior."
+      },
+      {
+        "id": "5",
+        "front": "What is Q-learning?",
+        "back": "Model-free RL algorithm that learns optimal action-value functions through experience."
+      },
+      {
+        "id": "6",
+        "front": "What is the exploration-exploitation dilemma?",
+        "back": "Balancing trying new actions (exploration) vs. using known good actions (exploitation)."
+      },
+      {
+        "id": "7",
+        "front": "What is ε-greedy strategy?",
+        "back": "Exploration strategy: choose random action with probability ε, greedy action otherwise."
+      },
+      {
+        "id": "8",
+        "front": "What is Deep Q-Network (DQN)?",
+        "back": "Combining Q-learning with deep neural networks to handle high-dimensional state spaces."
+      },
+      {
+        "id": "9",
+        "front": "What is policy gradient?",
+        "back": "RL approach that optimizes policies directly by computing gradients with respect to policy parameters."
+      },
+      {
+        "id": "10",
+        "front": "What is AlphaGo?",
+        "back": "Reinforcement learning system that defeated world champion Go players."
+      },
+      {
+        "id": "11",
+        "front": "What is Monte Carlo Tree Search (MCTS)?",
+        "back": "A search algorithm that combines Monte Carlo simulation with tree search for decision-making."
+      },
+      {
+        "id": "12",
+        "front": "What is value function in RL?",
+        "back": "A function that estimates the expected cumulative reward from a given state."
+      },
+      {
+        "id": "13",
+        "front": "What is Q-function?",
+        "back": "State-action value function that estimates expected cumulative reward from taking action in state."
+      },
+      {
+        "id": "14",
+        "front": "What is temporal difference learning?",
+        "back": "Method that learns by updating estimates based on other learned estimates, bootstrapping."
+      },
+      {
+        "id": "15",
+        "front": "What is SARSA?",
+        "back": "On-policy TD control algorithm that learns Q-values using action taken by current policy."
+      },
+      {
+        "id": "16",
+        "front": "What is expected SARSA?",
+        "back": "Variant of SARSA that uses expected value over next actions instead of sampled action."
+      },
+      {
+        "id": "17",
+        "front": "What is double Q-learning?",
+        "back": "Technique to reduce overestimation bias in Q-learning by using separate networks for action selection and evaluation."
+      },
+      {
+        "id": "18",
+        "front": "What is prioritized experience replay?",
+        "back": "Experience replay that samples important transitions more frequently based on TD error."
+      },
+      {
+        "id": "19",
+        "front": "What is hindsight experience replay?",
+        "back": "Technique that relabels failed experiences as successful by changing goals, improving sample efficiency."
+      },
+      {
+        "id": "20",
+        "front": "What is curriculum learning?",
+        "back": "Training approach that presents examples in order of increasing difficulty."
+      }
+    ]
+  },
+  {
+    "id": "18",
+    "title": "Natural Language Processing",
+    "description": "Text processing, language understanding, and NLP fundamentals.",
+    "difficulty": "advanced",
+    "cards": [
+      {
+        "id": "1",
+        "front": "What is tokenization?",
+        "back": "Breaking text into smaller units (tokens) like words, phrases, or characters for processing."
+      },
+      {
+        "id": "2",
+        "front": "What is stemming?",
+        "back": "Reducing words to their root form by removing suffixes (e.g., 'running' → 'run')."
+      },
+      {
+        "id": "3",
+        "front": "What is lemmatization?",
+        "back": "Reducing words to their base dictionary form using vocabulary and morphological analysis."
+      },
+      {
+        "id": "4",
+        "front": "What does TF-IDF measure?",
+        "back": "Term importance in a document relative to a collection, balancing frequency with rarity."
+      },
+      {
+        "id": "5",
+        "front": "What is word embedding?",
+        "back": "Dense vector representations of words where semantically similar words have similar vectors."
+      },
+      {
+        "id": "6",
+        "front": "What is Word2Vec?",
+        "back": "Neural network-based word embedding technique using CBOW or Skip-gram architectures."
+      },
+      {
+        "id": "7",
+        "front": "What is GloVe?",
+        "back": "Global Vectors - word embedding technique based on co-occurrence matrix factorization."
+      },
+      {
+        "id": "8",
+        "front": "What is BERT?",
+        "back": "Bidirectional Encoder Representations from Transformers - contextual word embeddings."
+      },
+      {
+        "id": "9",
+        "front": "What is sentiment analysis?",
+        "back": "Determining the emotional tone or attitude expressed in text (positive, negative, neutral)."
+      },
+      {
+        "id": "10",
+        "front": "What is named entity recognition (NER)?",
+        "back": "Identifying and classifying named entities like persons, organizations, locations in text."
+      },
+      {
+        "id": "11",
+        "front": "What is part-of-speech tagging?",
+        "back": "Assigning grammatical categories (noun, verb, adjective, etc.) to words in a sentence."
+      },
+      {
+        "id": "12",
+        "front": "What is text classification?",
+        "back": "Assigning predefined categories or labels to text documents based on their content."
+      }
+    ]
+  },
+  {
+    "id": "19",
+    "title": "Computer Vision",
+    "description": "Image processing, object detection, and visual recognition techniques.",
+    "difficulty": "advanced",
+    "cards": [
+      {
+        "id": "1",
+        "front": "What is image classification?",
+        "back": "Assigning predefined labels or categories to entire images based on their visual content."
+      },
+      {
+        "id": "2",
+        "front": "What is object detection?",
+        "back": "Identifying and locating multiple objects in an image with bounding boxes and class labels."
+      },
+      {
+        "id": "3",
+        "front": "What is semantic segmentation?",
+        "back": "Assigning each pixel in an image to a class or category for detailed scene understanding."
+      },
+      {
+        "id": "4",
+        "front": "What is a convolutional layer?",
+        "back": "A layer that applies learnable filters to input data to detect local patterns and features."
+      },
+      {
+        "id": "5",
+        "front": "What is pooling in CNNs?",
+        "back": "Downsampling operations (max pooling, average pooling) that reduce spatial dimensions."
+      },
+      {
+        "id": "6",
+        "front": "What is data augmentation?",
+        "back": "Techniques like rotation, flipping, scaling to artificially increase dataset size and diversity."
+      },
+      {
+        "id": "7",
+        "front": "What is transfer learning in CV?",
+        "back": "Using pre-trained models (trained on ImageNet) for new vision tasks with fine-tuning."
+      },
+      {
+        "id": "8",
+        "front": "What is ResNet?",
+        "back": "Residual Network - uses skip connections to solve vanishing gradient problem in deep networks."
+      },
+      {
+        "id": "9",
+        "front": "What is YOLO?",
+        "back": "You Only Look Once - real-time object detection that predicts bounding boxes and class probabilities in one pass."
+      },
+      {
+        "id": "10",
+        "front": "What is IoU (Intersection over Union)?",
+        "back": "Metric for evaluating object detection: area of overlap divided by area of union of predicted and ground truth boxes."
+      },
+      {
+        "id": "11",
+        "front": "What is mAP (mean Average Precision)?",
+        "back": "Standard metric for object detection that averages precision across different IoU thresholds."
+      }
+    ]
+  },
+  {
+    "id": "20",
+    "title": "Big Data & Distributed ML",
+    "description": "Handling large-scale data and distributed machine learning systems.",
+    "difficulty": "advanced",
+    "cards": [
+      {
+        "id": "1",
+        "front": "What is Apache Spark?",
+        "back": "Unified analytics engine for large-scale data processing with in-memory computing."
+      },
+      {
+        "id": "2",
+        "front": "What is MLlib?",
+        "back": "Apache Spark's machine learning library for distributed ML algorithms."
+      },
+      {
+        "id": "3",
+        "front": "What is Hadoop?",
+        "back": "Framework for distributed storage (HDFS) and processing (MapReduce) of large datasets."
+      },
+      {
+        "id": "4",
+        "front": "What is MapReduce?",
+        "back": "Programming paradigm for processing large datasets in parallel across clusters."
+      },
+      {
+        "id": "5",
+        "front": "What is distributed training?",
+        "back": "Training ML models across multiple machines or GPUs to handle large datasets."
+      },
+      {
+        "id": "6",
+        "front": "What is data parallelism?",
+        "back": "Splitting data across multiple workers, each training on a subset with model synchronization."
+      },
+      {
+        "id": "7",
+        "front": "What is model parallelism?",
+        "back": "Splitting large models across multiple devices when they don't fit in single GPU memory."
+      },
+      {
+        "id": "8",
+        "front": "What is Apache Kafka?",
+        "back": "Distributed event streaming platform for handling real-time data pipelines."
+      },
+      {
+        "id": "9",
+        "front": "What is stream processing?",
+        "back": "Real-time processing of continuous data streams rather than batch processing."
+      },
+      {
+        "id": "10",
+        "front": "What is ETL?",
+        "back": "Extract, Transform, Load - process of extracting data, transforming it, and loading into destination."
+      },
+      {
+        "id": "11",
+        "front": "What is parameter server architecture?",
+        "back": "Distributed training setup with worker nodes computing gradients and parameter servers storing/synchronizing model weights."
+      }
+    ]
+  },
+  {
+    "id": "21",
+    "title": "AutoML & Automation",
+    "description": "Tools and techniques for automating the machine learning pipeline.",
+    "difficulty": "intermediate",
+    "cards": [
+      {
+        "id": "1",
+        "front": "What is AutoML?",
+        "back": "Automated Machine Learning - tools that automate the process of applying ML to real-world problems."
+      },
+      {
+        "id": "2",
+        "front": "What is Google AutoML?",
+        "back": "Google's suite of ML products that allows developers to train high-quality models with minimal effort."
+      },
+      {
+        "id": "3",
+        "front": "What is H2O AutoML?",
+        "back": "Open-source AutoML framework that automates data preprocessing, model selection, and tuning."
+      },
+      {
+        "id": "4",
+        "front": "What is TPOT?",
+        "back": "Tree-based Pipeline Optimization Tool - uses genetic programming to optimize ML pipelines."
+      },
+      {
+        "id": "5",
+        "front": "What is neural architecture search (NAS)?",
+        "back": "Automated design of neural network architectures using search algorithms."
+      },
+      {
+        "id": "6",
+        "front": "What is automated feature engineering?",
+        "back": "Tools that automatically generate, select, and transform features for ML models."
+      },
+      {
+        "id": "7",
+        "front": "What is hyperparameter optimization?",
+        "back": "Automated process of finding the best hyperparameter configuration for a model."
+      },
+      {
+        "id": "8",
+        "front": "What is model selection automation?",
+        "back": "Automatically choosing the best ML algorithm and configuration for a given problem."
+      },
+      {
+        "id": "9",
+        "front": "What are benefits of AutoML?",
+        "back": "Democratizes ML, reduces time to production, improves consistency, handles complex pipelines."
+      },
+      {
+        "id": "10",
+        "front": "What are limitations of AutoML?",
+        "back": "May miss domain expertise, can be expensive, limited customization, black-box nature."
       }
     ]
   }

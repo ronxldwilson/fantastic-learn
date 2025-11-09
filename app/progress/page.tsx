@@ -97,12 +97,12 @@ export default function ProgressPage() {
               Progress by Topic
             </h2>
             <div className="space-y-4">
-              {topics.map((topic) => {
-                const topicQuizzes = topic.quizzes;
-                const completedTopicQuizzes = topicQuizzes.filter(quiz =>
+              {topics.map((topic: { id: string; title: string; icon?: string; quizzes: Quiz[] }) => {
+                const topicQuizzes: Quiz[] = topic.quizzes;
+                const completedTopicQuizzes: Quiz[] = topicQuizzes.filter((quiz: Quiz) =>
                   progress[quiz.id]?.completed
                 );
-                const topicScore = completedTopicQuizzes.reduce((sum, quiz) =>
+                const topicScore = completedTopicQuizzes.reduce((sum: number, quiz: Quiz) =>
                   sum + (progress[quiz.id].score / progress[quiz.id].total), 0
                 );
                 const avgTopicScore = completedTopicQuizzes.length > 0

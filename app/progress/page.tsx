@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { loadTopics } from '../../lib/dataLoader';
+import { Quiz } from '../../lib/types';
 
 interface QuizProgress {
   completed: boolean;
@@ -36,7 +37,7 @@ export default function ProgressPage() {
 
   const getQuizInfo = (quizId: string) => {
     for (const topic of topics) {
-      const quiz = topic.quizzes.find(q => q.id === quizId);
+      const quiz = topic.quizzes.find((q: Quiz) => q.id === quizId);
       if (quiz) {
         return { topic, quiz };
       }

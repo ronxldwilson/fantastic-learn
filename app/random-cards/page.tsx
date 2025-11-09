@@ -14,21 +14,42 @@ interface ExtendedCard {
 }
 
 export default function RandomCardsPage() {
+  const [allCards, setAllCards] = useState<ExtendedCard[]>([]);
   const [cards, setCards] = useState<ExtendedCard[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isFlipped, setIsFlipped] = useState(false);
   const [loading, setLoading] = useState(true);
   const [sessionCompleted, setSessionCompleted] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
+  const [searchTerm, setSearchTerm] = useState('');
   const touchStartX = useRef<number | null>(null);
   const touchStartY = useRef<number | null>(null);
 
   useEffect(() => {
-    loadAllCards().then((allCards) => {
-      setCards(allCards as ExtendedCard[]);
+    loadAllCards().then((loadedCards) => {
+      setAllCards(loadedCards as ExtendedCard[]);
+      setCards(loadedCards as ExtendedCard[]);
       setLoading(false);
     });
   }, []);
+
+  // Filter cards based on search term
+  useEffect(() => {
+    if (searchTerm.trim() === '') {
+      setCards(allCards);
+    } else {
+      const filtered = allCards.filter(card =>
+        card.front.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        card.back.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        card.topicTitle.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        card.cardSetTitle.toLowerCase().includes(searchTerm.toLowerCase())
+      );
+      setCards(filtered);
+      // Reset to first card when search changes
+      setCurrentIndex(0);
+      setIsFlipped(false);
+    }
+  }, [searchTerm, allCards]);
 
   if (loading) {
     return (
@@ -45,11 +66,21 @@ export default function RandomCardsPage() {
     return (
       <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800 pt-8 flex items-center justify-center">
         <div className="text-center">
-          <p className="text-gray-600 dark:text-gray-300">No cards available.</p>
-          <Link href="/" className="mt-4 inline-block px-6 py-3 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg">
-            Back to Home
-          </Link>
-        </div>
+        <p className="text-gray-600 dark:text-gray-300">
+          {searchTerm ? `No cards found matching "${searchTerm}".` : 'No cards available.'}
+        </p>
+        {searchTerm && (
+            <button
+                onClick={() => setSearchTerm('')}
+                  className="mt-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg"
+                  >
+                    Clear Search
+                  </button>
+                )}
+                <Link href="/" className="mt-4 inline-block px-6 py-3 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg">
+                  Back to Home
+                </Link>
+              </div>
       </div>
     );
   }
@@ -99,6 +130,12 @@ export default function RandomCardsPage() {
 
   const handleFlip = () => {
     setIsFlipped(!isFlipped);
+  };
+
+  const handleWebSearch = () => {
+    const searchQuery = encodeURIComponent(currentCard.front);
+    const searchUrl = `https://www.google.com/search?q=${searchQuery}`;
+    window.open(searchUrl, '_blank', 'noopener,noreferrer');
   };
 
   const handleNext = () => {
@@ -172,8 +209,42 @@ export default function RandomCardsPage() {
                 Mixed Topics
               </span>
             </div>
-            <div className="text-sm text-gray-600 dark:text-gray-400 mb-2">
-              Card {currentIndex + 1} of {totalCards}
+
+          {/* Search */}
+            <div className="mb-4">
+              <div className="relative">
+                <input
+                  type="text"
+                  placeholder="Search cards by question, answer, topic, or card set..."
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  className="w-full px-4 py-3 pl-12 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400"
+                />
+                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                  <svg className="h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                  </svg>
+               </div>
+                {searchTerm && (
+                  <button
+                    onClick={() => setSearchTerm('')}
+                    className="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"
+                  >
+                    <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </button>
+                )}
+              </div>
+              {searchTerm && (
+                <p className="text-sm text-gray-600 dark:text-gray-400 mt-2">
+                  Showing {cards.length} of {allCards.length} cards matching "{searchTerm}"
+                </p>
+              )}
+            </div>
+
+          <div className="text-sm text-gray-600 dark:text-gray-400 mb-2">
+            Card {currentIndex + 1} of {totalCards}
             </div>
             <div className="text-xs text-gray-500 dark:text-gray-400">
               From: {currentCard.topicTitle} - {currentCard.cardSetTitle}
@@ -215,7 +286,7 @@ export default function RandomCardsPage() {
           </div>
 
           {/* Controls */}
-          <div className="flex justify-between items-center">
+          <div className="flex justify-between items-center gap-4">
             <button
               onClick={handlePrev}
               disabled={currentIndex === 0}
@@ -224,12 +295,25 @@ export default function RandomCardsPage() {
               ← Previous
             </button>
 
+            <div className="flex gap-2">
             <button
               onClick={handleFlip}
-              className="px-6 py-3 bg-yellow-600 hover:bg-yellow-700 text-white font-semibold rounded-lg transition-colors duration-200"
+                className="px-4 py-3 bg-yellow-600 hover:bg-yellow-700 text-white font-semibold rounded-lg transition-colors duration-200"
             >
-              {isFlipped ? 'Show Question' : 'Show Answer'}
+                 {isFlipped ? 'Show Question' : 'Show Answer'}
             </button>
+
+            <button
+              onClick={handleWebSearch}
+            className="px-4 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors duration-200 flex items-center gap-2"
+            title="Search this question on the web"
+            >
+              <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+              </svg>
+                <span className="hidden sm:inline">Web Search</span>
+                </button>
+              </div>
 
             <button
               onClick={handleNext}

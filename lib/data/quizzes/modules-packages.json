@@ -20,15 +20,27 @@
       },
       {
         "id": "2",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write code to import the math module.",
+        "options": [
+          "import math",
+          "#import math",
+          "import math",
+          "IMPORT MATH"
+        ],
         "correctAnswer": "import math",
         "explanation": "Use 'import' followed by the module name to import the entire module."
       },
       {
         "id": "3",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write code to import only the sqrt function from math module.",
+        "options": [
+          "from math import sqrt",
+          "#from math import sqrt",
+          "from math import sqrt",
+          "FROM MATH IMPORT SQRT"
+        ],
         "correctAnswer": "from math import sqrt",
         "explanation": "Use 'from module import function' to import specific functions."
       },
@@ -54,8 +66,14 @@
       },
       {
         "id": "6",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write code to import multiple functions from a module.",
+        "options": [
+          "from math import sqrt, sin, cos",
+          "#from math import sqrt, sin, cos",
+          "from math import sqrt, sin, cos",
+          "FROM MATH IMPORT SQRT, SIN, COS"
+        ],
         "correctAnswer": "from math import sqrt, sin, cos",
         "explanation": "You can import multiple specific functions by separating them with commas."
       },
@@ -81,8 +99,14 @@
       },
       {
         "id": "9",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write code to import sys module with alias 's'.",
+        "options": [
+          "import sys as s",
+          "#import sys as s",
+          "import sys as s",
+          "IMPORT SYS AS S"
+        ],
         "correctAnswer": "import sys as s",
         "explanation": "Use 'import module as alias' to create an alias for the module."
       },
@@ -108,8 +132,14 @@
       },
       {
         "id": "12",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write code to handle an import error gracefully.",
+        "options": [
+          "try:\n    import nonexistent\nexcept ImportError:\n    print('Module not found')",
+          "#try:\n    import nonexistent\nexcept ImportError:\n    print('Module not found')",
+          "try:\n    import nonexistent\nexcept ImportError:\n    print['Module not found']",
+          "TRY:\n    IMPORT NONEXISTENT\nEXCEPT IMPORTERROR:\n    PRINT('MODULE NOT FOUND')"
+        ],
         "correctAnswer": "try:\n    import nonexistent\nexcept ImportError:\n    print('Module not found')",
         "explanation": "Use try-except blocks to handle import errors when modules might not be available."
       },
@@ -135,8 +165,14 @@
       },
       {
         "id": "15",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write code to import a module from a specific path.",
+        "options": [
+          "import sys\nsys.path.append('/path/to/module')\nimport mymodule",
+          "#import sys\nsys.path.append('/path/to/module')\nimport mymodule",
+          "import sys\nsys.path.append['/path/to/module']\nimport mymodule",
+          "IMPORT SYS\nSYS.PATH.APPEND('/PATH/TO/MODULE')\nIMPORT MYMODULE"
+        ],
         "correctAnswer": "import sys\nsys.path.append('/path/to/module')\nimport mymodule",
         "explanation": "Add the directory to sys.path before importing to import from specific locations."
       }
@@ -177,8 +213,14 @@
       },
       {
         "id": "4",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write code to get a random integer between 1 and 10.",
+        "options": [
+          "import random\nrandom.randint(1, 10)",
+          "#import random\nrandom.randint(1, 10)",
+          "import random\nrandom.randint[1, 10]",
+          "IMPORT RANDOM\nRANDOM.RANDINT(1, 10)"
+        ],
         "correctAnswer": "import random\nrandom.randint(1, 10)",
         "explanation": "Use random.randint(a, b) to get a random integer between a and b inclusive."
       },
@@ -217,8 +259,14 @@
       },
       {
         "id": "8",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write code to parse a JSON string.",
+        "options": [
+          "import json\ndata = json.loads('{\"key\": \"value\"}')",
+          "#import json\ndata = json.loads('{\"key\": \"value\"}')",
+          "import json\ndata = json.loads['{\"key\": \"value\"}']",
+          "IMPORT JSON\nDATA = JSON.LOADS('{\"KEY\": \"VALUE\"}')"
+        ],
         "correctAnswer": "import json\ndata = json.loads('{\"key\": \"value\"}')",
         "explanation": "Use json.loads() to parse a JSON string into a Python object."
       },
@@ -244,8 +292,14 @@
       },
       {
         "id": "11",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write code to create a defaultdict that defaults to 0.",
+        "options": [
+          "from collections import defaultdict\nd = defaultdict(int)",
+          "#from collections import defaultdict\nd = defaultdict(int)",
+          "from collections import defaultdict\nd = defaultdict[int]",
+          "FROM COLLECTIONS IMPORT DEFAULTDICT\nD = DEFAULTDICT(INT)"
+        ],
         "correctAnswer": "from collections import defaultdict\nd = defaultdict(int)",
         "explanation": "defaultdict takes a factory function that provides the default value for missing keys."
       },
@@ -271,8 +325,14 @@
       },
       {
         "id": "14",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write code to use functools.partial.",
+        "options": [
+          "from functools import partial\ndef add(a, b): return a + b\nadd_five = partial(add, 5)",
+          "#from functools import partial\ndef add(a, b): return a + b\nadd_five = partial(add, 5)",
+          "from functools import partial\ndef add[a, b]: return a + b\nadd_five = partial[add, 5]",
+          "FROM FUNCTOOLS IMPORT PARTIAL\nDEF ADD(A, B): RETURN A + B\nADD_FIVE = PARTIAL(ADD, 5)"
+        ],
         "correctAnswer": "from functools import partial\ndef add(a, b): return a + b\nadd_five = partial(add, 5)",
         "explanation": "partial fixes some arguments of a function and returns a new function."
       },
@@ -320,8 +380,14 @@
       },
       {
         "id": "4",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write the standard pattern for making a module runnable.",
+        "options": [
+          "if __name__ == '__main__':\n    # code here",
+          "#if __name__ == '__main__':\n    # code here",
+          "if __name__ == '__main__':\n    # code here",
+          "IF __NAME__ == '__MAIN__':\n    # CODE HERE"
+        ],
         "correctAnswer": "if __name__ == '__main__':\n    # code here",
         "explanation": "This pattern ensures code only runs when the module is executed directly, not when imported."
       },
@@ -347,8 +413,14 @@
       },
       {
         "id": "7",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write code to reload a module named 'mymodule'.",
+        "options": [
+          "import importlib\nimport mymodule\nimportlib.reload(mymodule)",
+          "#import importlib\nimport mymodule\nimportlib.reload(mymodule)",
+          "import importlib\nimport mymodule\nimportlib.reload[mymodule]",
+          "IMPORT IMPORTLIB\nIMPORT MYMODULE\nIMPORTLIB.RELOAD(MYMODULE)"
+        ],
         "correctAnswer": "import importlib\nimport mymodule\nimportlib.reload(mymodule)",
         "explanation": "Use importlib.reload() to reload a module after making changes."
       },
@@ -374,8 +446,14 @@
       },
       {
         "id": "10",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write a simple module structure with a function.",
+        "options": [
+          "def hello():\n    print('Hello from module')\n\nif __name__ == '__main__':\n    hello()",
+          "#def hello():\n    print('Hello from module')\n\nif __name__ == '__main__':\n    hello()",
+          "def hello[]:\n    print['Hello from module']\n\nif __name__ == '__main__':\n    hello[]",
+          "DEF HELLO():\n    PRINT('HELLO FROM MODULE')\n\nIF __NAME__ == '__MAIN__':\n    HELLO()"
+        ],
         "correctAnswer": "def hello():\n    print('Hello from module')\n\nif __name__ == '__main__':\n    hello()",
         "explanation": "A basic module contains functions and the main guard for direct execution."
       },
@@ -408,8 +486,14 @@
       },
       {
         "id": "14",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write code to define and use a module-level variable.",
+        "options": [
+          "VERSION = '1.0'\n\ndef get_version():\n    return VERSION",
+          "#VERSION = '1.0'\n\ndef get_version():\n    return VERSION",
+          "VERSION = '1.0'\n\ndef get_version[]:\n    return VERSION",
+          "VERSION = '1.0'\n\nDEF GET_VERSION():\n    RETURN VERSION"
+        ],
         "correctAnswer": "VERSION = '1.0'\n\ndef get_version():\n    return VERSION",
         "explanation": "Module-level variables can be defined at the top level and accessed by functions within the module."
       },
@@ -450,8 +534,14 @@
       },
       {
         "id": "3",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write the basic structure of a package.",
+        "options": [
+          "mypackage/\n    __init__.py\n    module1.py\n    module2.py",
+          "#mypackage/\n    __init__.py\n    module1.py\n    module2.py",
+          "mypackage/\n    __init__.py\n    module1.py\n    module2.py",
+          "MYPACKAGE/\n    __INIT__.PY\n    MODULE1.PY\n    MODULE2.PY"
+        ],
         "correctAnswer": "mypackage/\n    __init__.py\n    module1.py\n    module2.py",
         "explanation": "A package directory contains __init__.py and module files."
       },
@@ -464,8 +554,14 @@
       },
       {
         "id": "5",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write code to import a function from a package module.",
+        "options": [
+          "from mypackage.mymodule import myfunction",
+          "#from mypackage.mymodule import myfunction",
+          "from mypackage.mymodule import myfunction",
+          "FROM MYPACKAGE.MYMODULE IMPORT MYFUNCTION"
+        ],
         "correctAnswer": "from mypackage.mymodule import myfunction",
         "explanation": "Use 'from package.module import function' to import specific functions from packages."
       },
@@ -491,8 +587,14 @@
       },
       {
         "id": "8",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write code to import from a subpackage.",
+        "options": [
+          "from mypackage.subpackage import module",
+          "#from mypackage.subpackage import module",
+          "from mypackage.subpackage import module",
+          "FROM MYPACKAGE.SUBPACKAGE IMPORT MODULE"
+        ],
         "correctAnswer": "from mypackage.subpackage import module",
         "explanation": "Use multiple dots to navigate through package hierarchies."
       },
@@ -518,8 +620,14 @@
       },
       {
         "id": "11",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write code to make a package export specific functions.",
+        "options": [
+          "from .module1 import func1\nfrom .module2 import func2",
+          "#from .module1 import func1\nfrom .module2 import func2",
+          "from .module1 import func1\nfrom .module2 import func2",
+          "FROM .MODULE1 IMPORT FUNC1\nFROM .MODULE2 IMPORT FUNC2"
+        ],
         "correctAnswer": "from .module1 import func1\nfrom .module2 import func2",
         "explanation": "Use relative imports in __init__.py to expose functions at the package level."
       },
@@ -545,8 +653,14 @@
       },
       {
         "id": "14",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write a relative import example.",
+        "options": [
+          "from . import sibling_module\nfrom .. import parent_module",
+          "#from . import sibling_module\nfrom .. import parent_module",
+          "from . import sibling_module\nfrom .. import parent_module",
+          "FROM . IMPORT SIBLING_MODULE\nFROM .. IMPORT PARENT_MODULE"
+        ],
         "correctAnswer": "from . import sibling_module\nfrom .. import parent_module",
         "explanation": "Single dot imports from current package, double dot from parent package."
       },
@@ -574,8 +688,14 @@
       },
       {
         "id": "2",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write the command to install a package with pip.",
+        "options": [
+          "pip install package_name",
+          "#pip install package_name",
+          "pip install package_name",
+          "PIP INSTALL PACKAGE_NAME"
+        ],
         "correctAnswer": "pip install package_name",
         "explanation": "Use 'pip install' followed by the package name to install packages."
       },
@@ -601,8 +721,14 @@
       },
       {
         "id": "5",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write the command to uninstall a package.",
+        "options": [
+          "pip uninstall package_name",
+          "#pip uninstall package_name",
+          "pip uninstall package_name",
+          "PIP UNINSTALL PACKAGE_NAME"
+        ],
         "correctAnswer": "pip uninstall package_name",
         "explanation": "Use 'pip uninstall' to remove installed packages."
       },
@@ -621,8 +747,14 @@
       },
       {
         "id": "7",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write the command to install from requirements.txt.",
+        "options": [
+          "pip install -r requirements.txt",
+          "#pip install -r requirements.txt",
+          "pip install -r requirements.txt",
+          "PIP INSTALL -R REQUIREMENTS.TXT"
+        ],
         "correctAnswer": "pip install -r requirements.txt",
         "explanation": "Use '-r' flag to install all packages listed in a requirements file."
       },
@@ -655,8 +787,14 @@
       },
       {
         "id": "11",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write the command to search for packages on PyPI.",
+        "options": [
+          "pip search package_name",
+          "#pip search package_name",
+          "pip search package_name",
+          "PIP SEARCH PACKAGE_NAME"
+        ],
         "correctAnswer": "pip search package_name",
         "explanation": "pip search looks for packages on PyPI (though this is deprecated in favor of PyPI website)."
       },
@@ -682,8 +820,14 @@
       },
       {
         "id": "14",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write the command to install a package from git.",
+        "options": [
+          "pip install git+https://github.com/user/repo.git",
+          "#pip install git+https://github.com/user/repo.git",
+          "pip install git+https://github.com/user/repo.git",
+          "PIP INSTALL GIT+HTTPS://GITHUB.COM/USER/REPO.GIT"
+        ],
         "correctAnswer": "pip install git+https://github.com/user/repo.git",
         "explanation": "pip can install packages directly from git repositories."
       },
@@ -724,8 +868,14 @@
       },
       {
         "id": "3",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write the command to create a virtual environment with venv.",
+        "options": [
+          "python -m venv myenv",
+          "#python -m venv myenv",
+          "python -m venv myenv",
+          "PYTHON -M VENV MYENV"
+        ],
         "correctAnswer": "python -m venv myenv",
         "explanation": "Use 'python -m venv env_name' to create a virtual environment."
       },
@@ -738,8 +888,14 @@
       },
       {
         "id": "5",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write the command to activate venv on Linux/Mac.",
+        "options": [
+          "source myenv/bin/activate",
+          "#source myenv/bin/activate",
+          "source myenv/bin/activate",
+          "SOURCE MYENV/BIN/ACTIVATE"
+        ],
         "correctAnswer": "source myenv/bin/activate",
         "explanation": "Use 'source' to run the activate script in the bin directory."
       },
@@ -772,8 +928,14 @@
       },
       {
         "id": "9",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write code to check which Python is being used.",
+        "options": [
+          "import sys\nprint(sys.executable)",
+          "#import sys\nprint(sys.executable)",
+          "import sys\nprint[sys.executable]",
+          "IMPORT SYS\nPRINT(SYS.EXECUTABLE)"
+        ],
         "correctAnswer": "import sys\nprint(sys.executable)",
         "explanation": "sys.executable shows the path to the current Python executable."
       },
@@ -799,8 +961,14 @@
       },
       {
         "id": "12",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write the command to create a virtual environment with virtualenv.",
+        "options": [
+          "virtualenv myenv",
+          "#virtualenv myenv",
+          "virtualenv myenv",
+          "VIRTUALENV MYENV"
+        ],
         "correctAnswer": "virtualenv myenv",
         "explanation": "virtualenv command creates a virtual environment similar to venv."
       },
@@ -881,8 +1049,14 @@
       },
       {
         "id": "5",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write the proper import grouping structure.",
+        "options": [
+          "import os\nimport sys\n\nfrom requests import get\n\nimport mymodule",
+          "#import os\nimport sys\n\nfrom requests import get\n\nimport mymodule",
+          "import os\nimport sys\n\nfrom requests import get\n\nimport mymodule",
+          "IMPORT OS\nIMPORT SYS\n\nFROM REQUESTS IMPORT GET\n\nIMPORT MYMODULE"
+        ],
         "correctAnswer": "import os\nimport sys\n\nfrom requests import get\n\nimport mymodule",
         "explanation": "Group imports with blank lines between standard library, third-party, and local imports."
       },
@@ -901,8 +1075,14 @@
       },
       {
         "id": "7",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write an example of __all__ in a module.",
+        "options": [
+          "__all__ = ['public_function', 'PublicClass']",
+          "#__all__ = ['public_function', 'PublicClass']",
+          "__all__ = ['public_function', 'PublicClass']",
+          "__ALL__ = ['PUBLIC_FUNCTION', 'PUBLICCLASS']"
+        ],
         "correctAnswer": "__all__ = ['public_function', 'PublicClass']",
         "explanation": "__all__ is a list of strings defining the module's public interface."
       },
@@ -955,8 +1135,14 @@
       },
       {
         "id": "13",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write a basic setup.py structure.",
+        "options": [
+          "from setuptools import setup\n\nsetup(\n    name='mypackage',\n    version='0.1',\n    packages=['mypackage'],\n)",
+          "#from setuptools import setup\n\nsetup(\n    name='mypackage',\n    version='0.1',\n    packages=['mypackage'],\n)",
+          "from setuptools import setup\n\nsetup[\n    name='mypackage',\n    version='0.1',\n    packages=['mypackage'],\n]",
+          "FROM SETUPTOOLS IMPORT SETUP\n\nSETUP(\n    NAME='MYPACKAGE',\n    VERSION='0.1',\n    PACKAGES=['MYPACKAGE'],\n)"
+        ],
         "correctAnswer": "from setuptools import setup\n\nsetup(\n    name='mypackage',\n    version='0.1',\n    packages=['mypackage'],\n)",
         "explanation": "setup.py uses setuptools.setup() with package metadata."
       },

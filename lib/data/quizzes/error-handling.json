@@ -40,8 +40,14 @@
       },
       {
         "id": "4",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write a basic try-except block.",
+        "options": [
+          "try:\n    risky_operation()\nexcept SomeError:\n    handle_error()",
+          "#try:\n    risky_operation()\nexcept SomeError:\n    handle_error()",
+          "try:\n    risky_operation[]\nexcept SomeError:\n    handle_error[]",
+          "TRY:\n    RISKY_OPERATION()\nEXCEPT SOMEERROR:\n    HANDLE_ERROR()"
+        ],
         "correctAnswer": "try:\n    risky_operation()\nexcept SomeError:\n    handle_error()",
         "explanation": "Basic structure: try block with risky code, except block to handle specific errors."
       },
@@ -60,8 +66,14 @@
       },
       {
         "id": "6",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write a try-except-finally block.",
+        "options": [
+          "try:\n    file = open('data.txt')\n    process(file)\nexcept IOError:\n    print('File error')\nfinally:\n    file.close()",
+          "#try:\n    file = open('data.txt')\n    process(file)\nexcept IOError:\n    print('File error')\nfinally:\n    file.close()",
+          "try:\n    file = open['data.txt']\n    process[file]\nexcept IOError:\n    print['File error']\nfinally:\n    file.close[]",
+          "TRY:\n    FILE = OPEN('DATA.TXT')\n    PROCESS(FILE)\nEXCEPT IOERROR:\n    PRINT('FILE ERROR')\nFINALLY:\n    FILE.CLOSE()"
+        ],
         "correctAnswer": "try:\n    file = open('data.txt')\n    process(file)\nexcept IOError:\n    print('File error')\nfinally:\n    file.close()",
         "explanation": "Use finally for cleanup that must happen regardless of exceptions."
       },
@@ -87,8 +99,14 @@
       },
       {
         "id": "9",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write a try-except-else block.",
+        "options": [
+          "try:\n    result = risky_calculation()\nexcept ValueError:\n    result = default_value\nelse:\n    print('Calculation successful')",
+          "#try:\n    result = risky_calculation()\nexcept ValueError:\n    result = default_value\nelse:\n    print('Calculation successful')",
+          "try:\n    result = risky_calculation[]\nexcept ValueError:\n    result = default_value\nelse:\n    print['Calculation successful']",
+          "TRY:\n    RESULT = RISKY_CALCULATION()\nEXCEPT VALUEERROR:\n    RESULT = DEFAULT_VALUE\nELSE:\n    PRINT('CALCULATION SUCCESSFUL')"
+        ],
         "correctAnswer": "try:\n    result = risky_calculation()\nexcept ValueError:\n    result = default_value\nelse:\n    print('Calculation successful')",
         "explanation": "else block runs only when no exception occurs in try."
       },
@@ -107,8 +125,14 @@
       },
       {
         "id": "11",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write multiple except blocks.",
+        "options": [
+          "try:\n    operation()\nexcept ValueError:\n    handle_value_error()\nexcept TypeError:\n    handle_type_error()\nexcept:\n    handle_other_errors()",
+          "#try:\n    operation()\nexcept ValueError:\n    handle_value_error()\nexcept TypeError:\n    handle_type_error()\nexcept:\n    handle_other_errors()",
+          "try:\n    operation[]\nexcept ValueError:\n    handle_value_error[]\nexcept TypeError:\n    handle_type_error[]\nexcept:\n    handle_other_errors[]",
+          "TRY:\n    OPERATION()\nEXCEPT VALUEERROR:\n    HANDLE_VALUE_ERROR()\nEXCEPT TYPEERROR:\n    HANDLE_TYPE_ERROR()\nEXCEPT:\n    HANDLE_OTHER_ERRORS()"
+        ],
         "correctAnswer": "try:\n    operation()\nexcept ValueError:\n    handle_value_error()\nexcept TypeError:\n    handle_type_error()\nexcept:\n    handle_other_errors()",
         "explanation": "Catch specific exceptions first, then more general ones."
       },
@@ -141,8 +165,14 @@
       },
       {
         "id": "15",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write a proper bare except usage.",
+        "options": [
+          "try:\n    cleanup()\nexcept:\n    # Last resort cleanup\n    pass",
+          "#try:\n    cleanup()\nexcept:\n    # Last resort cleanup\n    pass",
+          "try:\n    cleanup[]\nexcept:\n    # Last resort cleanup\n    pass",
+          "TRY:\n    CLEANUP()\nEXCEPT:\n    # LAST RESORT CLEANUP\n    PASS"
+        ],
         "correctAnswer": "try:\n    cleanup()\nexcept:\n    # Last resort cleanup\n    pass",
         "explanation": "Bare except is acceptable only for final cleanup when you must not fail."
       }
@@ -329,8 +359,14 @@
     "questions": [
       {
         "id": "1",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write code to raise a ValueError.",
+        "options": [
+          "raise ValueError('Invalid value provided')",
+          "#raise ValueError('Invalid value provided')",
+          "raise ValueError['Invalid value provided']",
+          "RAISE VALUEERROR('INVALID VALUE PROVIDED')"
+        ],
         "correctAnswer": "raise ValueError('Invalid value provided')",
         "explanation": "Use raise statement with exception class and optional message."
       },
@@ -349,8 +385,14 @@
       },
       {
         "id": "3",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write code to re-raise the current exception.",
+        "options": [
+          "raise",
+          "#raise",
+          "raise",
+          "RAISE"
+        ],
         "correctAnswer": "raise",
         "explanation": "Bare raise re-raises the currently caught exception."
       },
@@ -363,8 +405,14 @@
       },
       {
         "id": "5",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write exception chaining.",
+        "options": [
+          "try:\n    risky_operation()\nexcept ValueError as e:\n    raise CustomError('Operation failed') from e",
+          "#try:\n    risky_operation()\nexcept ValueError as e:\n    raise CustomError('Operation failed') from e",
+          "try:\n    risky_operation[]\nexcept ValueError as e:\n    raise CustomError['Operation failed'] from e",
+          "TRY:\n    RISKY_OPERATION()\nEXCEPT VALUEERROR AS E:\n    RAISE CUSTOMERROR('OPERATION FAILED') FROM E"
+        ],
         "correctAnswer": "try:\n    risky_operation()\nexcept ValueError as e:\n    raise CustomError('Operation failed') from e",
         "explanation": "Chain exceptions to preserve original error context."
       },
@@ -390,8 +438,14 @@
       },
       {
         "id": "8",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write an assert statement.",
+        "options": [
+          "assert x > 0, 'x must be positive'",
+          "#assert x > 0, 'x must be positive'",
+          "assert x > 0, 'x must be positive'",
+          "ASSERT X > 0, 'X MUST BE POSITIVE'"
+        ],
         "correctAnswer": "assert x > 0, 'x must be positive'",
         "explanation": "Assert checks condition and raises AssertionError with message if false."
       },
@@ -417,8 +471,14 @@
       },
       {
         "id": "11",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write input validation that raises exception.",
+        "options": [
+          "if age < 0:\n    raise ValueError('Age cannot be negative')",
+          "#if age < 0:\n    raise ValueError('Age cannot be negative')",
+          "if age < 0:\n    raise ValueError['Age cannot be negative']",
+          "IF AGE < 0:\n    RAISE VALUEERROR('AGE CANNOT BE NEGATIVE')"
+        ],
         "correctAnswer": "if age < 0:\n    raise ValueError('Age cannot be negative')",
         "explanation": "Validate input and raise appropriate exception for invalid values."
       },
@@ -444,8 +504,14 @@
       },
       {
         "id": "14",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write exception for invalid function arguments.",
+        "options": [
+          "def divide(a, b):\n    if b == 0:\n        raise ZeroDivisionError('Cannot divide by zero')\n    return a / b",
+          "#def divide(a, b):\n    if b == 0:\n        raise ZeroDivisionError('Cannot divide by zero')\n    return a / b",
+          "def divide[a, b]:\n    if b == 0:\n        raise ZeroDivisionError['Cannot divide by zero']\n    return a / b",
+          "DEF DIVIDE(A, B):\n    IF B == 0:\n        RAISE ZERODIVISIONERROR('CANNOT DIVIDE BY ZERO')\n    RETURN A / B"
+        ],
         "correctAnswer": "def divide(a, b):\n    if b == 0:\n        raise ZeroDivisionError('Cannot divide by zero')\n    return a / b",
         "explanation": "Validate arguments and raise exceptions for invalid inputs."
       },
@@ -472,15 +538,27 @@
     "questions": [
       {
         "id": "1",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write a basic custom exception class.",
+        "options": [
+          "class CustomError(Exception):\n    pass",
+          "#class CustomError(Exception):\n    pass",
+          "class CustomError[Exception]:\n    pass",
+          "CLASS CUSTOMERROR(EXCEPTION):\n    PASS"
+        ],
         "correctAnswer": "class CustomError(Exception):\n    pass",
         "explanation": "Custom exceptions inherit from Exception or its subclasses."
       },
       {
         "id": "2",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write a custom exception with message.",
+        "options": [
+          "class ValidationError(Exception):\n    def __init__(self, message):\n        self.message = message\n        super().__init__(self.message)",
+          "#class ValidationError(Exception):\n    def __init__(self, message):\n        self.message = message\n        super().__init__(self.message)",
+          "class ValidationError[Exception]:\n    def __init__[self, message]:\n        self.message = message\n        super[].__init__[self.message]",
+          "CLASS VALIDATIONERROR(EXCEPTION):\n    DEF __INIT__(SELF, MESSAGE):\n        SELF.MESSAGE = MESSAGE\n        SUPER().__INIT__(SELF.MESSAGE)"
+        ],
         "correctAnswer": "class ValidationError(Exception):\n    def __init__(self, message):\n        self.message = message\n        super().__init__(self.message)",
         "explanation": "Override __init__ to accept custom parameters."
       },
@@ -499,8 +577,14 @@
       },
       {
         "id": "4",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write an exception hierarchy.",
+        "options": [
+          "class AppError(Exception):\n    pass\n\nclass DatabaseError(AppError):\n    pass\n\nclass ConnectionError(DatabaseError):\n    pass",
+          "#class AppError(Exception):\n    pass\n\nclass DatabaseError(AppError):\n    pass\n\nclass ConnectionError(DatabaseError):\n    pass",
+          "class AppError[Exception]:\n    pass\n\nclass DatabaseError[AppError]:\n    pass\n\nclass ConnectionError[DatabaseError]:\n    pass",
+          "CLASS APPERROR(EXCEPTION):\n    PASS\n\nCLASS DATABASEERROR(APPERROR):\n    PASS\n\nCLASS CONNECTIONERROR(DATABASEERROR):\n    PASS"
+        ],
         "correctAnswer": "class AppError(Exception):\n    pass\n\nclass DatabaseError(AppError):\n    pass\n\nclass ConnectionError(DatabaseError):\n    pass",
         "explanation": "Create exception hierarchies for different error categories."
       },
@@ -519,8 +603,14 @@
       },
       {
         "id": "6",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write exception with additional data.",
+        "options": [
+          "class HTTPError(Exception):\n    def __init__(self, status_code, message):\n        self.status_code = status_code\n        self.message = message\n        super().__init__(f'{status_code}: {message}')",
+          "#class HTTPError(Exception):\n    def __init__(self, status_code, message):\n        self.status_code = status_code\n        self.message = message\n        super().__init__(f'{status_code}: {message}')",
+          "class HTTPError[Exception]:\n    def __init__[self, status_code, message]:\n        self.status_code = status_code\n        self.message = message\n        super[].__init__[f'{status_code}: {message}']",
+          "CLASS HTTPERROR(EXCEPTION):\n    DEF __INIT__(SELF, STATUS_CODE, MESSAGE):\n        SELF.STATUS_CODE = STATUS_CODE\n        SELF.MESSAGE = MESSAGE\n        SUPER().__INIT__(F'{STATUS_CODE}: {MESSAGE}')"
+        ],
         "correctAnswer": "class HTTPError(Exception):\n    def __init__(self, status_code, message):\n        self.status_code = status_code\n        self.message = message\n        super().__init__(f'{status_code}: {message}')",
         "explanation": "Store additional context in exception instances."
       },
@@ -533,8 +623,14 @@
       },
       {
         "id": "8",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write exception that catches multiple related errors.",
+        "options": [
+          "try:\n    database_operation()\nexcept (ConnectionError, TimeoutError) as e:\n    handle_database_error(e)",
+          "#try:\n    database_operation()\nexcept (ConnectionError, TimeoutError) as e:\n    handle_database_error(e)",
+          "try:\n    database_operation[]\nexcept [ConnectionError, TimeoutError] as e:\n    handle_database_error[e]",
+          "TRY:\n    DATABASE_OPERATION()\nEXCEPT (CONNECTIONERROR, TIMEOUTERROR) AS E:\n    HANDLE_DATABASE_ERROR(E)"
+        ],
         "correctAnswer": "try:\n    database_operation()\nexcept (ConnectionError, TimeoutError) as e:\n    handle_database_error(e)",
         "explanation": "Catch related custom exceptions together."
       },
@@ -560,8 +656,14 @@
       },
       {
         "id": "11",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write exception that wraps another exception.",
+        "options": [
+          "try:\n    low_level_operation()\nexcept LowLevelError as e:\n    raise HighLevelError('Operation failed') from e",
+          "#try:\n    low_level_operation()\nexcept LowLevelError as e:\n    raise HighLevelError('Operation failed') from e",
+          "try:\n    low_level_operation[]\nexcept LowLevelError as e:\n    raise HighLevelError['Operation failed'] from e",
+          "TRY:\n    LOW_LEVEL_OPERATION()\nEXCEPT LOWLEVELERROR AS E:\n    RAISE HIGHLEVELERROR('OPERATION FAILED') FROM E"
+        ],
         "correctAnswer": "try:\n    low_level_operation()\nexcept LowLevelError as e:\n    raise HighLevelError('Operation failed') from e",
         "explanation": "Wrap low-level exceptions in higher-level application exceptions."
       },
@@ -587,8 +689,14 @@
       },
       {
         "id": "14",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write exception with custom string representation.",
+        "options": [
+          "class ValidationError(Exception):\n    def __str__(self):\n        return f'Validation failed: {self.message}'",
+          "#class ValidationError(Exception):\n    def __str__(self):\n        return f'Validation failed: {self.message}'",
+          "class ValidationError[Exception]:\n    def __str__[self]:\n        return f'Validation failed: {self.message}'",
+          "CLASS VALIDATIONERROR(EXCEPTION):\n    DEF __STR__(SELF):\n        RETURN F'VALIDATION FAILED: {SELF.MESSAGE}'"
+        ],
         "correctAnswer": "class ValidationError(Exception):\n    def __str__(self):\n        return f'Validation failed: {self.message}'",
         "explanation": "Override __str__ for better error messages."
       },
@@ -622,8 +730,14 @@
       },
       {
         "id": "2",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write a with statement for file handling.",
+        "options": [
+          "with open('file.txt', 'r') as f:\n    content = f.read()",
+          "#with open('file.txt', 'r') as f:\n    content = f.read()",
+          "with open['file.txt', 'r'] as f:\n    content = f.read[]",
+          "WITH OPEN('FILE.TXT', 'R') AS F:\n    CONTENT = F.READ()"
+        ],
         "correctAnswer": "with open('file.txt', 'r') as f:\n    content = f.read()",
         "explanation": "with ensures file is closed even if exceptions occur."
       },
@@ -636,8 +750,14 @@
       },
       {
         "id": "4",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write a simple context manager class.",
+        "options": [
+          "class MyContext:\n    def __enter__(self):\n        print('Entering')\n        return self\n    def __exit__(self, exc_type, exc_val, exc_tb):\n        print('Exiting')",
+          "#class MyContext:\n    def __enter__(self):\n        print('Entering')\n        return self\n    def __exit__(self, exc_type, exc_val, exc_tb):\n        print('Exiting')",
+          "class MyContext:\n    def __enter__[self]:\n        print['Entering']\n        return self\n    def __exit__[self, exc_type, exc_val, exc_tb]:\n        print['Exiting']",
+          "CLASS MYCONTEXT:\n    DEF __ENTER__(SELF):\n        PRINT('ENTERING')\n        RETURN SELF\n    DEF __EXIT__(SELF, EXC_TYPE, EXC_VAL, EXC_TB):\n        PRINT('EXITING')"
+        ],
         "correctAnswer": "class MyContext:\n    def __enter__(self):\n        print('Entering')\n        return self\n    def __exit__(self, exc_type, exc_val, exc_tb):\n        print('Exiting')",
         "explanation": "__enter__ returns object for 'as' clause, __exit__ handles cleanup."
       },
@@ -650,8 +770,14 @@
       },
       {
         "id": "6",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write context manager that suppresses exceptions.",
+        "options": [
+          "class Suppress:\n    def __enter__(self):\n        return self\n    def __exit__(self, exc_type, exc_val, exc_tb):\n        return True  # Suppress any exception",
+          "#class Suppress:\n    def __enter__(self):\n        return self\n    def __exit__(self, exc_type, exc_val, exc_tb):\n        return True  # Suppress any exception",
+          "class Suppress:\n    def __enter__[self]:\n        return self\n    def __exit__[self, exc_type, exc_val, exc_tb]:\n        return True  # Suppress any exception",
+          "CLASS SUPPRESS:\n    DEF __ENTER__(SELF):\n        RETURN SELF\n    DEF __EXIT__(SELF, EXC_TYPE, EXC_VAL, EXC_TB):\n        RETURN TRUE  # SUPPRESS ANY EXCEPTION"
+        ],
         "correctAnswer": "class Suppress:\n    def __enter__(self):\n        return self\n    def __exit__(self, exc_type, exc_val, exc_tb):\n        return True  # Suppress any exception",
         "explanation": "Return True from __exit__ to suppress exceptions."
       },
@@ -664,8 +790,14 @@
       },
       {
         "id": "8",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write context manager using @contextmanager.",
+        "options": [
+          "from contextlib import contextmanager\n\n@contextmanager\ndef my_context():\n    print('Setup')\n    try:\n        yield\n    finally:\n        print('Cleanup')",
+          "#from contextlib import contextmanager\n\n@contextmanager\ndef my_context():\n    print('Setup')\n    try:\n        yield\n    finally:\n        print('Cleanup')",
+          "from contextlib import contextmanager\n\n@contextmanager\ndef my_context[]:\n    print['Setup']\n    try:\n        yield\n    finally:\n        print['Cleanup']",
+          "FROM CONTEXTLIB IMPORT CONTEXTMANAGER\n\n@CONTEXTMANAGER\nDEF MY_CONTEXT():\n    PRINT('SETUP')\n    TRY:\n        YIELD\n    FINALLY:\n        PRINT('CLEANUP')"
+        ],
         "correctAnswer": "from contextlib import contextmanager\n\n@contextmanager\ndef my_context():\n    print('Setup')\n    try:\n        yield\n    finally:\n        print('Cleanup')",
         "explanation": "Generator yields control, cleanup happens in finally."
       },
@@ -678,8 +810,14 @@
       },
       {
         "id": "10",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write code using suppress.",
+        "options": [
+          "from contextlib import suppress\n\nwith suppress(FileNotFoundError):\n    os.remove('file.txt')",
+          "#from contextlib import suppress\n\nwith suppress(FileNotFoundError):\n    os.remove('file.txt')",
+          "from contextlib import suppress\n\nwith suppress[FileNotFoundError]:\n    os.remove['file.txt']",
+          "FROM CONTEXTLIB IMPORT SUPPRESS\n\nWITH SUPPRESS(FILENOTFOUNDERROR):\n    OS.REMOVE('FILE.TXT')"
+        ],
         "correctAnswer": "from contextlib import suppress\n\nwith suppress(FileNotFoundError):\n    os.remove('file.txt')",
         "explanation": "Suppress FileNotFoundError if file doesn't exist."
       },
@@ -698,8 +836,14 @@
       },
       {
         "id": "12",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write multiple context managers in one with.",
+        "options": [
+          "with open('input.txt') as f, open('output.txt', 'w') as g:\n    g.write(f.read())",
+          "#with open('input.txt') as f, open('output.txt', 'w') as g:\n    g.write(f.read())",
+          "with open['input.txt'] as f, open['output.txt', 'w'] as g:\n    g.write[f.read[]]",
+          "WITH OPEN('INPUT.TXT') AS F, OPEN('OUTPUT.TXT', 'W') AS G:\n    G.WRITE(F.READ())"
+        ],
         "correctAnswer": "with open('input.txt') as f, open('output.txt', 'w') as g:\n    g.write(f.read())",
         "explanation": "Comma separates multiple context managers."
       },
@@ -712,8 +856,14 @@
       },
       {
         "id": "14",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write code that conditionally uses context manager.",
+        "options": [
+          "from contextlib import ExitStack\n\nwith ExitStack() as stack:\n    if condition:\n        stack.enter_context(some_context())\n    # ...",
+          "#from contextlib import ExitStack\n\nwith ExitStack() as stack:\n    if condition:\n        stack.enter_context(some_context())\n    # ...",
+          "from contextlib import ExitStack\n\nwith ExitStack[] as stack:\n    if condition:\n        stack.enter_context[some_context[]]\n    # ...",
+          "FROM CONTEXTLIB IMPORT EXITSTACK\n\nWITH EXITSTACK() AS STACK:\n    IF CONDITION:\n        STACK.ENTER_CONTEXT(SOME_CONTEXT())\n    # ..."
+        ],
         "correctAnswer": "from contextlib import ExitStack\n\nwith ExitStack() as stack:\n    if condition:\n        stack.enter_context(some_context())\n    # ...",
         "explanation": "ExitStack allows conditional context manager usage."
       },
@@ -740,15 +890,27 @@
     "questions": [
       {
         "id": "1",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write the 'look before you leap' pattern.",
+        "options": [
+          "if os.path.exists(filename):\n    with open(filename) as f:\n        process(f)",
+          "#if os.path.exists(filename):\n    with open(filename) as f:\n        process(f)",
+          "if os.path.exists[filename]:\n    with open[filename] as f:\n        process[f]",
+          "IF OS.PATH.EXISTS(FILENAME):\n    WITH OPEN(FILENAME) AS F:\n        PROCESS(F)"
+        ],
         "correctAnswer": "if os.path.exists(filename):\n    with open(filename) as f:\n        process(f)",
         "explanation": "Check conditions before operations to avoid exceptions."
       },
       {
         "id": "2",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write the 'easier to ask forgiveness' pattern.",
+        "options": [
+          "try:\n    with open(filename) as f:\n        process(f)\nexcept FileNotFoundError:\n    handle_missing_file()",
+          "#try:\n    with open(filename) as f:\n        process(f)\nexcept FileNotFoundError:\n    handle_missing_file()",
+          "try:\n    with open[filename] as f:\n        process[f]\nexcept FileNotFoundError:\n    handle_missing_file[]",
+          "TRY:\n    WITH OPEN(FILENAME) AS F:\n        PROCESS(F)\nEXCEPT FILENOTFOUNDERROR:\n    HANDLE_MISSING_FILE()"
+        ],
         "correctAnswer": "try:\n    with open(filename) as f:\n        process(f)\nexcept FileNotFoundError:\n    handle_missing_file()",
         "explanation": "Try operation first, handle exceptions if they occur."
       },
@@ -767,22 +929,40 @@
       },
       {
         "id": "4",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write retry pattern with exceptions.",
+        "options": [
+          "for attempt in range(max_attempts):\n    try:\n        risky_operation()\n        break\n    except TemporaryError:\n        if attempt == max_attempts - 1:\n            raise\n        time.sleep(delay)",
+          "#for attempt in range(max_attempts):\n    try:\n        risky_operation()\n        break\n    except TemporaryError:\n        if attempt == max_attempts - 1:\n            raise\n        time.sleep(delay)",
+          "for attempt in range[max_attempts]:\n    try:\n        risky_operation[]\n        break\n    except TemporaryError:\n        if attempt == max_attempts - 1:\n            raise\n        time.sleep[delay]",
+          "FOR ATTEMPT IN RANGE(MAX_ATTEMPTS):\n    TRY:\n        RISKY_OPERATION()\n        BREAK\n    EXCEPT TEMPORARYERROR:\n        IF ATTEMPT == MAX_ATTEMPTS - 1:\n            RAISE\n        TIME.SLEEP(DELAY)"
+        ],
         "correctAnswer": "for attempt in range(max_attempts):\n    try:\n        risky_operation()\n        break\n    except TemporaryError:\n        if attempt == max_attempts - 1:\n            raise\n        time.sleep(delay)",
         "explanation": "Retry operation on temporary failures."
       },
       {
         "id": "5",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write input validation with exceptions.",
-        "correctAnswer": "def get_positive_number():\n    while True:\n        try:\n            value = int(input('Enter positive number: '))\n            if value <= 0:\n                raise ValueError('Must be positive')\n            return value\n        except ValueError as e:\n            print(f'Invalid input: {e}')",
+        "options": [
+          "name = input('Enter your name: ')\nprint('Hello, ' + name)",
+          "name = input()\nprint('Hello ' + name)",
+          "input('Enter your name: ')\nprint('Hello, ' + name)",
+          "name = raw_input('Enter your name: ')\nprint('Hello, ' + name)"
+        ],
+        "correctAnswer": "name = input('Enter your name: ')\nprint('Hello, ' + name)",
         "explanation": "Validate input and provide feedback on errors."
       },
       {
         "id": "6",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write exception transformation pattern.",
+        "options": [
+          "try:\n    low_level_call()\nexcept LowLevelError as e:\n    raise ApplicationError('Operation failed') from e",
+          "#try:\n    low_level_call()\nexcept LowLevelError as e:\n    raise ApplicationError('Operation failed') from e",
+          "try:\n    low_level_call[]\nexcept LowLevelError as e:\n    raise ApplicationError['Operation failed'] from e",
+          "TRY:\n    LOW_LEVEL_CALL()\nEXCEPT LOWLEVELERROR AS E:\n    RAISE APPLICATIONERROR('OPERATION FAILED') FROM E"
+        ],
         "correctAnswer": "try:\n    low_level_call()\nexcept LowLevelError as e:\n    raise ApplicationError('Operation failed') from e",
         "explanation": "Transform low-level exceptions to application-specific ones."
       },
@@ -801,8 +981,14 @@
       },
       {
         "id": "8",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write exception logging.",
+        "options": [
+          "import logging\n\ntry:\n    risky_operation()\nexcept Exception as e:\n    logging.exception('Unexpected error occurred')\n    raise",
+          "#import logging\n\ntry:\n    risky_operation()\nexcept Exception as e:\n    logging.exception('Unexpected error occurred')\n    raise",
+          "import logging\n\ntry:\n    risky_operation[]\nexcept Exception as e:\n    logging.exception['Unexpected error occurred']\n    raise",
+          "IMPORT LOGGING\n\nTRY:\n    RISKY_OPERATION()\nEXCEPT EXCEPTION AS E:\n    LOGGING.EXCEPTION('UNEXPECTED ERROR OCCURRED')\n    RAISE"
+        ],
         "correctAnswer": "import logging\n\ntry:\n    risky_operation()\nexcept Exception as e:\n    logging.exception('Unexpected error occurred')\n    raise",
         "explanation": "Log exception with traceback, then re-raise."
       },
@@ -815,8 +1001,14 @@
       },
       {
         "id": "10",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write resource cleanup pattern.",
+        "options": [
+          "resource = acquire_resource()\ntry:\n    use_resource(resource)\nfinally:\n    resource.release()",
+          "#resource = acquire_resource()\ntry:\n    use_resource(resource)\nfinally:\n    resource.release()",
+          "resource = acquire_resource[]\ntry:\n    use_resource[resource]\nfinally:\n    resource.release[]",
+          "RESOURCE = ACQUIRE_RESOURCE()\nTRY:\n    USE_RESOURCE(RESOURCE)\nFINALLY:\n    RESOURCE.RELEASE()"
+        ],
         "correctAnswer": "resource = acquire_resource()\ntry:\n    use_resource(resource)\nfinally:\n    resource.release()",
         "explanation": "Ensure resource cleanup in finally block."
       },
@@ -835,8 +1027,14 @@
       },
       {
         "id": "12",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write graceful degradation pattern.",
+        "options": [
+          "try:\n    enhanced_feature()\nexcept ImportError:\n    # Fall back to basic version\n    basic_feature()",
+          "#try:\n    enhanced_feature()\nexcept ImportError:\n    # Fall back to basic version\n    basic_feature()",
+          "try:\n    enhanced_feature[]\nexcept ImportError:\n    # Fall back to basic version\n    basic_feature[]",
+          "TRY:\n    ENHANCED_FEATURE()\nEXCEPT IMPORTERROR:\n    # FALL BACK TO BASIC VERSION\n    BASIC_FEATURE()"
+        ],
         "correctAnswer": "try:\n    enhanced_feature()\nexcept ImportError:\n    # Fall back to basic version\n    basic_feature()",
         "explanation": "Continue with reduced functionality when optional features fail."
       },
@@ -849,8 +1047,14 @@
       },
       {
         "id": "14",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write proper iteration with exception handling.",
+        "options": [
+          "for item in items:\n    try:\n        process_item(item)\n    except ProcessingError:\n        log_error(item)\n        continue",
+          "#for item in items:\n    try:\n        process_item(item)\n    except ProcessingError:\n        log_error(item)\n        continue",
+          "for item in items:\n    try:\n        process_item[item]\n    except ProcessingError:\n        log_error[item]\n        continue",
+          "FOR ITEM IN ITEMS:\n    TRY:\n        PROCESS_ITEM(ITEM)\n    EXCEPT PROCESSINGERROR:\n        LOG_ERROR(ITEM)\n        CONTINUE"
+        ],
         "correctAnswer": "for item in items:\n    try:\n        process_item(item)\n    except ProcessingError:\n        log_error(item)\n        continue",
         "explanation": "Handle errors per item without stopping entire operation."
       },
@@ -990,8 +1194,14 @@
       },
       {
         "id": "12",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write proper exception handling in a library function.",
+        "options": [
+          "def library_function():\n    try:\n        risky_operation()\n    except SpecificError as e:\n        # Clean up and re-raise with context\n        cleanup()\n        raise LibraryError('Operation failed') from e",
+          "#def library_function():\n    try:\n        risky_operation()\n    except SpecificError as e:\n        # Clean up and re-raise with context\n        cleanup()\n        raise LibraryError('Operation failed') from e",
+          "def library_function[]:\n    try:\n        risky_operation[]\n    except SpecificError as e:\n        # Clean up and re-raise with context\n        cleanup[]\n        raise LibraryError['Operation failed'] from e",
+          "DEF LIBRARY_FUNCTION():\n    TRY:\n        RISKY_OPERATION()\n    EXCEPT SPECIFICERROR AS E:\n        # CLEAN UP AND RE-RAISE WITH CONTEXT\n        CLEANUP()\n        RAISE LIBRARYERROR('OPERATION FAILED') FROM E"
+        ],
         "correctAnswer": "def library_function():\n    try:\n        risky_operation()\n    except SpecificError as e:\n        # Clean up and re-raise with context\n        cleanup()\n        raise LibraryError('Operation failed') from e",
         "explanation": "Library functions should clean up and re-raise with appropriate context."
       },
@@ -1039,8 +1249,14 @@
       },
       {
         "id": "2",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write code to print current exception traceback.",
+        "options": [
+          "import traceback\n\ntry:\n    risky_operation()\nexcept Exception:\n    traceback.print_exc()",
+          "#import traceback\n\ntry:\n    risky_operation()\nexcept Exception:\n    traceback.print_exc()",
+          "import traceback\n\ntry:\n    risky_operation[]\nexcept Exception:\n    traceback.print_exc[]",
+          "IMPORT TRACEBACK\n\nTRY:\n    RISKY_OPERATION()\nEXCEPT EXCEPTION:\n    TRACEBACK.PRINT_EXC()"
+        ],
         "correctAnswer": "import traceback\n\ntry:\n    risky_operation()\nexcept Exception:\n    traceback.print_exc()",
         "explanation": "print_exc() prints the current exception's traceback."
       },
@@ -1053,8 +1269,14 @@
       },
       {
         "id": "4",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write code to get exception info.",
+        "options": [
+          "import sys\n\ntry:\n    operation()\nexcept Exception:\n    exc_type, exc_value, exc_traceback = sys.exc_info()",
+          "#import sys\n\ntry:\n    operation()\nexcept Exception:\n    exc_type, exc_value, exc_traceback = sys.exc_info()",
+          "import sys\n\ntry:\n    operation[]\nexcept Exception:\n    exc_type, exc_value, exc_traceback = sys.exc_info[]",
+          "IMPORT SYS\n\nTRY:\n    OPERATION()\nEXCEPT EXCEPTION:\n    EXC_TYPE, EXC_VALUE, EXC_TRACEBACK = SYS.EXC_INFO()"
+        ],
         "correctAnswer": "import sys\n\ntry:\n    operation()\nexcept Exception:\n    exc_type, exc_value, exc_traceback = sys.exc_info()",
         "explanation": "sys.exc_info() provides detailed exception information."
       },
@@ -1080,8 +1302,14 @@
       },
       {
         "id": "7",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write code to start debugger on exception.",
+        "options": [
+          "import pdb\n\ntry:\n    buggy_code()\nexcept Exception:\n    pdb.post_mortem()",
+          "#import pdb\n\ntry:\n    buggy_code()\nexcept Exception:\n    pdb.post_mortem()",
+          "import pdb\n\ntry:\n    buggy_code[]\nexcept Exception:\n    pdb.post_mortem[]",
+          "IMPORT PDB\n\nTRY:\n    BUGGY_CODE()\nEXCEPT EXCEPTION:\n    PDB.POST_MORTEM()"
+        ],
         "correctAnswer": "import pdb\n\ntry:\n    buggy_code()\nexcept Exception:\n    pdb.post_mortem()",
         "explanation": "post_mortem() starts debugger at point of exception."
       },
@@ -1094,8 +1322,14 @@
       },
       {
         "id": "9",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write exception logging.",
+        "options": [
+          "import logging\n\ntry:\n    operation()\nexcept Exception as e:\n    logging.exception('Error occurred')\n    raise",
+          "#import logging\n\ntry:\n    operation()\nexcept Exception as e:\n    logging.exception('Error occurred')\n    raise",
+          "import logging\n\ntry:\n    operation[]\nexcept Exception as e:\n    logging.exception['Error occurred']\n    raise",
+          "IMPORT LOGGING\n\nTRY:\n    OPERATION()\nEXCEPT EXCEPTION AS E:\n    LOGGING.EXCEPTION('ERROR OCCURRED')\n    RAISE"
+        ],
         "correctAnswer": "import logging\n\ntry:\n    operation()\nexcept Exception as e:\n    logging.exception('Error occurred')\n    raise",
         "explanation": "Log exception with traceback, then re-raise."
       },
@@ -1121,8 +1355,14 @@
       },
       {
         "id": "12",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write code to suppress exception chaining.",
+        "options": [
+          "try:\n    low_level()\nexcept LowLevelError:\n    raise HighLevelError('Failed') from None",
+          "#try:\n    low_level()\nexcept LowLevelError:\n    raise HighLevelError('Failed') from None",
+          "try:\n    low_level[]\nexcept LowLevelError:\n    raise HighLevelError['Failed'] from None",
+          "TRY:\n    LOW_LEVEL()\nEXCEPT LOWLEVELERROR:\n    RAISE HIGHLEVELERROR('FAILED') FROM NONE"
+        ],
         "correctAnswer": "try:\n    low_level()\nexcept LowLevelError:\n    raise HighLevelError('Failed') from None",
         "explanation": "from None prevents original exception from appearing in traceback."
       },

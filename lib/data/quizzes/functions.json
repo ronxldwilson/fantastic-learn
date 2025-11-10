@@ -27,8 +27,14 @@
       },
       {
         "id": "3",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write a function that takes two numbers and returns their sum.",
+        "options": [
+          "def add_numbers(a, b):\\n    return a + b",
+          "#def add_numbers(a, b):\\n    return a + b",
+          "def add_numbers[a, b]:\\n    return a + b",
+          "DEF ADD_NUMBERS(A, B):\\N    RETURN A + B"
+        ],
         "correctAnswer": "def add_numbers(a, b):\\n    return a + b",
         "explanation": "Functions use 'def', parameters in parentheses, and 'return' to send back values."
       },
@@ -47,8 +53,14 @@
       },
       {
         "id": "5",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write code to call a function named 'greet' with the argument 'Alice'.",
+        "options": [
+          "greet('Alice')",
+          "#greet('Alice')",
+          "greet['Alice']",
+          "GREET('ALICE')"
+        ],
         "correctAnswer": "greet('Alice')",
         "explanation": "Function calls use the function name followed by parentheses containing arguments."
       },
@@ -61,8 +73,14 @@
       },
       {
         "id": "7",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write a function with a default parameter that greets someone.",
+        "options": [
+          "def greet(name='World'):\\n    return f'Hello, {name}!'",
+          "#def greet(name='World'):\\n    return f'Hello, {name}!'",
+          "def greet[name='World']:\\n    return f'Hello, {name}!'",
+          "DEF GREET(NAME='WORLD'):\\N    RETURN F'HELLO, {NAME}!'"
+        ],
         "correctAnswer": "def greet(name='World'):\\n    return f'Hello, {name}!'",
         "explanation": "Default parameters are specified with = in the function definition."
       },
@@ -81,8 +99,14 @@
       },
       {
         "id": "9",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write code that demonstrates a local variable in a function.",
+        "options": [
+          "def my_function():\\n    local_var = 10\\n    return local_var",
+          "#def my_function():\\n    local_var = 10\\n    return local_var",
+          "def my_function[]:\\n    local_var = 10\\n    return local_var",
+          "DEF MY_FUNCTION():\\N    LOCAL_VAR = 10\\N    RETURN LOCAL_VAR"
+        ],
         "correctAnswer": "def my_function():\\n    local_var = 10\\n    return local_var",
         "explanation": "Variables defined inside functions are local to that function."
       },
@@ -95,15 +119,27 @@
       },
       {
         "id": "11",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write a function that uses *args to accept multiple arguments.",
+        "options": [
+          "def sum_all(*args):\\n    return sum(args)",
+          "#def sum_all(*args):\\n    return sum(args)",
+          "def sum_all[*args]:\\n    return sum[args]",
+          "DEF SUM_ALL(*ARGS):\\N    RETURN SUM(ARGS)"
+        ],
         "correctAnswer": "def sum_all(*args):\\n    return sum(args)",
         "explanation": "*args allows functions to accept a variable number of positional arguments."
       },
       {
         "id": "12",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write a function that uses **kwargs for keyword arguments.",
+        "options": [
+          "def print_info(**kwargs):\\n    for key, value in kwargs.items():\\n        print(f'{key}: {value}')",
+          "#def print_info(**kwargs):\\n    for key, value in kwargs.items():\\n        print(f'{key}: {value}')",
+          "def print_info[**kwargs]:\\n    for key, value in kwargs.items[]:\\n        print[f'{key}: {value}']",
+          "DEF PRINT_INFO(**KWARGS):\\N    FOR KEY, VALUE IN KWARGS.ITEMS():\\N        PRINT(F'{KEY}: {VALUE}')"
+        ],
         "correctAnswer": "def print_info(**kwargs):\\n    for key, value in kwargs.items():\\n        print(f'{key}: {value}')",
         "explanation": "**kwargs allows functions to accept a variable number of keyword arguments."
       },
@@ -122,8 +158,14 @@
       },
       {
         "id": "14",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write a lambda function that squares a number.",
+        "options": [
+          "lambda x: x ** 2",
+          "#lambda x: x ** 2",
+          "lambda x: x ** 2",
+          "LAMBDA X: X ** 2"
+        ],
         "correctAnswer": "lambda x: x ** 2",
         "explanation": "Lambda syntax: lambda parameters: expression"
       },
@@ -136,8 +178,14 @@
       },
       {
         "id": "16",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write a function with a docstring.",
+        "options": [
+          "def add(a, b):\\n    '''Add two numbers and return the result.'''\\n    return a + b",
+          "#def add(a, b):\\n    '''Add two numbers and return the result.'''\\n    return a + b",
+          "def add[a, b]:\\n    '''Add two numbers and return the result.'''\\n    return a + b",
+          "DEF ADD(A, B):\\N    '''ADD TWO NUMBERS AND RETURN THE RESULT.'''\\N    RETURN A + B"
+        ],
         "correctAnswer": "def add(a, b):\\n    '''Add two numbers and return the result.'''\\n    return a + b",
         "explanation": "Docstrings are placed immediately after the function definition."
       },
@@ -156,8 +204,14 @@
       },
       {
         "id": "18",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write a recursive function to calculate factorial.",
+        "options": [
+          "def factorial(n):\\n    if n <= 1:\\n        return 1\\n    return n * factorial(n - 1)",
+          "#def factorial(n):\\n    if n <= 1:\\n        return 1\\n    return n * factorial(n - 1)",
+          "def factorial[n]:\\n    if n <= 1:\\n        return 1\\n    return n * factorial[n - 1]",
+          "DEF FACTORIAL(N):\\N    IF N <= 1:\\N        RETURN 1\\N    RETURN N * FACTORIAL(N - 1)"
+        ],
         "correctAnswer": "def factorial(n):\\n    if n <= 1:\\n        return 1\\n    return n * factorial(n - 1)",
         "explanation": "Recursive functions have a base case and call themselves with modified parameters."
       },
@@ -170,22 +224,40 @@
       },
       {
         "id": "20",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write code using map() function with a lambda.",
+        "options": [
+          "list(map(lambda x: x * 2, [1, 2, 3]))",
+          "#list(map(lambda x: x * 2, [1, 2, 3]))",
+          "list[map[lambda x: x * 2, [1, 2, 3]]]",
+          "LIST(MAP(LAMBDA X: X * 2, [1, 2, 3]))"
+        ],
         "correctAnswer": "list(map(lambda x: x * 2, [1, 2, 3]))",
         "explanation": "map() applies a function to each item in an iterable."
       },
       {
         "id": "21",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write a function that accepts variable positional arguments and returns their sum.",
+        "options": [
+          "def sum_all(*args):\\n    return sum(args)",
+          "#def sum_all(*args):\\n    return sum(args)",
+          "def sum_all[*args]:\\n    return sum[args]",
+          "DEF SUM_ALL(*ARGS):\\N    RETURN SUM(ARGS)"
+        ],
         "correctAnswer": "def sum_all(*args):\\n    return sum(args)",
         "explanation": "*args allows the function to accept any number of positional arguments."
       },
       {
         "id": "22",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write a function that accepts keyword arguments and prints them.",
+        "options": [
+          "def print_kwargs(**kwargs):\\n    for key, value in kwargs.items():\\n        print(f'{key}: {value}')",
+          "#def print_kwargs(**kwargs):\\n    for key, value in kwargs.items():\\n        print(f'{key}: {value}')",
+          "def print_kwargs[**kwargs]:\\n    for key, value in kwargs.items[]:\\n        print[f'{key}: {value}']",
+          "DEF PRINT_KWARGS(**KWARGS):\\N    FOR KEY, VALUE IN KWARGS.ITEMS():\\N        PRINT(F'{KEY}: {VALUE}')"
+        ],
         "correctAnswer": "def print_kwargs(**kwargs):\\n    for key, value in kwargs.items():\\n        print(f'{key}: {value}')",
         "explanation": "**kwargs allows the function to accept any number of keyword arguments."
       },
@@ -204,8 +276,14 @@
       },
       {
         "id": "24",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write a function with both *args and **kwargs.",
+        "options": [
+          "def func(a, b, *args, **kwargs):\\n    print(f'Required: {a}, {b}')\\n    print(f'Args: {args}')\\n    print(f'kwargs: {kwargs}')",
+          "#def func(a, b, *args, **kwargs):\\n    print(f'Required: {a}, {b}')\\n    print(f'Args: {args}')\\n    print(f'kwargs: {kwargs}')",
+          "def func[a, b, *args, **kwargs]:\\n    print[f'Required: {a}, {b}']\\n    print[f'Args: {args}']\\n    print[f'kwargs: {kwargs}']",
+          "DEF FUNC(A, B, *ARGS, **KWARGS):\\N    PRINT(F'REQUIRED: {A}, {B}')\\N    PRINT(F'ARGS: {ARGS}')\\N    PRINT(F'KWARGS: {KWARGS}')"
+        ],
         "correctAnswer": "def func(a, b, *args, **kwargs):\\n    print(f'Required: {a}, {b}')\\n    print(f'Args: {args}')\\n    print(f'kwargs: {kwargs}')",
         "explanation": "Functions can have required parameters, *args, and **kwargs in that order."
       },
@@ -218,8 +296,14 @@
       },
       {
         "id": "26",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write an example of a closure.",
+        "options": [
+          "def outer(x):\\n    def inner(y):\\n        return x + y\\n    return inner\\n\\nclosure = outer(10)\\nprint(closure(5))  # Outputs 15",
+          "#def outer(x):\\n    def inner(y):\\n        return x + y\\n    return inner\\n\\nclosure = outer(10)\\nprint(closure(5))  # Outputs 15",
+          "def outer[x]:\\n    def inner[y]:\\n        return x + y\\n    return inner\\n\\nclosure = outer[10]\\nprint[closure[5]]  # Outputs 15",
+          "DEF OUTER(X):\\N    DEF INNER(Y):\\N        RETURN X + Y\\N    RETURN INNER\\N\\NCLOSURE = OUTER(10)\\NPRINT(CLOSURE(5))  # OUTPUTS 15"
+        ],
         "correctAnswer": "def outer(x):\\n    def inner(y):\\n        return x + y\\n    return inner\\n\\nclosure = outer(10)\\nprint(closure(5))  # Outputs 15",
         "explanation": "The inner function 'remembers' the value of x from the outer function."
       },
@@ -232,15 +316,27 @@
       },
       {
         "id": "28",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write a simple decorator that prints before and after function execution.",
+        "options": [
+          "def my_decorator(func):\\n    def wrapper(*args, **kwargs):\\n        print('Before')\\n        result = func(*args, **kwargs)\\n        print('After')\\n        return result\\n    return wrapper",
+          "#def my_decorator(func):\\n    def wrapper(*args, **kwargs):\\n        print('Before')\\n        result = func(*args, **kwargs)\\n        print('After')\\n        return result\\n    return wrapper",
+          "def my_decorator[func]:\\n    def wrapper[*args, **kwargs]:\\n        print['Before']\\n        result = func[*args, **kwargs]\\n        print['After']\\n        return result\\n    return wrapper",
+          "DEF MY_DECORATOR(FUNC):\\N    DEF WRAPPER(*ARGS, **KWARGS):\\N        PRINT('BEFORE')\\N        RESULT = FUNC(*ARGS, **KWARGS)\\N        PRINT('AFTER')\\N        RETURN RESULT\\N    RETURN WRAPPER"
+        ],
         "correctAnswer": "def my_decorator(func):\\n    def wrapper(*args, **kwargs):\\n        print('Before')\\n        result = func(*args, **kwargs)\\n        print('After')\\n        return result\\n    return wrapper",
         "explanation": "Decorators typically return a wrapper function that adds functionality around the original function."
       },
       {
         "id": "29",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write code using the @ decorator syntax.",
+        "options": [
+          "@my_decorator\\ndef my_function():\\n    print('Hello')",
+          "#@my_decorator\\ndef my_function():\\n    print('Hello')",
+          "@my_decorator\\ndef my_function[]:\\n    print['Hello']",
+          "@MY_DECORATOR\\NDEF MY_FUNCTION():\\N    PRINT('HELLO')"
+        ],
         "correctAnswer": "@my_decorator\\ndef my_function():\\n    print('Hello')",
         "explanation": "The @ symbol is syntactic sugar for applying decorators to functions."
       },
@@ -259,15 +355,27 @@
       },
       {
         "id": "31",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write code using filter() to get even numbers from a list.",
+        "options": [
+          "list(filter(lambda x: x % 2 == 0, [1, 2, 3, 4, 5]))",
+          "#list(filter(lambda x: x % 2 == 0, [1, 2, 3, 4, 5]))",
+          "list[filter[lambda x: x % 2 == 0, [1, 2, 3, 4, 5]]]",
+          "LIST(FILTER(LAMBDA X: X % 2 == 0, [1, 2, 3, 4, 5]))"
+        ],
         "correctAnswer": "list(filter(lambda x: x % 2 == 0, [1, 2, 3, 4, 5]))",
         "explanation": "filter() takes a function and an iterable, returning items where the function returns True."
       },
       {
         "id": "32",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write code using reduce() to sum a list (requires functools import).",
+        "options": [
+          "from functools import reduce\\nreduce(lambda x, y: x + y, [1, 2, 3, 4])",
+          "#from functools import reduce\\nreduce(lambda x, y: x + y, [1, 2, 3, 4])",
+          "from functools import reduce\\nreduce[lambda x, y: x + y, [1, 2, 3, 4]]",
+          "FROM FUNCTOOLS IMPORT REDUCE\\NREDUCE(LAMBDA X, Y: X + Y, [1, 2, 3, 4])"
+        ],
         "correctAnswer": "from functools import reduce\\nreduce(lambda x, y: x + y, [1, 2, 3, 4])",
         "explanation": "reduce() applies a function cumulatively to the items of an iterable."
       },
@@ -280,8 +388,14 @@
       },
       {
         "id": "34",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write code using partial from functools.",
+        "options": [
+          "from functools import partial\\nadd_five = partial(add, 5)\\nprint(add_five(3))  # Outputs 8",
+          "#from functools import partial\\nadd_five = partial(add, 5)\\nprint(add_five(3))  # Outputs 8",
+          "from functools import partial\\nadd_five = partial[add, 5]\\nprint[add_five[3]]  # Outputs 8",
+          "FROM FUNCTOOLS IMPORT PARTIAL\\NADD_FIVE = PARTIAL(ADD, 5)\\NPRINT(ADD_FIVE(3))  # OUTPUTS 8"
+        ],
         "correctAnswer": "from functools import partial\\nadd_five = partial(add, 5)\\nprint(add_five(3))  # Outputs 8",
         "explanation": "partial() fixes some arguments and returns a new function with the remaining arguments."
       },

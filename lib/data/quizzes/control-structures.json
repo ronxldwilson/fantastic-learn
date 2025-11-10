@@ -20,8 +20,14 @@
       },
       {
         "id": "2",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write an if statement that checks if x is greater than 10.",
+        "options": [
+          "if x > 10:",
+          "#if x > 10:",
+          "if x > 10:",
+          "IF X > 10:"
+        ],
         "correctAnswer": "if x > 10:",
         "explanation": "The if statement uses a condition followed by a colon, and the code block is indented."
       },
@@ -60,8 +66,14 @@
       },
       {
         "id": "6",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write an if-elif-else chain that categorizes temperature.",
+        "options": [
+          "if temp > 30:\\n    print('Hot')\\nelif temp > 20:\\n    print('Warm')\\nelse:\\n    print('Cold')",
+          "#if temp > 30:\\n    print('Hot')\\nelif temp > 20:\\n    print('Warm')\\nelse:\\n    print('Cold')",
+          "if temp > 30:\\n    print['Hot']\\nelif temp > 20:\\n    print['Warm']\\nelse:\\n    print['Cold']",
+          "IF TEMP > 30:\\N    PRINT('HOT')\\NELIF TEMP > 20:\\N    PRINT('WARM')\\NELSE:\\N    PRINT('COLD')"
+        ],
         "correctAnswer": "if temp > 30:\\n    print('Hot')\\nelif temp > 20:\\n    print('Warm')\\nelse:\\n    print('Cold')",
         "explanation": "Use elif for multiple conditions and else for the default case."
       },
@@ -100,8 +112,14 @@
       },
       {
         "id": "10",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write a conditional that checks if a number is in range [10, 20].",
+        "options": [
+          "if 10 <= x <= 20:",
+          "#if 10 <= x <= 20:",
+          "if 10 <= x <= 20:",
+          "IF 10 <= X <= 20:"
+        ],
         "correctAnswer": "if 10 <= x <= 20:",
         "explanation": "Python allows chained comparisons: a <= b <= c is equivalent to a <= b and b <= c."
       },
@@ -140,8 +158,14 @@
       },
       {
         "id": "14",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write a conditional using 'in' operator.",
+        "options": [
+          "if item in my_list:",
+          "#if item in my_list:",
+          "if item in my_list:",
+          "IF ITEM IN MY_LIST:"
+        ],
         "correctAnswer": "if item in my_list:",
         "explanation": "The 'in' operator checks membership in sequences and containers."
       },
@@ -181,8 +205,14 @@
       },
       {
         "id": "2",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write a for loop that prints numbers 1 to 5.",
+        "options": [
+          "for i in range(1, 6):\\n    print(i)",
+          "#for i in range(1, 6):\\n    print(i)",
+          "for i in range[1, 6]:\\n    print[i]",
+          "FOR I IN RANGE(1, 6):\\N    PRINT(I)"
+        ],
         "correctAnswer": "for i in range(1, 6):\\n    print(i)",
         "explanation": "Use range(1, 6) to generate numbers 1 through 5, and indent the print statement."
       },
@@ -208,8 +238,14 @@
       },
       {
         "id": "5",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write a while loop that counts from 1 to 5.",
+        "options": [
+          "i = 1\\nwhile i <= 5:\\n    print(i)\\n    i += 1",
+          "#i = 1\\nwhile i <= 5:\\n    print(i)\\n    i += 1",
+          "i = 1\\nwhile i <= 5:\\n    print[i]\\n    i += 1",
+          "I = 1\\NWHILE I <= 5:\\N    PRINT(I)\\N    I += 1"
+        ],
         "correctAnswer": "i = 1\\nwhile i <= 5:\\n    print(i)\\n    i += 1",
         "explanation": "Initialize counter, check condition, execute body, update counter."
       },
@@ -235,8 +271,14 @@
       },
       {
         "id": "8",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write a loop that iterates over a list with indices.",
+        "options": [
+          "for i, item in enumerate(my_list):\\n    print(f'Index {i}: {item}')",
+          "#for i, item in enumerate(my_list):\\n    print(f'Index {i}: {item}')",
+          "for i, item in enumerate[my_list]:\\n    print[f'Index {i}: {item}']",
+          "FOR I, ITEM IN ENUMERATE(MY_LIST):\\N    PRINT(F'INDEX {I}: {ITEM}')"
+        ],
         "correctAnswer": "for i, item in enumerate(my_list):\\n    print(f'Index {i}: {item}')",
         "explanation": "Use enumerate() to get both index and value in each iteration."
       },
@@ -255,8 +297,14 @@
       },
       {
         "id": "10",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write a loop that processes two lists simultaneously.",
+        "options": [
+          "for a, b in zip(list1, list2):\\n    print(f'{a} and {b}')",
+          "#for a, b in zip(list1, list2):\\n    print(f'{a} and {b}')",
+          "for a, b in zip[list1, list2]:\\n    print[f'{a} and {b}']",
+          "FOR A, B IN ZIP(LIST1, LIST2):\\N    PRINT(F'{A} AND {B}')"
+        ],
         "correctAnswer": "for a, b in zip(list1, list2):\\n    print(f'{a} and {b}')",
         "explanation": "zip() combines corresponding elements from multiple iterables."
       },
@@ -282,15 +330,27 @@
       },
       {
         "id": "13",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write a for loop that iterates over a dictionary's keys.",
+        "options": [
+          "for key in my_dict:",
+          "#for key in my_dict:",
+          "for key in my_dict:",
+          "FOR KEY IN MY_DICT:"
+        ],
         "correctAnswer": "for key in my_dict:",
         "explanation": "By default, iterating over a dict gives you the keys."
       },
       {
         "id": "14",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write a for loop that iterates over key-value pairs.",
+        "options": [
+          "for key, value in my_dict.items():",
+          "#for key, value in my_dict.items():",
+          "for key, value in my_dict.items[]:",
+          "FOR KEY, VALUE IN MY_DICT.ITEMS():"
+        ],
         "correctAnswer": "for key, value in my_dict.items():",
         "explanation": "Use .items() to get both keys and values."
       },
@@ -350,15 +410,27 @@
       },
       {
         "id": "4",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write a loop that skips even numbers using continue.",
+        "options": [
+          "for i in range(10):\\n    if i % 2 == 0:\\n        continue\\n    print(i)",
+          "#for i in range(10):\\n    if i % 2 == 0:\\n        continue\\n    print(i)",
+          "for i in range[10]:\\n    if i % 2 == 0:\\n        continue\\n    print[i]",
+          "FOR I IN RANGE(10):\\N    IF I % 2 == 0:\\N        CONTINUE\\N    PRINT(I)"
+        ],
         "correctAnswer": "for i in range(10):\\n    if i % 2 == 0:\\n        continue\\n    print(i)",
         "explanation": "Use continue to skip the print statement for even numbers."
       },
       {
         "id": "5",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write a loop that stops when it finds a negative number.",
+        "options": [
+          "for num in numbers:\\n    if num < 0:\\n        break\\n    print(num)",
+          "#for num in numbers:\\n    if num < 0:\\n        break\\n    print(num)",
+          "for num in numbers:\\n    if num < 0:\\n        break\\n    print[num]",
+          "FOR NUM IN NUMBERS:\\N    IF NUM < 0:\\N        BREAK\\N    PRINT(NUM)"
+        ],
         "correctAnswer": "for num in numbers:\\n    if num < 0:\\n        break\\n    print(num)",
         "explanation": "Use break to exit the loop when a condition is met."
       },
@@ -377,8 +449,14 @@
       },
       {
         "id": "7",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "How do you break out of nested loops in Python?",
+        "options": [
+          "Use a flag variable or restructure the code",
+          "#Use a flag variable or restructure the code",
+          "Use a flag variable or restructure the code",
+          "USE A FLAG VARIABLE OR RESTRUCTURE THE CODE"
+        ],
         "correctAnswer": "Use a flag variable or restructure the code",
         "explanation": "Python doesn't have labeled breaks, so use a flag or put loops in a function."
       },
@@ -397,8 +475,14 @@
       },
       {
         "id": "9",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write a pass statement in an empty if block.",
+        "options": [
+          "if condition:\\n    pass",
+          "#if condition:\\n    pass",
+          "if condition:\\n    pass",
+          "IF CONDITION:\\N    PASS"
+        ],
         "correctAnswer": "if condition:\\n    pass",
         "explanation": "pass is used when you need a statement but don't want to do anything."
       },
@@ -424,8 +508,14 @@
       },
       {
         "id": "12",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write a while loop that uses break to exit on user input 'quit'.",
+        "options": [
+          "while True:\\n    command = input('> ')\\n    if command == 'quit':\\n        break\\n    process(command)",
+          "#while True:\\n    command = input('> ')\\n    if command == 'quit':\\n        break\\n    process(command)",
+          "while True:\\n    command = input['> ']\\n    if command == 'quit':\\n        break\\n    process[command]",
+          "WHILE TRUE:\\N    COMMAND = INPUT('> ')\\N    IF COMMAND == 'QUIT':\\N        BREAK\\N    PROCESS(COMMAND)"
+        ],
         "correctAnswer": "while True:\\n    command = input('> ')\\n    if command == 'quit':\\n        break\\n    process(command)",
         "explanation": "Use an infinite loop with break to exit based on user input."
       },
@@ -444,8 +534,14 @@
       },
       {
         "id": "14",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write a loop that skips processing for None values.",
+        "options": [
+          "for item in items:\\n    if item is None:\\n        continue\\n    process(item)",
+          "#for item in items:\\n    if item is None:\\n        continue\\n    process(item)",
+          "for item in items:\\n    if item is None:\\n        continue\\n    process[item]",
+          "FOR ITEM IN ITEMS:\\N    IF ITEM IS NONE:\\N        CONTINUE\\N    PROCESS(ITEM)"
+        ],
         "correctAnswer": "for item in items:\\n    if item is None:\\n        continue\\n    process(item)",
         "explanation": "Use continue to skip None values and only process valid items."
       },
@@ -472,15 +568,27 @@
     "questions": [
       {
         "id": "1",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write a nested if statement that checks grade ranges.",
+        "options": [
+          "if score >= 90:\\n    grade = 'A'\\n    if score >= 95:\\n        grade = 'A+'\\nelif score >= 80:\\n    grade = 'B'\\nelse:\\n    grade = 'C'",
+          "#if score >= 90:\\n    grade = 'A'\\n    if score >= 95:\\n        grade = 'A+'\\nelif score >= 80:\\n    grade = 'B'\\nelse:\\n    grade = 'C'",
+          "if score >= 90:\\n    grade = 'A'\\n    if score >= 95:\\n        grade = 'A+'\\nelif score >= 80:\\n    grade = 'B'\\nelse:\\n    grade = 'C'",
+          "IF SCORE >= 90:\\N    GRADE = 'A'\\N    IF SCORE >= 95:\\N        GRADE = 'A+'\\NELIF SCORE >= 80:\\N    GRADE = 'B'\\NELSE:\\N    GRADE = 'C'"
+        ],
         "correctAnswer": "if score >= 90:\\n    grade = 'A'\\n    if score >= 95:\\n        grade = 'A+'\\nelif score >= 80:\\n    grade = 'B'\\nelse:\\n    grade = 'C'",
         "explanation": "Nested if statements allow checking sub-conditions within broader categories."
       },
       {
         "id": "2",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write a nested loop that prints a multiplication table.",
+        "options": [
+          "for i in range(1, 4):\\n    for j in range(1, 4):\\n        print(f'{i} * {j} = {i*j}')",
+          "#for i in range(1, 4):\\n    for j in range(1, 4):\\n        print(f'{i} * {j} = {i*j}')",
+          "for i in range[1, 4]:\\n    for j in range[1, 4]:\\n        print[f'{i} * {j} = {i*j}']",
+          "FOR I IN RANGE(1, 4):\\N    FOR J IN RANGE(1, 4):\\N        PRINT(F'{I} * {J} = {I*J}')"
+        ],
         "correctAnswer": "for i in range(1, 4):\\n    for j in range(1, 4):\\n        print(f'{i} * {j} = {i*j}')",
         "explanation": "Nested loops iterate over multiple dimensions of data."
       },
@@ -499,8 +607,14 @@
       },
       {
         "id": "4",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write a loop inside a conditional.",
+        "options": [
+          "if condition:\\n    for item in items:\\n        process(item)",
+          "#if condition:\\n    for item in items:\\n        process(item)",
+          "if condition:\\n    for item in items:\\n        process[item]",
+          "IF CONDITION:\\N    FOR ITEM IN ITEMS:\\N        PROCESS(ITEM)"
+        ],
         "correctAnswer": "if condition:\\n    for item in items:\\n        process(item)",
         "explanation": "You can nest any control structures as long as indentation is correct."
       },
@@ -519,8 +633,14 @@
       },
       {
         "id": "6",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write a conditional inside a loop with break.",
+        "options": [
+          "for item in items:\\n    if item == target:\\n        found = True\\n        break",
+          "#for item in items:\\n    if item == target:\\n        found = True\\n        break",
+          "for item in items:\\n    if item == target:\\n        found = True\\n        break",
+          "FOR ITEM IN ITEMS:\\N    IF ITEM == TARGET:\\N        FOUND = TRUE\\N        BREAK"
+        ],
         "correctAnswer": "for item in items:\\n    if item == target:\\n        found = True\\n        break",
         "explanation": "Nested control flow allows complex logic within loops."
       },
@@ -546,8 +666,14 @@
       },
       {
         "id": "9",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write a flattened version of nested conditions.",
+        "options": [
+          "if not condition1:\\n    return\\nif not condition2:\\n    return\\ndo_something()",
+          "#if not condition1:\\n    return\\nif not condition2:\\n    return\\ndo_something()",
+          "if not condition1:\\n    return\\nif not condition2:\\n    return\\ndo_something[]",
+          "IF NOT CONDITION1:\\N    RETURN\\NIF NOT CONDITION2:\\N    RETURN\\NDO_SOMETHING()"
+        ],
         "correctAnswer": "if not condition1:\\n    return\\nif not condition2:\\n    return\\ndo_something()",
         "explanation": "Early returns eliminate the need for deep nesting."
       },
@@ -566,8 +692,14 @@
       },
       {
         "id": "11",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write a loop that processes a 2D list.",
+        "options": [
+          "for row in matrix:\\n    for item in row:\\n        process(item)",
+          "#for row in matrix:\\n    for item in row:\\n        process(item)",
+          "for row in matrix:\\n    for item in row:\\n        process[item]",
+          "FOR ROW IN MATRIX:\\N    FOR ITEM IN ROW:\\N        PROCESS(ITEM)"
+        ],
         "correctAnswer": "for row in matrix:\\n    for item in row:\\n        process(item)",
         "explanation": "Nested loops are perfect for processing multi-dimensional data."
       },
@@ -593,8 +725,14 @@
       },
       {
         "id": "14",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write a conditional that contains a loop with continue.",
+        "options": [
+          "if should_process:\\n    for item in items:\\n        if item.skip:\\n            continue\\n        process(item)",
+          "#if should_process:\\n    for item in items:\\n        if item.skip:\\n            continue\\n        process(item)",
+          "if should_process:\\n    for item in items:\\n        if item.skip:\\n            continue\\n        process[item]",
+          "IF SHOULD_PROCESS:\\N    FOR ITEM IN ITEMS:\\N        IF ITEM.SKIP:\\N            CONTINUE\\N        PROCESS(ITEM)"
+        ],
         "correctAnswer": "if should_process:\\n    for item in items:\\n        if item.skip:\\n            continue\\n        process(item)",
         "explanation": "Complex nesting allows sophisticated control flow."
       },
@@ -628,8 +766,14 @@
       },
       {
         "id": "2",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write a conditional using the walrus operator.",
+        "options": [
+          "if (n := len(data)) > 0:",
+          "#if (n := len(data)) > 0:",
+          "if [n := len[data]] > 0:",
+          "IF (N := LEN(DATA)) > 0:"
+        ],
         "correctAnswer": "if (n := len(data)) > 0:",
         "explanation": "Assign and test in one expression."
       },
@@ -642,8 +786,14 @@
       },
       {
         "id": "4",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write a with statement for file handling.",
+        "options": [
+          "with open('file.txt', 'r') as f:\\n    data = f.read()",
+          "#with open('file.txt', 'r') as f:\\n    data = f.read()",
+          "with open['file.txt', 'r'] as f:\\n    data = f.read[]",
+          "WITH OPEN('FILE.TXT', 'R') AS F:\\N    DATA = F.READ()"
+        ],
         "correctAnswer": "with open('file.txt', 'r') as f:\\n    data = f.read()",
         "explanation": "with ensures file is closed even if exceptions occur."
       },
@@ -656,8 +806,14 @@
       },
       {
         "id": "6",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write a simple match statement.",
+        "options": [
+          "match value:\\n    case 1:\\n        print('one')\\n    case 2:\\n        print('two')\\n    case _:\\n        print('other')",
+          "#match value:\\n    case 1:\\n        print('one')\\n    case 2:\\n        print('two')\\n    case _:\\n        print('other')",
+          "match value:\\n    case 1:\\n        print['one']\\n    case 2:\\n        print['two']\\n    case _:\\n        print['other']",
+          "MATCH VALUE:\\N    CASE 1:\\N        PRINT('ONE')\\N    CASE 2:\\N        PRINT('TWO')\\N    CASE _:\\N        PRINT('OTHER')"
+        ],
         "correctAnswer": "match value:\\n    case 1:\\n        print('one')\\n    case 2:\\n        print('two')\\n    case _:\\n        print('other')",
         "explanation": "match/case provides pattern matching similar to other languages."
       },
@@ -670,8 +826,14 @@
       },
       {
         "id": "8",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write a generator expression for squares.",
+        "options": [
+          "squares = (x**2 for x in range(10))",
+          "#squares = (x**2 for x in range(10))",
+          "squares = [x**2 for x in range[10]]",
+          "SQUARES = (X**2 FOR X IN RANGE(10))"
+        ],
         "correctAnswer": "squares = (x**2 for x in range(10))",
         "explanation": "Generator expressions are memory-efficient for large sequences."
       },
@@ -697,8 +859,14 @@
       },
       {
         "id": "11",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write a match statement with tuple unpacking.",
+        "options": [
+          "match point:\\n    case (0, 0):\\n        print('origin')\\n    case (x, 0):\\n        print(f'x-axis at {x}')\\n    case (0, y):\\n        print(f'y-axis at {y}')",
+          "#match point:\\n    case (0, 0):\\n        print('origin')\\n    case (x, 0):\\n        print(f'x-axis at {x}')\\n    case (0, y):\\n        print(f'y-axis at {y}')",
+          "match point:\\n    case [0, 0]:\\n        print['origin']\\n    case [x, 0]:\\n        print[f'x-axis at {x}']\\n    case [0, y]:\\n        print[f'y-axis at {y}']",
+          "MATCH POINT:\\N    CASE (0, 0):\\N        PRINT('ORIGIN')\\N    CASE (X, 0):\\N        PRINT(F'X-AXIS AT {X}')\\N    CASE (0, Y):\\N        PRINT(F'Y-AXIS AT {Y}')"
+        ],
         "correctAnswer": "match point:\\n    case (0, 0):\\n        print('origin')\\n    case (x, 0):\\n        print(f'x-axis at {x}')\\n    case (0, y):\\n        print(f'y-axis at {y}')",
         "explanation": "Pattern matching can destructure complex data structures."
       },
@@ -724,8 +892,14 @@
       },
       {
         "id": "14",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write nested context managers.",
+        "options": [
+          "with open('input.txt') as f, open('output.txt', 'w') as g:\\n    g.write(f.read())",
+          "#with open('input.txt') as f, open('output.txt', 'w') as g:\\n    g.write(f.read())",
+          "with open['input.txt'] as f, open['output.txt', 'w'] as g:\\n    g.write[f.read[]]",
+          "WITH OPEN('INPUT.TXT') AS F, OPEN('OUTPUT.TXT', 'W') AS G:\\N    G.WRITE(F.READ())"
+        ],
         "correctAnswer": "with open('input.txt') as f, open('output.txt', 'w') as g:\\n    g.write(f.read())",
         "explanation": "Multiple context managers can be used in a single with statement."
       },
@@ -746,23 +920,41 @@
     "questions": [
       {
         "id": "1",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write a loop that finds the first match.",
+        "options": [
+          "for item in items:\\n    if matches_criteria(item):\\n        result = item\\n        break",
+          "#for item in items:\\n    if matches_criteria(item):\\n        result = item\\n        break",
+          "for item in items:\\n    if matches_criteria[item]:\\n        result = item\\n        break",
+          "FOR ITEM IN ITEMS:\\N    IF MATCHES_CRITERIA(ITEM):\\N        RESULT = ITEM\\N        BREAK"
+        ],
         "correctAnswer": "for item in items:\\n    if matches_criteria(item):\\n        result = item\\n        break",
         "explanation": "Use break to exit loop once the first match is found."
       },
       {
         "id": "2",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write a loop that processes items until a sentinel value.",
+        "options": [
+          "while True:\\n    item = get_next_item()\\n    if item is None:\\n        break\\n    process(item)",
+          "#while True:\\n    item = get_next_item()\\n    if item is None:\\n        break\\n    process(item)",
+          "while True:\\n    item = get_next_item[]\\n    if item is None:\\n        break\\n    process[item]",
+          "WHILE TRUE:\\N    ITEM = GET_NEXT_ITEM()\\N    IF ITEM IS NONE:\\N        BREAK\\N    PROCESS(ITEM)"
+        ],
         "correctAnswer": "while True:\\n    item = get_next_item()\\n    if item is None:\\n        break\\n    process(item)",
         "explanation": "Sentinel-controlled loop continues until a special value is encountered."
       },
       {
         "id": "3",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write a validation loop.",
-        "correctAnswer": "while True:\\n    value = input('Enter value: ')\\n    if is_valid(value):\\n        break\\n    print('Invalid input')",
+        "options": [
+          "name = input('Enter your name: ')\nprint('Hello, ' + name)",
+          "name = input()\nprint('Hello ' + name)",
+          "input('Enter your name: ')\nprint('Hello, ' + name)",
+          "name = raw_input('Enter your name: ')\nprint('Hello, ' + name)"
+        ],
+        "correctAnswer": "name = input('Enter your name: ')\nprint('Hello, ' + name)",
         "explanation": "Loop continues until valid input is provided."
       },
       {
@@ -780,8 +972,14 @@
       },
       {
         "id": "5",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write a loop that skips invalid items.",
+        "options": [
+          "for item in items:\\n    if not is_valid(item):\\n        continue\\n    process(item)",
+          "#for item in items:\\n    if not is_valid(item):\\n        continue\\n    process(item)",
+          "for item in items:\\n    if not is_valid[item]:\\n        continue\\n    process[item]",
+          "FOR ITEM IN ITEMS:\\N    IF NOT IS_VALID(ITEM):\\N        CONTINUE\\N    PROCESS(ITEM)"
+        ],
         "correctAnswer": "for item in items:\\n    if not is_valid(item):\\n        continue\\n    process(item)",
         "explanation": "Use continue to skip invalid items and only process valid ones."
       },
@@ -794,8 +992,14 @@
       },
       {
         "id": "7",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write a loop-and-a-half pattern.",
+        "options": [
+          "while True:\\n    command = input('> ')\\n    if command == 'quit':\\n        break\\n    if command:\\n        process(command)",
+          "#while True:\\n    command = input('> ')\\n    if command == 'quit':\\n        break\\n    if command:\\n        process(command)",
+          "while True:\\n    command = input['> ']\\n    if command == 'quit':\\n        break\\n    if command:\\n        process[command]",
+          "WHILE TRUE:\\N    COMMAND = INPUT('> ')\\N    IF COMMAND == 'QUIT':\\N        BREAK\\N    IF COMMAND:\\N        PROCESS(COMMAND)"
+        ],
         "correctAnswer": "while True:\\n    command = input('> ')\\n    if command == 'quit':\\n        break\\n    if command:\\n        process(command)",
         "explanation": "Loop runs at least once, checking exit condition in the middle."
       },
@@ -814,9 +1018,15 @@
       },
       {
         "id": "9",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write a robust input loop with error handling.",
-        "correctAnswer": "while True:\\n    try:\\n        value = int(input('Enter number: '))\\n        break\\n    except ValueError:\\n        print('Please enter a valid number')",
+        "options": [
+          "name = input('Enter your name: ')\nprint('Hello, ' + name)",
+          "name = input()\nprint('Hello ' + name)",
+          "input('Enter your name: ')\nprint('Hello, ' + name)",
+          "name = raw_input('Enter your name: ')\nprint('Hello, ' + name)"
+        ],
+        "correctAnswer": "name = input('Enter your name: ')\nprint('Hello, ' + name)",
         "explanation": "Handle exceptions gracefully in user input loops."
       },
       {
@@ -828,8 +1038,14 @@
       },
       {
         "id": "11",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write a loop using a flag variable.",
+        "options": [
+          "found = False\\nfor item in items:\\n    if matches(item):\\n        found = True\\n        break\\nif found:\\n    print('Item found')",
+          "#found = False\\nfor item in items:\\n    if matches(item):\\n        found = True\\n        break\\nif found:\\n    print('Item found')",
+          "found = False\\nfor item in items:\\n    if matches[item]:\\n        found = True\\n        break\\nif found:\\n    print['Item found']",
+          "FOUND = FALSE\\NFOR ITEM IN ITEMS:\\N    IF MATCHES(ITEM):\\N        FOUND = TRUE\\N        BREAK\\NIF FOUND:\\N    PRINT('ITEM FOUND')"
+        ],
         "correctAnswer": "found = False\\nfor item in items:\\n    if matches(item):\\n        found = True\\n        break\\nif found:\\n    print('Item found')",
         "explanation": "Flag variables help manage complex loop exit conditions."
       },
@@ -848,8 +1064,14 @@
       },
       {
         "id": "13",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write EAFP-style code.",
+        "options": [
+          "try:\\n    value = my_dict['key']\\nexcept KeyError:\\n    value = default",
+          "#try:\\n    value = my_dict['key']\\nexcept KeyError:\\n    value = default",
+          "try:\\n    value = my_dict['key']\\nexcept KeyError:\\n    value = default",
+          "TRY:\\N    VALUE = MY_DICT['KEY']\\NEXCEPT KEYERROR:\\N    VALUE = DEFAULT"
+        ],
         "correctAnswer": "try:\\n    value = my_dict['key']\\nexcept KeyError:\\n    value = default",
         "explanation": "Try to access, handle exception if key doesn't exist."
       },
@@ -936,8 +1158,14 @@
       },
       {
         "id": "6",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write a complex condition extracted to a variable.",
+        "options": [
+          "is_valid = age >= 18 and not banned and account_active\\nif is_valid:\\n    grant_access()",
+          "#is_valid = age >= 18 and not banned and account_active\\nif is_valid:\\n    grant_access()",
+          "is_valid = age >= 18 and not banned and account_active\\nif is_valid:\\n    grant_access[]",
+          "IS_VALID = AGE >= 18 AND NOT BANNED AND ACCOUNT_ACTIVE\\NIF IS_VALID:\\N    GRANT_ACCESS()"
+        ],
         "correctAnswer": "is_valid = age >= 18 and not banned and account_active\\nif is_valid:\\n    grant_access()",
         "explanation": "Extract complex conditions to descriptive variable names."
       },
@@ -963,8 +1191,14 @@
       },
       {
         "id": "9",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write safe list modification during iteration.",
+        "options": [
+          "new_list = [item for item in old_list if should_keep(item)]",
+          "#new_list = [item for item in old_list if should_keep(item)]",
+          "new_list = [item for item in old_list if should_keep[item]]",
+          "NEW_LIST = [ITEM FOR ITEM IN OLD_LIST IF SHOULD_KEEP(ITEM)]"
+        ],
         "correctAnswer": "new_list = [item for item in old_list if should_keep(item)]",
         "explanation": "List comprehensions create new lists without modifying the original during iteration."
       },
@@ -1058,8 +1292,14 @@
       },
       {
         "id": "3",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Optimize a loop with repeated function calls.",
+        "options": [
+          "length = len(my_list)  # Call once\\nfor i in range(length):\\n    process(my_list[i])",
+          "#length = len(my_list)  # Call once\\nfor i in range(length):\\n    process(my_list[i])",
+          "length = len[my_list]  # Call once\\nfor i in range[length]:\\n    process[my_list[i]]",
+          "LENGTH = LEN(MY_LIST)  # CALL ONCE\\NFOR I IN RANGE(LENGTH):\\N    PROCESS(MY_LIST[I])"
+        ],
         "correctAnswer": "length = len(my_list)  # Call once\\nfor i in range(length):\\n    process(my_list[i])",
         "explanation": "Cache expensive operations outside the loop."
       },
@@ -1098,8 +1338,14 @@
       },
       {
         "id": "7",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write efficient string building in a loop.",
+        "options": [
+          "parts = []\\nfor item in items:\\n    parts.append(str(item))\\nresult = ''.join(parts)",
+          "#parts = []\\nfor item in items:\\n    parts.append(str(item))\\nresult = ''.join(parts)",
+          "parts = []\\nfor item in items:\\n    parts.append[str[item]]\\nresult = ''.join[parts]",
+          "PARTS = []\\NFOR ITEM IN ITEMS:\\N    PARTS.APPEND(STR(ITEM))\\NRESULT = ''.JOIN(PARTS)"
+        ],
         "correctAnswer": "parts = []\\nfor item in items:\\n    parts.append(str(item))\\nresult = ''.join(parts)",
         "explanation": "Collect parts in a list, then join - much faster than repeated concatenation."
       },
@@ -1165,8 +1411,14 @@
       },
       {
         "id": "14",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Optimize a loop that checks multiple conditions.",
+        "options": [
+          "valid_values = {1, 2, 3, 4, 5}\\nif x in valid_values:\\n    process(x)",
+          "#valid_values = {1, 2, 3, 4, 5}\\nif x in valid_values:\\n    process(x)",
+          "valid_values = {1, 2, 3, 4, 5}\\nif x in valid_values:\\n    process[x]",
+          "VALID_VALUES = {1, 2, 3, 4, 5}\\NIF X IN VALID_VALUES:\\N    PROCESS(X)"
+        ],
         "correctAnswer": "valid_values = {1, 2, 3, 4, 5}\\nif x in valid_values:\\n    process(x)",
         "explanation": "Use set membership for fast lookups instead of multiple if-elif."
       },

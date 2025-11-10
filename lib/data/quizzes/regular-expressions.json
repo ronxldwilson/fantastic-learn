@@ -14,8 +14,14 @@
       },
       {
         "id": "2",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write code to import the re module.",
+        "options": [
+          "import re",
+          "#import re",
+          "import re",
+          "IMPORT RE"
+        ],
         "correctAnswer": "import re",
         "explanation": "Import the re module to use regular expressions."
       },
@@ -82,8 +88,14 @@
       },
       {
         "id": "10",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write code to find all email addresses in a string using regex.",
+        "options": [
+          "import re\nemails = re.findall(r'[\\w\\.-]+@[\\w\\.-]+\\.[\\w]+', text)",
+          "#import re\nemails = re.findall(r'[\\w\\.-]+@[\\w\\.-]+\\.[\\w]+', text)",
+          "import re\nemails = re.findall[r'[\\w\\.-]+@[\\w\\.-]+\\.[\\w]+', text]",
+          "IMPORT RE\nEMAILS = RE.FINDALL(R'[\\W\\.-]+@[\\W\\.-]+\\.[\\W]+', TEXT)"
+        ],
         "correctAnswer": "import re\nemails = re.findall(r'[\\w\\.-]+@[\\w\\.-]+\\.[\\w]+', text)",
         "explanation": "Use findall() with a regex pattern for email addresses."
       },
@@ -128,8 +140,14 @@
       },
       {
         "id": "14",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write code to replace all digits in a string with 'X'.",
+        "options": [
+          "import re\nresult = re.sub(r'\\d', 'X', text)",
+          "#import re\nresult = re.sub(r'\\d', 'X', text)",
+          "import re\nresult = re.sub[r'\\d', 'X', text]",
+          "IMPORT RE\nRESULT = RE.SUB(R'\\D', 'X', TEXT)"
+        ],
         "correctAnswer": "import re\nresult = re.sub(r'\\d', 'X', text)",
         "explanation": "Use re.sub() to replace matches with a replacement string."
       },
@@ -156,8 +174,14 @@
       },
       {
         "id": "18",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write code to split a string on whitespace using regex.",
+        "options": [
+          "import re\nparts = re.split(r'\\s+', text)",
+          "#import re\nparts = re.split(r'\\s+', text)",
+          "import re\nparts = re.split[r'\\s+', text]",
+          "IMPORT RE\nPARTS = RE.SPLIT(R'\\S+', TEXT)"
+        ],
         "correctAnswer": "import re\nparts = re.split(r'\\s+', text)",
         "explanation": "re.split() can use regex patterns as delimiters."
       },
@@ -176,8 +200,14 @@
       },
       {
         "id": "20",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write a regex pattern to match phone numbers like (123) 456-7890.",
+        "options": [
+          "r'\\(\\d{3}\\) \\d{3}-\\d{4}'",
+          "#r'\\(\\d{3}\\) \\d{3}-\\d{4}'",
+          "r'\\[\\d{3}\\] \\d{3}-\\d{4}'",
+          "R'\\(\\D{3}\\) \\D{3}-\\D{4}'"
+        ],
         "correctAnswer": "r'\\(\\d{3}\\) \\d{3}-\\d{4}'",
         "explanation": "Use \\d{3} for exactly 3 digits, escape parentheses and other special characters."
       }

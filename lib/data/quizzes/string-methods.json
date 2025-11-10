@@ -27,8 +27,14 @@
       },
       {
         "id": "3",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write code to split the string 'hello world' into a list.",
+        "options": [
+          "['hello', 'world'] = 'hello world'.split()",
+          "#['hello', 'world'] = 'hello world'.split()",
+          "['hello', 'world'] = 'hello world'.split[]",
+          "['HELLO', 'WORLD'] = 'HELLO WORLD'.SPLIT()"
+        ],
         "correctAnswer": "['hello', 'world'] = 'hello world'.split()",
         "explanation": "The split() method splits a string into a list using whitespace as separator."
       },
@@ -47,8 +53,14 @@
       },
       {
         "id": "5",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write code to check if 'Python' starts with 'Py'.",
+        "options": [
+          "'Python'.startswith('Py')",
+          "#'Python'.startswith('Py')",
+          "'Python'.startswith['Py']",
+          "'PYTHON'.STARTSWITH('PY')"
+        ],
         "correctAnswer": "'Python'.startswith('Py')",
         "explanation": "The startswith() method returns True if the string starts with the specified prefix."
       },
@@ -74,8 +86,14 @@
       },
       {
         "id": "8",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write code to remove only leading whitespace.",
+        "options": [
+          "'  hello'.lstrip()",
+          "#'  hello'.lstrip()",
+          "'  hello'.lstrip[]",
+          "'  HELLO'.LSTRIP()"
+        ],
         "correctAnswer": "'  hello'.lstrip()",
         "explanation": "lstrip() removes whitespace from the left side only."
       },
@@ -101,8 +119,14 @@
       },
       {
         "id": "11",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write code to split 'a,b,c' on commas.",
+        "options": [
+          "'a,b,c'.split(',')",
+          "#'a,b,c'.split(',')",
+          "'a,b,c'.split[',']",
+          "'A,B,C'.SPLIT(',')"
+        ],
         "correctAnswer": "'a,b,c'.split(',')",
         "explanation": "Specify the separator character in split()."
       },
@@ -128,8 +152,14 @@
       },
       {
         "id": "14",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write code to check if 'world' is in 'hello world'.",
+        "options": [
+          "'world' in 'hello world'",
+          "#'world' in 'hello world'",
+          "'world' in 'hello world'",
+          "'WORLD' IN 'HELLO WORLD'"
+        ],
         "correctAnswer": "'world' in 'hello world'",
         "explanation": "The 'in' operator checks for substring presence."
       },
@@ -170,8 +200,14 @@
       },
       {
         "id": "3",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write code to join ['Hello', 'World'] with a space separator.",
+        "options": [
+          "' '.join(['Hello', 'World'])",
+          "#' '.join(['Hello', 'World'])",
+          "' '.join[['Hello', 'World']]",
+          "' '.JOIN(['HELLO', 'WORLD'])"
+        ],
         "correctAnswer": "' '.join(['Hello', 'World'])",
         "explanation": "Use join() on the separator string with the list as argument."
       },
@@ -197,8 +233,14 @@
       },
       {
         "id": "6",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write code to check if a string contains only letters.",
+        "options": [
+          "'hello'.isalpha()",
+          "#'hello'.isalpha()",
+          "'hello'.isalpha[]",
+          "'HELLO'.ISALPHA()"
+        ],
         "correctAnswer": "'hello'.isalpha()",
         "explanation": "isalpha() returns True if all characters are letters."
       },
@@ -224,8 +266,14 @@
       },
       {
         "id": "9",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write code to check if a string is a valid identifier.",
+        "options": [
+          "'variable1'.isidentifier()",
+          "#'variable1'.isidentifier()",
+          "'variable1'.isidentifier[]",
+          "'VARIABLE1'.ISIDENTIFIER()"
+        ],
         "correctAnswer": "'variable1'.isidentifier()",
         "explanation": "isidentifier() checks if the string is a valid Python identifier."
       },
@@ -251,8 +299,14 @@
       },
       {
         "id": "12",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write code to center a string with padding.",
+        "options": [
+          "'hello'.center(10)",
+          "#'hello'.center(10)",
+          "'hello'.center[10]",
+          "'HELLO'.CENTER(10)"
+        ],
         "correctAnswer": "'hello'.center(10)",
         "explanation": "center(width) centers the string in a field of given width."
       },
@@ -265,8 +319,14 @@
       },
       {
         "id": "14",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write code to right-justify a string.",
+        "options": [
+          "'hello'.rjust(10)",
+          "#'hello'.rjust(10)",
+          "'hello'.rjust[10]",
+          "'HELLO'.RJUST(10)"
+        ],
         "correctAnswer": "'hello'.rjust(10)",
         "explanation": "rjust(width) right-aligns the string in a field of given width."
       },
@@ -306,15 +366,27 @@
       },
       {
         "id": "2",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write code using f-string to format 'Hello {name}' with name='Alice'.",
+        "options": [
+          "f'Hello {name}'",
+          "#f'Hello {name}'",
+          "f'Hello {name}'",
+          "F'HELLO {NAME}'"
+        ],
         "correctAnswer": "f'Hello {name}'",
         "explanation": "f-strings allow embedding expressions inside string literals with curly braces."
       },
       {
         "id": "3",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write code using .format() to insert 'Python' into 'I love {}'.",
+        "options": [
+          "'I love {}'.format('Python')",
+          "#'I love {}'.format('Python')",
+          "'I love {}'.format['Python']",
+          "'I LOVE {}'.FORMAT('PYTHON')"
+        ],
         "correctAnswer": "'I love {}'.format('Python')",
         "explanation": "The format() method replaces {} placeholders with provided arguments."
       },
@@ -327,8 +399,14 @@
       },
       {
         "id": "5",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write code using % formatting for 'Name: %s, Age: %d'.",
+        "options": [
+          "'Name: %s, Age: %d' % ('Alice', 25)",
+          "#'Name: %s, Age: %d' % ('Alice', 25)",
+          "'Name: %s, Age: %d' % ['Alice', 25]",
+          "'NAME: %S, AGE: %D' % ('ALICE', 25)"
+        ],
         "correctAnswer": "'Name: %s, Age: %d' % ('Alice', 25)",
         "explanation": "% formatting uses % operator with format specifiers."
       },
@@ -347,8 +425,14 @@
       },
       {
         "id": "7",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write f-string with number formatting.",
+        "options": [
+          "f'Price: ${price:.2f}'",
+          "#f'Price: ${price:.2f}'",
+          "f'Price: ${price:.2f}'",
+          "F'PRICE: ${PRICE:.2F}'"
+        ],
         "correctAnswer": "f'Price: ${price:.2f}'",
         "explanation": "f-strings support format specifications after colons."
       },
@@ -361,8 +445,14 @@
       },
       {
         "id": "9",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write code using string.Template.",
+        "options": [
+          "from string import Template\nt = Template('Hello $name')\nprint(t.substitute(name='Alice'))",
+          "#from string import Template\nt = Template('Hello $name')\nprint(t.substitute(name='Alice'))",
+          "from string import Template\nt = Template['Hello $name']\nprint[t.substitute[name='Alice']]",
+          "FROM STRING IMPORT TEMPLATE\nT = TEMPLATE('HELLO $NAME')\nPRINT(T.SUBSTITUTE(NAME='ALICE'))"
+        ],
         "correctAnswer": "from string import Template\nt = Template('Hello $name')\nprint(t.substitute(name='Alice'))",
         "explanation": "Template uses $variable syntax for substitution."
       },
@@ -381,8 +471,14 @@
       },
       {
         "id": "11",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write f-string with expressions.",
+        "options": [
+          "f'The sum is {a + b}'",
+          "#f'The sum is {a + b}'",
+          "f'The sum is {a + b}'",
+          "F'THE SUM IS {A + B}'"
+        ],
         "correctAnswer": "f'The sum is {a + b}'",
         "explanation": "f-strings can contain any valid Python expression."
       },
@@ -395,8 +491,14 @@
       },
       {
         "id": "13",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write f-string with repr formatting.",
+        "options": [
+          "f'Debug: {value!r}'",
+          "#f'Debug: {value!r}'",
+          "f'Debug: {value!r}'",
+          "F'DEBUG: {VALUE!R}'"
+        ],
         "correctAnswer": "f'Debug: {value!r}'",
         "explanation": "!r shows the repr() of the value for debugging."
       },
@@ -415,8 +517,14 @@
       },
       {
         "id": "15",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write .format() with named placeholders.",
+        "options": [
+          "'Hello {name}, you are {age} years old'.format(name='Alice', age=25)",
+          "#'Hello {name}, you are {age} years old'.format(name='Alice', age=25)",
+          "'Hello {name}, you are {age} years old'.format[name='Alice', age=25]",
+          "'HELLO {NAME}, YOU ARE {AGE} YEARS OLD'.FORMAT(NAME='ALICE', AGE=25)"
+        ],
         "correctAnswer": "'Hello {name}, you are {age} years old'.format(name='Alice', age=25)",
         "explanation": ".format() supports named placeholders for clarity."
       }
@@ -437,8 +545,14 @@
       },
       {
         "id": "2",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write code to get the last character of 'Python'.",
+        "options": [
+          "'Python'[-1]",
+          "#'Python'[-1]",
+          "'Python'[-1]",
+          "'PYTHON'[-1]"
+        ],
         "correctAnswer": "'Python'[-1]",
         "explanation": "Negative indexing starts from the end, -1 is the last character."
       },
@@ -457,8 +571,14 @@
       },
       {
         "id": "4",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write code to get every other character from 'Python'.",
+        "options": [
+          "'Python'[::2]",
+          "#'Python'[::2]",
+          "'Python'[::2]",
+          "'PYTHON'[::2]"
+        ],
         "correctAnswer": "'Python'[::2]",
         "explanation": "Step parameter 2 skips every other character."
       },
@@ -484,8 +604,14 @@
       },
       {
         "id": "7",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write code to get characters 2 through 5 from 'Hello World'.",
+        "options": [
+          "'Hello World'[2:6]",
+          "#'Hello World'[2:6]",
+          "'Hello World'[2:6]",
+          "'HELLO WORLD'[2:6]"
+        ],
         "correctAnswer": "'Hello World'[2:6]",
         "explanation": "Slice from index 2 to 6 (exclusive) to get characters 2-5."
       },
@@ -498,8 +624,14 @@
       },
       {
         "id": "9",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write code to get the first 3 characters of a string.",
+        "options": [
+          "string[:3]",
+          "#string[:3]",
+          "string[:3]",
+          "STRING[:3]"
+        ],
         "correctAnswer": "string[:3]",
         "explanation": "[:3] takes from the beginning up to index 3 (exclusive)."
       },
@@ -518,8 +650,14 @@
       },
       {
         "id": "11",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write code to safely get a character or default value.",
+        "options": [
+          "char = string[index] if index < len(string) else 'default'",
+          "#char = string[index] if index < len(string) else 'default'",
+          "char = string[index] if index < len[string] else 'default'",
+          "CHAR = STRING[INDEX] IF INDEX < LEN(STRING) ELSE 'DEFAULT'"
+        ],
         "correctAnswer": "char = string[index] if index < len(string) else 'default'",
         "explanation": "Check bounds before accessing to avoid IndexError."
       },
@@ -545,8 +683,14 @@
       },
       {
         "id": "14",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write code to extract domain from email address.",
+        "options": [
+          "email[email.find('@')+1:]",
+          "#email[email.find('@')+1:]",
+          "email[email.find['@']+1:]",
+          "EMAIL[EMAIL.FIND('@')+1:]"
+        ],
         "correctAnswer": "email[email.find('@')+1:]",
         "explanation": "Find @ position and slice from after it to get domain."
       },
@@ -580,8 +724,14 @@
       },
       {
         "id": "2",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write code to check if 'apple' comes before 'banana'.",
+        "options": [
+          "'apple' < 'banana'",
+          "#'apple' < 'banana'",
+          "'apple' < 'banana'",
+          "'APPLE' < 'BANANA'"
+        ],
         "correctAnswer": "'apple' < 'banana'",
         "explanation": "Comparison operators work lexicographically on strings."
       },
@@ -607,8 +757,14 @@
       },
       {
         "id": "5",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write code to sort a list of strings.",
+        "options": [
+          "sorted(['banana', 'apple', 'cherry'])",
+          "#sorted(['banana', 'apple', 'cherry'])",
+          "sorted[['banana', 'apple', 'cherry']]",
+          "SORTED(['BANANA', 'APPLE', 'CHERRY'])"
+        ],
         "correctAnswer": "sorted(['banana', 'apple', 'cherry'])",
         "explanation": "sorted() returns a new sorted list of strings."
       },
@@ -634,8 +790,14 @@
       },
       {
         "id": "8",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write code for case-insensitive string comparison.",
+        "options": [
+          "'Apple'.lower() == 'apple'.lower()",
+          "#'Apple'.lower() == 'apple'.lower()",
+          "'Apple'.lower[] == 'apple'.lower[]",
+          "'APPLE'.LOWER() == 'APPLE'.LOWER()"
+        ],
         "correctAnswer": "'Apple'.lower() == 'apple'.lower()",
         "explanation": "Convert both strings to same case before comparing."
       },
@@ -648,8 +810,14 @@
       },
       {
         "id": "10",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write code to sort strings case-insensitively.",
+        "options": [
+          "sorted(strings, key=str.lower)",
+          "#sorted(strings, key=str.lower)",
+          "sorted[strings, key=str.lower]",
+          "SORTED(STRINGS, KEY=STR.LOWER)"
+        ],
         "correctAnswer": "sorted(strings, key=str.lower)",
         "explanation": "The key function transforms items before comparison."
       },
@@ -668,8 +836,14 @@
       },
       {
         "id": "12",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write code to check equality ignoring case.",
+        "options": [
+          "'Hello'.casefold() == 'hello'.casefold()",
+          "#'Hello'.casefold() == 'hello'.casefold()",
+          "'Hello'.casefold[] == 'hello'.casefold[]",
+          "'HELLO'.CASEFOLD() == 'HELLO'.CASEFOLD()"
+        ],
         "correctAnswer": "'Hello'.casefold() == 'hello'.casefold()",
         "explanation": "casefold() is more aggressive than lower() for case-insensitive comparison."
       },
@@ -695,8 +869,14 @@
       },
       {
         "id": "15",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write code to sort strings by length.",
+        "options": [
+          "sorted(strings, key=len)",
+          "#sorted(strings, key=len)",
+          "sorted[strings, key=len]",
+          "SORTED(STRINGS, KEY=LEN)"
+        ],
         "correctAnswer": "sorted(strings, key=len)",
         "explanation": "Use key=len to sort strings by their length."
       }
@@ -737,8 +917,14 @@
       },
       {
         "id": "4",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write code to encode a string to bytes.",
+        "options": [
+          "'hello'.encode('utf-8')",
+          "#'hello'.encode('utf-8')",
+          "'hello'.encode['utf-8']",
+          "'HELLO'.ENCODE('UTF-8')"
+        ],
         "correctAnswer": "'hello'.encode('utf-8')",
         "explanation": "encode() converts a string to bytes using the specified encoding."
       },
@@ -757,8 +943,14 @@
       },
       {
         "id": "6",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write code to decode UTF-8 bytes to string.",
+        "options": [
+          "b'hello'.decode('utf-8')",
+          "#b'hello'.decode('utf-8')",
+          "b'hello'.decode['utf-8']",
+          "B'HELLO'.DECODE('UTF-8')"
+        ],
         "correctAnswer": "b'hello'.decode('utf-8')",
         "explanation": "decode() with encoding converts bytes to string."
       },
@@ -784,8 +976,14 @@
       },
       {
         "id": "9",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write code to handle encoding errors gracefully.",
+        "options": [
+          "'text'.encode('ascii', errors='ignore')",
+          "#'text'.encode('ascii', errors='ignore')",
+          "'text'.encode['ascii', errors='ignore']",
+          "'TEXT'.ENCODE('ASCII', ERRORS='IGNORE')"
+        ],
         "correctAnswer": "'text'.encode('ascii', errors='ignore')",
         "explanation": "errors='ignore' skips characters that cannot be encoded."
       },
@@ -811,8 +1009,14 @@
       },
       {
         "id": "12",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write code to check if a string is ASCII.",
+        "options": [
+          "'hello'.isascii()",
+          "#'hello'.isascii()",
+          "'hello'.isascii[]",
+          "'HELLO'.ISASCII()"
+        ],
         "correctAnswer": "'hello'.isascii()",
         "explanation": "isascii() returns True if all characters are ASCII."
       },
@@ -825,8 +1029,14 @@
       },
       {
         "id": "14",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write code to get Unicode code point for 'A'.",
+        "options": [
+          "ord('A')",
+          "#ord('A')",
+          "ord['A']",
+          "ORD('A')"
+        ],
         "correctAnswer": "ord('A')",
         "explanation": "ord('A') returns 65, the Unicode code point for 'A'."
       },
@@ -867,8 +1077,14 @@
       },
       {
         "id": "3",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write code to manually intern a string.",
+        "options": [
+          "import sys\ns = sys.intern('hello')",
+          "#import sys\ns = sys.intern('hello')",
+          "import sys\ns = sys.intern['hello']",
+          "IMPORT SYS\nS = SYS.INTERN('HELLO')"
+        ],
         "correctAnswer": "import sys\ns = sys.intern('hello')",
         "explanation": "sys.intern() adds the string to the intern pool."
       },
@@ -881,8 +1097,14 @@
       },
       {
         "id": "5",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write efficient string building code.",
+        "options": [
+          "parts = []\nfor item in items:\n    parts.append(str(item))\nresult = ''.join(parts)",
+          "#parts = []\nfor item in items:\n    parts.append(str(item))\nresult = ''.join(parts)",
+          "parts = []\nfor item in items:\n    parts.append[str[item]]\nresult = ''.join[parts]",
+          "PARTS = []\nFOR ITEM IN ITEMS:\n    PARTS.APPEND(STR(ITEM))\nRESULT = ''.JOIN(PARTS)"
+        ],
         "correctAnswer": "parts = []\nfor item in items:\n    parts.append(str(item))\nresult = ''.join(parts)",
         "explanation": "Collect parts in a list, then join - avoids creating intermediate strings."
       },
@@ -908,8 +1130,14 @@
       },
       {
         "id": "8",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write code using string concatenation (inefficient).",
+        "options": [
+          "result = ''\nfor s in strings:\n    result += s  # Inefficient!",
+          "#result = ''\nfor s in strings:\n    result += s  # Inefficient!",
+          "result = ''\nfor s in strings:\n    result += s  # Inefficient!",
+          "RESULT = ''\nFOR S IN STRINGS:\n    RESULT += S  # INEFFICIENT!"
+        ],
         "correctAnswer": "result = ''\nfor s in strings:\n    result += s  # Inefficient!",
         "explanation": "This creates a new string on each iteration."
       },
@@ -935,8 +1163,14 @@
       },
       {
         "id": "11",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write code to efficiently concatenate with separator.",
+        "options": [
+          "'; '.join(strings)",
+          "#'; '.join(strings)",
+          "'; '.join[strings]",
+          "'; '.JOIN(STRINGS)"
+        ],
         "correctAnswer": "'; '.join(strings)",
         "explanation": "join() is efficient even with separators."
       },
@@ -955,8 +1189,14 @@
       },
       {
         "id": "13",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write code using StringIO.",
+        "options": [
+          "from io import StringIO\noutput = StringIO()\noutput.write('Hello')\nprint(output.getvalue())",
+          "#from io import StringIO\noutput = StringIO()\noutput.write('Hello')\nprint(output.getvalue())",
+          "from io import StringIO\noutput = StringIO[]\noutput.write['Hello']\nprint[output.getvalue[]]",
+          "FROM IO IMPORT STRINGIO\nOUTPUT = STRINGIO()\nOUTPUT.WRITE('HELLO')\nPRINT(OUTPUT.GETVALUE())"
+        ],
         "correctAnswer": "from io import StringIO\noutput = StringIO()\noutput.write('Hello')\nprint(output.getvalue())",
         "explanation": "StringIO acts like a file but operates on strings."
       },

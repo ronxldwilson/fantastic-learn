@@ -20,8 +20,14 @@
       },
       {
         "id": "2",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write code to open a file named 'data.txt' for reading.",
+        "options": [
+          "file = open('data.txt', 'r')",
+          "#file = open('data.txt', 'r')",
+          "file = open['data.txt', 'r']",
+          "FILE = OPEN('DATA.TXT', 'R')"
+        ],
         "correctAnswer": "file = open('data.txt', 'r')",
         "explanation": "Use open() with the filename and 'r' mode for reading."
       },
@@ -47,8 +53,14 @@
       },
       {
         "id": "5",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write code to read all lines from a file into a list.",
+        "options": [
+          "lines = file.readlines()",
+          "#lines = file.readlines()",
+          "lines = file.readlines[]",
+          "LINES = FILE.READLINES()"
+        ],
         "correctAnswer": "lines = file.readlines()",
         "explanation": "The readlines() method reads all lines and returns them as a list of strings."
       },
@@ -74,8 +86,14 @@
       },
       {
         "id": "8",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write code to read the first 100 characters from a file.",
+        "options": [
+          "content = file.read(100)",
+          "#content = file.read(100)",
+          "content = file.read[100]",
+          "CONTENT = FILE.READ(100)"
+        ],
         "correctAnswer": "content = file.read(100)",
         "explanation": "read(size) reads up to 'size' characters from the file."
       },
@@ -101,8 +119,14 @@
       },
       {
         "id": "11",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write code to iterate through a file line by line.",
+        "options": [
+          "for line in file:\n    print(line)",
+          "#for line in file:\n    print(line)",
+          "for line in file:\n    print[line]",
+          "FOR LINE IN FILE:\n    PRINT(LINE)"
+        ],
         "correctAnswer": "for line in file:\n    print(line)",
         "explanation": "You can iterate directly over a file object to process lines one by one."
       },
@@ -128,8 +152,14 @@
       },
       {
         "id": "14",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write code to check if a file exists before opening it.",
+        "options": [
+          "import os\nif os.path.exists('file.txt'):\n    file = open('file.txt')",
+          "#import os\nif os.path.exists('file.txt'):\n    file = open('file.txt')",
+          "import os\nif os.path.exists['file.txt']:\n    file = open['file.txt']",
+          "IMPORT OS\nIF OS.PATH.EXISTS('FILE.TXT'):\n    FILE = OPEN('FILE.TXT')"
+        ],
         "correctAnswer": "import os\nif os.path.exists('file.txt'):\n    file = open('file.txt')",
         "explanation": "Use os.path.exists() to check file existence before opening."
       },
@@ -170,8 +200,14 @@
       },
       {
         "id": "3",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write code to open a file for writing and write 'Hello World' to it.",
+        "options": [
+          "file = open('output.txt', 'w')\nfile.write('Hello World')",
+          "#file = open('output.txt', 'w')\nfile.write('Hello World')",
+          "file = open['output.txt', 'w']\nfile.write['Hello World']",
+          "FILE = OPEN('OUTPUT.TXT', 'W')\nFILE.WRITE('HELLO WORLD')"
+        ],
         "correctAnswer": "file = open('output.txt', 'w')\nfile.write('Hello World')",
         "explanation": "Open with 'w' mode and use write() to write the string."
       },
@@ -190,8 +226,14 @@
       },
       {
         "id": "5",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write code to append text to an existing file.",
+        "options": [
+          "file = open('output.txt', 'a')\nfile.write('More text')",
+          "#file = open('output.txt', 'a')\nfile.write('More text')",
+          "file = open['output.txt', 'a']\nfile.write['More text']",
+          "FILE = OPEN('OUTPUT.TXT', 'A')\nFILE.WRITE('MORE TEXT')"
+        ],
         "correctAnswer": "file = open('output.txt', 'a')\nfile.write('More text')",
         "explanation": "Use 'a' mode to append to the end of an existing file."
       },
@@ -217,8 +259,14 @@
       },
       {
         "id": "8",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write code to write a list of strings to a file.",
+        "options": [
+          "lines = ['line1\\n', 'line2\\n']\nfile.writelines(lines)",
+          "#lines = ['line1\\n', 'line2\\n']\nfile.writelines(lines)",
+          "lines = ['line1\\n', 'line2\\n']\nfile.writelines[lines]",
+          "LINES = ['LINE1\\N', 'LINE2\\N']\nFILE.WRITELINES(LINES)"
+        ],
         "correctAnswer": "lines = ['line1\\n', 'line2\\n']\nfile.writelines(lines)",
         "explanation": "writelines() writes each string in the list to the file."
       },
@@ -244,8 +292,14 @@
       },
       {
         "id": "11",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write code to write formatted data to a file.",
+        "options": [
+          "file.write(f'Name: {name}, Age: {age}\\n')",
+          "#file.write(f'Name: {name}, Age: {age}\\n')",
+          "file.write[f'Name: {name}, Age: {age}\\n']",
+          "FILE.WRITE(F'NAME: {NAME}, AGE: {AGE}\\N')"
+        ],
         "correctAnswer": "file.write(f'Name: {name}, Age: {age}\\n')",
         "explanation": "Use f-strings or other formatting to write structured data."
       },
@@ -271,8 +325,14 @@
       },
       {
         "id": "14",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write code to force writing buffered data to disk.",
+        "options": [
+          "file.flush()",
+          "#file.flush()",
+          "file.flush[]",
+          "FILE.FLUSH()"
+        ],
         "correctAnswer": "file.flush()",
         "explanation": "flush() forces any buffered data to be written to the underlying storage."
       },
@@ -300,8 +360,14 @@
       },
       {
         "id": "2",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write code using 'with' statement to safely open and read a file.",
+        "options": [
+          "with open('file.txt', 'r') as file:\n    content = file.read()",
+          "#with open('file.txt', 'r') as file:\n    content = file.read()",
+          "with open['file.txt', 'r'] as file:\n    content = file.read[]",
+          "WITH OPEN('FILE.TXT', 'R') AS FILE:\n    CONTENT = FILE.READ()"
+        ],
         "correctAnswer": "with open('file.txt', 'r') as file:\n    content = file.read()",
         "explanation": "The 'with' statement automatically closes the file when done."
       },
@@ -327,8 +393,14 @@
       },
       {
         "id": "5",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write code to check if a file exists.",
+        "options": [
+          "import os\nos.path.exists('file.txt')",
+          "#import os\nos.path.exists('file.txt')",
+          "import os\nos.path.exists['file.txt']",
+          "IMPORT OS\nOS.PATH.EXISTS('FILE.TXT')"
+        ],
         "correctAnswer": "import os\nos.path.exists('file.txt')",
         "explanation": "os.path.exists() returns True if the path exists."
       },
@@ -354,8 +426,14 @@
       },
       {
         "id": "8",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write code to safely handle file operations with error checking.",
+        "options": [
+          "try:\n    file = open('data.txt')\n    # operations\nfinally:\n    file.close()",
+          "#try:\n    file = open('data.txt')\n    # operations\nfinally:\n    file.close()",
+          "try:\n    file = open['data.txt']\n    # operations\nfinally:\n    file.close[]",
+          "TRY:\n    FILE = OPEN('DATA.TXT')\n    # OPERATIONS\nFINALLY:\n    FILE.CLOSE()"
+        ],
         "correctAnswer": "try:\n    file = open('data.txt')\n    # operations\nfinally:\n    file.close()",
         "explanation": "Use try-finally to ensure files are closed even if errors occur."
       },
@@ -381,8 +459,14 @@
       },
       {
         "id": "11",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write code to get the current position in a file.",
+        "options": [
+          "position = file.tell()",
+          "#position = file.tell()",
+          "position = file.tell[]",
+          "POSITION = FILE.TELL()"
+        ],
         "correctAnswer": "position = file.tell()",
         "explanation": "tell() returns the current stream position in bytes."
       },
@@ -408,8 +492,14 @@
       },
       {
         "id": "14",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write code to truncate a file to 100 bytes.",
+        "options": [
+          "file.truncate(100)",
+          "#file.truncate(100)",
+          "file.truncate[100]",
+          "FILE.TRUNCATE(100)"
+        ],
         "correctAnswer": "file.truncate(100)",
         "explanation": "truncate() resizes the file to the specified size."
       },
@@ -450,8 +540,14 @@
       },
       {
         "id": "3",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write code to read a binary file.",
+        "options": [
+          "with open('file.bin', 'rb') as f:\n    data = f.read()",
+          "#with open('file.bin', 'rb') as f:\n    data = f.read()",
+          "with open['file.bin', 'rb'] as f:\n    data = f.read[]",
+          "WITH OPEN('FILE.BIN', 'RB') AS F:\n    DATA = F.READ()"
+        ],
         "correctAnswer": "with open('file.bin', 'rb') as f:\n    data = f.read()",
         "explanation": "Use 'rb' mode to read binary data as bytes."
       },
@@ -464,8 +560,14 @@
       },
       {
         "id": "5",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write code to write binary data to a file.",
+        "options": [
+          "data = b'\\x00\\x01\\x02'\nwith open('file.bin', 'wb') as f:\n    f.write(data)",
+          "#data = b'\\x00\\x01\\x02'\nwith open('file.bin', 'wb') as f:\n    f.write(data)",
+          "data = b'\\x00\\x01\\x02'\nwith open['file.bin', 'wb'] as f:\n    f.write[data]",
+          "DATA = B'\\X00\\X01\\X02'\nWITH OPEN('FILE.BIN', 'WB') AS F:\n    F.WRITE(DATA)"
+        ],
         "correctAnswer": "data = b'\\x00\\x01\\x02'\nwith open('file.bin', 'wb') as f:\n    f.write(data)",
         "explanation": "Use bytes literals or bytearray for binary data."
       },
@@ -491,8 +593,14 @@
       },
       {
         "id": "8",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write code to pack integers into binary format.",
+        "options": [
+          "import struct\ndata = struct.pack('ii', 1, 2)",
+          "#import struct\ndata = struct.pack('ii', 1, 2)",
+          "import struct\ndata = struct.pack['ii', 1, 2]",
+          "IMPORT STRUCT\nDATA = STRUCT.PACK('II', 1, 2)"
+        ],
         "correctAnswer": "import struct\ndata = struct.pack('ii', 1, 2)",
         "explanation": "struct.pack() converts Python values to binary format."
       },
@@ -518,8 +626,14 @@
       },
       {
         "id": "11",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write code to read a binary file in chunks.",
+        "options": [
+          "with open('large.bin', 'rb') as f:\n    while chunk := f.read(1024):\n        process(chunk)",
+          "#with open('large.bin', 'rb') as f:\n    while chunk := f.read(1024):\n        process(chunk)",
+          "with open['large.bin', 'rb'] as f:\n    while chunk := f.read[1024]:\n        process[chunk]",
+          "WITH OPEN('LARGE.BIN', 'RB') AS F:\n    WHILE CHUNK := F.READ(1024):\n        PROCESS(CHUNK)"
+        ],
         "correctAnswer": "with open('large.bin', 'rb') as f:\n    while chunk := f.read(1024):\n        process(chunk)",
         "explanation": "Read binary files in fixed-size chunks to handle large files."
       },
@@ -532,8 +646,14 @@
       },
       {
         "id": "13",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write code to create a mutable byte array.",
+        "options": [
+          "data = bytearray(b'hello')\ndata[0] = 72  # 'H'",
+          "#data = bytearray(b'hello')\ndata[0] = 72  # 'H'",
+          "data = bytearray[b'hello']\ndata[0] = 72  # 'H'",
+          "DATA = BYTEARRAY(B'HELLO')\nDATA[0] = 72  # 'H'"
+        ],
         "correctAnswer": "data = bytearray(b'hello')\ndata[0] = 72  # 'H'",
         "explanation": "bytearray() creates mutable binary data that can be modified."
       },
@@ -574,8 +694,14 @@
       },
       {
         "id": "2",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write code to join path components.",
+        "options": [
+          "import os\npath = os.path.join('folder', 'file.txt')",
+          "#import os\npath = os.path.join('folder', 'file.txt')",
+          "import os\npath = os.path.join['folder', 'file.txt']",
+          "IMPORT OS\nPATH = OS.PATH.JOIN('FOLDER', 'FILE.TXT')"
+        ],
         "correctAnswer": "import os\npath = os.path.join('folder', 'file.txt')",
         "explanation": "os.path.join() creates a path from components using the correct separator."
       },
@@ -601,8 +727,14 @@
       },
       {
         "id": "5",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write code to get the filename from a full path.",
+        "options": [
+          "filename = os.path.basename('/path/to/file.txt')",
+          "#filename = os.path.basename('/path/to/file.txt')",
+          "filename = os.path.basename['/path/to/file.txt']",
+          "FILENAME = OS.PATH.BASENAME('/PATH/TO/FILE.TXT')"
+        ],
         "correctAnswer": "filename = os.path.basename('/path/to/file.txt')",
         "explanation": "basename() returns the final component of a path."
       },
@@ -628,8 +760,14 @@
       },
       {
         "id": "8",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write code using pathlib to create a Path object.",
+        "options": [
+          "from pathlib import Path\np = Path('folder/file.txt')",
+          "#from pathlib import Path\np = Path('folder/file.txt')",
+          "from pathlib import Path\np = Path['folder/file.txt']",
+          "FROM PATHLIB IMPORT PATH\nP = PATH('FOLDER/FILE.TXT')"
+        ],
         "correctAnswer": "from pathlib import Path\np = Path('folder/file.txt')",
         "explanation": "Path() creates a path object for object-oriented path operations."
       },
@@ -642,8 +780,14 @@
       },
       {
         "id": "10",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write code to read a file using pathlib.",
+        "options": [
+          "from pathlib import Path\ncontent = Path('file.txt').read_text()",
+          "#from pathlib import Path\ncontent = Path('file.txt').read_text()",
+          "from pathlib import Path\ncontent = Path['file.txt'].read_text[]",
+          "FROM PATHLIB IMPORT PATH\nCONTENT = PATH('FILE.TXT').READ_TEXT()"
+        ],
         "correctAnswer": "from pathlib import Path\ncontent = Path('file.txt').read_text()",
         "explanation": "Path objects have read_text() and write_text() methods."
       },
@@ -669,8 +813,14 @@
       },
       {
         "id": "13",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write code to create a directory with pathlib.",
+        "options": [
+          "from pathlib import Path\nPath('new_dir').mkdir()",
+          "#from pathlib import Path\nPath('new_dir').mkdir()",
+          "from pathlib import Path\nPath['new_dir'].mkdir[]",
+          "FROM PATHLIB IMPORT PATH\nPATH('NEW_DIR').MKDIR()"
+        ],
         "correctAnswer": "from pathlib import Path\nPath('new_dir').mkdir()",
         "explanation": "mkdir() creates a directory at the path location."
       },
@@ -683,8 +833,14 @@
       },
       {
         "id": "15",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write code to find all .txt files in a directory.",
+        "options": [
+          "txt_files = list(Path('dir').glob('*.txt'))",
+          "#txt_files = list(Path('dir').glob('*.txt'))",
+          "txt_files = list[Path['dir'].glob['*.txt']]",
+          "TXT_FILES = LIST(PATH('DIR').GLOB('*.TXT'))"
+        ],
         "correctAnswer": "txt_files = list(Path('dir').glob('*.txt'))",
         "explanation": "glob() finds files matching a pattern in the directory."
       }
@@ -705,8 +861,14 @@
       },
       {
         "id": "2",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write code to read a CSV file.",
+        "options": [
+          "import csv\nwith open('data.csv') as f:\n    reader = csv.reader(f)\n    for row in reader:\n        print(row)",
+          "#import csv\nwith open('data.csv') as f:\n    reader = csv.reader(f)\n    for row in reader:\n        print(row)",
+          "import csv\nwith open['data.csv'] as f:\n    reader = csv.reader[f]\n    for row in reader:\n        print[row]",
+          "IMPORT CSV\nWITH OPEN('DATA.CSV') AS F:\n    READER = CSV.READER(F)\n    FOR ROW IN READER:\n        PRINT(ROW)"
+        ],
         "correctAnswer": "import csv\nwith open('data.csv') as f:\n    reader = csv.reader(f)\n    for row in reader:\n        print(row)",
         "explanation": "csv.reader() creates a reader object that iterates over CSV rows."
       },
@@ -719,8 +881,14 @@
       },
       {
         "id": "4",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write code to write data to a CSV file.",
+        "options": [
+          "import csv\nwith open('output.csv', 'w') as f:\n    writer = csv.writer(f)\n    writer.writerow(['name', 'age'])\n    writer.writerow(['Alice', 25])",
+          "#import csv\nwith open('output.csv', 'w') as f:\n    writer = csv.writer(f)\n    writer.writerow(['name', 'age'])\n    writer.writerow(['Alice', 25])",
+          "import csv\nwith open['output.csv', 'w'] as f:\n    writer = csv.writer[f]\n    writer.writerow[['name', 'age']]\n    writer.writerow[['Alice', 25]]",
+          "IMPORT CSV\nWITH OPEN('OUTPUT.CSV', 'W') AS F:\n    WRITER = CSV.WRITER(F)\n    WRITER.WRITEROW(['NAME', 'AGE'])\n    WRITER.WRITEROW(['ALICE', 25])"
+        ],
         "correctAnswer": "import csv\nwith open('output.csv', 'w') as f:\n    writer = csv.writer(f)\n    writer.writerow(['name', 'age'])\n    writer.writerow(['Alice', 25])",
         "explanation": "csv.writer() creates a writer for outputting CSV data."
       },
@@ -739,8 +907,14 @@
       },
       {
         "id": "6",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write code to load JSON from a file.",
+        "options": [
+          "import json\nwith open('data.json') as f:\n    data = json.load(f)",
+          "#import json\nwith open('data.json') as f:\n    data = json.load(f)",
+          "import json\nwith open['data.json'] as f:\n    data = json.load[f]",
+          "IMPORT JSON\nWITH OPEN('DATA.JSON') AS F:\n    DATA = JSON.LOAD(F)"
+        ],
         "correctAnswer": "import json\nwith open('data.json') as f:\n    data = json.load(f)",
         "explanation": "json.load() reads and parses JSON data from a file."
       },
@@ -753,8 +927,14 @@
       },
       {
         "id": "8",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write code to save data as JSON.",
+        "options": [
+          "import json\ndata = {'name': 'Alice', 'age': 25}\nwith open('output.json', 'w') as f:\n    json.dump(data, f)",
+          "#import json\ndata = {'name': 'Alice', 'age': 25}\nwith open('output.json', 'w') as f:\n    json.dump(data, f)",
+          "import json\ndata = {'name': 'Alice', 'age': 25}\nwith open['output.json', 'w'] as f:\n    json.dump[data, f]",
+          "IMPORT JSON\nDATA = {'NAME': 'ALICE', 'AGE': 25}\nWITH OPEN('OUTPUT.JSON', 'W') AS F:\n    JSON.DUMP(DATA, F)"
+        ],
         "correctAnswer": "import json\ndata = {'name': 'Alice', 'age': 25}\nwith open('output.json', 'w') as f:\n    json.dump(data, f)",
         "explanation": "json.dump() writes Python objects as JSON to a file."
       },
@@ -773,8 +953,14 @@
       },
       {
         "id": "10",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write code to pickle an object.",
+        "options": [
+          "import pickle\nwith open('data.pkl', 'wb') as f:\n    pickle.dump(obj, f)",
+          "#import pickle\nwith open('data.pkl', 'wb') as f:\n    pickle.dump(obj, f)",
+          "import pickle\nwith open['data.pkl', 'wb'] as f:\n    pickle.dump[obj, f]",
+          "IMPORT PICKLE\nWITH OPEN('DATA.PKL', 'WB') AS F:\n    PICKLE.DUMP(OBJ, F)"
+        ],
         "correctAnswer": "import pickle\nwith open('data.pkl', 'wb') as f:\n    pickle.dump(obj, f)",
         "explanation": "pickle.dump() serializes an object to a binary file."
       },
@@ -800,8 +986,14 @@
       },
       {
         "id": "13",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write code to read a CSV with headers as dictionaries.",
+        "options": [
+          "import csv\nwith open('data.csv') as f:\n    reader = csv.DictReader(f)\n    for row in reader:\n        print(row['name'])",
+          "#import csv\nwith open('data.csv') as f:\n    reader = csv.DictReader(f)\n    for row in reader:\n        print(row['name'])",
+          "import csv\nwith open['data.csv'] as f:\n    reader = csv.DictReader[f]\n    for row in reader:\n        print[row['name']]",
+          "IMPORT CSV\nWITH OPEN('DATA.CSV') AS F:\n    READER = CSV.DICTREADER(F)\n    FOR ROW IN READER:\n        PRINT(ROW['NAME'])"
+        ],
         "correctAnswer": "import csv\nwith open('data.csv') as f:\n    reader = csv.DictReader(f)\n    for row in reader:\n        print(row['name'])",
         "explanation": "DictReader uses the first row as keys for dictionary access."
       },
@@ -814,8 +1006,14 @@
       },
       {
         "id": "15",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write code to handle tab-separated values.",
+        "options": [
+          "import csv\nwith open('data.tsv') as f:\n    reader = csv.reader(f, delimiter='\\t')\n    for row in reader:\n        print(row)",
+          "#import csv\nwith open('data.tsv') as f:\n    reader = csv.reader(f, delimiter='\\t')\n    for row in reader:\n        print(row)",
+          "import csv\nwith open['data.tsv'] as f:\n    reader = csv.reader[f, delimiter='\\t']\n    for row in reader:\n        print[row]",
+          "IMPORT CSV\nWITH OPEN('DATA.TSV') AS F:\n    READER = CSV.READER(F, DELIMITER='\\T')\n    FOR ROW IN READER:\n        PRINT(ROW)"
+        ],
         "correctAnswer": "import csv\nwith open('data.tsv') as f:\n    reader = csv.reader(f, delimiter='\\t')\n    for row in reader:\n        print(row)",
         "explanation": "Specify delimiter='\\t' for tab-separated files."
       }
@@ -836,8 +1034,14 @@
       },
       {
         "id": "2",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write code to handle file not found error.",
+        "options": [
+          "try:\n    file = open('missing.txt')\nexcept FileNotFoundError:\n    print('File not found')",
+          "#try:\n    file = open('missing.txt')\nexcept FileNotFoundError:\n    print('File not found')",
+          "try:\n    file = open['missing.txt']\nexcept FileNotFoundError:\n    print['File not found']",
+          "TRY:\n    FILE = OPEN('MISSING.TXT')\nEXCEPT FILENOTFOUNDERROR:\n    PRINT('FILE NOT FOUND')"
+        ],
         "correctAnswer": "try:\n    file = open('missing.txt')\nexcept FileNotFoundError:\n    print('File not found')",
         "explanation": "Use try-except to catch FileNotFoundError."
       },
@@ -863,8 +1067,14 @@
       },
       {
         "id": "5",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write code to handle multiple file errors.",
+        "options": [
+          "try:\n    with open('file.txt') as f:\n        data = f.read()\nexcept (FileNotFoundError, PermissionError) as e:\n    print(f'Error: {e}')",
+          "#try:\n    with open('file.txt') as f:\n        data = f.read()\nexcept (FileNotFoundError, PermissionError) as e:\n    print(f'Error: {e}')",
+          "try:\n    with open['file.txt'] as f:\n        data = f.read[]\nexcept [FileNotFoundError, PermissionError] as e:\n    print[f'Error: {e}']",
+          "TRY:\n    WITH OPEN('FILE.TXT') AS F:\n        DATA = F.READ()\nEXCEPT (FILENOTFOUNDERROR, PERMISSIONERROR) AS E:\n    PRINT(F'ERROR: {E}')"
+        ],
         "correctAnswer": "try:\n    with open('file.txt') as f:\n        data = f.read()\nexcept (FileNotFoundError, PermissionError) as e:\n    print(f'Error: {e}')",
         "explanation": "Catch multiple exception types in a single except clause."
       },
@@ -890,8 +1100,14 @@
       },
       {
         "id": "8",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write code to handle encoding errors.",
+        "options": [
+          "try:\n    with open('file.txt', encoding='utf-8') as f:\n        text = f.read()\nexcept UnicodeDecodeError:\n    print('Encoding error')",
+          "#try:\n    with open('file.txt', encoding='utf-8') as f:\n        text = f.read()\nexcept UnicodeDecodeError:\n    print('Encoding error')",
+          "try:\n    with open['file.txt', encoding='utf-8'] as f:\n        text = f.read[]\nexcept UnicodeDecodeError:\n    print['Encoding error']",
+          "TRY:\n    WITH OPEN('FILE.TXT', ENCODING='UTF-8') AS F:\n        TEXT = F.READ()\nEXCEPT UNICODEDECODEERROR:\n    PRINT('ENCODING ERROR')"
+        ],
         "correctAnswer": "try:\n    with open('file.txt', encoding='utf-8') as f:\n        text = f.read()\nexcept UnicodeDecodeError:\n    print('Encoding error')",
         "explanation": "Specify encoding and catch UnicodeDecodeError for text files."
       },
@@ -917,8 +1133,14 @@
       },
       {
         "id": "11",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write code for robust file reading.",
+        "options": [
+          "def read_file(filename):\n    try:\n        with open(filename, 'r') as f:\n            return f.read()\n    except (FileNotFoundError, PermissionError, UnicodeDecodeError) as e:\n        print(f'Error reading {filename}: {e}')\n        return None",
+          "#def read_file(filename):\n    try:\n        with open(filename, 'r') as f:\n            return f.read()\n    except (FileNotFoundError, PermissionError, UnicodeDecodeError) as e:\n        print(f'Error reading {filename}: {e}')\n        return None",
+          "def read_file[filename]:\n    try:\n        with open[filename, 'r'] as f:\n            return f.read[]\n    except [FileNotFoundError, PermissionError, UnicodeDecodeError] as e:\n        print[f'Error reading {filename}: {e}']\n        return None",
+          "DEF READ_FILE(FILENAME):\n    TRY:\n        WITH OPEN(FILENAME, 'R') AS F:\n            RETURN F.READ()\n    EXCEPT (FILENOTFOUNDERROR, PERMISSIONERROR, UNICODEDECODEERROR) AS E:\n        PRINT(F'ERROR READING {FILENAME}: {E}')\n        RETURN NONE"
+        ],
         "correctAnswer": "def read_file(filename):\n    try:\n        with open(filename, 'r') as f:\n            return f.read()\n    except (FileNotFoundError, PermissionError, UnicodeDecodeError) as e:\n        print(f'Error reading {filename}: {e}')\n        return None",
         "explanation": "Handle common file errors gracefully in a function."
       },
@@ -944,8 +1166,14 @@
       },
       {
         "id": "14",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write code to handle file write errors.",
+        "options": [
+          "try:\n    with open('output.txt', 'w') as f:\n        f.write(data)\nexcept (PermissionError, OSError) as e:\n    print(f'Write failed: {e}')",
+          "#try:\n    with open('output.txt', 'w') as f:\n        f.write(data)\nexcept (PermissionError, OSError) as e:\n    print(f'Write failed: {e}')",
+          "try:\n    with open['output.txt', 'w'] as f:\n        f.write[data]\nexcept [PermissionError, OSError] as e:\n    print[f'Write failed: {e}']",
+          "TRY:\n    WITH OPEN('OUTPUT.TXT', 'W') AS F:\n        F.WRITE(DATA)\nEXCEPT (PERMISSIONERROR, OSERROR) AS E:\n    PRINT(F'WRITE FAILED: {E}')"
+        ],
         "correctAnswer": "try:\n    with open('output.txt', 'w') as f:\n        f.write(data)\nexcept (PermissionError, OSError) as e:\n    print(f'Write failed: {e}')",
         "explanation": "Handle permission and OS errors when writing files."
       },

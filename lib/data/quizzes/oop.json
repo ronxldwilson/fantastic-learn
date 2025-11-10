@@ -40,8 +40,14 @@
       },
       {
         "id": "4",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write the Python code to define a simple class called 'Car' with an __init__ method that takes a 'color' parameter.",
+        "options": [
+          "class Car:\\n    def __init__(self, color):\\n        self.color = color",
+          "#class Car:\\n    def __init__(self, color):\\n        self.color = color",
+          "class Car:\\n    def __init__[self, color]:\\n        self.color = color",
+          "CLASS CAR:\\N    DEF __INIT__(SELF, COLOR):\\N        SELF.COLOR = COLOR"
+        ],
         "correctAnswer": "class Car:\\n    def __init__(self, color):\\n        self.color = color",
         "explanation": "Classes are defined with the 'class' keyword, and __init__ is the constructor method."
       },
@@ -81,8 +87,14 @@
       },
       {
         "id": "2",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write the Python code to create a class 'Dog' that inherits from 'Animal'.",
+        "options": [
+          "class Dog(Animal):\n    pass",
+          "#class Dog(Animal):\n    pass",
+          "class Dog[Animal]:\n    pass",
+          "CLASS DOG(ANIMAL):\n    PASS"
+        ],
         "correctAnswer": "class Dog(Animal):\n    pass",
         "explanation": "Inheritance is specified by putting the parent class name in parentheses after the child class name."
       },
@@ -101,8 +113,14 @@
       },
       {
         "id": "4",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write a class with a method that overrides a parent method.",
+        "options": [
+          "class Animal:\\n    def speak(self):\\n        return 'Some sound'\\n\\nclass Dog(Animal):\\n    def speak(self):\\n        return 'Woof'",
+          "#class Animal:\\n    def speak(self):\\n        return 'Some sound'\\n\\nclass Dog(Animal):\\n    def speak(self):\\n        return 'Woof'",
+          "class Animal:\\n    def speak[self]:\\n        return 'Some sound'\\n\\nclass Dog[Animal]:\\n    def speak[self]:\\n        return 'Woof'",
+          "CLASS ANIMAL:\\N    DEF SPEAK(SELF):\\N        RETURN 'SOME SOUND'\\N\\NCLASS DOG(ANIMAL):\\N    DEF SPEAK(SELF):\\N        RETURN 'WOOF'"
+        ],
         "correctAnswer": "class Animal:\\n    def speak(self):\\n        return 'Some sound'\\n\\nclass Dog(Animal):\\n    def speak(self):\\n        return 'Woof'",
         "explanation": "Child classes can override parent methods by defining methods with the same name."
       },
@@ -128,8 +146,14 @@
       },
       {
         "id": "7",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write a class with private attributes using name mangling.",
+        "options": [
+          "class MyClass:\\n    def __init__(self):\\n        self.__private = 42\\n    \\n    def get_private(self):\\n        return self.__private",
+          "#class MyClass:\\n    def __init__(self):\\n        self.__private = 42\\n    \\n    def get_private(self):\\n        return self.__private",
+          "class MyClass:\\n    def __init__[self]:\\n        self.__private = 42\\n    \\n    def get_private[self]:\\n        return self.__private",
+          "CLASS MYCLASS:\\N    DEF __INIT__(SELF):\\N        SELF.__PRIVATE = 42\\N    \\N    DEF GET_PRIVATE(SELF):\\N        RETURN SELF.__PRIVATE"
+        ],
         "correctAnswer": "class MyClass:\\n    def __init__(self):\\n        self.__private = 42\\n    \\n    def get_private(self):\\n        return self.__private",
         "explanation": "Double underscores prefix private attributes, which are name-mangled to prevent accidental access."
       },
@@ -142,8 +166,14 @@
       },
       {
         "id": "9",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write a class with both class and instance attributes.",
+        "options": [
+          "class Car:\\n    wheels = 4  # class attribute\\n    \\n    def __init__(self, color):\\n        self.color = color  # instance attribute",
+          "#class Car:\\n    wheels = 4  # class attribute\\n    \\n    def __init__(self, color):\\n        self.color = color  # instance attribute",
+          "class Car:\\n    wheels = 4  # class attribute\\n    \\n    def __init__[self, color]:\\n        self.color = color  # instance attribute",
+          "CLASS CAR:\\N    WHEELS = 4  # CLASS ATTRIBUTE\\N    \\N    DEF __INIT__(SELF, COLOR):\\N        SELF.COLOR = COLOR  # INSTANCE ATTRIBUTE"
+        ],
         "correctAnswer": "class Car:\\n    wheels = 4  # class attribute\\n    \\n    def __init__(self, color):\\n        self.color = color  # instance attribute",
         "explanation": "Class attributes are defined outside __init__, instance attributes inside __init__ with self."
       },
@@ -169,8 +199,14 @@
       },
       {
         "id": "12",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write a class that inherits from multiple parents.",
+        "options": [
+          "class FlyingCar(Car, Airplane):\\n    def fly(self):\\n        return 'Flying!'",
+          "#class FlyingCar(Car, Airplane):\\n    def fly(self):\\n        return 'Flying!'",
+          "class FlyingCar[Car, Airplane]:\\n    def fly[self]:\\n        return 'Flying!'",
+          "CLASS FLYINGCAR(CAR, AIRPLANE):\\N    DEF FLY(SELF):\\N        RETURN 'FLYING!'"
+        ],
         "correctAnswer": "class FlyingCar(Car, Airplane):\\n    def fly(self):\\n        return 'Flying!'",
         "explanation": "Multiple inheritance is specified by listing multiple parent classes in parentheses."
       },
@@ -183,8 +219,14 @@
       },
       {
         "id": "14",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write code using super() to call a parent method.",
+        "options": [
+          "class Child(Parent):\\n    def __init__(self, value):\\n        super().__init__(value)\\n        self.child_value = value * 2",
+          "#class Child(Parent):\\n    def __init__(self, value):\\n        super().__init__(value)\\n        self.child_value = value * 2",
+          "class Child[Parent]:\\n    def __init__[self, value]:\\n        super[].__init__[value]\\n        self.child_value = value * 2",
+          "CLASS CHILD(PARENT):\\N    DEF __INIT__(SELF, VALUE):\\N        SUPER().__INIT__(VALUE)\\N        SELF.CHILD_VALUE = VALUE * 2"
+        ],
         "correctAnswer": "class Child(Parent):\\n    def __init__(self, value):\\n        super().__init__(value)\\n        self.child_value = value * 2",
         "explanation": "super() is commonly used in __init__ to initialize parent class attributes."
       },
@@ -203,8 +245,14 @@
       },
       {
         "id": "16",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write a class method.",
+        "options": [
+          "@classmethod\\ndef from_string(cls, string):\\n    return cls(string.split(','))",
+          "#@classmethod\\ndef from_string(cls, string):\\n    return cls(string.split(','))",
+          "@classmethod\\ndef from_string[cls, string]:\\n    return cls[string.split[',']]",
+          "@CLASSMETHOD\\NDEF FROM_STRING(CLS, STRING):\\N    RETURN CLS(STRING.SPLIT(','))"
+        ],
         "correctAnswer": "@classmethod\\ndef from_string(cls, string):\\n    return cls(string.split(','))",
         "explanation": "Class methods can be used as alternative constructors or for class-level operations."
       },
@@ -223,8 +271,14 @@
       },
       {
         "id": "18",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write a static method.",
+        "options": [
+          "@staticmethod\\ndef is_valid_age(age):\\n    return 0 <= age <= 150",
+          "#@staticmethod\\ndef is_valid_age(age):\\n    return 0 <= age <= 150",
+          "@staticmethod\\ndef is_valid_age[age]:\\n    return 0 <= age <= 150",
+          "@STATICMETHOD\\NDEF IS_VALID_AGE(AGE):\\N    RETURN 0 <= AGE <= 150"
+        ],
         "correctAnswer": "@staticmethod\\ndef is_valid_age(age):\\n    return 0 <= age <= 150",
         "explanation": "Static methods are utility functions that don't need access to instance or class state."
       },
@@ -237,8 +291,14 @@
       },
       {
         "id": "20",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write a class that overloads the + operator.",
+        "options": [
+          "class Vector:\\n    def __init__(self, x, y):\\n        self.x, self.y = x, y\\n    \\n    def __add__(self, other):\\n        return Vector(self.x + other.x, self.y + other.y)",
+          "#class Vector:\\n    def __init__(self, x, y):\\n        self.x, self.y = x, y\\n    \\n    def __add__(self, other):\\n        return Vector(self.x + other.x, self.y + other.y)",
+          "class Vector:\\n    def __init__[self, x, y]:\\n        self.x, self.y = x, y\\n    \\n    def __add__[self, other]:\\n        return Vector[self.x + other.x, self.y + other.y]",
+          "CLASS VECTOR:\\N    DEF __INIT__(SELF, X, Y):\\N        SELF.X, SELF.Y = X, Y\\N    \\N    DEF __ADD__(SELF, OTHER):\\N        RETURN VECTOR(SELF.X + OTHER.X, SELF.Y + OTHER.Y)"
+        ],
         "correctAnswer": "class Vector:\\n    def __init__(self, x, y):\\n        self.x, self.y = x, y\\n    \\n    def __add__(self, other):\\n        return Vector(self.x + other.x, self.y + other.y)",
         "explanation": "__add__ defines behavior for the + operator between Vector instances."
       },
@@ -257,8 +317,14 @@
       },
       {
         "id": "22",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write a class with __str__ and __repr__ methods.",
+        "options": [
+          "class Person:\\n    def __init__(self, name, age):\\n        self.name, self.age = name, age\\n    \\n    def __str__(self):\\n        return f'{self.name} ({self.age})'\\n    \\n    def __repr__(self):\\n        return f'Person({self.name!r}, {self.age})'",
+          "#class Person:\\n    def __init__(self, name, age):\\n        self.name, self.age = name, age\\n    \\n    def __str__(self):\\n        return f'{self.name} ({self.age})'\\n    \\n    def __repr__(self):\\n        return f'Person({self.name!r}, {self.age})'",
+          "class Person:\\n    def __init__[self, name, age]:\\n        self.name, self.age = name, age\\n    \\n    def __str__[self]:\\n        return f'{self.name} [{self.age}]'\\n    \\n    def __repr__[self]:\\n        return f'Person[{self.name!r}, {self.age}]'",
+          "CLASS PERSON:\\N    DEF __INIT__(SELF, NAME, AGE):\\N        SELF.NAME, SELF.AGE = NAME, AGE\\N    \\N    DEF __STR__(SELF):\\N        RETURN F'{SELF.NAME} ({SELF.AGE})'\\N    \\N    DEF __REPR__(SELF):\\N        RETURN F'PERSON({SELF.NAME!R}, {SELF.AGE})'"
+        ],
         "correctAnswer": "class Person:\\n    def __init__(self, name, age):\\n        self.name, self.age = name, age\\n    \\n    def __str__(self):\\n        return f'{self.name} ({self.age})'\\n    \\n    def __repr__(self):\\n        return f'Person({self.name!r}, {self.age})'",
         "explanation": "__str__ for user-friendly output, __repr__ for unambiguous representation."
       },
@@ -291,8 +357,14 @@
       },
       {
         "id": "26",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write an example of composition.",
+        "options": [
+          "class Engine:\\n    def start(self): return 'Engine started'\\n\\nclass Car:\\n    def __init__(self):\\n        self.engine = Engine()\\n    \\n    def start(self):\\n        return self.engine.start()",
+          "#class Engine:\\n    def start(self): return 'Engine started'\\n\\nclass Car:\\n    def __init__(self):\\n        self.engine = Engine()\\n    \\n    def start(self):\\n        return self.engine.start()",
+          "class Engine:\\n    def start[self]: return 'Engine started'\\n\\nclass Car:\\n    def __init__[self]:\\n        self.engine = Engine[]\\n    \\n    def start[self]:\\n        return self.engine.start[]",
+          "CLASS ENGINE:\\N    DEF START(SELF): RETURN 'ENGINE STARTED'\\N\\NCLASS CAR:\\N    DEF __INIT__(SELF):\\N        SELF.ENGINE = ENGINE()\\N    \\N    DEF START(SELF):\\N        RETURN SELF.ENGINE.START()"
+        ],
         "correctAnswer": "class Engine:\\n    def start(self): return 'Engine started'\\n\\nclass Car:\\n    def __init__(self):\\n        self.engine = Engine()\\n    \\n    def start(self):\\n        return self.engine.start()",
         "explanation": "Car 'has-a' Engine, demonstrating composition over inheritance."
       },
@@ -318,8 +390,14 @@
       },
       {
         "id": "29",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write an abstract base class with abc module.",
+        "options": [
+          "from abc import ABC, abstractmethod\\n\\nclass Shape(ABC):\\n    @abstractmethod\\n    def area(self):\\n        pass\\n    \\n    @abstractmethod\\n    def perimeter(self):\\n        pass",
+          "#from abc import ABC, abstractmethod\\n\\nclass Shape(ABC):\\n    @abstractmethod\\n    def area(self):\\n        pass\\n    \\n    @abstractmethod\\n    def perimeter(self):\\n        pass",
+          "from abc import ABC, abstractmethod\\n\\nclass Shape[ABC]:\\n    @abstractmethod\\n    def area[self]:\\n        pass\\n    \\n    @abstractmethod\\n    def perimeter[self]:\\n        pass",
+          "FROM ABC IMPORT ABC, ABSTRACTMETHOD\\N\\NCLASS SHAPE(ABC):\\N    @ABSTRACTMETHOD\\N    DEF AREA(SELF):\\N        PASS\\N    \\N    @ABSTRACTMETHOD\\N    DEF PERIMETER(SELF):\\N        PASS"
+        ],
         "correctAnswer": "from abc import ABC, abstractmethod\\n\\nclass Shape(ABC):\\n    @abstractmethod\\n    def area(self):\\n        pass\\n    \\n    @abstractmethod\\n    def perimeter(self):\\n        pass",
         "explanation": "Abstract methods are decorated with @abstractmethod and must be implemented by subclasses."
       },

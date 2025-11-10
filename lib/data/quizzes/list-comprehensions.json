@@ -20,15 +20,27 @@
       },
       {
         "id": "2",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write a list comprehension to create a list of squares from 1 to 5.",
+        "options": [
+          "[x**2 for x in range(1, 6)]",
+          "#[x**2 for x in range(1, 6)]",
+          "[x**2 for x in range[1, 6]]",
+          "[X**2 FOR X IN RANGE(1, 6)]"
+        ],
         "correctAnswer": "[x**2 for x in range(1, 6)]",
         "explanation": "List comprehensions use the syntax: [expression for item in iterable]"
       },
       {
         "id": "3",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Convert this loop to a list comprehension: result = [] for x in [1,2,3,4,5]: result.append(x*2)",
+        "options": [
+          "[x*2 for x in [1,2,3,4,5]]",
+          "#[x*2 for x in [1,2,3,4,5]]",
+          "[x*2 for x in [1,2,3,4,5]]",
+          "[X*2 FOR X IN [1,2,3,4,5]]"
+        ],
         "correctAnswer": "[x*2 for x in [1,2,3,4,5]]",
         "explanation": "List comprehensions replace append operations in loops."
       },
@@ -47,8 +59,14 @@
       },
       {
         "id": "5",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write a list comprehension to get even numbers from 0 to 10.",
+        "options": [
+          "[x for x in range(11) if x % 2 == 0]",
+          "#[x for x in range(11) if x % 2 == 0]",
+          "[x for x in range[11] if x % 2 == 0]",
+          "[X FOR X IN RANGE(11) IF X % 2 == 0]"
+        ],
         "correctAnswer": "[x for x in range(11) if x % 2 == 0]",
         "explanation": "Use 'if' conditions to filter elements in list comprehensions."
       },
@@ -61,8 +79,14 @@
       },
       {
         "id": "7",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write a list comprehension to create ['A', 'B', 'C'] from ['a', 'b', 'c'].",
+        "options": [
+          "[x.upper() for x in ['a', 'b', 'c']]",
+          "#[x.upper() for x in ['a', 'b', 'c']]",
+          "[x.upper[] for x in ['a', 'b', 'c']]",
+          "[X.UPPER() FOR X IN ['A', 'B', 'C']]"
+        ],
         "correctAnswer": "[x.upper() for x in ['a', 'b', 'c']]",
         "explanation": "Apply any expression to each element, including method calls."
       },
@@ -81,8 +105,14 @@
       },
       {
         "id": "9",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write a list comprehension with nested loops to get all combinations of [1,2] and ['a','b'].",
+        "options": [
+          "[(x, y) for x in [1,2] for y in ['a','b']]",
+          "#[(x, y) for x in [1,2] for y in ['a','b']]",
+          "[[x, y] for x in [1,2] for y in ['a','b']]",
+          "[(X, Y) FOR X IN [1,2] FOR Y IN ['A','B']]"
+        ],
         "correctAnswer": "[(x, y) for x in [1,2] for y in ['a','b']]",
         "explanation": "Multiple for clauses create nested iterations."
       },
@@ -95,8 +125,14 @@
       },
       {
         "id": "11",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write a list comprehension to flatten [[1,2], [3,4]] into [1,2,3,4].",
+        "options": [
+          "[item for sublist in [[1,2], [3,4]] for item in sublist]",
+          "#[item for sublist in [[1,2], [3,4]] for item in sublist]",
+          "[item for sublist in [[1,2], [3,4]] for item in sublist]",
+          "[ITEM FOR SUBLIST IN [[1,2], [3,4]] FOR ITEM IN SUBLIST]"
+        ],
         "correctAnswer": "[item for sublist in [[1,2], [3,4]] for item in sublist]",
         "explanation": "Nested comprehensions can flatten nested structures."
       },
@@ -115,8 +151,14 @@
       },
       {
         "id": "13",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write a list comprehension with multiple conditions.",
+        "options": [
+          "[x for x in range(20) if x % 2 == 0 and x > 10]",
+          "#[x for x in range(20) if x % 2 == 0 and x > 10]",
+          "[x for x in range[20] if x % 2 == 0 and x > 10]",
+          "[X FOR X IN RANGE(20) IF X % 2 == 0 AND X > 10]"
+        ],
         "correctAnswer": "[x for x in range(20) if x % 2 == 0 and x > 10]",
         "explanation": "Combine conditions with 'and' or 'or' operators."
       },
@@ -129,8 +171,14 @@
       },
       {
         "id": "15",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write a set comprehension to get unique squares from 1 to 5.",
+        "options": [
+          "{x**2 for x in range(1, 6)}",
+          "#{x**2 for x in range(1, 6)}",
+          "{x**2 for x in range[1, 6]}",
+          "{X**2 FOR X IN RANGE(1, 6)}"
+        ],
         "correctAnswer": "{x**2 for x in range(1, 6)}",
         "explanation": "Set comprehensions use curly braces and automatically remove duplicates."
       },
@@ -143,8 +191,14 @@
       },
       {
         "id": "17",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write a dict comprehension to create {1:1, 2:4, 3:9}.",
+        "options": [
+          "{x: x**2 for x in range(1, 4)}",
+          "#{x: x**2 for x in range(1, 4)}",
+          "{x: x**2 for x in range[1, 4]}",
+          "{X: X**2 FOR X IN RANGE(1, 4)}"
+        ],
         "correctAnswer": "{x: x**2 for x in range(1, 4)}",
         "explanation": "Dict comprehensions use {key: value for ...} syntax."
       },
@@ -163,8 +217,14 @@
       },
       {
         "id": "19",
-        "type": "code-input",
+        "type": "multiple-choice",
         "question": "Write a list comprehension with an else clause.",
+        "options": [
+          "[x if x % 2 == 0 else 'odd' for x in range(5)]",
+          "#[x if x % 2 == 0 else 'odd' for x in range(5)]",
+          "[x if x % 2 == 0 else 'odd' for x in range[5]]",
+          "[X IF X % 2 == 0 ELSE 'ODD' FOR X IN RANGE(5)]"
+        ],
         "correctAnswer": "[x if x % 2 == 0 else 'odd' for x in range(5)]",
         "explanation": "Conditional expressions can be used: value_if_true if condition else value_if_false"
       },
